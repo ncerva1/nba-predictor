@@ -1,0 +1,482 @@
+{
+ "game": {
+  "date": "2026-10-26",
+  "away": "MIN",
+  "home": "CLE",
+  "venue": "Rocket Arena, Cleveland",
+  "tip_et": "19:00",
+  "notes": [
+   "MIN en back-to-back (ganó a TOR el 25-oct en casa)",
+   "CLE: solo bajas menores (Diop, Tomlin)"
+  ],
+  "out": [],
+  "gtd": {}
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "CLE": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 118.51,
+    "drtg": 114.37,
+    "pace": 100.98
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "MIN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.81,
+    "drtg": 112.77,
+    "pace": 101.78
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 1.5,
+    "pace": -0.5
+   },
+   "context": {
+    "b2b": true,
+    "roster_note": "Llegan LaMelo y Kuminga, se van Randle y Naz Reid; DiVincenzo fuera toda la temporada"
+   }
+  }
+ },
+ "matchup": {
+  "CLE": {},
+  "MIN": {}
+ },
+ "players": [
+  {
+   "team": "CLE",
+   "name": "Donovan Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 36.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 35.5,
+    "pts": 27.0,
+    "reb": 7.5,
+    "ast": 3.5,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 27.9,
+    "reb": 4.5,
+    "ast": 5.7,
+    "fg3m": 3.2
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Evan Mobley",
+   "pos": "PF",
+   "starter": true,
+   "min": 35.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 34.5,
+    "pts": 19.0,
+    "reb": 9.0,
+    "ast": 3.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 31.9,
+    "pts": 18.2,
+    "reb": 9.0,
+    "ast": 3.6,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "James Harden",
+   "pos": "PG",
+   "starter": true,
+   "min": 33.8,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 33.0,
+    "pts": 14.0,
+    "reb": 5.5,
+    "ast": 6.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 34.8,
+    "pts": 23.6,
+    "reb": 4.8,
+    "ast": 8.0,
+    "fg3m": 3.1
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Peyton Watson",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.3,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 30.5,
+    "pts": 9.5,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 29.6,
+    "pts": 14.6,
+    "reb": 4.9,
+    "ast": 2.1,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Jarrett Allen",
+   "pos": "C",
+   "starter": true,
+   "min": 28.7,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 28.0,
+    "pts": 17.5,
+    "reb": 7.5,
+    "ast": 0.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 27.1,
+    "pts": 15.4,
+    "reb": 8.5,
+    "ast": 1.8,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "starter": false,
+   "min": 23.1,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 22.5,
+    "pts": 6.0,
+    "reb": 3.5,
+    "ast": 2.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 26.5,
+    "pts": 12.8,
+    "reb": 2.6,
+    "ast": 2.4,
+    "fg3m": 3.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Jaylon Tyson",
+   "pos": "SG",
+   "starter": false,
+   "min": 23.1,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 22.5,
+    "pts": 9.0,
+    "reb": 3.5,
+    "ast": 3.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 26.9,
+    "pts": 13.2,
+    "reb": 5.1,
+    "ast": 2.2,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Mario Hezonja",
+   "pos": "PF",
+   "starter": false,
+   "min": 20.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 19.5,
+    "pts": 9.5,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 19.5,
+    "pts": 9.5,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Tyrese Proctor",
+   "pos": "PG",
+   "starter": false,
+   "min": 8.2,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 2.5,
+    "reb": 1.0,
+    "ast": 1.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 8.0,
+    "pts": 2.5,
+    "reb": 1.0,
+    "ast": 1.5,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Anthony Edwards",
+   "pos": "SG",
+   "starter": true,
+   "min": 35.0,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 33.0,
+    "pts": 30.0,
+    "reb": 7.0,
+    "ast": 3.5,
+    "fg3m": 5.5
+   },
+   "prior": {
+    "min": 35.0,
+    "pts": 28.8,
+    "reb": 5.0,
+    "ast": 3.7,
+    "fg3m": 3.4
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Rudy Gobert",
+   "pos": "C",
+   "starter": true,
+   "min": 33.5,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 31.5,
+    "pts": 9.5,
+    "reb": 12.0,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 31.3,
+    "pts": 10.9,
+    "reb": 11.5,
+    "ast": 1.7,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Jaden McDaniels",
+   "pos": "PF",
+   "starter": true,
+   "min": 31.3,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 29.5,
+    "pts": 16.0,
+    "reb": 7.0,
+    "ast": 2.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 31.7,
+    "pts": 14.8,
+    "reb": 4.2,
+    "ast": 2.7,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Jonathan Kuminga",
+   "pos": "PF",
+   "starter": true,
+   "min": 30.3,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 28.5,
+    "pts": 11.5,
+    "reb": 4.5,
+    "ast": 4.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 23.1,
+    "pts": 12.2,
+    "reb": 5.6,
+    "ast": 2.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Ayo Dosunmu",
+   "pos": "SG",
+   "starter": false,
+   "min": 29.7,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 28.0,
+    "pts": 15.0,
+    "reb": 6.0,
+    "ast": 6.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 27.3,
+    "pts": 14.8,
+    "reb": 3.4,
+    "ast": 3.6,
+    "fg3m": 1.8
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "LaMelo Ball",
+   "pos": "PG",
+   "starter": true,
+   "min": 27.6,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 26.0,
+    "pts": 16.5,
+    "reb": 3.5,
+    "ast": 5.5,
+    "fg3m": 3.5
+   },
+   "prior": {
+    "min": 28.0,
+    "pts": 20.1,
+    "reb": 4.8,
+    "ast": 7.1,
+    "fg3m": 3.8
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Terrence Shannon Jr.",
+   "pos": "SG",
+   "starter": false,
+   "min": 22.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 11.5,
+    "reb": 2.5,
+    "ast": 1.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 21.0,
+    "pts": 11.5,
+    "reb": 2.5,
+    "ast": 1.0,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Trey Lyles",
+   "pos": "PF",
+   "starter": false,
+   "min": 15.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 14.5,
+    "pts": 5.0,
+    "reb": 3.5,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 14.5,
+    "pts": 5.0,
+    "reb": 3.5,
+    "ast": 1.0,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Joan Beringer",
+   "pos": "PF",
+   "starter": false,
+   "min": 14.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 4.5,
+    "reb": 7.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 14.0,
+    "pts": 4.5,
+    "reb": 7.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "FanDuel Research (numberFire) 26-oct: spread, total y moneyline; precios de spread/total asumidos -110",
+  "spread_home": -4.5,
+  "total": 233.5,
+  "ml_home": -178,
+  "ml_away": 150
+ },
+ "prop_lines": {}
+}

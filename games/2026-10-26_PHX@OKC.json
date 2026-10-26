@@ -1,0 +1,518 @@
+{
+ "game": {
+  "date": "2026-10-26",
+  "away": "PHX",
+  "home": "OKC",
+  "venue": "Paycom Center, Oklahoma City",
+  "tip_et": "20:00",
+  "notes": [
+   "OKC en back-to-back tras ganar a LAC; J. Williams se lesionó en ese partido",
+   "Wallace (hombro) y Jaylin Williams (muñeca) en duda: minutos recortados",
+   "PHX: Mark Williams OUT, Ighodaro dudoso"
+  ],
+  "out": [
+   "Jalen Williams",
+   "Oso Ighodaro"
+  ],
+  "gtd": {
+   "Cason Wallace": 0.8,
+   "Jaylin Williams": 0.8
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "OKC": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.81,
+    "drtg": 106.77,
+    "pace": 100.65
+   },
+   "adj": {
+    "o": -2.0,
+    "d": 1.5,
+    "pace": -0.5
+   },
+   "context": {
+    "b2b": true,
+    "roster_note": "Jalen Williams OUT (tobillo/pierna, 25-oct)"
+   }
+  },
+  "PHX": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 114.41,
+    "drtg": 113.17,
+    "pace": 98.42
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "OKC": {},
+  "PHX": {}
+ },
+ "players": [
+  {
+   "team": "OKC",
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "PG",
+   "starter": true,
+   "min": 38.0,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 35.7,
+    "pts": 27.7,
+    "reb": 4.7,
+    "ast": 4.0,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 31.1,
+    "reb": 4.3,
+    "ast": 6.6,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Chet Holmgren",
+   "pos": "C",
+   "starter": true,
+   "min": 37.7,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 30.0,
+    "pts": 12.0,
+    "reb": 9.3,
+    "ast": 1.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 28.9,
+    "pts": 17.1,
+    "reb": 8.9,
+    "ast": 1.7,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Ajay Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 31.0,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 24.7,
+    "pts": 11.3,
+    "reb": 3.7,
+    "ast": 3.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 13.6,
+    "reb": 3.3,
+    "ast": 3.6,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Isaiah Hartenstein",
+   "pos": "C",
+   "starter": true,
+   "min": 28.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 22.3,
+    "pts": 7.3,
+    "reb": 7.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 22.3,
+    "pts": 7.3,
+    "reb": 7.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Alex Caruso",
+   "pos": "SG",
+   "starter": false,
+   "min": 28.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 22.3,
+    "pts": 9.3,
+    "reb": 5.7,
+    "ast": 4.0,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 22.3,
+    "pts": 9.3,
+    "reb": 5.7,
+    "ast": 4.0,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Jared McCain",
+   "pos": "SG",
+   "starter": false,
+   "min": 25.5,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 20.3,
+    "pts": 9.0,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 20.3,
+    "pts": 9.0,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Cason Wallace",
+   "pos": "SG",
+   "starter": true,
+   "min": 16.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 16.3,
+    "pts": 6.3,
+    "reb": 2.3,
+    "ast": 1.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 16.3,
+    "pts": 6.3,
+    "reb": 2.3,
+    "ast": 1.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Aday Mara",
+   "pos": "C",
+   "starter": false,
+   "min": 16.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 13.0,
+    "pts": 3.7,
+    "reb": 2.7,
+    "ast": 0.7,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 13.0,
+    "pts": 3.7,
+    "reb": 2.7,
+    "ast": 0.7,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Jaylin Williams",
+   "pos": "PF",
+   "starter": false,
+   "min": 12.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 12.3,
+    "pts": 2.7,
+    "reb": 3.7,
+    "ast": 1.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 12.3,
+    "pts": 2.7,
+    "reb": 3.7,
+    "ast": 1.3,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Devin Booker",
+   "pos": "SG",
+   "starter": true,
+   "min": 34.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 33.0,
+    "pts": 33.0,
+    "reb": 5.5,
+    "ast": 4.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 26.1,
+    "reb": 3.9,
+    "ast": 6.0,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Miles Bridges",
+   "pos": "SF",
+   "starter": true,
+   "min": 32.3,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 31.0,
+    "pts": 12.0,
+    "reb": 5.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 17.1,
+    "reb": 5.8,
+    "ast": 3.2,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Dillon Brooks",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.2,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 30.0,
+    "pts": 12.5,
+    "reb": 3.0,
+    "ast": 2.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 30.4,
+    "pts": 20.2,
+    "reb": 3.6,
+    "ast": 1.8,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Jalen Green",
+   "pos": "SG",
+   "starter": true,
+   "min": 26.6,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 25.5,
+    "pts": 11.0,
+    "reb": 2.0,
+    "ast": 2.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 25.9,
+    "pts": 17.8,
+    "reb": 3.6,
+    "ast": 2.8,
+    "fg3m": 2.2
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Collin Gillespie",
+   "pos": "PG",
+   "starter": false,
+   "min": 25.5,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 24.5,
+    "pts": 5.5,
+    "reb": 2.5,
+    "ast": 5.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 12.7,
+    "reb": 4.1,
+    "ast": 4.6,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Khaman Maluach",
+   "pos": "C",
+   "starter": true,
+   "min": 22.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 22.0,
+    "pts": 5.5,
+    "reb": 7.5,
+    "ast": 2.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 5.5,
+    "reb": 7.5,
+    "ast": 2.0,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Jordan Goodwin",
+   "pos": "PG",
+   "starter": false,
+   "min": 21.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 6.0,
+    "reb": 3.0,
+    "ast": 2.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 21.0,
+    "pts": 6.0,
+    "reb": 3.0,
+    "ast": 2.0,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Luke Kennard",
+   "pos": "SG",
+   "starter": false,
+   "min": 18.7,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 18.0,
+    "pts": 11.0,
+    "reb": 4.0,
+    "ast": 1.0,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 18.0,
+    "pts": 11.0,
+    "reb": 4.0,
+    "ast": 1.0,
+    "fg3m": 3.0
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Ryan Dunn",
+   "pos": "SF",
+   "starter": false,
+   "min": 14.1,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 13.5,
+    "pts": 4.0,
+    "reb": 3.5,
+    "ast": 0.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 13.5,
+    "pts": 4.0,
+    "reb": 3.5,
+    "ast": 0.0,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Rasheer Fleming",
+   "pos": "PF",
+   "starter": false,
+   "min": 12.5,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 12.0,
+    "pts": 1.0,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 12.0,
+    "pts": 1.0,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "FanDuel Research (numberFire) 26-oct: spread, total y moneyline; precios de spread/total asumidos -110",
+  "spread_home": -9.5,
+  "total": 218.5,
+  "ml_home": -391,
+  "ml_away": 310
+ },
+ "prop_lines": {
+  "Shai Gilgeous-Alexander": {
+   "fg3m": [
+    1.5,
+    -166
+   ]
+  }
+ }
+}

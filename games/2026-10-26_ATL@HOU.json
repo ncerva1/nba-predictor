@@ -1,0 +1,537 @@
+{
+ "game": {
+  "date": "2026-10-26",
+  "away": "ATL",
+  "home": "HOU",
+  "venue": "Toyota Center, Houston",
+  "tip_et": "20:30",
+  "notes": [
+   "HOU 3-0; Smart (antebrazo) en duda, Adams OUT",
+   "ATL: Gueye y Veesaar OUT"
+  ],
+  "out": [
+   "Steven Adams"
+  ],
+  "gtd": {
+   "Marcus Smart": 0.85
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "HOU": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.71,
+    "drtg": 112.37,
+    "pace": 97.26
+   },
+   "adj": {
+    "o": 1.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "VanVleet de vuelta (se perdió 2025-26)"
+   }
+  },
+  "ATL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.21,
+    "drtg": 113.17,
+    "pace": 102.78
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "HOU": {},
+  "ATL": {}
+ },
+ "players": [
+  {
+   "team": "HOU",
+   "name": "Kevin Durant",
+   "pos": "PF",
+   "starter": true,
+   "min": 34.4,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 37.0,
+    "pts": 24.0,
+    "reb": 5.7,
+    "ast": 3.7,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 36.4,
+    "pts": 26.0,
+    "reb": 5.5,
+    "ast": 4.8,
+    "fg3m": 2.4
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Amen Thompson",
+   "pos": "SF",
+   "starter": true,
+   "min": 33.7,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 36.3,
+    "pts": 17.7,
+    "reb": 10.3,
+    "ast": 4.7,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 37.4,
+    "pts": 18.3,
+    "reb": 7.8,
+    "ast": 5.3,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Jabari Smith Jr.",
+   "pos": "PF",
+   "starter": true,
+   "min": 32.2,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 34.7,
+    "pts": 17.0,
+    "reb": 5.0,
+    "ast": 1.7,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 35.1,
+    "pts": 15.8,
+    "reb": 6.9,
+    "ast": 1.9,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Alperen Şengün",
+   "pos": "C",
+   "starter": true,
+   "min": 30.7,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 33.0,
+    "pts": 23.0,
+    "reb": 9.0,
+    "ast": 6.3,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 33.3,
+    "pts": 20.4,
+    "reb": 8.9,
+    "ast": 6.2,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Fred VanVleet",
+   "pos": "PG",
+   "starter": true,
+   "min": 28.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 30.5,
+    "pts": 10.0,
+    "reb": 2.5,
+    "ast": 8.0,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 30.5,
+    "pts": 10.0,
+    "reb": 2.5,
+    "ast": 8.0,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Reed Sheppard",
+   "pos": "PG",
+   "starter": false,
+   "min": 21.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 23.0,
+    "pts": 11.0,
+    "reb": 4.0,
+    "ast": 5.5,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 26.2,
+    "pts": 13.5,
+    "reb": 2.9,
+    "ast": 3.4,
+    "fg3m": 2.8
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Marcus Smart",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 7.5,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 24.0,
+    "pts": 7.5,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Tari Eason",
+   "pos": "PF",
+   "starter": false,
+   "min": 18.6,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 20.0,
+    "pts": 11.0,
+    "reb": 3.3,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 10.5,
+    "reb": 6.3,
+    "ast": 1.5,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Bogdan Bogdanović",
+   "pos": "SG",
+   "starter": false,
+   "min": 13.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 6.3,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 14.0,
+    "pts": 6.3,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Clint Capela",
+   "pos": "C",
+   "starter": false,
+   "min": 8.8,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 9.5,
+    "pts": 1.0,
+    "reb": 3.0,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 9.5,
+    "pts": 1.0,
+    "reb": 3.0,
+    "ast": 0.5,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Jalen Johnson",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.9,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 31.7,
+    "pts": 21.7,
+    "reb": 10.0,
+    "ast": 10.0,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 35.2,
+    "pts": 22.5,
+    "reb": 10.3,
+    "ast": 7.9,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Nickeil Alexander-Walker",
+   "pos": "SG",
+   "starter": true,
+   "min": 29.9,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 29.7,
+    "pts": 21.0,
+    "reb": 4.0,
+    "ast": 4.0,
+    "fg3m": 3.7
+   },
+   "prior": {
+    "min": 33.4,
+    "pts": 20.8,
+    "reb": 3.4,
+    "ast": 3.7,
+    "fg3m": 3.2
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "starter": true,
+   "min": 29.2,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 29.0,
+    "pts": 16.3,
+    "reb": 7.0,
+    "ast": 3.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 11.9,
+    "reb": 6.8,
+    "ast": 5.9,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Aaron Wiggins",
+   "pos": "SG",
+   "starter": false,
+   "min": 27.5,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 27.3,
+    "pts": 17.0,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 3.3
+   },
+   "prior": {
+    "min": 27.3,
+    "pts": 17.0,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 3.3
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Onyeka Okongwu",
+   "pos": "C",
+   "starter": true,
+   "min": 25.9,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 25.7,
+    "pts": 8.7,
+    "reb": 5.0,
+    "ast": 3.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 15.2,
+    "reb": 7.6,
+    "ast": 3.1,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "CJ McCollum",
+   "pos": "PG",
+   "starter": true,
+   "min": 25.4,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 25.3,
+    "pts": 16.3,
+    "reb": 1.7,
+    "ast": 2.0,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 29.8,
+    "pts": 18.7,
+    "reb": 3.3,
+    "ast": 3.9,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Luguentz Dort",
+   "pos": "SF",
+   "starter": false,
+   "min": 23.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 23.3,
+    "pts": 8.0,
+    "reb": 3.7,
+    "ast": 1.7,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 23.3,
+    "pts": 8.0,
+    "reb": 3.7,
+    "ast": 1.7,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Kingston Flemings",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 18.3,
+    "pts": 2.3,
+    "reb": 3.7,
+    "ast": 4.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 18.3,
+    "pts": 2.3,
+    "reb": 3.7,
+    "ast": 4.3,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Jock Landale",
+   "pos": "C",
+   "starter": false,
+   "min": 18.4,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 18.3,
+    "pts": 6.7,
+    "reb": 4.0,
+    "ast": 3.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 22.1,
+    "pts": 10.6,
+    "reb": 5.7,
+    "ast": 1.7,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Corey Kispert",
+   "pos": "SF",
+   "starter": false,
+   "min": 10.1,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 10.0,
+    "pts": 11.0,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 10.0,
+    "pts": 11.0,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 3.0
+   }
+  }
+ ],
+ "market": {
+  "source": "FanDuel Research (numberFire) 26-oct: spread, total y moneyline; precios de spread/total asumidos -110",
+  "spread_home": -5.5,
+  "total": 230.5,
+  "ml_home": -198,
+  "ml_away": 166
+ },
+ "prop_lines": {
+  "Alperen Şengün": {
+   "fg3m": [
+    0.5,
+    100
+   ]
+  }
+ }
+}

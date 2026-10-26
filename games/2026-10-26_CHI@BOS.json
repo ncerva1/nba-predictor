@@ -1,0 +1,528 @@
+{
+ "game": {
+  "date": "2026-10-26",
+  "away": "CHI",
+  "home": "BOS",
+  "venue": "TD Garden, Boston",
+  "tip_et": "19:30",
+  "notes": [
+   "CHI: Patrick Williams y Essengue en duda; Claxton OUT",
+   "BOS: Devin Carter OUT"
+  ],
+  "out": [],
+  "gtd": {
+   "Noa Essengue": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "BOS": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 120.21,
+    "drtg": 111.97,
+    "pace": 95.86
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Tatum de vuelta todo el año y llega Paul George; se fue Jaylen Brown"
+   }
+  },
+  "CHI": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 112.31,
+    "drtg": 117.67,
+    "pace": 103.5
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "BOS": {},
+  "CHI": {}
+ },
+ "players": [
+  {
+   "team": "BOS",
+   "name": "Jayson Tatum",
+   "pos": "PF",
+   "starter": true,
+   "min": 38.0,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 37.5,
+    "pts": 24.5,
+    "reb": 6.5,
+    "ast": 9.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 32.6,
+    "pts": 21.8,
+    "reb": 10.0,
+    "ast": 5.3,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Derrick White",
+   "pos": "SG",
+   "starter": true,
+   "min": 36.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 34.5,
+    "pts": 14.5,
+    "reb": 2.5,
+    "ast": 7.0,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 34.1,
+    "pts": 16.5,
+    "reb": 4.4,
+    "ast": 5.4,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Paul George",
+   "pos": "PF",
+   "starter": true,
+   "min": 33.8,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 32.0,
+    "pts": 26.5,
+    "reb": 6.0,
+    "ast": 2.5,
+    "fg3m": 5.0
+   },
+   "prior": {
+    "min": 30.7,
+    "pts": 17.3,
+    "reb": 5.3,
+    "ast": 3.6,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Payton Pritchard",
+   "pos": "PG",
+   "starter": false,
+   "min": 30.6,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 29.0,
+    "pts": 10.5,
+    "reb": 2.5,
+    "ast": 2.5,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 32.4,
+    "pts": 17.0,
+    "reb": 3.9,
+    "ast": 5.2,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Neemias Queta",
+   "pos": "C",
+   "starter": false,
+   "min": 23.2,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 22.0,
+    "pts": 9.0,
+    "reb": 5.0,
+    "ast": 1.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 25.3,
+    "pts": 10.2,
+    "reb": 8.4,
+    "ast": 1.7,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Mitchell Robinson",
+   "pos": "C",
+   "starter": true,
+   "min": 21.6,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 20.5,
+    "pts": 4.0,
+    "reb": 3.5,
+    "ast": 1.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 4.0,
+    "reb": 3.5,
+    "ast": 1.5,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Sam Hauser",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.6,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 20.5,
+    "pts": 8.5,
+    "reb": 3.0,
+    "ast": 1.5,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 8.5,
+    "reb": 3.0,
+    "ast": 1.5,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Jordan Walsh",
+   "pos": "PF",
+   "starter": true,
+   "min": 17.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 2.5,
+    "reb": 4.5,
+    "ast": 0.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 17.0,
+    "pts": 2.5,
+    "reb": 4.5,
+    "ast": 0.5,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "BOS",
+   "name": "Baylor Scheierman",
+   "pos": "SG",
+   "starter": false,
+   "min": 15.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 14.5,
+    "pts": 5.0,
+    "reb": 1.5,
+    "ast": 0.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 14.5,
+    "pts": 5.0,
+    "reb": 1.5,
+    "ast": 0.0,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Caleb Wilson",
+   "pos": "PF",
+   "starter": true,
+   "min": 35.8,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 34.7,
+    "pts": 22.3,
+    "reb": 8.0,
+    "ast": 1.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 34.7,
+    "pts": 22.3,
+    "reb": 8.0,
+    "ast": 1.3,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Norman Powell",
+   "pos": "SG",
+   "starter": true,
+   "min": 29.9,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 29.0,
+    "pts": 19.3,
+    "reb": 3.7,
+    "ast": 1.7,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 29.6,
+    "pts": 21.7,
+    "reb": 3.5,
+    "ast": 2.5,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Josh Giddey",
+   "pos": "PG",
+   "starter": true,
+   "min": 26.8,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 26.0,
+    "pts": 5.7,
+    "reb": 6.3,
+    "ast": 8.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 32.1,
+    "pts": 17.0,
+    "reb": 8.3,
+    "ast": 9.1,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Matas Buzelis",
+   "pos": "SF",
+   "starter": true,
+   "min": 26.5,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 25.7,
+    "pts": 15.0,
+    "reb": 5.3,
+    "ast": 1.7,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 29.2,
+    "pts": 16.3,
+    "reb": 5.8,
+    "ast": 2.1,
+    "fg3m": 2.2
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Leonard Miller",
+   "pos": "SF",
+   "starter": false,
+   "min": 24.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 23.3,
+    "pts": 10.0,
+    "reb": 4.3,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 23.3,
+    "pts": 10.0,
+    "reb": 4.3,
+    "ast": 1.0,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Jalen Smith",
+   "pos": "C",
+   "starter": true,
+   "min": 23.4,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 22.7,
+    "pts": 14.3,
+    "reb": 8.0,
+    "ast": 1.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 20.7,
+    "pts": 10.2,
+    "reb": 6.7,
+    "ast": 1.2,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Isaac Okoro",
+   "pos": "SG",
+   "starter": false,
+   "min": 20.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 19.7,
+    "pts": 5.3,
+    "reb": 1.3,
+    "ast": 0.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 19.7,
+    "pts": 5.3,
+    "reb": 1.3,
+    "ast": 0.7,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Tre Jones",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.3,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 18.7,
+    "pts": 11.3,
+    "reb": 2.7,
+    "ast": 3.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 14.1,
+    "reb": 3.1,
+    "ast": 5.4,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Buddy Hield",
+   "pos": "SG",
+   "starter": false,
+   "min": 15.5,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 7.3,
+    "reb": 2.0,
+    "ast": 2.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 15.0,
+    "pts": 7.3,
+    "reb": 2.0,
+    "ast": 2.0,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Zach Collins",
+   "pos": "PF",
+   "starter": false,
+   "min": 10.3,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 10.0,
+    "pts": 1.0,
+    "reb": 4.0,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 18.4,
+    "pts": 9.7,
+    "reb": 5.6,
+    "ast": 1.5,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "CHI",
+   "name": "Noa Essengue",
+   "pos": "PF",
+   "starter": false,
+   "min": 8.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 13.5,
+    "pts": 2.5,
+    "reb": 2.0,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 13.5,
+    "pts": 2.5,
+    "reb": 2.0,
+    "ast": 0.5,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "FanDuel Research (numberFire) 26-oct: spread, total y moneyline; precios de spread/total asumidos -110",
+  "spread_home": -13.5,
+  "total": 233.5,
+  "ml_home": -847,
+  "ml_away": 590
+ },
+ "prop_lines": {}
+}

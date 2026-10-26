@@ -1,7 +1,287 @@
 {
- "generated": "2026-10-26T17:26+00:00",
+ "generated": "2026-10-26T17:38+00:00",
  "value_ev": 0.03,
  "games": [
+  {
+   "id": "2026-10-26-MIN-at-CLE",
+   "date": "2026-10-26",
+   "away": "MIN",
+   "home": "CLE",
+   "tip_et": "19:00",
+   "venue": "Rocket Arena, Cleveland",
+   "records": {
+    "MIN": null,
+    "CLE": null
+   },
+   "proj": {
+    "CLE": 116.2,
+    "MIN": 116.0
+   },
+   "win_prob": {
+    "CLE": 0.50545,
+    "MIN": 0.49455
+   },
+   "proj_total": 232.2,
+   "used_db": true,
+   "n_value": 2,
+   "top_bets": [
+    {
+     "kind": "ml",
+     "label": "MIN gana",
+     "player": null,
+     "team": "MIN",
+     "line": null,
+     "odds": 150,
+     "odds_assumed": false,
+     "p": 0.495,
+     "implied": 0.4,
+     "fair": 102,
+     "edge": 0.095,
+     "ev": 0.236,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "MIN +4.5",
+     "player": null,
+     "team": "MIN",
+     "line": 4.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.621,
+     "implied": 0.524,
+     "fair": -164,
+     "edge": 0.097,
+     "ev": 0.185,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Under 233.5",
+     "player": null,
+     "team": null,
+     "line": 233.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.523,
+     "implied": 0.524,
+     "fair": -110,
+     "edge": -0.0,
+     "ev": -0.001,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-WAS-at-CHA",
+   "date": "2026-10-26",
+   "away": "WAS",
+   "home": "CHA",
+   "tip_et": "19:00",
+   "venue": "Spectrum Center, Charlotte",
+   "records": {
+    "WAS": null,
+    "CHA": null
+   },
+   "proj": {
+    "CHA": 117.9,
+    "WAS": 113.4
+   },
+   "win_prob": {
+    "CHA": 0.6316,
+    "WAS": 0.3684
+   },
+   "proj_total": 231.3,
+   "used_db": true,
+   "n_value": 3,
+   "top_bets": [
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": -122,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.55,
+     "fair": -171,
+     "edge": 0.082,
+     "ev": 0.149,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "CHA -1.5",
+     "player": null,
+     "team": "CHA",
+     "line": -1.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.599,
+     "implied": 0.524,
+     "fair": -150,
+     "edge": 0.076,
+     "ev": 0.144,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 228.5",
+     "player": null,
+     "team": null,
+     "line": 228.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.555,
+     "implied": 0.524,
+     "fair": -125,
+     "edge": 0.032,
+     "ev": 0.06,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-CHI-at-BOS",
+   "date": "2026-10-26",
+   "away": "CHI",
+   "home": "BOS",
+   "tip_et": "19:30",
+   "venue": "TD Garden, Boston",
+   "records": {
+    "CHI": null,
+    "BOS": null
+   },
+   "proj": {
+    "BOS": 124.6,
+    "CHI": 108.6
+   },
+   "win_prob": {
+    "BOS": 0.88085,
+    "CHI": 0.11915
+   },
+   "proj_total": 233.3,
+   "used_db": true,
+   "n_value": 1,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "BOS -13.5",
+     "player": null,
+     "team": "BOS",
+     "line": -13.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.576,
+     "implied": 0.524,
+     "fair": -136,
+     "edge": 0.052,
+     "ev": 0.099,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "BOS gana",
+     "player": null,
+     "team": "BOS",
+     "line": null,
+     "odds": -847,
+     "odds_assumed": false,
+     "p": 0.881,
+     "implied": 0.894,
+     "fair": -739,
+     "edge": -0.014,
+     "ev": -0.015,
+     "value": false
+    },
+    {
+     "kind": "total",
+     "label": "Under 233.5",
+     "player": null,
+     "team": null,
+     "line": 233.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.504,
+     "implied": 0.524,
+     "fair": -102,
+     "edge": -0.02,
+     "ev": -0.038,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-DAL-at-MIA",
+   "date": "2026-10-26",
+   "away": "DAL",
+   "home": "MIA",
+   "tip_et": "19:30",
+   "venue": "Kaseya Center, Miami",
+   "records": {
+    "DAL": null,
+    "MIA": null
+   },
+   "proj": {
+    "MIA": 123.5,
+    "DAL": 114.5
+   },
+   "win_prob": {
+    "MIA": 0.744,
+    "DAL": 0.256
+   },
+   "proj_total": 238.0,
+   "used_db": true,
+   "n_value": 0,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "MIA -8.5",
+     "player": null,
+     "team": "MIA",
+     "line": -8.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.518,
+     "implied": 0.524,
+     "fair": -107,
+     "edge": -0.006,
+     "ev": -0.011,
+     "value": false
+    },
+    {
+     "kind": "total",
+     "label": "Over 237.5",
+     "player": null,
+     "team": null,
+     "line": 237.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.511,
+     "implied": 0.524,
+     "fair": -104,
+     "edge": -0.013,
+     "ev": -0.025,
+     "value": false
+    },
+    {
+     "kind": "ml",
+     "label": "MIA gana",
+     "player": null,
+     "team": "MIA",
+     "line": null,
+     "odds": -330,
+     "odds_assumed": false,
+     "p": 0.744,
+     "implied": 0.767,
+     "fair": -291,
+     "edge": -0.023,
+     "ev": -0.031,
+     "value": false
+    }
+   ]
+  },
   {
    "id": "2026-10-26-IND-at-MIL",
    "date": "2026-10-26",
@@ -68,6 +348,286 @@
      "fair": -108,
      "edge": -0.003,
      "ev": -0.007,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-PHX-at-OKC",
+   "date": "2026-10-26",
+   "away": "PHX",
+   "home": "OKC",
+   "tip_et": "20:00",
+   "venue": "Paycom Center, Oklahoma City",
+   "records": {
+    "PHX": null,
+    "OKC": null
+   },
+   "proj": {
+    "OKC": 114.5,
+    "PHX": 103.9
+   },
+   "win_prob": {
+    "OKC": 0.77965,
+    "PHX": 0.22035
+   },
+   "proj_total": 218.4,
+   "used_db": true,
+   "n_value": 0,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "OKC -9.5",
+     "player": null,
+     "team": "OKC",
+     "line": -9.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.533,
+     "implied": 0.524,
+     "fair": -114,
+     "edge": 0.009,
+     "ev": 0.017,
+     "value": false
+    },
+    {
+     "kind": "ml",
+     "label": "OKC gana",
+     "player": null,
+     "team": "OKC",
+     "line": null,
+     "odds": -391,
+     "odds_assumed": false,
+     "p": 0.78,
+     "implied": 0.796,
+     "fair": -354,
+     "edge": -0.017,
+     "ev": -0.021,
+     "value": false
+    },
+    {
+     "kind": "total",
+     "label": "Under 218.5",
+     "player": null,
+     "team": null,
+     "line": 218.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.501,
+     "implied": 0.524,
+     "fair": -100,
+     "edge": -0.023,
+     "ev": -0.044,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-ATL-at-HOU",
+   "date": "2026-10-26",
+   "away": "ATL",
+   "home": "HOU",
+   "tip_et": "20:30",
+   "venue": "Toyota Center, Houston",
+   "records": {
+    "ATL": null,
+    "HOU": null
+   },
+   "proj": {
+    "HOU": 119.1,
+    "ATL": 114.4
+   },
+   "win_prob": {
+    "HOU": 0.636,
+    "ATL": 0.364
+   },
+   "proj_total": 233.5,
+   "used_db": true,
+   "n_value": 2,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Alperen Şengün Over 0.5 Triples",
+     "player": "Alperen Şengün",
+     "team": "HOU",
+     "line": 0.5,
+     "odds": 100,
+     "odds_assumed": false,
+     "p": 0.585,
+     "implied": 0.5,
+     "fair": -141,
+     "edge": 0.085,
+     "ev": 0.17,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 230.5",
+     "player": null,
+     "team": null,
+     "line": 230.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.558,
+     "implied": 0.524,
+     "fair": -126,
+     "edge": 0.035,
+     "ev": 0.066,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "ATL +5.5",
+     "player": null,
+     "team": "ATL",
+     "line": 5.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.521,
+     "implied": 0.524,
+     "fair": -109,
+     "edge": -0.002,
+     "ev": -0.005,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-MEM-at-UTA",
+   "date": "2026-10-26",
+   "away": "MEM",
+   "home": "UTA",
+   "tip_et": "21:00",
+   "venue": "Delta Center, Salt Lake City",
+   "records": {
+    "MEM": null,
+    "UTA": null
+   },
+   "proj": {
+    "UTA": 120.0,
+    "MEM": 120.6
+   },
+   "win_prob": {
+    "UTA": 0.4831,
+    "MEM": 0.5169
+   },
+   "proj_total": 240.5,
+   "used_db": true,
+   "n_value": 1,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "MEM +1.5",
+     "player": null,
+     "team": "MEM",
+     "line": 1.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.549,
+     "implied": 0.524,
+     "fair": -122,
+     "edge": 0.025,
+     "ev": 0.047,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 238.5",
+     "player": null,
+     "team": null,
+     "line": 238.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.538,
+     "implied": 0.524,
+     "fair": -117,
+     "edge": 0.015,
+     "ev": 0.028,
+     "value": false
+    },
+    {
+     "kind": "ml",
+     "label": "MEM gana",
+     "player": null,
+     "team": "MEM",
+     "line": null,
+     "odds": -104,
+     "odds_assumed": false,
+     "p": 0.517,
+     "implied": 0.51,
+     "fair": -107,
+     "edge": 0.007,
+     "ev": 0.014,
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-GSW-at-DEN",
+   "date": "2026-10-26",
+   "away": "GSW",
+   "home": "DEN",
+   "tip_et": "22:00",
+   "venue": "Ball Arena, Denver",
+   "records": {
+    "GSW": null,
+    "DEN": null
+   },
+   "proj": {
+    "DEN": 123.3,
+    "GSW": 111.4
+   },
+   "win_prob": {
+    "DEN": 0.8067,
+    "GSW": 0.1933
+   },
+   "proj_total": 234.6,
+   "used_db": true,
+   "n_value": 2,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "DEN -7.5",
+     "player": null,
+     "team": "DEN",
+     "line": -7.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.63,
+     "implied": 0.524,
+     "fair": -170,
+     "edge": 0.106,
+     "ev": 0.203,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "DEN gana",
+     "player": null,
+     "team": "DEN",
+     "line": null,
+     "odds": -300,
+     "odds_assumed": false,
+     "p": 0.807,
+     "implied": 0.75,
+     "fair": -417,
+     "edge": 0.057,
+     "ev": 0.076,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Under 235.5",
+     "player": null,
+     "team": null,
+     "line": 235.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.514,
+     "implied": 0.524,
+     "fair": -106,
+     "edge": -0.009,
+     "ev": -0.018,
      "value": false
     }
    ]

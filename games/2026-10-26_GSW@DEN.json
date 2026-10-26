@@ -1,0 +1,664 @@
+{
+ "game": {
+  "date": "2026-10-26",
+  "away": "GSW",
+  "home": "DEN",
+  "venue": "Ball Arena, Denver",
+  "tip_et": "22:00",
+  "notes": [
+   "GSW 0-3; Santos, B. Williams y Bassey en duda",
+   "DEN: Cam Johnson y Diallo en duda, Strawther OUT"
+  ],
+  "out": [],
+  "gtd": {
+   "Brandon Williams": 0.7,
+   "Gui Santos": 0.8,
+   "Charles Bassey": 0.7,
+   "Cameron Johnson": 0.7,
+   "Alpha Diallo": 0.7
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "DEN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 121.41,
+    "drtg": 116.27,
+    "pace": 99.77
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "GSW": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 114.01,
+    "drtg": 114.67,
+    "pace": 100.33
+   },
+   "adj": {
+    "o": -2.0,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Butler, Porzingis y Moody OUT; se fue Kuminga"
+   }
+  }
+ },
+ "matchup": {
+  "DEN": {},
+  "GSW": {}
+ },
+ "players": [
+  {
+   "team": "DEN",
+   "name": "Jamal Murray",
+   "pos": "PG",
+   "starter": true,
+   "min": 36.6,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 40.0,
+    "pts": 24.0,
+    "reb": 6.5,
+    "ast": 4.5,
+    "fg3m": 4.0
+   },
+   "prior": {
+    "min": 35.4,
+    "pts": 25.4,
+    "reb": 4.4,
+    "ast": 7.1,
+    "fg3m": 3.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "starter": true,
+   "min": 36.1,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 39.5,
+    "pts": 24.0,
+    "reb": 11.0,
+    "ast": 7.5,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 34.8,
+    "pts": 27.7,
+    "reb": 12.9,
+    "ast": 10.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Christian Braun",
+   "pos": "SG",
+   "starter": true,
+   "min": 33.4,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 36.5,
+    "pts": 11.0,
+    "reb": 7.0,
+    "ast": 1.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 31.8,
+    "pts": 12.0,
+    "reb": 4.8,
+    "ast": 2.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Aaron Gordon",
+   "pos": "PF",
+   "starter": true,
+   "min": 30.2,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 33.0,
+    "pts": 13.5,
+    "reb": 5.5,
+    "ast": 2.5,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 27.9,
+    "pts": 16.2,
+    "reb": 5.8,
+    "ast": 2.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "DeMar DeRozan",
+   "pos": "SF",
+   "starter": false,
+   "min": 23.8,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 26.0,
+    "pts": 12.5,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 31.2,
+    "pts": 18.4,
+    "reb": 2.9,
+    "ast": 4.1,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Trevon Brazile",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.5,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 23.5,
+    "pts": 10.5,
+    "reb": 10.5,
+    "ast": 0.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 23.5,
+    "pts": 10.5,
+    "reb": 10.5,
+    "ast": 0.0,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Alpha Diallo",
+   "pos": "SF",
+   "starter": false,
+   "min": 14.1,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 22.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Cam Whitmore",
+   "pos": "SF",
+   "starter": false,
+   "min": 10.1,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 11.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 11.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Bryce Hopkins",
+   "pos": "SF",
+   "starter": false,
+   "min": 9.6,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 10.5,
+    "pts": 1.0,
+    "reb": 1.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 10.5,
+    "pts": 1.0,
+    "reb": 1.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "starter": false,
+   "min": 9.1,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 10.0,
+    "pts": 3.5,
+    "reb": 3.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 20.0,
+    "pts": 10.5,
+    "reb": 6.1,
+    "ast": 1.4,
+    "fg3m": 0.4
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Tyus Jones",
+   "pos": "PG",
+   "starter": false,
+   "min": 8.7,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 9.5,
+    "pts": 2.0,
+    "reb": 0.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 9.5,
+    "pts": 2.0,
+    "reb": 0.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Cameron Johnson",
+   "pos": "PF",
+   "starter": true,
+   "min": 7.0,
+   "w_cur": 0.25,
+   "cur": {
+    "min": 11.0,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 30.5,
+    "pts": 12.2,
+    "reb": 3.8,
+    "ast": 2.4,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Yaxel Lendeborg",
+   "pos": "SF",
+   "starter": true,
+   "min": 29.4,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 34.3,
+    "pts": 18.7,
+    "reb": 8.3,
+    "ast": 4.3,
+    "fg3m": 2.7
+   },
+   "prior": {
+    "min": 34.3,
+    "pts": 18.7,
+    "reb": 8.3,
+    "ast": 4.3,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Brandin Podziemski",
+   "pos": "SG",
+   "starter": true,
+   "min": 28.3,
+   "w_cur": 0.25,
+   "cur": {
+    "min": 33.0,
+    "pts": 18.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 13.8,
+    "reb": 5.1,
+    "ast": 3.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Draymond Green",
+   "pos": "PF",
+   "starter": true,
+   "min": 22.3,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 26.0,
+    "pts": 3.5,
+    "reb": 4.5,
+    "ast": 7.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 26.0,
+    "pts": 3.5,
+    "reb": 4.5,
+    "ast": 7.0,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "starter": true,
+   "min": 21.9,
+   "w_cur": 0.4,
+   "cur": {
+    "min": 25.5,
+    "pts": 23.5,
+    "reb": 2.0,
+    "ast": 2.5,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 30.9,
+    "pts": 26.6,
+    "reb": 3.6,
+    "ast": 4.7,
+    "fg3m": 4.4
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "De'Anthony Melton",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.5,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 22.7,
+    "pts": 11.7,
+    "reb": 2.7,
+    "ast": 2.3,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 23.0,
+    "pts": 12.3,
+    "reb": 3.2,
+    "ast": 2.6,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Georges Niang",
+   "pos": "PF",
+   "starter": false,
+   "min": 16.0,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 18.7,
+    "pts": 5.0,
+    "reb": 3.0,
+    "ast": 1.3,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 18.7,
+    "pts": 5.0,
+    "reb": 3.0,
+    "ast": 1.3,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Al Horford",
+   "pos": "C",
+   "starter": false,
+   "min": 15.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 18.5,
+    "pts": 1.5,
+    "reb": 4.5,
+    "ast": 1.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 18.5,
+    "pts": 1.5,
+    "reb": 4.5,
+    "ast": 1.0,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Will Richard",
+   "pos": "SG",
+   "starter": false,
+   "min": 15.7,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 18.3,
+    "pts": 6.3,
+    "reb": 1.7,
+    "ast": 0.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 18.3,
+    "pts": 6.3,
+    "reb": 1.7,
+    "ast": 0.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Gui Santos",
+   "pos": "PF",
+   "starter": true,
+   "min": 15.6,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 22.7,
+    "pts": 8.0,
+    "reb": 4.3,
+    "ast": 1.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.7,
+    "pts": 8.0,
+    "reb": 4.3,
+    "ast": 1.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Graham Ike",
+   "pos": "F",
+   "starter": false,
+   "min": 14.6,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 10.0,
+    "reb": 4.7,
+    "ast": 1.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 17.0,
+    "pts": 10.0,
+    "reb": 4.7,
+    "ast": 1.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Gary Payton II",
+   "pos": "SG",
+   "starter": false,
+   "min": 13.1,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 15.3,
+    "pts": 6.3,
+    "reb": 1.3,
+    "ast": 0.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 15.3,
+    "pts": 6.3,
+    "reb": 1.3,
+    "ast": 0.0,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Brandon Williams",
+   "pos": "PG",
+   "starter": false,
+   "min": 10.2,
+   "w_cur": 0.5,
+   "cur": {
+    "min": 17.0,
+    "pts": 12.7,
+    "reb": 3.0,
+    "ast": 3.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.2,
+    "pts": 13.0,
+    "reb": 2.9,
+    "ast": 3.9,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "LJ Cryer",
+   "pos": "PG",
+   "starter": false,
+   "min": 9.9,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 11.5,
+    "pts": 6.0,
+    "reb": 1.0,
+    "ast": 2.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 11.5,
+    "pts": 6.0,
+    "reb": 1.0,
+    "ast": 2.0,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Charles Bassey",
+   "pos": "C",
+   "starter": false,
+   "min": 7.8,
+   "w_cur": 1.0,
+   "cur": {
+    "min": 13.0,
+    "pts": 10.0,
+    "reb": 7.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 13.0,
+    "pts": 10.0,
+    "reb": 7.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "FanDuel Research (numberFire) 26-oct: spread, total y moneyline; precios de spread/total asumidos -110",
+  "spread_home": -7.5,
+  "total": 235.5,
+  "ml_home": -300,
+  "ml_away": 245
+ },
+ "prop_lines": {}
+}
