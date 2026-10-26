@@ -1,0 +1,76 @@
+{
+ "generated": "2026-10-26T17:26+00:00",
+ "value_ev": 0.03,
+ "games": [
+  {
+   "id": "2026-10-26-IND-at-MIL",
+   "date": "2026-10-26",
+   "away": "IND",
+   "home": "MIL",
+   "tip_et": "20:00",
+   "venue": "Fiserv Forum, Milwaukee",
+   "records": {
+    "IND": "2-1",
+    "MIL": "0-3"
+   },
+   "proj": {
+    "MIL": 117.8,
+    "IND": 122.8
+   },
+   "win_prob": {
+    "MIL": 0.3545,
+    "IND": 0.6455
+   },
+   "proj_total": 240.6,
+   "used_db": true,
+   "n_value": 0,
+   "top_bets": [
+    {
+     "kind": "ml",
+     "label": "IND gana",
+     "player": null,
+     "team": "IND",
+     "line": null,
+     "odds": -170,
+     "odds_assumed": false,
+     "p": 0.645,
+     "implied": 0.63,
+     "fair": -182,
+     "edge": 0.016,
+     "ev": 0.025,
+     "value": false
+    },
+    {
+     "kind": "total",
+     "label": "Over 239.5",
+     "player": null,
+     "team": null,
+     "line": 239.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.522,
+     "implied": 0.524,
+     "fair": -109,
+     "edge": -0.002,
+     "ev": -0.004,
+     "value": false
+    },
+    {
+     "kind": "spread",
+     "label": "IND -4.5",
+     "player": null,
+     "team": "IND",
+     "line": -4.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.52,
+     "implied": 0.524,
+     "fair": -108,
+     "edge": -0.003,
+     "ev": -0.007,
+     "value": false
+    }
+   ]
+  }
+ ]
+}

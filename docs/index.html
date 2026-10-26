@@ -1,0 +1,233 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<title>NBA Predictor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: tablero de jornada. Arriba la cartelera de valor (todas las apuestas ordenadas por EV),
+   debajo una tarjeta por partido; cada partido abre su panel (#id) con proyección, apuestas y props. */
+:root {
+  --bg: #f3f5f8; --surface: #ffffff; --ink: #141a26; --muted: #5b6577; --line: #dde2ea;
+  --accent: #1f4fd1; --accent-soft: #e5ecfc;
+  --good: #0f7a4a; --good-soft: #def3e8; --bad: #b4372e; --bad-soft: #f8e3e1; --warn: #9a6400;
+  --display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e121a; --surface: #161c27; --ink: #e8ecf3; --muted: #95a0b3; --line: #273041;
+  --accent: #7d9cff; --accent-soft: #1d2945;
+  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; --warn: #f2b84b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e121a; --surface: #161c27; --ink: #e8ecf3; --muted: #95a0b3; --line: #273041;
+  --accent: #7d9cff; --accent-soft: #1d2945;
+  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; --warn: #f2b84b; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); margin: 0 }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: .01em; margin: 0; text-wrap: balance; line-height: 1.05 }
+h1 { font-size: clamp(34px, 6vw, 52px); text-transform: uppercase }
+h2 { font-size: 26px; text-transform: uppercase }
+h3 { font-size: 20px }
+.eyebrow { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.muted { color: var(--muted) }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums }
+a { color: var(--accent) }
+header.top { display: grid; gap: 8px }
+.lede { max-width: 64ch; color: var(--muted); margin: 0 }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; min-width: 0 }
+.section { display: grid; gap: 12px }
+.tbl-wrap { overflow-x: auto; min-width: 0 }
+table { border-collapse: collapse; width: 100%; font-size: 14px }
+th { text-align: left; font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+  padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap }
+td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: middle }
+tr:last-child td { border-bottom: 0 }
+td.r, th.r { text-align: right }
+.pill { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; white-space: nowrap }
+.pill.value { background: var(--good-soft); color: var(--good) }
+.pill.neg { background: var(--bad-soft); color: var(--bad) }
+.pill.flat { background: var(--accent-soft); color: var(--accent) }
+.ev-pos { color: var(--good) } .ev-neg { color: var(--bad) }
+.kind { font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em }
+.games { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
+.card { display: grid; gap: 12px; text-decoration: none; color: inherit; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 10px; padding: 16px; transition: border-color .15s }
+.card:hover, .card:focus-visible { border-color: var(--accent); outline: none }
+.matchup { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline }
+.team { font: 700 26px/1 var(--display); letter-spacing: .02em }
+.score { font: 500 18px var(--mono) }
+.bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; display: flex }
+.bar i { background: var(--accent); display: block }
+.mini { display: grid; gap: 4px; font-size: 13px }
+.mini div { display: flex; justify-content: space-between; gap: 8px }
+.back { font: 500 13px var(--mono); text-decoration: none }
+.hero { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) }
+.stat { display: grid; gap: 2px }
+.stat b { font: 700 34px/1 var(--display) }
+.notes { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; max-width: 80ch }
+.grid2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) }
+.chart text { fill: var(--muted); font: 11px var(--mono) }
+.filters { display: flex; flex-wrap: wrap; gap: 8px }
+.filters button { font: 500 12px var(--mono); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); cursor: pointer }
+.filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
+.filters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.empty { padding: 24px; text-align: center; color: var(--muted) }
+.legend { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap" id="app"><p class="muted">Cargando partidos…</p></div>
+
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = (p, d = 1) => (p * 100).toFixed(d) + "%";
+const odds = o => (o > 0 ? "+" : "") + o;
+const evTxt = ev => (ev >= 0 ? "+" : "") + (ev * 100).toFixed(1) + "%";
+const KIND = { ml: "Ganador", spread: "Hándicap", total: "Total", prop: "Player prop" };
+let INDEX = null;
+const cache = {};
+
+async function getJSON(u) { const r = await fetch(u, { cache: "no-store" }); if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }
+
+function evPill(b, thr) {
+  if (b.ev >= thr) return `<span class="pill value">VALOR ${evTxt(b.ev)}</span>`;
+  if (b.ev >= 0) return `<span class="pill flat">${evTxt(b.ev)}</span>`;
+  return `<span class="pill neg">${evTxt(b.ev)}</span>`;
+}
+
+function betRows(bets, thr, withGame) {
+  return bets.map(b => `<tr>
+    ${withGame ? `<td><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
+    <td><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div></td>
+    <td class="r num">${odds(b.odds)}${b.odds_assumed ? "*" : ""}</td>
+    <td class="r num">${pct(b.p)}</td>
+    <td class="r num">${pct(b.implied)}</td>
+    <td class="r num">${odds(b.fair)}</td>
+    <td class="r">${evPill(b, thr)}</td></tr>`).join("");
+}
+const betHead = withGame => `<tr>${withGame ? "<th>Partido</th>" : ""}<th>Apuesta</th><th class="r">Cuota</th>
+  <th class="r">Prob. modelo</th><th class="r">Prob. cuota</th><th class="r">Cuota justa</th><th class="r">EV</th></tr>`;
+
+function renderIndex() {
+  const { games, generated, value_ev: thr } = INDEX;
+  const dates = [...new Set(games.map(g => g.date))].sort().reverse();
+  const day = dates[0];
+  const todays = games.filter(g => g.date === day);
+  const allBets = todays.flatMap(g => g.top_bets.map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })))
+    .sort((a, b) => b.ev - a.ev);
+  const nVal = todays.reduce((s, g) => s + g.n_value, 0);
+  $("#app").innerHTML = `
+  <header class="top">
+    <span class="eyebrow">Jornada ${esc(day || "—")} · ${todays.length} partido${todays.length === 1 ? "" : "s"} · actualizado ${esc((generated || "").replace("T", " ").replace("+00:00", ""))} UTC</span>
+    <h1>NBA Predictor</h1>
+    <p class="lede">Simulación Monte Carlo de cada partido. Comparamos la probabilidad del modelo con la que implica la cuota del mercado; una apuesta tiene valor cuando su valor esperado (EV) supera +${(thr * 100).toFixed(0)}%.</p>
+  </header>
+  <section class="section">
+    <h2>Mejores apuestas de la jornada</h2>
+    <p class="legend">${nVal} apuesta${nVal === 1 ? "" : "s"} con valor hoy. Se muestran las 3 mejores de cada partido, ordenadas por EV.</p>
+    <div class="panel tbl-wrap">${allBets.length ? `<table>${betHead(true)}${betRows(allBets, thr, true)}</table>` : `<div class="empty">Aún no hay cuotas cargadas para esta jornada.</div>`}</div>
+  </section>
+  <section class="section">
+    <h2>Partidos</h2>
+    <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
+  </section>
+  ${dates.length > 1 ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${games.filter(g => g.date !== day).reverse().map(card).join("")}</div></section>` : ""}
+  <p class="legend">* cuota no publicada; se asume -110. Las probabilidades implícitas incluyen el margen de la casa. Herramienta de análisis, no consejo de apuesta.</p>`;
+}
+
+function card(g) {
+  const pa = g.win_prob[g.away], ph = g.win_prob[g.home];
+  const best = g.top_bets[0];
+  return `<a class="card" href="#${g.id}">
+    <span class="eyebrow">${esc(g.date)}${g.tip_et ? " · " + esc(g.tip_et) + " ET" : ""}</span>
+    <div class="matchup">
+      <span class="team">${esc(g.away)} <span class="muted num" style="font-size:13px">${esc(g.records?.[g.away] || "")}</span></span><span class="score">${g.proj[g.away]}</span>
+      <span class="team">@ ${esc(g.home)} <span class="muted num" style="font-size:13px">${esc(g.records?.[g.home] || "")}</span></span><span class="score">${g.proj[g.home]}</span>
+    </div>
+    <div class="bar" aria-label="Probabilidad de victoria"><i style="width:${pa * 100}%"></i></div>
+    <div class="mini">
+      <div><span>Victoria ${esc(g.away)} / ${esc(g.home)}</span><span class="num">${pct(pa, 0)} / ${pct(ph, 0)}</span></div>
+      <div><span>Total proyectado</span><span class="num">${g.proj_total}</span></div>
+      <div><span>Mejor apuesta</span><span class="num ${best && best.ev >= 0 ? "ev-pos" : "ev-neg"}">${best ? esc(best.label) + " " + evTxt(best.ev) : "—"}</span></div>
+    </div>
+  </a>`;
+}
+
+function histogram(h, away, home) {
+  const W = 520, H = 170, pad = 26, n = h.length, max = Math.max(...h, 1), bw = (W - pad * 2) / n;
+  const bars = h.map((v, i) => {
+    const lo = -40 + i * 4, x = pad + i * bw, bh = (v / max) * (H - 44);
+    return `<rect x="${x + 1}" y="${H - 24 - bh}" width="${bw - 2}" height="${bh}" rx="2" fill="${lo >= 0 ? "var(--accent)" : "var(--muted)"}" opacity="${lo >= 0 ? 1 : .55}"><title>${away} ${lo} a ${lo + 4}: ${v}</title></rect>`;
+  }).join("");
+  const ticks = [-40, -20, 0, 20, 40].map(t => `<text x="${pad + ((t + 40) / 4) * bw}" y="${H - 6}" text-anchor="middle">${t > 0 ? "+" + t : t}</text>`).join("");
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Distribución del margen">
+    <line x1="${pad + 10 * bw}" x2="${pad + 10 * bw}" y1="8" y2="${H - 24}" stroke="var(--line)" />
+    ${bars}${ticks}
+    <text x="${W - pad}" y="14" text-anchor="end">gana ${esc(away)} →</text><text x="${pad}" y="14">← gana ${esc(home)}</text></svg>`;
+}
+
+async function renderGame(id) {
+  const thr = INDEX.value_ev;
+  let d = cache[id];
+  if (!d) { try { d = cache[id] = await getJSON(`data/${id}.json`); } catch (e) { $("#app").innerHTML = `<a class="back" href="#">← Jornada</a><p>No se encontró el partido ${esc(id)}.</p>`; return; } }
+  const g = d.game, s = d.summary, a = g.away, h = g.home, mk = d.market || {};
+  const sc = Object.entries(s.scenarios);
+  const players = [...s.players].sort((x, y) => x.team === y.team ? y.pts.mean - x.pts.mean : (x.team === a ? -1 : 1));
+  $("#app").innerHTML = `
+  <a class="back" href="#">← Jornada ${esc(g.date)}</a>
+  <header class="top">
+    <span class="eyebrow">${esc(g.date)}${g.tip_et ? " · " + esc(g.tip_et) + " ET" : ""}${g.venue ? " · " + esc(g.venue) : ""}</span>
+    <h1>${esc(a)} @ ${esc(h)}</h1>
+    <span class="muted">${d.sims.toLocaleString("es")} simulaciones · ${d.used_db ? "con BD de rankings" : "sin BD de rankings"}${mk.source ? " · cuotas: " + esc(mk.source) : ""}</span>
+  </header>
+  <div class="panel hero">
+    <div class="stat"><span class="eyebrow">Marcador proyectado</span><b class="num">${s.proj[a]} – ${s.proj[h]}</b><span class="muted">${esc(a)} – ${esc(h)}</span></div>
+    <div class="stat"><span class="eyebrow">Victoria</span><b class="num">${pct(s.win_prob[a], 0)} / ${pct(s.win_prob[h], 0)}</b><span class="muted">ML justo ${odds(s.fair_ml[a])} / ${odds(s.fair_ml[h])}${mk.ml_away ? ` · mercado ${odds(mk.ml_away)} / ${odds(mk.ml_home)}` : ""}</span></div>
+    <div class="stat"><span class="eyebrow">Total</span><b class="num">${s.proj_total}</b><span class="muted">${mk.total ? `línea ${mk.total} · over ${pct(s.p_over, 0)}` : "sin línea"} · ritmo ${s.pace}</span></div>
+    <div class="stat"><span class="eyebrow">Blowout 20+ / prórroga</span><b class="num">${pct(s.p_blowout_any, 0)} / ${pct(s.p_ot, 0)}</b><span class="muted">${esc(a)} ${pct(s.p_blowout_by[a], 0)} · ${esc(h)} ${pct(s.p_blowout_by[h], 0)}</span></div>
+  </div>
+  <section class="section">
+    <h2>Apuestas por valor</h2>
+    <div class="panel tbl-wrap">${d.bets.length ? `<table>${betHead(false)}${betRows(d.bets, thr, false)}</table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+  </section>
+  <div class="grid2">
+    <section class="panel section"><h3>Margen final (${esc(a)} − ${esc(h)})</h3>${histogram(s.margin_hist, a, h)}</section>
+    <section class="panel section"><h3>Escenarios</h3>
+      <table>${sc.map(([k, v]) => `<tr><td>${esc(k)}</td><td class="r num">${pct(v)}</td></tr>`).join("")}
+      <tr><td>Total p10 – p90</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
+  </div>
+  <section class="section">
+    <h2>Player props proyectados</h2>
+    <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
+      `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${i === 0}">${{ pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PRA" }[k]}</button>`).join("")}</div>
+    <div class="panel tbl-wrap" id="props"></div>
+    <p class="legend">Línea justa = línea .5 más cercana a la media simulada. Rango = percentiles 10 a 90. Si hay línea de mercado se muestra con su EV.</p>
+  </section>
+  ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
+  const draw = k => {
+    document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+    const rows = [...players].sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
+    $("#props").innerHTML = `<table><tr><th>Jugador</th><th>Eq.</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Mercado</th></tr>
+    ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td>${esc(p.name)} <span class="muted">${esc(p.pos)}</span></td><td class="num">${esc(p.team)}</td>
+      <td class="r num">${p.min}</td><td class="r num"><b>${st.mean}</b></td><td class="r num">${st.p10}–${st.p90}</td><td class="r num">${st.line}</td>
+      <td class="r num">${pct(st.p_over, 0)}</td><td class="r num">${m ? `${m.line} (${odds(m.odds)}) ${evPill({ ev: m.p_over * (m.odds > 0 ? m.odds / 100 : 100 / -m.odds) - (1 - m.p_over) }, thr)}` : "—"}</td></tr>`; }).join("")}</table>`;
+  };
+  document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
+  draw("pts");
+}
+
+function route() {
+  const id = location.hash.slice(1);
+  window.scrollTo(0, 0);
+  if (id && INDEX.games.some(g => g.id === id)) renderGame(id); else renderIndex();
+}
+
+getJSON("data/index.json").then(d => { INDEX = d; route(); window.addEventListener("hashchange", route); })
+  .catch(e => { $("#app").innerHTML = `<p>No se pudo cargar <code>data/index.json</code>. Ejecuta <code>python build_site.py</code> para generarlo.</p>`; });
+</script>

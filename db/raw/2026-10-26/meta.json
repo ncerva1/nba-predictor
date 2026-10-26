@@ -1,0 +1,8 @@
+{"season": "2026-27", "prior_season": "2025-26",
+ "cutoff": "Partidos hasta el 25-oct-2026 (NBA.com consultado 26-oct 10:47 COT; statpick hasta 24-oct)",
+ "sources": {"nbacom_team": "stats.nba.com leaguedashteamstats (Base, Advanced, Misc, Opponent, Scoring)",
+             "nbacom_shots": "stats.nba.com leaguedashteamshotlocations (By Zone, Base y Opponent)",
+             "nbacom_playtypes": "stats.nba.com synergyplaytypes (equipo, ofensivo y defensivo)",
+             "dvp_statpick": "https://www.statpick.ai/nba/defense-vs-position",
+             "team_pergame/opp_pergame": "https://www.basketball-reference.com/leagues/NBA_2027.html (respaldo)"},
+ "notes": "2-4 PJ por equipo en 2026-27: usar las vistas blended (w = gp/(gp+10)) para el modelo."}
