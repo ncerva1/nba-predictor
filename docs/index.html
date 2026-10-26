@@ -114,6 +114,12 @@ details.howto dd { margin: 0 }
   background: var(--surface); color: var(--ink); cursor: pointer }
 .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
 .filters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.more { display: block; margin-top: 4px; font: 500 11px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
+tr.detail td { background: var(--bg) }
+.books { display: flex; flex-wrap: wrap; gap: 6px }
+.book { font: 12px var(--mono); border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 3px 8px; white-space: nowrap }
+.book i { font-style: normal; color: var(--muted) }
+.book.good i { color: var(--good) } .book.bad i { color: var(--bad) }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
 .foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
 @media (max-width: 640px) { .hide-sm { display: none } td, th { padding-inline: 6px } }
@@ -160,25 +166,37 @@ const legend = thr => `<div class="legend-row">
 </div>`;
 
 const howto = `<details class="howto"><summary>¿Cómo leer esta tabla?</summary><dl>
-  <dt>Cuota</dt><dd>Cuota decimal de la casa: lo que recibes por cada 1 apostado (incluye lo apostado). Un * indica que no se publicó y se asume 1.91.</dd>
+  <dt>Cuota</dt><dd>Cuota decimal promedio de las casas que ofrecen la línea más repetida (la de consenso): lo que recibes por cada 1 apostado, incluido lo apostado. Un * indica que no hubo cuota publicada y se asume 1.91.</dd>
   <dt>Prob. modelo</dt><dd>Porcentaje de las simulaciones en que gana la apuesta.</dd>
   <dt>Prob. casa</dt><dd>Probabilidad que implica la cuota (1 / cuota), con el margen de la casa incluido.</dd>
   <dt>Cuota justa</dt><dd>La cuota que haría la apuesta neutra según el modelo (1 / prob. modelo). Si la casa paga más que esto, hay valor.</dd>
-  <dt>EV</dt><dd>Ganancia esperada por cada 100 apostados. +10% significa ganar 10 de media por cada 100 a largo plazo.</dd>
+  <dt>EV</dt><dd>Ganancia esperada por cada 100 apostados con la cuota promedio. +10% significa ganar 10 de media por cada 100 a largo plazo. El color se decide con esta cuota promedio.</dd>
+  <dt>Mejor casa</dt><dd>La casa donde la apuesta rinde más según el modelo, a veces con una línea distinta (por ejemplo -13.5 en vez de -14.5). En la página de cada partido puedes ver todas las casas.</dd>
 </dl></details>`;
 
+const lineTxt = (b, l) => l == null ? "" : (b.kind === "total" ? `${l} ` : `${l > 0 ? "+" : ""}${l} `);
+function bestCell(b, thr) {
+  if (!b.best) return `<span class="muted">—</span>`;
+  const o = b.best, other = o.line !== b.line;
+  return `<div class="num">${esc(o.book)}</div><div class="kind">${other ? esc(lineTxt(b, o.line)) + "@ " : "@ "}${o.dec.toFixed(2)} · EV ${evTxt(o.ev)}</div>`;
+}
+function bookList(b) {
+  return `<div class="books">${b.books.map(o => `<span class="book${o.ev >= INDEX.value_ev ? " good" : o.ev < 0 ? " bad" : ""}"><b>${esc(o.book)}</b> ${esc(lineTxt(b, o.line))}@ ${o.dec.toFixed(2)} <i>${evTxt(o.ev)}</i></span>`).join("")}</div>`;
+}
 function betRows(bets, thr, withGame) {
-  return bets.map(b => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
+  return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div></td>
-    <td class="r num">${dec(b.odds)}${b.odds_assumed ? "*" : ""}</td>
+    <td><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</td>
+    <td class="r num">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num">${pct(b.p)}</td>
     <td class="r num hide-sm">${pct(b.implied)}</td>
     <td class="r num hide-sm">${fairDec(b.p)}</td>
-    <td class="r">${evPill(b.ev, thr)}</td></tr>`).join("");
+    <td class="r">${evPill(b.ev, thr)}</td>
+    <td class="hide-sm">${bestCell(b, thr)}</td></tr>
+    ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="8">${bookList(b)}</td></tr>` : ""}`).join("");
 }
 const betHead = withGame => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
-  <th class="r">Prob. modelo</th><th class="r hide-sm">Prob. casa</th><th class="r hide-sm">Cuota justa</th><th class="r">EV</th></tr></thead>`;
+  <th class="r">Prob. modelo</th><th class="r hide-sm">Prob. casa</th><th class="r hide-sm">Cuota justa</th><th class="r">EV</th><th class="hide-sm">Mejor casa</th></tr></thead>`;
 
 function chip(g, dup) {
   const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
@@ -301,6 +319,11 @@ async function renderGame(id) {
       <td class="r num">${pct(st.p_over, 0)}</td><td class="r num">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td></tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
+  document.querySelectorAll("button.more").forEach(btn => btn.addEventListener("click", () => {
+    const row = $("#det-" + btn.dataset.i), open = row.hidden;
+    row.hidden = !open; btn.setAttribute("aria-expanded", open);
+    btn.textContent = open ? "Ocultar casas" : `Ver ${d.bets[btn.dataset.i].books.length} casas`;
+  }));
   draw("pts");
 }
 

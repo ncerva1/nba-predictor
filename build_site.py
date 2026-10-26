@@ -36,14 +36,87 @@ DEFAULT_ODDS = -110
 VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 
 
-def bet(kind, label, p, odds, line=None, player=None, team=None, assumed=False):
-    imp = american_to_prob(odds)
-    dec = 1 + (odds / 100 if odds > 0 else 100 / -odds)
+def to_dec(odds):
+    return 1 + (odds / 100 if odds > 0 else 100 / -odds)
+
+
+def bet(kind, label, p, odds, line=None, player=None, team=None, assumed=False, dec=None):
+    dec = dec or to_dec(odds)
+    imp = 1 / dec
     ev = p * (dec - 1) - (1 - p)
-    return dict(kind=kind, label=label, player=player, team=team, line=line, odds=odds,
+    return dict(kind=kind, label=label, player=player, team=team, line=line, odds=odds, dec=round(dec, 3),
                 odds_assumed=assumed, p=round(float(p), 3), implied=round(imp, 3),
                 fair=prob_to_american(p), edge=round(float(p - imp), 3), ev=round(float(ev), 3),
                 value=bool(ev >= VALUE_EV))
+
+
+def load_odds(date):
+    """odds/<fecha>.json: cuotas de varias casas por partido ("AWAY@HOME": {"books": [...]})."""
+    path = os.path.join(HERE, "odds", f"{date}.json")
+    return json.load(open(path)) if os.path.exists(path) else None
+
+
+def clean_books(books):
+    """Descarta datos incoherentes: hándicaps que no son simétricos y totales lejos de la mediana."""
+    tl = [b["total"][0] for b in books if b.get("total")]
+    med = float(np.median(tl)) if tl else None
+    out = []
+    for b in books:
+        b = dict(b)
+        if b.get("spread_home") and b.get("spread_away") and b["spread_home"][0] != -b["spread_away"][0]:
+            b["spread_home"] = b["spread_away"] = None
+        if b.get("total") and (b["total"][0] is None or abs(b["total"][0] - med) > 10):
+            b["total"] = None
+        out.append(b)
+    return out
+
+
+def multi_book_bets(cfg, s, books):
+    """Una apuesta por selección: línea de consenso (la más repetida), cuota promedio de las casas
+    con esa línea, y la mejor oferta (máximo EV) entre todas las casas con su propia línea."""
+    h, a = cfg["game"]["home"], cfg["game"]["away"]
+    m, tot = s["sh"] - s["sa"], s["sh"] + s["sa"]
+
+    def p_cover(x, line):  # prob. de ganar la apuesta excluyendo push
+        win, push = (x + line > 0).mean(), (x + line == 0).mean()
+        return win / (1 - push) if push < 1 else 0.0
+
+    sels = [  # (kind, team, nombre, extractor (línea, cuota), prob(línea), etiqueta(línea))
+        ("ml", h, "ml_home", lambda b: (None, b.get("ml_home")), lambda l: (m > 0).mean(), lambda l: f"{h} gana"),
+        ("ml", a, "ml_away", lambda b: (None, b.get("ml_away")), lambda l: (m < 0).mean(), lambda l: f"{a} gana"),
+        ("spread", h, "sp_home", lambda b: tuple(b["spread_home"]) if b.get("spread_home") else (None, None),
+         lambda l: p_cover(m, l), lambda l: f"{h} {l:+g}"),
+        ("spread", a, "sp_away", lambda b: tuple(b["spread_away"]) if b.get("spread_away") else (None, None),
+         lambda l: p_cover(-m, l), lambda l: f"{a} {l:+g}"),
+        ("total", None, "over", lambda b: (b["total"][0], b["total"][1]) if b.get("total") else (None, None),
+         lambda l: p_cover(tot, -l), lambda l: f"Over {l:g}"),
+        ("total", None, "under", lambda b: (b["total"][0], b["total"][2]) if b.get("total") else (None, None),
+         lambda l: p_cover(-tot, l), lambda l: f"Under {l:g}"),
+    ]
+    out, consensus = [], {}
+    for kind, team, key, ext, prob, lab in sels:
+        offers = []
+        for b in books:
+            line, odds = ext(b)
+            if odds is None or (kind != "ml" and line is None):
+                continue
+            p = float(prob(line))
+            d = to_dec(odds)
+            offers.append(dict(book=b["book"], line=line, odds=odds, dec=round(d, 3), p=round(p, 3),
+                               ev=round(p * (d - 1) - (1 - p), 3)))
+        if not offers:
+            continue
+        lines = [o["line"] for o in offers]
+        cl = max(set(lines), key=lambda l: (lines.count(l), -abs((l or 0) - np.median([x or 0 for x in lines]))))
+        at = [o for o in offers if o["line"] == cl]
+        dec = float(np.mean([o["dec"] for o in at]))
+        p = float(prob(cl))
+        r = bet(kind, lab(cl), p, prob_to_american(1 / dec), cl, team=team, dec=dec)
+        offers.sort(key=lambda o: o["ev"], reverse=True)
+        r.update(n_books=len(at), best=offers[0], books=offers)
+        consensus[key] = (cl, prob_to_american(1 / dec))
+        out.append(r)
+    return out, consensus
 
 
 def team_bets(cfg, s):
@@ -100,10 +173,22 @@ def run_game(path, n):
     use_db = cfg_raw.get("db", {}).get("use", False) and os.path.exists(os.path.join(HERE, "db", "rankings_latest.json"))
     cfg = load_game(path, use_db)
     s = simulate(cfg, n)
-    summ = summarize(cfg, s)
-    bets = team_bets(cfg, s) + prop_bets(cfg, s)
-    bets.sort(key=lambda b: b["ev"], reverse=True)
     g = cfg["game"]
+    od = load_odds(g["date"])
+    books = (od or {}).get("games", {}).get(f"{g['away']}@{g['home']}", {}).get("books")
+    if books:
+        tb, cons = multi_book_bets(cfg, s, clean_books(books))
+        mk = cfg.setdefault("market", {})  # el resumen usa el consenso de las casas
+        if "sp_home" in cons: mk["spread_home"] = cons["sp_home"][0]
+        if "over" in cons: mk["total"] = cons["over"][0]
+        if "ml_home" in cons: mk["ml_home"] = cons["ml_home"][1]
+        if "ml_away" in cons: mk["ml_away"] = cons["ml_away"][1]
+        mk["source"] = f"promedio de {len(books)} casas ({od.get('source', '')})"
+    else:
+        tb = team_bets(cfg, s)
+    summ = summarize(cfg, s)
+    bets = tb + prop_bets(cfg, s)
+    bets.sort(key=lambda b: b["ev"], reverse=True)
     return dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
                 summary=summ, bets=bets,
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},

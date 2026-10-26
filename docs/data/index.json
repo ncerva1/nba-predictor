@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T17:53+00:00",
+ "generated": "2026-10-26T18:06+00:00",
  "value_ev": 0.03,
  "games": [
   {
@@ -31,14 +31,98 @@
      "player": null,
      "team": "MIN",
      "line": null,
-     "odds": 150,
+     "odds": 149,
+     "dec": 2.49,
      "odds_assumed": false,
      "p": 0.495,
-     "implied": 0.4,
+     "implied": 0.402,
      "fair": 102,
-     "edge": 0.095,
-     "ev": 0.236,
-     "value": true
+     "edge": 0.093,
+     "ev": 0.231,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": 154,
+      "dec": 2.54,
+      "p": 0.495,
+      "ev": 0.256
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 154,
+       "dec": 2.54,
+       "p": 0.495,
+       "ev": 0.256
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 152,
+       "dec": 2.52,
+       "p": 0.495,
+       "ev": 0.246
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -46,14 +130,98 @@
      "player": null,
      "team": "MIN",
      "line": 4.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -113,
+     "dec": 1.887,
+     "odds_assumed": false,
      "p": 0.621,
-     "implied": 0.524,
+     "implied": 0.53,
      "fair": -164,
-     "edge": 0.097,
-     "ev": 0.185,
-     "value": true
+     "edge": 0.091,
+     "ev": 0.171,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": 4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.621,
+      "ev": 0.185
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "FanDuel",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "Caesars",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "BetRivers",
+       "line": 4.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.621,
+       "ev": 0.175
+      },
+      {
+       "book": "bet365",
+       "line": 4.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.621,
+       "ev": 0.17
+      },
+      {
+       "book": "DraftKings",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "Fanatics",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "theScore Bet",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      }
+     ]
     },
     {
      "kind": "total",
@@ -62,13 +230,97 @@
      "team": null,
      "line": 233.5,
      "odds": -110,
-     "odds_assumed": true,
+     "dec": 1.908,
+     "odds_assumed": false,
      "p": 0.523,
      "implied": 0.524,
      "fair": -110,
-     "edge": -0.0,
+     "edge": -0.001,
      "ev": -0.001,
-     "value": false
+     "value": false,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": 233.5,
+      "odds": -108,
+      "dec": 1.926,
+      "p": 0.523,
+      "ev": 0.008
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": 233.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.523,
+       "ev": 0.008
+      },
+      {
+       "book": "BetMGM",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.523,
+       "ev": -0.001
+      },
+      {
+       "book": "Fanatics",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.523,
+       "ev": -0.001
+      },
+      {
+       "book": "Caesars",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.523,
+       "ev": -0.001
+      },
+      {
+       "book": "theScore Bet",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.523,
+       "ev": -0.001
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.523,
+       "ev": -0.001
+      },
+      {
+       "book": "bet365",
+       "line": 233.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.523,
+       "ev": -0.005
+      },
+      {
+       "book": "FanDuel",
+       "line": 233.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.523,
+       "ev": -0.009
+      },
+      {
+       "book": "BetRivers",
+       "line": 232.5,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.503,
+       "ev": -0.013
+      }
+     ]
     }
    ],
    "value_bets": [
@@ -78,14 +330,98 @@
      "player": null,
      "team": "MIN",
      "line": null,
-     "odds": 150,
+     "odds": 149,
+     "dec": 2.49,
      "odds_assumed": false,
      "p": 0.495,
-     "implied": 0.4,
+     "implied": 0.402,
      "fair": 102,
-     "edge": 0.095,
-     "ev": 0.236,
-     "value": true
+     "edge": 0.093,
+     "ev": 0.231,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": 154,
+      "dec": 2.54,
+      "p": 0.495,
+      "ev": 0.256
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 154,
+       "dec": 2.54,
+       "p": 0.495,
+       "ev": 0.256
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 152,
+       "dec": 2.52,
+       "p": 0.495,
+       "ev": 0.246
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.495,
+       "ev": 0.236
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.495,
+       "ev": 0.212
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -93,14 +429,98 @@
      "player": null,
      "team": "MIN",
      "line": 4.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -113,
+     "dec": 1.887,
+     "odds_assumed": false,
      "p": 0.621,
-     "implied": 0.524,
+     "implied": 0.53,
      "fair": -164,
-     "edge": 0.097,
-     "ev": 0.185,
-     "value": true
+     "edge": 0.091,
+     "ev": 0.171,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": 4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.621,
+      "ev": 0.185
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "FanDuel",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "Caesars",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.185
+      },
+      {
+       "book": "BetRivers",
+       "line": 4.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.621,
+       "ev": 0.175
+      },
+      {
+       "book": "bet365",
+       "line": 4.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.621,
+       "ev": 0.17
+      },
+      {
+       "book": "DraftKings",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "Fanatics",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "theScore Bet",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.16
+      }
+     ]
     }
    ]
   },
@@ -133,14 +553,98 @@
      "player": null,
      "team": "CHA",
      "line": null,
-     "odds": -122,
+     "odds": -126,
+     "dec": 1.793,
      "odds_assumed": false,
      "p": 0.632,
-     "implied": 0.55,
+     "implied": 0.558,
      "fair": -171,
-     "edge": 0.082,
-     "ev": 0.149,
-     "value": true
+     "edge": 0.074,
+     "ev": 0.133,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -120,
+      "dec": 1.833,
+      "p": 0.632,
+      "ev": 0.158
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.632,
+       "ev": 0.158
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.632,
+       "ev": 0.158
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.632,
+       "ev": 0.137
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.632,
+       "ev": 0.137
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -127,
+       "dec": 1.787,
+       "p": 0.632,
+       "ev": 0.129
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -128,
+       "dec": 1.781,
+       "p": 0.632,
+       "ev": 0.125
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -148,14 +652,98 @@
      "player": null,
      "team": "CHA",
      "line": -1.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -114,
+     "dec": 1.879,
+     "odds_assumed": false,
      "p": 0.599,
-     "implied": 0.524,
+     "implied": 0.532,
      "fair": -150,
-     "edge": 0.076,
-     "ev": 0.144,
-     "value": true
+     "edge": 0.067,
+     "ev": 0.126,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "Caesars",
+      "line": -2.0,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.587,
+      "ev": 0.146
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": -2.0,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.587,
+       "ev": 0.146
+      },
+      {
+       "book": "BetRivers",
+       "line": -1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.599,
+       "ev": 0.144
+      },
+      {
+       "book": "bet365",
+       "line": -1.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.599,
+       "ev": 0.139
+      },
+      {
+       "book": "FanDuel",
+       "line": -1.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.599,
+       "ev": 0.134
+      },
+      {
+       "book": "BetMGM",
+       "line": -1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.599,
+       "ev": 0.121
+      },
+      {
+       "book": "Fanatics",
+       "line": -1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.599,
+       "ev": 0.121
+      },
+      {
+       "book": "theScore Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.569,
+       "ev": 0.112
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.569,
+       "ev": 0.112
+      },
+      {
+       "book": "DraftKings",
+       "line": -1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.599,
+       "ev": 0.099
+      }
+     ]
     },
     {
      "kind": "total",
@@ -163,14 +751,98 @@
      "player": null,
      "team": null,
      "line": 228.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -113,
+     "dec": 1.884,
+     "odds_assumed": false,
      "p": 0.555,
-     "implied": 0.524,
+     "implied": 0.531,
      "fair": -125,
-     "edge": 0.032,
-     "ev": 0.06,
-     "value": true
+     "edge": 0.025,
+     "ev": 0.046,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 228.5,
+      "odds": -109,
+      "dec": 1.917,
+      "p": 0.555,
+      "ev": 0.065
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 228.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.555,
+       "ev": 0.065
+      },
+      {
+       "book": "bet365",
+       "line": 228.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.555,
+       "ev": 0.047
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 229.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.535,
+       "ev": 0.045
+      },
+      {
+       "book": "FanDuel",
+       "line": 228.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.555,
+       "ev": 0.043
+      },
+      {
+       "book": "Fanatics",
+       "line": 229.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.043
+      },
+      {
+       "book": "Caesars",
+       "line": 229.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.043
+      },
+      {
+       "book": "BetMGM",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.555,
+       "ev": 0.038
+      },
+      {
+       "book": "theScore Bet",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.555,
+       "ev": 0.038
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.535,
+       "ev": 0.035
+      }
+     ]
     }
    ],
    "value_bets": [
@@ -180,14 +852,98 @@
      "player": null,
      "team": "CHA",
      "line": null,
-     "odds": -122,
+     "odds": -126,
+     "dec": 1.793,
      "odds_assumed": false,
      "p": 0.632,
-     "implied": 0.55,
+     "implied": 0.558,
      "fair": -171,
-     "edge": 0.082,
-     "ev": 0.149,
-     "value": true
+     "edge": 0.074,
+     "ev": 0.133,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -120,
+      "dec": 1.833,
+      "p": 0.632,
+      "ev": 0.158
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.632,
+       "ev": 0.158
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.632,
+       "ev": 0.158
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.632,
+       "ev": 0.137
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.632,
+       "ev": 0.137
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -127,
+       "dec": 1.787,
+       "p": 0.632,
+       "ev": 0.129
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -128,
+       "dec": 1.781,
+       "p": 0.632,
+       "ev": 0.125
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.632,
+       "ev": 0.117
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -195,14 +951,98 @@
      "player": null,
      "team": "CHA",
      "line": -1.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -114,
+     "dec": 1.879,
+     "odds_assumed": false,
      "p": 0.599,
-     "implied": 0.524,
+     "implied": 0.532,
      "fair": -150,
-     "edge": 0.076,
-     "ev": 0.144,
-     "value": true
+     "edge": 0.067,
+     "ev": 0.126,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "Caesars",
+      "line": -2.0,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.587,
+      "ev": 0.146
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": -2.0,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.587,
+       "ev": 0.146
+      },
+      {
+       "book": "BetRivers",
+       "line": -1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.599,
+       "ev": 0.144
+      },
+      {
+       "book": "bet365",
+       "line": -1.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.599,
+       "ev": 0.139
+      },
+      {
+       "book": "FanDuel",
+       "line": -1.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.599,
+       "ev": 0.134
+      },
+      {
+       "book": "BetMGM",
+       "line": -1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.599,
+       "ev": 0.121
+      },
+      {
+       "book": "Fanatics",
+       "line": -1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.599,
+       "ev": 0.121
+      },
+      {
+       "book": "theScore Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.569,
+       "ev": 0.112
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.569,
+       "ev": 0.112
+      },
+      {
+       "book": "DraftKings",
+       "line": -1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.599,
+       "ev": 0.099
+      }
+     ]
     },
     {
      "kind": "total",
@@ -210,14 +1050,98 @@
      "player": null,
      "team": null,
      "line": 228.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -113,
+     "dec": 1.884,
+     "odds_assumed": false,
      "p": 0.555,
-     "implied": 0.524,
+     "implied": 0.531,
      "fair": -125,
-     "edge": 0.032,
-     "ev": 0.06,
-     "value": true
+     "edge": 0.025,
+     "ev": 0.046,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 228.5,
+      "odds": -109,
+      "dec": 1.917,
+      "p": 0.555,
+      "ev": 0.065
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 228.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.555,
+       "ev": 0.065
+      },
+      {
+       "book": "bet365",
+       "line": 228.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.555,
+       "ev": 0.047
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 229.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.535,
+       "ev": 0.045
+      },
+      {
+       "book": "FanDuel",
+       "line": 228.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.555,
+       "ev": 0.043
+      },
+      {
+       "book": "Fanatics",
+       "line": 229.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.043
+      },
+      {
+       "book": "Caesars",
+       "line": 229.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.043
+      },
+      {
+       "book": "BetMGM",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.555,
+       "ev": 0.038
+      },
+      {
+       "book": "theScore Bet",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.555,
+       "ev": 0.038
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.535,
+       "ev": 0.035
+      }
+     ]
     }
    ]
   },
@@ -246,18 +1170,102 @@
    "top_bets": [
     {
      "kind": "spread",
-     "label": "BOS -13.5",
+     "label": "BOS -14.5",
      "player": null,
      "team": "BOS",
-     "line": -13.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.576,
-     "implied": 0.524,
-     "fair": -136,
-     "edge": 0.052,
-     "ev": 0.099,
-     "value": true
+     "line": -14.5,
+     "odds": -107,
+     "dec": 1.935,
+     "odds_assumed": false,
+     "p": 0.546,
+     "implied": 0.517,
+     "fair": -120,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "FanDuel",
+      "line": -13.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.576,
+      "ev": 0.076
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "Fanatics",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "theScore Bet",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "BetMGM",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "BetRivers",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "Caesars",
+       "line": -12.5,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.605,
+       "ev": 0.053
+      },
+      {
+       "book": "bet365",
+       "line": -14.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.042
+      },
+      {
+       "book": "DraftKings",
+       "line": -14.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.042
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -265,46 +1273,290 @@
      "player": null,
      "team": "BOS",
      "line": null,
-     "odds": -847,
+     "odds": -761,
+     "dec": 1.131,
      "odds_assumed": false,
      "p": 0.881,
-     "implied": 0.894,
+     "implied": 0.884,
      "fair": -739,
-     "edge": -0.014,
-     "ev": -0.015,
-     "value": false
+     "edge": -0.003,
+     "ev": -0.003,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "Caesars",
+      "line": null,
+      "odds": -699,
+      "dec": 1.143,
+      "p": 0.881,
+      "ev": 0.007
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -699,
+       "dec": 1.143,
+       "p": 0.881,
+       "ev": 0.007
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -714,
+       "dec": 1.14,
+       "p": 0.881,
+       "ev": 0.004
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -752,
+       "dec": 1.133,
+       "p": 0.881,
+       "ev": -0.002
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -750,
+       "dec": 1.133,
+       "p": 0.881,
+       "ev": -0.002
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -750,
+       "dec": 1.133,
+       "p": 0.881,
+       "ev": -0.002
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -750,
+       "dec": 1.133,
+       "p": 0.881,
+       "ev": -0.002
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -800,
+       "dec": 1.125,
+       "p": 0.881,
+       "ev": -0.009
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -800,
+       "dec": 1.125,
+       "p": 0.881,
+       "ev": -0.009
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -850,
+       "dec": 1.118,
+       "p": 0.881,
+       "ev": -0.016
+      }
+     ]
     },
     {
      "kind": "total",
-     "label": "Under 233.5",
+     "label": "Over 232.5",
      "player": null,
      "team": null,
-     "line": 233.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.504,
-     "implied": 0.524,
-     "fair": -102,
-     "edge": -0.02,
-     "ev": -0.038,
-     "value": false
+     "line": 232.5,
+     "odds": -111,
+     "dec": 1.904,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.525,
+     "fair": -106,
+     "edge": -0.01,
+     "ev": -0.019,
+     "value": false,
+     "n_books": 7,
+     "best": {
+      "book": "bet365",
+      "line": 232.5,
+      "odds": -107,
+      "dec": 1.935,
+      "p": 0.515,
+      "ev": -0.003
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": 232.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.515,
+       "ev": -0.003
+      },
+      {
+       "book": "DraftKings",
+       "line": 232.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.515,
+       "ev": -0.007
+      },
+      {
+       "book": "Fanatics",
+       "line": 232.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.515,
+       "ev": -0.016
+      },
+      {
+       "book": "Caesars",
+       "line": 232.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.515,
+       "ev": -0.016
+      },
+      {
+       "book": "theScore Bet",
+       "line": 232.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.515,
+       "ev": -0.016
+      },
+      {
+       "book": "FanDuel",
+       "line": 233.5,
+       "odds": -106,
+       "dec": 1.943,
+       "p": 0.496,
+       "ev": -0.036
+      },
+      {
+       "book": "BetMGM",
+       "line": 232.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.515,
+       "ev": -0.037
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 232.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.515,
+       "ev": -0.037
+      }
+     ]
     }
    ],
    "value_bets": [
     {
      "kind": "spread",
-     "label": "BOS -13.5",
+     "label": "BOS -14.5",
      "player": null,
      "team": "BOS",
-     "line": -13.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.576,
-     "implied": 0.524,
-     "fair": -136,
-     "edge": 0.052,
-     "ev": 0.099,
-     "value": true
+     "line": -14.5,
+     "odds": -107,
+     "dec": 1.935,
+     "odds_assumed": false,
+     "p": 0.546,
+     "implied": 0.517,
+     "fair": -120,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "FanDuel",
+      "line": -13.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.576,
+      "ev": 0.076
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "Fanatics",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "theScore Bet",
+       "line": -13.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.576,
+       "ev": 0.076
+      },
+      {
+       "book": "BetMGM",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "BetRivers",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -14.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.546,
+       "ev": 0.065
+      },
+      {
+       "book": "Caesars",
+       "line": -12.5,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.605,
+       "ev": 0.053
+      },
+      {
+       "book": "bet365",
+       "line": -14.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.042
+      },
+      {
+       "book": "DraftKings",
+       "line": -14.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.546,
+       "ev": 0.042
+      }
+     ]
     }
    ]
   },
@@ -332,34 +1584,202 @@
    "n_value": 0,
    "top_bets": [
     {
+     "kind": "total",
+     "label": "Over 236.5",
+     "player": null,
+     "team": null,
+     "line": 236.5,
+     "odds": -113,
+     "dec": 1.887,
+     "odds_assumed": false,
+     "p": 0.53,
+     "implied": 0.53,
+     "fair": -113,
+     "edge": -0.0,
+     "ev": -0.001,
+     "value": false,
+     "n_books": 5,
+     "best": {
+      "book": "theScore Bet",
+      "line": 236.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.53,
+      "ev": 0.011
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": 236.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.53,
+       "ev": 0.011
+      },
+      {
+       "book": "FanDuel",
+       "line": 236.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.53,
+       "ev": 0.002
+      },
+      {
+       "book": "BetRivers",
+       "line": 236.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.53,
+       "ev": 0.002
+      },
+      {
+       "book": "BetMGM",
+       "line": 236.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.53,
+       "ev": -0.01
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 236.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.53,
+       "ev": -0.01
+      },
+      {
+       "book": "bet365",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.511,
+       "ev": -0.025
+      },
+      {
+       "book": "DraftKings",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.511,
+       "ev": -0.025
+      },
+      {
+       "book": "Fanatics",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.511,
+       "ev": -0.025
+      },
+      {
+       "book": "Caesars",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.511,
+       "ev": -0.025
+      }
+     ]
+    },
+    {
      "kind": "spread",
      "label": "MIA -8.5",
      "player": null,
      "team": "MIA",
      "line": -8.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -109,
+     "dec": 1.921,
+     "odds_assumed": false,
      "p": 0.518,
-     "implied": 0.524,
+     "implied": 0.521,
      "fair": -107,
-     "edge": -0.006,
-     "ev": -0.011,
-     "value": false
-    },
-    {
-     "kind": "total",
-     "label": "Over 237.5",
-     "player": null,
-     "team": null,
-     "line": 237.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.511,
-     "implied": 0.524,
-     "fair": -104,
-     "edge": -0.013,
-     "ev": -0.025,
-     "value": false
+     "edge": -0.003,
+     "ev": -0.005,
+     "value": false,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": -8.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.518,
+      "ev": 0.011
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": -8.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.518,
+       "ev": 0.011
+      },
+      {
+       "book": "Caesars",
+       "line": -8.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.518,
+       "ev": 0.011
+      },
+      {
+       "book": "theScore Bet",
+       "line": -8.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.518,
+       "ev": 0.011
+      },
+      {
+       "book": "BetMGM",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.518,
+       "ev": -0.011
+      },
+      {
+       "book": "bet365",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.518,
+       "ev": -0.011
+      },
+      {
+       "book": "Fanatics",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.518,
+       "ev": -0.011
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.518,
+       "ev": -0.011
+      },
+      {
+       "book": "FanDuel",
+       "line": -8.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.518,
+       "ev": -0.028
+      },
+      {
+       "book": "BetRivers",
+       "line": -9.5,
+       "odds": -103,
+       "dec": 1.971,
+       "p": 0.486,
+       "ev": -0.043
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -368,13 +1788,97 @@
      "team": "MIA",
      "line": null,
      "odds": -330,
+     "dec": 1.303,
      "odds_assumed": false,
      "p": 0.744,
-     "implied": 0.767,
+     "implied": 0.768,
      "fair": -291,
-     "edge": -0.023,
+     "edge": -0.024,
      "ev": -0.031,
-     "value": false
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "Caesars",
+      "line": null,
+      "odds": -319,
+      "dec": 1.313,
+      "p": 0.744,
+      "ev": -0.023
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -319,
+       "dec": 1.313,
+       "p": 0.744,
+       "ev": -0.023
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -320,
+       "dec": 1.312,
+       "p": 0.744,
+       "ev": -0.024
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -325,
+       "dec": 1.308,
+       "p": 0.744,
+       "ev": -0.027
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -325,
+       "dec": 1.308,
+       "p": 0.744,
+       "ev": -0.027
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -330,
+       "dec": 1.303,
+       "p": 0.744,
+       "ev": -0.031
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -334,
+       "dec": 1.299,
+       "p": 0.744,
+       "ev": -0.033
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -340,
+       "dec": 1.294,
+       "p": 0.744,
+       "ev": -0.037
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -340,
+       "dec": 1.294,
+       "p": 0.744,
+       "ev": -0.037
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -340,
+       "dec": 1.294,
+       "p": 0.744,
+       "ev": -0.037
+      }
+     ]
     }
    ],
    "value_bets": []
@@ -408,29 +1912,189 @@
      "player": null,
      "team": "IND",
      "line": null,
-     "odds": -170,
+     "odds": -169,
+     "dec": 1.593,
      "odds_assumed": false,
      "p": 0.645,
-     "implied": 0.63,
+     "implied": 0.628,
      "fair": -182,
-     "edge": 0.016,
-     "ev": 0.025,
-     "value": false
+     "edge": 0.018,
+     "ev": 0.028,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": null,
+      "odds": -165,
+      "dec": 1.606,
+      "p": 0.645,
+      "ev": 0.037
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -165,
+       "dec": 1.606,
+       "p": 0.645,
+       "ev": 0.037
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -165,
+       "dec": 1.606,
+       "p": 0.645,
+       "ev": 0.037
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -166,
+       "dec": 1.602,
+       "p": 0.645,
+       "ev": 0.034
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -168,
+       "dec": 1.595,
+       "p": 0.645,
+       "ev": 0.03
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -168,
+       "dec": 1.595,
+       "p": 0.645,
+       "ev": 0.03
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.645,
+       "ev": 0.025
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.645,
+       "ev": 0.025
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.645,
+       "ev": 0.025
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -177,
+       "dec": 1.565,
+       "p": 0.645,
+       "ev": 0.01
+      }
+     ]
     },
     {
      "kind": "total",
-     "label": "Over 239.5",
+     "label": "Over 238.5",
      "player": null,
      "team": null,
-     "line": 239.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.522,
-     "implied": 0.524,
-     "fair": -109,
-     "edge": -0.002,
-     "ev": -0.004,
-     "value": false
+     "line": 238.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.541,
+     "implied": 0.527,
+     "fair": -118,
+     "edge": 0.014,
+     "ev": 0.027,
+     "value": false,
+     "n_books": 7,
+     "best": {
+      "book": "BetMGM",
+      "line": 238.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.541,
+      "ev": 0.033
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.541,
+       "ev": 0.033
+      },
+      {
+       "book": "bet365",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.541,
+       "ev": 0.033
+      },
+      {
+       "book": "DraftKings",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.541,
+       "ev": 0.033
+      },
+      {
+       "book": "FanDuel",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.541,
+       "ev": 0.033
+      },
+      {
+       "book": "Fanatics",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.541,
+       "ev": 0.033
+      },
+      {
+       "book": "theScore Bet",
+       "line": 238.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.541,
+       "ev": 0.012
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 238.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.541,
+       "ev": 0.012
+      },
+      {
+       "book": "BetRivers",
+       "line": 239.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.522,
+       "ev": 0.01
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -438,14 +2102,98 @@
      "player": null,
      "team": "IND",
      "line": -4.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -109,
+     "dec": 1.916,
+     "odds_assumed": false,
      "p": 0.52,
-     "implied": 0.524,
+     "implied": 0.522,
      "fair": -108,
-     "edge": -0.003,
-     "ev": -0.007,
-     "value": false
+     "edge": -0.002,
+     "ev": -0.003,
+     "value": false,
+     "n_books": 8,
+     "best": {
+      "book": "Hard Rock Bet",
+      "line": -4.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.52,
+      "ev": 0.016
+     },
+     "books": [
+      {
+       "book": "Hard Rock Bet",
+       "line": -4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.52,
+       "ev": 0.016
+      },
+      {
+       "book": "bet365",
+       "line": -4.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.52,
+       "ev": 0.002
+      },
+      {
+       "book": "DraftKings",
+       "line": -4.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.52,
+       "ev": 0.002
+      },
+      {
+       "book": "FanDuel",
+       "line": -4.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.52,
+       "ev": 0.002
+      },
+      {
+       "book": "BetRivers",
+       "line": -5.5,
+       "odds": 105,
+       "dec": 2.05,
+       "p": 0.489,
+       "ev": 0.002
+      },
+      {
+       "book": "BetMGM",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.52,
+       "ev": -0.007
+      },
+      {
+       "book": "Caesars",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.52,
+       "ev": -0.007
+      },
+      {
+       "book": "theScore Bet",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.52,
+       "ev": -0.007
+      },
+      {
+       "book": "Fanatics",
+       "line": -4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.52,
+       "ev": -0.027
+      }
+     ]
     }
    ],
    "value_bets": []
@@ -471,22 +2219,205 @@
    },
    "proj_total": 218.4,
    "used_db": true,
-   "n_value": 0,
+   "n_value": 1,
    "top_bets": [
+    {
+     "kind": "total",
+     "label": "Under 220.5",
+     "player": null,
+     "team": null,
+     "line": 220.5,
+     "odds": -107,
+     "dec": 1.932,
+     "odds_assumed": false,
+     "p": 0.54,
+     "implied": 0.518,
+     "fair": -118,
+     "edge": 0.023,
+     "ev": 0.044,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 220.5,
+      "odds": -104,
+      "dec": 1.962,
+      "p": 0.54,
+      "ev": 0.06
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 220.5,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.54,
+       "ev": 0.06
+      },
+      {
+       "book": "BetMGM",
+       "line": 220.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.54,
+       "ev": 0.055
+      },
+      {
+       "book": "Fanatics",
+       "line": 221.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.552,
+       "ev": 0.053
+      },
+      {
+       "book": "Caesars",
+       "line": 221.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.552,
+       "ev": 0.053
+      },
+      {
+       "book": "FanDuel",
+       "line": 221.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.561,
+       "ev": 0.049
+      },
+      {
+       "book": "bet365",
+       "line": 221.5,
+       "odds": -116,
+       "dec": 1.862,
+       "p": 0.561,
+       "ev": 0.044
+      },
+      {
+       "book": "DraftKings",
+       "line": 220.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.54,
+       "ev": 0.041
+      },
+      {
+       "book": "theScore Bet",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.54,
+       "ev": 0.032
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.54,
+       "ev": 0.032
+      }
+     ]
+    },
     {
      "kind": "spread",
      "label": "OKC -9.5",
      "player": null,
      "team": "OKC",
      "line": -9.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -112,
+     "dec": 1.889,
+     "odds_assumed": false,
      "p": 0.533,
-     "implied": 0.524,
+     "implied": 0.529,
      "fair": -114,
-     "edge": 0.009,
-     "ev": 0.017,
-     "value": false
+     "edge": 0.003,
+     "ev": 0.006,
+     "value": false,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": -9.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.533,
+      "ev": 0.04
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -9.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.533,
+       "ev": 0.04
+      },
+      {
+       "book": "bet365",
+       "line": -9.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.533,
+       "ev": 0.012
+      },
+      {
+       "book": "FanDuel",
+       "line": -9.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.533,
+       "ev": 0.008
+      },
+      {
+       "book": "BetMGM",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.533,
+       "ev": -0.004
+      },
+      {
+       "book": "Fanatics",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.533,
+       "ev": -0.004
+      },
+      {
+       "book": "Caesars",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.533,
+       "ev": -0.004
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.533,
+       "ev": -0.004
+      },
+      {
+       "book": "theScore Bet",
+       "line": -10.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.502,
+       "ev": -0.02
+      },
+      {
+       "book": "DraftKings",
+       "line": -10.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.502,
+       "ev": -0.042
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -494,32 +2425,201 @@
      "player": null,
      "team": "OKC",
      "line": null,
-     "odds": -391,
+     "odds": -412,
+     "dec": 1.242,
      "odds_assumed": false,
      "p": 0.78,
-     "implied": 0.796,
+     "implied": 0.805,
      "fair": -354,
-     "edge": -0.017,
-     "ev": -0.021,
-     "value": false
-    },
-    {
-     "kind": "total",
-     "label": "Under 218.5",
-     "player": null,
-     "team": null,
-     "line": 218.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.501,
-     "implied": 0.524,
-     "fair": -100,
-     "edge": -0.023,
-     "ev": -0.044,
-     "value": false
+     "edge": -0.025,
+     "ev": -0.031,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -385,
+      "dec": 1.26,
+      "p": 0.78,
+      "ev": -0.018
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -385,
+       "dec": 1.26,
+       "p": 0.78,
+       "ev": -0.018
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.78,
+       "ev": -0.025
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -405,
+       "dec": 1.247,
+       "p": 0.78,
+       "ev": -0.028
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -410,
+       "dec": 1.244,
+       "p": 0.78,
+       "ev": -0.03
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -420,
+       "dec": 1.238,
+       "p": 0.78,
+       "ev": -0.035
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -420,
+       "dec": 1.238,
+       "p": 0.78,
+       "ev": -0.035
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -426,
+       "dec": 1.235,
+       "p": 0.78,
+       "ev": -0.037
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -425,
+       "dec": 1.235,
+       "p": 0.78,
+       "ev": -0.037
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -425,
+       "dec": 1.235,
+       "p": 0.78,
+       "ev": -0.037
+      }
+     ]
     }
    ],
-   "value_bets": []
+   "value_bets": [
+    {
+     "kind": "total",
+     "label": "Under 220.5",
+     "player": null,
+     "team": null,
+     "line": 220.5,
+     "odds": -107,
+     "dec": 1.932,
+     "odds_assumed": false,
+     "p": 0.54,
+     "implied": 0.518,
+     "fair": -118,
+     "edge": 0.023,
+     "ev": 0.044,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 220.5,
+      "odds": -104,
+      "dec": 1.962,
+      "p": 0.54,
+      "ev": 0.06
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 220.5,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.54,
+       "ev": 0.06
+      },
+      {
+       "book": "BetMGM",
+       "line": 220.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.54,
+       "ev": 0.055
+      },
+      {
+       "book": "Fanatics",
+       "line": 221.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.552,
+       "ev": 0.053
+      },
+      {
+       "book": "Caesars",
+       "line": 221.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.552,
+       "ev": 0.053
+      },
+      {
+       "book": "FanDuel",
+       "line": 221.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.561,
+       "ev": 0.049
+      },
+      {
+       "book": "bet365",
+       "line": 221.5,
+       "odds": -116,
+       "dec": 1.862,
+       "p": 0.561,
+       "ev": 0.044
+      },
+      {
+       "book": "DraftKings",
+       "line": 220.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.54,
+       "ev": 0.041
+      },
+      {
+       "book": "theScore Bet",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.54,
+       "ev": 0.032
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.54,
+       "ev": 0.032
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "2026-10-26-ATL-at-HOU",
@@ -551,6 +2651,7 @@
      "team": "HOU",
      "line": 0.5,
      "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
      "p": 0.585,
      "implied": 0.5,
@@ -561,18 +2662,102 @@
     },
     {
      "kind": "total",
-     "label": "Over 230.5",
+     "label": "Over 229.5",
      "player": null,
      "team": null,
-     "line": 230.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.558,
-     "implied": 0.524,
-     "fair": -126,
-     "edge": 0.035,
-     "ev": 0.066,
-     "value": true
+     "line": 229.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.577,
+     "implied": 0.527,
+     "fair": -137,
+     "edge": 0.05,
+     "ev": 0.096,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 230.5,
+      "odds": 102,
+      "dec": 2.02,
+      "p": 0.558,
+      "ev": 0.128
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 230.5,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.558,
+       "ev": 0.128
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "theScore Bet",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "bet365",
+       "line": 229.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.577,
+       "ev": 0.093
+      },
+      {
+       "book": "FanDuel",
+       "line": 230.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.558,
+       "ev": 0.09
+      },
+      {
+       "book": "Fanatics",
+       "line": 230.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.569,
+       "ev": 0.086
+      },
+      {
+       "book": "Caesars",
+       "line": 230.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.569,
+       "ev": 0.086
+      },
+      {
+       "book": "BetMGM",
+       "line": 229.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.577,
+       "ev": 0.079
+      }
+     ]
     },
     {
      "kind": "spread",
@@ -580,14 +2765,98 @@
      "player": null,
      "team": "ATL",
      "line": 5.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
      "p": 0.521,
-     "implied": 0.524,
+     "implied": 0.528,
      "fair": -109,
-     "edge": -0.002,
-     "ev": -0.005,
-     "value": false
+     "edge": -0.007,
+     "ev": -0.013,
+     "value": false,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": 5.5,
+      "odds": -109,
+      "dec": 1.917,
+      "p": 0.521,
+      "ev": -0.0
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 5.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.521,
+       "ev": -0.0
+      },
+      {
+       "book": "BetMGM",
+       "line": 5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.521,
+       "ev": -0.005
+      },
+      {
+       "book": "DraftKings",
+       "line": 5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.521,
+       "ev": -0.005
+      },
+      {
+       "book": "FanDuel",
+       "line": 5.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.521,
+       "ev": -0.013
+      },
+      {
+       "book": "Caesars",
+       "line": 5.0,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.505,
+       "ev": -0.014
+      },
+      {
+       "book": "bet365",
+       "line": 5.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.521,
+       "ev": -0.017
+      },
+      {
+       "book": "Fanatics",
+       "line": 5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.521,
+       "ev": -0.025
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.521,
+       "ev": -0.025
+      },
+      {
+       "book": "theScore Bet",
+       "line": 4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.489,
+       "ev": -0.046
+      }
+     ]
     }
    ],
    "value_bets": [
@@ -598,6 +2867,7 @@
      "team": "HOU",
      "line": 0.5,
      "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
      "p": 0.585,
      "implied": 0.5,
@@ -608,18 +2878,102 @@
     },
     {
      "kind": "total",
-     "label": "Over 230.5",
+     "label": "Over 229.5",
      "player": null,
      "team": null,
-     "line": 230.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.558,
-     "implied": 0.524,
-     "fair": -126,
-     "edge": 0.035,
-     "ev": 0.066,
-     "value": true
+     "line": 229.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.577,
+     "implied": 0.527,
+     "fair": -137,
+     "edge": 0.05,
+     "ev": 0.096,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": 230.5,
+      "odds": 102,
+      "dec": 2.02,
+      "p": 0.558,
+      "ev": 0.128
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 230.5,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.558,
+       "ev": 0.128
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "theScore Bet",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.577,
+       "ev": 0.102
+      },
+      {
+       "book": "bet365",
+       "line": 229.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.577,
+       "ev": 0.093
+      },
+      {
+       "book": "FanDuel",
+       "line": 230.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.558,
+       "ev": 0.09
+      },
+      {
+       "book": "Fanatics",
+       "line": 230.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.569,
+       "ev": 0.086
+      },
+      {
+       "book": "Caesars",
+       "line": 230.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.569,
+       "ev": 0.086
+      },
+      {
+       "book": "BetMGM",
+       "line": 229.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.577,
+       "ev": 0.079
+      }
+     ]
     }
    ]
   },
@@ -644,23 +2998,8 @@
    },
    "proj_total": 240.5,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 0,
    "top_bets": [
-    {
-     "kind": "spread",
-     "label": "MEM +1.5",
-     "player": null,
-     "team": "MEM",
-     "line": 1.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.549,
-     "implied": 0.524,
-     "fair": -122,
-     "edge": 0.025,
-     "ev": 0.047,
-     "value": true
-    },
     {
      "kind": "total",
      "label": "Over 238.5",
@@ -668,13 +3007,196 @@
      "team": null,
      "line": 238.5,
      "odds": -110,
-     "odds_assumed": true,
+     "dec": 1.911,
+     "odds_assumed": false,
      "p": 0.538,
-     "implied": 0.524,
+     "implied": 0.523,
      "fair": -117,
      "edge": 0.015,
-     "ev": 0.028,
-     "value": false
+     "ev": 0.029,
+     "value": false,
+     "n_books": 6,
+     "best": {
+      "book": "DraftKings",
+      "line": 237.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.558,
+      "ev": 0.065
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.558,
+       "ev": 0.065
+      },
+      {
+       "book": "theScore Bet",
+       "line": 237.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.558,
+       "ev": 0.065
+      },
+      {
+       "book": "BetRivers",
+       "line": 239.5,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.519,
+       "ev": 0.049
+      },
+      {
+       "book": "FanDuel",
+       "line": 238.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.538,
+       "ev": 0.037
+      },
+      {
+       "book": "BetMGM",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.538,
+       "ev": 0.028
+      },
+      {
+       "book": "Fanatics",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.538,
+       "ev": 0.028
+      },
+      {
+       "book": "Caesars",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.538,
+       "ev": 0.028
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.538,
+       "ev": 0.028
+      },
+      {
+       "book": "bet365",
+       "line": 238.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.538,
+       "ev": 0.023
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "MEM +1.5",
+     "player": null,
+     "team": "MEM",
+     "line": 1.5,
+     "odds": -117,
+     "dec": 1.852,
+     "odds_assumed": false,
+     "p": 0.549,
+     "implied": 0.54,
+     "fair": -122,
+     "edge": 0.009,
+     "ev": 0.016,
+     "value": false,
+     "n_books": 6,
+     "best": {
+      "book": "Fanatics",
+      "line": 1.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.549,
+      "ev": 0.026
+     },
+     "books": [
+      {
+       "book": "Fanatics",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.549,
+       "ev": 0.026
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.549,
+       "ev": 0.026
+      },
+      {
+       "book": "bet365",
+       "line": 1.5,
+       "odds": -116,
+       "dec": 1.862,
+       "p": 0.549,
+       "ev": 0.022
+      },
+      {
+       "book": "BetMGM",
+       "line": 1.5,
+       "odds": -118,
+       "dec": 1.847,
+       "p": 0.549,
+       "ev": 0.014
+      },
+      {
+       "book": "Caesars",
+       "line": 2.5,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.582,
+       "ev": 0.012
+      },
+      {
+       "book": "FanDuel",
+       "line": 1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.549,
+       "ev": 0.006
+      },
+      {
+       "book": "theScore Bet",
+       "line": 1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.549,
+       "ev": 0.006
+      },
+      {
+       "book": "BetRivers",
+       "line": -1.5,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.485,
+       "ev": -0.02
+      },
+      {
+       "book": "DraftKings",
+       "line": -1.5,
+       "odds": -102,
+       "dec": 1.98,
+       "p": 0.485,
+       "ev": -0.039
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -682,33 +3204,101 @@
      "player": null,
      "team": "MEM",
      "line": null,
-     "odds": -104,
+     "odds": -109,
+     "dec": 1.919,
      "odds_assumed": false,
      "p": 0.517,
-     "implied": 0.51,
+     "implied": 0.521,
      "fair": -107,
-     "edge": 0.007,
-     "ev": 0.014,
-     "value": false
+     "edge": -0.004,
+     "ev": -0.008,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": null,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.517,
+      "ev": 0.009
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.517,
+       "ev": 0.009
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.517,
+       "ev": 0.009
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.517,
+       "ev": 0.009
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.517,
+       "ev": -0.004
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.517,
+       "ev": -0.004
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.517,
+       "ev": -0.013
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.517,
+       "ev": -0.022
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.517,
+       "ev": -0.022
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.517,
+       "ev": -0.034
+      }
+     ]
     }
    ],
-   "value_bets": [
-    {
-     "kind": "spread",
-     "label": "MEM +1.5",
-     "player": null,
-     "team": "MEM",
-     "line": 1.5,
-     "odds": -110,
-     "odds_assumed": true,
-     "p": 0.549,
-     "implied": 0.524,
-     "fair": -122,
-     "edge": 0.025,
-     "ev": 0.047,
-     "value": true
-    }
-   ]
+   "value_bets": []
   },
   {
    "id": "2026-10-26-GSW-at-DEN",
@@ -740,13 +3330,65 @@
      "team": "DEN",
      "line": -7.5,
      "odds": -110,
-     "odds_assumed": true,
+     "dec": 1.909,
+     "odds_assumed": false,
      "p": 0.63,
      "implied": 0.524,
      "fair": -170,
      "edge": 0.106,
      "ev": 0.203,
-     "value": true
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetMGM",
+      "line": -7.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.63,
+      "ev": 0.203
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "Caesars",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -754,14 +3396,66 @@
      "player": null,
      "team": "DEN",
      "line": null,
-     "odds": -300,
+     "odds": -285,
+     "dec": 1.351,
      "odds_assumed": false,
      "p": 0.807,
-     "implied": 0.75,
+     "implied": 0.74,
      "fair": -417,
-     "edge": 0.057,
-     "ev": 0.076,
-     "value": true
+     "edge": 0.067,
+     "ev": 0.09,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "theScore Bet",
+      "line": null,
+      "odds": -280,
+      "dec": 1.357,
+      "p": 0.807,
+      "ev": 0.095
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -280,
+       "dec": 1.357,
+       "p": 0.807,
+       "ev": 0.095
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -290,
+       "dec": 1.345,
+       "p": 0.807,
+       "ev": 0.085
+      }
+     ]
     },
     {
      "kind": "total",
@@ -769,14 +3463,74 @@
      "player": null,
      "team": null,
      "line": 235.5,
-     "odds": -110,
-     "odds_assumed": true,
+     "odds": -109,
+     "dec": 1.921,
+     "odds_assumed": false,
      "p": 0.514,
-     "implied": 0.524,
+     "implied": 0.521,
      "fair": -106,
-     "edge": -0.009,
-     "ev": -0.018,
-     "value": false
+     "edge": -0.006,
+     "ev": -0.012,
+     "value": false,
+     "n_books": 5,
+     "best": {
+      "book": "BetMGM",
+      "line": 235.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.514,
+      "ev": 0.004
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": 235.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.514,
+       "ev": 0.004
+      },
+      {
+       "book": "Caesars",
+       "line": 236.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.525,
+       "ev": 0.002
+      },
+      {
+       "book": "bet365",
+       "line": 235.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.514,
+       "ev": -0.009
+      },
+      {
+       "book": "DraftKings",
+       "line": 235.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.514,
+       "ev": -0.018
+      },
+      {
+       "book": "Fanatics",
+       "line": 235.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.514,
+       "ev": -0.018
+      },
+      {
+       "book": "theScore Bet",
+       "line": 235.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.514,
+       "ev": -0.018
+      }
+     ]
     }
    ],
    "value_bets": [
@@ -787,13 +3541,65 @@
      "team": "DEN",
      "line": -7.5,
      "odds": -110,
-     "odds_assumed": true,
+     "dec": 1.909,
+     "odds_assumed": false,
      "p": 0.63,
      "implied": 0.524,
      "fair": -170,
      "edge": 0.106,
      "ev": 0.203,
-     "value": true
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetMGM",
+      "line": -7.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.63,
+      "ev": 0.203
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "Caesars",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.63,
+       "ev": 0.203
+      }
+     ]
     },
     {
      "kind": "ml",
@@ -801,14 +3607,66 @@
      "player": null,
      "team": "DEN",
      "line": null,
-     "odds": -300,
+     "odds": -285,
+     "dec": 1.351,
      "odds_assumed": false,
      "p": 0.807,
-     "implied": 0.75,
+     "implied": 0.74,
      "fair": -417,
-     "edge": 0.057,
-     "ev": 0.076,
-     "value": true
+     "edge": 0.067,
+     "ev": 0.09,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "theScore Bet",
+      "line": null,
+      "odds": -280,
+      "dec": 1.357,
+      "p": 0.807,
+      "ev": 0.095
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -280,
+       "dec": 1.357,
+       "p": 0.807,
+       "ev": 0.095
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.807,
+       "ev": 0.09
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -290,
+       "dec": 1.345,
+       "p": 0.807,
+       "ev": 0.085
+      }
+     ]
     }
    ]
   }
