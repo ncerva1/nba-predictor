@@ -122,7 +122,26 @@ tr.detail td { background: var(--bg) }
 .book.good i { color: var(--good) } .book.bad i { color: var(--bad) }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
 .foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
-@media (max-width: 640px) { .hide-sm { display: none } td, th { padding-inline: 6px } }
+@media (max-width: 640px) {
+  .hide-sm { display: none }
+  table.stack thead { display: none }
+  table.stack, table.stack tbody { display: block }
+  table.stack tr { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; padding: 12px 0; border-bottom: 1px solid var(--line) }
+  table.stack tr:last-child { border-bottom: 0 }
+  table.stack td { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 0; border: 0; text-align: right }
+  table.stack td::before { content: attr(data-label); font: 500 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); text-align: left }
+  table.stack td.head { grid-column: 1 / -1; display: block; text-align: left; font-weight: 600 }
+  table.stack td.head::before, table.stack td.r-sm::before { content: none }
+  table.stack td.r-sm { grid-column: 1 / -1; display: block; text-align: left; padding-top: 4px; border-top: 1px dashed var(--line) }
+  table.stack td.r-sm::before { content: "Mejor casa"; display: block; font: 500 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted) }
+  table.stack tr.detail { display: block; padding: 8px 0 12px }
+  table.stack tr.detail td { display: block; background: none }
+  table.stack tr.detail td::before { content: none }
+  tr.link:hover td { background: none }
+  table.stack td[data-label="Cuota"] .kind { display: none }
+  table.stack td .pill { margin-left: auto }
+  .banner .meta { text-align: left }
+}
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important }
   .ticker { overflow-x: auto }
@@ -185,18 +204,18 @@ function bookList(b) {
 }
 function betRows(bets, thr, withGame) {
   return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
-    ${withGame ? `<td><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</td>
-    <td class="r num">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
-    <td class="r num">${pct(b.p)}</td>
-    <td class="r num hide-sm">${pct(b.implied)}</td>
-    <td class="r num hide-sm">${fairDec(b.p)}</td>
-    <td class="r">${evPill(b.ev, thr)}</td>
-    <td class="hide-sm">${bestCell(b, thr)}</td></tr>
+    ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
+    <td class="head"><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</td>
+    <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
+    <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
+    <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
+    <td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
+    <td class="r" data-label="EV">${evPill(b.ev, thr)}</td>
+    <td class="r-sm" data-label="Mejor casa">${bestCell(b, thr)}</td></tr>
     ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="8">${bookList(b)}</td></tr>` : ""}`).join("");
 }
 const betHead = withGame => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
-  <th class="r">Prob. modelo</th><th class="r hide-sm">Prob. casa</th><th class="r hide-sm">Cuota justa</th><th class="r">EV</th><th class="hide-sm">Mejor casa</th></tr></thead>`;
+  <th class="r">Prob. modelo</th><th class="r">Prob. casa</th><th class="r">Cuota justa</th><th class="r">EV</th><th>Mejor casa</th></tr></thead>`;
 
 function chip(g, dup) {
   const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
@@ -225,7 +244,7 @@ function renderIndex() {
     <h2>Picks con valor de hoy</h2>
     <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Ordenados de mayor a menor valor esperado (EV). Toca una fila para ver el análisis del partido.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${picks.length ? `<table>${betHead(true)}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
+    <div class="panel tbl-wrap">${picks.length ? `<table class="stack">${betHead(true)}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
     ${howto}
   </section>
   <section class="section">
@@ -293,7 +312,7 @@ async function renderGame(id) {
     <h2>Apuestas de este partido</h2>
     <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${d.bets.length ? `<table>${betHead(false)}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+    <div class="panel tbl-wrap">${d.bets.length ? `<table class="stack">${betHead(false)}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
     ${howto}
   </section>
   <div class="grid2">
@@ -313,10 +332,10 @@ async function renderGame(id) {
   const draw = k => {
     document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
     const rows = [...players].sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
-    $("#props").innerHTML = `<table><thead><tr><th>Jugador</th><th>Eq.</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th></tr></thead><tbody>
-    ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td>${esc(p.name)} <span class="muted">${esc(p.pos)}</span></td><td class="num">${esc(p.team)}</td>
-      <td class="r num">${p.min}</td><td class="r num"><b>${st.mean}</b></td><td class="r num">${st.p10}–${st.p90}</td><td class="r num">${st.line}</td>
-      <td class="r num">${pct(st.p_over, 0)}</td><td class="r num">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td></tr>`; }).join("")}</tbody></table>`;
+    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th></tr></thead><tbody>
+    ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
+      <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td></tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("button.more").forEach(btn => btn.addEventListener("click", () => {
