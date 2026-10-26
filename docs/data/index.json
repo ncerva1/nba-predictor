@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T17:38+00:00",
+ "generated": "2026-10-26T17:53+00:00",
  "value_ev": 0.03,
  "games": [
   {
@@ -70,6 +70,38 @@
      "ev": -0.001,
      "value": false
     }
+   ],
+   "value_bets": [
+    {
+     "kind": "ml",
+     "label": "MIN gana",
+     "player": null,
+     "team": "MIN",
+     "line": null,
+     "odds": 150,
+     "odds_assumed": false,
+     "p": 0.495,
+     "implied": 0.4,
+     "fair": 102,
+     "edge": 0.095,
+     "ev": 0.236,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "MIN +4.5",
+     "player": null,
+     "team": "MIN",
+     "line": 4.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.621,
+     "implied": 0.524,
+     "fair": -164,
+     "edge": 0.097,
+     "ev": 0.185,
+     "value": true
+    }
    ]
   },
   {
@@ -95,6 +127,53 @@
    "used_db": true,
    "n_value": 3,
    "top_bets": [
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": -122,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.55,
+     "fair": -171,
+     "edge": 0.082,
+     "ev": 0.149,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "CHA -1.5",
+     "player": null,
+     "team": "CHA",
+     "line": -1.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.599,
+     "implied": 0.524,
+     "fair": -150,
+     "edge": 0.076,
+     "ev": 0.144,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 228.5",
+     "player": null,
+     "team": null,
+     "line": 228.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.555,
+     "implied": 0.524,
+     "fair": -125,
+     "edge": 0.032,
+     "ev": 0.06,
+     "value": true
+    }
+   ],
+   "value_bets": [
     {
      "kind": "ml",
      "label": "CHA gana",
@@ -210,6 +289,23 @@
      "ev": -0.038,
      "value": false
     }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "BOS -13.5",
+     "player": null,
+     "team": "BOS",
+     "line": -13.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.576,
+     "implied": 0.524,
+     "fair": -136,
+     "edge": 0.052,
+     "ev": 0.099,
+     "value": true
+    }
    ]
   },
   {
@@ -280,7 +376,8 @@
      "ev": -0.031,
      "value": false
     }
-   ]
+   ],
+   "value_bets": []
   },
   {
    "id": "2026-10-26-IND-at-MIL",
@@ -350,7 +447,8 @@
      "ev": -0.007,
      "value": false
     }
-   ]
+   ],
+   "value_bets": []
   },
   {
    "id": "2026-10-26-PHX-at-OKC",
@@ -420,7 +518,8 @@
      "ev": -0.044,
      "value": false
     }
-   ]
+   ],
+   "value_bets": []
   },
   {
    "id": "2026-10-26-ATL-at-HOU",
@@ -489,6 +588,38 @@
      "edge": -0.002,
      "ev": -0.005,
      "value": false
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Alperen Şengün Over 0.5 Triples",
+     "player": "Alperen Şengün",
+     "team": "HOU",
+     "line": 0.5,
+     "odds": 100,
+     "odds_assumed": false,
+     "p": 0.585,
+     "implied": 0.5,
+     "fair": -141,
+     "edge": 0.085,
+     "ev": 0.17,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 230.5",
+     "player": null,
+     "team": null,
+     "line": 230.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.558,
+     "implied": 0.524,
+     "fair": -126,
+     "edge": 0.035,
+     "ev": 0.066,
+     "value": true
     }
    ]
   },
@@ -560,6 +691,23 @@
      "ev": 0.014,
      "value": false
     }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "MEM +1.5",
+     "player": null,
+     "team": "MEM",
+     "line": 1.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.549,
+     "implied": 0.524,
+     "fair": -122,
+     "edge": 0.025,
+     "ev": 0.047,
+     "value": true
+    }
    ]
   },
   {
@@ -629,6 +777,38 @@
      "edge": -0.009,
      "ev": -0.018,
      "value": false
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "DEN -7.5",
+     "player": null,
+     "team": "DEN",
+     "line": -7.5,
+     "odds": -110,
+     "odds_assumed": true,
+     "p": 0.63,
+     "implied": 0.524,
+     "fair": -170,
+     "edge": 0.106,
+     "ev": 0.203,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "DEN gana",
+     "player": null,
+     "team": "DEN",
+     "line": null,
+     "odds": -300,
+     "odds_assumed": false,
+     "p": 0.807,
+     "implied": 0.75,
+     "fair": -417,
+     "edge": 0.057,
+     "ev": 0.076,
+     "value": true
     }
    ]
   }

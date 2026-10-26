@@ -5,12 +5,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: tablero de jornada. Arriba la cartelera de valor (todas las apuestas ordenadas por EV),
-   debajo una tarjeta por partido; cada partido abre su panel (#id) con proyección, apuestas y props. */
+/* Layout: banner con el título, barra de partidos en movimiento (clic → análisis), y debajo
+   la página activa: inicio (picks con valor + partidos) o el panel de un partido (#id). */
 :root {
   --bg: #f3f5f8; --surface: #ffffff; --ink: #141a26; --muted: #5b6577; --line: #dde2ea;
   --accent: #1f4fd1; --accent-soft: #e5ecfc;
-  --good: #0f7a4a; --good-soft: #def3e8; --bad: #b4372e; --bad-soft: #f8e3e1; --warn: #9a6400;
+  --banner: #0f1b3d; --banner-ink: #f2f5fb; --banner-muted: #a9b5d3; --ticker: #17264f;
+  --good: #0f7a4a; --good-soft: #def3e8; --bad: #b4372e; --bad-soft: #f8e3e1;
   --display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
   --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -18,28 +19,55 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0e121a; --surface: #161c27; --ink: #e8ecf3; --muted: #95a0b3; --line: #273041;
   --accent: #7d9cff; --accent-soft: #1d2945;
-  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; --warn: #f2b84b; color-scheme: dark } }
+  --banner: #0a1230; --banner-ink: #f2f5fb; --banner-muted: #93a1c4; --ticker: #111c40;
+  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0e121a; --surface: #161c27; --ink: #e8ecf3; --muted: #95a0b3; --line: #273041;
   --accent: #7d9cff; --accent-soft: #1d2945;
-  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; --warn: #f2b84b; color-scheme: dark }
+  --banner: #0a1230; --banner-ink: #f2f5fb; --banner-muted: #93a1c4; --ticker: #111c40;
+  --good: #4fd193; --good-soft: #143326; --bad: #ff8a80; --bad-soft: #3a1d1c; color-scheme: dark }
 * { box-sizing: border-box }
 body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); margin: 0 }
-.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  display: grid; gap: 28px }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+.inner { max-width: 1080px; margin: 0 auto }
 h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: .01em; margin: 0; text-wrap: balance; line-height: 1.05 }
 h1 { font-size: clamp(34px, 6vw, 52px); text-transform: uppercase }
-h2 { font-size: 26px; text-transform: uppercase }
+h2 { font-size: 28px; text-transform: uppercase }
 h3 { font-size: 20px }
 .eyebrow { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
 .muted { color: var(--muted) }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums }
 a { color: var(--accent) }
-header.top { display: grid; gap: 8px }
-.lede { max-width: 64ch; color: var(--muted); margin: 0 }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; min-width: 0 }
+
+/* banner */
+.banner { background: var(--banner); color: var(--banner-ink) }
+.banner .inner { padding-block: 26px 22px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: flex-end; justify-content: space-between }
+.banner a.brand { color: inherit; text-decoration: none; display: grid; gap: 4px }
+.banner .brand span { font: 500 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--banner-muted) }
+.banner h1 { font-size: clamp(38px, 7vw, 60px) }
+.banner .meta { font: 500 12px var(--mono); color: var(--banner-muted); letter-spacing: .04em; text-align: right }
+
+/* barra de partidos */
+.ticker { background: var(--ticker); border-top: 1px solid rgba(255,255,255,.08); overflow: hidden; position: relative }
+.ticker-track { display: flex; gap: 10px; width: max-content; padding-block: 10px; animation: slide var(--dur, 60s) linear infinite }
+.ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused }
+@keyframes slide { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+.chip { display: grid; grid-template-columns: auto auto; gap: 0 14px; align-items: center; text-decoration: none; color: var(--banner-ink);
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: 7px 12px; min-width: 190px; transition: background .15s, border-color .15s }
+.chip:hover, .chip:focus-visible { background: rgba(255,255,255,.14); border-color: var(--banner-ink); outline: none }
+.chip.active { border-color: var(--banner-ink) }
+.chip .t { font: 700 19px/1.15 var(--display); letter-spacing: .03em }
+.chip .s { font: 500 13px/1.3 var(--mono); text-align: right }
+.chip .x { font: 500 11px var(--mono); color: var(--banner-muted); grid-column: 1 / -1 }
+.chip .v { color: #7fe3b0 }
+.ticker-hint { position: absolute; right: 0; top: 0; bottom: 0; width: 48px; background: linear-gradient(to right, transparent, var(--ticker)); pointer-events: none }
+
+main.wrap { padding-block: 28px 64px }
+main .inner { display: grid; gap: 30px }
 .section { display: grid; gap: 12px }
+.section > p { margin: 0 }
+.lede { max-width: 70ch; color: var(--muted) }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; min-width: 0 }
 .tbl-wrap { overflow-x: auto; min-width: 0 }
 table { border-collapse: collapse; width: 100%; font-size: 14px }
 th { text-align: left; font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
@@ -47,12 +75,21 @@ th { text-align: left; font: 500 11px var(--mono); letter-spacing: .06em; text-t
 td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: middle }
 tr:last-child td { border-bottom: 0 }
 td.r, th.r { text-align: right }
-.pill { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; white-space: nowrap }
+tr.link { cursor: pointer }
+tr.link:hover td { background: var(--accent-soft) }
+.pill { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap }
 .pill.value { background: var(--good-soft); color: var(--good) }
 .pill.neg { background: var(--bad-soft); color: var(--bad) }
 .pill.flat { background: var(--accent-soft); color: var(--accent) }
-.ev-pos { color: var(--good) } .ev-neg { color: var(--bad) }
 .kind { font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em }
+.legend-row { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) }
+.legend-item { display: grid; gap: 4px; font-size: 13px; color: var(--muted) }
+.legend-item .pill { justify-self: start }
+details.howto { font-size: 14px; color: var(--muted) }
+details.howto summary { cursor: pointer; color: var(--accent); font-weight: 500 }
+details.howto dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 10px 0 0; max-width: 80ch }
+details.howto dt { font-weight: 600; color: var(--ink) }
+details.howto dd { margin: 0 }
 .games { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
 .card { display: grid; gap: 12px; text-decoration: none; color: inherit; background: var(--surface);
   border: 1px solid var(--line); border-radius: 10px; padding: 16px; transition: border-color .15s }
@@ -64,8 +101,9 @@ td.r, th.r { text-align: right }
 .bar i { background: var(--accent); display: block }
 .mini { display: grid; gap: 4px; font-size: 13px }
 .mini div { display: flex; justify-content: space-between; gap: 8px }
+.cta { font: 500 13px var(--mono); color: var(--accent) }
 .back { font: 500 13px var(--mono); text-decoration: none }
-.hero { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) }
+.hero { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) }
 .stat { display: grid; gap: 2px }
 .stat b { font: 700 34px/1 var(--display) }
 .notes { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; max-width: 80ch }
@@ -77,73 +115,112 @@ td.r, th.r { text-align: right }
 .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
 .filters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
-.legend { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+.foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
+@media (max-width: 640px) { .hide-sm { display: none } td, th { padding-inline: 6px } }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important }
+  .ticker { overflow-x: auto }
+  .ticker-track { animation: none }
+  .ticker-track .dup { display: none }
+}
 </style>
 
-<div class="wrap" id="app"><p class="muted">Cargando partidos…</p></div>
+<header class="banner gutter">
+  <div class="inner">
+    <a class="brand" href="#"><span>Simulaciones Monte Carlo · NBA</span><h1>NBA Predictor</h1></a>
+    <div class="meta" id="meta"></div>
+  </div>
+</header>
+<nav class="ticker gutter" id="ticker" aria-label="Partidos del día"><div class="ticker-track" id="track"></div><div class="ticker-hint"></div></nav>
+<main class="wrap gutter"><div class="inner" id="app"><p class="muted">Cargando partidos…</p></div></main>
 
 <script>
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pct = (p, d = 1) => (p * 100).toFixed(d) + "%";
-const odds = o => (o > 0 ? "+" : "") + o;
+const dec = o => (o > 0 ? 1 + o / 100 : 1 + 100 / -o).toFixed(2);   // americana → decimal
+const fairDec = p => p > 0 ? (1 / p).toFixed(2) : "—";               // cuota justa = 1 / prob
 const evTxt = ev => (ev >= 0 ? "+" : "") + (ev * 100).toFixed(1) + "%";
-const KIND = { ml: "Ganador", spread: "Hándicap", total: "Total", prop: "Player prop" };
-let INDEX = null;
+const KIND = { ml: "Ganador", spread: "Hándicap", total: "Total de puntos", prop: "Player prop" };
+let INDEX = null, DAY = null;
 const cache = {};
 
 async function getJSON(u) { const r = await fetch(u, { cache: "no-store" }); if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }
 
-function evPill(b, thr) {
-  if (b.ev >= thr) return `<span class="pill value">VALOR ${evTxt(b.ev)}</span>`;
-  if (b.ev >= 0) return `<span class="pill flat">${evTxt(b.ev)}</span>`;
-  return `<span class="pill neg">${evTxt(b.ev)}</span>`;
+function evPill(ev, thr) {
+  if (ev >= thr) return `<span class="pill value">${evTxt(ev)}</span>`;
+  if (ev >= 0) return `<span class="pill flat">${evTxt(ev)}</span>`;
+  return `<span class="pill neg">${evTxt(ev)}</span>`;
 }
+
+const legend = thr => `<div class="legend-row">
+  <div class="legend-item"><span class="pill value">Verde · EV ≥ +${(thr * 100).toFixed(0)}%</span>Pick con valor: el modelo ve el resultado más probable de lo que paga la cuota.</div>
+  <div class="legend-item"><span class="pill flat">Azul · EV 0 a +${(thr * 100).toFixed(0)}%</span>Ligeramente a favor, pero el margen es tan pequeño que no se recomienda.</div>
+  <div class="legend-item"><span class="pill neg">Rojo · EV negativo</span>La cuota paga menos de lo que vale según el modelo. Evitar.</div>
+</div>`;
+
+const howto = `<details class="howto"><summary>¿Cómo leer esta tabla?</summary><dl>
+  <dt>Cuota</dt><dd>Cuota decimal de la casa: lo que recibes por cada 1 apostado (incluye lo apostado). Un * indica que no se publicó y se asume 1.91.</dd>
+  <dt>Prob. modelo</dt><dd>Porcentaje de las simulaciones en que gana la apuesta.</dd>
+  <dt>Prob. casa</dt><dd>Probabilidad que implica la cuota (1 / cuota), con el margen de la casa incluido.</dd>
+  <dt>Cuota justa</dt><dd>La cuota que haría la apuesta neutra según el modelo (1 / prob. modelo). Si la casa paga más que esto, hay valor.</dd>
+  <dt>EV</dt><dd>Ganancia esperada por cada 100 apostados. +10% significa ganar 10 de media por cada 100 a largo plazo.</dd>
+</dl></details>`;
 
 function betRows(bets, thr, withGame) {
-  return bets.map(b => `<tr>
+  return bets.map(b => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
     <td><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div></td>
-    <td class="r num">${odds(b.odds)}${b.odds_assumed ? "*" : ""}</td>
+    <td class="r num">${dec(b.odds)}${b.odds_assumed ? "*" : ""}</td>
     <td class="r num">${pct(b.p)}</td>
-    <td class="r num">${pct(b.implied)}</td>
-    <td class="r num">${odds(b.fair)}</td>
-    <td class="r">${evPill(b, thr)}</td></tr>`).join("");
+    <td class="r num hide-sm">${pct(b.implied)}</td>
+    <td class="r num hide-sm">${fairDec(b.p)}</td>
+    <td class="r">${evPill(b.ev, thr)}</td></tr>`).join("");
 }
-const betHead = withGame => `<tr>${withGame ? "<th>Partido</th>" : ""}<th>Apuesta</th><th class="r">Cuota</th>
-  <th class="r">Prob. modelo</th><th class="r">Prob. cuota</th><th class="r">Cuota justa</th><th class="r">EV</th></tr>`;
+const betHead = withGame => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
+  <th class="r">Prob. modelo</th><th class="r hide-sm">Prob. casa</th><th class="r hide-sm">Cuota justa</th><th class="r">EV</th></tr></thead>`;
+
+function chip(g, dup) {
+  const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
+  return `<a class="chip" href="#${g.id}" data-id="${g.id}"${dup ? ' aria-hidden="true" tabindex="-1"' : ""}>
+    <span class="t">${esc(g.away)} @ ${esc(g.home)}</span><span class="s">${g.proj[g.away]}–${g.proj[g.home]}</span>
+    <span class="x">${g.tip_et ? esc(g.tip_et) + " ET · " : ""}${esc(fav)} ${pct(g.win_prob[fav], 0)}${g.n_value ? ` · <span class="v">${g.n_value} pick${g.n_value > 1 ? "s" : ""}</span>` : ""}</span></a>`;
+}
+
+function renderTicker(todays) {
+  const one = todays.map(g => chip(g, false)).join("");
+  $("#track").innerHTML = one + `<span class="dup" style="display:contents">${todays.map(g => chip(g, true)).join("")}</span>`;
+  $("#track").style.setProperty("--dur", Math.max(25, todays.length * 7) + "s");
+}
+
+function markTicker(id) { document.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c.dataset.id === id)); }
 
 function renderIndex() {
-  const { games, generated, value_ev: thr } = INDEX;
-  const dates = [...new Set(games.map(g => g.date))].sort().reverse();
-  const day = dates[0];
-  const todays = games.filter(g => g.date === day);
-  const allBets = todays.flatMap(g => g.top_bets.map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })))
+  const thr = INDEX.value_ev;
+  const todays = INDEX.games.filter(g => g.date === DAY);
+  const picks = todays.flatMap(g => (g.value_bets || g.top_bets.filter(b => b.value)).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })))
     .sort((a, b) => b.ev - a.ev);
-  const nVal = todays.reduce((s, g) => s + g.n_value, 0);
+  const older = INDEX.games.filter(g => g.date !== DAY);
   $("#app").innerHTML = `
-  <header class="top">
-    <span class="eyebrow">Jornada ${esc(day || "—")} · ${todays.length} partido${todays.length === 1 ? "" : "s"} · actualizado ${esc((generated || "").replace("T", " ").replace("+00:00", ""))} UTC</span>
-    <h1>NBA Predictor</h1>
-    <p class="lede">Simulación Monte Carlo de cada partido. Comparamos la probabilidad del modelo con la que implica la cuota del mercado; una apuesta tiene valor cuando su valor esperado (EV) supera +${(thr * 100).toFixed(0)}%.</p>
-  </header>
   <section class="section">
-    <h2>Mejores apuestas de la jornada</h2>
-    <p class="legend">${nVal} apuesta${nVal === 1 ? "" : "s"} con valor hoy. Se muestran las 3 mejores de cada partido, ordenadas por EV.</p>
-    <div class="panel tbl-wrap">${allBets.length ? `<table>${betHead(true)}${betRows(allBets, thr, true)}</table>` : `<div class="empty">Aún no hay cuotas cargadas para esta jornada.</div>`}</div>
+    <span class="eyebrow">Jornada ${esc(DAY)}</span>
+    <h2>Picks con valor de hoy</h2>
+    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Ordenados de mayor a menor valor esperado (EV). Toca una fila para ver el análisis del partido.</p>
+    ${legend(thr)}
+    <div class="panel tbl-wrap">${picks.length ? `<table>${betHead(true)}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
+    ${howto}
   </section>
   <section class="section">
-    <h2>Partidos</h2>
+    <h2>Partidos de hoy</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
-  ${dates.length > 1 ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${games.filter(g => g.date !== day).reverse().map(card).join("")}</div></section>` : ""}
-  <p class="legend">* cuota no publicada; se asume -110. Las probabilidades implícitas incluyen el margen de la casa. Herramienta de análisis, no consejo de apuesta.</p>`;
+  ${older.length ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : ""}
+  <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
+  document.querySelectorAll("tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
 }
 
 function card(g) {
   const pa = g.win_prob[g.away], ph = g.win_prob[g.home];
-  const best = g.top_bets[0];
   return `<a class="card" href="#${g.id}">
     <span class="eyebrow">${esc(g.date)}${g.tip_et ? " · " + esc(g.tip_et) + " ET" : ""}</span>
     <div class="matchup">
@@ -154,8 +231,9 @@ function card(g) {
     <div class="mini">
       <div><span>Victoria ${esc(g.away)} / ${esc(g.home)}</span><span class="num">${pct(pa, 0)} / ${pct(ph, 0)}</span></div>
       <div><span>Total proyectado</span><span class="num">${g.proj_total}</span></div>
-      <div><span>Mejor apuesta</span><span class="num ${best && best.ev >= 0 ? "ev-pos" : "ev-neg"}">${best ? esc(best.label) + " " + evTxt(best.ev) : "—"}</span></div>
+      <div><span>Picks con valor</span><span class="num">${g.n_value}</span></div>
     </div>
+    <span class="cta">Ver análisis →</span>
   </a>`;
 }
 
@@ -175,48 +253,52 @@ function histogram(h, away, home) {
 async function renderGame(id) {
   const thr = INDEX.value_ev;
   let d = cache[id];
-  if (!d) { try { d = cache[id] = await getJSON(`data/${id}.json`); } catch (e) { $("#app").innerHTML = `<a class="back" href="#">← Jornada</a><p>No se encontró el partido ${esc(id)}.</p>`; return; } }
+  if (!d) { try { d = cache[id] = await getJSON(`data/${id}.json`); } catch (e) { $("#app").innerHTML = `<a class="back" href="#">← Inicio</a><p>No se encontró el partido ${esc(id)}.</p>`; return; } }
   const g = d.game, s = d.summary, a = g.away, h = g.home, mk = d.market || {};
   const sc = Object.entries(s.scenarios);
-  const players = [...s.players].sort((x, y) => x.team === y.team ? y.pts.mean - x.pts.mean : (x.team === a ? -1 : 1));
+  const players = [...s.players];
+  const nVal = d.bets.filter(b => b.ev >= thr).length;
   $("#app").innerHTML = `
-  <a class="back" href="#">← Jornada ${esc(g.date)}</a>
-  <header class="top">
+  <a class="back" href="#">← Inicio · todos los picks</a>
+  <header class="section">
     <span class="eyebrow">${esc(g.date)}${g.tip_et ? " · " + esc(g.tip_et) + " ET" : ""}${g.venue ? " · " + esc(g.venue) : ""}</span>
     <h1>${esc(a)} @ ${esc(h)}</h1>
     <span class="muted">${d.sims.toLocaleString("es")} simulaciones · ${d.used_db ? "con BD de rankings" : "sin BD de rankings"}${mk.source ? " · cuotas: " + esc(mk.source) : ""}</span>
   </header>
   <div class="panel hero">
     <div class="stat"><span class="eyebrow">Marcador proyectado</span><b class="num">${s.proj[a]} – ${s.proj[h]}</b><span class="muted">${esc(a)} – ${esc(h)}</span></div>
-    <div class="stat"><span class="eyebrow">Victoria</span><b class="num">${pct(s.win_prob[a], 0)} / ${pct(s.win_prob[h], 0)}</b><span class="muted">ML justo ${odds(s.fair_ml[a])} / ${odds(s.fair_ml[h])}${mk.ml_away ? ` · mercado ${odds(mk.ml_away)} / ${odds(mk.ml_home)}` : ""}</span></div>
-    <div class="stat"><span class="eyebrow">Total</span><b class="num">${s.proj_total}</b><span class="muted">${mk.total ? `línea ${mk.total} · over ${pct(s.p_over, 0)}` : "sin línea"} · ritmo ${s.pace}</span></div>
-    <div class="stat"><span class="eyebrow">Blowout 20+ / prórroga</span><b class="num">${pct(s.p_blowout_any, 0)} / ${pct(s.p_ot, 0)}</b><span class="muted">${esc(a)} ${pct(s.p_blowout_by[a], 0)} · ${esc(h)} ${pct(s.p_blowout_by[h], 0)}</span></div>
+    <div class="stat"><span class="eyebrow">Victoria ${esc(a)} / ${esc(h)}</span><b class="num">${pct(s.win_prob[a], 0)} / ${pct(s.win_prob[h], 0)}</b><span class="muted">Cuota justa ${fairDec(s.win_prob[a])} / ${fairDec(s.win_prob[h])}${mk.ml_away ? ` · casa ${dec(mk.ml_away)} / ${dec(mk.ml_home)}` : ""}</span></div>
+    <div class="stat"><span class="eyebrow">Total de puntos</span><b class="num">${s.proj_total}</b><span class="muted">${mk.total ? `línea ${mk.total} · over ${pct(s.p_over, 0)}` : "sin línea"} · ritmo ${s.pace}</span></div>
+    <div class="stat"><span class="eyebrow">Paliza 20+ / prórroga</span><b class="num">${pct(s.p_blowout_any, 0)} / ${pct(s.p_ot, 0)}</b><span class="muted">${esc(a)} ${pct(s.p_blowout_by[a], 0)} · ${esc(h)} ${pct(s.p_blowout_by[h], 0)}</span></div>
   </div>
   <section class="section">
-    <h2>Apuestas por valor</h2>
-    <div class="panel tbl-wrap">${d.bets.length ? `<table>${betHead(false)}${betRows(d.bets, thr, false)}</table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+    <h2>Apuestas de este partido</h2>
+    <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
+    ${legend(thr)}
+    <div class="panel tbl-wrap">${d.bets.length ? `<table>${betHead(false)}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+    ${howto}
   </section>
   <div class="grid2">
     <section class="panel section"><h3>Margen final (${esc(a)} − ${esc(h)})</h3>${histogram(s.margin_hist, a, h)}</section>
     <section class="panel section"><h3>Escenarios</h3>
       <table>${sc.map(([k, v]) => `<tr><td>${esc(k)}</td><td class="r num">${pct(v)}</td></tr>`).join("")}
-      <tr><td>Total p10 – p90</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
+      <tr><td>Total de puntos (rango 10–90%)</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
   </div>
   <section class="section">
     <h2>Player props proyectados</h2>
     <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
-      `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${i === 0}">${{ pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PRA" }[k]}</button>`).join("")}</div>
+      `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${i === 0}">${{ pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PTS+REB+AST" }[k]}</button>`).join("")}</div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="legend">Línea justa = línea .5 más cercana a la media simulada. Rango = percentiles 10 a 90. Si hay línea de mercado se muestra con su EV.</p>
+    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.</p>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
   const draw = k => {
     document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
     const rows = [...players].sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
-    $("#props").innerHTML = `<table><tr><th>Jugador</th><th>Eq.</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Mercado</th></tr>
+    $("#props").innerHTML = `<table><thead><tr><th>Jugador</th><th>Eq.</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th></tr></thead><tbody>
     ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td>${esc(p.name)} <span class="muted">${esc(p.pos)}</span></td><td class="num">${esc(p.team)}</td>
       <td class="r num">${p.min}</td><td class="r num"><b>${st.mean}</b></td><td class="r num">${st.p10}–${st.p90}</td><td class="r num">${st.line}</td>
-      <td class="r num">${pct(st.p_over, 0)}</td><td class="r num">${m ? `${m.line} (${odds(m.odds)}) ${evPill({ ev: m.p_over * (m.odds > 0 ? m.odds / 100 : 100 / -m.odds) - (1 - m.p_over) }, thr)}` : "—"}</td></tr>`; }).join("")}</table>`;
+      <td class="r num">${pct(st.p_over, 0)}</td><td class="r num">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td></tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   draw("pts");
@@ -225,9 +307,18 @@ async function renderGame(id) {
 function route() {
   const id = location.hash.slice(1);
   window.scrollTo(0, 0);
-  if (id && INDEX.games.some(g => g.id === id)) renderGame(id); else renderIndex();
+  const isGame = id && INDEX.games.some(g => g.id === id);
+  markTicker(isGame ? id : null);
+  if (isGame) renderGame(id); else renderIndex();
 }
 
-getJSON("data/index.json").then(d => { INDEX = d; route(); window.addEventListener("hashchange", route); })
-  .catch(e => { $("#app").innerHTML = `<p>No se pudo cargar <code>data/index.json</code>. Ejecuta <code>python build_site.py</code> para generarlo.</p>`; });
+getJSON("data/index.json").then(d => {
+  INDEX = d;
+  DAY = [...new Set(d.games.map(g => g.date))].sort().reverse()[0];
+  const todays = d.games.filter(g => g.date === DAY);
+  $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${esc((d.generated || "").replace("T", " ").replace("+00:00", ""))} UTC`;
+  renderTicker(todays);
+  route();
+  window.addEventListener("hashchange", route);
+}).catch(e => { $("#app").innerHTML = `<p>No se pudo cargar <code>data/index.json</code>. Ejecuta <code>python build_site.py</code> para generarlo.</p>`; });
 </script>
