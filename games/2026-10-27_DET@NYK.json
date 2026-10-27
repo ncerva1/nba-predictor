@@ -1,0 +1,530 @@
+{
+ "game": {
+  "date": "2026-10-27",
+  "away": "DET",
+  "home": "NYK",
+  "venue": "Madison Square Garden, New York",
+  "tip_et": "20:00",
+  "notes": [
+   "DET 3-0 y NYK 0-3",
+   "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT",
+   "Sin spread/total por casa en Covers: solo hay picks de moneyline"
+  ],
+  "out": [
+   "Jalen Duren",
+   "Jose Alvarado"
+  ],
+  "gtd": {
+   "Ausar Thompson": 0.6,
+   "Isaiah Joe": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "NYK": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 118.91,
+    "drtg": 112.57,
+    "pace": 97.99
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Mitchell Robinson se fue a BOS; Jose Alvarado OUT (tobillo)"
+   }
+  },
+  "DET": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.51,
+    "drtg": 109.17,
+    "pace": 100.16
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Jalen Duren OUT (isquio, hasta 9-nov); se fue Tobias Harris, llega John Collins"
+   }
+  }
+ },
+ "matchup": {
+  "NYK": {},
+  "DET": {}
+ },
+ "players": [
+  {
+   "team": "NYK",
+   "name": "Jalen Brunson",
+   "pos": "PG",
+   "starter": true,
+   "min": 35.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.7,
+    "pts": 22.7,
+    "reb": 3.3,
+    "ast": 3.7,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 35.0,
+    "pts": 26.0,
+    "reb": 3.3,
+    "ast": 6.8,
+    "fg3m": 2.6
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Josh Hart",
+   "pos": "SG",
+   "starter": true,
+   "min": 34.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.7,
+    "pts": 12.3,
+    "reb": 9.0,
+    "ast": 3.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 30.2,
+    "pts": 12.0,
+    "reb": 7.4,
+    "ast": 4.8,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "OG Anunoby",
+   "pos": "PF",
+   "starter": true,
+   "min": 34.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.3,
+    "pts": 17.3,
+    "reb": 6.0,
+    "ast": 3.3,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 16.7,
+    "reb": 5.2,
+    "ast": 2.2,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Karl-Anthony Towns",
+   "pos": "C",
+   "starter": true,
+   "min": 32.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.3,
+    "pts": 21.0,
+    "reb": 12.0,
+    "ast": 2.7,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 20.1,
+    "reb": 11.9,
+    "ast": 3.0,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Mikal Bridges",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 3.3,
+    "reb": 3.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 32.8,
+    "pts": 14.4,
+    "reb": 3.8,
+    "ast": 3.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Landry Shamet",
+   "pos": "SG",
+   "starter": false,
+   "min": 23.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.7,
+    "pts": 6.3,
+    "reb": 2.0,
+    "ast": 1.7,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 23.0,
+    "pts": 9.3,
+    "reb": 1.8,
+    "ast": 1.4,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Miles McBride",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.7,
+    "pts": 8.0,
+    "reb": 1.3,
+    "ast": 1.0,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 26.3,
+    "pts": 12.0,
+    "reb": 2.4,
+    "ast": 2.6,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Tyler Kolek",
+   "pos": "PG",
+   "starter": false,
+   "min": 15.5,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 0.0,
+    "reb": 3.0,
+    "ast": 9.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 11.7,
+    "pts": 4.4,
+    "reb": 1.6,
+    "ast": 2.7,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "NYK",
+   "name": "Andre Drummond",
+   "pos": "C",
+   "starter": false,
+   "min": 13.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.0,
+    "pts": 6.0,
+    "reb": 6.3,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 13.0,
+    "pts": 6.0,
+    "reb": 6.3,
+    "ast": 2.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Cade Cunningham",
+   "pos": "PG",
+   "starter": true,
+   "min": 33.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.7,
+    "pts": 21.3,
+    "reb": 4.7,
+    "ast": 8.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 33.9,
+    "pts": 23.9,
+    "reb": 5.5,
+    "ast": 9.9,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "John Collins",
+   "pos": "PF",
+   "starter": true,
+   "min": 30.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.7,
+    "pts": 15.0,
+    "reb": 7.7,
+    "ast": 0.7,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 27.1,
+    "pts": 13.6,
+    "reb": 5.3,
+    "ast": 1.0,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Duncan Robinson",
+   "pos": "SF",
+   "starter": true,
+   "min": 29.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.0,
+    "pts": 19.7,
+    "reb": 2.0,
+    "ast": 2.3,
+    "fg3m": 5.0
+   },
+   "prior": {
+    "min": 27.4,
+    "pts": 12.2,
+    "reb": 2.7,
+    "ast": 2.1,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "starter": true,
+   "min": 27.2,
+   "g_cur": 2,
+   "p_play": 0.6,
+   "cur": {
+    "min": 26.5,
+    "pts": 7.5,
+    "reb": 7.0,
+    "ast": 5.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 26.0,
+    "pts": 9.9,
+    "reb": 5.7,
+    "ast": 3.1,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Daniss Jenkins",
+   "pos": "PG",
+   "starter": true,
+   "min": 25.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.3,
+    "pts": 12.0,
+    "reb": 5.0,
+    "ast": 4.7,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 20.2,
+    "pts": 9.3,
+    "reb": 2.3,
+    "ast": 3.9,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Paul Reed",
+   "pos": "C",
+   "starter": false,
+   "min": 22.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.0,
+    "pts": 11.0,
+    "reb": 8.3,
+    "ast": 2.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 13.9,
+    "pts": 7.8,
+    "reb": 4.5,
+    "ast": 1.2,
+    "fg3m": 0.2
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Kevin Huerter",
+   "pos": "SG",
+   "starter": false,
+   "min": 21.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 5.7,
+    "reb": 4.0,
+    "ast": 2.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.4,
+    "pts": 10.0,
+    "reb": 3.5,
+    "ast": 2.6,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Javonte Green",
+   "pos": "SG",
+   "starter": false,
+   "min": 18.1,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.7,
+    "pts": 8.7,
+    "reb": 3.3,
+    "ast": 0.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 17.6,
+    "pts": 6.9,
+    "reb": 2.8,
+    "ast": 0.7,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Ron Holland",
+   "pos": "SF",
+   "starter": false,
+   "min": 16.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.0,
+    "pts": 3.3,
+    "reb": 5.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 19.9,
+    "pts": 8.2,
+    "reb": 4.0,
+    "ast": 1.2,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Isaiah Joe",
+   "pos": "SG",
+   "starter": false,
+   "min": 14.3,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 14.0,
+    "pts": 7.3,
+    "reb": 1.7,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 21.2,
+    "pts": 11.1,
+    "reb": 2.5,
+    "ast": 1.3,
+    "fg3m": 2.5
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "spread_home": -4.5,
+  "total": 218.5,
+  "ml_home": -165,
+  "ml_away": 140
+ },
+ "prop_lines": {}
+}

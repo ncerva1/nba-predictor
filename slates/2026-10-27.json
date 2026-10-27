@@ -1,0 +1,204 @@
+{
+ "date": "2026-10-27",
+ "sources": {
+  "schedule_odds": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "players_cur": "Basketball-Reference, páginas de equipo 2026-27 (27-oct); BOS completado con el box score real del 26-oct vs CHI",
+  "players_prior": "Basketball-Reference, per game 2025-26 (liga y páginas de equipo)",
+  "injuries": "CBS Sports injuries 27-oct",
+  "b2b": "Jugaron el 26-oct: BOS (ganó 134-99 a CHI en casa). Ningún otro equipo de hoy jugó ayer",
+  "db": "BD de rankings: snapshot NBA.com del 26-oct (partidos hasta el 25-oct)"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "games": [
+  {
+   "away": "BKN",
+   "home": "BOS",
+   "tip_et": "19:30",
+   "venue": "TD Garden, Boston",
+   "market": {
+    "spread_home": -11.5,
+    "total": 221.5,
+    "ml_home": -575,
+    "ml_away": 425
+   },
+   "b2b": [
+    "BOS"
+   ],
+   "adj": {},
+   "out": [],
+   "gtd": {},
+   "notes": [
+    "BOS en back-to-back (ganó 134-99 a CHI el 26-oct)",
+    "BKN 0-3; Bilodeau OUT. BOS: Devin Carter OUT"
+   ]
+  },
+  {
+   "away": "DET",
+   "home": "NYK",
+   "tip_et": "20:00",
+   "venue": "Madison Square Garden, New York",
+   "market": {
+    "spread_home": -4.5,
+    "total": 218.5,
+    "ml_home": -165,
+    "ml_away": 140
+   },
+   "b2b": [],
+   "adj": {
+    "DET": {
+     "o": -1.0,
+     "d": 1.0,
+     "why": "Jalen Duren OUT (isquio, hasta 9-nov); se fue Tobias Harris, llega John Collins"
+    },
+    "NYK": {
+     "o": 0.0,
+     "d": 0.5,
+     "why": "Mitchell Robinson se fue a BOS; Jose Alvarado OUT (tobillo)"
+    }
+   },
+   "out": [
+    "Jalen Duren",
+    "Jose Alvarado"
+   ],
+   "gtd": {
+    "Ausar Thompson": 0.6,
+    "Isaiah Joe": 0.6
+   },
+   "notes": [
+    "DET 3-0 y NYK 0-3",
+    "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT",
+    "Sin spread/total por casa en Covers: solo hay picks de moneyline"
+   ]
+  },
+  {
+   "away": "SAC",
+   "home": "SAS",
+   "tip_et": "20:00",
+   "venue": "Frost Bank Center, San Antonio",
+   "market": {
+    "spread_home": -18.5,
+    "total": 229.5,
+    "ml_home": -1800,
+    "ml_away": 950
+   },
+   "b2b": [],
+   "adj": {
+    "SAC": {
+     "o": -0.5,
+     "d": 0.5,
+     "why": "Keegan Murray OUT (tobillo, hasta 6-nov); Raynaud y Cardwell OUT"
+    }
+   },
+   "out": [
+    "Keegan Murray"
+   ],
+   "gtd": {},
+   "notes": [
+    "SAC 0-3; Murray, Raynaud, Cardwell OUT",
+    "SAS: Tobias Harris y Quaintance OUT"
+   ]
+  },
+  {
+   "away": "POR",
+   "home": "LAL",
+   "tip_et": "23:00",
+   "venue": "Crypto.com Arena, Los Angeles",
+   "market": {
+    "spread_home": -3.5,
+    "total": 234.5,
+    "ml_home": -150,
+    "ml_away": 125
+   },
+   "b2b": [],
+   "adj": {
+    "POR": {
+     "o": 2.0,
+     "d": 0.0,
+     "why": "Vuelve Lillard (se perdió 2025-26) y llega Ja Morant; Sharpe OUT hasta marzo y se fue Jerami Grant"
+    },
+    "LAL": {
+     "o": 0.0,
+     "d": -1.0,
+     "why": "Llega Walker Kessler como pívot titular"
+    }
+   },
+   "out": [],
+   "gtd": {
+    "Scoot Henderson": 0.6
+   },
+   "notes": [
+    "LAL 3-0 y POR 2-0",
+    "POR: Scoot Henderson (tobillo) en duda, Youngblood y Sharpe OUT",
+    "LAL: Adou Thiero OUT"
+   ]
+  }
+ ],
+ "prop_lines": {
+  "Luka Dončić": {
+   "pts": [
+    32.5,
+    -110,
+    -112
+   ]
+  },
+  "Quentin Grimes": {
+   "pts": [
+    8.5,
+    104,
+    -125
+   ]
+  },
+  "Austin Reaves": {
+   "pts": [
+    22.5,
+    -123
+   ]
+  },
+  "Damian Lillard": {
+   "pts": [
+    19.5,
+    -109
+   ]
+  },
+  "Deni Avdija": {
+   "pts": [
+    21.5,
+    -120
+   ]
+  },
+  "Ja Morant": {
+   "pts": [
+    15.5,
+    -117
+   ]
+  },
+  "Walker Kessler": {
+   "pts": [
+    12.5,
+    -107
+   ]
+  },
+  "Ziaire Williams": {
+   "pts": [
+    8.5,
+    -112
+   ]
+  },
+  "Toumani Camara": {
+   "pts": [
+    10.5,
+    -126
+   ]
+  },
+  "Collin Sexton": {
+   "pts": [
+    9.5,
+    -115
+   ]
+  }
+ }
+}

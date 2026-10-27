@@ -233,7 +233,7 @@ def summarize(cfg, s):
                            p_over=round(float((x > fl).mean()), 3),
                            ladder={int(k): round(float((x >= k).mean()), 3) for k in ks})
             if name in lines and st in lines[name]:
-                ln, odds = lines[name][st]
+                ln, odds = lines[name][st][:2]  # [línea, cuota over] o [línea, over, under]
                 po = float((x > ln).mean())
                 row[st]["market"] = dict(line=ln, odds=odds, p_over=round(po, 3),
                                          implied=round(american_to_prob(odds), 3),
