@@ -1,5 +1,5 @@
 """
-NBA-Predictor 1.1 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.2 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
@@ -17,8 +17,10 @@ Flujo:
  4. Simulación: puntos con componente común (pace/ritmo arbitral) + independiente,
     calibrado a DE ~12 por equipo y ~13.7 de margen. Trayectoria del marcador con
     puente browniano (48 min) para medir ventaja máxima -> blowouts.
- 5. Jugadores: minutos aleatorios (recorte si hay blowout), tasas por minuto
-    mezcladas cur/prior, escaladas por el marcador simulado del equipo, por los multiplicadores
+ 5. Jugadores: minutos aleatorios (DE 5.5-6, 4% de salidas tempranas, bajas de última hora con
+    "p_play"; los minutos libres se reparten para que el equipo sume 240; recorte si hay blowout),
+    tasas por minuto mezcladas cur/prior con w = g / (g + PLAYER_K); los puntos son la parte del
+    jugador en el marcador simulado de su equipo; rebotes, asistencias y triples se escalan por los multiplicadores
     de enfrentamiento (rebote, asistencias, triples concedidos) y por la defensa vs posición del rival,
     y dibujadas con Poisson-gamma (sobre-dispersión).
 """
@@ -27,6 +29,11 @@ import numpy as np
 
 STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
 TEAM_SD, RHO, MARGIN_SD = 12.0, 0.35, 13.7
+# Calibración 1.2 (resultados del 26-oct, ver results/2026-10-26_eval.json):
+MIN_SD = {True: 5.5, False: 6.0}  # DE de minutos titular / suplente (antes 3.5 / 4.0; el error real fue ~7)
+EXIT_P, EXIT_FRAC = 0.04, (0.15, 0.6)  # prob. de salir pronto (lesión, faltas) y fracción de minutos que juega
+PLAYER_K = 6  # partidos de encogimiento de las tasas por minuto hacia la temporada anterior (antes 3)
+MAX_MIN = 44
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -63,6 +70,19 @@ def expected_scores(cfg, r):
     mh = ppp_h * pace / 100 + cfg["matchup"][h].get("ft_bonus_pts", 0)
     ma = ppp_a * pace / 100 + cfg["matchup"][a].get("ft_bonus_pts", 0)
     return mh, ma, pace, ppp_h, ppp_a
+
+
+def player_weight(p):
+    """Peso de la temporada actual en las tasas por minuto: g / (g + PLAYER_K).
+    g = partidos jugados esta temporada ("g_cur"); los JSON viejos solo traen w_cur = g / (g + 3)."""
+    if "g_cur" in p:
+        g = p["g_cur"]
+    else:
+        w = p.get("w_cur", 1.0)
+        if w >= 1:
+            return 1.0  # sin temporada anterior
+        g = 3 * w / (1 - w)
+    return g / (g + PLAYER_K)
 
 
 def nb_draw(rng, mean, r):
@@ -107,38 +127,53 @@ def simulate(cfg, n=20000, seed=7):
     team_sim = {h: sh, a: sa}
     opp = {h: a, a: h}
     dvp = lambda p, s: p.get("dvp", {}).get(s, 1.0)  # multiplicador defensa vs posición (1 si no hay BD)
-    # tasas por minuto mezcladas
     for p in players:
-        w = p["w_cur"]
+        w = player_weight(p)
         p["rate"] = {s: w * p["cur"][s] / max(p["cur"]["min"], 1) +
                      (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1) for s in STAT_R}
-    # normalizar puntos para que la suma de jugadores = puntos esperados del equipo
-    # (la DvP solo redistribuye los puntos entre jugadores; el nivel lo fijan los ratings)
-    norm = {}
+
+    # minutos: ruido + salidas tempranas + bajas de última hora (p_play); los minutos que faltan
+    # se reparten entre los que juegan para que el equipo siga sumando sus 240
+    mins = {}
     for t in (h, a):
-        exp_pts = sum(p["rate"]["pts"] * p["min"] * dvp(p, "pts") for p in players if p["team"] == t)
-        norm[t] = team_mean[t] / exp_pts
+        tp = [p for p in players if p["team"] == t]
+        base = np.array([p["min"] for p in tp])[:, None]
+        m_ = np.clip(base + rng.normal(0, 1, (len(tp), n)) * np.array([[MIN_SD[p["starter"]]] for p in tp]), 0, MAX_MIN)
+        early = rng.random((len(tp), n)) < EXIT_P
+        m_ = np.where(early, m_ * rng.uniform(*EXIT_FRAC, (len(tp), n)), m_)
+        plays = rng.random((len(tp), n)) < np.array([[p.get("p_play", 1.0)] for p in tp])
+        m_ = np.where(plays, m_, 0.0)
+        flex = plays & ~early
+        fixed = np.where(flex, 0.0, m_).sum(axis=0)
+        scale = np.maximum(base.sum() - fixed, 0) / np.maximum(np.where(flex, m_, 0.0).sum(axis=0), 1)
+        m_ = np.where(flex, np.minimum(m_ * scale, MAX_MIN), m_)
+        for p, x in zip(tp, m_):
+            x = np.where(garbage, x * (0.86 if p["starter"] else 1.18), x)
+            mins[p["name"]] = x + ot * (4.0 if p["starter"] else 1.0) * (x > 0)
+
+    # puntos: cada jugador se lleva su parte (tasa x minutos x DvP) del marcador simulado de su equipo,
+    # así una baja o una salida temprana pasa sus tiros a los compañeros
+    pts_w = {p["name"]: p["rate"]["pts"] * mins[p["name"]] * dvp(p, "pts") * cfg["matchup"][p["team"]].get("pts_mult", 1)
+             for p in players}
+    pts_sum = {t: sum(pts_w[p["name"]] for p in players if p["team"] == t) for t in (h, a)}
 
     res = {}
     for p in players:
         t = p["team"]
-        sd = 3.5 if p["starter"] else 4.0
-        mins = np.clip(rng.normal(p["min"], sd, n), 0, 44)
-        mins = np.where(garbage, mins * (0.86 if p["starter"] else 1.18), mins)
-        mins = mins + ot * (4.0 if p["starter"] else 1.0)
+        mn = mins[p["name"]]
         tf = team_sim[t] / team_mean[t]
         of = team_mean[opp[t]] / np.maximum(team_sim[opp[t]], 60)
         mm = cfg["matchup"][t]
         means = {
-            "pts": p["rate"]["pts"] * mins * norm[t] * tf * mm.get("pts_mult", 1) * dvp(p, "pts"),
-            "reb": p["rate"]["reb"] * mins * mm.get("reb_mult", 1) * of ** 0.5 * dvp(p, "reb"),
-            "ast": p["rate"]["ast"] * mins * mm.get("ast_mult", 1) * tf ** 0.8 * dvp(p, "ast"),
-            "fg3m": p["rate"]["fg3m"] * mins * tf ** 0.5 * mm.get("fg3_mult", 1) * dvp(p, "fg3m"),
+            "pts": team_sim[t] * pts_w[p["name"]] / np.maximum(pts_sum[t], 1e-6),
+            "reb": p["rate"]["reb"] * mn * mm.get("reb_mult", 1) * of ** 0.5 * dvp(p, "reb"),
+            "ast": p["rate"]["ast"] * mn * mm.get("ast_mult", 1) * tf ** 0.8 * dvp(p, "ast"),
+            "fg3m": p["rate"]["fg3m"] * mn * tf ** 0.5 * mm.get("fg3_mult", 1) * dvp(p, "fg3m"),
         }
         draws = {s: nb_draw(rng, means[s], STAT_R[s]) for s in STAT_R}
         draws["pra"] = draws["pts"] + draws["reb"] + draws["ast"]
-        draws["min"] = mins
-        res[p["name"]] = dict(team=t, pos=p["pos"], draws=draws)
+        draws["min"] = mn
+        res[p["name"]] = dict(team=t, pos=p["pos"], draws=draws, p_play=p.get("p_play", 1.0))
 
     return dict(ratings=r, mh=mh, ma=ma, pace=pace, ppp_h=ppp_h, ppp_a=ppp_a,
                 sh=sh, sa=sa, ot=ot, max_lead_h=max_lead_h, max_lead_a=max_lead_a,
@@ -184,9 +219,11 @@ def summarize(cfg, s):
     }
     lines = cfg.get("prop_lines", {})
     for name, d in s["players"].items():
-        row = dict(name=name, team=d["team"], pos=d["pos"], min=round(float(d["draws"]["min"].mean()), 1))
+        on = d["draws"]["min"] > 0  # las props se anulan si no juega: todo condicionado a que juegue
+        row = dict(name=name, team=d["team"], pos=d["pos"], min=round(float(d["draws"]["min"][on].mean()), 1),
+                   p_play=round(float(on.mean()), 3))
         for st in ("pts", "reb", "ast", "fg3m", "pra"):
-            x = d["draws"][st]
+            x = d["draws"][st][on]
             fl = float(np.floor(np.mean(x)) + 0.5) if st != "fg3m" else float(np.floor(np.mean(x) - 0.25) + 0.5)
             fl = max(fl, 0.5)
             mu = float(x.mean())

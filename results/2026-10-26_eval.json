@@ -1,0 +1,4877 @@
+{
+ "date": "2026-10-26",
+ "games": [
+  {
+   "id": "2026-10-26-ATL-at-HOU",
+   "score": "ATL 110 - HOU 120",
+   "proj": "ATL 114.4 - HOU 119.1",
+   "pick_winner": "HOU",
+   "p_pick": 0.636,
+   "winner": "HOU",
+   "winner_ok": true,
+   "margin_err": 5.3,
+   "total_err": -3.5,
+   "pts_err": {
+    "HOU": 0.9,
+    "ATL": -4.4
+   },
+   "market_spread_home": -5.5,
+   "market_total": 229.5,
+   "model_vs_market_margin": -0.8,
+   "market_margin_err": 4.5
+  },
+  {
+   "id": "2026-10-26-CHI-at-BOS",
+   "score": "CHI 99 - BOS 134",
+   "proj": "CHI 108.6 - BOS 124.6",
+   "pick_winner": "BOS",
+   "p_pick": 0.881,
+   "winner": "BOS",
+   "winner_ok": true,
+   "margin_err": 19.0,
+   "total_err": -0.3,
+   "pts_err": {
+    "BOS": 9.4,
+    "CHI": -9.6
+   },
+   "market_spread_home": -14.5,
+   "market_total": 232.5,
+   "model_vs_market_margin": 1.5,
+   "market_margin_err": 20.5
+  },
+  {
+   "id": "2026-10-26-DAL-at-MIA",
+   "score": "DAL 113 - MIA 109",
+   "proj": "DAL 114.5 - MIA 123.5",
+   "pick_winner": "MIA",
+   "p_pick": 0.744,
+   "winner": "DAL",
+   "winner_ok": false,
+   "margin_err": -13.0,
+   "total_err": -16.0,
+   "pts_err": {
+    "MIA": -14.5,
+    "DAL": -1.5
+   },
+   "market_spread_home": -8.5,
+   "market_total": 236.5,
+   "model_vs_market_margin": 0.5,
+   "market_margin_err": -12.5
+  },
+  {
+   "id": "2026-10-26-GSW-at-DEN",
+   "score": "GSW 134 - DEN 114",
+   "proj": "GSW 111.4 - DEN 123.3",
+   "pick_winner": "DEN",
+   "p_pick": 0.807,
+   "winner": "GSW",
+   "winner_ok": false,
+   "margin_err": -31.9,
+   "total_err": 13.4,
+   "pts_err": {
+    "DEN": -9.3,
+    "GSW": 22.6
+   },
+   "market_spread_home": -7.5,
+   "market_total": 235.5,
+   "model_vs_market_margin": 4.4,
+   "market_margin_err": -27.5
+  },
+  {
+   "id": "2026-10-26-IND-at-MIL",
+   "score": "IND 102 - MIL 110",
+   "proj": "IND 122.8 - MIL 117.8",
+   "pick_winner": "IND",
+   "p_pick": 0.645,
+   "winner": "MIL",
+   "winner_ok": false,
+   "margin_err": 13.0,
+   "total_err": -28.6,
+   "pts_err": {
+    "MIL": -7.8,
+    "IND": -20.8
+   },
+   "market_spread_home": 4.5,
+   "market_total": 238.5,
+   "model_vs_market_margin": -0.5,
+   "market_margin_err": 12.5
+  },
+  {
+   "id": "2026-10-26-MEM-at-UTA",
+   "score": "MEM 110 - UTA 105",
+   "proj": "MEM 120.6 - UTA 120.0",
+   "pick_winner": "MEM",
+   "p_pick": 0.517,
+   "winner": "MEM",
+   "winner_ok": true,
+   "margin_err": -4.4,
+   "total_err": -25.5,
+   "pts_err": {
+    "UTA": -15.0,
+    "MEM": -10.6
+   },
+   "market_spread_home": -1.5,
+   "market_total": 238.5,
+   "model_vs_market_margin": -2.1,
+   "market_margin_err": -6.5
+  },
+  {
+   "id": "2026-10-26-MIN-at-CLE",
+   "score": "MIN 125 - CLE 127 (OT)",
+   "proj": "MIN 116.0 - CLE 116.2",
+   "pick_winner": "CLE",
+   "p_pick": 0.505,
+   "winner": "CLE",
+   "winner_ok": true,
+   "margin_err": 1.8,
+   "total_err": 19.8,
+   "pts_err": {
+    "CLE": 10.8,
+    "MIN": 9.0
+   },
+   "market_spread_home": -4.5,
+   "market_total": 233.5,
+   "model_vs_market_margin": -4.3,
+   "market_margin_err": -2.5
+  },
+  {
+   "id": "2026-10-26-PHX-at-OKC",
+   "score": "PHX 114 - OKC 125",
+   "proj": "PHX 103.9 - OKC 114.5",
+   "pick_winner": "OKC",
+   "p_pick": 0.78,
+   "winner": "OKC",
+   "winner_ok": true,
+   "margin_err": 0.4,
+   "total_err": 20.6,
+   "pts_err": {
+    "OKC": 10.5,
+    "PHX": 10.1
+   },
+   "market_spread_home": -9.5,
+   "market_total": 220.5,
+   "model_vs_market_margin": 1.1,
+   "market_margin_err": 1.5
+  },
+  {
+   "id": "2026-10-26-WAS-at-CHA",
+   "score": "WAS 103 - CHA 110",
+   "proj": "WAS 113.4 - CHA 117.9",
+   "pick_winner": "CHA",
+   "p_pick": 0.632,
+   "winner": "CHA",
+   "winner_ok": true,
+   "margin_err": 2.5,
+   "total_err": -18.3,
+   "pts_err": {
+    "CHA": -7.9,
+    "WAS": -10.4
+   },
+   "market_spread_home": -1.5,
+   "market_total": 228.5,
+   "model_vs_market_margin": 3.0,
+   "market_margin_err": 5.5
+  }
+ ],
+ "summary": {
+  "n_games": 9,
+  "winners_ok": 6,
+  "margin_mae": 10.1,
+  "total_mae": 16.2,
+  "market_margin_mae": 10.4,
+  "market_total_mae": 14.5,
+  "total_bias": -4.3,
+  "value_bets": 11,
+  "value_bets_settled": 11,
+  "value_bets_won": 6,
+  "value_units": 0.39
+ },
+ "calibration": {
+  "win": {
+   "n": 9,
+   "brier": 0.27,
+   "logloss": 0.741,
+   "mean_p": 0.647,
+   "hit_rate": 0.667
+  },
+  "cover": {
+   "n": 9,
+   "brier": 0.238,
+   "logloss": 0.669,
+   "mean_p": 0.513,
+   "hit_rate": 0.556
+  },
+  "over": {
+   "n": 9,
+   "brier": 0.268,
+   "logloss": 0.73,
+   "mean_p": 0.52,
+   "hit_rate": 0.556
+  },
+  "prop_line": {
+   "n": 865,
+   "brier": 0.246,
+   "logloss": 0.717,
+   "mean_p": 0.432,
+   "hit_rate": 0.461
+  },
+  "prop_line_bins": [
+   {
+    "rango": "0.00-0.35",
+    "n": 88,
+    "p_media": 0.192,
+    "real": 0.352
+   },
+   {
+    "rango": "0.35-0.45",
+    "n": 339,
+    "p_media": 0.415,
+    "real": 0.416
+   },
+   {
+    "rango": "0.45-0.55",
+    "n": 386,
+    "p_media": 0.481,
+    "real": 0.503
+   },
+   {
+    "rango": "0.55-0.65",
+    "n": 51,
+    "p_media": 0.589,
+    "real": 0.647
+   },
+   {
+    "rango": "0.65-1.01",
+    "n": 1,
+    "p_media": 0.683,
+    "real": 0.0
+   }
+  ]
+ },
+ "value_bets": [
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "label": "Alperen Şengün Over 0.5 Triples",
+   "kind": "prop",
+   "dec": 2.0,
+   "p": 0.585,
+   "ev": 0.17,
+   "result": 1,
+   "profit": 1.0
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "label": "Over 229.5",
+   "kind": "total",
+   "dec": 1.898,
+   "p": 0.577,
+   "ev": 0.096,
+   "result": 1,
+   "profit": 0.898
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "label": "BOS -14.5",
+   "kind": "spread",
+   "dec": 1.935,
+   "p": 0.546,
+   "ev": 0.056,
+   "result": 1,
+   "profit": 0.935
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "label": "DEN -7.5",
+   "kind": "spread",
+   "dec": 1.909,
+   "p": 0.63,
+   "ev": 0.203,
+   "result": 0,
+   "profit": -1.0
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "label": "DEN gana",
+   "kind": "ml",
+   "dec": 1.351,
+   "p": 0.807,
+   "ev": 0.09,
+   "result": 0,
+   "profit": -1.0
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "label": "MIN gana",
+   "kind": "ml",
+   "dec": 2.49,
+   "p": 0.495,
+   "ev": 0.231,
+   "result": 0,
+   "profit": -1.0
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "label": "MIN +4.5",
+   "kind": "spread",
+   "dec": 1.887,
+   "p": 0.621,
+   "ev": 0.171,
+   "result": 1,
+   "profit": 0.887
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "label": "Under 220.5",
+   "kind": "total",
+   "dec": 1.932,
+   "p": 0.54,
+   "ev": 0.044,
+   "result": 0,
+   "profit": -1.0
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "label": "CHA gana",
+   "kind": "ml",
+   "dec": 1.793,
+   "p": 0.632,
+   "ev": 0.133,
+   "result": 1,
+   "profit": 0.793
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "label": "CHA -1.5",
+   "kind": "spread",
+   "dec": 1.879,
+   "p": 0.599,
+   "ev": 0.126,
+   "result": 1,
+   "profit": 0.879
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "label": "Over 228.5",
+   "kind": "total",
+   "dec": 1.884,
+   "p": 0.555,
+   "ev": 0.046,
+   "result": 0,
+   "profit": -1.0
+  }
+ ],
+ "player_errors": {
+  "min": {
+   "bias": -0.41,
+   "mae": 5.33,
+   "n": 173
+  },
+  "pts": {
+   "bias": -0.43,
+   "mae": 4.52,
+   "n": 173
+  },
+  "reb": {
+   "bias": 0.07,
+   "mae": 2.32,
+   "n": 173
+  },
+  "ast": {
+   "bias": -0.03,
+   "mae": 1.4,
+   "n": 173
+  },
+  "fg3m": {
+   "bias": -0.03,
+   "mae": 0.89,
+   "n": 173
+  },
+  "pra": {
+   "bias": -0.39,
+   "mae": 6.25,
+   "n": 173
+  }
+ },
+ "no_show": [
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Marcus Smart",
+   "proj_min": 20.0
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Corey Kispert",
+   "proj_min": 10.7
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Nikola Jović",
+   "proj_min": 16.4
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Alpha Diallo",
+   "proj_min": 15.3
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Andrew Nembhard",
+   "proj_min": 31.7
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Jaxson Hayes",
+   "proj_min": 24.5
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Kris Murray",
+   "proj_min": 13.4
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Tyrese Proctor",
+   "proj_min": 8.7
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Chet Holmgren",
+   "proj_min": 35.6
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Cason Wallace",
+   "proj_min": 15.5
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Hannes Steinbach",
+   "proj_min": 12.3
+  }
+ ],
+ "biggest_misses": [
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Devin Booker",
+   "proj": 25.3,
+   "real": 3,
+   "err": -22.3
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Anthony Edwards",
+   "proj": 24.9,
+   "real": 47,
+   "err": 22.1
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Lauri Markkanen",
+   "proj": 23.1,
+   "real": 2,
+   "err": -21.1
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Brandon Miller",
+   "proj": 22.8,
+   "real": 39,
+   "err": 16.2
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Ty Jerome",
+   "proj": 31.1,
+   "real": 15,
+   "err": -16.1
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Marcus Sasser",
+   "proj": 14.3,
+   "real": 0,
+   "err": -14.3
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Yaxel Lendeborg",
+   "proj": 17.3,
+   "real": 31,
+   "err": 13.7
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Ajay Mitchell",
+   "proj": 16.9,
+   "real": 30,
+   "err": 13.1
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Bryce Hopkins",
+   "proj": 1.0,
+   "real": 13,
+   "err": 12.0
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Derrick White",
+   "proj": 16.6,
+   "real": 5,
+   "err": -11.6
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Cooper Flagg",
+   "proj": 17.4,
+   "real": 29,
+   "err": 11.6
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Anthony Davis",
+   "proj": 18.3,
+   "real": 29,
+   "err": 10.7
+  }
+ ],
+ "players": [
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Kevin Durant",
+   "team": "HOU",
+   "pos": "PF",
+   "proj_min": 33.0,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 22,
+    "reb": 9,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 34
+   },
+   "err": {
+    "pts": -2.0,
+    "reb": 4.2,
+    "ast": -0.6,
+    "fg3m": -1.4,
+    "pra": 1.5,
+    "min": -3.0
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Amen Thompson",
+   "team": "HOU",
+   "pos": "SF",
+   "proj_min": 32.3,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 15,
+    "reb": 5,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 22
+   },
+   "err": {
+    "pts": -2.5,
+    "reb": -3.0,
+    "ast": -2.9,
+    "fg3m": -0.5,
+    "pra": -8.3,
+    "min": -4.3
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Jabari Smith Jr.",
+   "team": "HOU",
+   "pos": "PF",
+   "proj_min": 30.9,
+   "played": true,
+   "act": {
+    "min": 39,
+    "pts": 16,
+    "reb": 12,
+    "ast": 5,
+    "fg3m": 2,
+    "pra": 33
+   },
+   "err": {
+    "pts": 0.4,
+    "reb": 7.0,
+    "ast": 3.5,
+    "fg3m": -0.3,
+    "pra": 10.8,
+    "min": 8.1
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Alperen Şengün",
+   "team": "HOU",
+   "pos": "C",
+   "proj_min": 29.5,
+   "played": true,
+   "act": {
+    "min": 37,
+    "pts": 29,
+    "reb": 9,
+    "ast": 9,
+    "fg3m": 1,
+    "pra": 47
+   },
+   "err": {
+    "pts": 9.6,
+    "reb": 0.4,
+    "ast": 3.4,
+    "fg3m": 0.1,
+    "pra": 13.3,
+    "min": 7.5
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Fred VanVleet",
+   "team": "HOU",
+   "pos": "PG",
+   "proj_min": 27.2,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 5,
+    "reb": 4,
+    "ast": 5,
+    "fg3m": 0,
+    "pra": 14
+   },
+   "err": {
+    "pts": -2.9,
+    "reb": 1.7,
+    "ast": -2.1,
+    "fg3m": -1.6,
+    "pra": -3.3,
+    "min": 1.8
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Reed Sheppard",
+   "team": "HOU",
+   "pos": "PG",
+   "proj_min": 22.7,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 13,
+    "reb": 0,
+    "ast": 4,
+    "fg3m": 2,
+    "pra": 17
+   },
+   "err": {
+    "pts": 2.9,
+    "reb": -3.2,
+    "ast": 0.1,
+    "fg3m": 0.1,
+    "pra": -0.2,
+    "min": 1.3
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Marcus Smart",
+   "team": "HOU",
+   "pos": "PG",
+   "proj_min": 20.0,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Tari Eason",
+   "team": "HOU",
+   "pos": "PF",
+   "proj_min": 19.7,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 13,
+    "reb": 8,
+    "ast": 2,
+    "fg3m": 1,
+    "pra": 23
+   },
+   "err": {
+    "pts": 2.9,
+    "reb": 4.1,
+    "ast": 1.5,
+    "fg3m": 0.3,
+    "pra": 8.5,
+    "min": 13.3
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Bogdan Bogdanović",
+   "team": "HOU",
+   "pos": "SG",
+   "proj_min": 13.8,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 5,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 8
+   },
+   "err": {
+    "pts": -1.3,
+    "reb": 0.9,
+    "ast": 0.0,
+    "fg3m": -0.9,
+    "pra": -0.5,
+    "min": -0.8
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Clint Capela",
+   "team": "HOU",
+   "pos": "C",
+   "proj_min": 9.3,
+   "played": true,
+   "act": {
+    "min": 4,
+    "pts": 2,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 4
+   },
+   "err": {
+    "pts": 1.0,
+    "reb": -1.2,
+    "ast": -0.5,
+    "fg3m": 0.0,
+    "pra": -0.7,
+    "min": -5.3
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Jalen Johnson",
+   "team": "ATL",
+   "pos": "SF",
+   "proj_min": 30.6,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 21,
+    "reb": 9,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 34
+   },
+   "err": {
+    "pts": 2.4,
+    "reb": 0.0,
+    "ast": -4.1,
+    "fg3m": 0.0,
+    "pra": -1.7,
+    "min": 5.4
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Nickeil Alexander-Walker",
+   "team": "ATL",
+   "pos": "SG",
+   "proj_min": 28.7,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 12,
+    "reb": 2,
+    "ast": 3,
+    "fg3m": 2,
+    "pra": 17
+   },
+   "err": {
+    "pts": -4.6,
+    "reb": -1.2,
+    "ast": -0.5,
+    "fg3m": -0.9,
+    "pra": -6.2,
+    "min": 0.3
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Dyson Daniels",
+   "team": "ATL",
+   "pos": "SG",
+   "proj_min": 28.1,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 4,
+    "reb": 0,
+    "ast": 4,
+    "fg3m": 0,
+    "pra": 8
+   },
+   "err": {
+    "pts": -7.3,
+    "reb": -5.9,
+    "ast": 0.0,
+    "fg3m": -0.2,
+    "pra": -13.2,
+    "min": -0.1
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Aaron Wiggins",
+   "team": "ATL",
+   "pos": "SG",
+   "proj_min": 29.1,
+   "played": true,
+   "act": {
+    "min": 27,
+    "pts": 12,
+    "reb": 4,
+    "ast": 3,
+    "fg3m": 2,
+    "pra": 19
+   },
+   "err": {
+    "pts": -3.8,
+    "reb": 1.0,
+    "ast": 2.0,
+    "fg3m": -1.2,
+    "pra": -0.8,
+    "min": -2.1
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Onyeka Okongwu",
+   "team": "ATL",
+   "pos": "C",
+   "proj_min": 24.8,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 11,
+    "reb": 9,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 21
+   },
+   "err": {
+    "pts": 2.0,
+    "reb": 3.9,
+    "ast": -1.5,
+    "fg3m": 0.0,
+    "pra": 4.4,
+    "min": 4.2
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "CJ McCollum",
+   "team": "ATL",
+   "pos": "PG",
+   "proj_min": 24.4,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 20,
+    "reb": 1,
+    "ast": 3,
+    "fg3m": 4,
+    "pra": 24
+   },
+   "err": {
+    "pts": 5.4,
+    "reb": -0.9,
+    "ast": 0.5,
+    "fg3m": 1.4,
+    "pra": 5.0,
+    "min": 5.6
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Luguentz Dort",
+   "team": "ATL",
+   "pos": "SF",
+   "proj_min": 24.8,
+   "played": true,
+   "act": {
+    "min": 21,
+    "pts": 11,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 14
+   },
+   "err": {
+    "pts": 3.2,
+    "reb": -1.8,
+    "ast": -0.8,
+    "fg3m": -1.3,
+    "pra": 0.6,
+    "min": -3.8
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Kingston Flemings",
+   "team": "ATL",
+   "pos": "PG",
+   "proj_min": 19.5,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 6,
+    "reb": 1,
+    "ast": 3,
+    "fg3m": 0,
+    "pra": 10
+   },
+   "err": {
+    "pts": 3.7,
+    "reb": -2.6,
+    "ast": -1.5,
+    "fg3m": -0.4,
+    "pra": -0.3,
+    "min": -1.5
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Jock Landale",
+   "team": "ATL",
+   "pos": "C",
+   "proj_min": 19.5,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 8,
+    "reb": 6,
+    "ast": 4,
+    "fg3m": 0,
+    "pra": 18
+   },
+   "err": {
+    "pts": 0.8,
+    "reb": 1.6,
+    "ast": 2.0,
+    "fg3m": -0.6,
+    "pra": 4.4,
+    "min": -1.5
+   }
+  },
+  {
+   "game": "2026-10-26-ATL-at-HOU",
+   "name": "Corey Kispert",
+   "team": "ATL",
+   "pos": "SF",
+   "proj_min": 10.7,
+   "played": false,
+   "act": null
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Jayson Tatum",
+   "team": "BOS",
+   "pos": "PF",
+   "proj_min": 35.0,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 23,
+    "reb": 7,
+    "ast": 6,
+    "fg3m": 2,
+    "pra": 36
+   },
+   "err": {
+    "pts": -3.8,
+    "reb": -2.5,
+    "ast": -1.6,
+    "fg3m": -0.6,
+    "pra": -7.9,
+    "min": -7.0
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Derrick White",
+   "team": "BOS",
+   "pos": "SG",
+   "proj_min": 33.6,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 5,
+    "reb": 6,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 15
+   },
+   "err": {
+    "pts": -11.6,
+    "reb": 2.3,
+    "ast": -2.4,
+    "fg3m": -1.3,
+    "pra": -11.7,
+    "min": -15.6
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Paul George",
+   "team": "BOS",
+   "pos": "PF",
+   "proj_min": 31.2,
+   "played": true,
+   "act": {
+    "min": 25,
+    "pts": 16,
+    "reb": 5,
+    "ast": 2,
+    "fg3m": 3,
+    "pra": 23
+   },
+   "err": {
+    "pts": -8.0,
+    "reb": -1.0,
+    "ast": -1.6,
+    "fg3m": -0.8,
+    "pra": -10.6,
+    "min": -6.2
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Payton Pritchard",
+   "team": "BOS",
+   "pos": "PG",
+   "proj_min": 33.7,
+   "played": true,
+   "act": {
+    "min": 22,
+    "pts": 28,
+    "reb": 1,
+    "ast": 4,
+    "fg3m": 7,
+    "pra": 33
+   },
+   "err": {
+    "pts": 9.0,
+    "reb": -3.0,
+    "ast": -0.2,
+    "fg3m": 3.9,
+    "pra": 5.8,
+    "min": -11.7
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Neemias Queta",
+   "team": "BOS",
+   "pos": "C",
+   "proj_min": 25.5,
+   "played": true,
+   "act": {
+    "min": 19,
+    "pts": 7,
+    "reb": 5,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 13
+   },
+   "err": {
+    "pts": -4.4,
+    "reb": -1.9,
+    "ast": -0.5,
+    "fg3m": -0.2,
+    "pra": -6.8,
+    "min": -6.5
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Mitchell Robinson",
+   "team": "BOS",
+   "pos": "C",
+   "proj_min": 20.0,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 7,
+    "reb": 7,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 14
+   },
+   "err": {
+    "pts": 2.7,
+    "reb": 3.9,
+    "ast": -1.3,
+    "fg3m": 0.0,
+    "pra": 5.3,
+    "min": -4.0
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Sam Hauser",
+   "team": "BOS",
+   "pos": "PF",
+   "proj_min": 23.8,
+   "played": true,
+   "act": {
+    "min": 20,
+    "pts": 11,
+    "reb": 4,
+    "ast": 1,
+    "fg3m": 3,
+    "pra": 16
+   },
+   "err": {
+    "pts": -0.4,
+    "reb": 0.3,
+    "ast": -1.0,
+    "fg3m": -0.1,
+    "pra": -1.1,
+    "min": -3.8
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Jordan Walsh",
+   "team": "BOS",
+   "pos": "PF",
+   "proj_min": 16.6,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 4,
+    "reb": 3,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 9
+   },
+   "err": {
+    "pts": 1.2,
+    "reb": -1.7,
+    "ast": 1.4,
+    "fg3m": -0.5,
+    "pra": 1.0,
+    "min": 1.4
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Baylor Scheierman",
+   "team": "BOS",
+   "pos": "SG",
+   "proj_min": 16.8,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 2,
+    "reb": 6,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 10
+   },
+   "err": {
+    "pts": -4.3,
+    "reb": 4.2,
+    "ast": 2.0,
+    "fg3m": -1.0,
+    "pra": 1.9,
+    "min": 1.2
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Caleb Wilson",
+   "team": "CHI",
+   "pos": "PF",
+   "proj_min": 33.0,
+   "played": true,
+   "act": {
+    "min": 32,
+    "pts": 17,
+    "reb": 5,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 25
+   },
+   "err": {
+    "pts": -2.7,
+    "reb": -2.9,
+    "ast": 1.5,
+    "fg3m": -0.3,
+    "pra": -4.0,
+    "min": -1.0
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Norman Powell",
+   "team": "CHI",
+   "pos": "SG",
+   "proj_min": 27.6,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 20,
+    "reb": 1,
+    "ast": 2,
+    "fg3m": 4,
+    "pra": 23
+   },
+   "err": {
+    "pts": 2.1,
+    "reb": -2.1,
+    "ast": 0.1,
+    "fg3m": 1.1,
+    "pra": 0.0,
+    "min": -3.6
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Josh Giddey",
+   "team": "CHI",
+   "pos": "PG",
+   "proj_min": 24.7,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 11,
+    "reb": 1,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 16
+   },
+   "err": {
+    "pts": 3.4,
+    "reb": -4.9,
+    "ast": -2.7,
+    "fg3m": 0.2,
+    "pra": -4.2,
+    "min": -0.7
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Matas Buzelis",
+   "team": "CHI",
+   "pos": "SF",
+   "proj_min": 24.4,
+   "played": true,
+   "act": {
+    "min": 22,
+    "pts": 11,
+    "reb": 1,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 14
+   },
+   "err": {
+    "pts": -1.7,
+    "reb": -4.4,
+    "ast": 0.5,
+    "fg3m": 0.5,
+    "pra": -5.6,
+    "min": -2.4
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Leonard Miller",
+   "team": "CHI",
+   "pos": "SF",
+   "proj_min": 26.5,
+   "played": true,
+   "act": {
+    "min": 14,
+    "pts": 9,
+    "reb": 9,
+    "ast": 0,
+    "fg3m": 1,
+    "pra": 18
+   },
+   "err": {
+    "pts": -1.2,
+    "reb": 3.7,
+    "ast": -1.0,
+    "fg3m": -0.3,
+    "pra": 1.5,
+    "min": -12.5
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Jalen Smith",
+   "team": "CHI",
+   "pos": "C",
+   "proj_min": 21.6,
+   "played": true,
+   "act": {
+    "min": 20,
+    "pts": 7,
+    "reb": 6,
+    "ast": 1,
+    "fg3m": 2,
+    "pra": 14
+   },
+   "err": {
+    "pts": -3.2,
+    "reb": -0.1,
+    "ast": 0.1,
+    "fg3m": 1.0,
+    "pra": -3.2,
+    "min": -1.6
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Isaac Okoro",
+   "team": "CHI",
+   "pos": "SG",
+   "proj_min": 22.4,
+   "played": true,
+   "act": {
+    "min": 11,
+    "pts": 1,
+    "reb": 1,
+    "ast": 4,
+    "fg3m": 0,
+    "pra": 6
+   },
+   "err": {
+    "pts": -4.5,
+    "reb": -0.4,
+    "ast": 3.2,
+    "fg3m": -0.4,
+    "pra": -1.7,
+    "min": -11.4
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Tre Jones",
+   "team": "CHI",
+   "pos": "PG",
+   "proj_min": 21.3,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 8,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 9
+   },
+   "err": {
+    "pts": -1.7,
+    "reb": -1.6,
+    "ast": -3.8,
+    "fg3m": -0.4,
+    "pra": -7.1,
+    "min": -6.3
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Buddy Hield",
+   "team": "CHI",
+   "pos": "SG",
+   "proj_min": 17.0,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 3,
+    "reb": 0,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 4
+   },
+   "err": {
+    "pts": -4.7,
+    "reb": -2.1,
+    "ast": -1.2,
+    "fg3m": -0.8,
+    "pra": -7.9,
+    "min": -4.0
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Zach Collins",
+   "team": "CHI",
+   "pos": "PF",
+   "proj_min": 11.3,
+   "played": true,
+   "act": {
+    "min": 6,
+    "pts": 2,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 4
+   },
+   "err": {
+    "pts": -1.7,
+    "reb": -2.0,
+    "ast": -0.9,
+    "fg3m": -0.3,
+    "pra": -4.6,
+    "min": -5.3
+   }
+  },
+  {
+   "game": "2026-10-26-CHI-at-BOS",
+   "name": "Noa Essengue",
+   "team": "CHI",
+   "pos": "PF",
+   "proj_min": 9.2,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 0,
+    "reb": 4,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 4
+   },
+   "err": {
+    "pts": -1.6,
+    "reb": 2.6,
+    "ast": -0.4,
+    "fg3m": 0.0,
+    "pra": 0.6,
+    "min": 6.8
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Davion Mitchell",
+   "team": "MIA",
+   "pos": "PG",
+   "proj_min": 34.0,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 21,
+    "reb": 0,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 23
+   },
+   "err": {
+    "pts": 4.5,
+    "reb": -1.0,
+    "ast": -7.3,
+    "fg3m": -0.3,
+    "pra": -3.9,
+    "min": -1.0
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Bam Adebayo",
+   "team": "MIA",
+   "pos": "C",
+   "proj_min": 30.8,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 8,
+    "reb": 8,
+    "ast": 3,
+    "fg3m": 0,
+    "pra": 19
+   },
+   "err": {
+    "pts": -7.8,
+    "reb": -0.9,
+    "ast": -0.3,
+    "fg3m": -1.4,
+    "pra": -9.0,
+    "min": -0.8
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Pelle Larsson",
+   "team": "MIA",
+   "pos": "SG",
+   "proj_min": 33.3,
+   "played": true,
+   "act": {
+    "min": 34,
+    "pts": 12,
+    "reb": 0,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 16
+   },
+   "err": {
+    "pts": 0.1,
+    "reb": -4.6,
+    "ast": 0.1,
+    "fg3m": 0.0,
+    "pra": -4.3,
+    "min": 0.7
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Giannis Antetokounmpo",
+   "team": "MIA",
+   "pos": "PF",
+   "proj_min": 29.2,
+   "played": true,
+   "act": {
+    "min": 39,
+    "pts": 29,
+    "reb": 14,
+    "ast": 11,
+    "fg3m": 2,
+    "pra": 54
+   },
+   "err": {
+    "pts": -1.2,
+    "reb": 5.3,
+    "ast": 6.9,
+    "fg3m": 1.7,
+    "pra": 11.0,
+    "min": 9.8
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Bobby Portis",
+   "team": "MIA",
+   "pos": "PF",
+   "proj_min": 27.2,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 10,
+    "reb": 12,
+    "ast": 2,
+    "fg3m": 3,
+    "pra": 24
+   },
+   "err": {
+    "pts": -4.4,
+    "reb": 4.8,
+    "ast": 0.6,
+    "fg3m": 0.8,
+    "pra": 1.0,
+    "min": -3.2
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Andrew Wiggins",
+   "team": "MIA",
+   "pos": "SF",
+   "proj_min": 23.6,
+   "played": true,
+   "act": {
+    "min": 34,
+    "pts": 12,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 16
+   },
+   "err": {
+    "pts": 2.4,
+    "reb": -1.0,
+    "ast": -1.1,
+    "fg3m": -0.9,
+    "pra": 0.4,
+    "min": 10.4
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Klay Thompson",
+   "team": "MIA",
+   "pos": "SF",
+   "proj_min": 22.2,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 6,
+    "reb": 1,
+    "ast": 1,
+    "fg3m": 2,
+    "pra": 8
+   },
+   "err": {
+    "pts": -4.7,
+    "reb": -1.2,
+    "ast": -0.3,
+    "fg3m": -0.4,
+    "pra": -6.2,
+    "min": -7.2
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Tim Hardaway Jr.",
+   "team": "MIA",
+   "pos": "SG",
+   "proj_min": 22.3,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 5,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 8
+   },
+   "err": {
+    "pts": -3.8,
+    "reb": -0.7,
+    "ast": 0.0,
+    "fg3m": -0.8,
+    "pra": -4.4,
+    "min": -6.3
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Nikola Jović",
+   "team": "MIA",
+   "pos": "PF",
+   "proj_min": 16.4,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "P.J. Washington",
+   "team": "DAL",
+   "pos": "PF",
+   "proj_min": 34.9,
+   "played": true,
+   "act": {
+    "min": 41,
+    "pts": 20,
+    "reb": 9,
+    "ast": 2,
+    "fg3m": 4,
+    "pra": 31
+   },
+   "err": {
+    "pts": 6.7,
+    "reb": 2.0,
+    "ast": 0.6,
+    "fg3m": 2.4,
+    "pra": 9.3,
+    "min": 6.1
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Max Christie",
+   "team": "DAL",
+   "pos": "SG",
+   "proj_min": 32.2,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 11,
+    "reb": 5,
+    "ast": 3,
+    "fg3m": 3,
+    "pra": 19
+   },
+   "err": {
+    "pts": -1.4,
+    "reb": 0.7,
+    "ast": 0.6,
+    "fg3m": 0.8,
+    "pra": -0.1,
+    "min": -6.2
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Zaccharie Risacher",
+   "team": "DAL",
+   "pos": "SF",
+   "proj_min": 35.8,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 6,
+    "reb": 8,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 15
+   },
+   "err": {
+    "pts": -5.3,
+    "reb": 1.3,
+    "ast": -1.1,
+    "fg3m": -0.3,
+    "pra": -5.2,
+    "min": -5.8
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Marcus Sasser",
+   "team": "DAL",
+   "pos": "PG",
+   "proj_min": 30.5,
+   "played": true,
+   "act": {
+    "min": 8,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -14.3,
+    "reb": -1.5,
+    "ast": -3.7,
+    "fg3m": -3.7,
+    "pra": -19.5,
+    "min": -22.5
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Cooper Flagg",
+   "team": "DAL",
+   "pos": "SF",
+   "proj_min": 26.2,
+   "played": true,
+   "act": {
+    "min": 40,
+    "pts": 29,
+    "reb": 6,
+    "ast": 11,
+    "fg3m": 2,
+    "pra": 46
+   },
+   "err": {
+    "pts": 11.6,
+    "reb": 0.3,
+    "ast": 6.7,
+    "fg3m": 1.1,
+    "pra": 18.6,
+    "min": 13.8
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Kyrie Irving",
+   "team": "DAL",
+   "pos": "SG",
+   "proj_min": 25.7,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 18,
+    "reb": 6,
+    "ast": 6,
+    "fg3m": 2,
+    "pra": 30
+   },
+   "err": {
+    "pts": -4.4,
+    "reb": 3.1,
+    "ast": 3.3,
+    "fg3m": -1.5,
+    "pra": 2.0,
+    "min": 7.3
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Daniel Gafford",
+   "team": "DAL",
+   "pos": "C",
+   "proj_min": 20.8,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 8,
+    "reb": 9,
+    "ast": 3,
+    "fg3m": 0,
+    "pra": 20
+   },
+   "err": {
+    "pts": 1.1,
+    "reb": 2.7,
+    "ast": 0.8,
+    "fg3m": 0.0,
+    "pra": 4.6,
+    "min": 5.2
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Morez Johnson Jr.",
+   "team": "DAL",
+   "pos": "PF",
+   "proj_min": 16.9,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 6,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 9
+   },
+   "err": {
+    "pts": -0.8,
+    "reb": -1.6,
+    "ast": 0.1,
+    "fg3m": 0.0,
+    "pra": -2.3,
+    "min": -1.9
+   }
+  },
+  {
+   "game": "2026-10-26-DAL-at-MIA",
+   "name": "Sergio de Larrea",
+   "team": "DAL",
+   "pos": "PG",
+   "proj_min": 16.2,
+   "played": true,
+   "act": {
+    "min": 6,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -8.5,
+    "reb": -1.9,
+    "ast": -2.1,
+    "fg3m": -1.4,
+    "pra": -12.5,
+    "min": -10.2
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Jamal Murray",
+   "team": "DEN",
+   "pos": "PG",
+   "proj_min": 34.3,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 19,
+    "reb": 6,
+    "ast": 8,
+    "fg3m": 3,
+    "pra": 33
+   },
+   "err": {
+    "pts": -7.4,
+    "reb": 0.2,
+    "ast": 2.2,
+    "fg3m": -1.0,
+    "pra": -5.0,
+    "min": 1.7
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Nikola Jokić",
+   "team": "DEN",
+   "pos": "C",
+   "proj_min": 33.9,
+   "played": true,
+   "act": {
+    "min": 35,
+    "pts": 19,
+    "reb": 7,
+    "ast": 11,
+    "fg3m": 1,
+    "pra": 37
+   },
+   "err": {
+    "pts": -6.7,
+    "reb": -4.3,
+    "ast": 2.2,
+    "fg3m": -0.5,
+    "pra": -8.8,
+    "min": 1.1
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Christian Braun",
+   "team": "DEN",
+   "pos": "SG",
+   "proj_min": 31.4,
+   "played": true,
+   "act": {
+    "min": 34,
+    "pts": 9,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 1,
+    "pra": 15
+   },
+   "err": {
+    "pts": -3.3,
+    "reb": -0.8,
+    "ast": -0.1,
+    "fg3m": 0.3,
+    "pra": -4.2,
+    "min": 2.6
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Aaron Gordon",
+   "team": "DEN",
+   "pos": "PF",
+   "proj_min": 28.4,
+   "played": true,
+   "act": {
+    "min": 25,
+    "pts": 7,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 13
+   },
+   "err": {
+    "pts": -7.4,
+    "reb": -1.2,
+    "ast": -0.6,
+    "fg3m": -1.6,
+    "pra": -9.2,
+    "min": -3.4
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "DeMar DeRozan",
+   "team": "DEN",
+   "pos": "SF",
+   "proj_min": 25.8,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 21,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 27
+   },
+   "err": {
+    "pts": 6.7,
+    "reb": 1.7,
+    "ast": -0.7,
+    "fg3m": 1.7,
+    "pra": 7.7,
+    "min": 3.2
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Trevon Brazile",
+   "team": "DEN",
+   "pos": "PF",
+   "proj_min": 23.3,
+   "played": true,
+   "act": {
+    "min": 17,
+    "pts": 6,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 1,
+    "pra": 7
+   },
+   "err": {
+    "pts": -4.4,
+    "reb": -9.0,
+    "ast": 0.0,
+    "fg3m": -0.4,
+    "pra": -13.4,
+    "min": -6.3
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Alpha Diallo",
+   "team": "DEN",
+   "pos": "SF",
+   "proj_min": 15.3,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Cam Whitmore",
+   "team": "DEN",
+   "pos": "SF",
+   "proj_min": 10.9,
+   "played": true,
+   "act": {
+    "min": 4,
+    "pts": 4,
+    "reb": 0,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 5
+   },
+   "err": {
+    "pts": 0.0,
+    "reb": -1.9,
+    "ast": 1.0,
+    "fg3m": 0.0,
+    "pra": -1.0,
+    "min": -6.9
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Bryce Hopkins",
+   "team": "DEN",
+   "pos": "SF",
+   "proj_min": 10.4,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 13,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 17
+   },
+   "err": {
+    "pts": 12.0,
+    "reb": 1.6,
+    "ast": 0.5,
+    "fg3m": 1.0,
+    "pra": 14.1,
+    "min": 20.6
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Marvin Bagley III",
+   "team": "DEN",
+   "pos": "PF",
+   "proj_min": 9.9,
+   "played": true,
+   "act": {
+    "min": 11,
+    "pts": 7,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 9
+   },
+   "err": {
+    "pts": 2.5,
+    "reb": -1.1,
+    "ast": -0.6,
+    "fg3m": -0.1,
+    "pra": 0.8,
+    "min": 1.1
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Tyus Jones",
+   "team": "DEN",
+   "pos": "PG",
+   "proj_min": 9.4,
+   "played": true,
+   "act": {
+    "min": 9,
+    "pts": 0,
+    "reb": 0,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 2
+   },
+   "err": {
+    "pts": -2.3,
+    "reb": 0.0,
+    "ast": 2.0,
+    "fg3m": 0.0,
+    "pra": -0.3,
+    "min": -0.4
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Cameron Johnson",
+   "team": "DEN",
+   "pos": "PF",
+   "proj_min": 6.6,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Yaxel Lendeborg",
+   "team": "GSW",
+   "pos": "SF",
+   "proj_min": 27.7,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 31,
+    "reb": 12,
+    "ast": 6,
+    "fg3m": 1,
+    "pra": 49
+   },
+   "err": {
+    "pts": 13.7,
+    "reb": 5.2,
+    "ast": 1.4,
+    "fg3m": -1.5,
+    "pra": 20.2,
+    "min": 3.3
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Brandin Podziemski",
+   "team": "GSW",
+   "pos": "SG",
+   "proj_min": 26.6,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 18,
+    "reb": 7,
+    "ast": 5,
+    "fg3m": 3,
+    "pra": 30
+   },
+   "err": {
+    "pts": 4.5,
+    "reb": 3.3,
+    "ast": 1.7,
+    "fg3m": 1.2,
+    "pra": 9.5,
+    "min": 6.4
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Draymond Green",
+   "team": "GSW",
+   "pos": "PF",
+   "proj_min": 21.0,
+   "played": true,
+   "act": {
+    "min": 27,
+    "pts": 3,
+    "reb": 4,
+    "ast": 7,
+    "fg3m": 1,
+    "pra": 14
+   },
+   "err": {
+    "pts": 0.2,
+    "reb": 0.2,
+    "ast": 1.4,
+    "fg3m": 0.6,
+    "pra": 1.8,
+    "min": 6.0
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Stephen Curry",
+   "team": "GSW",
+   "pos": "PG",
+   "proj_min": 20.6,
+   "played": true,
+   "act": {
+    "min": 27,
+    "pts": 24,
+    "reb": 3,
+    "ast": 3,
+    "fg3m": 3,
+    "pra": 30
+   },
+   "err": {
+    "pts": 7.1,
+    "reb": 0.9,
+    "ast": 0.5,
+    "fg3m": 0.8,
+    "pra": 8.4,
+    "min": 6.4
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "De'Anthony Melton",
+   "team": "GSW",
+   "pos": "PG",
+   "proj_min": 21.1,
+   "played": true,
+   "act": {
+    "min": 19,
+    "pts": 3,
+    "reb": 4,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": -7.2,
+    "reb": 1.3,
+    "ast": 0.9,
+    "fg3m": -0.4,
+    "pra": -5.0,
+    "min": -2.1
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Georges Niang",
+   "team": "GSW",
+   "pos": "PF",
+   "proj_min": 17.3,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 9,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 3,
+    "pra": 11
+   },
+   "err": {
+    "pts": 4.4,
+    "reb": -0.9,
+    "ast": -1.2,
+    "fg3m": 3.0,
+    "pra": 2.3,
+    "min": 0.7
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Al Horford",
+   "team": "GSW",
+   "pos": "C",
+   "proj_min": 17.3,
+   "played": true,
+   "act": {
+    "min": 19,
+    "pts": 11,
+    "reb": 3,
+    "ast": 0,
+    "fg3m": 3,
+    "pra": 14
+   },
+   "err": {
+    "pts": 9.5,
+    "reb": -1.3,
+    "ast": -0.8,
+    "fg3m": 2.6,
+    "pra": 7.4,
+    "min": 1.7
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Will Richard",
+   "team": "GSW",
+   "pos": "SG",
+   "proj_min": 17.1,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   },
+   "err": {
+    "pts": -6.0,
+    "reb": -1.4,
+    "ast": -0.7,
+    "fg3m": -1.0,
+    "pra": -8.1,
+    "min": -14.1
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Gui Santos",
+   "team": "GSW",
+   "pos": "PF",
+   "proj_min": 14.7,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 13,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 17
+   },
+   "err": {
+    "pts": 7.9,
+    "reb": 0.1,
+    "ast": -0.1,
+    "fg3m": 0.3,
+    "pra": 7.9,
+    "min": 13.3
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Graham Ike",
+   "team": "GSW",
+   "pos": "F",
+   "proj_min": 15.8,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 3,
+    "reb": 0,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 4
+   },
+   "err": {
+    "pts": -6.9,
+    "reb": -4.5,
+    "ast": -0.4,
+    "fg3m": 0.0,
+    "pra": -11.8,
+    "min": -12.8
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Gary Payton II",
+   "team": "GSW",
+   "pos": "SG",
+   "proj_min": 14.2,
+   "played": true,
+   "act": {
+    "min": 12,
+    "pts": 7,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 1,
+    "pra": 9
+   },
+   "err": {
+    "pts": 1.1,
+    "reb": 0.9,
+    "ast": 0.0,
+    "fg3m": 0.7,
+    "pra": 2.0,
+    "min": -2.2
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Brandon Williams",
+   "team": "GSW",
+   "pos": "PG",
+   "proj_min": 11.0,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 6,
+    "reb": 3,
+    "ast": 3,
+    "fg3m": 2,
+    "pra": 12
+   },
+   "err": {
+    "pts": -0.7,
+    "reb": 1.3,
+    "ast": 1.2,
+    "fg3m": 1.6,
+    "pra": 1.7,
+    "min": 4.0
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "LJ Cryer",
+   "team": "GSW",
+   "pos": "PG",
+   "proj_min": 10.7,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 6,
+    "reb": 0,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 8
+   },
+   "err": {
+    "pts": 0.9,
+    "reb": -1.0,
+    "ast": 0.2,
+    "fg3m": 0.8,
+    "pra": 0.1,
+    "min": -7.7
+   }
+  },
+  {
+   "game": "2026-10-26-GSW-at-DEN",
+   "name": "Charles Bassey",
+   "team": "GSW",
+   "pos": "C",
+   "proj_min": 8.5,
+   "played": true,
+   "act": {
+    "min": 2,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -6.9,
+    "reb": -3.7,
+    "ast": 0.0,
+    "fg3m": 0.0,
+    "pra": -10.6,
+    "min": -6.5
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Tyler Herro",
+   "team": "MIL",
+   "pos": "SG",
+   "proj_min": 30.6,
+   "played": true,
+   "act": {
+    "min": 32,
+    "pts": 23,
+    "reb": 10,
+    "ast": 7,
+    "fg3m": 3,
+    "pra": 40
+   },
+   "err": {
+    "pts": 0.9,
+    "reb": 5.7,
+    "ast": 2.5,
+    "fg3m": 0.3,
+    "pra": 9.1,
+    "min": 1.4
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "pos": "SF",
+   "proj_min": 29.7,
+   "played": true,
+   "act": {
+    "min": 25,
+    "pts": 8,
+    "reb": 6,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 14
+   },
+   "err": {
+    "pts": -9.1,
+    "reb": -1.4,
+    "ast": -3.7,
+    "fg3m": -1.1,
+    "pra": -14.1,
+    "min": -4.7
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Kyle Kuzma",
+   "team": "MIL",
+   "pos": "PF",
+   "proj_min": 28.8,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 17,
+    "reb": 7,
+    "ast": 3,
+    "fg3m": 4,
+    "pra": 27
+   },
+   "err": {
+    "pts": 4.4,
+    "reb": -0.4,
+    "ast": 0.4,
+    "fg3m": 2.6,
+    "pra": 4.5,
+    "min": 0.2
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Ryan Rollins",
+   "team": "MIL",
+   "pos": "PG",
+   "proj_min": 26.9,
+   "played": true,
+   "act": {
+    "min": 32,
+    "pts": 19,
+    "reb": 2,
+    "ast": 4,
+    "fg3m": 3,
+    "pra": 25
+   },
+   "err": {
+    "pts": 6.0,
+    "reb": -2.5,
+    "ast": -0.2,
+    "fg3m": 1.4,
+    "pra": 3.3,
+    "min": 5.1
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Myles Turner",
+   "team": "MIL",
+   "pos": "C",
+   "proj_min": 25.9,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 6,
+    "reb": 9,
+    "ast": 4,
+    "fg3m": 0,
+    "pra": 19
+   },
+   "err": {
+    "pts": -3.6,
+    "reb": 3.7,
+    "ast": 2.2,
+    "fg3m": -1.2,
+    "pra": 2.2,
+    "min": 2.1
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Kasparas Jakucionis",
+   "team": "MIL",
+   "pos": "PG",
+   "proj_min": 24.3,
+   "played": true,
+   "act": {
+    "min": 21,
+    "pts": 7,
+    "reb": 4,
+    "ast": 5,
+    "fg3m": 1,
+    "pra": 16
+   },
+   "err": {
+    "pts": -2.4,
+    "reb": 1.2,
+    "ast": 2.0,
+    "fg3m": 0.1,
+    "pra": 0.7,
+    "min": -3.3
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Kel'el Ware",
+   "team": "MIL",
+   "pos": "C",
+   "proj_min": 24.3,
+   "played": true,
+   "act": {
+    "min": 19,
+    "pts": 16,
+    "reb": 14,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 30
+   },
+   "err": {
+    "pts": 2.6,
+    "reb": 3.9,
+    "ast": -1.2,
+    "fg3m": -0.8,
+    "pra": 5.4,
+    "min": -5.3
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "A.J. Green",
+   "team": "MIL",
+   "pos": "SG",
+   "proj_min": 18.0,
+   "played": true,
+   "act": {
+    "min": 20,
+    "pts": 3,
+    "reb": 4,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": -4.8,
+    "reb": 2.3,
+    "ast": 2.3,
+    "fg3m": -0.9,
+    "pra": -0.1,
+    "min": 2.0
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Brayden Burries",
+   "team": "MIL",
+   "pos": "SG",
+   "proj_min": 14.8,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 4,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 7
+   },
+   "err": {
+    "pts": -3.3,
+    "reb": -1.0,
+    "ast": -0.5,
+    "fg3m": -1.0,
+    "pra": -4.9,
+    "min": 1.2
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Ousmane Dieng",
+   "team": "MIL",
+   "pos": "F",
+   "proj_min": 15.9,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   },
+   "err": {
+    "pts": -4.6,
+    "reb": -3.1,
+    "ast": -1.3,
+    "fg3m": -0.6,
+    "pra": -8.9,
+    "min": -12.9
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Tyrese Haliburton",
+   "team": "IND",
+   "pos": "PG",
+   "proj_min": 29.7,
+   "played": true,
+   "act": {
+    "min": 35,
+    "pts": 22,
+    "reb": 6,
+    "ast": 9,
+    "fg3m": 4,
+    "pra": 37
+   },
+   "err": {
+    "pts": 4.8,
+    "reb": 2.8,
+    "ast": -1.3,
+    "fg3m": 1.9,
+    "pra": 6.3,
+    "min": 5.3
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Pascal Siakam",
+   "team": "IND",
+   "pos": "PF",
+   "proj_min": 31.6,
+   "played": true,
+   "act": {
+    "min": 37,
+    "pts": 20,
+    "reb": 13,
+    "ast": 6,
+    "fg3m": 1,
+    "pra": 39
+   },
+   "err": {
+    "pts": -3.0,
+    "reb": 7.6,
+    "ast": 3.3,
+    "fg3m": -0.7,
+    "pra": 7.9,
+    "min": 5.4
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Andrew Nembhard",
+   "team": "IND",
+   "pos": "SG",
+   "proj_min": 31.7,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Jay Huff",
+   "team": "IND",
+   "pos": "C",
+   "proj_min": 23.0,
+   "played": true,
+   "act": {
+    "min": 23,
+    "pts": 6,
+    "reb": 6,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 13
+   },
+   "err": {
+    "pts": -6.1,
+    "reb": 0.9,
+    "ast": -1.1,
+    "fg3m": -1.4,
+    "pra": -6.4,
+    "min": 0.0
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Aaron Nesmith",
+   "team": "IND",
+   "pos": "SF",
+   "proj_min": 23.0,
+   "played": true,
+   "act": {
+    "min": 21,
+    "pts": 13,
+    "reb": 0,
+    "ast": 1,
+    "fg3m": 3,
+    "pra": 14
+   },
+   "err": {
+    "pts": 1.4,
+    "reb": -3.8,
+    "ast": -0.5,
+    "fg3m": 1.4,
+    "pra": -2.9,
+    "min": -2.0
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Obi Toppin",
+   "team": "IND",
+   "pos": "PF",
+   "proj_min": 28.6,
+   "played": true,
+   "act": {
+    "min": 23,
+    "pts": 14,
+    "reb": 6,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 22
+   },
+   "err": {
+    "pts": -2.0,
+    "reb": 1.1,
+    "ast": 0.5,
+    "fg3m": -0.6,
+    "pra": -0.4,
+    "min": -5.6
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Kelly Oubre Jr.",
+   "team": "IND",
+   "pos": "SF",
+   "proj_min": 25.4,
+   "played": true,
+   "act": {
+    "min": 23,
+    "pts": 9,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 13
+   },
+   "err": {
+    "pts": -2.0,
+    "reb": -0.5,
+    "ast": -1.0,
+    "fg3m": -0.2,
+    "pra": -3.5,
+    "min": -2.4
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Jarace Walker",
+   "team": "IND",
+   "pos": "F",
+   "proj_min": 19.1,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 10,
+    "reb": 8,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 20
+   },
+   "err": {
+    "pts": 4.6,
+    "reb": 4.0,
+    "ast": 0.4,
+    "fg3m": 1.2,
+    "pra": 8.9,
+    "min": 9.9
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Quenton Jackson",
+   "team": "IND",
+   "pos": "G",
+   "proj_min": 14.9,
+   "played": true,
+   "act": {
+    "min": 27,
+    "pts": 4,
+    "reb": 2,
+    "ast": 4,
+    "fg3m": 0,
+    "pra": 10
+   },
+   "err": {
+    "pts": -1.6,
+    "reb": 0.0,
+    "ast": 1.9,
+    "fg3m": -0.4,
+    "pra": 0.2,
+    "min": 12.1
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Larry Nance Jr.",
+   "team": "IND",
+   "pos": "F",
+   "proj_min": 8.5,
+   "played": true,
+   "act": {
+    "min": 19,
+    "pts": 2,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 6
+   },
+   "err": {
+    "pts": 0.2,
+    "reb": 1.7,
+    "ast": 0.5,
+    "fg3m": -0.1,
+    "pra": 2.4,
+    "min": 10.5
+   }
+  },
+  {
+   "game": "2026-10-26-IND-at-MIL",
+   "name": "Jalen Slawson",
+   "team": "IND",
+   "pos": "F",
+   "proj_min": 4.7,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 2,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 3
+   },
+   "err": {
+    "pts": 0.8,
+    "reb": -0.3,
+    "ast": -0.5,
+    "fg3m": -0.1,
+    "pra": 0.1,
+    "min": -1.7
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Lauri Markkanen",
+   "team": "UTA",
+   "pos": "PF",
+   "proj_min": 34.1,
+   "played": true,
+   "act": {
+    "min": 6,
+    "pts": 2,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 2
+   },
+   "err": {
+    "pts": -21.1,
+    "reb": -7.1,
+    "ast": -2.2,
+    "fg3m": -2.7,
+    "pra": -30.5,
+    "min": -28.1
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Jaren Jackson Jr.",
+   "team": "UTA",
+   "pos": "C",
+   "proj_min": 30.0,
+   "played": true,
+   "act": {
+    "min": 10,
+    "pts": 6,
+    "reb": 3,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 11
+   },
+   "err": {
+    "pts": -9.7,
+    "reb": -2.4,
+    "ast": 0.2,
+    "fg3m": -1.5,
+    "pra": -11.9,
+    "min": -20.0
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Keyonte George",
+   "team": "UTA",
+   "pos": "PG",
+   "proj_min": 29.6,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 26,
+    "reb": 3,
+    "ast": 6,
+    "fg3m": 0,
+    "pra": 35
+   },
+   "err": {
+    "pts": 4.2,
+    "reb": -1.2,
+    "ast": -0.7,
+    "fg3m": -2.5,
+    "pra": 2.3,
+    "min": 3.4
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Darryn Peterson",
+   "team": "UTA",
+   "pos": "SG",
+   "proj_min": 28.8,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 14,
+    "reb": 7,
+    "ast": 4,
+    "fg3m": 3,
+    "pra": 25
+   },
+   "err": {
+    "pts": 3.6,
+    "reb": 4.0,
+    "ast": 2.1,
+    "fg3m": 2.7,
+    "pra": 9.7,
+    "min": -2.8
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Ace Bailey",
+   "team": "UTA",
+   "pos": "SF",
+   "proj_min": 23.7,
+   "played": true,
+   "act": {
+    "min": 34,
+    "pts": 17,
+    "reb": 10,
+    "ast": 3,
+    "fg3m": 3,
+    "pra": 30
+   },
+   "err": {
+    "pts": 5.2,
+    "reb": 4.4,
+    "ast": 0.5,
+    "fg3m": 1.3,
+    "pra": 10.1,
+    "min": 10.3
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Jaxson Hayes",
+   "team": "UTA",
+   "pos": "C",
+   "proj_min": 24.5,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Svi Mykhailiuk",
+   "team": "UTA",
+   "pos": "SF",
+   "proj_min": 19.0,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -6.7,
+    "reb": -1.4,
+    "ast": -1.5,
+    "fg3m": -1.4,
+    "pra": -9.6,
+    "min": -6.0
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Isaiah Collier",
+   "team": "UTA",
+   "pos": "PG",
+   "proj_min": 16.2,
+   "played": true,
+   "act": {
+    "min": 21,
+    "pts": 7,
+    "reb": 8,
+    "ast": 8,
+    "fg3m": 0,
+    "pra": 23
+   },
+   "err": {
+    "pts": -1.0,
+    "reb": 5.5,
+    "ast": 3.0,
+    "fg3m": -0.2,
+    "pra": 7.5,
+    "min": 4.8
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Brice Sensabaugh",
+   "team": "UTA",
+   "pos": "SF",
+   "proj_min": 15.8,
+   "played": true,
+   "act": {
+    "min": 9,
+    "pts": 11,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 3,
+    "pra": 13
+   },
+   "err": {
+    "pts": 2.5,
+    "reb": -1.0,
+    "ast": -1.5,
+    "fg3m": 1.5,
+    "pra": 0.0,
+    "min": -6.8
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Kyle Filipowski",
+   "team": "UTA",
+   "pos": "C",
+   "proj_min": 8.9,
+   "played": true,
+   "act": {
+    "min": 8,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -2.7,
+    "reb": -0.8,
+    "ast": -0.5,
+    "fg3m": -0.2,
+    "pra": -4.1,
+    "min": -0.9
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Josh Okogie",
+   "team": "UTA",
+   "pos": "SG",
+   "proj_min": 8.9,
+   "played": true,
+   "act": {
+    "min": 21,
+    "pts": 0,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 2
+   },
+   "err": {
+    "pts": -1.1,
+    "reb": 0.5,
+    "ast": -1.0,
+    "fg3m": 0.0,
+    "pra": -1.6,
+    "min": 12.1
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Cameron Boozer",
+   "team": "MEM",
+   "pos": "PF",
+   "proj_min": 32.9,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 13,
+    "reb": 7,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 24
+   },
+   "err": {
+    "pts": -1.4,
+    "reb": -5.1,
+    "ast": -2.0,
+    "fg3m": -0.9,
+    "pra": -8.4,
+    "min": -1.9
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Ty Jerome",
+   "team": "MEM",
+   "pos": "SG",
+   "proj_min": 29.6,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 15,
+    "reb": 1,
+    "ast": 8,
+    "fg3m": 1,
+    "pra": 24
+   },
+   "err": {
+    "pts": -16.1,
+    "reb": -3.1,
+    "ast": 1.3,
+    "fg3m": -3.1,
+    "pra": -17.8,
+    "min": 0.4
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Cedric Coward",
+   "team": "MEM",
+   "pos": "SG",
+   "proj_min": 26.3,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 16,
+    "reb": 11,
+    "ast": 3,
+    "fg3m": 4,
+    "pra": 30
+   },
+   "err": {
+    "pts": 3.2,
+    "reb": 4.6,
+    "ast": 0.3,
+    "fg3m": 2.5,
+    "pra": 8.1,
+    "min": 4.7
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Jaylen Wells",
+   "team": "MEM",
+   "pos": "SG",
+   "proj_min": 24.8,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 14,
+    "reb": 3,
+    "ast": 0,
+    "fg3m": 2,
+    "pra": 17
+   },
+   "err": {
+    "pts": 0.7,
+    "reb": -0.6,
+    "ast": -1.5,
+    "fg3m": -0.2,
+    "pra": -1.4,
+    "min": 5.2
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Jerami Grant",
+   "team": "MEM",
+   "pos": "PF",
+   "proj_min": 25.6,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 13,
+    "reb": 3,
+    "ast": 0,
+    "fg3m": 3,
+    "pra": 16
+   },
+   "err": {
+    "pts": -0.3,
+    "reb": 0.6,
+    "ast": -2.6,
+    "fg3m": 1.1,
+    "pra": -2.3,
+    "min": -1.6
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Quinten Post",
+   "team": "MEM",
+   "pos": "C",
+   "proj_min": 20.0,
+   "played": true,
+   "act": {
+    "min": 12,
+    "pts": 12,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 2,
+    "pra": 15
+   },
+   "err": {
+    "pts": 7.7,
+    "reb": 1.1,
+    "ast": 0.6,
+    "fg3m": 1.4,
+    "pra": 9.4,
+    "min": -8.0
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Scotty Pippen Jr.",
+   "team": "MEM",
+   "pos": "PG",
+   "proj_min": 19.0,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 7,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": -1.4,
+    "reb": -0.5,
+    "ast": -3.6,
+    "fg3m": 0.5,
+    "pra": -5.5,
+    "min": -6.0
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "GG Jackson II",
+   "team": "MEM",
+   "pos": "PF",
+   "proj_min": 16.1,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 4,
+    "reb": 1,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 7
+   },
+   "err": {
+    "pts": -3.9,
+    "reb": -3.5,
+    "ast": 1.0,
+    "fg3m": -1.0,
+    "pra": -6.4,
+    "min": -0.1
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Cam Spencer",
+   "team": "MEM",
+   "pos": "SG",
+   "proj_min": 16.9,
+   "played": true,
+   "act": {
+    "min": 18,
+    "pts": 8,
+    "reb": 5,
+    "ast": 5,
+    "fg3m": 2,
+    "pra": 18
+   },
+   "err": {
+    "pts": -0.1,
+    "reb": 2.8,
+    "ast": 1.9,
+    "fg3m": 0.2,
+    "pra": 4.6,
+    "min": 1.1
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Isaiah Stewart",
+   "team": "MEM",
+   "pos": "C",
+   "proj_min": 16.5,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 4,
+    "reb": 4,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 8
+   },
+   "err": {
+    "pts": -2.1,
+    "reb": 1.2,
+    "ast": -0.5,
+    "fg3m": -0.5,
+    "pra": -1.4,
+    "min": -1.5
+   }
+  },
+  {
+   "game": "2026-10-26-MEM-at-UTA",
+   "name": "Kris Murray",
+   "team": "MEM",
+   "pos": "SF",
+   "proj_min": 13.4,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Donovan Mitchell",
+   "team": "CLE",
+   "pos": "SG",
+   "proj_min": 35.0,
+   "played": true,
+   "act": {
+    "min": 38,
+    "pts": 26,
+    "reb": 5,
+    "ast": 7,
+    "fg3m": 5,
+    "pra": 38
+   },
+   "err": {
+    "pts": 2.6,
+    "reb": -0.8,
+    "ast": 2.6,
+    "fg3m": 2.2,
+    "pra": 4.4,
+    "min": 3.0
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Evan Mobley",
+   "team": "CLE",
+   "pos": "PF",
+   "proj_min": 34.1,
+   "played": true,
+   "act": {
+    "min": 38,
+    "pts": 18,
+    "reb": 10,
+    "ast": 3,
+    "fg3m": 4,
+    "pra": 31
+   },
+   "err": {
+    "pts": 0.0,
+    "reb": 1.3,
+    "ast": -0.2,
+    "fg3m": 3.0,
+    "pra": 1.2,
+    "min": 3.9
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "James Harden",
+   "team": "CLE",
+   "pos": "PG",
+   "proj_min": 32.6,
+   "played": true,
+   "act": {
+    "min": 39,
+    "pts": 19,
+    "reb": 5,
+    "ast": 9,
+    "fg3m": 3,
+    "pra": 33
+   },
+   "err": {
+    "pts": 1.9,
+    "reb": 0.2,
+    "ast": 1.0,
+    "fg3m": 0.7,
+    "pra": 3.1,
+    "min": 6.4
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Peyton Watson",
+   "team": "CLE",
+   "pos": "SF",
+   "proj_min": 30.2,
+   "played": true,
+   "act": {
+    "min": 37,
+    "pts": 15,
+    "reb": 8,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 24
+   },
+   "err": {
+    "pts": 4.1,
+    "reb": 4.3,
+    "ast": -1.5,
+    "fg3m": -1.0,
+    "pra": 6.9,
+    "min": 6.8
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Jarrett Allen",
+   "team": "CLE",
+   "pos": "C",
+   "proj_min": 27.7,
+   "played": true,
+   "act": {
+    "min": 27,
+    "pts": 10,
+    "reb": 9,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 21
+   },
+   "err": {
+    "pts": -5.9,
+    "reb": 0.9,
+    "ast": 0.9,
+    "fg3m": -0.2,
+    "pra": -4.1,
+    "min": -0.7
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Sam Merrill",
+   "team": "CLE",
+   "pos": "SG",
+   "proj_min": 24.3,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 9,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 1,
+    "pra": 15
+   },
+   "err": {
+    "pts": 1.0,
+    "reb": 1.0,
+    "ast": -0.2,
+    "fg3m": -1.1,
+    "pra": 1.8,
+    "min": 6.7
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Jaylon Tyson",
+   "team": "CLE",
+   "pos": "SG",
+   "proj_min": 24.4,
+   "played": true,
+   "act": {
+    "min": 20,
+    "pts": 11,
+    "reb": 4,
+    "ast": 5,
+    "fg3m": 0,
+    "pra": 20
+   },
+   "err": {
+    "pts": 1.8,
+    "reb": -0.3,
+    "ast": 2.8,
+    "fg3m": -1.7,
+    "pra": 4.2,
+    "min": -4.4
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Mario Hezonja",
+   "team": "CLE",
+   "pos": "PF",
+   "proj_min": 21.0,
+   "played": true,
+   "act": {
+    "min": 15,
+    "pts": 3,
+    "reb": 3,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 7
+   },
+   "err": {
+    "pts": -6.6,
+    "reb": -1.0,
+    "ast": -0.5,
+    "fg3m": 0.2,
+    "pra": -8.1,
+    "min": -6.0
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Tyrese Proctor",
+   "team": "CLE",
+   "pos": "PG",
+   "proj_min": 8.7,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Anthony Edwards",
+   "team": "MIN",
+   "pos": "SG",
+   "proj_min": 33.7,
+   "played": true,
+   "act": {
+    "min": 41,
+    "pts": 47,
+    "reb": 4,
+    "ast": 4,
+    "fg3m": 5,
+    "pra": 55
+   },
+   "err": {
+    "pts": 22.1,
+    "reb": -1.9,
+    "ast": 0.3,
+    "fg3m": 0.9,
+    "pra": 20.5,
+    "min": 7.3
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Rudy Gobert",
+   "team": "MIN",
+   "pos": "C",
+   "proj_min": 32.3,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 5,
+    "reb": 20,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 27
+   },
+   "err": {
+    "pts": -4.7,
+    "reb": 8.7,
+    "ast": 1.0,
+    "fg3m": 0.0,
+    "pra": 5.0,
+    "min": 3.7
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Jaden McDaniels",
+   "team": "MIN",
+   "pos": "PF",
+   "proj_min": 30.2,
+   "played": true,
+   "act": {
+    "min": 37,
+    "pts": 14,
+    "reb": 6,
+    "ast": 4,
+    "fg3m": 2,
+    "pra": 24
+   },
+   "err": {
+    "pts": 0.2,
+    "reb": 0.7,
+    "ast": 1.5,
+    "fg3m": 0.6,
+    "pra": 2.3,
+    "min": 6.8
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Jonathan Kuminga",
+   "team": "MIN",
+   "pos": "PF",
+   "proj_min": 29.2,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 10,
+    "reb": 10,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 21
+   },
+   "err": {
+    "pts": -2.8,
+    "reb": 3.9,
+    "ast": -2.6,
+    "fg3m": -1.6,
+    "pra": -1.5,
+    "min": 6.8
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Ayo Dosunmu",
+   "team": "MIN",
+   "pos": "SG",
+   "proj_min": 31.3,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 9,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": -5.5,
+    "reb": -4.1,
+    "ast": -5.5,
+    "fg3m": -0.6,
+    "pra": -15.2,
+    "min": -5.3
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "LaMelo Ball",
+   "team": "MIN",
+   "pos": "PG",
+   "proj_min": 26.7,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 11,
+    "reb": 0,
+    "ast": 6,
+    "fg3m": 1,
+    "pra": 17
+   },
+   "err": {
+    "pts": -7.2,
+    "reb": -4.0,
+    "ast": -1.0,
+    "fg3m": -3.3,
+    "pra": -12.2,
+    "min": 4.3
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Terrence Shannon Jr.",
+   "team": "MIN",
+   "pos": "SG",
+   "proj_min": 23.5,
+   "played": true,
+   "act": {
+    "min": 24,
+    "pts": 14,
+    "reb": 4,
+    "ast": 5,
+    "fg3m": 3,
+    "pra": 23
+   },
+   "err": {
+    "pts": 2.9,
+    "reb": 1.1,
+    "ast": 3.9,
+    "fg3m": 0.8,
+    "pra": 7.9,
+    "min": 0.5
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Trey Lyles",
+   "team": "MIN",
+   "pos": "PF",
+   "proj_min": 16.2,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 3,
+    "reb": 1,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 5
+   },
+   "err": {
+    "pts": -2.1,
+    "reb": -2.9,
+    "ast": -0.2,
+    "fg3m": -0.1,
+    "pra": -5.2,
+    "min": -3.2
+   }
+  },
+  {
+   "game": "2026-10-26-MIN-at-CLE",
+   "name": "Joan Beringer",
+   "team": "MIN",
+   "pos": "PF",
+   "proj_min": 15.7,
+   "played": true,
+   "act": {
+    "min": 17,
+    "pts": 12,
+    "reb": 7,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 19
+   },
+   "err": {
+    "pts": 7.4,
+    "reb": -1.5,
+    "ast": -0.6,
+    "fg3m": 0.0,
+    "pra": 5.3,
+    "min": 1.3
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Shai Gilgeous-Alexander",
+   "team": "OKC",
+   "pos": "PG",
+   "proj_min": 35.8,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 26,
+    "reb": 3,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 32
+   },
+   "err": {
+    "pts": -0.4,
+    "reb": -1.2,
+    "ast": -1.8,
+    "fg3m": -0.6,
+    "pra": -3.5,
+    "min": -5.8
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Chet Holmgren",
+   "team": "OKC",
+   "pos": "C",
+   "proj_min": 35.6,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Ajay Mitchell",
+   "team": "OKC",
+   "pos": "SG",
+   "proj_min": 29.3,
+   "played": true,
+   "act": {
+    "min": 25,
+    "pts": 30,
+    "reb": 2,
+    "ast": 5,
+    "fg3m": 1,
+    "pra": 37
+   },
+   "err": {
+    "pts": 13.1,
+    "reb": -2.1,
+    "ast": 0.4,
+    "fg3m": 0.1,
+    "pra": 11.4,
+    "min": -4.3
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Isaiah Hartenstein",
+   "team": "OKC",
+   "pos": "C",
+   "proj_min": 26.4,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 15,
+    "reb": 13,
+    "ast": 3,
+    "fg3m": 0,
+    "pra": 31
+   },
+   "err": {
+    "pts": 6.7,
+    "reb": 4.0,
+    "ast": 1.0,
+    "fg3m": 0.0,
+    "pra": 11.7,
+    "min": -0.4
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Alex Caruso",
+   "team": "OKC",
+   "pos": "SG",
+   "proj_min": 30.1,
+   "played": true,
+   "act": {
+    "min": 9,
+    "pts": 9,
+    "reb": 2,
+    "ast": 3,
+    "fg3m": 3,
+    "pra": 14
+   },
+   "err": {
+    "pts": -5.8,
+    "reb": -5.6,
+    "ast": -3.2,
+    "fg3m": 0.4,
+    "pra": -14.6,
+    "min": -21.1
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Jared McCain",
+   "team": "OKC",
+   "pos": "SG",
+   "proj_min": 27.5,
+   "played": true,
+   "act": {
+    "min": 30,
+    "pts": 18,
+    "reb": 3,
+    "ast": 4,
+    "fg3m": 4,
+    "pra": 25
+   },
+   "err": {
+    "pts": 3.6,
+    "reb": 1.7,
+    "ast": 2.4,
+    "fg3m": 0.4,
+    "pra": 7.7,
+    "min": 2.5
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Cason Wallace",
+   "team": "OKC",
+   "pos": "SG",
+   "proj_min": 15.5,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Aday Mara",
+   "team": "OKC",
+   "pos": "C",
+   "proj_min": 17.6,
+   "played": true,
+   "act": {
+    "min": 20,
+    "pts": 11,
+    "reb": 10,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 23
+   },
+   "err": {
+    "pts": 6.2,
+    "reb": 6.0,
+    "ast": 1.2,
+    "fg3m": 0.0,
+    "pra": 13.4,
+    "min": 2.4
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Jaylin Williams",
+   "team": "OKC",
+   "pos": "PF",
+   "proj_min": 13.4,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 6,
+    "reb": 6,
+    "ast": 3,
+    "fg3m": 2,
+    "pra": 15
+   },
+   "err": {
+    "pts": 3.2,
+    "reb": 1.7,
+    "ast": 1.8,
+    "fg3m": 1.3,
+    "pra": 6.8,
+    "min": 12.6
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Devin Booker",
+   "team": "PHX",
+   "pos": "SG",
+   "proj_min": 32.5,
+   "played": true,
+   "act": {
+    "min": 34,
+    "pts": 3,
+    "reb": 2,
+    "ast": 7,
+    "fg3m": 0,
+    "pra": 12
+   },
+   "err": {
+    "pts": -22.3,
+    "reb": -2.4,
+    "ast": 1.8,
+    "fg3m": -1.4,
+    "pra": -22.9,
+    "min": 1.5
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Miles Bridges",
+   "team": "PHX",
+   "pos": "SF",
+   "proj_min": 30.5,
+   "played": true,
+   "act": {
+    "min": 32,
+    "pts": 17,
+    "reb": 8,
+    "ast": 4,
+    "fg3m": 2,
+    "pra": 29
+   },
+   "err": {
+    "pts": 2.7,
+    "reb": 2.7,
+    "ast": 1.6,
+    "fg3m": 0.1,
+    "pra": 7.0,
+    "min": 1.5
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Dillon Brooks",
+   "team": "PHX",
+   "pos": "SF",
+   "proj_min": 29.5,
+   "played": true,
+   "act": {
+    "min": 33,
+    "pts": 19,
+    "reb": 5,
+    "ast": 5,
+    "fg3m": 3,
+    "pra": 29
+   },
+   "err": {
+    "pts": 3.0,
+    "reb": 1.9,
+    "ast": 3.0,
+    "fg3m": 0.8,
+    "pra": 7.9,
+    "min": 3.5
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Jalen Green",
+   "team": "PHX",
+   "pos": "SG",
+   "proj_min": 25.1,
+   "played": true,
+   "act": {
+    "min": 31,
+    "pts": 20,
+    "reb": 4,
+    "ast": 4,
+    "fg3m": 1,
+    "pra": 28
+   },
+   "err": {
+    "pts": 6.8,
+    "reb": 1.1,
+    "ast": 1.6,
+    "fg3m": -0.8,
+    "pra": 9.5,
+    "min": 5.9
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Collin Gillespie",
+   "team": "PHX",
+   "pos": "PG",
+   "proj_min": 27.4,
+   "played": true,
+   "act": {
+    "min": 23,
+    "pts": 9,
+    "reb": 1,
+    "ast": 2,
+    "fg3m": 3,
+    "pra": 12
+   },
+   "err": {
+    "pts": 1.4,
+    "reb": -3.4,
+    "ast": -2.8,
+    "fg3m": 1.3,
+    "pra": -4.7,
+    "min": -4.4
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Khaman Maluach",
+   "team": "PHX",
+   "pos": "C",
+   "proj_min": 21.6,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 12,
+    "reb": 7,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 20
+   },
+   "err": {
+    "pts": 7.9,
+    "reb": 0.5,
+    "ast": -0.7,
+    "fg3m": -0.4,
+    "pra": 7.7,
+    "min": 4.4
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Jordan Goodwin",
+   "team": "PHX",
+   "pos": "PG",
+   "proj_min": 23.5,
+   "played": true,
+   "act": {
+    "min": 17,
+    "pts": 12,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 4,
+    "pra": 18
+   },
+   "err": {
+    "pts": 6.8,
+    "reb": -0.2,
+    "ast": -0.1,
+    "fg3m": 3.1,
+    "pra": 6.5,
+    "min": -6.5
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Luke Kennard",
+   "team": "PHX",
+   "pos": "SG",
+   "proj_min": 20.1,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 9,
+    "reb": 1,
+    "ast": 2,
+    "fg3m": 3,
+    "pra": 12
+   },
+   "err": {
+    "pts": -2.0,
+    "reb": -3.4,
+    "ast": 0.9,
+    "fg3m": -0.2,
+    "pra": -4.5,
+    "min": -4.1
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Ryan Dunn",
+   "team": "PHX",
+   "pos": "SF",
+   "proj_min": 15.2,
+   "played": true,
+   "act": {
+    "min": 14,
+    "pts": 6,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 9
+   },
+   "err": {
+    "pts": 1.7,
+    "reb": -1.7,
+    "ast": 1.0,
+    "fg3m": 0.3,
+    "pra": 1.0,
+    "min": -1.2
+   }
+  },
+  {
+   "game": "2026-10-26-PHX-at-OKC",
+   "name": "Rasheer Fleming",
+   "team": "PHX",
+   "pos": "PF",
+   "proj_min": 13.4,
+   "played": true,
+   "act": {
+    "min": 3,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -1.1,
+    "reb": -1.3,
+    "ast": 0.0,
+    "fg3m": 0.0,
+    "pra": -2.4,
+    "min": -10.4
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Naz Reid",
+   "team": "CHA",
+   "pos": "C",
+   "proj_min": 29.7,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 18,
+    "reb": 12,
+    "ast": 1,
+    "fg3m": 2,
+    "pra": 31
+   },
+   "err": {
+    "pts": -0.6,
+    "reb": 4.3,
+    "ast": -1.9,
+    "fg3m": -1.2,
+    "pra": 1.8,
+    "min": -0.7
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Brandon Miller",
+   "team": "CHA",
+   "pos": "SF",
+   "proj_min": 29.3,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 39,
+    "reb": 6,
+    "ast": 1,
+    "fg3m": 5,
+    "pra": 46
+   },
+   "err": {
+    "pts": 16.2,
+    "reb": 1.5,
+    "ast": -1.4,
+    "fg3m": 2.5,
+    "pra": 16.3,
+    "min": 6.7
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Dennis Schröder",
+   "team": "CHA",
+   "pos": "PG",
+   "proj_min": 29.1,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 8,
+    "reb": 2,
+    "ast": 5,
+    "fg3m": 0,
+    "pra": 15
+   },
+   "err": {
+    "pts": -7.9,
+    "reb": -1.5,
+    "ast": -0.5,
+    "fg3m": -1.1,
+    "pra": -9.8,
+    "min": 6.9
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Grayson Allen",
+   "team": "CHA",
+   "pos": "SG",
+   "proj_min": 28.2,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 15,
+    "reb": 2,
+    "ast": 1,
+    "fg3m": 2,
+    "pra": 18
+   },
+   "err": {
+    "pts": -4.9,
+    "reb": -1.4,
+    "ast": -3.1,
+    "fg3m": -1.6,
+    "pra": -9.4,
+    "min": -0.2
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Moussa Diabaté",
+   "team": "CHA",
+   "pos": "C",
+   "proj_min": 24.1,
+   "played": true,
+   "act": {
+    "min": 35,
+    "pts": 11,
+    "reb": 17,
+    "ast": 3,
+    "fg3m": 0,
+    "pra": 31
+   },
+   "err": {
+    "pts": 2.1,
+    "reb": 10.5,
+    "ast": 1.0,
+    "fg3m": 0.0,
+    "pra": 13.5,
+    "min": 10.9
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Sion James",
+   "team": "CHA",
+   "pos": "SG",
+   "proj_min": 24.1,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 5,
+    "reb": 2,
+    "ast": 3,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": 2.8,
+    "reb": -1.6,
+    "ast": -0.2,
+    "fg3m": 0.3,
+    "pra": 1.0,
+    "min": 4.9
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Ryan Kalkbrenner",
+   "team": "CHA",
+   "pos": "C",
+   "proj_min": 19.4,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 6,
+    "reb": 4,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 11
+   },
+   "err": {
+    "pts": 0.0,
+    "reb": -1.9,
+    "ast": -1.2,
+    "fg3m": 0.0,
+    "pra": -3.2,
+    "min": -6.4
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Tidjane Salaün",
+   "team": "CHA",
+   "pos": "PF",
+   "proj_min": 17.0,
+   "played": true,
+   "act": {
+    "min": 16,
+    "pts": 5,
+    "reb": 5,
+    "ast": 0,
+    "fg3m": 1,
+    "pra": 10
+   },
+   "err": {
+    "pts": -3.9,
+    "reb": 0.1,
+    "ast": -0.5,
+    "fg3m": 0.0,
+    "pra": -4.3,
+    "min": -1.0
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Royce O'Neale",
+   "team": "CHA",
+   "pos": "SF",
+   "proj_min": 15.5,
+   "played": true,
+   "act": {
+    "min": 7,
+    "pts": 0,
+    "reb": 0,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -6.2,
+    "reb": -2.6,
+    "ast": 0.3,
+    "fg3m": -1.4,
+    "pra": -8.5,
+    "min": -8.5
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Hannes Steinbach",
+   "team": "CHA",
+   "pos": "PF",
+   "proj_min": 12.3,
+   "played": false,
+   "act": {
+    "min": 0,
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 0
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Christian Anderson Jr.",
+   "team": "CHA",
+   "pos": "PG",
+   "proj_min": 11.1,
+   "played": true,
+   "act": {
+    "min": 11,
+    "pts": 3,
+    "reb": 4,
+    "ast": 1,
+    "fg3m": 1,
+    "pra": 8
+   },
+   "err": {
+    "pts": 2.2,
+    "reb": 3.0,
+    "ast": -0.5,
+    "fg3m": 1.0,
+    "pra": 4.7,
+    "min": -0.1
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Trae Young",
+   "team": "WAS",
+   "pos": "PG",
+   "proj_min": 34.6,
+   "played": true,
+   "act": {
+    "min": 38,
+    "pts": 22,
+    "reb": 6,
+    "ast": 10,
+    "fg3m": 1,
+    "pra": 38
+   },
+   "err": {
+    "pts": 2.3,
+    "reb": 3.8,
+    "ast": -1.3,
+    "fg3m": -1.1,
+    "pra": 4.9,
+    "min": 3.4
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "pos": "PF",
+   "proj_min": 30.8,
+   "played": true,
+   "act": {
+    "min": 36,
+    "pts": 29,
+    "reb": 10,
+    "ast": 0,
+    "fg3m": 3,
+    "pra": 39
+   },
+   "err": {
+    "pts": 10.7,
+    "reb": 1.0,
+    "ast": -2.7,
+    "fg3m": 2.6,
+    "pra": 8.9,
+    "min": 5.2
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Kyshawn George",
+   "team": "WAS",
+   "pos": "SG",
+   "proj_min": 28.9,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 20,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 2,
+    "pra": 26
+   },
+   "err": {
+    "pts": 5.5,
+    "reb": -0.4,
+    "ast": -1.8,
+    "fg3m": 0.7,
+    "pra": 3.3,
+    "min": 0.1
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Bilal Coulibaly",
+   "team": "WAS",
+   "pos": "SF",
+   "proj_min": 25.8,
+   "played": true,
+   "act": {
+    "min": 29,
+    "pts": 3,
+    "reb": 5,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 9
+   },
+   "err": {
+    "pts": -7.2,
+    "reb": 0.9,
+    "ast": -0.4,
+    "fg3m": -0.9,
+    "pra": -6.7,
+    "min": 3.2
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Alex Sarr",
+   "team": "WAS",
+   "pos": "C",
+   "proj_min": 22.9,
+   "played": true,
+   "act": {
+    "min": 26,
+    "pts": 12,
+    "reb": 6,
+    "ast": 1,
+    "fg3m": 0,
+    "pra": 19
+   },
+   "err": {
+    "pts": 2.2,
+    "reb": 0.9,
+    "ast": -1.5,
+    "fg3m": -0.7,
+    "pra": 1.6,
+    "min": 3.1
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Justin Champagnie",
+   "team": "WAS",
+   "pos": "SF",
+   "proj_min": 24.1,
+   "played": true,
+   "act": {
+    "min": 4,
+    "pts": 2,
+    "reb": 2,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 4
+   },
+   "err": {
+    "pts": -7.2,
+    "reb": -7.8,
+    "ast": -1.8,
+    "fg3m": -0.8,
+    "pra": -16.8,
+    "min": -20.1
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Tre Johnson",
+   "team": "WAS",
+   "pos": "SG",
+   "proj_min": 23.8,
+   "played": true,
+   "act": {
+    "min": 23,
+    "pts": 7,
+    "reb": 3,
+    "ast": 2,
+    "fg3m": 1,
+    "pra": 12
+   },
+   "err": {
+    "pts": -5.4,
+    "reb": 1.1,
+    "ast": 0.7,
+    "fg3m": -0.9,
+    "pra": -3.6,
+    "min": -0.8
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Bub Carrington",
+   "team": "WAS",
+   "pos": "PG",
+   "proj_min": 17.6,
+   "played": true,
+   "act": {
+    "min": 28,
+    "pts": 6,
+    "reb": 0,
+    "ast": 3,
+    "fg3m": 2,
+    "pra": 9
+   },
+   "err": {
+    "pts": -0.3,
+    "reb": -1.8,
+    "ast": 0.5,
+    "fg3m": 0.6,
+    "pra": -1.5,
+    "min": 10.4
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Deandre Ayton",
+   "team": "WAS",
+   "pos": "C",
+   "proj_min": 16.1,
+   "played": true,
+   "act": {
+    "min": 12,
+    "pts": 0,
+    "reb": 4,
+    "ast": 2,
+    "fg3m": 0,
+    "pra": 6
+   },
+   "err": {
+    "pts": -6.8,
+    "reb": -0.6,
+    "ast": 1.6,
+    "fg3m": 0.0,
+    "pra": -5.8,
+    "min": -4.1
+   }
+  },
+  {
+   "game": "2026-10-26-WAS-at-CHA",
+   "name": "Khris Middleton",
+   "team": "WAS",
+   "pos": "SF",
+   "proj_min": 14.7,
+   "played": true,
+   "act": {
+    "min": 13,
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "fg3m": 0,
+    "pra": 1
+   },
+   "err": {
+    "pts": -5.5,
+    "reb": -1.3,
+    "ast": -1.1,
+    "fg3m": -0.4,
+    "pra": -7.8,
+    "min": -1.7
+   }
+  }
+ ]
+}

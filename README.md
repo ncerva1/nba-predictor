@@ -6,7 +6,18 @@ por partido las apuestas con mayor valor (probabilidad del modelo vs cuota).
 - `model.py`: modelo y simulación (`python model.py games/<partido>.json`)
 - `db/`: BD de rankings de los 30 equipos (`python db/build_db.py`)
 - `games/`: un JSON de entrada por partido
+- `build_slate.py`: arma los JSON de una jornada (`slates/<fecha>.json` + `raw/<fecha>/`) y los simula
 - `build_site.py`: corre el modelo para todos los partidos y escribe `docs/data/`
+- `results/`: resultados reales por jornada (`results/<fecha>.json`, box scores) y su evaluación
+- `evaluate.py`: compara lo publicado con lo real (`python evaluate.py <fecha>` -> `results/<fecha>_eval.json`)
 - `docs/`: la web (GitHub Pages: rama `main`, carpeta `/docs`)
 
 Ver `docs/README.md` para actualizar y publicar.
+
+## Después de cada jornada
+1. Guardar marcadores y box scores en `results/<fecha>.json` (formato en `evaluate.py`).
+2. `python evaluate.py <fecha>`: aciertos, calibración, picks ganados/perdidos, errores por jugador.
+3. `python build_site.py <fecha>`: los partidos con resultado no se vuelven a simular; la web muestra
+   el resultado real, cada pick liquidado y el historial del modelo.
+
+Cambios del modelo: ver `CHANGELOG.md`.

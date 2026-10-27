@@ -12,6 +12,10 @@ y db/rankings_latest.json existe; si no existe intenta reconstruirla) y escribe:
     docs/data/<id>.json              detalle completo de cada partido
 La web (docs/index.html) solo lee esos archivos, así que se puede servir gratis en GitHub Pages.
 
+Partidos ya jugados: si existe results/<fecha>.json con el partido, NO se vuelve a simular; se toma la
+predicción publicada (docs/data/<id>.json), se le añade el resultado real y se liquida cada apuesta
+(won / lost / push). index.json lleva además "history": récord de los picks con valor por jornada.
+
 Valor de una apuesta:
     prob. implícita = cuota americana -> probabilidad (sin quitar el vig)
     edge = prob. modelo - prob. implícita
@@ -154,6 +158,7 @@ def prop_bets(cfg, s):
             x = d["draws"]["pra"] if st == "pra" else d["draws"].get(st)
             if x is None:
                 continue
+            x = x[d["draws"]["min"] > 0]  # la prop se anula si no juega
             ln, o_over = v[0], v[1]
             o_under = v[2] if len(v) > 2 else None
             po, push = (x > ln).mean(), (x == ln).mean()
@@ -195,6 +200,44 @@ def run_game(path, n):
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
 
 
+def load_results(date):
+    """results/<fecha>.json: marcadores y box scores reales (ver evaluate.py)."""
+    path = os.path.join(HERE, "results", f"{date}.json")
+    return json.load(open(path))["games"] if os.path.exists(path) else {}
+
+
+def attach_result(r, res):
+    """Congela un partido ya jugado: guarda el resultado real y liquida cada apuesta publicada."""
+    from evaluate import actual_line, settle
+    g = r["game"]
+    h, a = g["home"], g["away"]
+    r["result"] = dict(score={a: res["away"], h: res["home"]}, ot=res.get("ot", 0),
+                       winner=h if res["home"] > res["away"] else a,
+                       winner_ok=(r["summary"]["win_prob"][h] >= 0.5) == (res["home"] > res["away"]))
+    for b in r["bets"]:
+        x = settle(b, g, res)
+        b["result"] = "push" if x is None else ("won" if x else "lost")
+    for p in r["summary"]["players"]:
+        al = actual_line(res["players"], p["name"])
+        p["actual"] = al if al and al["min"] > 0 else None
+    return r
+
+
+def index_entry(r):
+    g, sm = r["game"], r["summary"]
+    vb = [b for b in r["bets"] if b["value"]]
+    e = dict(id=r["id"], date=g["date"], away=g["away"], home=g["home"], tip_et=g.get("tip_et"),
+             venue=g.get("venue"), records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
+             proj_total=sm["proj_total"], used_db=r["used_db"],
+             n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb)
+    if "result" in r:
+        e["result"] = dict(r["result"], picks_won=sum(b["result"] == "won" for b in vb),
+                           picks_lost=sum(b["result"] == "lost" for b in vb),
+                           units=round(sum(b["dec"] - 1 if b["result"] == "won" else -1 if b["result"] == "lost" else 0
+                                           for b in vb), 2))
+    return e
+
+
 def main():
     args = [x for x in sys.argv[1:] if not x.startswith("--")]
     n = int(sys.argv[sys.argv.index("--sims") + 1]) if "--sims" in sys.argv else 20000
@@ -209,23 +252,34 @@ def main():
     index = json.load(open(idx_path)) if os.path.exists(idx_path) else {"games": []}
     keep = {g["id"]: g for g in index["games"]}
     for p in paths:
+        gid, date = game_id(p), os.path.basename(p)[:10]
+        res = load_results(date).get(os.path.basename(p)[11:-5])
+        out_path = os.path.join(OUT, f"{gid}.json")
         try:
-            r = run_game(p, n)
+            if res and os.path.exists(out_path):
+                # partido ya jugado: no se vuelve a simular (la web muestra lo que se publicó antes del partido)
+                r = attach_result(json.load(open(out_path)), res)
+            else:
+                r = run_game(p, n)
+                if res:
+                    r = attach_result(r, res)
         except Exception as e:  # un JSON roto no debe tumbar toda la jornada
             print(f"ERROR {os.path.basename(p)}: {e}")
             continue
-        json.dump(r, open(os.path.join(OUT, f"{r['id']}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+        json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
+        keep[r["id"]] = index_entry(r)
         g, sm = r["game"], r["summary"]
-        keep[r["id"]] = dict(id=r["id"], date=g["date"], away=g["away"], home=g["home"], tip_et=g.get("tip_et"),
-                             venue=g.get("venue"), records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
-                             proj_total=sm["proj_total"], used_db=r["used_db"],
-                             n_value=sum(b["value"] for b in r["bets"]), top_bets=r["bets"][:3],
-                             value_bets=[b for b in r["bets"] if b["value"]])
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "
-              f"{keep[r['id']]['n_value']} apuestas con valor")
+              f"{keep[r['id']]['n_value']} apuestas con valor" + (" (resultado real cargado)" if res else ""))
     games = sorted(keep.values(), key=lambda g: (g["date"], g.get("tip_et") or "", g["id"]), reverse=False)
-    json.dump(dict(generated=datetime.now(timezone.utc).isoformat(timespec="minutes"), value_ev=VALUE_EV, games=games),
-              open(idx_path, "w"), ensure_ascii=False, indent=1)
+    history = []  # récord de los picks con valor por jornada (solo jornadas con resultados)
+    for date in sorted({g["date"] for g in games if "result" in g}):
+        rs = [g["result"] for g in games if g["date"] == date and "result" in g]
+        history.append(dict(date=date, games=len(rs), winners_ok=sum(x["winner_ok"] for x in rs),
+                            picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
+                            units=round(sum(x["units"] for x in rs), 2)))
+    json.dump(dict(generated=datetime.now(timezone.utc).isoformat(timespec="minutes"), value_ev=VALUE_EV,
+                   history=history, games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":

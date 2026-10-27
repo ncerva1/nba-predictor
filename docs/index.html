@@ -120,6 +120,11 @@ tr.detail td { background: var(--bg) }
 .book { font: 12px var(--mono); border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 3px 8px; white-space: nowrap }
 .book i { font-style: normal; color: var(--muted) }
 .book.good i { color: var(--good) } .book.bad i { color: var(--bad) }
+.res { font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap }
+.res.won { background: var(--good-soft); color: var(--good) }
+.res.lost { background: var(--bad-soft); color: var(--bad) }
+.res.push { background: var(--accent-soft); color: var(--accent) }
+.final { font: 500 13px var(--mono) }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
 .foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
 @media (max-width: 640px) {
@@ -202,7 +207,10 @@ function bestCell(b, thr) {
 function bookList(b) {
   return `<div class="books">${b.books.map(o => `<span class="book${o.ev >= INDEX.value_ev ? " good" : o.ev < 0 ? " bad" : ""}"><b>${esc(o.book)}</b> ${esc(lineTxt(b, o.line))}@ ${o.dec.toFixed(2)} <i>${evTxt(o.ev)}</i></span>`).join("")}</div>`;
 }
+const RES = { won: "Ganada", lost: "Perdida", push: "Nula" };
+const resPill = r => r ? `<span class="res ${r}">${RES[r]}</span>` : "";
 function betRows(bets, thr, withGame) {
+  const withRes = bets.some(b => b.result);
   return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
     <td class="head"><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</td>
@@ -211,11 +219,11 @@ function betRows(bets, thr, withGame) {
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
     <td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
     <td class="r" data-label="EV">${evPill(b.ev, thr)}</td>
-    <td class="r-sm" data-label="Mejor casa">${bestCell(b, thr)}</td></tr>
-    ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="8">${bookList(b)}</td></tr>` : ""}`).join("");
+    <td class="r-sm" data-label="Mejor casa">${bestCell(b, thr)}</td>${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>
+    ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="${withRes ? 9 : 8}">${bookList(b)}</td></tr>` : ""}`).join("");
 }
-const betHead = withGame => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
-  <th class="r">Prob. modelo</th><th class="r">Prob. casa</th><th class="r">Cuota justa</th><th class="r">EV</th><th>Mejor casa</th></tr></thead>`;
+const betHead = (withGame, withRes) => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
+  <th class="r">Prob. modelo</th><th class="r">Prob. casa</th><th class="r">Cuota justa</th><th class="r">EV</th><th>Mejor casa</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead>`;
 
 function chip(g, dup) {
   const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
@@ -238,17 +246,28 @@ function renderIndex() {
   const picks = todays.flatMap(g => (g.value_bets || g.top_bets.filter(b => b.value)).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })))
     .sort((a, b) => b.ev - a.ev);
   const older = INDEX.games.filter(g => g.date !== DAY);
+  const hist = INDEX.history || [];
+  const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok }), { w: 0, l: 0, u: 0, g: 0, ok: 0 });
+  const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
   $("#app").innerHTML = `
+  ${hist.length ? `<section class="section">
+    <h2>Cómo le ha ido al modelo</h2>
+    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th></tr></thead><tbody>
+      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td></tr>`).join("")}
+      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td></tr>` : ""}
+    </tbody></table></div>
+  </section>` : ""}
   <section class="section">
     <span class="eyebrow">Jornada ${esc(DAY)}</span>
-    <h2>Picks con valor de hoy</h2>
+    <h2>${todays.some(g => g.result) ? "Picks con valor de la jornada" : "Picks con valor de hoy"}</h2>
     <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Ordenados de mayor a menor valor esperado (EV). Toca una fila para ver el análisis del partido.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${picks.length ? `<table class="stack">${betHead(true)}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
+    <div class="panel tbl-wrap">${picks.length ? `<table class="stack">${betHead(true, picks.some(b => b.result))}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
     ${howto}
   </section>
   <section class="section">
-    <h2>Partidos de hoy</h2>
+    <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
   ${older.length ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : ""}
@@ -257,18 +276,19 @@ function renderIndex() {
 }
 
 function card(g) {
-  const pa = g.win_prob[g.away], ph = g.win_prob[g.home];
+  const pa = g.win_prob[g.away], ph = g.win_prob[g.home], r = g.result;
   return `<a class="card" href="#${g.id}">
     <span class="eyebrow">${esc(g.date)}${g.tip_et ? " · " + esc(g.tip_et) + " ET" : ""}</span>
     <div class="matchup">
       <span class="team">${esc(g.away)} <span class="muted num" style="font-size:13px">${esc(g.records?.[g.away] || "")}</span></span><span class="score">${g.proj[g.away]}</span>
       <span class="team">@ ${esc(g.home)} <span class="muted num" style="font-size:13px">${esc(g.records?.[g.home] || "")}</span></span><span class="score">${g.proj[g.home]}</span>
     </div>
+    ${r ? `<div class="final">Final ${r.score[g.away]}–${r.score[g.home]}${r.ot ? " (OT)" : ""} · ${resPill(r.winner_ok ? "won" : "lost").replace(/Ganada|Perdida/, r.winner_ok ? "Ganador acertado" : "Ganador fallado")}</div>` : ""}
     <div class="bar" aria-label="Probabilidad de victoria"><i style="width:${pa * 100}%"></i></div>
     <div class="mini">
       <div><span>Victoria ${esc(g.away)} / ${esc(g.home)}</span><span class="num">${pct(pa, 0)} / ${pct(ph, 0)}</span></div>
       <div><span>Total proyectado</span><span class="num">${g.proj_total}</span></div>
-      <div><span>Picks con valor</span><span class="num">${g.n_value}</span></div>
+      <div><span>Picks con valor</span><span class="num">${r && g.n_value ? `${r.picks_won}–${r.picks_lost} (${r.units >= 0 ? "+" : ""}${r.units.toFixed(2)} u)` : g.n_value}</span></div>
     </div>
     <span class="cta">Ver análisis →</span>
   </a>`;
@@ -303,6 +323,7 @@ async function renderGame(id) {
     <span class="muted">${d.sims.toLocaleString("es")} simulaciones · ${d.used_db ? "con BD de rankings" : "sin BD de rankings"}${mk.source ? " · cuotas: " + esc(mk.source) : ""}</span>
   </header>
   <div class="panel hero">
+    ${d.result ? `<div class="stat"><span class="eyebrow">Resultado real</span><b class="num">${d.result.score[a]} – ${d.result.score[h]}${d.result.ot ? " (OT)" : ""}</b><span class="muted">Ganó ${esc(d.result.winner)} · ${d.result.winner_ok ? "el modelo acertó el ganador" : "el modelo falló el ganador"}</span></div>` : ""}
     <div class="stat"><span class="eyebrow">Marcador proyectado</span><b class="num">${s.proj[a]} – ${s.proj[h]}</b><span class="muted">${esc(a)} – ${esc(h)}</span></div>
     <div class="stat"><span class="eyebrow">Victoria ${esc(a)} / ${esc(h)}</span><b class="num">${pct(s.win_prob[a], 0)} / ${pct(s.win_prob[h], 0)}</b><span class="muted">Cuota justa ${fairDec(s.win_prob[a])} / ${fairDec(s.win_prob[h])}${mk.ml_away ? ` · casa ${dec(mk.ml_away)} / ${dec(mk.ml_home)}` : ""}</span></div>
     <div class="stat"><span class="eyebrow">Total de puntos</span><b class="num">${s.proj_total}</b><span class="muted">${mk.total ? `línea ${mk.total} · over ${pct(s.p_over, 0)}` : "sin línea"} · ritmo ${s.pace}</span></div>
@@ -312,7 +333,7 @@ async function renderGame(id) {
     <h2>Apuestas de este partido</h2>
     <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${d.bets.length ? `<table class="stack">${betHead(false)}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+    <div class="panel tbl-wrap">${d.bets.length ? `<table class="stack">${betHead(false, d.bets.some(b => b.result))}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
     ${howto}
   </section>
   <div class="grid2">
@@ -332,10 +353,11 @@ async function renderGame(id) {
   const draw = k => {
     document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
     const rows = [...players].sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
-    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th></tr></thead><tbody>
+    const played = players.some(p => p.actual !== undefined);
+    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
     ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
-      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td></tr>`; }).join("")}</tbody></table>`;
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("button.more").forEach(btn => btn.addEventListener("click", () => {

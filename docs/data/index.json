@@ -1,6 +1,16 @@
 {
- "generated": "2026-10-26T18:06+00:00",
+ "generated": "2026-10-27T12:42+00:00",
  "value_ev": 0.03,
+ "history": [
+  {
+   "date": "2026-10-26",
+   "games": 9,
+   "winners_ok": 6,
+   "picks_won": 6,
+   "picks_lost": 5,
+   "units": 0.4
+  }
+ ],
  "games": [
   {
    "id": "2026-10-26-MIN-at-CLE",
@@ -122,7 +132,8 @@
        "p": 0.495,
        "ev": 0.212
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -221,7 +232,8 @@
        "p": 0.621,
        "ev": 0.16
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -320,7 +332,8 @@
        "p": 0.503,
        "ev": -0.013
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -421,7 +434,8 @@
        "p": 0.495,
        "ev": 0.212
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -520,9 +534,22 @@
        "p": 0.621,
        "ev": 0.16
       }
-     ]
+     ],
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIN": 125,
+     "CLE": 127
+    },
+    "ot": 1,
+    "winner": "CLE",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 1,
+    "units": -0.11
+   }
   },
   {
    "id": "2026-10-26-WAS-at-CHA",
@@ -644,7 +671,8 @@
        "p": 0.632,
        "ev": 0.117
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -743,7 +771,8 @@
        "p": 0.599,
        "ev": 0.099
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -842,7 +871,8 @@
        "p": 0.535,
        "ev": 0.035
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -943,7 +973,8 @@
        "p": 0.632,
        "ev": 0.117
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -1042,7 +1073,8 @@
        "p": 0.599,
        "ev": 0.099
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -1141,9 +1173,22 @@
        "p": 0.535,
        "ev": 0.035
       }
-     ]
+     ],
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "WAS": 103,
+     "CHA": 110
+    },
+    "ot": 0,
+    "winner": "CHA",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 1,
+    "units": 0.67
+   }
   },
   {
    "id": "2026-10-26-CHI-at-BOS",
@@ -1265,7 +1310,8 @@
        "p": 0.546,
        "ev": 0.042
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -1364,7 +1410,8 @@
        "p": 0.881,
        "ev": -0.016
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -1455,7 +1502,8 @@
        "p": 0.515,
        "ev": -0.037
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -1556,9 +1604,22 @@
        "p": 0.546,
        "ev": 0.042
       }
-     ]
+     ],
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CHI": 99,
+     "BOS": 134
+    },
+    "ot": 0,
+    "winner": "BOS",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 0,
+    "units": 0.94
+   }
   },
   {
    "id": "2026-10-26-DAL-at-MIA",
@@ -1680,7 +1741,8 @@
        "p": 0.511,
        "ev": -0.025
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -1779,7 +1841,8 @@
        "p": 0.486,
        "ev": -0.043
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -1878,10 +1941,23 @@
        "p": 0.744,
        "ev": -0.037
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
-   "value_bets": []
+   "value_bets": [],
+   "result": {
+    "score": {
+     "DAL": 113,
+     "MIA": 109
+    },
+    "ot": 0,
+    "winner": "DAL",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-10-26-IND-at-MIL",
@@ -2003,7 +2079,8 @@
        "p": 0.645,
        "ev": 0.01
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -2094,7 +2171,8 @@
        "p": 0.522,
        "ev": 0.01
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -2193,10 +2271,23 @@
        "p": 0.52,
        "ev": -0.027
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
-   "value_bets": []
+   "value_bets": [],
+   "result": {
+    "score": {
+     "IND": 102,
+     "MIL": 110
+    },
+    "ot": 0,
+    "winner": "MIL",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-10-26-PHX-at-OKC",
@@ -2318,7 +2409,8 @@
        "p": 0.54,
        "ev": 0.032
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -2417,7 +2509,8 @@
        "p": 0.502,
        "ev": -0.042
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -2516,7 +2609,8 @@
        "p": 0.78,
        "ev": -0.037
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -2617,9 +2711,22 @@
        "p": 0.54,
        "ev": 0.032
       }
-     ]
+     ],
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "PHX": 114,
+     "OKC": 125
+    },
+    "ot": 0,
+    "winner": "OKC",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 1,
+    "units": -1
+   }
   },
   {
    "id": "2026-10-26-ATL-at-HOU",
@@ -2658,7 +2765,8 @@
      "fair": -141,
      "edge": 0.085,
      "ev": 0.17,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -2757,7 +2865,8 @@
        "p": 0.577,
        "ev": 0.079
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -2856,7 +2965,8 @@
        "p": 0.489,
        "ev": -0.046
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -2874,7 +2984,8 @@
      "fair": -141,
      "edge": 0.085,
      "ev": 0.17,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -2973,9 +3084,22 @@
        "p": 0.577,
        "ev": 0.079
       }
-     ]
+     ],
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "ATL": 110,
+     "HOU": 120
+    },
+    "ot": 0,
+    "winner": "HOU",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 0,
+    "units": 1.9
+   }
   },
   {
    "id": "2026-10-26-MEM-at-UTA",
@@ -3097,7 +3221,8 @@
        "p": 0.538,
        "ev": 0.023
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -3196,7 +3321,8 @@
        "p": 0.485,
        "ev": -0.039
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -3295,10 +3421,23 @@
        "p": 0.517,
        "ev": -0.034
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
-   "value_bets": []
+   "value_bets": [],
+   "result": {
+    "score": {
+     "MEM": 110,
+     "UTA": 105
+    },
+    "ot": 0,
+    "winner": "MEM",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-10-26-GSW-at-DEN",
@@ -3388,7 +3527,8 @@
        "p": 0.63,
        "ev": 0.203
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -3455,7 +3595,8 @@
        "p": 0.807,
        "ev": 0.085
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -3530,7 +3671,8 @@
        "p": 0.514,
        "ev": -0.018
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -3599,7 +3741,8 @@
        "p": 0.63,
        "ev": 0.203
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -3666,9 +3809,22 @@
        "p": 0.807,
        "ev": 0.085
       }
-     ]
+     ],
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "GSW": 134,
+     "DEN": 114
+    },
+    "ot": 0,
+    "winner": "GSW",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 2,
+    "units": -2
+   }
   }
  ]
 }
