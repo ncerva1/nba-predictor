@@ -31,6 +31,7 @@ from datetime import datetime, timezone
 
 import numpy as np
 
+from db_link import PT, _positions
 from model import american_to_prob, load_game, prob_to_american, simulate, summarize
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -169,6 +170,70 @@ def prop_bets(cfg, s):
     return out
 
 
+# Ataque de un equipo vs lo que concede el rival (rank 1 = mejor en ambos lados, como en db/build_db.py)
+MATCHUP_KEYS = [("PTS", "OPP_PTS", "Puntos"), ("OFF_RATING", "DEF_RATING", "Rating (pts/100 pos.)"),
+                ("PTS_PAINT", "OPP_PTS_PAINT", "Puntos en la pintura"), ("FG3A", "OPP_FG3A", "Triples intentados"),
+                ("FG3_PCT", "OPP_FG3_PCT", "% de triples"), ("FTA", "OPP_FTA", "Tiros libres intentados"),
+                ("AST", "OPP_AST", "Asistencias"), ("PTS_FB", "OPP_PTS_FB", "Puntos en transición"),
+                ("PTS_2ND_CHANCE", "OPP_PTS_2ND_CHANCE", "Puntos de segunda oportunidad"),
+                ("OREB_PCT", "DREB_PCT", "Rebote ofensivo vs defensivo")]
+DVP_COLS = ["PTS", "REB", "AST", "3PM"]
+
+
+def load_rankings():
+    path = os.path.join(HERE, "db", "rankings_latest.json")
+    return json.load(open(path)) if os.path.exists(path) else None
+
+
+def matchup_view(R, g, players, db_report=None):
+    """Lo que la web muestra en "Enfrentamiento según los rankings": para cada equipo que ataca, sus
+    métricas frente a lo que concede el rival, sus tipos de jugada frente a la defensa rival de esos
+    tipos y la defensa del rival por posición (con los jugadores del equipo en cada posición)."""
+    h, a = g["home"], g["away"]
+    pick = lambda d: (d or {}).get("blend") or (d or {}).get(R["season"])
+    lg_ppp = {f"{p}|{s}": float(np.mean([pick(R["teams"][t]["play_types"].get(f"{p}|{s}"))["ppp"] for t in R["teams"]]))
+              for p in PT for s in ("off", "def")}
+    dvp_lg = {}
+    for pos in ("PG", "SG", "SF", "PF", "C"):
+        for c in DVP_COLS:
+            vals = [R["teams"][t]["dvp"][pos][c]["value"] for t in R["teams"] if R["teams"][t].get("dvp")]
+            dvp_lg[f"{pos}|{c}"] = round(float(np.mean(vals)), 1) if vals else None
+    rep_players = (db_report or {}).get("players", {})
+    out = dict(snapshot=R["snapshot_date"], season=R["season"], prior_season=R.get("prior_season"),
+               w_cur={t: round(R["teams"][t]["gp"] / (R["teams"][t]["gp"] + R.get("shrink_games", 10)), 2) for t in (a, h)},
+               gp={t: R["teams"][t]["gp"] for t in (a, h)}, attack={})
+    for t, o in ((a, h), (h, a)):
+        T, O = R["teams"][t], R["teams"][o]
+        keys = []
+        for om, dm, lab in MATCHUP_KEYS:
+            x, y = pick(T["metrics"].get(om)), pick(O["metrics"].get(dm))
+            if x and y:
+                keys.append(dict(label=lab, off=round(x["value"], 3), off_rank=x["rank"], deff=round(y["value"], 3), def_rank=y["rank"]))
+        styles = []
+        for p in PT:
+            fo, dd = pick(T["play_types"].get(f"{p}|off")), pick(O["play_types"].get(f"{p}|def"))
+            if not fo or not dd:
+                continue
+            # PPP esperado aprox.: lo que el ataque saca de más + lo que la defensa concede de más, sobre la media
+            exp = lg_ppp[f"{p}|off"] + (fo["ppp"] - lg_ppp[f"{p}|off"]) + (dd["ppp"] - lg_ppp[f"{p}|def"])
+            styles.append(dict(play=p, freq=round(fo["freq"], 3), freq_rank=fo["freq_rank"], ppp=round(fo["ppp"], 3),
+                               ppp_rank=fo["ppp_rank"], def_freq=round(dd["freq"], 3), def_ppp=round(dd["ppp"], 3),
+                               def_rank=dd["ppp_rank"], lg_ppp=round(lg_ppp[f"{p}|off"], 3), exp_ppp=round(exp, 3)))
+        styles.sort(key=lambda r: -r["freq"])
+        dvp = {}
+        for pos in ("PG", "SG", "SF", "PF", "C"):
+            row = (O.get("dvp") or {}).get(pos)
+            if not row:
+                continue
+            who = [dict(name=p["name"], pos=p["pos"], min=p["min"],
+                        mult={k: v for k, v in rep_players.get(p["name"], {}).items() if k in ("pts", "reb", "ast", "fg3m")})
+                   for p in players if p["team"] == t and p["min"] >= 10 and pos in _positions(p["pos"])]
+            dvp[pos] = dict(stats={c: dict(value=row[c]["value"], rank=row[c]["rank"], lg=dvp_lg[f"{pos}|{c}"])
+                                   for c in DVP_COLS if c in row}, players=sorted(who, key=lambda x: -x["min"]))
+        out["attack"][t] = dict(vs=o, keys=keys, styles=styles, dvp=dvp)
+    return out
+
+
 def game_id(path):
     return os.path.basename(path)[:-5].replace("@", "-at-").replace("_", "-")
 
@@ -194,8 +259,10 @@ def run_game(path, n):
     summ = summarize(cfg, s)
     bets = tb + prop_bets(cfg, s)
     bets.sort(key=lambda b: b["ev"], reverse=True)
+    R = load_rankings()
+    mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
     return dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
-                summary=summ, bets=bets,
+                summary=summ, bets=bets, matchup_view=mv,
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
 
@@ -259,6 +326,9 @@ def main():
             if res and os.path.exists(out_path):
                 # partido ya jugado: no se vuelve a simular (la web muestra lo que se publicó antes del partido)
                 r = attach_result(json.load(open(out_path)), res)
+                if not r.get("matchup_view") and load_rankings():  # partidos publicados antes de esta sección
+                    r["matchup_view"] = matchup_view(load_rankings(), r["game"], r["summary"]["players"],
+                                                     r["summary"].get("db_report"))
             else:
                 r = run_game(p, n)
                 if res:

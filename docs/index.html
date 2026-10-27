@@ -138,6 +138,43 @@ tr.detail td { background: var(--bg) }
 .final { font: 500 13px var(--mono) }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
 .foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
+/* enfrentamiento según los rankings: todo se colorea desde el punto de vista del equipo que ataca */
+.mv-block { display: grid; gap: 10px }
+.mv-block + .mv-block { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line) }
+.mv-block h3 small { font: 500 12px var(--body); color: var(--muted); letter-spacing: 0 }
+.mv-rows { display: grid; gap: 8px }
+.dvp-row { display: grid; grid-template-columns: minmax(130px, 1.3fr) repeat(4, minmax(0, 1fr)); gap: 6px; align-items: stretch }
+.dvp-pos { display: grid; align-content: center; gap: 2px; min-width: 0 }
+.dvp-pos b { font: 700 22px/1 var(--display) }
+.dvp-pos span { font-size: 12px; color: var(--muted); line-height: 1.3 }
+.cell { border-radius: 8px; padding: 6px 8px; background: var(--bg); display: grid; gap: 1px; min-width: 0 }
+.cell .k { font: 500 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.cell .v { font: 600 17px/1.15 var(--mono); font-variant-numeric: tabular-nums }
+.cell .rk { font: 500 11px var(--mono); color: var(--muted) }
+.cell.good { background: var(--good-soft) } .cell.good .rk { color: var(--good) }
+.cell.bad { background: var(--bad-soft) } .cell.bad .rk { color: var(--bad) }
+.pt-row { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr) 120px; gap: 6px 12px; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid var(--line) }
+.pt-row:last-child { border-bottom: 0 }
+.pt-name { display: grid; gap: 4px; min-width: 0 }
+.pt-name b { font-weight: 600 }
+.pt-freq { display: flex; align-items: center; gap: 8px; font: 12px var(--mono); color: var(--muted) }
+.pt-freq .bar { flex: 1; max-width: 140px }
+.pt-cell { display: grid; gap: 1px; font-size: 13px }
+.pt-cell .k { font: 500 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.pt-row > .pill { justify-self: end }
+.pt-cell .num.good { color: var(--good) } .pt-cell .num.bad { color: var(--bad) }
+.mv-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted) }
+.mv-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px }
+@media (max-width: 640px) {
+  .dvp-row { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-bottom: 8px; border-bottom: 1px solid var(--line) }
+  .dvp-row:last-child { border-bottom: 0 }
+  .dvp-pos { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap }
+  .cell { padding: 5px 6px } .cell .v { font-size: 15px }
+  .pt-row { grid-template-columns: 1fr 1fr }
+  .pt-name { grid-column: 1 / -1 }
+  .pt-row > .pill { grid-column: 1 / -1; justify-self: start }
+}
 @media (max-width: 640px) {
   .hide-sm { display: none }
   table.stack thead { display: none }
@@ -402,6 +439,52 @@ function histogram(h, away, home) {
     <text x="${W - pad}" y="14" text-anchor="end">gana ${esc(away)} →</text><text x="${pad}" y="14">← gana ${esc(home)}</text></svg>`;
 }
 
+// Enfrentamiento según los rankings (d.matchup_view, lo arma build_site.py desde la BD de rankings).
+// Verde = favorece al equipo que ataca, rojo = favorece a la defensa rival.
+const PLAY = { Isolation: "Aislamiento (1 vs 1)", Transition: "Transición", PRBallHandler: "Pick & roll · manejador", PRRollman: "Pick & roll · rodador",
+  Postup: "Juego de poste", Spotup: "Tiro tras recepción (spot-up)", Handoff: "Hand-off", Cut: "Cortes", OffScreen: "Salida de bloqueo", OffRebound: "Rebote ofensivo (putback)" };
+const rankCls = (r, invert) => { const x = invert ? 31 - r : r; return x <= 10 ? "good" : x >= 21 ? "bad" : ""; };   // ranking desde el ataque
+const fmtV = v => v < 1 ? (v * 100).toFixed(1) + "%" : v.toFixed(1);
+function mvSection(d) {
+  const mv = d.matchup_view; if (!mv) return "";
+  const g = d.game, after = mv.snapshot > g.date;
+  return `<section class="section" id="mv">
+    <h2>Enfrentamiento según los rankings</h2>
+    <p class="lede">Qué concede cada defensa por posición y cómo encajan los estilos de juego, para contrastar con los picks y los props. Rankings 1–30 de la BD del ${esc(mv.snapshot)}, mezclando ${esc(mv.season)} con ${esc(mv.prior_season || "la temporada anterior")} (${g.away} ${mv.gp[g.away]} PJ, ${g.home} ${mv.gp[g.home]} PJ: con pocos partidos pesa más la temporada pasada).${after ? " Ojo: datos posteriores al partido." : ""}</p>
+    <div class="filters" role="group" aria-label="Equipo que ataca" id="mv-teams"><span class="lbl">Ataca</span>${[g.away, g.home].map(t =>
+      `<button type="button" data-t="${esc(t)}">${esc(t)} vs defensa ${esc(mv.attack[t].vs)}</button>`).join("")}</div>
+    <div class="mv-legend"><span><i style="background:var(--good-soft);outline:1px solid var(--good)"></i>Favorece al que ataca</span><span><i style="background:var(--bad-soft);outline:1px solid var(--bad)"></i>Favorece a la defensa</span><span>#1 = mejor ataque / defensa que menos concede · #30 = peor / la que más concede</span></div>
+    <div class="panel" id="mv-body"></div>
+  </section>`;
+}
+function mvDraw(d, t) {
+  const mv = d.matchup_view, A = mv.attack[t], o = A.vs, rep = d.summary.db_report?.teams?.[t]?.matchup_db;
+  document.querySelectorAll("#mv-teams button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === t));
+  const pos = Object.entries(A.dvp);
+  const dvp = pos.length ? `<div class="mv-block"><h3>Lo que ${esc(o)} concede por posición <small>· por 48 min, ajustado por calendario</small></h3>
+    <div class="mv-rows">${pos.map(([p, r]) => `<div class="dvp-row"><div class="dvp-pos"><b>${p}</b><span>${r.players.length ? r.players.slice(0, 3).map(x => esc(x.name)).join(" · ") : "sin jugadores de " + esc(t) + " en la rotación"}</span></div>
+      ${Object.entries(r.stats).map(([k, c]) => `<div class="cell ${rankCls(c.rank, true)}" title="Media de liga ${c.lg}"><span class="k">${k}</span><span class="v">${c.value}</span><span class="rk">#${c.rank} · liga ${c.lg}</span></div>`).join("")}</div>`).join("")}</div>
+    <p class="foot">Lo que permite ${esc(o)} a cada posición rival (statpick.ai), con los jugadores de ${esc(t)} que juegan ahí. El modelo usa este dato para repartir la producción de ${esc(t)} entre posiciones: sube un poco la proyección de las posiciones en verde y baja la de las rojas.</p></div>` : "";
+  const sty = A.styles.filter(x => x.freq >= 0.03);
+  const verdict = x => { const dl = x.exp_ppp - x.lg_ppp;
+    return dl >= 0.05 ? `<span class="pill value">Ventaja ${esc(t)}</span>` : dl <= -0.05 ? `<span class="pill neg">Ventaja ${esc(o)}</span>` : `<span class="pill flat">Parejo</span>`; };
+  const styles = sty.length ? `<div class="mv-block"><h3>Estilo de juego de ${esc(t)} vs la defensa de ${esc(o)}</h3>
+    <div>${sty.map(x => `<div class="pt-row"><div class="pt-name"><b>${esc(PLAY[x.play] || x.play)}</b>
+        <span class="pt-freq"><span class="bar"><i style="width:${Math.min(100, x.freq / 0.3 * 100)}%"></i></span>${(x.freq * 100).toFixed(1)}% de sus jugadas</span></div>
+      <div class="pt-cell"><span class="k">Ataque ${esc(t)}</span><span class="num ${rankCls(x.ppp_rank)}">${x.ppp.toFixed(2)} pts/jugada · #${x.ppp_rank}</span><span class="muted" style="font-size:12px">liga ${x.lg_ppp.toFixed(2)}</span></div>
+      <div class="pt-cell"><span class="k">Defensa ${esc(o)}</span><span class="num ${rankCls(x.def_rank, true)}">${x.def_ppp.toFixed(2)} concede · #${x.def_rank}</span></div>
+      ${verdict(x)}</div>`).join("")}</div>
+    <p class="foot">Tipos de jugada de NBA.com (Synergy) que ${esc(t)} usa en al menos el 3% de sus posesiones, de más a menos usado. Ventaja = la eficiencia de ${esc(t)} más lo que concede ${esc(o)} en ese tipo de jugada supera la media en 0.05 o más.${rep ? ` En total el modelo le suma ${rep.style_per100 >= 0 ? "+" : ""}${rep.style_per100.toFixed(2)} pts por 100 posesiones a ${esc(t)} por estilos.` : ""}</p></div>` : "";
+  const keys = A.keys.length ? `<div class="mv-block"><h3>Ataque de ${esc(t)} vs lo que concede ${esc(o)}</h3>
+    <div>${A.keys.map(k => { const ad = k.off_rank <= 10 && k.def_rank >= 21, dd = k.off_rank >= 21 && k.def_rank <= 10;
+      return `<div class="pt-row"><div class="pt-name"><b>${esc(k.label)}</b></div>
+        <div class="pt-cell"><span class="k">${esc(t)} ataque</span><span class="num ${rankCls(k.off_rank)}">${fmtV(k.off)} · #${k.off_rank}</span></div>
+        <div class="pt-cell"><span class="k">${esc(o)} concede</span><span class="num ${rankCls(k.def_rank, true)}">${fmtV(k.deff)} · #${k.def_rank}</span></div>
+        ${ad ? `<span class="pill value">Ventaja ${esc(t)}</span>` : dd ? `<span class="pill neg">Ventaja ${esc(o)}</span>` : '<span class="pill flat">Sin ventaja clara</span>'}</div>`; }).join("")}</div>
+    <p class="foot">Promedios por partido (rebote en %). Ventaja = un lado está entre los 10 mejores y el otro entre los 10 peores.</p></div>` : "";
+  $("#mv-body").innerHTML = dvp + styles + keys || `<div class="empty">Sin datos de rankings para este partido.</div>`;
+}
+
 async function renderGame(id) {
   const thr = INDEX.value_ev;
   let d = cache[id];
@@ -440,6 +523,7 @@ async function renderGame(id) {
       <table>${sc.map(([k, v]) => `<tr><td>${esc(k)}</td><td class="r num">${pct(v)}</td></tr>`).join("")}
       <tr><td>Total de puntos (rango 10–90%)</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
   </div>
+  ${mvSection(d)}
   <section class="section">
     <h2>Player props proyectados</h2>
     <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
@@ -477,6 +561,10 @@ async function renderGame(id) {
   bindSeg("seg-game", drawBets);
   drawBets();
   draw();
+  if (d.matchup_view) {
+    document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
+    mvDraw(d, a);
+  }
 }
 
 function route() {
