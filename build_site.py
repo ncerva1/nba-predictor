@@ -26,7 +26,7 @@ Mercado opcional en el JSON del partido (si falta la cuota de spread/total se as
     "prop_lines": {"Jugador": {"pts": [24.5, 117]}}            # cuota del over
     "prop_lines": {"Jugador": {"pts": [24.5, 117, -145]}}       # over y under
 """
-import glob, json, os, subprocess, sys
+import glob, json, os, re, subprocess, sys, unicodedata
 from datetime import datetime, timezone
 
 import numpy as np
@@ -234,6 +234,41 @@ def matchup_view(R, g, players, db_report=None):
     return out
 
 
+def _norm(name):
+    n = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"[^a-z ]", "", n.replace("-", " "))
+    return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
+def _key(name):  # apellido + 3 primeras letras del nombre: "Ron Holland" = "Ronald Holland II"
+    w = _norm(name).split()
+    return f"{w[-1]} {w[0][:3]}" if len(w) > 1 else " ".join(w)
+
+
+def h2h_view(g, players):
+    """Enfrentamientos de la temporada anterior (h2h/<temporada>.json, box scores de ESPN) entre los dos
+    equipos, y la línea de cada jugador de hoy en esos partidos (aunque entonces jugara en otro equipo)."""
+    files = sorted(glob.glob(os.path.join(HERE, "h2h", "*.json")))
+    if not files:
+        return None
+    H = json.load(open(files[-1]))
+    pair = {g["home"], g["away"]}
+    games = [x for x in H["games"] if {x["home"], x["away"]} == pair and x["date"] < g["date"]]
+    if not games:  # todos los equipos se enfrentan 2-4 veces: vacío = ese cruce aún no está cargado
+        return None
+    out_games, lines = [], {}
+    for x in games:
+        lead = x.get("largest_lead", {})
+        out_games.append(dict(date=x["date"], away=x["away"], home=x["home"], score=x["score"], ot=x.get("ot", 0),
+                              largest_lead=lead, blowout=[t for t, v in lead.items() if v >= 20]))
+        for team, ps in x["players"].items():
+            for n, mi, pts, reb, ast, f3 in ps:
+                lines.setdefault(_key(n), []).append(dict(date=x["date"], team=team, min=mi, pts=pts, reb=reb,
+                                                           ast=ast, fg3m=f3, pra=pts + reb + ast))
+    pl = {p["name"]: lines[_key(p["name"])] for p in players if _key(p["name"]) in lines}
+    return dict(season=H["season"], games=out_games, players=pl)
+
+
 def game_id(path):
     return os.path.basename(path)[:-5].replace("@", "-at-").replace("_", "-")
 
@@ -262,7 +297,7 @@ def run_game(path, n):
     R = load_rankings()
     mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
     return dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
-                summary=summ, bets=bets, matchup_view=mv,
+                summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]),
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
 
@@ -329,6 +364,8 @@ def main():
                 if not r.get("matchup_view") and load_rankings():  # partidos publicados antes de esta sección
                     r["matchup_view"] = matchup_view(load_rankings(), r["game"], r["summary"]["players"],
                                                      r["summary"].get("db_report"))
+                if not (r.get("h2h") or {}).get("games"):
+                    r["h2h"] = h2h_view(r["game"], r["summary"]["players"])
             else:
                 r = run_game(p, n)
                 if res:
