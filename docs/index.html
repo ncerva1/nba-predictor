@@ -138,6 +138,12 @@ tr.detail td { background: var(--bg) }
 .final { font: 500 13px var(--mono) }
 .empty { padding: 24px; text-align: center; color: var(--muted) }
 .foot { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0 }
+.h2h-games { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)) }
+.h2h-g { display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px }
+.h2h-g .sc { display: grid; grid-template-columns: 1fr auto; font: 600 17px/1.3 var(--mono) }
+.h2h-g .sc .w { color: var(--ink) } .h2h-g .sc .l { color: var(--muted); font-weight: 500 }
+.h2h-g .ld { font-size: 12px; color: var(--muted) }
+.h2h-cell .vals { display: block; font: 11px var(--mono); color: var(--muted) }
 /* enfrentamiento según los rankings: todo se colorea desde el punto de vista del equipo que ataca */
 .mv-block { display: grid; gap: 10px }
 .mv-block + .mv-block { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line) }
@@ -485,6 +491,32 @@ function mvDraw(d, t) {
   $("#mv-body").innerHTML = dvp + styles + keys || `<div class="empty">Sin datos de rankings para este partido.</div>`;
 }
 
+// Enfrentamientos de la temporada pasada (d.h2h, de h2h/<temporada>.json vía build_site.py)
+function h2hSection(d) {
+  const H = d.h2h; if (!H || !H.games.length) return "";
+  const a = d.game.away, h = d.game.home;
+  const wins = t => H.games.filter(x => x.score[t] > x.score[t === a ? h : a]).length;
+  const nb = H.games.filter(x => x.blowout.length).length;
+  return `<section class="section">
+    <h2>Enfrentamientos de la temporada pasada</h2>
+    <p class="lede">${esc(H.season)}: ${esc(a)} ${wins(a)}–${wins(h)} ${esc(h)} en ${H.games.length} partidos${nb ? `, ${nb} con paliza (ventaja de 20+ en algún momento)` : ", ninguno con paliza (ventaja de 20+)"}. Lo que hizo cada jugador en esos partidos está en la columna <b>Vs ${esc(a)}/${esc(h)} ${esc(H.season.slice(2))}</b> de los player props.</p>
+    <div class="h2h-games">${H.games.map(x => { const t1 = x.away, t2 = x.home, w = x.score[t1] > x.score[t2] ? t1 : t2;
+      return `<div class="h2h-g"><span class="eyebrow">${esc(x.date)}${x.ot ? ` · ${x.ot > 1 ? x.ot : ""}OT` : ""}</span>
+        <div class="sc"><span class="${w === t1 ? "w" : "l"}">${esc(t1)}</span><span class="${w === t1 ? "w" : "l"}">${x.score[t1]}</span>
+        <span class="${w === t2 ? "w" : "l"}">@ ${esc(t2)}</span><span class="${w === t2 ? "w" : "l"}">${x.score[t2]}</span></div>
+        <span class="ld">Máx. ventaja: ${esc(t1)} ${x.largest_lead[t1] ?? "—"} · ${esc(t2)} ${x.largest_lead[t2] ?? "—"}</span>
+        ${x.blowout.length ? `<span class="pill flat" style="justify-self:start">Paliza de ${x.blowout.map(esc).join(" y ")}</span>` : ""}</div>`; }).join("")}</div>
+  </section>`;
+}
+function h2hCell(d, p, k, line) {
+  const L = d.h2h?.players?.[p.name];
+  if (!L) return '<span class="muted">—</span>';
+  const v = L.map(x => x[k]), avg = v.reduce((s, x) => s + x, 0) / v.length, over = v.filter(x => x > line).length;
+  const other = L.filter(x => x.team !== p.team).map(x => x.team);
+  return `<span class="h2h-cell"><b>${avg.toFixed(1)}</b> <span class="pill ${over * 2 > v.length ? "value" : over * 2 < v.length ? "neg" : "flat"}">${over}/${v.length} over</span>
+    <span class="vals" title="${L.map(x => `${x.date} (${x.team}, ${x.min} min): ${x[k]}`).join("\n")}">${L.map(x => x[k]).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
+}
+
 async function renderGame(id) {
   const thr = INDEX.value_ev;
   let d = cache[id];
@@ -524,6 +556,7 @@ async function renderGame(id) {
       <tr><td>Total de puntos (rango 10–90%)</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
   </div>
   ${mvSection(d)}
+  ${h2hSection(d)}
   <section class="section">
     <h2>Player props proyectados</h2>
     <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
@@ -531,7 +564,7 @@ async function renderGame(id) {
     <div class="filters" role="group" aria-label="Equipo" id="teams"><span class="lbl">Equipo</span>${[a, h, "all"].map(t =>
       `<button type="button" data-t="${esc(t)}" aria-pressed="${t === team}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.</p>
+    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival la temporada pasada, cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido.` : ""}</p>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
   const draw = (k = stat) => {
@@ -540,10 +573,11 @@ async function renderGame(id) {
     document.querySelectorAll("#teams button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === team));
     const rows = players.filter(p => team === "all" || p.team === team).sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
     const played = players.some(p => p.actual !== undefined);
-    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
+    const hh = d.h2h && d.h2h.games.length;
+    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${hh ? `<th class="r">Vs ${esc(a)}/${esc(h)} ${esc(d.h2h.season.slice(2))}</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
     ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
-      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${hh ? `<td class="r num" data-label="Vs rival ${esc(d.h2h.season.slice(2))}">${h2hCell(d, p, k, m ? m.line : st.line)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll("button[data-k]").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
