@@ -48,10 +48,20 @@ a { color: var(--accent) }
 .banner .meta { font: 500 12px var(--mono); color: var(--banner-muted); letter-spacing: .04em; text-align: right }
 
 /* barra de partidos */
-.ticker { background: var(--ticker); border-top: 1px solid rgba(255,255,255,.08); overflow: hidden; position: relative }
-.ticker-track { display: flex; gap: 10px; width: max-content; padding-block: 10px; animation: slide var(--dur, 60s) linear infinite }
-.ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused }
-@keyframes slide { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+/* Se mueve sola con JS (scrollLeft), así que también se puede arrastrar, deslizar con el dedo o
+   mover con las flechas; se pausa al pasar el ratón o al tocarla y sigue a los pocos segundos. */
+.ticker { background: var(--ticker); border-top: 1px solid rgba(255,255,255,.08); position: relative; display: flex; align-items: stretch }
+.ticker-scroll { flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; cursor: grab; user-select: none; -webkit-user-select: none }
+.ticker-scroll::-webkit-scrollbar { display: none }
+.ticker-scroll.dragging { cursor: grabbing }
+.ticker-track { display: flex; gap: 10px; width: max-content; padding-block: 10px; align-items: stretch }
+.tk-btn { flex: none; width: 34px; border: 0; background: var(--ticker); color: var(--banner-ink); font: 700 22px/1 var(--display); cursor: pointer; position: relative; z-index: 1 }
+.tk-btn:hover, .tk-btn:focus-visible { background: rgba(255,255,255,.1); outline: none }
+.tk-btn.prev { box-shadow: 8px 0 10px -6px rgba(0,0,0,.5) } .tk-btn.next { box-shadow: -8px 0 10px -6px rgba(0,0,0,.5) }
+.tk-label { display: grid; place-items: center; writing-mode: vertical-rl; transform: rotate(180deg); font: 600 10px var(--mono); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--banner-muted); padding: 0 2px; border-left: 1px solid rgba(255,255,255,.15) }
+.chip.done { background: rgba(255,255,255,.03) }
+.chip .ok { color: #7fe3b0 } .chip .ko { color: #ffaaa3 }
 .chip { display: grid; grid-template-columns: auto auto; gap: 0 14px; align-items: center; text-decoration: none; color: var(--banner-ink);
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: 7px 12px; min-width: 190px; transition: background .15s, border-color .15s }
 .chip:hover, .chip:focus-visible { background: rgba(255,255,255,.14); border-color: var(--banner-ink); outline: none }
@@ -60,7 +70,6 @@ a { color: var(--accent) }
 .chip .s { font: 500 13px/1.3 var(--mono); text-align: right }
 .chip .x { font: 500 11px var(--mono); color: var(--banner-muted); grid-column: 1 / -1 }
 .chip .v { color: #7fe3b0 }
-.ticker-hint { position: absolute; right: 0; top: 0; bottom: 0; width: 48px; background: linear-gradient(to right, transparent, var(--ticker)); pointer-events: none }
 
 main.wrap { padding-block: 28px 64px }
 main .inner { display: grid; gap: 30px }
@@ -110,6 +119,8 @@ details.howto dd { margin: 0 }
 .grid2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) }
 .chart text { fill: var(--muted); font: 11px var(--mono) }
 .filters { display: flex; flex-wrap: wrap; gap: 8px }
+.filters + .filters { margin-top: -4px }
+.filters .lbl { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); align-self: center; min-width: 74px }
 .filters button { font: 500 12px var(--mono); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
   background: var(--surface); color: var(--ink); cursor: pointer }
 .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
@@ -149,9 +160,6 @@ tr.detail td { background: var(--bg) }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important }
-  .ticker { overflow-x: auto }
-  .ticker-track { animation: none }
-  .ticker-track .dup { display: none }
 }
 </style>
 
@@ -161,7 +169,11 @@ tr.detail td { background: var(--bg) }
     <div class="meta" id="meta"></div>
   </div>
 </header>
-<nav class="ticker gutter" id="ticker" aria-label="Partidos del día"><div class="ticker-track" id="track"></div><div class="ticker-hint"></div></nav>
+<nav class="ticker" id="ticker" aria-label="Partidos de ayer y de hoy">
+  <button type="button" class="tk-btn prev" id="tk-prev" aria-label="Partidos anteriores">‹</button>
+  <div class="ticker-scroll" id="tscroll"><div class="ticker-track" id="track"></div></div>
+  <button type="button" class="tk-btn next" id="tk-next" aria-label="Partidos siguientes">›</button>
+</nav>
 <main class="wrap gutter"><div class="inner" id="app"><p class="muted">Cargando partidos…</p></div></main>
 
 <script>
@@ -226,16 +238,91 @@ const betHead = (withGame, withRes) => `<thead><tr>${withGame ? "<th>Partido</th
   <th class="r">Prob. modelo</th><th class="r">Prob. casa</th><th class="r">Cuota justa</th><th class="r">EV</th><th>Mejor casa</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead>`;
 
 function chip(g, dup) {
+  const r = g.result, hid = dup ? ' aria-hidden="true" tabindex="-1"' : "";
+  if (r) return `<a class="chip done" href="#${g.id}" data-id="${g.id}" draggable="false"${hid}>
+    <span class="t">${esc(g.away)} @ ${esc(g.home)}</span><span class="s">${r.score[g.away]}–${r.score[g.home]}</span>
+    <span class="x">Final${r.ot ? " (OT)" : ""} · ${r.winner_ok ? '<span class="ok">ganador ✓</span>' : '<span class="ko">ganador ✗</span>'}${g.n_value ? ` · picks ${r.picks_won}–${r.picks_lost}` : ""}</span></a>`;
   const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
-  return `<a class="chip" href="#${g.id}" data-id="${g.id}"${dup ? ' aria-hidden="true" tabindex="-1"' : ""}>
+  return `<a class="chip" href="#${g.id}" data-id="${g.id}" draggable="false"${hid}>
     <span class="t">${esc(g.away)} @ ${esc(g.home)}</span><span class="s">${g.proj[g.away]}–${g.proj[g.home]}</span>
     <span class="x">${g.tip_et ? esc(g.tip_et) + " ET · " : ""}${esc(fav)} ${pct(g.win_prob[fav], 0)}${g.n_value ? ` · <span class="v">${g.n_value} pick${g.n_value > 1 ? "s" : ""}</span>` : ""}</span></a>`;
 }
 
-function renderTicker(todays) {
-  const one = todays.map(g => chip(g, false)).join("");
-  $("#track").innerHTML = one + `<span class="dup" style="display:contents">${todays.map(g => chip(g, true)).join("")}</span>`;
-  $("#track").style.setProperty("--dur", Math.max(25, todays.length * 7) + "s");
+// Barra: resultados de la jornada anterior + partidos de hoy. Se repite 3 veces para poder dar la
+// vuelta sin saltos en ambos sentidos; se mantiene siempre dentro de la copia del medio.
+const TK = { set: 0, loop: false, pauseUntil: 0, hover: false, drag: null, pos: 0, last: 0 };
+const calm = matchMedia("(prefers-reduced-motion: reduce)");
+function renderTicker(prev, todays) {
+  const sc = $("#tscroll"), tr = $("#track");
+  const group = (games, label, dup) => games.length ? `<span class="tk-label"${dup ? ' aria-hidden="true"' : ""}>${label}</span>${games.map(g => chip(g, dup)).join("")}` : "";
+  const copy = dup => group(prev, prev[0] ? "Ayer · " + prev[0].date.slice(5) : "", dup) + group(todays, todays.some(g => g.result) ? "Jornada" : "Hoy", dup);
+  tr.innerHTML = `<span class="tk-copy" style="display:contents">${copy(false)}</span>`;
+  const one = tr.scrollWidth;
+  TK.loop = !calm.matches && one > sc.clientWidth;
+  if (TK.loop) {
+    tr.innerHTML = copy(true) + `<span class="tk-mark"></span>` + copy(false) + `<span class="tk-mark"></span>` + copy(true);
+    const m = tr.querySelectorAll(".tk-mark");
+    TK.set = m[1].offsetLeft - m[0].offsetLeft;
+    sc.scrollLeft = TK.pos = m[0].offsetLeft - tr.offsetLeft;
+  }
+  $("#tk-prev").hidden = $("#tk-next").hidden = one <= sc.clientWidth;
+}
+function tkWrap() {   // vuelve a la copia del medio cuando el usuario no está desplazando
+  const sc = $("#tscroll");
+  if (!TK.loop || TK.drag) return;
+  const lo = TK.set * 0.5, hi = TK.set * 1.5 + 1;   // la copia del medio empieza ~en set
+  if (sc.scrollLeft < lo) sc.scrollLeft += TK.set; else if (sc.scrollLeft > hi) sc.scrollLeft -= TK.set;
+  TK.pos = sc.scrollLeft;
+}
+const tkPause = (ms = 5000) => { TK.pauseUntil = performance.now() + ms; };
+function tkFrame(t) {
+  const sc = $("#tscroll"), dt = Math.min(64, t - (TK.last || t)); TK.last = t;
+  if (TK.loop && !TK.hover && !TK.drag && t > TK.pauseUntil && !document.hidden) {
+    if (Math.abs(sc.scrollLeft - TK.pos) > 2) TK.pos = sc.scrollLeft;   // el usuario la movió
+    TK.pos += dt * 0.04;   // 40 px por segundo
+    sc.scrollLeft = TK.pos;
+    if (sc.scrollLeft > TK.set * 1.5) { sc.scrollLeft -= TK.set; TK.pos -= TK.set; }
+  }
+  requestAnimationFrame(tkFrame);
+}
+function setupTicker() {
+  const sc = $("#tscroll");
+  sc.addEventListener("mouseenter", () => TK.hover = true);
+  sc.addEventListener("mouseleave", () => { TK.hover = false; tkPause(1500); });
+  ["touchstart", "touchmove", "touchend", "wheel", "focusin"].forEach(e => sc.addEventListener(e, () => tkPause(), { passive: true }));
+  let idle;
+  sc.addEventListener("scroll", () => { clearTimeout(idle); idle = setTimeout(tkWrap, 180); }, { passive: true });
+  // arrastrar con el ratón; si hubo arrastre no se abre el partido al soltar
+  sc.addEventListener("pointerdown", e => { if (e.pointerType === "mouse" && e.button === 0) TK.drag = { x: e.clientX, s: sc.scrollLeft, moved: false, id: e.pointerId }; });
+  sc.addEventListener("pointermove", e => {
+    const d = TK.drag; if (!d) return;
+    const dx = e.clientX - d.x;
+    if (!d.moved && Math.abs(dx) > 5) { d.moved = true; sc.classList.add("dragging"); sc.setPointerCapture(d.id); }
+    if (d.moved) sc.scrollLeft = d.s - dx;
+  });
+  const end = () => { const d = TK.drag; if (!d) return; TK.drag = null; sc.classList.remove("dragging"); TK.pos = sc.scrollLeft; tkPause(3000); tkWrap();
+    if (d.moved) sc.addEventListener("click", ev => { ev.preventDefault(); ev.stopPropagation(); }, { capture: true, once: true }); };
+  sc.addEventListener("pointerup", end); sc.addEventListener("pointercancel", end);
+  const step = dir => { tkPause(6000); sc.scrollBy({ left: dir * sc.clientWidth * 0.7, behavior: calm.matches ? "auto" : "smooth" }); };
+  $("#tk-prev").addEventListener("click", () => step(-1));
+  $("#tk-next").addEventListener("click", () => step(1));
+  requestAnimationFrame(tkFrame);
+}
+
+// Picks segmentados: todos / de equipo (ganador, hándicap, total) / player props
+let SEG = "all";
+const SEGS = { all: "Todos", team: "Equipo", prop: "Player props" };
+const inSeg = (b, k) => k === "all" || (k === "prop" ? b.kind === "prop" : b.kind !== "prop");
+function segBar(bets, id) {
+  return `<div class="filters" role="group" aria-label="Tipo de pick" id="${id}">${Object.entries(SEGS).map(([k, t]) =>
+    `<button type="button" data-seg="${k}" aria-pressed="${k === SEG}">${t} · ${bets.filter(b => inSeg(b, k)).length}</button>`).join("")}</div>`;
+}
+function bindSeg(id, draw) {
+  document.querySelectorAll(`#${id} button`).forEach(b => b.addEventListener("click", () => {
+    SEG = b.dataset.seg;
+    document.querySelectorAll(`#${id} button`).forEach(x => x.setAttribute("aria-pressed", x.dataset.seg === SEG));
+    draw();
+  }));
 }
 
 function markTicker(id) { document.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c.dataset.id === id)); }
@@ -263,7 +350,8 @@ function renderIndex() {
     <h2>${todays.some(g => g.result) ? "Picks con valor de la jornada" : "Picks con valor de hoy"}</h2>
     <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Ordenados de mayor a menor valor esperado (EV). Toca una fila para ver el análisis del partido.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${picks.length ? `<table class="stack">${betHead(true, picks.some(b => b.result))}<tbody>${betRows(picks, thr, true)}</tbody></table>` : `<div class="empty">Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.</div>`}</div>
+    ${picks.length ? segBar(picks, "seg-idx") : ""}
+    <div class="panel tbl-wrap" id="picks"></div>
     ${howto}
   </section>
   <section class="section">
@@ -272,7 +360,14 @@ function renderIndex() {
   </section>
   ${older.length ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : ""}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
-  document.querySelectorAll("tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+  const drawPicks = () => {
+    const list = picks.filter(b => inSeg(b, SEG));
+    $("#picks").innerHTML = list.length ? `<table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table>`
+      : `<div class="empty">${picks.length ? `Ningún pick de este tipo con EV ≥ +${(thr * 100).toFixed(0)}% en la jornada.` : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div>`;
+    document.querySelectorAll("#picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+  };
+  bindSeg("seg-idx", drawPicks);
+  drawPicks();
 }
 
 function card(g) {
@@ -315,6 +410,8 @@ async function renderGame(id) {
   const sc = Object.entries(s.scenarios);
   const players = [...s.players];
   const nVal = d.bets.filter(b => b.ev >= thr).length;
+  // en el celular se muestra un solo equipo a la vez para no tener la lista entera desplegada
+  let stat = "pts", team = matchMedia("(max-width: 640px)").matches ? a : "all";
   $("#app").innerHTML = `
   <a class="back" href="#">← Inicio · todos los picks</a>
   <header class="section">
@@ -333,7 +430,8 @@ async function renderGame(id) {
     <h2>Apuestas de este partido</h2>
     <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
     ${legend(thr)}
-    <div class="panel tbl-wrap">${d.bets.length ? `<table class="stack">${betHead(false, d.bets.some(b => b.result))}<tbody>${betRows(d.bets, thr, false)}</tbody></table>` : `<div class="empty">Sin cuotas cargadas para este partido.</div>`}</div>
+    ${d.bets.length ? segBar(d.bets, "seg-game") : ""}
+    <div class="panel tbl-wrap" id="bets"></div>
     ${howto}
   </section>
   <div class="grid2">
@@ -346,26 +444,39 @@ async function renderGame(id) {
     <h2>Player props proyectados</h2>
     <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
       `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${i === 0}">${{ pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PTS+REB+AST" }[k]}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Equipo" id="teams"><span class="lbl">Equipo</span>${[a, h, "all"].map(t =>
+      `<button type="button" data-t="${esc(t)}" aria-pressed="${t === team}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
     <div class="panel tbl-wrap" id="props"></div>
     <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.</p>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
-  const draw = k => {
-    document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
-    const rows = [...players].sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
+  const draw = (k = stat) => {
+    stat = k;
+    document.querySelectorAll("button[data-k]").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+    document.querySelectorAll("#teams button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === team));
+    const rows = players.filter(p => team === "all" || p.team === team).sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
     const played = players.some(p => p.actual !== undefined);
     $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
     ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
       <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
   };
-  document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
-  document.querySelectorAll("button.more").forEach(btn => btn.addEventListener("click", () => {
-    const row = $("#det-" + btn.dataset.i), open = row.hidden;
-    row.hidden = !open; btn.setAttribute("aria-expanded", open);
-    btn.textContent = open ? "Ocultar casas" : `Ver ${d.bets[btn.dataset.i].books.length} casas`;
-  }));
-  draw("pts");
+  document.querySelectorAll("button[data-k]").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
+  document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
+  const drawBets = () => {
+    const list = d.bets.filter(b => inSeg(b, SEG));
+    if (!d.bets.length) { $("#bets").innerHTML = `<div class="empty">Sin cuotas cargadas para este partido.</div>`; return; }
+    $("#bets").innerHTML = list.length ? `<table class="stack">${betHead(false, list.some(b => b.result))}<tbody>${betRows(list, thr, false)}</tbody></table>`
+      : `<div class="empty">Sin apuestas de este tipo para este partido.</div>`;
+    document.querySelectorAll("#bets button.more").forEach(btn => btn.addEventListener("click", () => {
+      const row = $("#det-" + btn.dataset.i), open = row.hidden;
+      row.hidden = !open; btn.setAttribute("aria-expanded", open);
+      btn.textContent = open ? "Ocultar casas" : `Ver ${list[btn.dataset.i].books.length} casas`;
+    }));
+  };
+  bindSeg("seg-game", drawBets);
+  drawBets();
+  draw();
 }
 
 function route() {
@@ -373,15 +484,20 @@ function route() {
   window.scrollTo(0, 0);
   const isGame = id && INDEX.games.some(g => g.id === id);
   markTicker(isGame ? id : null);
+  SEG = "all";
   if (isGame) renderGame(id); else renderIndex();
 }
 
 getJSON("data/index.json").then(d => {
   INDEX = d;
-  DAY = [...new Set(d.games.map(g => g.date))].sort().reverse()[0];
+  const dates = [...new Set(d.games.map(g => g.date))].sort().reverse();
+  DAY = dates[0];
   const todays = d.games.filter(g => g.date === DAY);
   $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${esc((d.generated || "").replace("T", " ").replace("+00:00", ""))} UTC`;
-  renderTicker(todays);
+  const prevDay = dates[1], prev = prevDay ? d.games.filter(g => g.date === prevDay) : [];
+  setupTicker();
+  renderTicker(prev, todays);
+  let rw; addEventListener("resize", () => { clearTimeout(rw); rw = setTimeout(() => { renderTicker(prev, todays); markTicker(location.hash.slice(1)); }, 250); });
   route();
   window.addEventListener("hashchange", route);
 }).catch(e => { $("#app").innerHTML = `<p>No se pudo cargar <code>data/index.json</code>. Ejecuta <code>python build_site.py</code> para generarlo.</p>`; });
