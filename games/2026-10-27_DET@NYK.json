@@ -7,8 +7,7 @@
   "tip_et": "20:00",
   "notes": [
    "DET 3-0 y NYK 0-3",
-   "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT",
-   "Sin spread/total por casa en Covers: solo hay picks de moneyline"
+   "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT"
   ],
   "out": [
    "Jalen Duren",
@@ -520,11 +519,69 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "source": "NBA.com/games 27-oct (calendario); Covers.com (9 casas: ML, spread y total; props de puntos)",
   "spread_home": -4.5,
   "total": 218.5,
   "ml_home": -165,
   "ml_away": 140
  },
- "prop_lines": {}
+ "prop_lines": {
+  "Jalen Brunson": {
+   "pts": [
+    24.5,
+    -140
+   ]
+  },
+  "Cade Cunningham": {
+   "pts": [
+    23.5,
+    -105
+   ]
+  },
+  "Karl-Anthony Towns": {
+   "pts": [
+    18.5,
+    -115
+   ]
+  },
+  "OG Anunoby": {
+   "pts": [
+    15.5,
+    -123
+   ]
+  },
+  "John Collins": {
+   "pts": [
+    14.5,
+    -112
+   ]
+  },
+  "Mikal Bridges": {
+   "pts": [
+    11.5,
+    -110,
+    -110
+   ]
+  },
+  "Paul Reed": {
+   "pts": [
+    12.5,
+    100,
+    -105
+   ]
+  },
+  "Duncan Robinson": {
+   "pts": [
+    11.5,
+    -111
+   ]
+  },
+  "Josh Hart": {
+   "pts": [
+    11.5,
+    -105,
+    -112
+   ]
+  }
+ }
 }

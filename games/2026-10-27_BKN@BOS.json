@@ -628,11 +628,68 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "source": "NBA.com/games 27-oct (calendario); Covers.com (9 casas: ML, spread y total; props de puntos)",
   "spread_home": -11.5,
   "total": 221.5,
   "ml_home": -575,
   "ml_away": 425
  },
- "prop_lines": {}
+ "prop_lines": {
+  "Jayson Tatum": {
+   "pts": [
+    26.5,
+    -117
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    21.5,
+    -125
+   ]
+  },
+  "Paul George": {
+   "pts": [
+    18.5,
+    -115
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    18.5,
+    -125
+   ]
+  },
+  "Derrick White": {
+   "pts": [
+    14.5,
+    -127
+   ]
+  },
+  "Payton Pritchard": {
+   "pts": [
+    15.5,
+    -125
+   ]
+  },
+  "Mikel Brown Jr.": {
+   "pts": [
+    7.5,
+    -115,
+    -110
+   ]
+  },
+  "Egor Dëmin": {
+   "pts": [
+    9.5,
+    -120
+   ]
+  },
+  "Day'Ron Sharpe": {
+   "pts": [
+    9.5,
+    -111,
+    103
+   ]
+  }
+ }
 }

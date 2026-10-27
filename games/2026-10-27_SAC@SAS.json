@@ -492,11 +492,67 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "source": "NBA.com/games 27-oct (calendario); Covers.com (9 casas: ML, spread y total; props de puntos)",
   "spread_home": -18.5,
   "total": 229.5,
   "ml_home": -1800,
   "ml_away": 950
  },
- "prop_lines": {}
+ "prop_lines": {
+  "Victor Wembanyama": {
+   "pts": [
+    26.5,
+    -115
+   ]
+  },
+  "Zach LaVine": {
+   "pts": [
+    20.5,
+    -115
+   ]
+  },
+  "Darius Acuff Jr.": {
+   "pts": [
+    20.5,
+    -105
+   ]
+  },
+  "Stephon Castle": {
+   "pts": [
+    16.5,
+    -120
+   ]
+  },
+  "De'Aaron Fox": {
+   "pts": [
+    15.5,
+    100,
+    -109
+   ]
+  },
+  "Domantas Sabonis": {
+   "pts": [
+    15.5,
+    -112
+   ]
+  },
+  "Dylan Harper": {
+   "pts": [
+    16.5,
+    -135
+   ]
+  },
+  "Devin Vassell": {
+   "pts": [
+    11.5,
+    -112
+   ]
+  },
+  "De'Andre Hunter": {
+   "pts": [
+    8.5,
+    -122
+   ]
+  }
+ }
 }

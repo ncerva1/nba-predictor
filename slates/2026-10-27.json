@@ -1,12 +1,12 @@
 {
  "date": "2026-10-27",
  "sources": {
-  "schedule_odds": "NBA.com/games 27-oct (calendario); Covers.com (moneyline 9 casas; spread/total por casa donde había) y FanDuel Research (línea de spread y total de consenso)",
+  "schedule_odds": "NBA.com/games 27-oct (calendario); Covers.com (9 casas: ML, spread y total; props de puntos)",
   "players_cur": "Basketball-Reference, páginas de equipo 2026-27 (27-oct); BOS completado con el box score real del 26-oct vs CHI",
   "players_prior": "Basketball-Reference, per game 2025-26 (liga y páginas de equipo)",
   "injuries": "CBS Sports injuries 27-oct",
   "b2b": "Jugaron el 26-oct: BOS (ganó 134-99 a CHI en casa). Ningún otro equipo de hoy jugó ayer",
-  "db": "BD de rankings: snapshot NBA.com del 26-oct (partidos hasta el 25-oct)"
+  "db": "BD de rankings: snapshot NBA.com del 27-oct (partidos hasta el 26-oct; DvP statpick hasta el 25-oct)"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -70,8 +70,7 @@
    },
    "notes": [
     "DET 3-0 y NYK 0-3",
-    "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT",
-    "Sin spread/total por casa en Covers: solo hay picks de moneyline"
+    "DET: Ausar Thompson (tobillo) e Isaiah Joe (cadera) en duda; Duren OUT"
    ]
   },
   {
@@ -198,6 +197,174 @@
    "pts": [
     9.5,
     -115
+   ]
+  },
+  "Jalen Brunson": {
+   "pts": [
+    24.5,
+    -140
+   ]
+  },
+  "Cade Cunningham": {
+   "pts": [
+    23.5,
+    -105
+   ]
+  },
+  "Karl-Anthony Towns": {
+   "pts": [
+    18.5,
+    -115
+   ]
+  },
+  "OG Anunoby": {
+   "pts": [
+    15.5,
+    -123
+   ]
+  },
+  "John Collins": {
+   "pts": [
+    14.5,
+    -112
+   ]
+  },
+  "Mikal Bridges": {
+   "pts": [
+    11.5,
+    -110,
+    -110
+   ]
+  },
+  "Paul Reed": {
+   "pts": [
+    12.5,
+    100,
+    -105
+   ]
+  },
+  "Duncan Robinson": {
+   "pts": [
+    11.5,
+    -111
+   ]
+  },
+  "Josh Hart": {
+   "pts": [
+    11.5,
+    -105,
+    -112
+   ]
+  },
+  "Jayson Tatum": {
+   "pts": [
+    26.5,
+    -117
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    21.5,
+    -125
+   ]
+  },
+  "Paul George": {
+   "pts": [
+    18.5,
+    -115
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    18.5,
+    -125
+   ]
+  },
+  "Derrick White": {
+   "pts": [
+    14.5,
+    -127
+   ]
+  },
+  "Payton Pritchard": {
+   "pts": [
+    15.5,
+    -125
+   ]
+  },
+  "Mikel Brown Jr.": {
+   "pts": [
+    7.5,
+    -115,
+    -110
+   ]
+  },
+  "Egor Dëmin": {
+   "pts": [
+    9.5,
+    -120
+   ]
+  },
+  "Day'Ron Sharpe": {
+   "pts": [
+    9.5,
+    -111,
+    103
+   ]
+  },
+  "Victor Wembanyama": {
+   "pts": [
+    26.5,
+    -115
+   ]
+  },
+  "Zach LaVine": {
+   "pts": [
+    20.5,
+    -115
+   ]
+  },
+  "Darius Acuff Jr.": {
+   "pts": [
+    20.5,
+    -105
+   ]
+  },
+  "Stephon Castle": {
+   "pts": [
+    16.5,
+    -120
+   ]
+  },
+  "De'Aaron Fox": {
+   "pts": [
+    15.5,
+    100,
+    -109
+   ]
+  },
+  "Domantas Sabonis": {
+   "pts": [
+    15.5,
+    -112
+   ]
+  },
+  "Dylan Harper": {
+   "pts": [
+    16.5,
+    -135
+   ]
+  },
+  "Devin Vassell": {
+   "pts": [
+    11.5,
+    -112
+   ]
+  },
+  "De'Andre Hunter": {
+   "pts": [
+    8.5,
+    -122
    ]
   }
  }
