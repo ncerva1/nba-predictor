@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T18:21+00:00",
+ "generated": "2026-10-28T16:49+00:00",
  "value_ev": 0.03,
  "history": [
   {
@@ -9,6 +9,14 @@
    "picks_won": 6,
    "picks_lost": 5,
    "units": 0.4
+  },
+  {
+   "date": "2026-10-27",
+   "games": 4,
+   "winners_ok": 2,
+   "picks_won": 8,
+   "picks_lost": 12,
+   "units": -5.36
   }
  ],
  "games": [
@@ -3863,7 +3871,8 @@
      "fair": -364,
      "edge": 0.292,
      "ev": 0.592,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -3962,7 +3971,8 @@
        "p": 0.735,
        "ev": 0.324
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -3978,7 +3988,8 @@
      "fair": -210,
      "edge": 0.154,
      "ev": 0.294,
-     "value": true
+     "value": true,
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -3996,7 +4007,8 @@
      "fair": -364,
      "edge": 0.292,
      "ev": 0.592,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -4095,7 +4107,8 @@
        "p": 0.735,
        "ev": 0.324
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4111,7 +4124,8 @@
      "fair": -210,
      "edge": 0.154,
      "ev": 0.294,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -4210,7 +4224,8 @@
        "p": 0.918,
        "ev": 0.059
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -4226,9 +4241,22 @@
      "fair": -142,
      "edge": 0.032,
      "ev": 0.058,
-     "value": true
+     "value": true,
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "BKN": 124,
+     "BOS": 125
+    },
+    "ot": 1,
+    "winner": "BOS",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 3,
+    "units": -1.8
+   }
   },
   {
    "id": "2026-10-27-DET-at-NYK",
@@ -4350,7 +4378,8 @@
        "p": 0.577,
        "ev": 0.362
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4366,7 +4395,8 @@
      "fair": -247,
      "edge": 0.186,
      "ev": 0.354,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -4465,7 +4495,8 @@
        "p": 0.721,
        "ev": 0.255
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -4566,7 +4597,8 @@
        "p": 0.577,
        "ev": 0.362
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4582,7 +4614,8 @@
      "fair": -247,
      "edge": 0.186,
      "ev": 0.354,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -4681,7 +4714,8 @@
        "p": 0.721,
        "ev": 0.255
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4697,7 +4731,8 @@
      "fair": -201,
      "edge": 0.14,
      "ev": 0.265,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4713,7 +4748,8 @@
      "fair": -183,
      "edge": 0.123,
      "ev": 0.235,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -4812,7 +4848,8 @@
        "p": 0.624,
        "ev": 0.166
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4828,9 +4865,22 @@
      "fair": -121,
      "edge": 0.035,
      "ev": 0.068,
-     "value": true
+     "value": true,
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "DET": 97,
+     "NYK": 111
+    },
+    "ot": 0,
+    "winner": "NYK",
+    "winner_ok": false,
+    "picks_won": 1,
+    "picks_lost": 6,
+    "units": -5.1
+   }
   },
   {
    "id": "2026-10-27-SAC-at-SAS",
@@ -4869,7 +4919,8 @@
      "fair": -182,
      "edge": 0.146,
      "ev": 0.291,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -4885,7 +4936,8 @@
      "fair": -166,
      "edge": 0.095,
      "ev": 0.181,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -4984,7 +5036,8 @@
        "p": 0.552,
        "ev": 0.04
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -5002,7 +5055,8 @@
      "fair": -182,
      "edge": 0.146,
      "ev": 0.291,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5018,7 +5072,8 @@
      "fair": -166,
      "edge": 0.095,
      "ev": 0.181,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -5117,9 +5172,22 @@
        "p": 0.552,
        "ev": 0.04
       }
-     ]
+     ],
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "SAC": 94,
+     "SAS": 114
+    },
+    "ot": 0,
+    "winner": "SAS",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 1,
+    "units": 0.81
+   }
   },
   {
    "id": "2026-10-27-POR-at-LAL",
@@ -5158,7 +5226,8 @@
      "fair": -160,
      "edge": 0.099,
      "ev": 0.191,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -5174,7 +5243,8 @@
      "fair": -147,
      "edge": 0.066,
      "ev": 0.126,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -5190,7 +5260,8 @@
      "fair": -144,
      "edge": 0.061,
      "ev": 0.116,
-     "value": true
+     "value": true,
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -5208,7 +5279,8 @@
      "fair": -160,
      "edge": 0.099,
      "ev": 0.191,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -5224,7 +5296,8 @@
      "fair": -147,
      "edge": 0.066,
      "ev": 0.126,
-     "value": true
+     "value": true,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -5240,7 +5313,8 @@
      "fair": -144,
      "edge": 0.061,
      "ev": 0.116,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5256,7 +5330,8 @@
      "fair": -112,
      "edge": 0.037,
      "ev": 0.076,
-     "value": true
+     "value": true,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -5354,6 +5429,5260 @@
        "dec": 1.909,
        "p": 0.494,
        "ev": -0.057
+      }
+     ],
+     "result": "won"
+    }
+   ],
+   "result": {
+    "score": {
+     "POR": 136,
+     "LAL": 129
+    },
+    "ot": 0,
+    "winner": "POR",
+    "winner_ok": false,
+    "picks_won": 3,
+    "picks_lost": 2,
+    "units": 0.73
+   }
+  },
+  {
+   "id": "2026-10-28-CHA-at-DET",
+   "date": "2026-10-28",
+   "away": "CHA",
+   "home": "DET",
+   "tip_et": "19:00",
+   "venue": "Little Caesars Arena, Detroit",
+   "records": {
+    "CHA": null,
+    "DET": null
+   },
+   "proj": {
+    "DET": 115.6,
+    "CHA": 108.3
+   },
+   "win_prob": {
+    "DET": 0.702025,
+    "CHA": 0.297975
+   },
+   "proj_total": 223.9,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Naz Reid Under 18.5 Puntos",
+     "player": "Naz Reid",
+     "team": "CHA",
+     "line": 18.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.725,
+     "implied": 0.55,
+     "fair": -263,
+     "edge": 0.175,
+     "ev": 0.319,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 214.5",
+     "player": null,
+     "team": null,
+     "line": 214.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.682,
+     "implied": 0.524,
+     "fair": -214,
+     "edge": 0.158,
+     "ev": 0.302,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "theScore Bet",
+      "line": 213.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.699,
+      "ev": 0.334
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": 213.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.699,
+       "ev": 0.334
+      },
+      {
+       "book": "DraftKings",
+       "line": 214.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.682,
+       "ev": 0.319
+      },
+      {
+       "book": "BetMGM",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "bet365",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "FanDuel",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Fanatics",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Caesars",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "BetRivers",
+       "line": 214.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.682,
+       "ev": 0.285
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Cade Cunningham Under 24.5 Puntos",
+     "player": "Cade Cunningham",
+     "team": "DET",
+     "line": 24.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.668,
+     "implied": 0.524,
+     "fair": -201,
+     "edge": 0.144,
+     "ev": 0.275,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Naz Reid Under 18.5 Puntos",
+     "player": "Naz Reid",
+     "team": "CHA",
+     "line": 18.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.725,
+     "implied": 0.55,
+     "fair": -263,
+     "edge": 0.175,
+     "ev": 0.319,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 214.5",
+     "player": null,
+     "team": null,
+     "line": 214.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.682,
+     "implied": 0.524,
+     "fair": -214,
+     "edge": 0.158,
+     "ev": 0.302,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "theScore Bet",
+      "line": 213.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.699,
+      "ev": 0.334
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": 213.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.699,
+       "ev": 0.334
+      },
+      {
+       "book": "DraftKings",
+       "line": 214.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.682,
+       "ev": 0.319
+      },
+      {
+       "book": "BetMGM",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "bet365",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "FanDuel",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Fanatics",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Caesars",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 214.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.682,
+       "ev": 0.302
+      },
+      {
+       "book": "BetRivers",
+       "line": 214.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.682,
+       "ev": 0.285
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Cade Cunningham Under 24.5 Puntos",
+     "player": "Cade Cunningham",
+     "team": "DET",
+     "line": 24.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.668,
+     "implied": 0.524,
+     "fair": -201,
+     "edge": 0.144,
+     "ev": 0.275,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Grayson Allen Over 13.5 Puntos",
+     "player": "Grayson Allen",
+     "team": "CHA",
+     "line": 13.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.615,
+     "implied": 0.512,
+     "fair": -160,
+     "edge": 0.103,
+     "ev": 0.2,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Brandon Miller Under 24.5 Puntos",
+     "player": "Brandon Miller",
+     "team": "CHA",
+     "line": 24.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.608,
+     "implied": 0.524,
+     "fair": -155,
+     "edge": 0.084,
+     "ev": 0.161,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "John Collins Under 14.5 Puntos",
+     "player": "John Collins",
+     "team": "DET",
+     "line": 14.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.548,
+     "implied": 0.5,
+     "fair": -121,
+     "edge": 0.048,
+     "ev": 0.095,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Dennis Schröder Over 12.5 Puntos",
+     "player": "Dennis Schröder",
+     "team": "CHA",
+     "line": 12.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.545,
+     "fair": -142,
+     "edge": 0.042,
+     "ev": 0.076,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Duncan Robinson Over 14.5 Puntos",
+     "player": "Duncan Robinson",
+     "team": "DET",
+     "line": 14.5,
+     "odds": -102,
+     "dec": 1.98,
+     "odds_assumed": false,
+     "p": 0.538,
+     "implied": 0.505,
+     "fair": -117,
+     "edge": 0.033,
+     "ev": 0.066,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-MIA-at-ATL",
+   "date": "2026-10-28",
+   "away": "MIA",
+   "home": "ATL",
+   "tip_et": "19:00",
+   "venue": "State Farm Arena, Atlanta",
+   "records": {
+    "MIA": null,
+    "ATL": null
+   },
+   "proj": {
+    "ATL": 122.6,
+    "MIA": 114.2
+   },
+   "win_prob": {
+    "ATL": 0.72955,
+    "MIA": 0.27045
+   },
+   "proj_total": 236.8,
+   "used_db": true,
+   "n_value": 10,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "ATL -2.5",
+     "player": null,
+     "team": "ATL",
+     "line": -2.5,
+     "odds": -107,
+     "dec": 1.934,
+     "odds_assumed": false,
+     "p": 0.674,
+     "implied": 0.517,
+     "fair": -207,
+     "edge": 0.157,
+     "ev": 0.304,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Caesars",
+      "line": -3.5,
+      "odds": 110,
+      "dec": 2.1,
+      "p": 0.644,
+      "ev": 0.353
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": -3.5,
+       "odds": 110,
+       "dec": 2.1,
+       "p": 0.644,
+       "ev": 0.353
+      },
+      {
+       "book": "BetMGM",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "DraftKings",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "FanDuel",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "bet365",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "Fanatics",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "BetRivers",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "theScore Bet",
+       "line": -1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.702,
+       "ev": 0.287
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Wiggins Over 12.5 Puntos",
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "line": 12.5,
+     "odds": -113,
+     "dec": 1.885,
+     "odds_assumed": false,
+     "p": 0.675,
+     "implied": 0.531,
+     "fair": -207,
+     "edge": 0.144,
+     "ev": 0.271,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "ATL gana",
+     "player": null,
+     "team": "ATL",
+     "line": null,
+     "odds": -136,
+     "dec": 1.734,
+     "odds_assumed": false,
+     "p": 0.73,
+     "implied": 0.577,
+     "fair": -270,
+     "edge": 0.153,
+     "ev": 0.265,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -130,
+      "dec": 1.769,
+      "p": 0.73,
+      "ev": 0.291
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.73,
+       "ev": 0.291
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.73,
+       "ev": 0.291
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -140,
+       "dec": 1.714,
+       "p": 0.73,
+       "ev": 0.251
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -140,
+       "dec": 1.714,
+       "p": 0.73,
+       "ev": 0.251
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -141,
+       "dec": 1.709,
+       "p": 0.73,
+       "ev": 0.247
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -142,
+       "dec": 1.704,
+       "p": 0.73,
+       "ev": 0.243
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "ATL -2.5",
+     "player": null,
+     "team": "ATL",
+     "line": -2.5,
+     "odds": -107,
+     "dec": 1.934,
+     "odds_assumed": false,
+     "p": 0.674,
+     "implied": 0.517,
+     "fair": -207,
+     "edge": 0.157,
+     "ev": 0.304,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Caesars",
+      "line": -3.5,
+      "odds": 110,
+      "dec": 2.1,
+      "p": 0.644,
+      "ev": 0.353
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": -3.5,
+       "odds": 110,
+       "dec": 2.1,
+       "p": 0.644,
+       "ev": 0.353
+      },
+      {
+       "book": "BetMGM",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "DraftKings",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "FanDuel",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -2.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.674,
+       "ev": 0.316
+      },
+      {
+       "book": "bet365",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "Fanatics",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "BetRivers",
+       "line": -2.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.674,
+       "ev": 0.287
+      },
+      {
+       "book": "theScore Bet",
+       "line": -1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.702,
+       "ev": 0.287
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Wiggins Over 12.5 Puntos",
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "line": 12.5,
+     "odds": -113,
+     "dec": 1.885,
+     "odds_assumed": false,
+     "p": 0.675,
+     "implied": 0.531,
+     "fair": -207,
+     "edge": 0.144,
+     "ev": 0.271,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "ATL gana",
+     "player": null,
+     "team": "ATL",
+     "line": null,
+     "odds": -136,
+     "dec": 1.734,
+     "odds_assumed": false,
+     "p": 0.73,
+     "implied": 0.577,
+     "fair": -270,
+     "edge": 0.153,
+     "ev": 0.265,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -130,
+      "dec": 1.769,
+      "p": 0.73,
+      "ev": 0.291
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.73,
+       "ev": 0.291
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.73,
+       "ev": 0.291
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.73,
+       "ev": 0.27
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -140,
+       "dec": 1.714,
+       "p": 0.73,
+       "ev": 0.251
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -140,
+       "dec": 1.714,
+       "p": 0.73,
+       "ev": 0.251
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -141,
+       "dec": 1.709,
+       "p": 0.73,
+       "ev": 0.247
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -142,
+       "dec": 1.704,
+       "p": 0.73,
+       "ev": 0.243
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Bam Adebayo Under 16.5 Puntos",
+     "player": "Bam Adebayo",
+     "team": "MIA",
+     "line": 16.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.622,
+     "implied": 0.512,
+     "fair": -164,
+     "edge": 0.109,
+     "ev": 0.214,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "CJ McCollum Over 16.5 Puntos",
+     "player": "CJ McCollum",
+     "team": "ATL",
+     "line": 16.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.64,
+     "implied": 0.535,
+     "fair": -178,
+     "edge": 0.105,
+     "ev": 0.197,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Nickeil Alexander-Walker Over 17.5 Puntos",
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "line": 17.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.663,
+     "implied": 0.556,
+     "fair": -197,
+     "edge": 0.107,
+     "ev": 0.193,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Giannis Antetokounmpo Under 30.5 Puntos",
+     "player": "Giannis Antetokounmpo",
+     "team": "MIA",
+     "line": 30.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.618,
+     "implied": 0.528,
+     "fair": -162,
+     "edge": 0.09,
+     "ev": 0.17,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Dyson Daniels Over 11.5 Puntos",
+     "player": "Dyson Daniels",
+     "team": "ATL",
+     "line": 11.5,
+     "odds": -108,
+     "dec": 1.926,
+     "odds_assumed": false,
+     "p": 0.596,
+     "implied": 0.519,
+     "fair": -148,
+     "edge": 0.077,
+     "ev": 0.148,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Under 241.5",
+     "player": null,
+     "team": null,
+     "line": 241.5,
+     "odds": -110,
+     "dec": 1.905,
+     "odds_assumed": false,
+     "p": 0.594,
+     "implied": 0.525,
+     "fair": -147,
+     "edge": 0.07,
+     "ev": 0.133,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": 241.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.594,
+      "ev": 0.135
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "bet365",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "DraftKings",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "Fanatics",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "BetRivers",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "Caesars",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "theScore Bet",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 241.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.594,
+       "ev": 0.135
+      },
+      {
+       "book": "FanDuel",
+       "line": 241.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.594,
+       "ev": 0.116
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Bobby Portis Over 11.5 Puntos",
+     "player": "Bobby Portis",
+     "team": "MIA",
+     "line": 11.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.571,
+     "implied": 0.545,
+     "fair": -133,
+     "edge": 0.026,
+     "ev": 0.047,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-PHI-at-IND",
+   "date": "2026-10-28",
+   "away": "PHI",
+   "home": "IND",
+   "tip_et": "19:00",
+   "venue": "Gainbridge Fieldhouse, Indianapolis",
+   "records": {
+    "PHI": null,
+    "IND": null
+   },
+   "proj": {
+    "IND": 111.6,
+    "PHI": 116.9
+   },
+   "win_prob": {
+    "IND": 0.353375,
+    "PHI": 0.646625
+   },
+   "proj_total": 228.5,
+   "used_db": true,
+   "n_value": 10,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Obi Toppin Over 11.5 Puntos",
+     "player": "Obi Toppin",
+     "team": "IND",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.764,
+     "implied": 0.524,
+     "fair": -324,
+     "edge": 0.241,
+     "ev": 0.459,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "LeBron James Under 16.5 Puntos",
+     "player": "LeBron James",
+     "team": "PHI",
+     "line": 16.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.685,
+     "implied": 0.524,
+     "fair": -217,
+     "edge": 0.161,
+     "ev": 0.307,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Andrew Nembhard Over 13.5 Puntos",
+     "player": "Andrew Nembhard",
+     "team": "IND",
+     "line": 13.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.697,
+     "implied": 0.556,
+     "fair": -230,
+     "edge": 0.141,
+     "ev": 0.254,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Obi Toppin Over 11.5 Puntos",
+     "player": "Obi Toppin",
+     "team": "IND",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.764,
+     "implied": 0.524,
+     "fair": -324,
+     "edge": 0.241,
+     "ev": 0.459,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "LeBron James Under 16.5 Puntos",
+     "player": "LeBron James",
+     "team": "PHI",
+     "line": 16.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.685,
+     "implied": 0.524,
+     "fair": -217,
+     "edge": 0.161,
+     "ev": 0.307,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Andrew Nembhard Over 13.5 Puntos",
+     "player": "Andrew Nembhard",
+     "team": "IND",
+     "line": 13.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.697,
+     "implied": 0.556,
+     "fair": -230,
+     "edge": 0.141,
+     "ev": 0.254,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Under 235.5",
+     "player": null,
+     "team": null,
+     "line": 235.5,
+     "odds": -107,
+     "dec": 1.938,
+     "odds_assumed": false,
+     "p": 0.64,
+     "implied": 0.516,
+     "fair": -178,
+     "edge": 0.124,
+     "ev": 0.24,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "DraftKings",
+      "line": 236.5,
+      "odds": -108,
+      "dec": 1.926,
+      "p": 0.657,
+      "ev": 0.265
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": 236.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.657,
+       "ev": 0.265
+      },
+      {
+       "book": "BetMGM",
+       "line": 235.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.64,
+       "ev": 0.25
+      },
+      {
+       "book": "Caesars",
+       "line": 235.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.64,
+       "ev": 0.25
+      },
+      {
+       "book": "theScore Bet",
+       "line": 235.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.64,
+       "ev": 0.25
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 235.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.64,
+       "ev": 0.25
+      },
+      {
+       "book": "Fanatics",
+       "line": 236.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.651,
+       "ev": 0.243
+      },
+      {
+       "book": "BetRivers",
+       "line": 236.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.657,
+       "ev": 0.233
+      },
+      {
+       "book": "bet365",
+       "line": 235.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.64,
+       "ev": 0.222
+      },
+      {
+       "book": "FanDuel",
+       "line": 235.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.64,
+       "ev": 0.222
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Joel Embiid Under 23.5 Puntos",
+     "player": "Joel Embiid",
+     "team": "PHI",
+     "line": 23.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.614,
+     "implied": 0.535,
+     "fair": -159,
+     "edge": 0.079,
+     "ev": 0.148,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Tyrese Haliburton Over 18.5 Puntos",
+     "player": "Tyrese Haliburton",
+     "team": "IND",
+     "line": 18.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.6,
+     "implied": 0.524,
+     "fair": -150,
+     "edge": 0.076,
+     "ev": 0.145,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "VJ Edgecombe Under 11.5 Puntos",
+     "player": "VJ Edgecombe",
+     "team": "PHI",
+     "line": 11.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.512,
+     "fair": -142,
+     "edge": 0.075,
+     "ev": 0.145,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Pascal Siakam Over 22.5 Puntos",
+     "player": "Pascal Siakam",
+     "team": "IND",
+     "line": 22.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.565,
+     "implied": 0.524,
+     "fair": -130,
+     "edge": 0.041,
+     "ev": 0.078,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Nesmith Under 10.5 Puntos",
+     "player": "Aaron Nesmith",
+     "team": "IND",
+     "line": 10.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.549,
+     "implied": 0.524,
+     "fair": -122,
+     "edge": 0.026,
+     "ev": 0.049,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Kelly Oubre Jr. Under 9.5 Puntos",
+     "player": "Kelly Oubre Jr.",
+     "team": "IND",
+     "line": 9.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.52,
+     "implied": 0.5,
+     "fair": -108,
+     "edge": 0.02,
+     "ev": 0.04,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-WAS-at-CLE",
+   "date": "2026-10-28",
+   "away": "WAS",
+   "home": "CLE",
+   "tip_et": "19:00",
+   "venue": "Rocket Arena, Cleveland",
+   "records": {
+    "WAS": null,
+    "CLE": null
+   },
+   "proj": {
+    "CLE": 125.3,
+    "WAS": 111.6
+   },
+   "win_prob": {
+    "CLE": 0.839975,
+    "WAS": 0.160025
+   },
+   "proj_total": 236.9,
+   "used_db": true,
+   "n_value": 3,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "CLE -9.5",
+     "player": null,
+     "team": "CLE",
+     "line": -9.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.619,
+     "implied": 0.527,
+     "fair": -162,
+     "edge": 0.092,
+     "ev": 0.174,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 1",
+      "line": -9.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.619,
+      "ev": 0.182
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 5",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 6",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 8",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 10",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 2",
+       "line": -9.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.619,
+       "ev": 0.172
+      },
+      {
+       "book": "Covers casa 4",
+       "line": -9.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.619,
+       "ev": 0.172
+      },
+      {
+       "book": "Covers casa 7",
+       "line": -9.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.619,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 9",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.619,
+       "ev": 0.157
+      },
+      {
+       "book": "Covers casa 3",
+       "line": -10.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.59,
+       "ev": 0.152
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "CLE gana",
+     "player": null,
+     "team": "CLE",
+     "line": null,
+     "odds": -393,
+     "dec": 1.254,
+     "odds_assumed": false,
+     "p": 0.84,
+     "implied": 0.797,
+     "fair": -525,
+     "edge": 0.043,
+     "ev": 0.054,
+     "value": true,
+     "n_books": 10,
+     "best": {
+      "book": "Covers casa 1",
+      "line": null,
+      "odds": -375,
+      "dec": 1.267,
+      "p": 0.84,
+      "ev": 0.064
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": -390,
+       "dec": 1.256,
+       "p": 0.84,
+       "ev": 0.055
+      },
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": -395,
+       "dec": 1.253,
+       "p": 0.84,
+       "ev": 0.053
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 10",
+       "line": null,
+       "odds": -425,
+       "dec": 1.235,
+       "p": 0.84,
+       "ev": 0.038
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Under 239.5",
+     "player": null,
+     "team": null,
+     "line": 239.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.554,
+     "implied": 0.535,
+     "fair": -124,
+     "edge": 0.019,
+     "ev": 0.035,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "Covers casa 1",
+      "line": 238.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.533,
+      "ev": 0.041
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": 238.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.533,
+       "ev": 0.041
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 238.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.533,
+       "ev": 0.041
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 239.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.544,
+       "ev": 0.039
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 239.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.544,
+       "ev": 0.039
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 3",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 4",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 238.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.533,
+       "ev": 0.027
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "CLE -9.5",
+     "player": null,
+     "team": "CLE",
+     "line": -9.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.619,
+     "implied": 0.527,
+     "fair": -162,
+     "edge": 0.092,
+     "ev": 0.174,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 1",
+      "line": -9.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.619,
+      "ev": 0.182
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 5",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 6",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 8",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 10",
+       "line": -9.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.619,
+       "ev": 0.182
+      },
+      {
+       "book": "Covers casa 2",
+       "line": -9.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.619,
+       "ev": 0.172
+      },
+      {
+       "book": "Covers casa 4",
+       "line": -9.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.619,
+       "ev": 0.172
+      },
+      {
+       "book": "Covers casa 7",
+       "line": -9.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.619,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 9",
+       "line": -9.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.619,
+       "ev": 0.157
+      },
+      {
+       "book": "Covers casa 3",
+       "line": -10.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.59,
+       "ev": 0.152
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "CLE gana",
+     "player": null,
+     "team": "CLE",
+     "line": null,
+     "odds": -393,
+     "dec": 1.254,
+     "odds_assumed": false,
+     "p": 0.84,
+     "implied": 0.797,
+     "fair": -525,
+     "edge": 0.043,
+     "ev": 0.054,
+     "value": true,
+     "n_books": 10,
+     "best": {
+      "book": "Covers casa 1",
+      "line": null,
+      "odds": -375,
+      "dec": 1.267,
+      "p": 0.84,
+      "ev": 0.064
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": -375,
+       "dec": 1.267,
+       "p": 0.84,
+       "ev": 0.064
+      },
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": -390,
+       "dec": 1.256,
+       "p": 0.84,
+       "ev": 0.055
+      },
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": -395,
+       "dec": 1.253,
+       "p": 0.84,
+       "ev": 0.053
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": -400,
+       "dec": 1.25,
+       "p": 0.84,
+       "ev": 0.05
+      },
+      {
+       "book": "Covers casa 10",
+       "line": null,
+       "odds": -425,
+       "dec": 1.235,
+       "p": 0.84,
+       "ev": 0.038
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Under 239.5",
+     "player": null,
+     "team": null,
+     "line": 239.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.554,
+     "implied": 0.535,
+     "fair": -124,
+     "edge": 0.019,
+     "ev": 0.035,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "Covers casa 1",
+      "line": 238.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.533,
+      "ev": 0.041
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": 238.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.533,
+       "ev": 0.041
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 238.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.533,
+       "ev": 0.041
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 239.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.544,
+       "ev": 0.039
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 239.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.544,
+       "ev": 0.039
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 3",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 4",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 239.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.554,
+       "ev": 0.035
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 238.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.533,
+       "ev": 0.027
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-ORL-at-TOR",
+   "date": "2026-10-28",
+   "away": "ORL",
+   "home": "TOR",
+   "tip_et": "19:30",
+   "venue": "Scotiabank Arena, Toronto",
+   "records": {
+    "ORL": null,
+    "TOR": null
+   },
+   "proj": {
+    "TOR": 115.8,
+    "ORL": 107.2
+   },
+   "win_prob": {
+    "TOR": 0.73515,
+    "ORL": 0.26485
+   },
+   "proj_total": 223.0,
+   "used_db": true,
+   "n_value": 2,
+   "top_bets": [
+    {
+     "kind": "spread",
+     "label": "TOR -4.5",
+     "player": null,
+     "team": "TOR",
+     "line": -4.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.621,
+     "implied": 0.527,
+     "fair": -164,
+     "edge": 0.095,
+     "ev": 0.179,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Covers casa 1",
+      "line": -4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.621,
+      "ev": 0.186
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 2",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 3",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 8",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 9",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 4",
+       "line": -4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 5",
+       "line": -4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 6",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.592,
+       "ev": 0.156
+      },
+      {
+       "book": "Covers casa 7",
+       "line": -3.5,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.651,
+       "ev": 0.152
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "TOR gana",
+     "player": null,
+     "team": "TOR",
+     "line": null,
+     "odds": -192,
+     "dec": 1.52,
+     "odds_assumed": false,
+     "p": 0.735,
+     "implied": 0.658,
+     "fair": -278,
+     "edge": 0.077,
+     "ev": 0.118,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 4",
+      "line": null,
+      "odds": -186,
+      "dec": 1.538,
+      "p": 0.735,
+      "ev": 0.13
+     },
+     "books": [
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": -186,
+       "dec": 1.538,
+       "p": 0.735,
+       "ev": 0.13
+      },
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": -192,
+       "dec": 1.521,
+       "p": 0.735,
+       "ev": 0.118
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": -195,
+       "dec": 1.513,
+       "p": 0.735,
+       "ev": 0.112
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": -198,
+       "dec": 1.505,
+       "p": 0.735,
+       "ev": 0.106
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": -200,
+       "dec": 1.5,
+       "p": 0.735,
+       "ev": 0.103
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Under 224.5",
+     "player": null,
+     "team": null,
+     "line": 224.5,
+     "odds": -111,
+     "dec": 1.899,
+     "odds_assumed": false,
+     "p": 0.531,
+     "implied": 0.527,
+     "fair": -113,
+     "edge": 0.005,
+     "ev": 0.009,
+     "value": false,
+     "n_books": 4,
+     "best": {
+      "book": "Covers casa 1",
+      "line": 224.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.531,
+      "ev": 0.014
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": 224.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.531,
+       "ev": 0.014
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 224.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.531,
+       "ev": 0.014
+      },
+      {
+       "book": "Covers casa 3",
+       "line": 224.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.531,
+       "ev": 0.006
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 224.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.531,
+       "ev": 0.002
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 224.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.522,
+       "ev": -0.003
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 223.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.512,
+       "ev": -0.023
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 224.0,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.522,
+       "ev": -0.024
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 223.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.512,
+       "ev": -0.027
+      },
+      {
+       "book": "Covers casa 4",
+       "line": 223.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.512,
+       "ev": -0.043
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "spread",
+     "label": "TOR -4.5",
+     "player": null,
+     "team": "TOR",
+     "line": -4.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.621,
+     "implied": 0.527,
+     "fair": -164,
+     "edge": 0.095,
+     "ev": 0.179,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Covers casa 1",
+      "line": -4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.621,
+      "ev": 0.186
+     },
+     "books": [
+      {
+       "book": "Covers casa 1",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 2",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 3",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 8",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 9",
+       "line": -4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.621,
+       "ev": 0.186
+      },
+      {
+       "book": "Covers casa 4",
+       "line": -4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 5",
+       "line": -4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.621,
+       "ev": 0.162
+      },
+      {
+       "book": "Covers casa 6",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.592,
+       "ev": 0.156
+      },
+      {
+       "book": "Covers casa 7",
+       "line": -3.5,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.651,
+       "ev": 0.152
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "TOR gana",
+     "player": null,
+     "team": "TOR",
+     "line": null,
+     "odds": -192,
+     "dec": 1.52,
+     "odds_assumed": false,
+     "p": 0.735,
+     "implied": 0.658,
+     "fair": -278,
+     "edge": 0.077,
+     "ev": 0.118,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 4",
+      "line": null,
+      "odds": -186,
+      "dec": 1.538,
+      "p": 0.735,
+      "ev": 0.13
+     },
+     "books": [
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": -186,
+       "dec": 1.538,
+       "p": 0.735,
+       "ev": 0.13
+      },
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.735,
+       "ev": 0.122
+      },
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": -192,
+       "dec": 1.521,
+       "p": 0.735,
+       "ev": 0.118
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": -195,
+       "dec": 1.513,
+       "p": 0.735,
+       "ev": 0.112
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": -198,
+       "dec": 1.505,
+       "p": 0.735,
+       "ev": 0.106
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": -200,
+       "dec": 1.5,
+       "p": 0.735,
+       "ev": 0.103
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-DEN-at-NOP",
+   "date": "2026-10-28",
+   "away": "DEN",
+   "home": "NOP",
+   "tip_et": "20:00",
+   "venue": "Smoothie King Center, New Orleans",
+   "records": {
+    "DEN": null,
+    "NOP": null
+   },
+   "proj": {
+    "NOP": 119.5,
+    "DEN": 123.0
+   },
+   "win_prob": {
+    "NOP": 0.400075,
+    "DEN": 0.599925
+   },
+   "proj_total": 242.6,
+   "used_db": true,
+   "n_value": 9,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Trevon Brazile Over 6.5 Puntos",
+     "player": "Trevon Brazile",
+     "team": "DEN",
+     "line": 6.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.72,
+     "implied": 0.535,
+     "fair": -258,
+     "edge": 0.185,
+     "ev": 0.347,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Jeremiah Fears Under 11.5 Puntos",
+     "player": "Jeremiah Fears",
+     "team": "NOP",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.687,
+     "implied": 0.524,
+     "fair": -219,
+     "edge": 0.163,
+     "ev": 0.311,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Saddiq Bey Over 11.5 Puntos",
+     "player": "Saddiq Bey",
+     "team": "NOP",
+     "line": 11.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.65,
+     "implied": 0.545,
+     "fair": -185,
+     "edge": 0.104,
+     "ev": 0.191,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Trevon Brazile Over 6.5 Puntos",
+     "player": "Trevon Brazile",
+     "team": "DEN",
+     "line": 6.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.72,
+     "implied": 0.535,
+     "fair": -258,
+     "edge": 0.185,
+     "ev": 0.347,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Jeremiah Fears Under 11.5 Puntos",
+     "player": "Jeremiah Fears",
+     "team": "NOP",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.687,
+     "implied": 0.524,
+     "fair": -219,
+     "edge": 0.163,
+     "ev": 0.311,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Saddiq Bey Over 11.5 Puntos",
+     "player": "Saddiq Bey",
+     "team": "NOP",
+     "line": 11.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.65,
+     "implied": 0.545,
+     "fair": -185,
+     "edge": 0.104,
+     "ev": 0.191,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "DeAndre Jordan Over 4.5 Puntos",
+     "player": "DeAndre Jordan",
+     "team": "NOP",
+     "line": 4.5,
+     "odds": 120,
+     "dec": 2.2,
+     "odds_assumed": false,
+     "p": 0.538,
+     "implied": 0.455,
+     "fair": -116,
+     "edge": 0.083,
+     "ev": 0.183,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Christian Braun Under 12.5 Puntos",
+     "player": "Christian Braun",
+     "team": "DEN",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.57,
+     "implied": 0.512,
+     "fair": -133,
+     "edge": 0.058,
+     "ev": 0.113,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Nikola Jokić Over 26.5 Puntos",
+     "player": "Nikola Jokić",
+     "team": "DEN",
+     "line": 26.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.581,
+     "implied": 0.535,
+     "fair": -139,
+     "edge": 0.046,
+     "ev": 0.087,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Zion Williamson Over 18.5 Puntos",
+     "player": "Zion Williamson",
+     "team": "NOP",
+     "line": 18.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.543,
+     "implied": 0.5,
+     "fair": -119,
+     "edge": 0.043,
+     "ev": 0.085,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "NOP gana",
+     "player": null,
+     "team": "NOP",
+     "line": null,
+     "odds": 163,
+     "dec": 2.627,
+     "odds_assumed": false,
+     "p": 0.4,
+     "implied": 0.381,
+     "fair": 150,
+     "edge": 0.019,
+     "ev": 0.051,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "DraftKings",
+      "line": null,
+      "odds": 170,
+      "dec": 2.7,
+      "p": 0.4,
+      "ev": 0.08
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 170,
+       "dec": 2.7,
+       "p": 0.4,
+       "ev": 0.08
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 170,
+       "dec": 2.7,
+       "p": 0.4,
+       "ev": 0.08
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 165,
+       "dec": 2.65,
+       "p": 0.4,
+       "ev": 0.06
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 165,
+       "dec": 2.65,
+       "p": 0.4,
+       "ev": 0.06
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 165,
+       "dec": 2.65,
+       "p": 0.4,
+       "ev": 0.06
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": 162,
+       "dec": 2.62,
+       "p": 0.4,
+       "ev": 0.048
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 158,
+       "dec": 2.58,
+       "p": 0.4,
+       "ev": 0.032
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 155,
+       "dec": 2.55,
+       "p": 0.4,
+       "ev": 0.02
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 154,
+       "dec": 2.54,
+       "p": 0.4,
+       "ev": 0.016
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Herbert Jones Under 4.5 Puntos",
+     "player": "Herbert Jones",
+     "team": "NOP",
+     "line": 4.5,
+     "odds": 102,
+     "dec": 2.02,
+     "odds_assumed": false,
+     "p": 0.52,
+     "implied": 0.495,
+     "fair": -108,
+     "edge": 0.025,
+     "ev": 0.051,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-GSW-at-MIN",
+   "date": "2026-10-28",
+   "away": "GSW",
+   "home": "MIN",
+   "tip_et": "20:00",
+   "venue": "Target Center, Minneapolis",
+   "records": {
+    "GSW": null,
+    "MIN": null
+   },
+   "proj": {
+    "MIN": 118.5,
+    "GSW": 110.4
+   },
+   "win_prob": {
+    "MIN": 0.720475,
+    "GSW": 0.279525
+   },
+   "proj_total": 228.9,
+   "used_db": true,
+   "n_value": 5,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Stephen Curry Under 25.5 Puntos",
+     "player": "Stephen Curry",
+     "team": "GSW",
+     "line": 25.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.77,
+     "implied": 0.55,
+     "fair": -335,
+     "edge": 0.221,
+     "ev": 0.402,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Brandin Podziemski Under 16.5 Puntos",
+     "player": "Brandin Podziemski",
+     "team": "GSW",
+     "line": 16.5,
+     "odds": -121,
+     "dec": 1.826,
+     "odds_assumed": false,
+     "p": 0.704,
+     "implied": 0.548,
+     "fair": -238,
+     "edge": 0.157,
+     "ev": 0.287,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "MIN -3.5",
+     "player": null,
+     "team": "MIN",
+     "line": -3.5,
+     "odds": -113,
+     "dec": 1.885,
+     "odds_assumed": false,
+     "p": 0.634,
+     "implied": 0.53,
+     "fair": -173,
+     "edge": 0.104,
+     "ev": 0.196,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "BetRivers",
+      "line": -3.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.634,
+      "ev": 0.211
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -3.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.634,
+       "ev": 0.211
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -3.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.634,
+       "ev": 0.211
+      },
+      {
+       "book": "bet365",
+       "line": -3.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.634,
+       "ev": 0.191
+      },
+      {
+       "book": "FanDuel",
+       "line": -3.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.634,
+       "ev": 0.191
+      },
+      {
+       "book": "BetMGM",
+       "line": -3.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.634,
+       "ev": 0.186
+      },
+      {
+       "book": "Fanatics",
+       "line": -3.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.634,
+       "ev": 0.186
+      },
+      {
+       "book": "DraftKings",
+       "line": -4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.605,
+       "ev": 0.18
+      },
+      {
+       "book": "theScore Bet",
+       "line": -4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.605,
+       "ev": 0.18
+      },
+      {
+       "book": "Caesars",
+       "line": -2.5,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.664,
+       "ev": 0.156
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Stephen Curry Under 25.5 Puntos",
+     "player": "Stephen Curry",
+     "team": "GSW",
+     "line": 25.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.77,
+     "implied": 0.55,
+     "fair": -335,
+     "edge": 0.221,
+     "ev": 0.402,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Brandin Podziemski Under 16.5 Puntos",
+     "player": "Brandin Podziemski",
+     "team": "GSW",
+     "line": 16.5,
+     "odds": -121,
+     "dec": 1.826,
+     "odds_assumed": false,
+     "p": 0.704,
+     "implied": 0.548,
+     "fair": -238,
+     "edge": 0.157,
+     "ev": 0.287,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "MIN -3.5",
+     "player": null,
+     "team": "MIN",
+     "line": -3.5,
+     "odds": -113,
+     "dec": 1.885,
+     "odds_assumed": false,
+     "p": 0.634,
+     "implied": 0.53,
+     "fair": -173,
+     "edge": 0.104,
+     "ev": 0.196,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "BetRivers",
+      "line": -3.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.634,
+      "ev": 0.211
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -3.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.634,
+       "ev": 0.211
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -3.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.634,
+       "ev": 0.211
+      },
+      {
+       "book": "bet365",
+       "line": -3.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.634,
+       "ev": 0.191
+      },
+      {
+       "book": "FanDuel",
+       "line": -3.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.634,
+       "ev": 0.191
+      },
+      {
+       "book": "BetMGM",
+       "line": -3.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.634,
+       "ev": 0.186
+      },
+      {
+       "book": "Fanatics",
+       "line": -3.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.634,
+       "ev": 0.186
+      },
+      {
+       "book": "DraftKings",
+       "line": -4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.605,
+       "ev": 0.18
+      },
+      {
+       "book": "theScore Bet",
+       "line": -4.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.605,
+       "ev": 0.18
+      },
+      {
+       "book": "Caesars",
+       "line": -2.5,
+       "odds": -135,
+       "dec": 1.741,
+       "p": 0.664,
+       "ev": 0.156
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "LaMelo Ball Under 22.5 Puntos",
+     "player": "LaMelo Ball",
+     "team": "MIN",
+     "line": 22.5,
+     "odds": -116,
+     "dec": 1.862,
+     "odds_assumed": false,
+     "p": 0.634,
+     "implied": 0.537,
+     "fair": -173,
+     "edge": 0.097,
+     "ev": 0.18,
+     "value": true
+    },
+    {
+     "kind": "ml",
+     "label": "MIN gana",
+     "player": null,
+     "team": "MIN",
+     "line": null,
+     "odds": -166,
+     "dec": 1.601,
+     "odds_assumed": false,
+     "p": 0.72,
+     "implied": 0.625,
+     "fair": -258,
+     "edge": 0.096,
+     "ev": 0.154,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -162,
+      "dec": 1.617,
+      "p": 0.72,
+      "ev": 0.165
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -162,
+       "dec": 1.617,
+       "p": 0.72,
+       "ev": 0.165
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -164,
+       "dec": 1.61,
+       "p": 0.72,
+       "ev": 0.16
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -165,
+       "dec": 1.606,
+       "p": 0.72,
+       "ev": 0.157
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -165,
+       "dec": 1.606,
+       "p": 0.72,
+       "ev": 0.157
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -165,
+       "dec": 1.606,
+       "p": 0.72,
+       "ev": 0.157
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -166,
+       "dec": 1.602,
+       "p": 0.72,
+       "ev": 0.154
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.72,
+       "ev": 0.144
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.72,
+       "ev": 0.144
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -170,
+       "dec": 1.588,
+       "p": 0.72,
+       "ev": 0.144
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-HOU-at-MIL",
+   "date": "2026-10-28",
+   "away": "HOU",
+   "home": "MIL",
+   "tip_et": "20:00",
+   "venue": "Fiserv Forum, Milwaukee",
+   "records": {
+    "HOU": null,
+    "MIL": null
+   },
+   "proj": {
+    "MIL": 110.9,
+    "HOU": 119.6
+   },
+   "win_prob": {
+    "MIL": 0.263125,
+    "HOU": 0.736875
+   },
+   "proj_total": 230.5,
+   "used_db": true,
+   "n_value": 1,
+   "top_bets": [
+    {
+     "kind": "total",
+     "label": "Over 227.5",
+     "player": null,
+     "team": null,
+     "line": 227.5,
+     "odds": -111,
+     "dec": 1.899,
+     "odds_assumed": false,
+     "p": 0.556,
+     "implied": 0.527,
+     "fair": -125,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "FanDuel",
+      "line": 227.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.556,
+      "ev": 0.061
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "Caesars",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "DraftKings",
+       "line": 227.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.556,
+       "ev": 0.039
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "HOU -8.5",
+     "player": null,
+     "team": "HOU",
+     "line": -8.5,
+     "odds": -103,
+     "dec": 1.97,
+     "odds_assumed": false,
+     "p": 0.506,
+     "implied": 0.508,
+     "fair": -103,
+     "edge": -0.001,
+     "ev": -0.003,
+     "value": false,
+     "n_books": 5,
+     "best": {
+      "book": "Caesars",
+      "line": -8.5,
+      "odds": 105,
+      "dec": 2.05,
+      "p": 0.506,
+      "ev": 0.038
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": -8.5,
+       "odds": 105,
+       "dec": 2.05,
+       "p": 0.506,
+       "ev": 0.038
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -8.5,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.506,
+       "ev": 0.013
+      },
+      {
+       "book": "FanDuel",
+       "line": -8.5,
+       "odds": -102,
+       "dec": 1.98,
+       "p": 0.506,
+       "ev": 0.003
+      },
+      {
+       "book": "DraftKings",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.506,
+       "ev": -0.033
+      },
+      {
+       "book": "theScore Bet",
+       "line": -8.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.506,
+       "ev": -0.033
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "HOU gana",
+     "player": null,
+     "team": "HOU",
+     "line": null,
+     "odds": -295,
+     "dec": 1.339,
+     "odds_assumed": false,
+     "p": 0.737,
+     "implied": 0.747,
+     "fair": -280,
+     "edge": -0.01,
+     "ev": -0.013,
+     "value": false,
+     "n_books": 5,
+     "best": {
+      "book": "Caesars",
+      "line": null,
+      "odds": -278,
+      "dec": 1.36,
+      "p": 0.737,
+      "ev": 0.002
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -278,
+       "dec": 1.36,
+       "p": 0.737,
+       "ev": 0.002
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -290,
+       "dec": 1.345,
+       "p": 0.737,
+       "ev": -0.009
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -300,
+       "dec": 1.333,
+       "p": 0.737,
+       "ev": -0.018
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -300,
+       "dec": 1.333,
+       "p": 0.737,
+       "ev": -0.018
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -310,
+       "dec": 1.323,
+       "p": 0.737,
+       "ev": -0.025
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "total",
+     "label": "Over 227.5",
+     "player": null,
+     "team": null,
+     "line": 227.5,
+     "odds": -111,
+     "dec": 1.899,
+     "odds_assumed": false,
+     "p": 0.556,
+     "implied": 0.527,
+     "fair": -125,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "FanDuel",
+      "line": 227.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.556,
+      "ev": 0.061
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "Caesars",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.556,
+       "ev": 0.061
+      },
+      {
+       "book": "DraftKings",
+       "line": 227.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.556,
+       "ev": 0.039
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-NYK-at-CHI",
+   "date": "2026-10-28",
+   "away": "NYK",
+   "home": "CHI",
+   "tip_et": "20:00",
+   "venue": "United Center, Chicago",
+   "records": {
+    "NYK": null,
+    "CHI": null
+   },
+   "proj": {
+    "CHI": 111.7,
+    "NYK": 119.6
+   },
+   "win_prob": {
+    "CHI": 0.2805,
+    "NYK": 0.7195
+   },
+   "proj_total": 231.3,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Caleb Wilson Over 15.5 Puntos",
+     "player": "Caleb Wilson",
+     "team": "CHI",
+     "line": 15.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.742,
+     "implied": 0.545,
+     "fair": -288,
+     "edge": 0.197,
+     "ev": 0.361,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Josh Giddey Under 10.5 Puntos",
+     "player": "Josh Giddey",
+     "team": "CHI",
+     "line": 10.5,
+     "odds": -109,
+     "dec": 1.917,
+     "odds_assumed": false,
+     "p": 0.701,
+     "implied": 0.522,
+     "fair": -234,
+     "edge": 0.179,
+     "ev": 0.344,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Mikal Bridges Under 11.5 Puntos",
+     "player": "Mikal Bridges",
+     "team": "NYK",
+     "line": 11.5,
+     "odds": -114,
+     "dec": 1.877,
+     "odds_assumed": false,
+     "p": 0.69,
+     "implied": 0.533,
+     "fair": -223,
+     "edge": 0.157,
+     "ev": 0.295,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Caleb Wilson Over 15.5 Puntos",
+     "player": "Caleb Wilson",
+     "team": "CHI",
+     "line": 15.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.742,
+     "implied": 0.545,
+     "fair": -288,
+     "edge": 0.197,
+     "ev": 0.361,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Josh Giddey Under 10.5 Puntos",
+     "player": "Josh Giddey",
+     "team": "CHI",
+     "line": 10.5,
+     "odds": -109,
+     "dec": 1.917,
+     "odds_assumed": false,
+     "p": 0.701,
+     "implied": 0.522,
+     "fair": -234,
+     "edge": 0.179,
+     "ev": 0.344,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Mikal Bridges Under 11.5 Puntos",
+     "player": "Mikal Bridges",
+     "team": "NYK",
+     "line": 11.5,
+     "odds": -114,
+     "dec": 1.877,
+     "odds_assumed": false,
+     "p": 0.69,
+     "implied": 0.533,
+     "fair": -223,
+     "edge": 0.157,
+     "ev": 0.295,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Jalen Smith Under 10.5 Puntos",
+     "player": "Jalen Smith",
+     "team": "CHI",
+     "line": 10.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.64,
+     "implied": 0.528,
+     "fair": -178,
+     "edge": 0.112,
+     "ev": 0.211,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Matas Buzelis Under 13.5 Puntos",
+     "player": "Matas Buzelis",
+     "team": "CHI",
+     "line": 13.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.633,
+     "implied": 0.528,
+     "fair": -172,
+     "edge": 0.104,
+     "ev": 0.198,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Under 234.5",
+     "player": null,
+     "team": null,
+     "line": 234.5,
+     "odds": -110,
+     "dec": 1.908,
+     "odds_assumed": false,
+     "p": 0.564,
+     "implied": 0.524,
+     "fair": -130,
+     "edge": 0.04,
+     "ev": 0.077,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "FanDuel",
+      "line": 235.5,
+      "odds": -114,
+      "dec": 1.877,
+      "p": 0.584,
+      "ev": 0.096
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 235.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.584,
+       "ev": 0.096
+      },
+      {
+       "book": "bet365",
+       "line": 234.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.564,
+       "ev": 0.087
+      },
+      {
+       "book": "BetMGM",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "DraftKings",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "Fanatics",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "Caesars",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "theScore Bet",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "BetRivers",
+       "line": 234.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.564,
+       "ev": 0.064
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Norman Powell Under 18.5 Puntos",
+     "player": "Norman Powell",
+     "team": "CHI",
+     "line": 18.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.568,
+     "implied": 0.528,
+     "fair": -131,
+     "edge": 0.04,
+     "ev": 0.075,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Karl-Anthony Towns Under 21.5 Puntos",
+     "player": "Karl-Anthony Towns",
+     "team": "NYK",
+     "line": 21.5,
+     "odds": -116,
+     "dec": 1.862,
+     "odds_assumed": false,
+     "p": 0.557,
+     "implied": 0.537,
+     "fair": -126,
+     "edge": 0.02,
+     "ev": 0.038,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-SAS-at-UTA",
+   "date": "2026-10-28",
+   "away": "SAS",
+   "home": "UTA",
+   "tip_et": "21:00",
+   "venue": "Delta Center, Salt Lake City",
+   "records": {
+    "SAS": null,
+    "UTA": null
+   },
+   "proj": {
+    "UTA": 112.7,
+    "SAS": 124.6
+   },
+   "win_prob": {
+    "UTA": 0.195,
+    "SAS": 0.805
+   },
+   "proj_total": 237.3,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "De'Aaron Fox Over 14.5 Puntos",
+     "player": "De'Aaron Fox",
+     "team": "SAS",
+     "line": 14.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.691,
+     "implied": 0.5,
+     "fair": -224,
+     "edge": 0.191,
+     "ev": 0.382,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 12.5 Puntos",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.629,
+     "implied": 0.512,
+     "fair": -170,
+     "edge": 0.117,
+     "ev": 0.229,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Lauri Markkanen Under 19.5 Puntos",
+     "player": "Lauri Markkanen",
+     "team": "UTA",
+     "line": 19.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.637,
+     "implied": 0.524,
+     "fair": -176,
+     "edge": 0.113,
+     "ev": 0.216,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "De'Aaron Fox Over 14.5 Puntos",
+     "player": "De'Aaron Fox",
+     "team": "SAS",
+     "line": 14.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.691,
+     "implied": 0.5,
+     "fair": -224,
+     "edge": 0.191,
+     "ev": 0.382,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 12.5 Puntos",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.629,
+     "implied": 0.512,
+     "fair": -170,
+     "edge": 0.117,
+     "ev": 0.229,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Lauri Markkanen Under 19.5 Puntos",
+     "player": "Lauri Markkanen",
+     "team": "UTA",
+     "line": 19.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.637,
+     "implied": 0.524,
+     "fair": -176,
+     "edge": 0.113,
+     "ev": 0.216,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Over 20.5 Puntos",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 20.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.623,
+     "implied": 0.528,
+     "fair": -165,
+     "edge": 0.095,
+     "ev": 0.18,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Dylan Harper Over 15.5 Puntos",
+     "player": "Dylan Harper",
+     "team": "SAS",
+     "line": 15.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.623,
+     "implied": 0.528,
+     "fair": -165,
+     "edge": 0.095,
+     "ev": 0.18,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Victor Wembanyama Under 25.5 Puntos",
+     "player": "Victor Wembanyama",
+     "team": "SAS",
+     "line": 25.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.607,
+     "implied": 0.535,
+     "fair": -154,
+     "edge": 0.072,
+     "ev": 0.135,
+     "value": true
+    },
+    {
+     "kind": "total",
+     "label": "Over 233.5",
+     "player": null,
+     "team": null,
+     "line": 233.5,
+     "odds": -110,
+     "dec": 1.913,
+     "odds_assumed": false,
+     "p": 0.573,
+     "implied": 0.523,
+     "fair": -134,
+     "edge": 0.05,
+     "ev": 0.096,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "Caesars",
+      "line": 233.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.573,
+      "ev": 0.118
+     },
+     "books": [
+      {
+       "book": "Caesars",
+       "line": 233.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.573,
+       "ev": 0.118
+      },
+      {
+       "book": "BetRivers",
+       "line": 232.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.593,
+       "ev": 0.113
+      },
+      {
+       "book": "DraftKings",
+       "line": 233.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.573,
+       "ev": 0.103
+      },
+      {
+       "book": "bet365",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.573,
+       "ev": 0.094
+      },
+      {
+       "book": "theScore Bet",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.573,
+       "ev": 0.094
+      },
+      {
+       "book": "Fanatics",
+       "line": 234.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.564,
+       "ev": 0.077
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 233.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.573,
+       "ev": 0.071
+      },
+      {
+       "book": "FanDuel",
+       "line": 234.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.552,
+       "ev": 0.064
+      },
+      {
+       "book": "BetMGM",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.552,
+       "ev": 0.054
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "UTA gana",
+     "player": null,
+     "team": "UTA",
+     "line": null,
+     "odds": 452,
+     "dec": 5.522,
+     "odds_assumed": false,
+     "p": 0.195,
+     "implied": 0.181,
+     "fair": 413,
+     "edge": 0.014,
+     "ev": 0.077,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": 480,
+      "dec": 5.8,
+      "p": 0.195,
+      "ev": 0.131
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 480,
+       "dec": 5.8,
+       "p": 0.195,
+       "ev": 0.131
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 475,
+       "dec": 5.75,
+       "p": 0.195,
+       "ev": 0.121
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 475,
+       "dec": 5.75,
+       "p": 0.195,
+       "ev": 0.121
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 470,
+       "dec": 5.7,
+       "p": 0.195,
+       "ev": 0.112
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 450,
+       "dec": 5.5,
+       "p": 0.195,
+       "ev": 0.073
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 450,
+       "dec": 5.5,
+       "p": 0.195,
+       "ev": 0.073
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 430,
+       "dec": 5.3,
+       "p": 0.195,
+       "ev": 0.034
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": 430,
+       "dec": 5.3,
+       "p": 0.195,
+       "ev": 0.034
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 410,
+       "dec": 5.1,
+       "p": 0.195,
+       "ev": -0.005
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-OKC-at-DAL",
+   "date": "2026-10-28",
+   "away": "OKC",
+   "home": "DAL",
+   "tip_et": "21:30",
+   "venue": "American Airlines Center, Dallas",
+   "records": {
+    "OKC": null,
+    "DAL": null
+   },
+   "proj": {
+    "DAL": 106.7,
+    "OKC": 116.9
+   },
+   "win_prob": {
+    "DAL": 0.2262,
+    "OKC": 0.7738
+   },
+   "proj_total": 223.6,
+   "used_db": true,
+   "n_value": 9,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Isaiah Hartenstein Over 9.5 Puntos",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 9.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.767,
+     "implied": 0.512,
+     "fair": -329,
+     "edge": 0.255,
+     "ev": 0.497,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 30.5 Puntos",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 30.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.743,
+     "implied": 0.545,
+     "fair": -290,
+     "edge": 0.198,
+     "ev": 0.363,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Cooper Flagg Under 23.5 Puntos",
+     "player": "Cooper Flagg",
+     "team": "DAL",
+     "line": 23.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.698,
+     "implied": 0.512,
+     "fair": -231,
+     "edge": 0.185,
+     "ev": 0.362,
+     "value": true
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Isaiah Hartenstein Over 9.5 Puntos",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 9.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.767,
+     "implied": 0.512,
+     "fair": -329,
+     "edge": 0.255,
+     "ev": 0.497,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 30.5 Puntos",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 30.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.743,
+     "implied": 0.545,
+     "fair": -290,
+     "edge": 0.198,
+     "ev": 0.363,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Cooper Flagg Under 23.5 Puntos",
+     "player": "Cooper Flagg",
+     "team": "DAL",
+     "line": 23.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.698,
+     "implied": 0.512,
+     "fair": -231,
+     "edge": 0.185,
+     "ev": 0.362,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Daniel Gafford Under 8.5 Puntos",
+     "player": "Daniel Gafford",
+     "team": "DAL",
+     "line": 8.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.683,
+     "implied": 0.524,
+     "fair": -216,
+     "edge": 0.16,
+     "ev": 0.305,
+     "value": true
+    },
+    {
+     "kind": "prop",
+     "label": "Ajay Mitchell Over 17.5 Puntos",
+     "player": "Ajay Mitchell",
+     "team": "OKC",
+     "line": 17.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.666,
+     "implied": 0.556,
+     "fair": -200,
+     "edge": 0.111,
+     "ev": 0.2,
+     "value": true
+    },
+    {
+     "kind": "spread",
+     "label": "OKC -6.5",
+     "player": null,
+     "team": "OKC",
+     "line": -6.5,
+     "odds": -106,
+     "dec": 1.945,
+     "odds_assumed": false,
+     "p": 0.609,
+     "implied": 0.514,
+     "fair": -156,
+     "edge": 0.095,
+     "ev": 0.184,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": -6.5,
+      "odds": -104,
+      "dec": 1.962,
+      "p": 0.609,
+      "ev": 0.194
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -6.5,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.609,
+       "ev": 0.194
+      },
+      {
+       "book": "BetMGM",
+       "line": -6.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.609,
+       "ev": 0.189
+      },
+      {
+       "book": "DraftKings",
+       "line": -6.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.609,
+       "ev": 0.189
+      },
+      {
+       "book": "theScore Bet",
+       "line": -6.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.609,
+       "ev": 0.189
+      },
+      {
+       "book": "bet365",
+       "line": -6.5,
+       "odds": -106,
+       "dec": 1.943,
+       "p": 0.609,
+       "ev": 0.183
+      },
+      {
+       "book": "FanDuel",
+       "line": -6.5,
+       "odds": -106,
+       "dec": 1.943,
+       "p": 0.609,
+       "ev": 0.183
+      },
+      {
+       "book": "Fanatics",
+       "line": -5.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.637,
+       "ev": 0.168
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -6.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.609,
+       "ev": 0.162
+      },
+      {
+       "book": "Caesars",
+       "line": -5.5,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.637,
+       "ev": 0.147
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Under 228.5",
+     "player": null,
+     "team": null,
+     "line": 228.5,
+     "odds": -108,
+     "dec": 1.927,
+     "odds_assumed": false,
+     "p": 0.598,
+     "implied": 0.519,
+     "fair": -149,
+     "edge": 0.079,
+     "ev": 0.152,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "FanDuel",
+      "line": 229.5,
+      "odds": -112,
+      "dec": 1.893,
+      "p": 0.618,
+      "ev": 0.17
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 229.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.618,
+       "ev": 0.17
+      },
+      {
+       "book": "BetMGM",
+       "line": 228.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.598,
+       "ev": 0.167
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 228.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.598,
+       "ev": 0.167
+      },
+      {
+       "book": "DraftKings",
+       "line": 228.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.598,
+       "ev": 0.151
+      },
+      {
+       "book": "bet365",
+       "line": 228.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.598,
+       "ev": 0.146
+      },
+      {
+       "book": "Fanatics",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.598,
+       "ev": 0.141
+      },
+      {
+       "book": "theScore Bet",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.598,
+       "ev": 0.141
+      },
+      {
+       "book": "BetRivers",
+       "line": 227.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.579,
+       "ev": 0.12
+      },
+      {
+       "book": "Caesars",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.579,
+       "ev": 0.105
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "OKC gana",
+     "player": null,
+     "team": "OKC",
+     "line": null,
+     "odds": -226,
+     "dec": 1.442,
+     "odds_assumed": false,
+     "p": 0.774,
+     "implied": 0.694,
+     "fair": -342,
+     "edge": 0.08,
+     "ev": 0.115,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -210,
+      "dec": 1.476,
+      "p": 0.774,
+      "ev": 0.142
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -210,
+       "dec": 1.476,
+       "p": 0.774,
+       "ev": 0.142
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -225,
+       "dec": 1.444,
+       "p": 0.774,
+       "ev": 0.118
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -225,
+       "dec": 1.444,
+       "p": 0.774,
+       "ev": 0.118
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -225,
+       "dec": 1.444,
+       "p": 0.774,
+       "ev": 0.118
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.774,
+       "ev": 0.11
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.774,
+       "ev": 0.11
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.774,
+       "ev": 0.11
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.774,
+       "ev": 0.11
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.774,
+       "ev": 0.103
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Max Christie Under 10.5 Puntos",
+     "player": "Max Christie",
+     "team": "DAL",
+     "line": 10.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.589,
+     "implied": 0.556,
+     "fair": -143,
+     "edge": 0.033,
+     "ev": 0.06,
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-LAL-at-LAC",
+   "date": "2026-10-28",
+   "away": "LAL",
+   "home": "LAC",
+   "tip_et": "22:30",
+   "venue": "Intuit Dome, Inglewood",
+   "records": {
+    "LAL": null,
+    "LAC": null
+   },
+   "proj": {
+    "LAC": 116.8,
+    "LAL": 116.2
+   },
+   "win_prob": {
+    "LAC": 0.515125,
+    "LAL": 0.484875
+   },
+   "proj_total": 233.0,
+   "used_db": true,
+   "n_value": 3,
+   "top_bets": [
+    {
+     "kind": "ml",
+     "label": "LAC gana",
+     "player": null,
+     "team": "LAC",
+     "line": null,
+     "odds": 148,
+     "dec": 2.483,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.403,
+     "fair": -106,
+     "edge": 0.112,
+     "ev": 0.279,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 3",
+      "line": null,
+      "odds": 160,
+      "dec": 2.6,
+      "p": 0.515,
+      "ev": 0.339
+     },
+     "books": [
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": 160,
+       "dec": 2.6,
+       "p": 0.515,
+       "ev": 0.339
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": 155,
+       "dec": 2.55,
+       "p": 0.515,
+       "ev": 0.314
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.515,
+       "ev": 0.288
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": 148,
+       "dec": 2.48,
+       "p": 0.515,
+       "ev": 0.278
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": 148,
+       "dec": 2.48,
+       "p": 0.515,
+       "ev": 0.278
+      },
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.515,
+       "ev": 0.262
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.515,
+       "ev": 0.262
+      },
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": 144,
+       "dec": 2.44,
+       "p": 0.515,
+       "ev": 0.257
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": 140,
+       "dec": 2.4,
+       "p": 0.515,
+       "ev": 0.236
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "LAC +4.5",
+     "player": null,
+     "team": "LAC",
+     "line": 4.5,
+     "odds": -115,
+     "dec": 1.867,
+     "odds_assumed": false,
+     "p": 0.637,
+     "implied": 0.536,
+     "fair": -175,
+     "edge": 0.101,
+     "ev": 0.189,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "Covers casa 3",
+      "line": 4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.637,
+      "ev": 0.215
+     },
+     "books": [
+      {
+       "book": "Covers casa 3",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.637,
+       "ev": 0.215
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 3.5,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.607,
+       "ev": 0.213
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 4.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.637,
+       "ev": 0.205
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 4.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.637,
+       "ev": 0.2
+      },
+      {
+       "book": "Covers casa 1",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 4",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 4.5,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.637,
+       "ev": 0.126
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Over 228.5",
+     "player": null,
+     "team": null,
+     "line": 228.5,
+     "odds": -112,
+     "dec": 1.892,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.529,
+     "fair": -142,
+     "edge": 0.058,
+     "ev": 0.11,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Covers casa 4",
+      "line": 228.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.587,
+      "ev": 0.12
+     },
+     "books": [
+      {
+       "book": "Covers casa 4",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 228.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.587,
+       "ev": 0.115
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 228.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.587,
+       "ev": 0.101
+      },
+      {
+       "book": "Covers casa 1",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.587,
+       "ev": 0.097
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.587,
+       "ev": 0.097
+      },
+      {
+       "book": "Covers casa 3",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.08
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.08
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "ml",
+     "label": "LAC gana",
+     "player": null,
+     "team": "LAC",
+     "line": null,
+     "odds": 148,
+     "dec": 2.483,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.403,
+     "fair": -106,
+     "edge": 0.112,
+     "ev": 0.279,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "Covers casa 3",
+      "line": null,
+      "odds": 160,
+      "dec": 2.6,
+      "p": 0.515,
+      "ev": 0.339
+     },
+     "books": [
+      {
+       "book": "Covers casa 3",
+       "line": null,
+       "odds": 160,
+       "dec": 2.6,
+       "p": 0.515,
+       "ev": 0.339
+      },
+      {
+       "book": "Covers casa 8",
+       "line": null,
+       "odds": 155,
+       "dec": 2.55,
+       "p": 0.515,
+       "ev": 0.314
+      },
+      {
+       "book": "Covers casa 9",
+       "line": null,
+       "odds": 150,
+       "dec": 2.5,
+       "p": 0.515,
+       "ev": 0.288
+      },
+      {
+       "book": "Covers casa 2",
+       "line": null,
+       "odds": 148,
+       "dec": 2.48,
+       "p": 0.515,
+       "ev": 0.278
+      },
+      {
+       "book": "Covers casa 7",
+       "line": null,
+       "odds": 148,
+       "dec": 2.48,
+       "p": 0.515,
+       "ev": 0.278
+      },
+      {
+       "book": "Covers casa 1",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.515,
+       "ev": 0.262
+      },
+      {
+       "book": "Covers casa 5",
+       "line": null,
+       "odds": 145,
+       "dec": 2.45,
+       "p": 0.515,
+       "ev": 0.262
+      },
+      {
+       "book": "Covers casa 4",
+       "line": null,
+       "odds": 144,
+       "dec": 2.44,
+       "p": 0.515,
+       "ev": 0.257
+      },
+      {
+       "book": "Covers casa 6",
+       "line": null,
+       "odds": 140,
+       "dec": 2.4,
+       "p": 0.515,
+       "ev": 0.236
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "LAC +4.5",
+     "player": null,
+     "team": "LAC",
+     "line": 4.5,
+     "odds": -115,
+     "dec": 1.867,
+     "odds_assumed": false,
+     "p": 0.637,
+     "implied": 0.536,
+     "fair": -175,
+     "edge": 0.101,
+     "ev": 0.189,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "Covers casa 3",
+      "line": 4.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.637,
+      "ev": 0.215
+     },
+     "books": [
+      {
+       "book": "Covers casa 3",
+       "line": 4.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.637,
+       "ev": 0.215
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 3.5,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.607,
+       "ev": 0.213
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 4.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.637,
+       "ev": 0.205
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 4.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.637,
+       "ev": 0.2
+      },
+      {
+       "book": "Covers casa 1",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 4",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 4.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.637,
+       "ev": 0.19
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 4.5,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.637,
+       "ev": 0.126
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Over 228.5",
+     "player": null,
+     "team": null,
+     "line": 228.5,
+     "odds": -112,
+     "dec": 1.892,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.529,
+     "fair": -142,
+     "edge": 0.058,
+     "ev": 0.11,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "Covers casa 4",
+      "line": 228.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.587,
+      "ev": 0.12
+     },
+     "books": [
+      {
+       "book": "Covers casa 4",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 5",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 9",
+       "line": 228.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Covers casa 2",
+       "line": 228.5,
+       "odds": -111,
+       "dec": 1.901,
+       "p": 0.587,
+       "ev": 0.115
+      },
+      {
+       "book": "Covers casa 6",
+       "line": 228.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.587,
+       "ev": 0.101
+      },
+      {
+       "book": "Covers casa 1",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.587,
+       "ev": 0.097
+      },
+      {
+       "book": "Covers casa 7",
+       "line": 228.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.587,
+       "ev": 0.097
+      },
+      {
+       "book": "Covers casa 3",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.08
+      },
+      {
+       "book": "Covers casa 8",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.08
       }
      ]
     }

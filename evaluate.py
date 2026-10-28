@@ -22,7 +22,7 @@ STATS = {"pts": 1, "reb": 2, "ast": 3, "fg3m": 4}
 
 def norm(name):
     s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
-    return s.replace(".", "").replace("'", "").replace(" jr", "").replace(" ii", "").replace(" iii", "").strip()
+    return s.replace(".", "").replace("'", "").replace(" jr", "").replace(" iii", "").replace(" ii", "").strip()
 
 
 def actual_line(players, name):

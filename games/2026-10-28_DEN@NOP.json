@@ -1,0 +1,653 @@
+{
+ "game": {
+  "date": "2026-10-28",
+  "away": "DEN",
+  "home": "NOP",
+  "venue": "Smoothie King Center, New Orleans",
+  "tip_et": "20:00",
+  "notes": [
+   "DEN: Cam Johnson duda, Diallo OUT. NOP 0-3: Missi OUT, Poole duda",
+   "Récord: DEN 1-2, NOP 0-3"
+  ],
+  "out": [
+   "Alpha Diallo",
+   "Yves Missi"
+  ],
+  "gtd": {
+   "Cameron Johnson": 0.6,
+   "Jordan Poole": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "NOP": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 113.51,
+    "drtg": 117.87,
+    "pace": 101.65
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "DEN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 121.41,
+    "drtg": 116.27,
+    "pace": 99.77
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "NOP": {},
+  "DEN": {}
+ },
+ "players": [
+  {
+   "team": "NOP",
+   "name": "Trey Murphy III",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.3,
+    "pts": 15.3,
+    "reb": 5.3,
+    "ast": 2.7,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 35.5,
+    "pts": 21.5,
+    "reb": 5.7,
+    "ast": 3.8,
+    "fg3m": 3.2
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Dejounte Murray",
+   "pos": "PG",
+   "starter": true,
+   "min": 31.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.0,
+    "pts": 20.3,
+    "reb": 5.0,
+    "ast": 6.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 27.8,
+    "pts": 16.7,
+    "reb": 5.4,
+    "ast": 6.4,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Zion Williamson",
+   "pos": "PF",
+   "starter": true,
+   "min": 31.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.7,
+    "pts": 20.7,
+    "reb": 3.0,
+    "ast": 2.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 29.7,
+    "pts": 21.0,
+    "reb": 5.7,
+    "ast": 3.2,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Derik Queen",
+   "pos": "C",
+   "starter": false,
+   "min": 22.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 13.0,
+    "reb": 8.3,
+    "ast": 1.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 25.0,
+    "pts": 11.7,
+    "reb": 7.1,
+    "ast": 3.7,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Saddiq Bey",
+   "pos": "SF",
+   "starter": false,
+   "min": 22.6,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.7,
+    "pts": 15.7,
+    "reb": 4.0,
+    "ast": 1.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 31.2,
+    "pts": 17.7,
+    "reb": 5.6,
+    "ast": 2.5,
+    "fg3m": 2.1
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Jeremiah Fears",
+   "pos": "PG",
+   "starter": true,
+   "min": 21.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.7,
+    "pts": 8.3,
+    "reb": 3.0,
+    "ast": 1.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 14.3,
+    "reb": 3.7,
+    "ast": 3.4,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "DeAndre Jordan",
+   "pos": "C",
+   "starter": true,
+   "min": 19.1,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.0,
+    "pts": 9.0,
+    "reb": 9.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 16.6,
+    "pts": 4.4,
+    "reb": 6.3,
+    "ast": 0.9,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Jordan Poole",
+   "pos": "SG",
+   "starter": false,
+   "min": 17.9,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 18.7,
+    "pts": 7.3,
+    "reb": 2.3,
+    "ast": 4.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 23.9,
+    "pts": 13.4,
+    "reb": 2.0,
+    "ast": 3.1,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Bennedict Mathurin",
+   "pos": "SF",
+   "starter": false,
+   "min": 16.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.7,
+    "pts": 8.0,
+    "reb": 3.0,
+    "ast": 2.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 30.0,
+    "pts": 17.6,
+    "reb": 5.4,
+    "ast": 2.4,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Herbert Jones",
+   "pos": "SF",
+   "starter": false,
+   "min": 16.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 3.3,
+    "reb": 2.0,
+    "ast": 0.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 28.4,
+    "pts": 8.9,
+    "reb": 3.4,
+    "ast": 2.8,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "NOP",
+   "name": "Karlo Matković",
+   "pos": "PF",
+   "starter": false,
+   "min": 8.1,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.5,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 0.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 14.7,
+    "pts": 5.7,
+    "reb": 3.7,
+    "ast": 0.8,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Jamal Murray",
+   "pos": "PG",
+   "starter": true,
+   "min": 38.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 38.7,
+    "pts": 22.3,
+    "reb": 6.3,
+    "ast": 5.7,
+    "fg3m": 3.7
+   },
+   "prior": {
+    "min": 35.4,
+    "pts": 25.4,
+    "reb": 4.4,
+    "ast": 7.1,
+    "fg3m": 3.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "starter": true,
+   "min": 38.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 38.0,
+    "pts": 22.3,
+    "reb": 9.7,
+    "ast": 8.7,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 34.8,
+    "pts": 27.7,
+    "reb": 12.9,
+    "ast": 10.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Christian Braun",
+   "pos": "SG",
+   "starter": true,
+   "min": 36.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.7,
+    "pts": 10.3,
+    "reb": 6.0,
+    "ast": 1.7,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 31.8,
+    "pts": 12.0,
+    "reb": 4.8,
+    "ast": 2.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Aaron Gordon",
+   "pos": "PF",
+   "starter": true,
+   "min": 30.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.3,
+    "pts": 11.3,
+    "reb": 5.0,
+    "ast": 2.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 27.9,
+    "pts": 16.2,
+    "reb": 5.8,
+    "ast": 2.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "DeMar DeRozan",
+   "pos": "SF",
+   "starter": false,
+   "min": 26.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.7,
+    "pts": 15.3,
+    "reb": 3.0,
+    "ast": 1.7,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 31.2,
+    "pts": 18.4,
+    "reb": 2.9,
+    "ast": 4.1,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Trevon Brazile",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.1,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 9.0,
+    "reb": 7.3,
+    "ast": 0.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 21.0,
+    "pts": 9.0,
+    "reb": 7.3,
+    "ast": 0.0,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Bryce Hopkins",
+   "pos": "SF",
+   "starter": false,
+   "min": 17.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.3,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 0.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 17.3,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 0.7,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Cameron Johnson",
+   "pos": "PF",
+   "starter": true,
+   "min": 11.1,
+   "g_cur": 1,
+   "p_play": 0.6,
+   "cur": {
+    "min": 11.0,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 30.5,
+    "pts": 12.2,
+    "reb": 3.8,
+    "ast": 2.4,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "starter": false,
+   "min": 10.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 10.3,
+    "pts": 4.7,
+    "reb": 3.0,
+    "ast": 0.3,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 20.0,
+    "pts": 10.5,
+    "reb": 6.1,
+    "ast": 1.4,
+    "fg3m": 0.4
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Tyus Jones",
+   "pos": "PG",
+   "starter": false,
+   "min": 9.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.3,
+    "pts": 1.3,
+    "reb": 0.0,
+    "ast": 0.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 15.7,
+    "pts": 3.0,
+    "reb": 1.1,
+    "ast": 2.4,
+    "fg3m": 0.6
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 28-oct (calendario, 12 partidos); Covers.com (spread, total y ML; props de puntos)",
+  "spread_home": 4.5,
+  "total": 240.5,
+  "ml_home": 165,
+  "ml_away": -195
+ },
+ "prop_lines": {
+  "Nikola Jokić": {
+   "pts": [
+    26.5,
+    -115,
+    -110
+   ]
+  },
+  "Zion Williamson": {
+   "pts": [
+    18.5,
+    100,
+    -125
+   ]
+  },
+  "Derik Queen": {
+   "pts": [
+    10.5,
+    -115,
+    -110
+   ]
+  },
+  "Herbert Jones": {
+   "pts": [
+    4.5,
+    -130,
+    102
+   ]
+  },
+  "Bennedict Mathurin": {
+   "pts": [
+    9.5,
+    -105,
+    -120
+   ]
+  },
+  "Trey Murphy III": {
+   "pts": [
+    16.5,
+    -115,
+    -110
+   ]
+  },
+  "Jeremiah Fears": {
+   "pts": [
+    11.5,
+    -115,
+    -110
+   ]
+  },
+  "Saddiq Bey": {
+   "pts": [
+    11.5,
+    -120,
+    -105
+   ]
+  },
+  "Trevon Brazile": {
+   "pts": [
+    6.5,
+    -115,
+    -110
+   ]
+  },
+  "Christian Braun": {
+   "pts": [
+    12.5,
+    -120,
+    -105
+   ]
+  },
+  "DeAndre Jordan": {
+   "pts": [
+    4.5,
+    120,
+    -150
+   ]
+  }
+ }
+}
