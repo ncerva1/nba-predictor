@@ -6,19 +6,20 @@
   "venue": "Gainbridge Fieldhouse, Indianapolis",
   "tip_et": "19:00",
   "notes": [
+   "Re-análisis 28-oct tarde: Haliburton descartado (ESPN); Nesmith y Toppin probables",
    "IND: Haliburton (isquio), Nembhard (cuello), Nesmith (isquio) y Toppin (mano) son duda; Zubac, McConnell y Sheppard OUT",
    "PHI: Jabari Walker y Barlow OUT",
    "Récord: PHI 3-1, IND 2-2"
   ],
   "out": [
    "Ivica Zubac",
-   "Ben Sheppard"
+   "Ben Sheppard",
+   "Tyrese Haliburton"
   ],
   "gtd": {
-   "Tyrese Haliburton": 0.6,
    "Andrew Nembhard": 0.6,
-   "Aaron Nesmith": 0.6,
-   "Obi Toppin": 0.6
+   "Aaron Nesmith": 0.9,
+   "Obi Toppin": 0.9
   }
  },
  "db": {
@@ -46,13 +47,13 @@
     "pace": 102.06
    },
    "adj": {
-    "o": -0.5,
+    "o": -2.0,
     "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Ivica Zubac OUT (tobillo) y T.J. McConnell OUT; Haliburton, Nembhard, Nesmith y Toppin en duda"
+    "roster_note": "Haliburton OUT (isquio, ~2 semanas), Zubac y McConnell OUT; Nembhard duda; Nesmith y Toppin probables"
    }
   },
   "PHI": {
@@ -85,33 +86,10 @@
  "players": [
   {
    "team": "IND",
-   "name": "Tyrese Haliburton",
-   "pos": "PG",
-   "starter": true,
-   "min": 33.1,
-   "g_cur": 4,
-   "p_play": 0.6,
-   "cur": {
-    "min": 33.0,
-    "pts": 21.8,
-    "reb": 4.5,
-    "ast": 9.5,
-    "fg3m": 2.5
-   },
-   "prior": {
-    "min": 33.0,
-    "pts": 21.8,
-    "reb": 4.5,
-    "ast": 9.5,
-    "fg3m": 2.5
-   }
-  },
-  {
-   "team": "IND",
    "name": "Andrew Nembhard",
    "pos": "SG",
    "starter": true,
-   "min": 32.1,
+   "min": 37.2,
    "g_cur": 3,
    "p_play": 0.6,
    "cur": {
@@ -134,7 +112,7 @@
    "name": "Pascal Siakam",
    "pos": "PF",
    "starter": true,
-   "min": 31.6,
+   "min": 36.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -157,9 +135,9 @@
    "name": "Obi Toppin",
    "pos": "PF",
    "starter": false,
-   "min": 23.3,
+   "min": 27.1,
    "g_cur": 4,
-   "p_play": 0.6,
+   "p_play": 0.9,
    "cur": {
     "min": 23.3,
     "pts": 15.8,
@@ -180,7 +158,7 @@
    "name": "Kelly Oubre Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 22.5,
+   "min": 26.2,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -203,7 +181,7 @@
    "name": "Jarace Walker",
    "pos": "PF",
    "starter": false,
-   "min": 20.8,
+   "min": 24.2,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -226,9 +204,9 @@
    "name": "Aaron Nesmith",
    "pos": "SF",
    "starter": true,
-   "min": 20.0,
+   "min": 23.2,
    "g_cur": 3,
-   "p_play": 0.6,
+   "p_play": 0.9,
    "cur": {
     "min": 20.0,
     "pts": 11.7,
@@ -249,7 +227,7 @@
    "name": "Quenton Jackson",
    "pos": "PG",
    "starter": false,
-   "min": 19.3,
+   "min": 22.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -271,8 +249,8 @@
    "team": "IND",
    "name": "Jay Huff",
    "pos": "C",
-   "starter": false,
-   "min": 16.3,
+   "starter": true,
+   "min": 18.9,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -295,7 +273,7 @@
    "name": "Larry Nance Jr.",
    "pos": "PF",
    "starter": false,
-   "min": 11.8,
+   "min": 13.7,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -318,7 +296,7 @@
    "name": "Jalen Slawson",
    "pos": "SF",
    "starter": false,
-   "min": 9.0,
+   "min": 10.5,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -594,13 +572,6 @@
     16.5,
     -115,
     -110
-   ]
-  },
-  "Tyrese Haliburton": {
-   "pts": [
-    18.5,
-    -110,
-    -115
    ]
   },
   "Andrew Nembhard": {

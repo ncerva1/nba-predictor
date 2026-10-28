@@ -6,6 +6,7 @@
   "venue": "American Airlines Center, Dallas",
   "tip_et": "21:30",
   "notes": [
+   "Re-análisis 28-oct tarde: Aldama y Biberovic OUT; Naji Marshall dudoso; Kyrie sigue en duda",
    "OKC 4-0 pero sin Holmgren, Caruso, J. Williams ni Wallace; Ajay Mitchell duda",
    "DAL: Kyrie y Naji Marshall duda; de Larrea OUT",
    "Récord: OKC 4-0, DAL 2-2"
@@ -14,12 +15,15 @@
    "Chet Holmgren",
    "Alex Caruso",
    "Jalen Williams",
-   "Cason Wallace"
+   "Cason Wallace",
+   "Santi Aldama",
+   "Tarik Biberovic"
   ],
   "gtd": {
    "Ajay Mitchell": 0.6,
    "Kyrie Irving": 0.6,
-   "Naji Marshall": 0.6
+   "Naji Marshall": 0.25,
+   "Caleb Martin": 0.5
   }
  },
  "db": {
@@ -47,13 +51,13 @@
     "pace": 102.9
    },
    "adj": {
-    "o": 0.0,
-    "d": 0.0,
+    "o": -0.5,
+    "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Aldama, Biberovic y de Larrea OUT; Naji Marshall dudoso; Kyrie duda"
    }
   },
   "OKC": {
@@ -183,7 +187,7 @@
    "starter": false,
    "min": 25.7,
    "g_cur": 3,
-   "p_play": 0.6,
+   "p_play": 0.25,
    "cur": {
     "min": 27.7,
     "pts": 13.7,

@@ -6,15 +6,19 @@
   "venue": "Scotiabank Arena, Toronto",
   "tip_et": "19:30",
   "notes": [
+   "Re-análisis 28-oct tarde: Anthony Black duda por motivos personales; Isaac OUT",
    "ORL sin Banchero ni Suggs; TOR sin Kawhi Leonard",
    "Récord: ORL 1-2, TOR 2-1"
   ],
   "out": [
    "Paolo Banchero",
    "Jalen Suggs",
-   "Kawhi Leonard"
+   "Kawhi Leonard",
+   "Jonathan Isaac"
   ],
-  "gtd": {}
+  "gtd": {
+   "Anthony Black": 0.5
+  }
  },
  "db": {
   "use": true,
@@ -69,7 +73,7 @@
    },
    "context": {
     "b2b": false,
-    "roster_note": "Paolo Banchero OUT (tobillo, hasta 22-nov) y Jalen Suggs OUT (rodilla, hasta 10-nov)"
+    "roster_note": "Paolo Banchero OUT (tobillo, hasta 22-nov) y Jalen Suggs OUT (rodilla, hasta 10-nov); Isaac OUT y Anthony Black duda (motivos personales, no fue al shootaround)"
    }
   }
  },
@@ -407,7 +411,7 @@
    "starter": false,
    "min": 29.5,
    "g_cur": 1,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 26.0,
     "pts": 18.0,

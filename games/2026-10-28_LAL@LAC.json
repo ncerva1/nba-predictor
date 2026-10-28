@@ -6,12 +6,17 @@
   "venue": "Intuit Dome, Inglewood",
   "tip_et": "22:30",
   "notes": [
+   "Re-análisis 28-oct tarde: Luka Dončić y Ziaire Williams descartados; la línea pasó de LAL -4.5 a LAC -1.5",
    "LAL en back-to-back (perdió 136-129 con POR el 27-oct)",
    "LAC: Hachimura, Ingram, Beal, Strus OUT",
    "Récord: LAL 3-1, LAC 1-2"
   ],
   "out": [
-   "Rui Hachimura"
+   "Rui Hachimura",
+   "Luka Dončić",
+   "Ziaire Williams",
+   "Cameron Carr",
+   "Adou Thiero"
   ],
   "gtd": {}
  },
@@ -62,13 +67,13 @@
     "pace": 99.5
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -4.0,
+    "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Luka Dončić OUT (espalda, b2b) y Ziaire Williams OUT (pie); Carr y Thiero OUT"
    }
   }
  },
@@ -266,7 +271,7 @@
    "name": "Austin Reaves",
    "pos": "SG",
    "starter": true,
-   "min": 36.8,
+   "min": 38.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -286,33 +291,10 @@
   },
   {
    "team": "LAL",
-   "name": "Luka Dončić",
-   "pos": "PG",
-   "starter": true,
-   "min": 36.1,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 35.5,
-    "pts": 36.0,
-    "reb": 6.7,
-    "ast": 8.2,
-    "fg3m": 5.2
-   },
-   "prior": {
-    "min": 35.8,
-    "pts": 33.5,
-    "reb": 7.7,
-    "ast": 8.3,
-    "fg3m": 4.0
-   }
-  },
-  {
-   "team": "LAL",
    "name": "Walker Kessler",
    "pos": "C",
    "starter": true,
-   "min": 32.0,
+   "min": 38.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -332,33 +314,10 @@
   },
   {
    "team": "LAL",
-   "name": "Ziaire Williams",
-   "pos": "SF",
-   "starter": true,
-   "min": 28.9,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 28.5,
-    "pts": 11.2,
-    "reb": 3.0,
-    "ast": 2.3,
-    "fg3m": 1.8
-   },
-   "prior": {
-    "min": 22.9,
-    "pts": 10.2,
-    "reb": 2.4,
-    "ast": 1.1,
-    "fg3m": 1.5
-   }
-  },
-  {
-   "team": "LAL",
    "name": "Quentin Grimes",
    "pos": "SG",
-   "starter": false,
-   "min": 24.6,
+   "starter": true,
+   "min": 33.7,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -381,7 +340,7 @@
    "name": "Matisse Thybulle",
    "pos": "SG",
    "starter": true,
-   "min": 24.1,
+   "min": 33.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -403,8 +362,8 @@
    "team": "LAL",
    "name": "Sandro Mamukelashvili",
    "pos": "PF",
-   "starter": false,
-   "min": 23.1,
+   "starter": true,
+   "min": 31.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -427,7 +386,7 @@
    "name": "Jake LaRavia",
    "pos": "PF",
    "starter": false,
-   "min": 17.6,
+   "min": 24.1,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -450,7 +409,7 @@
    "name": "Collin Sexton",
    "pos": "SG",
    "starter": false,
-   "min": 17.0,
+   "min": 23.3,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -471,10 +430,10 @@
  ],
  "market": {
   "source": "NBA.com/games 28-oct (calendario, 12 partidos); Covers.com (spread, total y ML; props de puntos)",
-  "spread_home": 4.5,
-  "total": 228.5,
-  "ml_home": 148,
-  "ml_away": -176
+  "spread_home": -1.5,
+  "total": 224.5,
+  "ml_home": -112,
+  "ml_away": -107
  },
  "prop_lines": {}
 }

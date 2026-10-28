@@ -224,6 +224,24 @@ tr.detail td { background: var(--bg) }
   .pl-list { grid-template-columns: 1fr }
   .pl-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
+/* picks de inicio agrupados por partido (acordeones) */
+.pgroups { display: grid; gap: 10px }
+.pgroup { background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
+.pgroup[open] { border-color: var(--accent) }
+.pgroup summary { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 12px; padding: 12px 16px; cursor: pointer; list-style: none }
+.pgroup summary::-webkit-details-marker { display: none }
+.pgroup summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px }
+.pgroup .pg-t { font: 700 20px/1.1 var(--display); letter-spacing: .02em }
+.pgroup .pg-x { grid-column: 1; font: 12px var(--mono); color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0 }
+.pgroup .pg-r { grid-row: 1 / span 2; grid-column: 2; display: flex; align-items: center; gap: 10px }
+.pgroup .pg-r::after { content: "▾"; color: var(--muted); transition: transform .15s }
+.pgroup[open] .pg-r::after { transform: rotate(180deg) }
+.pgroup .pg-n { font: 600 12px var(--mono); color: var(--good) }
+.pgroup .pg-body { padding: 0 16px 12px; border-top: 1px solid var(--line) }
+.pgroup .pg-body table td:first-child, .pgroup .pg-body table th:first-child { display: none }
+.pgroup .pg-go { display: inline-block; margin-top: 10px; font: 500 13px var(--mono); text-decoration: none }
+.pg-tools { display: flex; justify-content: flex-end; margin-bottom: -2px }
+.pg-tools button { font: 500 12px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important }
 }
@@ -375,6 +393,9 @@ function setupTicker() {
   requestAnimationFrame(tkFrame);
 }
 
+// Inicio: picks agrupados por partido (por defecto en móvil, donde la lista larga cansa) o lista única por EV
+let GROUP = matchMedia("(max-width: 640px)").matches ? "game" : "ev";
+const GROUPS = { game: "Por partido", ev: "Lista por EV" };
 // Picks segmentados: todos / de equipo (ganador, hándicap, total) / player props
 let SEG = "all";
 const SEGS = { all: "Todos", team: "Equipo", prop: "Player props" };
@@ -414,10 +435,12 @@ function renderIndex() {
   <section class="section">
     <span class="eyebrow">Jornada ${esc(DAY)}</span>
     <h2>${todays.some(g => g.result) ? "Picks con valor de la jornada" : "Picks con valor de hoy"}</h2>
-    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Ordenados de mayor a menor valor esperado (EV). Toca una fila para ver el análisis del partido.</p>
+    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Agrupados por partido o en una sola lista ordenada por valor esperado (EV). Toca un pick para ver el análisis del partido.</p>
     ${legend(thr)}
     ${picks.length ? segBar(picks, "seg-idx") : ""}
-    <div class="panel tbl-wrap" id="picks"></div>
+    ${picks.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
+      `<button type="button" data-grp="${k}" aria-pressed="${k === GROUP}">${t}</button>`).join("")}</div>` : ""}
+    <div id="picks"></div>
     ${howto}
   </section>
   ${parlaySection(todays, thr)}
@@ -427,12 +450,42 @@ function renderIndex() {
   </section>
   ${older.length ? `<section class="section"><h2>Jornadas anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : ""}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
+  const open = new Set();   // acordeones abiertos, se conservan al cambiar de filtro
+  const groupHtml = list => {
+    const gs = todays.map(g => ({ g, bets: list.filter(b => b._gid === g.id) })).filter(x => x.bets.length);
+    return `<div class="pg-tools"><button type="button" id="pg-all">${gs.every(x => open.has(x.g.id)) ? "Cerrar todos" : "Abrir todos"}</button></div>
+    <div class="pgroups">${gs.map(({ g, bets }) => {
+      const r = g.result, won = bets.filter(b => b.result === "won").length, lost = bets.filter(b => b.result === "lost").length;
+      const info = r ? `Final ${r.score[g.away]}–${r.score[g.home]}${r.ot ? " (OT)" : ""} · picks ${won}–${lost}`
+        : `${g.tip_et ? esc(g.tip_et) + " ET · " : ""}<span class="hide-sm">proy. </span>${Math.round(g.proj[g.away])}–${Math.round(g.proj[g.home])}`;
+      return `<details class="pgroup" data-id="${g.id}"${open.has(g.id) ? " open" : ""}>
+        <summary><span class="pg-t">${esc(g.away)} @ ${esc(g.home)}</span><span class="pg-x">${info}</span>
+          <span class="pg-r"><span class="pg-n">${bets.length} pick${bets.length > 1 ? "s" : ""}</span>${evPill(bets[0].ev, thr)}</span></summary>
+        <div class="pg-body"><table class="stack">${betHead(true, bets.some(b => b.result))}<tbody>${betRows(bets, thr, true)}</tbody></table>
+          <a class="pg-go" href="#${g.id}">Ver análisis del partido →</a></div></details>`;
+    }).join("")}</div>`;
+  };
   const drawPicks = () => {
     const list = picks.filter(b => inSeg(b, SEG));
-    $("#picks").innerHTML = list.length ? `<table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table>`
-      : `<div class="empty">${picks.length ? `Ningún pick de este tipo con EV ≥ +${(thr * 100).toFixed(0)}% en la jornada.` : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div>`;
+    $("#picks").innerHTML = !list.length ? `<div class="panel"><div class="empty">${picks.length ? `Ningún pick de este tipo con EV ≥ +${(thr * 100).toFixed(0)}% en la jornada.` : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`
+      : GROUP === "game" ? groupHtml(list)
+      : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`;
     document.querySelectorAll("#picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+    document.querySelectorAll("#picks details.pgroup").forEach(d => d.addEventListener("toggle", () => {
+      d.open ? open.add(d.dataset.id) : open.delete(d.dataset.id);
+      const all = [...document.querySelectorAll("#picks details.pgroup")].every(x => x.open);
+      $("#pg-all").textContent = all ? "Cerrar todos" : "Abrir todos";
+    }));
+    $("#pg-all")?.addEventListener("click", () => {
+      const ds = [...document.querySelectorAll("#picks details.pgroup")], to = !ds.every(x => x.open);
+      ds.forEach(x => { x.open = to; });
+    });
   };
+  document.querySelectorAll("#grp-idx button").forEach(b => b.addEventListener("click", () => {
+    GROUP = b.dataset.grp;
+    document.querySelectorAll("#grp-idx button").forEach(x => x.setAttribute("aria-pressed", x.dataset.grp === GROUP));
+    drawPicks();
+  }));
   bindSeg("seg-idx", drawPicks);
   drawPicks();
   bindParlays(todays, thr);
