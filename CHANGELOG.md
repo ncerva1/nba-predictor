@@ -1,5 +1,12 @@
 # Cambios del modelo
 
+## Web — 2026-10-28: parlays recomendados
+- `build_site.py` arma parlays de 2, 3 y 4 patas por partido (SGP) y entre partidos de la jornada. Patas: cuota
+  publicada, prob. >= 55%, EV >= 0 (entre partidos, solo picks con valor) y sin jugadores en duda (p_play < 0.9).
+  Se elige la combinación más probable con cuota combinada >= 2.00 y EV > 0. En el SGP la prob. conjunta se
+  cuenta en las simulaciones (recoge la correlación); entre partidos se multiplica. Se guardan en
+  `docs/data/<id>.json` (`parlays`) y en `index.json` (`parlays` por fecha) y se liquidan con los resultados.
+
 ## 1.2 — 2026-10-27 (calibración con los 9 partidos del 26-oct)
 Evaluación completa en `results/2026-10-26_eval.json`. Lo que se cambió y por qué:
 

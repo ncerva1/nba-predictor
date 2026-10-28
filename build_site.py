@@ -164,10 +164,114 @@ def prop_bets(cfg, s):
             o_under = v[2] if len(v) > 2 else None
             po, push = (x > ln).mean(), (x == ln).mean()
             lab = STAT_LABEL.get(st, st)
-            out.append(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]))
+            out.append(dict(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]), stat=st))
             if o_under is not None:
-                out.append(bet("prop", f"{name} Under {ln:g} {lab}", (1 - po - push) / (1 - push), o_under, ln, name, d["team"]))
+                out.append(dict(bet("prop", f"{name} Under {ln:g} {lab}", (1 - po - push) / (1 - push), o_under, ln, name,
+                                    d["team"]), stat=st))
     return out
+
+
+# Parlays recomendados (estilo SGP de Linemate). Mismo partido: la prob. conjunta sale de contar en
+# cuántas simulaciones aciertan TODAS las patas a la vez, así entra la correlación (si un equipo anota
+# mucho, suben el over y los puntos de sus jugadores). Entre partidos: los partidos son independientes y
+# las probabilidades se multiplican. Las props se calculan suponiendo que juegan todos sus jugadores (si
+# uno no juega la casa anula esa pata) y no entran jugadores en duda.
+PARLAY_LEG_P = 0.55     # prob. mínima de cada pata
+PARLAY_MIN_DEC = 2.0    # cuota combinada mínima para que valga la pena como parlay
+PARLAY_POOL = 14        # patas candidatas por partido (las más probables)
+PARLAY_P_PLAY = 0.9     # jugadores en duda (prob. de jugar menor) no entran en parlays
+LEG_KEYS = ("kind", "label", "player", "team", "line", "stat", "p", "dec", "ev")
+
+
+def leg_hits(b, g, s):
+    """(acierta, válida) por simulación. Push cuenta como acierto (no hace perder); una prop solo es
+    válida en las simulaciones en que el jugador juega, igual que la prob. de la apuesta suelta."""
+    h = g["home"]
+    m, tot = s["sh"] - s["sa"], s["sh"] + s["sa"]
+    ok = np.ones(len(m), bool)
+    if b["kind"] == "ml":
+        return (m > 0) == (b["team"] == h), ok
+    if b["kind"] == "spread":
+        return (m if b["team"] == h else -m) + b["line"] >= 0, ok
+    if b["kind"] == "total":
+        return (tot >= b["line"] if b["label"].startswith("Over") else tot <= b["line"]), ok
+    d = s["players"][b["player"]]["draws"]
+    x = d[b["stat"]]
+    return (x >= b["line"]) if " Over " in b["label"] else (x <= b["line"]), d["min"] > 0
+
+
+def leg_group(b):  # patas que no se combinan entre sí: ganador/hándicap, total, y cada jugador
+    return "side" if b["kind"] in ("ml", "spread") else "total" if b["kind"] == "total" else b["player"]
+
+
+def parlay(legs, p, n_ind=None):
+    dec = float(np.prod([l["dec"] for l in legs]))
+    ind = float(np.prod([l["p"] for l in legs])) if n_ind is None else n_ind
+    return dict(legs=legs, n=len(legs), p=round(p, 3), p_indep=round(ind, 3), corr=round(p / ind, 2) if ind else None,
+                dec=round(dec, 2), fair=round(1 / p, 2) if p else None, ev=round(p * dec - 1, 3))
+
+
+def best_parlays(cands, joint, distinct):
+    """Para 2, 3 y 4 patas: la combinación con mayor prob. conjunta, con cuota >= PARLAY_MIN_DEC y EV > 0."""
+    from itertools import combinations
+    out = []
+    for k in (2, 3, 4):
+        best = None
+        for c in combinations(range(len(cands)), k):
+            if not distinct([cands[i] for i in c]):
+                continue
+            dec = float(np.prod([cands[i]["dec"] for i in c]))
+            if dec < PARLAY_MIN_DEC:
+                continue
+            p = joint(c)
+            if p * dec - 1 <= 0:
+                continue
+            if best is None or (p, p * dec) > (best[0], best[0] * best[1]):
+                best = (p, dec, c)
+        if best:
+            out.append(best)
+    return out
+
+
+def sgp(r, g, s):
+    """Parlays del mismo partido. Devuelve (parlays, patas candidatas para los parlays entre partidos)."""
+    pool = [b for b in r["bets"] if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and
+            (b["kind"] != "prop" or (b.get("stat") and s["players"][b["player"]]["p_play"] >= PARLAY_P_PLAY))]
+    pool = sorted(pool, key=lambda b: -b["p"])[:PARLAY_POOL]
+    hits = [leg_hits(b, g, s) for b in pool]
+    legs = [dict({k: b.get(k) for k in LEG_KEYS}, gid=r["id"], game=f"{g['away']} @ {g['home']}") for b in pool]
+    distinct = lambda ls: len({leg_group(l) for l in ls}) == len(ls)
+
+    def joint(c):
+        win = np.logical_and.reduce([hits[i][0] for i in c])
+        ok = np.logical_and.reduce([hits[i][1] for i in c])
+        return float(win[ok].mean()) if ok.any() else 0.0
+    res = best_parlays(legs, joint, distinct)
+    return [dict(parlay([legs[i] for i in c], p), type="sgp") for p, _, c in res], legs
+
+
+def cross_parlays(legs_by_game):
+    """Parlays entre partidos con las 2 patas más probables y con valor (EV >= VALUE_EV) de cada partido."""
+    cands = []
+    for legs in legs_by_game:
+        cands += sorted([l for l in legs if l["ev"] >= VALUE_EV], key=lambda l: -l["p"])[:2]
+    distinct = lambda ls: len({l["gid"] for l in ls}) == len(ls)
+    joint = lambda c: float(np.prod([cands[i]["p"] for i in c]))
+    return [dict(parlay([cands[i] for i in c], p), type="cross") for p, _, c in best_parlays(cands, joint, distinct)]
+
+
+def settle_parlay(pl, results):
+    """won / lost / push (todas anuladas) / None si falta algún partido."""
+    from evaluate import settle
+    rs = []
+    for l in pl["legs"]:
+        res = results.get(l["gid"])
+        if res is None:
+            return None
+        x = settle(l, res["game"], res["res"])
+        l["result"] = "push" if x is None else ("won" if x else "lost")
+        rs.append(l["result"])
+    return "lost" if "lost" in rs else "push" if all(x == "push" for x in rs) else "won"
 
 
 # Ataque de un equipo vs lo que concede el rival (rank 1 = mejor en ambos lados, como en db/build_db.py)
@@ -296,10 +400,12 @@ def run_game(path, n):
     bets.sort(key=lambda b: b["ev"], reverse=True)
     R = load_rankings()
     mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
-    return dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
+    r = dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
                 summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]),
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
+    r["parlays"], r["_legs"] = sgp(r, g, s)
+    return r
 
 
 def load_results(date):
@@ -322,6 +428,8 @@ def attach_result(r, res):
     for p in r["summary"]["players"]:
         al = actual_line(res["players"], p["name"])
         p["actual"] = al if al and al["min"] > 0 else None
+    for pl in r.get("parlays", []):
+        pl["result"] = settle_parlay(pl, {r["id"]: dict(game=g, res=res)})
     return r
 
 
@@ -331,7 +439,7 @@ def index_entry(r):
     e = dict(id=r["id"], date=g["date"], away=g["away"], home=g["home"], tip_et=g.get("tip_et"),
              venue=g.get("venue"), records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
              proj_total=sm["proj_total"], used_db=r["used_db"],
-             n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb)
+             n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []))
     if "result" in r:
         e["result"] = dict(r["result"], picks_won=sum(b["result"] == "won" for b in vb),
                            picks_lost=sum(b["result"] == "lost" for b in vb),
@@ -353,6 +461,8 @@ def main():
     idx_path = os.path.join(OUT, "index.json")
     index = json.load(open(idx_path)) if os.path.exists(idx_path) else {"games": []}
     keep = {g["id"]: g for g in index["games"]}
+    cross = index.get("parlays", {})  # parlays entre partidos por jornada
+    legs_by_date = {}
     for p in paths:
         gid, date = game_id(p), os.path.basename(p)[:10]
         res = load_results(date).get(os.path.basename(p)[11:-5])
@@ -373,12 +483,24 @@ def main():
         except Exception as e:  # un JSON roto no debe tumbar toda la jornada
             print(f"ERROR {os.path.basename(p)}: {e}")
             continue
+        if "_legs" in r:
+            legs_by_date.setdefault(date, []).append(r.pop("_legs"))
         json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
         keep[r["id"]] = index_entry(r)
         g, sm = r["game"], r["summary"]
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "
               f"{keep[r['id']]['n_value']} apuestas con valor" + (" (resultado real cargado)" if res else ""))
     games = sorted(keep.values(), key=lambda g: (g["date"], g.get("tip_et") or "", g["id"]), reverse=False)
+    for date, lbg in legs_by_date.items():
+        # solo se rehacen si se simularon todos los partidos aún sin jugar de esa jornada
+        if len(lbg) == sum(g["date"] == date and "result" not in g for g in games):
+            cross[date] = cross_parlays(lbg)
+    for date, pls in cross.items():
+        res = load_results(date)
+        rs = {g["id"]: dict(game=dict(home=g["home"], away=g["away"]), res=res[f"{g['away']}@{g['home']}"])
+              for g in games if g["date"] == date and f"{g['away']}@{g['home']}" in res}
+        for pl in pls:
+            pl["result"] = settle_parlay(pl, rs)
     history = []  # récord de los picks con valor por jornada (solo jornadas con resultados)
     for date in sorted({g["date"] for g in games if "result" in g}):
         rs = [g["result"] for g in games if g["date"] == date and "result" in g]
@@ -386,7 +508,7 @@ def main():
                             picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
                             units=round(sum(x["units"] for x in rs), 2)))
     json.dump(dict(generated=datetime.now(timezone.utc).isoformat(timespec="minutes"), value_ev=VALUE_EV,
-                   history=history, games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+                   history=history, parlays=cross, games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":
