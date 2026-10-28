@@ -4,7 +4,7 @@
   "schedule_odds": "NBA.com/games 28-oct (calendario, 12 partidos); Covers.com (spread, total y ML; props de puntos)",
   "players_cur": "Basketball-Reference, páginas de equipo 2026-27 (28-oct, con partidos hasta el 26-oct); DET, NYK, SAS y LAL completados con los box scores reales del 27-oct",
   "players_prior": "Basketball-Reference 2025-26: per game de liga (primeras ~230 filas) y páginas de equipo 2026 (OKC, CHO, GSW, IND, LAC, MIA, NOP, ORL, TOR, MIN, SAS, CHI, CLE, LAL, HOU, UTA, MEM, PHI)",
-  "injuries": "CBS Sports injuries 28-oct",
+  "injuries": "CBS Sports injuries 28-oct; re-análisis ~22:40 UTC con ESPN injuries (actualizaciones del 28-oct) y SI/FantasyPros (Lakers). X/@UnderdogNBA no abre desde la nube",
   "b2b": "Jugaron el 27-oct: DET (perdió 111-97 en NYK), NYK, SAS (ganó 114-94 a SAC) y LAL (perdió 136-129 con POR)",
   "db": "BD de rankings: snapshot del 28-oct (NBA.com hasta el 26-oct; DvP statpick hasta el 26-oct)"
  },
@@ -50,22 +50,23 @@
    "b2b": [],
    "adj": {
     "IND": {
-     "o": -0.5,
+     "o": -2.0,
      "d": 0.5,
-     "why": "Ivica Zubac OUT (tobillo) y T.J. McConnell OUT; Haliburton, Nembhard, Nesmith y Toppin en duda"
+     "why": "Haliburton OUT (isquio, ~2 semanas), Zubac y McConnell OUT; Nembhard duda; Nesmith y Toppin probables"
     }
    },
    "out": [
     "Ivica Zubac",
-    "Ben Sheppard"
+    "Ben Sheppard",
+    "Tyrese Haliburton"
    ],
    "gtd": {
-    "Tyrese Haliburton": 0.6,
     "Andrew Nembhard": 0.6,
-    "Aaron Nesmith": 0.6,
-    "Obi Toppin": 0.6
+    "Aaron Nesmith": 0.9,
+    "Obi Toppin": 0.9
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Haliburton descartado (ESPN); Nesmith y Toppin probables",
     "IND: Haliburton (isquio), Nembhard (cuello), Nesmith (isquio) y Toppin (mano) son duda; Zubac, McConnell y Sheppard OUT",
     "PHI: Jabari Walker y Barlow OUT",
     "Récord: PHI 3-1, IND 2-2"
@@ -98,12 +99,12 @@
     }
    },
    "out": [
-    "Jalen Duren"
+    "Jalen Duren",
+    "Isaiah Joe"
    ],
-   "gtd": {
-    "Isaiah Joe": 0.5
-   },
+   "gtd": {},
    "notes": [
+    "Re-análisis 28-oct tarde: Isaiah Joe OUT (cadera); Ausar Thompson probable",
     "DET en back-to-back (perdió 111-97 en NYK el 27-oct)",
     "CHA: Knueppel, Coby White y Grant Williams OUT. DET: Duren OUT, Isaiah Joe duda",
     "Récord: CHA 3-1, DET 3-1"
@@ -122,12 +123,15 @@
    },
    "b2b": [],
    "adj": {},
-   "out": [],
+   "out": [
+    "Simone Fontecchio"
+   ],
    "gtd": {
     "Pelle Larsson": 0.6,
     "Aaron Wiggins": 0.6
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Fontecchio OUT (enfermedad)",
     "MIA: Pelle Larsson (tobillo) y Fontecchio duda. ATL: Aaron Wiggins (rodilla) duda",
     "Récord: MIA 0-4, ATL 2-2"
    ]
@@ -148,7 +152,7 @@
     "ORL": {
      "o": -1.5,
      "d": 1.0,
-     "why": "Paolo Banchero OUT (tobillo, hasta 22-nov) y Jalen Suggs OUT (rodilla, hasta 10-nov)"
+     "why": "Paolo Banchero OUT (tobillo, hasta 22-nov) y Jalen Suggs OUT (rodilla, hasta 10-nov); Isaac OUT y Anthony Black duda (motivos personales, no fue al shootaround)"
     },
     "TOR": {
      "o": -1.0,
@@ -159,10 +163,14 @@
    "out": [
     "Paolo Banchero",
     "Jalen Suggs",
-    "Kawhi Leonard"
+    "Kawhi Leonard",
+    "Jonathan Isaac"
    ],
-   "gtd": {},
+   "gtd": {
+    "Anthony Black": 0.5
+   },
    "notes": [
+    "Re-análisis 28-oct tarde: Anthony Black duda por motivos personales; Isaac OUT",
     "ORL sin Banchero ni Suggs; TOR sin Kawhi Leonard",
     "Récord: ORL 1-2, TOR 2-1"
    ]
@@ -188,12 +196,12 @@
    },
    "out": [
     "Alperen Şengün",
-    "Steven Adams"
+    "Steven Adams",
+    "Marcus Smart"
    ],
-   "gtd": {
-    "Marcus Smart": 0.6
-   },
+   "gtd": {},
    "notes": [
+    "Re-análisis 28-oct tarde: Marcus Smart OUT (antebrazo)",
     "HOU 4-0 pero sin Şengün ni Adams; Smart duda (antebrazo)",
     "MIL sin bajas reportadas en CBS",
     "Récord: HOU 4-0, MIL 1-3"
@@ -227,9 +235,10 @@
     "Anthony Edwards"
    ],
    "gtd": {
-    "Yaxel Lendeborg": 0.6
+    "Yaxel Lendeborg": 0.85
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Lendeborg hizo el shootaround (más cerca de jugar)",
     "MIN sin Anthony Edwards (33.3 ppg)",
     "GSW: Lendeborg duda (pie)",
     "Récord: GSW 1-3, MIN 3-1"
@@ -250,13 +259,15 @@
    "adj": {},
    "out": [
     "Alpha Diallo",
-    "Yves Missi"
+    "Yves Missi",
+    "Spencer Jones"
    ],
    "gtd": {
-    "Cameron Johnson": 0.6,
+    "Cameron Johnson": 0.25,
     "Jordan Poole": 0.6
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Cameron Johnson dudoso (tobillo)",
     "DEN: Cam Johnson duda, Diallo OUT. NOP 0-3: Missi OUT, Poole duda",
     "Récord: DEN 1-2, NOP 0-3"
    ]
@@ -276,11 +287,15 @@
     "NYK"
    ],
    "adj": {},
-   "out": [],
+   "out": [
+    "Jose Alvarado"
+   ],
    "gtd": {
-    "Jose Alvarado": 0.5
+    "Patrick Williams": 0.5,
+    "Tobe Awaka": 0.5
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Alvarado OUT; Patrick Williams y Awaka duda en CHI",
     "NYK en back-to-back (ganó 111-97 a DET el 27-oct)",
     "NYK: Alvarado duda. CHI: Patrick Williams duda, Claxton OUT",
     "Récord: NYK 1-3, CHI 1-3"
@@ -308,13 +323,15 @@
     }
    },
    "out": [
-    "Jaren Jackson Jr."
+    "Jaren Jackson Jr.",
+    "Tobias Harris"
    ],
    "gtd": {
     "Lauri Markkanen": 0.6,
     "Jaxson Hayes": 0.6
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Tobias Harris OUT (gemelo)",
     "SAS en back-to-back (ganó 114-94 a SAC el 27-oct); Tobias Harris duda",
     "UTA: JJJ OUT, Markkanen (muñeca) y Hayes duda",
     "Récord: SAS 2-2, UTA 1-3"
@@ -337,20 +354,29 @@
      "o": -2.0,
      "d": 1.5,
      "why": "Holmgren y Caruso OUT (hasta 31-oct), Jalen Williams y Cason Wallace OUT hasta marzo"
+    },
+    "DAL": {
+     "o": -0.5,
+     "d": 0.5,
+     "why": "Aldama, Biberovic y de Larrea OUT; Naji Marshall dudoso; Kyrie duda"
     }
    },
    "out": [
     "Chet Holmgren",
     "Alex Caruso",
     "Jalen Williams",
-    "Cason Wallace"
+    "Cason Wallace",
+    "Santi Aldama",
+    "Tarik Biberovic"
    ],
    "gtd": {
     "Ajay Mitchell": 0.6,
     "Kyrie Irving": 0.6,
-    "Naji Marshall": 0.6
+    "Naji Marshall": 0.25,
+    "Caleb Martin": 0.5
    },
    "notes": [
+    "Re-análisis 28-oct tarde: Aldama y Biberovic OUT; Naji Marshall dudoso; Kyrie sigue en duda",
     "OKC 4-0 pero sin Holmgren, Caruso, J. Williams ni Wallace; Ajay Mitchell duda",
     "DAL: Kyrie y Naji Marshall duda; de Larrea OUT",
     "Récord: OKC 4-0, DAL 2-2"
@@ -362,10 +388,10 @@
    "tip_et": "22:30",
    "venue": "Intuit Dome, Inglewood",
    "market": {
-    "spread_home": 4.5,
-    "total": 228.5,
-    "ml_home": 148,
-    "ml_away": -176
+    "spread_home": -1.5,
+    "total": 224.5,
+    "ml_home": -112,
+    "ml_away": -107
    },
    "b2b": [
     "LAL"
@@ -375,13 +401,23 @@
      "o": -0.5,
      "d": 0.0,
      "why": "Rui Hachimura OUT (cuádriceps); Ingram, Beal y Strus OUT"
+    },
+    "LAL": {
+     "o": -3.0,
+     "d": 0.5,
+     "why": "Luka Dončić OUT (espalda, b2b) y Ziaire Williams OUT (pie); Carr y Thiero OUT"
     }
    },
    "out": [
-    "Rui Hachimura"
+    "Rui Hachimura",
+    "Luka Dončić",
+    "Ziaire Williams",
+    "Cameron Carr",
+    "Adou Thiero"
    ],
    "gtd": {},
    "notes": [
+    "Re-análisis 28-oct tarde: Luka Dončić y Ziaire Williams descartados; la línea pasó de LAL -4.5 a LAC -1.5",
     "LAL en back-to-back (perdió 136-129 con POR el 27-oct)",
     "LAC: Hachimura, Ingram, Beal, Strus OUT",
     "Récord: LAL 3-1, LAC 1-2"
