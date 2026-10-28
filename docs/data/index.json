@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T16:49+00:00",
+ "generated": "2026-10-28T22:38+00:00",
  "value_ev": 0.03,
  "history": [
   {
@@ -19,6 +19,166 @@
    "units": -5.36
   }
  ],
+ "parlays": {
+  "2026-10-28": [
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Stephen Curry Under 25.5 Puntos",
+      "player": "Stephen Curry",
+      "team": "GSW",
+      "line": 25.5,
+      "stat": "pts",
+      "p": 0.77,
+      "dec": 1.82,
+      "ev": 0.402,
+      "gid": "2026-10-28-GSW-at-MIN",
+      "game": "GSW @ MIN"
+     },
+     {
+      "kind": "ml",
+      "label": "CLE gana",
+      "player": null,
+      "team": "CLE",
+      "line": null,
+      "stat": null,
+      "p": 0.84,
+      "dec": 1.254,
+      "ev": 0.054,
+      "gid": "2026-10-28-WAS-at-CLE",
+      "game": "WAS @ CLE"
+     }
+    ],
+    "n": 2,
+    "p": 0.647,
+    "p_indep": 0.647,
+    "corr": 1.0,
+    "dec": 2.28,
+    "fair": 1.55,
+    "ev": 0.476,
+    "type": "cross",
+    "result": null
+   },
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Stephen Curry Under 25.5 Puntos",
+      "player": "Stephen Curry",
+      "team": "GSW",
+      "line": 25.5,
+      "stat": "pts",
+      "p": 0.77,
+      "dec": 1.82,
+      "ev": 0.402,
+      "gid": "2026-10-28-GSW-at-MIN",
+      "game": "GSW @ MIN"
+     },
+     {
+      "kind": "ml",
+      "label": "OKC gana",
+      "player": null,
+      "team": "OKC",
+      "line": null,
+      "stat": null,
+      "p": 0.774,
+      "dec": 1.442,
+      "ev": 0.115,
+      "gid": "2026-10-28-OKC-at-DAL",
+      "game": "OKC @ DAL"
+     },
+     {
+      "kind": "ml",
+      "label": "CLE gana",
+      "player": null,
+      "team": "CLE",
+      "line": null,
+      "stat": null,
+      "p": 0.84,
+      "dec": 1.254,
+      "ev": 0.054,
+      "gid": "2026-10-28-WAS-at-CLE",
+      "game": "WAS @ CLE"
+     }
+    ],
+    "n": 3,
+    "p": 0.501,
+    "p_indep": 0.501,
+    "corr": 1.0,
+    "dec": 3.29,
+    "fair": 2.0,
+    "ev": 0.648,
+    "type": "cross",
+    "result": null
+   },
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Stephen Curry Under 25.5 Puntos",
+      "player": "Stephen Curry",
+      "team": "GSW",
+      "line": 25.5,
+      "stat": "pts",
+      "p": 0.77,
+      "dec": 1.82,
+      "ev": 0.402,
+      "gid": "2026-10-28-GSW-at-MIN",
+      "game": "GSW @ MIN"
+     },
+     {
+      "kind": "prop",
+      "label": "Caleb Wilson Over 15.5 Puntos",
+      "player": "Caleb Wilson",
+      "team": "CHI",
+      "line": 15.5,
+      "stat": "pts",
+      "p": 0.742,
+      "dec": 1.833,
+      "ev": 0.361,
+      "gid": "2026-10-28-NYK-at-CHI",
+      "game": "NYK @ CHI"
+     },
+     {
+      "kind": "ml",
+      "label": "OKC gana",
+      "player": null,
+      "team": "OKC",
+      "line": null,
+      "stat": null,
+      "p": 0.774,
+      "dec": 1.442,
+      "ev": 0.115,
+      "gid": "2026-10-28-OKC-at-DAL",
+      "game": "OKC @ DAL"
+     },
+     {
+      "kind": "ml",
+      "label": "CLE gana",
+      "player": null,
+      "team": "CLE",
+      "line": null,
+      "stat": null,
+      "p": 0.84,
+      "dec": 1.254,
+      "ev": 0.054,
+      "gid": "2026-10-28-WAS-at-CLE",
+      "game": "WAS @ CLE"
+     }
+    ],
+    "n": 4,
+    "p": 0.371,
+    "p_indep": 0.371,
+    "corr": 1.0,
+    "dec": 6.03,
+    "fair": 2.69,
+    "ev": 1.241,
+    "type": "cross",
+    "result": null
+   }
+  ]
+ },
  "games": [
   {
    "id": "2026-10-26-MIN-at-CLE",
@@ -5484,7 +5644,8 @@
      "fair": -263,
      "edge": 0.175,
      "ev": 0.319,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -5599,7 +5760,8 @@
      "fair": -201,
      "edge": 0.144,
      "ev": 0.275,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -5617,7 +5779,8 @@
      "fair": -263,
      "edge": 0.175,
      "ev": 0.319,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -5732,7 +5895,8 @@
      "fair": -201,
      "edge": 0.144,
      "ev": 0.275,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -5748,7 +5912,8 @@
      "fair": -160,
      "edge": 0.103,
      "ev": 0.2,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -5764,7 +5929,8 @@
      "fair": -155,
      "edge": 0.084,
      "ev": 0.161,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -5780,7 +5946,8 @@
      "fair": -121,
      "edge": 0.048,
      "ev": 0.095,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -5796,7 +5963,8 @@
      "fair": -142,
      "edge": 0.042,
      "ev": 0.076,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -5812,7 +5980,163 @@
      "fair": -117,
      "edge": 0.033,
      "ev": 0.066,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Naz Reid Under 18.5 Puntos",
+       "player": "Naz Reid",
+       "team": "CHA",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.725,
+       "dec": 1.82,
+       "ev": 0.319,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "prop",
+       "label": "Cade Cunningham Under 24.5 Puntos",
+       "player": "Cade Cunningham",
+       "team": "DET",
+       "line": 24.5,
+       "stat": "pts",
+       "p": 0.668,
+       "dec": 1.909,
+       "ev": 0.275,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      }
+     ],
+     "n": 2,
+     "p": 0.492,
+     "p_indep": 0.484,
+     "corr": 1.02,
+     "dec": 3.47,
+     "fair": 2.03,
+     "ev": 0.709,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Naz Reid Under 18.5 Puntos",
+       "player": "Naz Reid",
+       "team": "CHA",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.725,
+       "dec": 1.82,
+       "ev": 0.319,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "prop",
+       "label": "Cade Cunningham Under 24.5 Puntos",
+       "player": "Cade Cunningham",
+       "team": "DET",
+       "line": 24.5,
+       "stat": "pts",
+       "p": 0.668,
+       "dec": 1.909,
+       "ev": 0.275,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "prop",
+       "label": "Brandon Miller Under 24.5 Puntos",
+       "player": "Brandon Miller",
+       "team": "CHA",
+       "line": 24.5,
+       "stat": "pts",
+       "p": 0.608,
+       "dec": 1.909,
+       "ev": 0.161,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      }
+     ],
+     "n": 3,
+     "p": 0.312,
+     "p_indep": 0.294,
+     "corr": 1.06,
+     "dec": 6.63,
+     "fair": 3.2,
+     "ev": 1.073,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Naz Reid Under 18.5 Puntos",
+       "player": "Naz Reid",
+       "team": "CHA",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.725,
+       "dec": 1.82,
+       "ev": 0.319,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "total",
+       "label": "Over 214.5",
+       "player": null,
+       "team": null,
+       "line": 214.5,
+       "stat": null,
+       "p": 0.682,
+       "dec": 1.909,
+       "ev": 0.302,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "prop",
+       "label": "Cade Cunningham Under 24.5 Puntos",
+       "player": "Cade Cunningham",
+       "team": "DET",
+       "line": 24.5,
+       "stat": "pts",
+       "p": 0.668,
+       "dec": 1.909,
+       "ev": 0.275,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      },
+      {
+       "kind": "prop",
+       "label": "Grayson Allen Over 13.5 Puntos",
+       "player": "Grayson Allen",
+       "team": "CHA",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.615,
+       "dec": 1.952,
+       "ev": 0.2,
+       "gid": "2026-10-28-CHA-at-DET",
+       "game": "CHA @ DET"
+      }
+     ],
+     "n": 4,
+     "p": 0.194,
+     "p_indep": 0.203,
+     "corr": 0.95,
+     "dec": 12.95,
+     "fair": 5.16,
+     "ev": 1.507,
+     "type": "sgp"
     }
    ]
   },
@@ -5952,7 +6276,8 @@
      "fair": -207,
      "edge": 0.144,
      "ev": 0.271,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "ml",
@@ -6168,7 +6493,8 @@
      "fair": -207,
      "edge": 0.144,
      "ev": 0.271,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "ml",
@@ -6283,7 +6609,8 @@
      "fair": -164,
      "edge": 0.109,
      "ev": 0.214,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6299,7 +6626,8 @@
      "fair": -178,
      "edge": 0.105,
      "ev": 0.197,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6315,7 +6643,8 @@
      "fair": -197,
      "edge": 0.107,
      "ev": 0.193,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6331,7 +6660,8 @@
      "fair": -162,
      "edge": 0.09,
      "ev": 0.17,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6347,7 +6677,8 @@
      "fair": -148,
      "edge": 0.077,
      "ev": 0.148,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -6462,7 +6793,163 @@
      "fair": -133,
      "edge": 0.026,
      "ev": 0.047,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "ATL gana",
+       "player": null,
+       "team": "ATL",
+       "line": null,
+       "stat": null,
+       "p": 0.73,
+       "dec": 1.734,
+       "ev": 0.265,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Nickeil Alexander-Walker Over 17.5 Puntos",
+       "player": "Nickeil Alexander-Walker",
+       "team": "ATL",
+       "line": 17.5,
+       "stat": "pts",
+       "p": 0.663,
+       "dec": 1.8,
+       "ev": 0.193,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      }
+     ],
+     "n": 2,
+     "p": 0.496,
+     "p_indep": 0.484,
+     "corr": 1.02,
+     "dec": 3.12,
+     "fair": 2.02,
+     "ev": 0.548,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "ATL gana",
+       "player": null,
+       "team": "ATL",
+       "line": null,
+       "stat": null,
+       "p": 0.73,
+       "dec": 1.734,
+       "ev": 0.265,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Nickeil Alexander-Walker Over 17.5 Puntos",
+       "player": "Nickeil Alexander-Walker",
+       "team": "ATL",
+       "line": 17.5,
+       "stat": "pts",
+       "p": 0.663,
+       "dec": 1.8,
+       "ev": 0.193,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "CJ McCollum Over 16.5 Puntos",
+       "player": "CJ McCollum",
+       "team": "ATL",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.64,
+       "dec": 1.87,
+       "ev": 0.197,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      }
+     ],
+     "n": 3,
+     "p": 0.325,
+     "p_indep": 0.31,
+     "corr": 1.05,
+     "dec": 5.84,
+     "fair": 3.07,
+     "ev": 0.899,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "ATL gana",
+       "player": null,
+       "team": "ATL",
+       "line": null,
+       "stat": null,
+       "p": 0.73,
+       "dec": 1.734,
+       "ev": 0.265,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Bam Adebayo Under 16.5 Puntos",
+       "player": "Bam Adebayo",
+       "team": "MIA",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.622,
+       "dec": 1.952,
+       "ev": 0.214,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Giannis Antetokounmpo Under 30.5 Puntos",
+       "player": "Giannis Antetokounmpo",
+       "team": "MIA",
+       "line": 30.5,
+       "stat": "pts",
+       "p": 0.618,
+       "dec": 1.893,
+       "ev": 0.17,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      },
+      {
+       "kind": "total",
+       "label": "Under 241.5",
+       "player": null,
+       "team": null,
+       "line": 241.5,
+       "stat": null,
+       "p": 0.594,
+       "dec": 1.905,
+       "ev": 0.133,
+       "gid": "2026-10-28-MIA-at-ATL",
+       "game": "MIA @ ATL"
+      }
+     ],
+     "n": 4,
+     "p": 0.222,
+     "p_indep": 0.167,
+     "corr": 1.33,
+     "dec": 12.21,
+     "fair": 4.51,
+     "ev": 1.707,
+     "type": "sgp"
     }
    ]
   },
@@ -6503,7 +6990,8 @@
      "fair": -324,
      "edge": 0.241,
      "ev": 0.459,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6519,7 +7007,8 @@
      "fair": -217,
      "edge": 0.161,
      "ev": 0.307,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6535,7 +7024,8 @@
      "fair": -230,
      "edge": 0.141,
      "ev": 0.254,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -6553,7 +7043,8 @@
      "fair": -324,
      "edge": 0.241,
      "ev": 0.459,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6569,7 +7060,8 @@
      "fair": -217,
      "edge": 0.161,
      "ev": 0.307,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6585,7 +7077,8 @@
      "fair": -230,
      "edge": 0.141,
      "ev": 0.254,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -6700,7 +7193,8 @@
      "fair": -159,
      "edge": 0.079,
      "ev": 0.148,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6716,7 +7210,8 @@
      "fair": -150,
      "edge": 0.076,
      "ev": 0.145,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6732,7 +7227,8 @@
      "fair": -142,
      "edge": 0.075,
      "ev": 0.145,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6748,7 +7244,8 @@
      "fair": -130,
      "edge": 0.041,
      "ev": 0.078,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6764,7 +7261,8 @@
      "fair": -122,
      "edge": 0.026,
      "ev": 0.049,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -6780,7 +7278,163 @@
      "fair": -108,
      "edge": 0.02,
      "ev": 0.04,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LeBron James Under 16.5 Puntos",
+       "player": "LeBron James",
+       "team": "PHI",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.685,
+       "dec": 1.909,
+       "ev": 0.307,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "total",
+       "label": "Under 235.5",
+       "player": null,
+       "team": null,
+       "line": 235.5,
+       "stat": null,
+       "p": 0.64,
+       "dec": 1.938,
+       "ev": 0.24,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      }
+     ],
+     "n": 2,
+     "p": 0.464,
+     "p_indep": 0.438,
+     "corr": 1.06,
+     "dec": 3.7,
+     "fair": 2.15,
+     "ev": 0.718,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LeBron James Under 16.5 Puntos",
+       "player": "LeBron James",
+       "team": "PHI",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.685,
+       "dec": 1.909,
+       "ev": 0.307,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "total",
+       "label": "Under 235.5",
+       "player": null,
+       "team": null,
+       "line": 235.5,
+       "stat": null,
+       "p": 0.64,
+       "dec": 1.938,
+       "ev": 0.24,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "prop",
+       "label": "Joel Embiid Under 23.5 Puntos",
+       "player": "Joel Embiid",
+       "team": "PHI",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.614,
+       "dec": 1.87,
+       "ev": 0.148,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      }
+     ],
+     "n": 3,
+     "p": 0.311,
+     "p_indep": 0.269,
+     "corr": 1.16,
+     "dec": 6.92,
+     "fair": 3.21,
+     "ev": 1.154,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LeBron James Under 16.5 Puntos",
+       "player": "LeBron James",
+       "team": "PHI",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.685,
+       "dec": 1.909,
+       "ev": 0.307,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "total",
+       "label": "Under 235.5",
+       "player": null,
+       "team": null,
+       "line": 235.5,
+       "stat": null,
+       "p": 0.64,
+       "dec": 1.938,
+       "ev": 0.24,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "prop",
+       "label": "Joel Embiid Under 23.5 Puntos",
+       "player": "Joel Embiid",
+       "team": "PHI",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.614,
+       "dec": 1.87,
+       "ev": 0.148,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      },
+      {
+       "kind": "prop",
+       "label": "VJ Edgecombe Under 11.5 Puntos",
+       "player": "VJ Edgecombe",
+       "team": "PHI",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.587,
+       "dec": 1.952,
+       "ev": 0.145,
+       "gid": "2026-10-28-PHI-at-IND",
+       "game": "PHI @ IND"
+      }
+     ],
+     "n": 4,
+     "p": 0.201,
+     "p_indep": 0.158,
+     "corr": 1.27,
+     "dec": 13.5,
+     "fair": 4.98,
+     "ev": 1.714,
+     "type": "sgp"
     }
    ]
   },
@@ -7435,6 +8089,46 @@
       }
      ]
     }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "CLE gana",
+       "player": null,
+       "team": "CLE",
+       "line": null,
+       "stat": null,
+       "p": 0.84,
+       "dec": 1.254,
+       "ev": 0.054,
+       "gid": "2026-10-28-WAS-at-CLE",
+       "game": "WAS @ CLE"
+      },
+      {
+       "kind": "total",
+       "label": "Under 239.5",
+       "player": null,
+       "team": null,
+       "line": 239.5,
+       "stat": null,
+       "p": 0.554,
+       "dec": 1.87,
+       "ev": 0.035,
+       "gid": "2026-10-28-WAS-at-CLE",
+       "game": "WAS @ CLE"
+      }
+     ],
+     "n": 2,
+     "p": 0.467,
+     "p_indep": 0.465,
+     "corr": 1.0,
+     "dec": 2.34,
+     "fair": 2.14,
+     "ev": 0.094,
+     "type": "sgp"
+    }
    ]
   },
   {
@@ -7957,7 +8651,8 @@
       }
      ]
     }
-   ]
+   ],
+   "parlays": []
   },
   {
    "id": "2026-10-28-DEN-at-NOP",
@@ -7996,7 +8691,8 @@
      "fair": -258,
      "edge": 0.185,
      "ev": 0.347,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8012,7 +8708,8 @@
      "fair": -219,
      "edge": 0.163,
      "ev": 0.311,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8028,7 +8725,8 @@
      "fair": -185,
      "edge": 0.104,
      "ev": 0.191,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -8046,7 +8744,8 @@
      "fair": -258,
      "edge": 0.185,
      "ev": 0.347,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8062,7 +8761,8 @@
      "fair": -219,
      "edge": 0.163,
      "ev": 0.311,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8078,7 +8778,8 @@
      "fair": -185,
      "edge": 0.104,
      "ev": 0.191,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8094,7 +8795,8 @@
      "fair": -116,
      "edge": 0.083,
      "ev": 0.183,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8110,7 +8812,8 @@
      "fair": -133,
      "edge": 0.058,
      "ev": 0.113,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8126,7 +8829,8 @@
      "fair": -139,
      "edge": 0.046,
      "ev": 0.087,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8142,7 +8846,8 @@
      "fair": -119,
      "edge": 0.043,
      "ev": 0.085,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "ml",
@@ -8257,7 +8962,163 @@
      "fair": -108,
      "edge": 0.025,
      "ev": 0.051,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Trevon Brazile Over 6.5 Puntos",
+       "player": "Trevon Brazile",
+       "team": "DEN",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.72,
+       "dec": 1.87,
+       "ev": 0.347,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Jeremiah Fears Under 11.5 Puntos",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.909,
+       "ev": 0.311,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      }
+     ],
+     "n": 2,
+     "p": 0.496,
+     "p_indep": 0.495,
+     "corr": 1.0,
+     "dec": 3.57,
+     "fair": 2.02,
+     "ev": 0.77,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Trevon Brazile Over 6.5 Puntos",
+       "player": "Trevon Brazile",
+       "team": "DEN",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.72,
+       "dec": 1.87,
+       "ev": 0.347,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Jeremiah Fears Under 11.5 Puntos",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.909,
+       "ev": 0.311,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Saddiq Bey Over 11.5 Puntos",
+       "player": "Saddiq Bey",
+       "team": "NOP",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.65,
+       "dec": 1.833,
+       "ev": 0.191,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      }
+     ],
+     "n": 3,
+     "p": 0.326,
+     "p_indep": 0.322,
+     "corr": 1.02,
+     "dec": 6.54,
+     "fair": 3.06,
+     "ev": 1.136,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Trevon Brazile Over 6.5 Puntos",
+       "player": "Trevon Brazile",
+       "team": "DEN",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.72,
+       "dec": 1.87,
+       "ev": 0.347,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Jeremiah Fears Under 11.5 Puntos",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.909,
+       "ev": 0.311,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Saddiq Bey Over 11.5 Puntos",
+       "player": "Saddiq Bey",
+       "team": "NOP",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.65,
+       "dec": 1.833,
+       "ev": 0.191,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Nikola Jokić Over 26.5 Puntos",
+       "player": "Nikola Jokić",
+       "team": "DEN",
+       "line": 26.5,
+       "stat": "pts",
+       "p": 0.581,
+       "dec": 1.87,
+       "ev": 0.087,
+       "gid": "2026-10-28-DEN-at-NOP",
+       "game": "DEN @ NOP"
+      }
+     ],
+     "n": 4,
+     "p": 0.189,
+     "p_indep": 0.187,
+     "corr": 1.01,
+     "dec": 12.24,
+     "fair": 5.29,
+     "ev": 1.312,
+     "type": "sgp"
     }
    ]
   },
@@ -8298,7 +9159,8 @@
      "fair": -335,
      "edge": 0.221,
      "ev": 0.402,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8314,7 +9176,8 @@
      "fair": -238,
      "edge": 0.157,
      "ev": 0.287,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "spread",
@@ -8431,7 +9294,8 @@
      "fair": -335,
      "edge": 0.221,
      "ev": 0.402,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8447,7 +9311,8 @@
      "fair": -238,
      "edge": 0.157,
      "ev": 0.287,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "spread",
@@ -8562,7 +9427,8 @@
      "fair": -173,
      "edge": 0.097,
      "ev": 0.18,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "ml",
@@ -8662,6 +9528,161 @@
        "ev": 0.144
       }
      ]
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Stephen Curry Under 25.5 Puntos",
+       "player": "Stephen Curry",
+       "team": "GSW",
+       "line": 25.5,
+       "stat": "pts",
+       "p": 0.77,
+       "dec": 1.82,
+       "ev": 0.402,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "ml",
+       "label": "MIN gana",
+       "player": null,
+       "team": "MIN",
+       "line": null,
+       "stat": null,
+       "p": 0.72,
+       "dec": 1.601,
+       "ev": 0.154,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      }
+     ],
+     "n": 2,
+     "p": 0.575,
+     "p_indep": 0.554,
+     "corr": 1.04,
+     "dec": 2.91,
+     "fair": 1.74,
+     "ev": 0.677,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Stephen Curry Under 25.5 Puntos",
+       "player": "Stephen Curry",
+       "team": "GSW",
+       "line": 25.5,
+       "stat": "pts",
+       "p": 0.77,
+       "dec": 1.82,
+       "ev": 0.402,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "ml",
+       "label": "MIN gana",
+       "player": null,
+       "team": "MIN",
+       "line": null,
+       "stat": null,
+       "p": 0.72,
+       "dec": 1.601,
+       "ev": 0.154,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Brandin Podziemski Under 16.5 Puntos",
+       "player": "Brandin Podziemski",
+       "team": "GSW",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.704,
+       "dec": 1.826,
+       "ev": 0.287,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      }
+     ],
+     "n": 3,
+     "p": 0.433,
+     "p_indep": 0.39,
+     "corr": 1.11,
+     "dec": 5.32,
+     "fair": 2.31,
+     "ev": 1.305,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Stephen Curry Under 25.5 Puntos",
+       "player": "Stephen Curry",
+       "team": "GSW",
+       "line": 25.5,
+       "stat": "pts",
+       "p": 0.77,
+       "dec": 1.82,
+       "ev": 0.402,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "ml",
+       "label": "MIN gana",
+       "player": null,
+       "team": "MIN",
+       "line": null,
+       "stat": null,
+       "p": 0.72,
+       "dec": 1.601,
+       "ev": 0.154,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Brandin Podziemski Under 16.5 Puntos",
+       "player": "Brandin Podziemski",
+       "team": "GSW",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.704,
+       "dec": 1.826,
+       "ev": 0.287,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "LaMelo Ball Under 22.5 Puntos",
+       "player": "LaMelo Ball",
+       "team": "MIN",
+       "line": 22.5,
+       "stat": "pts",
+       "p": 0.634,
+       "dec": 1.862,
+       "ev": 0.18,
+       "gid": "2026-10-28-GSW-at-MIN",
+       "game": "GSW @ MIN"
+      }
+     ],
+     "n": 4,
+     "p": 0.272,
+     "p_indep": 0.247,
+     "corr": 1.1,
+     "dec": 9.91,
+     "fair": 3.67,
+     "ev": 1.7,
+     "type": "sgp"
     }
    ]
   },
@@ -8942,7 +9963,8 @@
       }
      ]
     }
-   ]
+   ],
+   "parlays": []
   },
   {
    "id": "2026-10-28-NYK-at-CHI",
@@ -8981,7 +10003,8 @@
      "fair": -288,
      "edge": 0.197,
      "ev": 0.361,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -8997,7 +10020,8 @@
      "fair": -234,
      "edge": 0.179,
      "ev": 0.344,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9013,7 +10037,8 @@
      "fair": -223,
      "edge": 0.157,
      "ev": 0.295,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -9031,7 +10056,8 @@
      "fair": -288,
      "edge": 0.197,
      "ev": 0.361,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9047,7 +10073,8 @@
      "fair": -234,
      "edge": 0.179,
      "ev": 0.344,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9063,7 +10090,8 @@
      "fair": -223,
      "edge": 0.157,
      "ev": 0.295,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9079,7 +10107,8 @@
      "fair": -178,
      "edge": 0.112,
      "ev": 0.211,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9095,7 +10124,8 @@
      "fair": -172,
      "edge": 0.104,
      "ev": 0.198,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -9210,7 +10240,8 @@
      "fair": -131,
      "edge": 0.04,
      "ev": 0.075,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9226,7 +10257,163 @@
      "fair": -126,
      "edge": 0.02,
      "ev": 0.038,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Caleb Wilson Over 15.5 Puntos",
+       "player": "Caleb Wilson",
+       "team": "CHI",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.742,
+       "dec": 1.833,
+       "ev": 0.361,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.701,
+       "dec": 1.917,
+       "ev": 0.344,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      }
+     ],
+     "n": 2,
+     "p": 0.515,
+     "p_indep": 0.52,
+     "corr": 0.99,
+     "dec": 3.51,
+     "fair": 1.94,
+     "ev": 0.811,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Caleb Wilson Over 15.5 Puntos",
+       "player": "Caleb Wilson",
+       "team": "CHI",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.742,
+       "dec": 1.833,
+       "ev": 0.361,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.701,
+       "dec": 1.917,
+       "ev": 0.344,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Mikal Bridges Under 11.5 Puntos",
+       "player": "Mikal Bridges",
+       "team": "NYK",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.69,
+       "dec": 1.877,
+       "ev": 0.295,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      }
+     ],
+     "n": 3,
+     "p": 0.357,
+     "p_indep": 0.359,
+     "corr": 1.0,
+     "dec": 6.6,
+     "fair": 2.8,
+     "ev": 1.357,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Caleb Wilson Over 15.5 Puntos",
+       "player": "Caleb Wilson",
+       "team": "CHI",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.742,
+       "dec": 1.833,
+       "ev": 0.361,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.701,
+       "dec": 1.917,
+       "ev": 0.344,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Mikal Bridges Under 11.5 Puntos",
+       "player": "Mikal Bridges",
+       "team": "NYK",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.69,
+       "dec": 1.877,
+       "ev": 0.295,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      },
+      {
+       "kind": "prop",
+       "label": "Jalen Smith Under 10.5 Puntos",
+       "player": "Jalen Smith",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.64,
+       "dec": 1.893,
+       "ev": 0.211,
+       "gid": "2026-10-28-NYK-at-CHI",
+       "game": "NYK @ CHI"
+      }
+     ],
+     "n": 4,
+     "p": 0.23,
+     "p_indep": 0.23,
+     "corr": 1.0,
+     "dec": 12.49,
+     "fair": 4.35,
+     "ev": 1.873,
+     "type": "sgp"
     }
    ]
   },
@@ -9267,7 +10454,8 @@
      "fair": -224,
      "edge": 0.191,
      "ev": 0.382,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9283,7 +10471,8 @@
      "fair": -170,
      "edge": 0.117,
      "ev": 0.229,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9299,7 +10488,8 @@
      "fair": -176,
      "edge": 0.113,
      "ev": 0.216,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -9317,7 +10507,8 @@
      "fair": -224,
      "edge": 0.191,
      "ev": 0.382,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9333,7 +10524,8 @@
      "fair": -170,
      "edge": 0.117,
      "ev": 0.229,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9349,7 +10541,8 @@
      "fair": -176,
      "edge": 0.113,
      "ev": 0.216,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9365,7 +10558,8 @@
      "fair": -165,
      "edge": 0.095,
      "ev": 0.18,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9381,7 +10575,8 @@
      "fair": -165,
      "edge": 0.095,
      "ev": 0.18,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9397,7 +10592,8 @@
      "fair": -154,
      "edge": 0.072,
      "ev": 0.135,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "total",
@@ -9597,6 +10793,161 @@
       }
      ]
     }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Aaron Fox Over 14.5 Puntos",
+       "player": "De'Aaron Fox",
+       "team": "SAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.691,
+       "dec": 2.0,
+       "ev": 0.382,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "prop",
+       "label": "Keyonte George Over 20.5 Puntos",
+       "player": "Keyonte George",
+       "team": "UTA",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.893,
+       "ev": 0.18,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      }
+     ],
+     "n": 2,
+     "p": 0.437,
+     "p_indep": 0.43,
+     "corr": 1.01,
+     "dec": 3.79,
+     "fair": 2.29,
+     "ev": 0.654,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Aaron Fox Over 14.5 Puntos",
+       "player": "De'Aaron Fox",
+       "team": "SAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.691,
+       "dec": 2.0,
+       "ev": 0.382,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "prop",
+       "label": "Keyonte George Over 20.5 Puntos",
+       "player": "Keyonte George",
+       "team": "UTA",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.893,
+       "ev": 0.18,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "total",
+       "label": "Over 233.5",
+       "player": null,
+       "team": null,
+       "line": 233.5,
+       "stat": null,
+       "p": 0.573,
+       "dec": 1.913,
+       "ev": 0.096,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      }
+     ],
+     "n": 3,
+     "p": 0.288,
+     "p_indep": 0.247,
+     "corr": 1.17,
+     "dec": 7.24,
+     "fair": 3.47,
+     "ev": 1.088,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Aaron Fox Over 14.5 Puntos",
+       "player": "De'Aaron Fox",
+       "team": "SAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.691,
+       "dec": 2.0,
+       "ev": 0.382,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "prop",
+       "label": "Keyonte George Over 20.5 Puntos",
+       "player": "Keyonte George",
+       "team": "UTA",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.893,
+       "ev": 0.18,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "prop",
+       "label": "Dylan Harper Over 15.5 Puntos",
+       "player": "Dylan Harper",
+       "team": "SAS",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.893,
+       "ev": 0.18,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      },
+      {
+       "kind": "total",
+       "label": "Over 233.5",
+       "player": null,
+       "team": null,
+       "line": 233.5,
+       "stat": null,
+       "p": 0.573,
+       "dec": 1.913,
+       "ev": 0.096,
+       "gid": "2026-10-28-SAS-at-UTA",
+       "game": "SAS @ UTA"
+      }
+     ],
+     "n": 4,
+     "p": 0.192,
+     "p_indep": 0.154,
+     "corr": 1.25,
+     "dec": 13.71,
+     "fair": 5.2,
+     "ev": 1.636,
+     "type": "sgp"
+    }
    ]
   },
   {
@@ -9636,7 +10987,8 @@
      "fair": -329,
      "edge": 0.255,
      "ev": 0.497,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9652,7 +11004,8 @@
      "fair": -290,
      "edge": 0.198,
      "ev": 0.363,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9668,7 +11021,8 @@
      "fair": -231,
      "edge": 0.185,
      "ev": 0.362,
-     "value": true
+     "value": true,
+     "stat": "pts"
     }
    ],
    "value_bets": [
@@ -9686,7 +11040,8 @@
      "fair": -329,
      "edge": 0.255,
      "ev": 0.497,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9702,7 +11057,8 @@
      "fair": -290,
      "edge": 0.198,
      "ev": 0.363,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9718,7 +11074,8 @@
      "fair": -231,
      "edge": 0.185,
      "ev": 0.362,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9734,7 +11091,8 @@
      "fair": -216,
      "edge": 0.16,
      "ev": 0.305,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "prop",
@@ -9750,7 +11108,8 @@
      "fair": -200,
      "edge": 0.111,
      "ev": 0.2,
-     "value": true
+     "value": true,
+     "stat": "pts"
     },
     {
      "kind": "spread",
@@ -10063,7 +11422,163 @@
      "fair": -143,
      "edge": 0.033,
      "ev": 0.06,
-     "value": true
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "OKC gana",
+       "player": null,
+       "team": "OKC",
+       "line": null,
+       "stat": null,
+       "p": 0.774,
+       "dec": 1.442,
+       "ev": 0.115,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Isaiah Hartenstein Over 9.5 Puntos",
+       "player": "Isaiah Hartenstein",
+       "team": "OKC",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.952,
+       "ev": 0.497,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      }
+     ],
+     "n": 2,
+     "p": 0.603,
+     "p_indep": 0.594,
+     "corr": 1.01,
+     "dec": 2.81,
+     "fair": 1.66,
+     "ev": 0.696,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "OKC gana",
+       "player": null,
+       "team": "OKC",
+       "line": null,
+       "stat": null,
+       "p": 0.774,
+       "dec": 1.442,
+       "ev": 0.115,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Isaiah Hartenstein Over 9.5 Puntos",
+       "player": "Isaiah Hartenstein",
+       "team": "OKC",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.952,
+       "ev": 0.497,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Shai Gilgeous-Alexander Over 30.5 Puntos",
+       "player": "Shai Gilgeous-Alexander",
+       "team": "OKC",
+       "line": 30.5,
+       "stat": "pts",
+       "p": 0.743,
+       "dec": 1.833,
+       "ev": 0.363,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      }
+     ],
+     "n": 3,
+     "p": 0.459,
+     "p_indep": 0.441,
+     "corr": 1.04,
+     "dec": 5.16,
+     "fair": 2.18,
+     "ev": 1.369,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "OKC gana",
+       "player": null,
+       "team": "OKC",
+       "line": null,
+       "stat": null,
+       "p": 0.774,
+       "dec": 1.442,
+       "ev": 0.115,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Isaiah Hartenstein Over 9.5 Puntos",
+       "player": "Isaiah Hartenstein",
+       "team": "OKC",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.952,
+       "ev": 0.497,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Shai Gilgeous-Alexander Over 30.5 Puntos",
+       "player": "Shai Gilgeous-Alexander",
+       "team": "OKC",
+       "line": 30.5,
+       "stat": "pts",
+       "p": 0.743,
+       "dec": 1.833,
+       "ev": 0.363,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Cooper Flagg Under 23.5 Puntos",
+       "player": "Cooper Flagg",
+       "team": "DAL",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.698,
+       "dec": 1.952,
+       "ev": 0.362,
+       "gid": "2026-10-28-OKC-at-DAL",
+       "game": "OKC @ DAL"
+      }
+     ],
+     "n": 4,
+     "p": 0.33,
+     "p_indep": 0.308,
+     "corr": 1.07,
+     "dec": 10.07,
+     "fair": 3.03,
+     "ev": 2.323,
+     "type": "sgp"
     }
    ]
   },
@@ -10685,6 +12200,46 @@
        "ev": 0.08
       }
      ]
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "spread",
+       "label": "LAC +4.5",
+       "player": null,
+       "team": "LAC",
+       "line": 4.5,
+       "stat": null,
+       "p": 0.637,
+       "dec": 1.867,
+       "ev": 0.189,
+       "gid": "2026-10-28-LAL-at-LAC",
+       "game": "LAL @ LAC"
+      },
+      {
+       "kind": "total",
+       "label": "Over 228.5",
+       "player": null,
+       "team": null,
+       "line": 228.5,
+       "stat": null,
+       "p": 0.587,
+       "dec": 1.892,
+       "ev": 0.11,
+       "gid": "2026-10-28-LAL-at-LAC",
+       "game": "LAL @ LAC"
+      }
+     ],
+     "n": 2,
+     "p": 0.376,
+     "p_indep": 0.374,
+     "corr": 1.01,
+     "dec": 3.53,
+     "fair": 2.66,
+     "ev": 0.33,
+     "type": "sgp"
     }
    ]
   }
