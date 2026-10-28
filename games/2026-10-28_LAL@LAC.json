@@ -1,0 +1,480 @@
+{
+ "game": {
+  "date": "2026-10-28",
+  "away": "LAL",
+  "home": "LAC",
+  "venue": "Intuit Dome, Inglewood",
+  "tip_et": "22:30",
+  "notes": [
+   "LAL en back-to-back (perdió 136-129 con POR el 27-oct)",
+   "LAC: Hachimura, Ingram, Beal, Strus OUT",
+   "Récord: LAL 3-1, LAC 1-2"
+  ],
+  "out": [
+   "Rui Hachimura"
+  ],
+  "gtd": {}
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "LAC": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 116.51,
+    "drtg": 115.47,
+    "pace": 97.57
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Rui Hachimura OUT (cuádriceps); Ingram, Beal y Strus OUT"
+   }
+  },
+  "LAL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.21,
+    "drtg": 115.77,
+    "pace": 99.5
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 1.0,
+    "pace": -0.5
+   },
+   "context": {
+    "b2b": true,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "LAC": {},
+  "LAL": {}
+ },
+ "players": [
+  {
+   "team": "LAC",
+   "name": "Darius Garland",
+   "pos": "PG",
+   "starter": true,
+   "min": 38.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.7,
+    "pts": 24.0,
+    "reb": 1.7,
+    "ast": 7.0,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 29.9,
+    "pts": 18.8,
+    "reb": 2.4,
+    "ast": 6.7,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Kris Dunn",
+   "pos": "PG",
+   "starter": true,
+   "min": 36.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.0,
+    "pts": 9.7,
+    "reb": 4.3,
+    "ast": 6.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 27.2,
+    "pts": 7.3,
+    "reb": 3.3,
+    "ast": 3.6,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Derrick Jones Jr.",
+   "pos": "SF",
+   "starter": true,
+   "min": 35.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.3,
+    "pts": 11.7,
+    "reb": 5.3,
+    "ast": 2.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 10.1,
+    "reb": 3.5,
+    "ast": 1.4,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Keaton Wagler",
+   "pos": "SG",
+   "starter": true,
+   "min": 30.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.0,
+    "pts": 13.0,
+    "reb": 4.3,
+    "ast": 4.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 26.0,
+    "pts": 13.0,
+    "reb": 4.3,
+    "ast": 4.0,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Brook Lopez",
+   "pos": "C",
+   "starter": false,
+   "min": 27.6,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.3,
+    "pts": 18.0,
+    "reb": 5.3,
+    "ast": 1.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 21.8,
+    "pts": 8.5,
+    "reb": 3.6,
+    "ast": 1.3,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Isaiah Jackson",
+   "pos": "C",
+   "starter": true,
+   "min": 26.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.3,
+    "pts": 9.7,
+    "reb": 5.7,
+    "ast": 2.3,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 16.8,
+    "pts": 6.4,
+    "reb": 5.6,
+    "ast": 0.8,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Kobe Sanders",
+   "pos": "SG",
+   "starter": false,
+   "min": 22.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.3,
+    "pts": 6.3,
+    "reb": 2.3,
+    "ast": 3.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 19.9,
+    "pts": 7.3,
+    "reb": 2.3,
+    "ast": 1.6,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Gradey Dick",
+   "pos": "SG",
+   "starter": false,
+   "min": 18.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.0,
+    "pts": 8.0,
+    "reb": 3.7,
+    "ast": 0.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 14.0,
+    "pts": 6.0,
+    "reb": 1.9,
+    "ast": 0.7,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Austin Reaves",
+   "pos": "SG",
+   "starter": true,
+   "min": 36.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 36.2,
+    "pts": 26.5,
+    "reb": 2.7,
+    "ast": 6.5,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 34.5,
+    "pts": 23.3,
+    "reb": 4.7,
+    "ast": 5.5,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Luka Dončić",
+   "pos": "PG",
+   "starter": true,
+   "min": 36.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.5,
+    "pts": 36.0,
+    "reb": 6.7,
+    "ast": 8.2,
+    "fg3m": 5.2
+   },
+   "prior": {
+    "min": 35.8,
+    "pts": 33.5,
+    "reb": 7.7,
+    "ast": 8.3,
+    "fg3m": 4.0
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Walker Kessler",
+   "pos": "C",
+   "starter": true,
+   "min": 32.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.5,
+    "pts": 15.8,
+    "reb": 8.0,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 30.8,
+    "pts": 14.4,
+    "reb": 10.8,
+    "ast": 3.0,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Ziaire Williams",
+   "pos": "SF",
+   "starter": true,
+   "min": 28.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.5,
+    "pts": 11.2,
+    "reb": 3.0,
+    "ast": 2.3,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 22.9,
+    "pts": 10.2,
+    "reb": 2.4,
+    "ast": 1.1,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Quentin Grimes",
+   "pos": "SG",
+   "starter": false,
+   "min": 24.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.2,
+    "pts": 7.0,
+    "reb": 3.8,
+    "ast": 2.2,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 29.4,
+    "pts": 13.4,
+    "reb": 3.6,
+    "ast": 3.3,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Matisse Thybulle",
+   "pos": "SG",
+   "starter": true,
+   "min": 24.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.7,
+    "pts": 8.0,
+    "reb": 1.8,
+    "ast": 1.2,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 16.0,
+    "pts": 5.8,
+    "reb": 2.0,
+    "ast": 0.9,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Sandro Mamukelashvili",
+   "pos": "PF",
+   "starter": false,
+   "min": 23.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.7,
+    "pts": 9.5,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 21.9,
+    "pts": 11.2,
+    "reb": 4.9,
+    "ast": 1.9,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Jake LaRavia",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.6,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.3,
+    "pts": 5.0,
+    "reb": 2.3,
+    "ast": 1.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 25.1,
+    "pts": 8.2,
+    "reb": 4.0,
+    "ast": 1.8,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Collin Sexton",
+   "pos": "SG",
+   "starter": false,
+   "min": 17.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.7,
+    "pts": 9.0,
+    "reb": 1.3,
+    "ast": 2.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 23.7,
+    "pts": 15.4,
+    "reb": 2.3,
+    "ast": 3.3,
+    "fg3m": 1.6
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 28-oct (calendario, 12 partidos); Covers.com (spread, total y ML; props de puntos)",
+  "spread_home": 4.5,
+  "total": 228.5,
+  "ml_home": 148,
+  "ml_away": -176
+ },
+ "prop_lines": {}
+}

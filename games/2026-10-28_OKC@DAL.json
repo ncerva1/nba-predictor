@@ -1,0 +1,606 @@
+{
+ "game": {
+  "date": "2026-10-28",
+  "away": "OKC",
+  "home": "DAL",
+  "venue": "American Airlines Center, Dallas",
+  "tip_et": "21:30",
+  "notes": [
+   "OKC 4-0 pero sin Holmgren, Caruso, J. Williams ni Wallace; Ajay Mitchell duda",
+   "DAL: Kyrie y Naji Marshall duda; de Larrea OUT",
+   "Récord: OKC 4-0, DAL 2-2"
+  ],
+  "out": [
+   "Chet Holmgren",
+   "Alex Caruso",
+   "Jalen Williams",
+   "Cason Wallace"
+  ],
+  "gtd": {
+   "Ajay Mitchell": 0.6,
+   "Kyrie Irving": 0.6,
+   "Naji Marshall": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "DAL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 110.51,
+    "drtg": 115.77,
+    "pace": 102.9
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "OKC": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.81,
+    "drtg": 106.77,
+    "pace": 100.65
+   },
+   "adj": {
+    "o": -2.0,
+    "d": 1.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Holmgren y Caruso OUT (hasta 31-oct), Jalen Williams y Cason Wallace OUT hasta marzo"
+   }
+  }
+ },
+ "matchup": {
+  "DAL": {},
+  "OKC": {}
+ },
+ "players": [
+  {
+   "team": "DAL",
+   "name": "Patrick Washington",
+   "pos": "PF",
+   "starter": true,
+   "min": 32.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.0,
+    "pts": 15.5,
+    "reb": 7.5,
+    "ast": 1.5,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 14.2,
+    "reb": 7.0,
+    "ast": 1.8,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Cooper Flagg",
+   "pos": "SF",
+   "starter": true,
+   "min": 27.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 25.0,
+    "reb": 5.3,
+    "ast": 6.3,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 21.0,
+    "reb": 6.7,
+    "ast": 4.5,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Zaccharie Risacher",
+   "pos": "SF",
+   "starter": false,
+   "min": 27.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 8.0,
+    "reb": 6.0,
+    "ast": 1.5,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 22.4,
+    "pts": 9.6,
+    "reb": 3.8,
+    "ast": 1.1,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Max Christie",
+   "pos": "SG",
+   "starter": true,
+   "min": 27.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.5,
+    "pts": 9.3,
+    "reb": 4.3,
+    "ast": 2.5,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 29.1,
+    "pts": 12.3,
+    "reb": 3.2,
+    "ast": 2.0,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Naji Marshall",
+   "pos": "SF",
+   "starter": false,
+   "min": 25.7,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 27.7,
+    "pts": 13.7,
+    "reb": 3.3,
+    "ast": 5.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 29.5,
+    "pts": 15.2,
+    "reb": 4.7,
+    "ast": 3.3,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Kyrie Irving",
+   "pos": "SG",
+   "starter": true,
+   "min": 25.0,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 27.0,
+    "pts": 19.0,
+    "reb": 3.7,
+    "ast": 3.7,
+    "fg3m": 2.7
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 19.0,
+    "reb": 3.7,
+    "ast": 3.7,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Daniel Gafford",
+   "pos": "C",
+   "starter": true,
+   "min": 19.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 6.5,
+    "reb": 6.0,
+    "ast": 2.8,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 21.7,
+    "pts": 9.5,
+    "reb": 6.9,
+    "ast": 1.1,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Marcus Sasser",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 8.8,
+    "reb": 1.8,
+    "ast": 2.3,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 21.3,
+    "pts": 8.8,
+    "reb": 1.8,
+    "ast": 2.3,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Morez Johnson Jr.",
+   "pos": "PF",
+   "starter": false,
+   "min": 13.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.5,
+    "pts": 6.5,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 14.5,
+    "pts": 6.5,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Sergio de Larrea",
+   "pos": "PG",
+   "starter": false,
+   "min": 10.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.5,
+    "pts": 5.3,
+    "reb": 2.0,
+    "ast": 1.3,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 11.5,
+    "pts": 5.3,
+    "reb": 2.0,
+    "ast": 1.3,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Walter Clayton",
+   "pos": "PG",
+   "starter": false,
+   "min": 10.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.0,
+    "pts": 6.0,
+    "reb": 2.3,
+    "ast": 3.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 20.4,
+    "pts": 7.8,
+    "reb": 2.0,
+    "ast": 4.1,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "PG",
+   "starter": true,
+   "min": 38.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.3,
+    "pts": 27.3,
+    "reb": 4.3,
+    "ast": 3.8,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 31.1,
+    "reb": 4.3,
+    "ast": 6.6,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Ajay Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 33.4,
+   "g_cur": 4,
+   "p_play": 0.6,
+   "cur": {
+    "min": 24.8,
+    "pts": 16.0,
+    "reb": 3.3,
+    "ast": 3.8,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 13.6,
+    "reb": 3.3,
+    "ast": 3.6,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Isaiah Hartenstein",
+   "pos": "C",
+   "starter": true,
+   "min": 31.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.3,
+    "pts": 9.3,
+    "reb": 8.5,
+    "ast": 2.3,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 24.2,
+    "pts": 9.2,
+    "reb": 9.4,
+    "ast": 3.5,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Jared McCain",
+   "pos": "SG",
+   "starter": true,
+   "min": 30.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.8,
+    "pts": 11.3,
+    "reb": 1.5,
+    "ast": 1.8,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 17.3,
+    "pts": 8.3,
+    "reb": 2.0,
+    "ast": 1.3,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Josh Dix",
+   "pos": "SG",
+   "starter": false,
+   "min": 29.7,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.0,
+    "pts": 0.0,
+    "reb": 1.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 0.0,
+    "reb": 1.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Jaylin Williams",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.8,
+    "pts": 3.5,
+    "reb": 4.3,
+    "ast": 1.8,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 19.6,
+    "pts": 7.2,
+    "reb": 5.5,
+    "ast": 2.4,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Aday Mara",
+   "pos": "C",
+   "starter": false,
+   "min": 19.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.5,
+    "pts": 5.5,
+    "reb": 4.5,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 14.5,
+    "pts": 5.5,
+    "reb": 4.5,
+    "ast": 1.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Kenrich Williams",
+   "pos": "PF",
+   "starter": true,
+   "min": 14.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.0,
+    "pts": 3.0,
+    "reb": 2.8,
+    "ast": 0.3,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 15.3,
+    "pts": 6.5,
+    "reb": 3.3,
+    "ast": 1.4,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Bennett Stirtz",
+   "pos": "PG",
+   "starter": false,
+   "min": 12.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.5,
+    "pts": 2.3,
+    "reb": 0.5,
+    "ast": 0.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 9.5,
+    "pts": 2.3,
+    "reb": 0.5,
+    "ast": 0.3,
+    "fg3m": 0.3
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 28-oct (calendario, 12 partidos); Covers.com (spread, total y ML; props de puntos)",
+  "spread_home": 6.5,
+  "total": 228.5,
+  "ml_home": 190,
+  "ml_away": -230
+ },
+ "prop_lines": {
+  "Cooper Flagg": {
+   "pts": [
+    23.5,
+    -125,
+    -105
+   ]
+  },
+  "Ajay Mitchell": {
+   "pts": [
+    17.5,
+    -125,
+    -105
+   ]
+  },
+  "Patrick Washington": {
+   "pts": [
+    13.5,
+    -125,
+    -105
+   ]
+  },
+  "Max Christie": {
+   "pts": [
+    10.5,
+    -105,
+    -125
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "pts": [
+    9.5,
+    -105,
+    -125
+   ]
+  },
+  "Daniel Gafford": {
+   "pts": [
+    8.5,
+    -120,
+    -110
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "pts": [
+    30.5,
+    -120,
+    -110
+   ]
+  }
+ }
+}
