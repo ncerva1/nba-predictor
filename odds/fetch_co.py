@@ -16,7 +16,8 @@ from datetime import datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOKS = {"Rushbet": ["rsico"], "BetPlay": ["betplay"]}  # código de operador en Kambi (se prueban en orden)
-API = "https://eu-offering-api.kambicdn.com/offering/v2018/{op}/{path}?lang=en_GB&market=CO&client_id=2&channel_id=1&includeParticipants=true"
+# Los operadores colombianos solo responden en el host us1 (eu-offering-api da 429 "No access")
+API = "https://us1.offering-api.kambicdn.com/offering/v2018/{op}/{path}?lang=en_GB&market=CO&client_id=2&channel_id=1&includeParticipants=true"
 BOGOTA = timezone(timedelta(hours=-5))
 
 TEAMS = {
@@ -29,7 +30,8 @@ TEAMS = {
     "Phoenix Suns": "PHX", "Portland Trail Blazers": "POR", "Sacramento Kings": "SAC", "San Antonio Spurs": "SAS",
     "Toronto Raptors": "TOR", "Utah Jazz": "UTA", "Washington Wizards": "WAS",
 }
-PROP_STATS = [("points, rebounds", "pra"), ("3-point", "fg3m"), ("points", "pts"), ("rebounds", "reb"), ("assists", "ast")]
+PROP_STATS = [("points, rebounds & assists", "pra"), ("3-point field goals made", "fg3m"), ("points scored", "pts"),
+              ("rebounds by", "reb"), ("assists by", "ast")]  # por prefijo: "Points & Rebounds" etc. no entran
 SKIP = ("quarter", "half", "player", "by ", "race", "margin", "odd/even", "3-way", "winning")
 
 
@@ -101,7 +103,7 @@ def parse_event(data):
         typ = (bo.get("betOfferType", {}).get("englishName") or "").lower()
         outs = [o for o in bo.get("outcomes", []) if o.get("status", "OPEN") == "OPEN" and o.get("odds")]
         if "by the player" in crit or ("player" in crit and typ == "over/under"):
-            stat = next((k for s, k in PROP_STATS if s in crit), None)
+            stat = next((k for s, k in PROP_STATS if crit.startswith(s)), None)
             ov = next((o for o in outs if o.get("type") == "OT_OVER"), None)
             un = next((o for o in outs if o.get("type") == "OT_UNDER"), None)
             if stat and ov and un and ov.get("line") is not None:
@@ -113,13 +115,13 @@ def parse_event(data):
             continue
         if any(s in crit for s in SKIP) or len(outs) != 2:
             continue
-        if typ == "match" or "moneyline" in crit:
+        if crit.startswith("moneyline"):  # "First to 25 Points", "Quarter 1"... también son tipo Match
             for o in outs:
                 s = side(o, ev)
                 if s: rec[f"ml_{s}"] = american(o["odds"] / 1000)
-        elif typ == "handicap" and all(o.get("line") is not None for o in outs):
+        elif typ == "handicap" and crit.startswith("point spread") and all(o.get("line") is not None for o in outs):
             cand["spread"].append(outs)
-        elif typ == "over/under" and "total" in crit:
+        elif typ == "over/under" and crit.startswith("total points"):  # no "Total Match Assists"
             cand["total"].append(outs)
     if cand["spread"]:
         for o in min(cand["spread"], key=even):
