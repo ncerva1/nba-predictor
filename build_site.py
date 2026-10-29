@@ -437,7 +437,8 @@ def index_entry(r):
     g, sm = r["game"], r["summary"]
     vb = [b for b in r["bets"] if b["value"]]
     e = dict(id=r["id"], date=g["date"], away=g["away"], home=g["home"], tip_et=g.get("tip_et"),
-             venue=g.get("venue"), records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
+             venue=g.get("venue"), competition=g.get("competition", "regular"), cup_round=g.get("cup_round"),
+             records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
              proj_total=sm["proj_total"], used_db=r["used_db"],
              n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []))
     if "result" in r:
