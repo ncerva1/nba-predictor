@@ -23,3 +23,9 @@ cd docs && python -m http.server 8000   # abrir http://localhost:8000
 ## Cuotas de varias casas
 Guarda las cuotas del día en `odds/<fecha>.json` (formato: `{"games": {"AWAY@HOME": {"books": [{"book": "FanDuel", "spread_away": [4.5, -110], "spread_home": [-4.5, -110], "total": [233.5, -108, -112], "ml_away": 154, "ml_home": -180}]}}}`).
 `build_site.py` usa la línea más repetida entre las casas, promedia sus cuotas y muestra la mejor casa para cada apuesta. Si un partido no aparece en ese archivo, usa el `market` del JSON del partido (y -110 si falta la cuota).
+
+### Casas de Colombia (Rushbet, BetPlay)
+`python odds/fetch_co.py <fecha>` descarga sus cuotas de la API de Kambi (solo responde desde una conexión normal,
+no desde la nube: correrlo en el PC), guarda `odds/co/<fecha>.json` y las mezcla en `odds/<fecha>.json` con
+`"region": "CO"`. La web las marca con la etiqueta CO y muestra la mejor opción en Colombia de cada apuesta.
+Después, `python build_site.py <fecha>`.

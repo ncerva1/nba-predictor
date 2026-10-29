@@ -195,6 +195,8 @@ tr.detail td { background: var(--bg) }
 .book { font: 12px var(--mono); border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 3px 8px; white-space: nowrap }
 .book i { font-style: normal; color: var(--muted) }
 .book.good i { color: var(--good) } .book.bad i { color: var(--bad) }
+.co { font: 600 9px var(--mono); letter-spacing: .04em; color: #fff; background: #1a4fa0; border-radius: 3px; padding: 1px 3px; margin-left: 4px; vertical-align: 1px }
+.bestco { margin-top: 3px }
 .res { font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap }
 .res.won { background: var(--good-soft); color: var(--good) }
 .res.lost { background: var(--bad-soft); color: var(--bad) }
@@ -401,16 +403,20 @@ const howto = `<details class="howto"><summary>¿Cómo leer esta tabla?</summary
   <dt>Cuota justa</dt><dd>La cuota que haría la apuesta neutra según el modelo (1 / prob. modelo). Si la casa paga más que esto, hay valor.</dd>
   <dt>EV</dt><dd>Ganancia esperada por cada 100 apostados con la cuota promedio. +10% significa ganar 10 de media por cada 100 a largo plazo. El color se decide con esta cuota promedio.</dd>
   <dt>Mejor casa</dt><dd>La casa donde la apuesta rinde más según el modelo, a veces con una línea distinta (por ejemplo -13.5 en vez de -14.5). En la página de cada partido puedes ver todas las casas.</dd>
+  <dt>Casas de Colombia <span class="co">CO</span></dt><dd>Rushbet y BetPlay, cuando hay cuotas suyas para el partido. Cuentan en el promedio como una casa más, y debajo de la mejor casa se muestra la mejor opción en Colombia.</dd>
 </dl></details>`;
 
 const lineTxt = (b, l) => l == null ? "" : (b.kind === "total" ? `${l} ` : `${l > 0 ? "+" : ""}${l} `);
 function bestCell(b, thr) {
   if (!b.best) return `<span class="muted">—</span>`;
   const o = b.best, other = o.line !== b.line;
-  return `<div class="num">${esc(o.book)}</div><div class="kind">${other ? esc(lineTxt(b, o.line)) + "@ " : "@ "}${o.dec.toFixed(2)} · EV ${evTxt(o.ev)}</div>`;
+  const co = b.best_co && b.best_co !== o && b.best_co.book !== o.book ? b.best_co : null;
+  return `<div class="num">${esc(o.book)}${coTag(o)}</div><div class="kind">${other ? esc(lineTxt(b, o.line)) + "@ " : "@ "}${o.dec.toFixed(2)} · EV ${evTxt(o.ev)}</div>` +
+    (co ? `<div class="kind bestco">En Colombia: ${esc(co.book)} ${co.line !== b.line ? esc(lineTxt(b, co.line)) : ""}@ ${co.dec.toFixed(2)} · EV ${evTxt(co.ev)}</div>` : "");
 }
+const coTag = o => o.region === "CO" ? `<span class="co" title="Casa de Colombia">CO</span>` : "";
 function bookList(b) {
-  return `<div class="books">${b.books.map(o => `<span class="book${o.ev >= INDEX.value_ev ? " good" : o.ev < 0 ? " bad" : ""}"><b>${esc(o.book)}</b> ${esc(lineTxt(b, o.line))}@ ${o.dec.toFixed(2)} <i>${evTxt(o.ev)}</i></span>`).join("")}</div>`;
+  return `<div class="books">${b.books.map(o => `<span class="book${o.ev >= INDEX.value_ev ? " good" : o.ev < 0 ? " bad" : ""}"><b>${esc(o.book)}</b>${coTag(o)} ${esc(lineTxt(b, o.line))}@ ${o.dec.toFixed(2)} <i>${evTxt(o.ev)}</i></span>`).join("")}</div>`;
 }
 const RES = { won: "Ganada", lost: "Perdida", push: "Nula" };
 const resPill = r => r ? `<span class="res ${r}">${RES[r]}</span>` : "";
