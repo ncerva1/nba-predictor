@@ -25,7 +25,8 @@ Flujo:
     de enfrentamiento (rebote, asistencias, triples concedidos) y por la defensa vs posición del rival,
     y dibujadas con Poisson-gamma (sobre-dispersión).
  6. H2H (1.3): si el jugador enfrentó al rival de hoy la temporada pasada con su equipo actual, sus tasas por
-    minuto se mezclan con las de esos partidos (peso n / (n + H2H_K)) y sus minutos con la mitad de ese peso.
+    minuto se mezclan con las de esos partidos (peso n / (n + H2H_K)) y sus minutos con el mismo peso si su rol
+    (titular / suplente) es el mismo que hoy.
 """
 import glob, json, os, re, sys, unicodedata
 import numpy as np
@@ -37,9 +38,10 @@ MIN_SD = {True: 5.5, False: 6.0}  # DE de minutos titular / suplente (antes 3.5 
 EXIT_P, EXIT_FRAC = 0.04, (0.15, 0.6)  # prob. de salir pronto (lesión, faltas) y fracción de minutos que juega
 PLAYER_K = 6  # partidos de encogimiento de las tasas por minuto hacia la temporada anterior (antes 3)
 # 1.3 (pedido de Nicolas, 29-oct): más peso a los enfrentamientos H2H de la temporada pasada contra el mismo
-# rival. Peso de las tasas H2H = n / (n + H2H_K) (1 partido 0.25, 2 -> 0.40, 4 -> 0.57); los minutos H2H
-# entran con la mitad de ese peso. Solo cuentan partidos en que jugó >= H2H_MIN_MIN con su equipo actual.
-H2H_K, H2H_MIN_W, H2H_MIN_MIN = 3, 0.5, 10
+# rival. Peso de las tasas H2H = n / (n + H2H_K) (1 partido 0.25, 2 -> 0.40, 4 -> 0.57). Solo cuentan
+# partidos en que jugó >= H2H_MIN_MIN con su equipo actual. Minutos (1.3.1): mismo peso si su rol no cambió
+# (titular entonces y ahora, o suplente entonces y ahora); si cambió, los minutos H2H no cuentan.
+H2H_K, H2H_MIN_MIN = 3, 10
 MAX_MIN = 44
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -108,6 +110,12 @@ def prior_season(date):
     return f"{y - 1}-{str(y)[2:]}"
 
 
+def h2h_same_role(p):
+    """True si su rol en los H2H (titular en la mayoría o no) es el mismo que hoy."""
+    hh = p["h2h"]
+    return (hh.get("gs", 0) * 2 >= hh["g"]) == bool(p["starter"])
+
+
 def apply_h2h(cfg):
     """Añade a cada jugador sus partidos de la temporada pasada contra el rival de hoy (h2h/<temporada>.json),
     jugando con su equipo actual: p["h2h"] = {g, min, pts, reb, ast, fg3m} (sumas). Lo usa simulate()."""
@@ -120,17 +128,18 @@ def apply_h2h(cfg):
     lines = {}
     for x in games:
         for team, ps in x["players"].items():
-            for n, mi, pts, reb, ast, f3 in ps:
-                if mi >= H2H_MIN_MIN:
-                    lines.setdefault((team, name_key(n)), []).append((mi, pts, reb, ast, f3))
+            for i, (n, mi, pts, reb, ast, f3) in enumerate(ps):
+                if mi >= H2H_MIN_MIN:  # los box scores de ESPN listan primero a los 5 titulares
+                    lines.setdefault((team, name_key(n)), []).append((mi, pts, reb, ast, f3, int(i < 5)))
     rep = {"season": prior_season(g["date"]), "games": len(games), "players": {}}
     for p in cfg["players"]:
         rows = lines.get((p["team"], name_key(p["name"])))
         if rows:
             tot = np.sum(rows, axis=0)
-            p["h2h"] = dict(g=len(rows), **{k: float(v) for k, v in zip(("min", "pts", "reb", "ast", "fg3m"), tot)})
+            p["h2h"] = dict(g=len(rows), **{k: float(v) for k, v in zip(("min", "pts", "reb", "ast", "fg3m", "gs"), tot)})
             rep["players"][p["name"]] = dict(g=len(rows), w=round(len(rows) / (len(rows) + H2H_K), 2),
-                                             min=round(tot[0] / len(rows), 1), pts=round(tot[1] / len(rows), 1))
+                                             min=round(tot[0] / len(rows), 1), pts=round(tot[1] / len(rows), 1),
+                                             same_role=h2h_same_role(p))
     cfg["_h2h_report"] = rep
     return cfg
 
@@ -188,7 +197,8 @@ def simulate(cfg, n=20000, seed=7):
         if hh and hh["g"] > 0 and hh["min"] > 0:
             wh = hh["g"] / (hh["g"] + H2H_K)
             p["rate"] = {s: (1 - wh) * p["rate"][s] + wh * hh[s] / hh["min"] for s in STAT_R}
-            base_min[p["name"]] = (1 - wh * H2H_MIN_W) * p["min"] + wh * H2H_MIN_W * hh["min"] / hh["g"]
+            if h2h_same_role(p):  # con otro rol (suplente que ahora es titular...) sus minutos H2H no sirven
+                base_min[p["name"]] = (1 - wh) * p["min"] + wh * hh["min"] / hh["g"]
     for t in (h, a):  # los minutos H2H cambian el reparto, no el total del equipo
         tp = [p for p in players if p["team"] == t]
         k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)

@@ -8,14 +8,20 @@ hizo 39 y 26, y anotó 42). Al empezar la temporada hay pocos partidos y cada ri
   solo los que jugó con su equipo actual y con >= 10 min (`apply_h2h`, informe en `h2h_report`).
 - Tasas por minuto = (1 - wh) x tasa normal + wh x tasa H2H, con wh = n / (n + 3): 1 partido 25%, 2 -> 40%,
   3 -> 50%, 4 -> 57%. La defensa vs posición (DvP) ya no se aplica a la parte H2H (ese partido ya trae al rival).
-- Minutos: se mezclan con los minutos H2H con la mitad de ese peso y se re-escalan para que el equipo sume lo mismo.
+- Minutos: se mezclan con los minutos H2H y se re-escalan para que el equipo sume lo mismo.
+- 1.3.1 (mismo día, pedido de Nicolas): los minutos H2H pesan igual que las tasas (antes la mitad), pero solo si
+  el rol del jugador es el mismo que hoy: titular en la mayoría de esos H2H y titular hoy, o suplente y suplente
+  (los box scores de ESPN listan primero a los 5 titulares). Si cambió de rol (p. ej. un suplente que ahora es
+  titular) sus minutos H2H no cuentan; las tasas por minuto sí. Los H2H con otro equipo nunca cuentan (caso
+  Naz Reid: sus H2H con MIN no se usan para CHA). Backtest 27-oct: error de minutos 4.75 -> 5.06, PTS 3.138 -> 3.213.
 - Se desactiva con `"h2h": {"use": false}` en el JSON del partido o `python model.py <partido> --no-h2h`.
 - `backtest_h2h.py <fecha>` compara con y sin H2H en una jornada jugada. En el 27-oct (4 partidos, 48 jugadores
   con H2H) el H2H empeoró un poco el log score (PTS 3.138 -> 3.181) y mejoró el error de minutos (4.75 -> 4.64):
   muestra muy chica; revisar cada jornada y ajustar `H2H_K`.
 
-Curry 28-oct con 1.3: 20.7 pts proyectados (antes 18.9), P(over 25.5) 27% (antes 20%). El resto del error son
-sus minutos (proyectados 23 por sus 3 primeros partidos), que el H2H solo corrige en parte.
+Curry 28-oct con 1.3.1: 21.2 pts proyectados (antes 18.9), P(over 25.5) 29% (antes 20%). Sus minutos casi no
+suben (23.6): sus compañeros también jugaron más en esos H2H (GSW rota hoy a 13 jugadores) y el re-escalado a 240
+se lo come. El problema de fondo es que sus minutos salen solo de sus 3 primeros partidos.
 
 ## Web — 2026-10-28: parlays recomendados
 - `build_site.py` arma parlays de 2, 3 y 4 patas por partido (SGP) y entre partidos de la jornada. Patas: cuota
