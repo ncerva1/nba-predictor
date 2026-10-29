@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T22:39+00:00",
+ "generated": "2026-10-29T16:34+00:00",
  "value_ev": 0.03,
  "history": [
   {
@@ -17,6 +17,14 @@
    "picks_won": 8,
    "picks_lost": 12,
    "units": -5.36
+  },
+  {
+   "date": "2026-10-28",
+   "games": 12,
+   "winners_ok": 8,
+   "picks_won": 32,
+   "picks_lost": 39,
+   "units": -11.66
   }
  ],
  "parlays": {
@@ -34,7 +42,8 @@
       "dec": 1.909,
       "ev": 0.59,
       "gid": "2026-10-28-PHI-at-IND",
-      "game": "PHI @ IND"
+      "game": "PHI @ IND",
+      "result": "won"
      },
      {
       "kind": "ml",
@@ -47,7 +56,8 @@
       "dec": 1.254,
       "ev": 0.054,
       "gid": "2026-10-28-WAS-at-CLE",
-      "game": "WAS @ CLE"
+      "game": "WAS @ CLE",
+      "result": "won"
      }
     ],
     "n": 2,
@@ -58,7 +68,7 @@
     "fair": 1.43,
     "ev": 0.675,
     "type": "cross",
-    "result": null
+    "result": "won"
    },
    {
     "legs": [
@@ -73,7 +83,8 @@
       "dec": 1.82,
       "ev": 0.453,
       "gid": "2026-10-28-GSW-at-MIN",
-      "game": "GSW @ MIN"
+      "game": "GSW @ MIN",
+      "result": "lost"
      },
      {
       "kind": "prop",
@@ -86,7 +97,8 @@
       "dec": 1.909,
       "ev": 0.59,
       "gid": "2026-10-28-PHI-at-IND",
-      "game": "PHI @ IND"
+      "game": "PHI @ IND",
+      "result": "won"
      },
      {
       "kind": "ml",
@@ -99,7 +111,8 @@
       "dec": 1.254,
       "ev": 0.054,
       "gid": "2026-10-28-WAS-at-CLE",
-      "game": "WAS @ CLE"
+      "game": "WAS @ CLE",
+      "result": "won"
      }
     ],
     "n": 3,
@@ -110,7 +123,7 @@
     "fair": 1.79,
     "ev": 1.436,
     "type": "cross",
-    "result": null
+    "result": "lost"
    },
    {
     "legs": [
@@ -125,7 +138,8 @@
       "dec": 1.82,
       "ev": 0.453,
       "gid": "2026-10-28-GSW-at-MIN",
-      "game": "GSW @ MIN"
+      "game": "GSW @ MIN",
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -138,7 +152,8 @@
       "dec": 1.442,
       "ev": 0.144,
       "gid": "2026-10-28-OKC-at-DAL",
-      "game": "OKC @ DAL"
+      "game": "OKC @ DAL",
+      "result": "lost"
      },
      {
       "kind": "prop",
@@ -151,7 +166,8 @@
       "dec": 1.909,
       "ev": 0.59,
       "gid": "2026-10-28-PHI-at-IND",
-      "game": "PHI @ IND"
+      "game": "PHI @ IND",
+      "result": "won"
      },
      {
       "kind": "ml",
@@ -164,7 +180,8 @@
       "dec": 1.254,
       "ev": 0.054,
       "gid": "2026-10-28-WAS-at-CLE",
-      "game": "WAS @ CLE"
+      "game": "WAS @ CLE",
+      "result": "won"
      }
     ],
     "n": 4,
@@ -174,6 +191,99 @@
     "dec": 6.28,
     "fair": 2.26,
     "ev": 1.785,
+    "type": "cross",
+    "result": "lost"
+   }
+  ],
+  "2026-10-29": [
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Deni Avdija Under 22.5 Puntos",
+      "player": "Deni Avdija",
+      "team": "POR",
+      "line": 22.5,
+      "stat": "pts",
+      "p": 0.796,
+      "dec": 1.909,
+      "ev": 0.52,
+      "gid": "2026-10-29-MEM-at-POR",
+      "game": "MEM @ POR"
+     },
+     {
+      "kind": "ml",
+      "label": "NOP gana",
+      "player": null,
+      "team": "NOP",
+      "line": null,
+      "stat": null,
+      "p": 0.725,
+      "dec": 1.433,
+      "ev": 0.039,
+      "gid": "2026-10-29-SAC-at-NOP",
+      "game": "SAC @ NOP"
+     }
+    ],
+    "n": 2,
+    "p": 0.577,
+    "p_indep": 0.577,
+    "corr": 1.0,
+    "dec": 2.74,
+    "fair": 1.73,
+    "ev": 0.579,
+    "type": "cross",
+    "result": null
+   },
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Aaron Wiggins Over 11.5 Puntos",
+      "player": "Aaron Wiggins",
+      "team": "ATL",
+      "line": 11.5,
+      "stat": "pts",
+      "p": 0.644,
+      "dec": 1.87,
+      "ev": 0.204,
+      "gid": "2026-10-29-CLE-at-ATL",
+      "game": "CLE @ ATL"
+     },
+     {
+      "kind": "prop",
+      "label": "Deni Avdija Under 22.5 Puntos",
+      "player": "Deni Avdija",
+      "team": "POR",
+      "line": 22.5,
+      "stat": "pts",
+      "p": 0.796,
+      "dec": 1.909,
+      "ev": 0.52,
+      "gid": "2026-10-29-MEM-at-POR",
+      "game": "MEM @ POR"
+     },
+     {
+      "kind": "ml",
+      "label": "NOP gana",
+      "player": null,
+      "team": "NOP",
+      "line": null,
+      "stat": null,
+      "p": 0.725,
+      "dec": 1.433,
+      "ev": 0.039,
+      "gid": "2026-10-29-SAC-at-NOP",
+      "game": "SAC @ NOP"
+     }
+    ],
+    "n": 3,
+    "p": 0.372,
+    "p_indep": 0.372,
+    "corr": 1.0,
+    "dec": 5.12,
+    "fair": 2.69,
+    "ev": 0.901,
     "type": "cross",
     "result": null
    }
@@ -5614,6 +5724,8 @@
    "home": "DET",
    "tip_et": "19:00",
    "venue": "Little Caesars Arena, Detroit",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "CHA": null,
     "DET": null
@@ -5645,7 +5757,8 @@
      "edge": 0.178,
      "ev": 0.325,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -5744,7 +5857,8 @@
        "p": 0.682,
        "ev": 0.285
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5761,7 +5875,8 @@
      "edge": 0.111,
      "ev": 0.213,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -5780,7 +5895,8 @@
      "edge": 0.178,
      "ev": 0.325,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -5879,7 +5995,8 @@
        "p": 0.682,
        "ev": 0.285
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5896,7 +6013,8 @@
      "edge": 0.111,
      "ev": 0.213,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5913,7 +6031,8 @@
      "edge": 0.102,
      "ev": 0.199,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5930,7 +6049,8 @@
      "edge": 0.085,
      "ev": 0.162,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5947,7 +6067,8 @@
      "edge": 0.073,
      "ev": 0.144,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -5964,7 +6085,8 @@
      "edge": 0.044,
      "ev": 0.08,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -5981,7 +6103,8 @@
      "edge": 0.019,
      "ev": 0.034,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "parlays": [
@@ -5998,7 +6121,8 @@
        "dec": 1.82,
        "ev": 0.325,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -6011,7 +6135,8 @@
        "dec": 1.909,
        "ev": 0.302,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -6021,7 +6146,8 @@
      "dec": 3.47,
      "fair": 2.13,
      "ev": 0.63,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -6036,7 +6162,8 @@
        "dec": 1.82,
        "ev": 0.325,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -6049,7 +6176,8 @@
        "dec": 1.909,
        "ev": 0.302,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6062,7 +6190,8 @@
        "dec": 1.952,
        "ev": 0.199,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -6072,7 +6201,8 @@
      "dec": 6.78,
      "fair": 3.19,
      "ev": 1.125,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -6087,7 +6217,8 @@
        "dec": 1.82,
        "ev": 0.325,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -6100,7 +6231,8 @@
        "dec": 1.909,
        "ev": 0.302,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6113,7 +6245,8 @@
        "dec": 1.952,
        "ev": 0.199,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6126,7 +6259,8 @@
        "dec": 1.769,
        "ev": 0.034,
        "gid": "2026-10-28-CHA-at-DET",
-       "game": "CHA @ DET"
+       "game": "CHA @ DET",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -6136,9 +6270,22 @@
      "dec": 12.0,
      "fair": 5.15,
      "ev": 1.332,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CHA": 89,
+     "DET": 97
+    },
+    "ot": 0,
+    "winner": "DET",
+    "winner_ok": true,
+    "picks_won": 3,
+    "picks_lost": 5,
+    "units": -2.58
+   }
   },
   {
    "id": "2026-10-28-MIA-at-ATL",
@@ -6147,6 +6294,8 @@
    "home": "ATL",
    "tip_et": "19:00",
    "venue": "State Farm Arena, Atlanta",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "MIA": null,
     "ATL": null
@@ -6260,7 +6409,8 @@
        "p": 0.702,
        "ev": 0.287
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6277,7 +6427,8 @@
      "edge": 0.144,
      "ev": 0.271,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -6376,7 +6527,8 @@
        "p": 0.73,
        "ev": 0.243
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -6477,7 +6629,8 @@
        "p": 0.702,
        "ev": 0.287
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6494,7 +6647,8 @@
      "edge": 0.144,
      "ev": 0.271,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -6593,7 +6747,8 @@
        "p": 0.73,
        "ev": 0.243
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6610,7 +6765,8 @@
      "edge": 0.109,
      "ev": 0.214,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6627,7 +6783,8 @@
      "edge": 0.105,
      "ev": 0.197,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6644,7 +6801,8 @@
      "edge": 0.107,
      "ev": 0.193,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -6661,7 +6819,8 @@
      "edge": 0.09,
      "ev": 0.17,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -6678,7 +6837,8 @@
      "edge": 0.077,
      "ev": 0.148,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -6777,7 +6937,8 @@
        "p": 0.594,
        "ev": 0.116
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -6794,7 +6955,8 @@
      "edge": 0.026,
      "ev": 0.047,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -6811,7 +6973,8 @@
        "dec": 1.734,
        "ev": 0.265,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6824,7 +6987,8 @@
        "dec": 1.8,
        "ev": 0.193,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -6834,7 +6998,8 @@
      "dec": 3.12,
      "fair": 2.02,
      "ev": 0.548,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -6849,7 +7014,8 @@
        "dec": 1.734,
        "ev": 0.265,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6862,7 +7028,8 @@
        "dec": 1.8,
        "ev": 0.193,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -6875,7 +7042,8 @@
        "dec": 1.87,
        "ev": 0.197,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -6885,7 +7053,8 @@
      "dec": 5.84,
      "fair": 3.07,
      "ev": 0.899,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -6900,7 +7069,8 @@
        "dec": 1.734,
        "ev": 0.265,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6913,7 +7083,8 @@
        "dec": 1.952,
        "ev": 0.214,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -6926,7 +7097,8 @@
        "dec": 1.893,
        "ev": 0.17,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -6939,7 +7111,8 @@
        "dec": 1.905,
        "ev": 0.133,
        "gid": "2026-10-28-MIA-at-ATL",
-       "game": "MIA @ ATL"
+       "game": "MIA @ ATL",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -6949,9 +7122,22 @@
      "dec": 12.21,
      "fair": 4.51,
      "ev": 1.707,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIA": 129,
+     "ATL": 117
+    },
+    "ot": 0,
+    "winner": "MIA",
+    "winner_ok": false,
+    "picks_won": 2,
+    "picks_lost": 8,
+    "units": -6.31
+   }
   },
   {
    "id": "2026-10-28-PHI-at-IND",
@@ -6960,6 +7146,8 @@
    "home": "IND",
    "tip_et": "19:00",
    "venue": "Gainbridge Fieldhouse, Indianapolis",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "PHI": null,
     "IND": null
@@ -6991,7 +7179,8 @@
      "edge": 0.309,
      "ev": 0.59,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7008,7 +7197,8 @@
      "edge": 0.167,
      "ev": 0.319,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7025,7 +7215,8 @@
      "edge": 0.175,
      "ev": 0.315,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -7044,7 +7235,8 @@
      "edge": 0.309,
      "ev": 0.59,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7061,7 +7253,8 @@
      "edge": 0.167,
      "ev": 0.319,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7078,7 +7271,8 @@
      "edge": 0.175,
      "ev": 0.315,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -7177,7 +7371,8 @@
        "p": 0.667,
        "ev": 0.273
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7194,7 +7389,8 @@
      "edge": 0.078,
      "ev": 0.152,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7211,7 +7407,8 @@
      "edge": 0.078,
      "ev": 0.149,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -7228,7 +7425,8 @@
      "edge": 0.078,
      "ev": 0.145,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -7327,7 +7525,8 @@
        "p": 0.539,
        "ev": 0.029
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -7344,7 +7543,8 @@
        "dec": 1.909,
        "ev": 0.59,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -7357,7 +7557,8 @@
        "dec": 1.909,
        "ev": 0.319,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -7367,7 +7568,8 @@
      "dec": 3.64,
      "fair": 1.75,
      "ev": 1.087,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -7382,7 +7584,8 @@
        "dec": 1.909,
        "ev": 0.59,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -7395,7 +7598,8 @@
        "dec": 1.909,
        "ev": 0.319,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -7408,7 +7612,8 @@
        "dec": 1.938,
        "ev": 0.292,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -7418,7 +7623,8 @@
      "dec": 7.06,
      "fair": 2.53,
      "ev": 1.791,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -7433,7 +7639,8 @@
        "dec": 1.909,
        "ev": 0.59,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -7446,7 +7653,8 @@
        "dec": 1.909,
        "ev": 0.319,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "ml",
@@ -7459,7 +7667,8 @@
        "dec": 1.498,
        "ev": 0.029,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -7472,7 +7681,8 @@
        "dec": 1.938,
        "ev": 0.292,
        "gid": "2026-10-28-PHI-at-IND",
-       "game": "PHI @ IND"
+       "game": "PHI @ IND",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -7482,9 +7692,22 @@
      "dec": 10.58,
      "fair": 3.82,
      "ev": 1.766,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "PHI": 114,
+     "IND": 109
+    },
+    "ot": 0,
+    "winner": "PHI",
+    "winner_ok": true,
+    "picks_won": 7,
+    "picks_lost": 1,
+    "units": 5.29
+   }
   },
   {
    "id": "2026-10-28-WAS-at-CLE",
@@ -7493,6 +7716,8 @@
    "home": "CLE",
    "tip_et": "19:00",
    "venue": "Rocket Arena, Cleveland",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "WAS": null,
     "CLE": null
@@ -7614,7 +7839,8 @@
        "p": 0.59,
        "ev": 0.152
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -7721,7 +7947,8 @@
        "p": 0.84,
        "ev": 0.038
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -7820,7 +8047,8 @@
        "p": 0.533,
        "ev": 0.027
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -7929,7 +8157,8 @@
        "p": 0.59,
        "ev": 0.152
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -8036,7 +8265,8 @@
        "p": 0.84,
        "ev": 0.038
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -8135,7 +8365,8 @@
        "p": 0.533,
        "ev": 0.027
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "parlays": [
@@ -8152,7 +8383,8 @@
        "dec": 1.254,
        "ev": 0.054,
        "gid": "2026-10-28-WAS-at-CLE",
-       "game": "WAS @ CLE"
+       "game": "WAS @ CLE",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -8165,7 +8397,8 @@
        "dec": 1.87,
        "ev": 0.035,
        "gid": "2026-10-28-WAS-at-CLE",
-       "game": "WAS @ CLE"
+       "game": "WAS @ CLE",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -8175,9 +8408,22 @@
      "dec": 2.34,
      "fair": 2.14,
      "ev": 0.094,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "WAS": 111,
+     "CLE": 121
+    },
+    "ot": 0,
+    "winner": "CLE",
+    "winner_ok": true,
+    "picks_won": 3,
+    "picks_lost": 0,
+    "units": 2.02
+   }
   },
   {
    "id": "2026-10-28-ORL-at-TOR",
@@ -8186,6 +8432,8 @@
    "home": "TOR",
    "tip_et": "19:30",
    "venue": "Scotiabank Arena, Toronto",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "ORL": null,
     "TOR": null
@@ -8299,7 +8547,8 @@
        "p": 0.651,
        "ev": 0.152
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -8398,7 +8647,8 @@
        "p": 0.735,
        "ev": 0.103
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "total",
@@ -8497,7 +8747,8 @@
        "p": 0.512,
        "ev": -0.043
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -8598,7 +8849,8 @@
        "p": 0.651,
        "ev": 0.152
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -8697,10 +8949,23 @@
        "p": 0.735,
        "ev": 0.103
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
-   "parlays": []
+   "parlays": [],
+   "result": {
+    "score": {
+     "ORL": 99,
+     "TOR": 129
+    },
+    "ot": 0,
+    "winner": "TOR",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 0,
+    "units": 1.42
+   }
   },
   {
    "id": "2026-10-28-DEN-at-NOP",
@@ -8709,6 +8974,8 @@
    "home": "NOP",
    "tip_et": "20:00",
    "venue": "Smoothie King Center, New Orleans",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "DEN": null,
     "NOP": null
@@ -8740,7 +9007,8 @@
      "edge": 0.194,
      "ev": 0.362,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -8757,7 +9025,8 @@
      "edge": 0.163,
      "ev": 0.311,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -8774,7 +9043,8 @@
      "edge": 0.104,
      "ev": 0.191,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -8793,7 +9063,8 @@
      "edge": 0.194,
      "ev": 0.362,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -8810,7 +9081,8 @@
      "edge": 0.163,
      "ev": 0.311,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -8827,7 +9099,8 @@
      "edge": 0.104,
      "ev": 0.191,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -8844,7 +9117,8 @@
      "edge": 0.083,
      "ev": 0.183,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -8861,7 +9135,8 @@
      "edge": 0.061,
      "ev": 0.115,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -8878,7 +9153,8 @@
      "edge": 0.047,
      "ev": 0.091,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -8895,7 +9171,8 @@
      "edge": 0.043,
      "ev": 0.085,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -8994,7 +9271,8 @@
        "p": 0.4,
        "ev": 0.016
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -9011,7 +9289,8 @@
      "edge": 0.025,
      "ev": 0.051,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "parlays": [
@@ -9028,7 +9307,8 @@
        "dec": 1.87,
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -9041,7 +9321,8 @@
        "dec": 1.909,
        "ev": 0.311,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -9051,7 +9332,8 @@
      "dec": 3.57,
      "fair": 2.0,
      "ev": 0.784,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -9066,7 +9348,8 @@
        "dec": 1.87,
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -9079,7 +9362,8 @@
        "dec": 1.909,
        "ev": 0.311,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -9092,7 +9376,8 @@
        "dec": 1.833,
        "ev": 0.191,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -9102,7 +9387,8 @@
      "dec": 6.54,
      "fair": 3.03,
      "ev": 1.156,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -9117,7 +9403,8 @@
        "dec": 1.87,
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -9130,7 +9417,8 @@
        "dec": 1.909,
        "ev": 0.311,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -9143,7 +9431,8 @@
        "dec": 1.833,
        "ev": 0.191,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -9156,7 +9445,8 @@
        "dec": 1.87,
        "ev": 0.115,
        "gid": "2026-10-28-DEN-at-NOP",
-       "game": "DEN @ NOP"
+       "game": "DEN @ NOP",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -9166,9 +9456,22 @@
      "dec": 12.24,
      "fair": 5.14,
      "ev": 1.381,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "DEN": 104,
+     "NOP": 91
+    },
+    "ot": 0,
+    "winner": "DEN",
+    "winner_ok": true,
+    "picks_won": 4,
+    "picks_lost": 5,
+    "units": -1.2
+   }
   },
   {
    "id": "2026-10-28-GSW-at-MIN",
@@ -9177,6 +9480,8 @@
    "home": "MIN",
    "tip_et": "20:00",
    "venue": "Target Center, Minneapolis",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "GSW": null,
     "MIN": null
@@ -9208,7 +9513,8 @@
      "edge": 0.249,
      "ev": 0.453,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -9225,7 +9531,8 @@
      "edge": 0.194,
      "ev": 0.355,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -9324,7 +9631,8 @@
        "p": 0.664,
        "ev": 0.156
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -9343,7 +9651,8 @@
      "edge": 0.249,
      "ev": 0.453,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -9360,7 +9669,8 @@
      "edge": 0.194,
      "ev": 0.355,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -9459,7 +9769,8 @@
        "p": 0.664,
        "ev": 0.156
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -9476,7 +9787,8 @@
      "edge": 0.097,
      "ev": 0.18,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -9575,7 +9887,8 @@
        "p": 0.72,
        "ev": 0.144
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -9592,7 +9905,8 @@
        "dec": 1.82,
        "ev": 0.453,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -9605,7 +9919,8 @@
        "dec": 1.826,
        "ev": 0.355,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -9615,7 +9930,8 @@
      "dec": 3.32,
      "fair": 1.66,
      "ev": 1.004,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -9630,7 +9946,8 @@
        "dec": 1.82,
        "ev": 0.453,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -9643,7 +9960,8 @@
        "dec": 1.826,
        "ev": 0.355,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "won"
       },
       {
        "kind": "ml",
@@ -9656,7 +9974,8 @@
        "dec": 1.601,
        "ev": 0.154,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -9666,7 +9985,8 @@
      "dec": 5.32,
      "fair": 2.14,
      "ev": 1.487,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -9681,7 +10001,8 @@
        "dec": 1.82,
        "ev": 0.453,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -9694,7 +10015,8 @@
        "dec": 1.826,
        "ev": 0.355,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "won"
       },
       {
        "kind": "ml",
@@ -9707,7 +10029,8 @@
        "dec": 1.601,
        "ev": 0.154,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -9720,7 +10043,8 @@
        "dec": 1.862,
        "ev": 0.18,
        "gid": "2026-10-28-GSW-at-MIN",
-       "game": "GSW @ MIN"
+       "game": "GSW @ MIN",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -9730,9 +10054,22 @@
      "dec": 9.91,
      "fair": 3.4,
      "ev": 1.912,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "GSW": 119,
+     "MIN": 114
+    },
+    "ot": 0,
+    "winner": "GSW",
+    "winner_ok": false,
+    "picks_won": 2,
+    "picks_lost": 3,
+    "units": -1.31
+   }
   },
   {
    "id": "2026-10-28-HOU-at-MIL",
@@ -9741,6 +10078,8 @@
    "home": "MIL",
    "tip_et": "20:00",
    "venue": "Fiserv Forum, Milwaukee",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "HOU": null,
     "MIL": null
@@ -9814,7 +10153,8 @@
        "p": 0.556,
        "ev": 0.039
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -9881,7 +10221,8 @@
        "p": 0.506,
        "ev": -0.033
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -9948,7 +10289,8 @@
        "p": 0.737,
        "ev": -0.025
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -10009,10 +10351,23 @@
        "p": 0.556,
        "ev": 0.039
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
-   "parlays": []
+   "parlays": [],
+   "result": {
+    "score": {
+     "HOU": 132,
+     "MIL": 100
+    },
+    "ot": 0,
+    "winner": "HOU",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 0,
+    "units": 0.9
+   }
   },
   {
    "id": "2026-10-28-NYK-at-CHI",
@@ -10021,6 +10376,8 @@
    "home": "CHI",
    "tip_et": "20:00",
    "venue": "United Center, Chicago",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "NYK": null,
     "CHI": null
@@ -10052,7 +10409,8 @@
      "edge": 0.208,
      "ev": 0.381,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10069,7 +10427,8 @@
      "edge": 0.166,
      "ev": 0.319,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10086,7 +10445,8 @@
      "edge": 0.144,
      "ev": 0.27,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -10105,7 +10465,8 @@
      "edge": 0.208,
      "ev": 0.381,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10122,7 +10483,8 @@
      "edge": 0.166,
      "ev": 0.319,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10139,7 +10501,8 @@
      "edge": 0.144,
      "ev": 0.27,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10156,7 +10519,8 @@
      "edge": 0.097,
      "ev": 0.184,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10173,7 +10537,8 @@
      "edge": 0.09,
      "ev": 0.171,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -10272,7 +10637,8 @@
        "p": 0.564,
        "ev": 0.064
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10289,7 +10655,8 @@
      "edge": 0.026,
      "ev": 0.048,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -10306,7 +10673,8 @@
        "dec": 1.833,
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10319,7 +10687,8 @@
        "dec": 1.917,
        "ev": 0.319,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -10329,7 +10698,8 @@
      "dec": 3.51,
      "fair": 1.96,
      "ev": 0.795,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -10344,7 +10714,8 @@
        "dec": 1.833,
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10357,7 +10728,8 @@
        "dec": 1.917,
        "ev": 0.319,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10370,7 +10742,8 @@
        "dec": 1.877,
        "ev": 0.27,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -10380,7 +10753,8 @@
      "dec": 6.6,
      "fair": 2.91,
      "ev": 1.266,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -10395,7 +10769,8 @@
        "dec": 1.833,
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10408,7 +10783,8 @@
        "dec": 1.917,
        "ev": 0.319,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10421,7 +10797,8 @@
        "dec": 1.877,
        "ev": 0.27,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10434,7 +10811,8 @@
        "dec": 1.893,
        "ev": 0.184,
        "gid": "2026-10-28-NYK-at-CHI",
-       "game": "NYK @ CHI"
+       "game": "NYK @ CHI",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -10444,9 +10822,22 @@
      "dec": 12.49,
      "fair": 4.55,
      "ev": 1.742,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "NYK": 133,
+     "CHI": 127
+    },
+    "ot": 0,
+    "winner": "NYK",
+    "winner_ok": true,
+    "picks_won": 3,
+    "picks_lost": 4,
+    "units": -1.37
+   }
   },
   {
    "id": "2026-10-28-SAS-at-UTA",
@@ -10455,6 +10846,8 @@
    "home": "UTA",
    "tip_et": "21:00",
    "venue": "Delta Center, Salt Lake City",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "SAS": null,
     "UTA": null
@@ -10486,7 +10879,8 @@
      "edge": 0.191,
      "ev": 0.382,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10503,7 +10897,8 @@
      "edge": 0.117,
      "ev": 0.229,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10520,7 +10915,8 @@
      "edge": 0.113,
      "ev": 0.216,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "push"
     }
    ],
    "value_bets": [
@@ -10539,7 +10935,8 @@
      "edge": 0.191,
      "ev": 0.382,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10556,7 +10953,8 @@
      "edge": 0.117,
      "ev": 0.229,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10573,7 +10971,8 @@
      "edge": 0.113,
      "ev": 0.216,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -10590,7 +10989,8 @@
      "edge": 0.095,
      "ev": 0.18,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -10607,7 +11007,8 @@
      "edge": 0.095,
      "ev": 0.18,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -10624,7 +11025,8 @@
      "edge": 0.072,
      "ev": 0.135,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -10723,7 +11125,8 @@
        "p": 0.552,
        "ev": 0.054
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -10822,7 +11225,8 @@
        "p": 0.195,
        "ev": -0.005
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -10839,7 +11243,8 @@
        "dec": 2.0,
        "ev": 0.382,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -10852,7 +11257,8 @@
        "dec": 1.893,
        "ev": 0.18,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -10862,7 +11268,8 @@
      "dec": 3.79,
      "fair": 2.29,
      "ev": 0.654,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -10877,7 +11284,8 @@
        "dec": 2.0,
        "ev": 0.382,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -10890,7 +11298,8 @@
        "dec": 1.893,
        "ev": 0.18,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -10903,7 +11312,8 @@
        "dec": 1.913,
        "ev": 0.096,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -10913,7 +11323,8 @@
      "dec": 7.24,
      "fair": 3.47,
      "ev": 1.088,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -10928,7 +11339,8 @@
        "dec": 2.0,
        "ev": 0.382,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -10941,7 +11353,8 @@
        "dec": 1.893,
        "ev": 0.18,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -10954,7 +11367,8 @@
        "dec": 1.893,
        "ev": 0.18,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       },
       {
        "kind": "total",
@@ -10967,7 +11381,8 @@
        "dec": 1.913,
        "ev": 0.096,
        "gid": "2026-10-28-SAS-at-UTA",
-       "game": "SAS @ UTA"
+       "game": "SAS @ UTA",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -10977,9 +11392,22 @@
      "dec": 13.71,
      "fair": 5.2,
      "ev": 1.636,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "SAS": 117,
+     "UTA": 111
+    },
+    "ot": 1,
+    "winner": "SAS",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 6,
+    "units": -5.11
+   }
   },
   {
    "id": "2026-10-28-OKC-at-DAL",
@@ -10988,6 +11416,8 @@
    "home": "DAL",
    "tip_et": "21:30",
    "venue": "American Airlines Center, Dallas",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "OKC": null,
     "DAL": null
@@ -11019,7 +11449,8 @@
      "edge": 0.258,
      "ev": 0.504,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -11036,7 +11467,8 @@
      "edge": 0.196,
      "ev": 0.359,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -11053,7 +11485,8 @@
      "edge": 0.149,
      "ev": 0.291,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -11072,7 +11505,8 @@
      "edge": 0.258,
      "ev": 0.504,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -11089,7 +11523,8 @@
      "edge": 0.196,
      "ev": 0.359,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -11106,7 +11541,8 @@
      "edge": 0.149,
      "ev": 0.291,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -11123,7 +11559,8 @@
      "edge": 0.129,
      "ev": 0.247,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -11222,7 +11659,8 @@
        "p": 0.664,
        "ev": 0.195
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -11239,7 +11677,8 @@
      "edge": 0.109,
      "ev": 0.196,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -11338,7 +11777,8 @@
        "p": 0.579,
        "ev": 0.105
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -11437,7 +11877,8 @@
        "p": 0.793,
        "ev": 0.131
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -11454,7 +11895,8 @@
        "dec": 1.442,
        "ev": 0.144,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -11467,7 +11909,8 @@
        "dec": 1.952,
        "ev": 0.504,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -11477,7 +11920,8 @@
      "dec": 2.81,
      "fair": 1.62,
      "ev": 0.737,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -11492,7 +11936,8 @@
        "dec": 1.442,
        "ev": 0.144,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -11505,7 +11950,8 @@
        "dec": 1.952,
        "ev": 0.504,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -11518,7 +11964,8 @@
        "dec": 1.833,
        "ev": 0.359,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -11528,7 +11975,8 @@
      "dec": 5.16,
      "fair": 2.12,
      "ev": 1.432,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -11543,7 +11991,8 @@
        "dec": 1.442,
        "ev": 0.144,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -11556,7 +12005,8 @@
        "dec": 1.952,
        "ev": 0.504,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -11569,7 +12019,8 @@
        "dec": 1.833,
        "ev": 0.359,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -11582,7 +12033,8 @@
        "dec": 1.952,
        "ev": 0.291,
        "gid": "2026-10-28-OKC-at-DAL",
-       "game": "OKC @ DAL"
+       "game": "OKC @ DAL",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -11592,9 +12044,22 @@
      "dec": 10.07,
      "fair": 3.1,
      "ev": 2.253,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "OKC": 96,
+     "DAL": 120
+    },
+    "ot": 0,
+    "winner": "DAL",
+    "winner_ok": false,
+    "picks_won": 4,
+    "picks_lost": 4,
+    "units": -0.41
+   }
   },
   {
    "id": "2026-10-28-LAL-at-LAC",
@@ -11603,6 +12068,8 @@
    "home": "LAC",
    "tip_et": "22:30",
    "venue": "Intuit Dome, Inglewood",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "LAL": null,
     "LAC": null
@@ -11716,7 +12183,8 @@
        "p": 0.617,
        "ev": 0.153
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -11815,7 +12283,8 @@
        "p": 0.612,
        "ev": 0.131
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -11914,7 +12383,8 @@
        "p": 0.582,
        "ev": 0.13
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -12015,7 +12485,8 @@
        "p": 0.617,
        "ev": 0.153
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -12114,7 +12585,8 @@
        "p": 0.612,
        "ev": 0.131
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -12213,7 +12685,8 @@
        "p": 0.582,
        "ev": 0.13
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -12230,7 +12703,8 @@
        "dec": 1.904,
        "ev": 0.174,
        "gid": "2026-10-28-LAL-at-LAC",
-       "game": "LAL @ LAC"
+       "game": "LAL @ LAC",
+       "result": "lost"
       },
       {
        "kind": "ml",
@@ -12243,7 +12717,8 @@
        "dec": 1.888,
        "ev": 0.156,
        "gid": "2026-10-28-LAL-at-LAC",
-       "game": "LAL @ LAC"
+       "game": "LAL @ LAC",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -12253,6 +12728,1351 @@
      "dec": 3.59,
      "fair": 2.64,
      "ev": 0.359,
+     "type": "sgp",
+     "result": "lost"
+    }
+   ],
+   "result": {
+    "score": {
+     "LAL": 103,
+     "LAC": 87
+    },
+    "ot": 0,
+    "winner": "LAL",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 3,
+    "units": -3
+   }
+  },
+  {
+   "id": "2026-10-29-CLE-at-ATL",
+   "date": "2026-10-29",
+   "away": "CLE",
+   "home": "ATL",
+   "tip_et": "19:00",
+   "venue": "State Farm Arena, Atlanta",
+   "competition": "regular",
+   "cup_round": null,
+   "records": {
+    "CLE": null,
+    "ATL": null
+   },
+   "proj": {
+    "ATL": 119.0,
+    "CLE": 117.8
+   },
+   "win_prob": {
+    "ATL": 0.5335,
+    "CLE": 0.4665
+   },
+   "proj_total": 236.8,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Jalen Johnson Under 21.5 Puntos",
+     "player": "Jalen Johnson",
+     "team": "ATL",
+     "line": 21.5,
+     "odds": -104,
+     "dec": 1.962,
+     "odds_assumed": false,
+     "p": 0.642,
+     "implied": 0.51,
+     "fair": -179,
+     "edge": 0.132,
+     "ev": 0.258,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "James Harden Under 17.5 Puntos",
+     "player": "James Harden",
+     "team": "CLE",
+     "line": 17.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.524,
+     "fair": -172,
+     "edge": 0.108,
+     "ev": 0.207,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Wiggins Over 11.5 Puntos",
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "line": 11.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.644,
+     "implied": 0.535,
+     "fair": -181,
+     "edge": 0.109,
+     "ev": 0.204,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Jalen Johnson Under 21.5 Puntos",
+     "player": "Jalen Johnson",
+     "team": "ATL",
+     "line": 21.5,
+     "odds": -104,
+     "dec": 1.962,
+     "odds_assumed": false,
+     "p": 0.642,
+     "implied": 0.51,
+     "fair": -179,
+     "edge": 0.132,
+     "ev": 0.258,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "James Harden Under 17.5 Puntos",
+     "player": "James Harden",
+     "team": "CLE",
+     "line": 17.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.524,
+     "fair": -172,
+     "edge": 0.108,
+     "ev": 0.207,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Wiggins Over 11.5 Puntos",
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "line": 11.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.644,
+     "implied": 0.535,
+     "fair": -181,
+     "edge": 0.109,
+     "ev": 0.204,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Peyton Watson Under 14.5 Puntos",
+     "player": "Peyton Watson",
+     "team": "CLE",
+     "line": 14.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.638,
+     "implied": 0.535,
+     "fair": -176,
+     "edge": 0.103,
+     "ev": 0.192,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jaylon Tyson Over 8.5 Puntos",
+     "player": "Jaylon Tyson",
+     "team": "CLE",
+     "line": 8.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.601,
+     "implied": 0.524,
+     "fair": -151,
+     "edge": 0.077,
+     "ev": 0.147,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Onyeka Okongwu Under 11.5 Puntos",
+     "player": "Onyeka Okongwu",
+     "team": "ATL",
+     "line": 11.5,
+     "odds": -106,
+     "dec": 1.943,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.515,
+     "fair": -142,
+     "edge": 0.073,
+     "ev": 0.141,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Luguentz Dort Over 6.5 Puntos",
+     "player": "Luguentz Dort",
+     "team": "ATL",
+     "line": 6.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.612,
+     "implied": 0.556,
+     "fair": -158,
+     "edge": 0.056,
+     "ev": 0.102,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Nickeil Alexander-Walker Over 18.5 Puntos",
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "line": 18.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.563,
+     "implied": 0.524,
+     "fair": -129,
+     "edge": 0.04,
+     "ev": 0.075,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Jalen Johnson Under 21.5 Puntos",
+       "player": "Jalen Johnson",
+       "team": "ATL",
+       "line": 21.5,
+       "stat": "pts",
+       "p": 0.642,
+       "dec": 1.962,
+       "ev": 0.258,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Peyton Watson Under 14.5 Puntos",
+       "player": "Peyton Watson",
+       "team": "CLE",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.638,
+       "dec": 1.87,
+       "ev": 0.192,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      }
+     ],
+     "n": 2,
+     "p": 0.415,
+     "p_indep": 0.41,
+     "corr": 1.01,
+     "dec": 3.67,
+     "fair": 2.41,
+     "ev": 0.523,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Jalen Johnson Under 21.5 Puntos",
+       "player": "Jalen Johnson",
+       "team": "ATL",
+       "line": 21.5,
+       "stat": "pts",
+       "p": 0.642,
+       "dec": 1.962,
+       "ev": 0.258,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Peyton Watson Under 14.5 Puntos",
+       "player": "Peyton Watson",
+       "team": "CLE",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.638,
+       "dec": 1.87,
+       "ev": 0.192,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "James Harden Under 17.5 Puntos",
+       "player": "James Harden",
+       "team": "CLE",
+       "line": 17.5,
+       "stat": "pts",
+       "p": 0.632,
+       "dec": 1.909,
+       "ev": 0.207,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      }
+     ],
+     "n": 3,
+     "p": 0.271,
+     "p_indep": 0.259,
+     "corr": 1.05,
+     "dec": 7.0,
+     "fair": 3.69,
+     "ev": 0.899,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Aaron Wiggins Over 11.5 Puntos",
+       "player": "Aaron Wiggins",
+       "team": "ATL",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.644,
+       "dec": 1.87,
+       "ev": 0.204,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Jalen Johnson Under 21.5 Puntos",
+       "player": "Jalen Johnson",
+       "team": "ATL",
+       "line": 21.5,
+       "stat": "pts",
+       "p": 0.642,
+       "dec": 1.962,
+       "ev": 0.258,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Peyton Watson Under 14.5 Puntos",
+       "player": "Peyton Watson",
+       "team": "CLE",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.638,
+       "dec": 1.87,
+       "ev": 0.192,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "James Harden Under 17.5 Puntos",
+       "player": "James Harden",
+       "team": "CLE",
+       "line": 17.5,
+       "stat": "pts",
+       "p": 0.632,
+       "dec": 1.909,
+       "ev": 0.207,
+       "gid": "2026-10-29-CLE-at-ATL",
+       "game": "CLE @ ATL"
+      }
+     ],
+     "n": 4,
+     "p": 0.176,
+     "p_indep": 0.167,
+     "corr": 1.06,
+     "dec": 13.1,
+     "fair": 5.68,
+     "ev": 1.308,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-29-SAC-at-NOP",
+   "date": "2026-10-29",
+   "away": "SAC",
+   "home": "NOP",
+   "tip_et": "20:00",
+   "venue": "Smoothie King Center, New Orleans",
+   "competition": "regular",
+   "cup_round": null,
+   "records": {
+    "SAC": null,
+    "NOP": null
+   },
+   "proj": {
+    "NOP": 122.6,
+    "SAC": 114.4
+   },
+   "win_prob": {
+    "NOP": 0.7252,
+    "SAC": 0.2748
+   },
+   "proj_total": 237.0,
+   "used_db": true,
+   "n_value": 1,
+   "top_bets": [
+    {
+     "kind": "ml",
+     "label": "NOP gana",
+     "player": null,
+     "team": "NOP",
+     "line": null,
+     "odds": -231,
+     "dec": 1.433,
+     "odds_assumed": false,
+     "p": 0.725,
+     "implied": 0.698,
+     "fair": -264,
+     "edge": 0.027,
+     "ev": 0.039,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -215,
+      "dec": 1.465,
+      "p": 0.725,
+      "ev": 0.063
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -215,
+       "dec": 1.465,
+       "p": 0.725,
+       "ev": 0.063
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -225,
+       "dec": 1.444,
+       "p": 0.725,
+       "ev": 0.048
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.725,
+       "ev": 0.041
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.725,
+       "ev": 0.041
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -238,
+       "dec": 1.42,
+       "p": 0.725,
+       "ev": 0.03
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -240,
+       "dec": 1.417,
+       "p": 0.725,
+       "ev": 0.027
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "SAC gana",
+     "player": null,
+     "team": "SAC",
+     "line": null,
+     "odds": 190,
+     "dec": 2.899,
+     "odds_assumed": false,
+     "p": 0.275,
+     "implied": 0.345,
+     "fair": 264,
+     "edge": -0.07,
+     "ev": -0.203,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": null,
+      "odds": 195,
+      "dec": 2.95,
+      "p": 0.275,
+      "ev": -0.189
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 195,
+       "dec": 2.95,
+       "p": 0.275,
+       "ev": -0.189
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 195,
+       "dec": 2.95,
+       "p": 0.275,
+       "ev": -0.189
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 195,
+       "dec": 2.95,
+       "p": 0.275,
+       "ev": -0.189
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 195,
+       "dec": 2.95,
+       "p": 0.275,
+       "ev": -0.189
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 194,
+       "dec": 2.94,
+       "p": 0.275,
+       "ev": -0.192
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 190,
+       "dec": 2.9,
+       "p": 0.275,
+       "ev": -0.203
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 190,
+       "dec": 2.9,
+       "p": 0.275,
+       "ev": -0.203
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": 185,
+       "dec": 2.85,
+       "p": 0.275,
+       "ev": -0.217
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 170,
+       "dec": 2.7,
+       "p": 0.275,
+       "ev": -0.258
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "ml",
+     "label": "NOP gana",
+     "player": null,
+     "team": "NOP",
+     "line": null,
+     "odds": -231,
+     "dec": 1.433,
+     "odds_assumed": false,
+     "p": 0.725,
+     "implied": 0.698,
+     "fair": -264,
+     "edge": 0.027,
+     "ev": 0.039,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -215,
+      "dec": 1.465,
+      "p": 0.725,
+      "ev": 0.063
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -215,
+       "dec": 1.465,
+       "p": 0.725,
+       "ev": 0.063
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -225,
+       "dec": 1.444,
+       "p": 0.725,
+       "ev": 0.048
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.725,
+       "ev": 0.041
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -230,
+       "dec": 1.435,
+       "p": 0.725,
+       "ev": 0.041
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -235,
+       "dec": 1.426,
+       "p": 0.725,
+       "ev": 0.034
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -238,
+       "dec": 1.42,
+       "p": 0.725,
+       "ev": 0.03
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -240,
+       "dec": 1.417,
+       "p": 0.725,
+       "ev": 0.027
+      }
+     ]
+    }
+   ],
+   "parlays": []
+  },
+  {
+   "id": "2026-10-29-MEM-at-POR",
+   "date": "2026-10-29",
+   "away": "MEM",
+   "home": "POR",
+   "tip_et": "22:00",
+   "venue": "Moda Center, Portland",
+   "competition": "regular",
+   "cup_round": null,
+   "records": {
+    "MEM": null,
+    "POR": null
+   },
+   "proj": {
+    "POR": 124.7,
+    "MEM": 113.3
+   },
+   "win_prob": {
+    "POR": 0.796325,
+    "MEM": 0.203675
+   },
+   "proj_total": 237.9,
+   "used_db": true,
+   "n_value": 9,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Under 22.5 Puntos",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 22.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.796,
+     "implied": 0.524,
+     "fair": -391,
+     "edge": 0.272,
+     "ev": 0.52,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Ty Jerome Under 23.5 Puntos",
+     "player": "Ty Jerome",
+     "team": "MEM",
+     "line": 23.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.792,
+     "implied": 0.545,
+     "fair": -381,
+     "edge": 0.247,
+     "ev": 0.452,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Cedric Coward Under 13.5 Puntos",
+     "player": "Cedric Coward",
+     "team": "MEM",
+     "line": 13.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.78,
+     "implied": 0.556,
+     "fair": -355,
+     "edge": 0.225,
+     "ev": 0.404,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Under 22.5 Puntos",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 22.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.796,
+     "implied": 0.524,
+     "fair": -391,
+     "edge": 0.272,
+     "ev": 0.52,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Ty Jerome Under 23.5 Puntos",
+     "player": "Ty Jerome",
+     "team": "MEM",
+     "line": 23.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.792,
+     "implied": 0.545,
+     "fair": -381,
+     "edge": 0.247,
+     "ev": 0.452,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Cedric Coward Under 13.5 Puntos",
+     "player": "Cedric Coward",
+     "team": "MEM",
+     "line": 13.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.78,
+     "implied": 0.556,
+     "fair": -355,
+     "edge": 0.225,
+     "ev": 0.404,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Ja Morant Under 16.5 Puntos",
+     "player": "Ja Morant",
+     "team": "POR",
+     "line": 16.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.638,
+     "implied": 0.535,
+     "fair": -176,
+     "edge": 0.103,
+     "ev": 0.193,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "POR -7.5",
+     "player": null,
+     "team": "POR",
+     "line": -7.5,
+     "odds": -111,
+     "dec": 1.905,
+     "odds_assumed": false,
+     "p": 0.611,
+     "implied": 0.525,
+     "fair": -157,
+     "edge": 0.086,
+     "ev": 0.165,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": -7.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.611,
+      "ev": 0.194
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.611,
+       "ev": 0.194
+      },
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.611,
+       "ev": 0.167
+      },
+      {
+       "book": "bet365",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.611,
+       "ev": 0.167
+      },
+      {
+       "book": "FanDuel",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.611,
+       "ev": 0.167
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.611,
+       "ev": 0.167
+      },
+      {
+       "book": "Caesars",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.611,
+       "ev": 0.167
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.611,
+       "ev": 0.143
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -7.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.611,
+       "ev": 0.143
+      },
+      {
+       "book": "BetRivers",
+       "line": -8.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.582,
+       "ev": 0.137
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Over 233.5",
+     "player": null,
+     "team": null,
+     "line": 233.5,
+     "odds": -110,
+     "dec": 1.907,
+     "odds_assumed": false,
+     "p": 0.586,
+     "implied": 0.524,
+     "fair": -142,
+     "edge": 0.062,
+     "ev": 0.118,
+     "value": true,
+     "n_books": 3,
+     "best": {
+      "book": "bet365",
+      "line": 233.5,
+      "odds": -106,
+      "dec": 1.943,
+      "p": 0.586,
+      "ev": 0.139
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": 233.5,
+       "odds": -106,
+       "dec": 1.943,
+       "p": 0.586,
+       "ev": 0.139
+      },
+      {
+       "book": "DraftKings",
+       "line": 233.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.586,
+       "ev": 0.119
+      },
+      {
+       "book": "Fanatics",
+       "line": 234.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.578,
+       "ev": 0.103
+      },
+      {
+       "book": "Caesars",
+       "line": 234.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.578,
+       "ev": 0.103
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 233.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.586,
+       "ev": 0.095
+      },
+      {
+       "book": "BetRivers",
+       "line": 232.5,
+       "odds": -125,
+       "dec": 1.8,
+       "p": 0.607,
+       "ev": 0.092
+      },
+      {
+       "book": "BetMGM",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.081
+      },
+      {
+       "book": "FanDuel",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.081
+      },
+      {
+       "book": "theScore Bet",
+       "line": 234.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.566,
+       "ev": 0.081
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "POR gana",
+     "player": null,
+     "team": "POR",
+     "line": null,
+     "odds": -279,
+     "dec": 1.358,
+     "odds_assumed": false,
+     "p": 0.796,
+     "implied": 0.736,
+     "fair": -391,
+     "edge": 0.06,
+     "ev": 0.082,
+     "value": true,
+     "n_books": 9,
+     "best": {
+      "book": "DraftKings",
+      "line": null,
+      "odds": -265,
+      "dec": 1.377,
+      "p": 0.796,
+      "ev": 0.097
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -265,
+       "dec": 1.377,
+       "p": 0.796,
+       "ev": 0.097
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -270,
+       "dec": 1.37,
+       "p": 0.796,
+       "ev": 0.091
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -270,
+       "dec": 1.37,
+       "p": 0.796,
+       "ev": 0.091
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.796,
+       "ev": 0.086
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.796,
+       "ev": 0.086
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.796,
+       "ev": 0.076
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.796,
+       "ev": 0.076
+      },
+      {
+       "book": "Caesars",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.796,
+       "ev": 0.076
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -305,
+       "dec": 1.328,
+       "p": 0.796,
+       "ev": 0.057
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Scoot Henderson Under 9.5 Puntos",
+     "player": "Scoot Henderson",
+     "team": "POR",
+     "line": 9.5,
+     "odds": -130,
+     "dec": 1.769,
+     "odds_assumed": false,
+     "p": 0.603,
+     "implied": 0.565,
+     "fair": -152,
+     "edge": 0.038,
+     "ev": 0.066,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Toumani Camara Under 10.5 Puntos",
+     "player": "Toumani Camara",
+     "team": "POR",
+     "line": 10.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.59,
+     "implied": 0.556,
+     "fair": -144,
+     "edge": 0.034,
+     "ev": 0.061,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "POR gana",
+       "player": null,
+       "team": "POR",
+       "line": null,
+       "stat": null,
+       "p": 0.796,
+       "dec": 1.358,
+       "ev": 0.082,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "prop",
+       "label": "Ty Jerome Under 23.5 Puntos",
+       "player": "Ty Jerome",
+       "team": "MEM",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.792,
+       "dec": 1.833,
+       "ev": 0.452,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      }
+     ],
+     "n": 2,
+     "p": 0.65,
+     "p_indep": 0.63,
+     "corr": 1.03,
+     "dec": 2.49,
+     "fair": 1.54,
+     "ev": 0.618,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "POR gana",
+       "player": null,
+       "team": "POR",
+       "line": null,
+       "stat": null,
+       "p": 0.796,
+       "dec": 1.358,
+       "ev": 0.082,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "prop",
+       "label": "Ty Jerome Under 23.5 Puntos",
+       "player": "Ty Jerome",
+       "team": "MEM",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.792,
+       "dec": 1.833,
+       "ev": 0.452,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "prop",
+       "label": "Cedric Coward Under 13.5 Puntos",
+       "player": "Cedric Coward",
+       "team": "MEM",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.78,
+       "dec": 1.8,
+       "ev": 0.404,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      }
+     ],
+     "n": 3,
+     "p": 0.527,
+     "p_indep": 0.492,
+     "corr": 1.07,
+     "dec": 4.48,
+     "fair": 1.9,
+     "ev": 1.362,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Deni Avdija Under 22.5 Puntos",
+       "player": "Deni Avdija",
+       "team": "POR",
+       "line": 22.5,
+       "stat": "pts",
+       "p": 0.796,
+       "dec": 1.909,
+       "ev": 0.52,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "ml",
+       "label": "POR gana",
+       "player": null,
+       "team": "POR",
+       "line": null,
+       "stat": null,
+       "p": 0.796,
+       "dec": 1.358,
+       "ev": 0.082,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "prop",
+       "label": "Ty Jerome Under 23.5 Puntos",
+       "player": "Ty Jerome",
+       "team": "MEM",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.792,
+       "dec": 1.833,
+       "ev": 0.452,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      },
+      {
+       "kind": "prop",
+       "label": "Cedric Coward Under 13.5 Puntos",
+       "player": "Cedric Coward",
+       "team": "MEM",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.78,
+       "dec": 1.8,
+       "ev": 0.404,
+       "gid": "2026-10-29-MEM-at-POR",
+       "game": "MEM @ POR"
+      }
+     ],
+     "n": 4,
+     "p": 0.425,
+     "p_indep": 0.391,
+     "corr": 1.09,
+     "dec": 8.55,
+     "fair": 2.35,
+     "ev": 2.635,
      "type": "sgp"
     }
    ]

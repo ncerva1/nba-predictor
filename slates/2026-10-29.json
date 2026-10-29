@@ -1,0 +1,245 @@
+{
+ "date": "2026-10-29",
+ "sources": {
+  "schedule_odds": "NBA.com/games 29-oct (calendario, 3 partidos); Covers.com 29-oct (spread, total y ML de 9 casas en CLE@ATL y MEM@POR; solo ML en SAC@NOP; props de puntos)",
+  "players_cur": "Basketball-Reference, páginas de equipo 2026-27 (29-oct): SAC (hasta 27-oct), MEM, POR; NOP, CLE y ATL completados con los box scores reales del 28-oct",
+  "players_prior": "prior.csv del 28-oct + Basketball-Reference 2025-26 (GSW: Quinten Post; POR: Kris Murray). Sin temporada previa: novatos y Lillard (se perdió 2025-26)",
+  "injuries": "ESPN injuries y CBS Sports injuries 29-oct ~16:30 UTC",
+  "b2b": "Jugaron el 28-oct: CLE (ganó 121-111 a WAS), ATL (perdió 129-117 con MIA) y NOP (perdió 104-91 con DEN)",
+  "db": "BD de rankings: snapshot del 29-oct (B-Ref 2026-27 hasta el 27/28-oct; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 27-oct)"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "games": [
+  {
+   "away": "CLE",
+   "home": "ATL",
+   "tip_et": "19:00",
+   "venue": "State Farm Arena, Atlanta",
+   "market": {
+    "spread_home": -1.5,
+    "total": 237.5,
+    "ml_home": -115,
+    "ml_away": -105
+   },
+   "b2b": [
+    "CLE",
+    "ATL"
+   ],
+   "adj": {},
+   "out": [],
+   "gtd": {},
+   "notes": [
+    "Los dos en back-to-back (CLE ganó 121-111 a WAS; ATL perdió 129-117 con MIA)",
+    "CLE: Tomlin OUT (fuera de la rotación). ATL: Gueye y Veesaar OUT (fuera de la rotación)",
+    "Covers no publica props de Mitchell, Mobley ni Allen: vigilar descanso por back-to-back",
+    "Récord: CLE 3-1, ATL 2-3"
+   ]
+  },
+  {
+   "away": "SAC",
+   "home": "NOP",
+   "tip_et": "20:00",
+   "venue": "Smoothie King Center, New Orleans",
+   "market": {
+    "spread_home": -5.5,
+    "total": 237.5,
+    "ml_home": -235,
+    "ml_away": 195
+   },
+   "b2b": [
+    "NOP"
+   ],
+   "adj": {
+    "SAC": {
+     "o": -0.5,
+     "d": 0.5,
+     "why": "Keegan Murray OUT (tobillo, hasta 6-nov); Raynaud y Cardwell OUT"
+    }
+   },
+   "out": [
+    "Keegan Murray",
+    "Yves Missi"
+   ],
+   "gtd": {
+    "Jordan Poole": 0.6
+   },
+   "notes": [
+    "NOP en back-to-back (perdió 104-91 con DEN el 28-oct)",
+    "SAC: Keegan Murray, Raynaud, Cardwell y Simmons OUT. NOP: Missi OUT; Jordan Poole (tobillo) duda",
+    "Covers sin spread/total por casa: solo moneyline (consenso -5.5 y 237.5 como referencia)",
+    "Récord: SAC 0-4, NOP 0-4"
+   ]
+  },
+  {
+   "away": "MEM",
+   "home": "POR",
+   "tip_et": "22:00",
+   "venue": "Moda Center, Portland",
+   "market": {
+    "spread_home": -7.5,
+    "total": 234.0,
+    "ml_home": -280,
+    "ml_away": 225
+   },
+   "b2b": [],
+   "adj": {
+    "MEM": {
+     "o": -0.5,
+     "d": 1.0,
+     "why": "Se fueron Morant y JJJ respecto a 2025-26 (Edey ya volvió)"
+    },
+    "POR": {
+     "o": 2.0,
+     "d": 0.0,
+     "why": "Vuelve Lillard (se perdió 2025-26) y llega Ja Morant; Sharpe OUT hasta marzo y se fue Jerami Grant"
+    }
+   },
+   "out": [],
+   "gtd": {},
+   "notes": [
+    "POR: Sharpe OUT (hasta marzo); Youngblood (two-way) duda",
+    "MEM sin bajas reportadas",
+    "Récord: MEM 4-0, POR 3-0"
+   ]
+  }
+ ],
+ "prop_lines": {
+  "Jalen Johnson": {
+   "pts": [
+    21.5,
+    -123,
+    -104
+   ]
+  },
+  "Nickeil Alexander-Walker": {
+   "pts": [
+    18.5,
+    -110,
+    -116
+   ]
+  },
+  "CJ McCollum": {
+   "pts": [
+    16.5,
+    -107,
+    -119
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    17.5,
+    -116,
+    -110
+   ]
+  },
+  "Peyton Watson": {
+   "pts": [
+    14.5,
+    -115,
+    -115
+   ]
+  },
+  "Onyeka Okongwu": {
+   "pts": [
+    11.5,
+    -104,
+    -106
+   ]
+  },
+  "Aaron Wiggins": {
+   "pts": [
+    11.5,
+    -115,
+    -110
+   ]
+  },
+  "Dyson Daniels": {
+   "pts": [
+    11.5,
+    -115,
+    -111
+   ]
+  },
+  "Luguentz Dort": {
+   "pts": [
+    6.5,
+    -125,
+    100
+   ]
+  },
+  "Jaylon Tyson": {
+   "pts": [
+    8.5,
+    -110,
+    -115
+   ]
+  },
+  "Mario Hezonja": {
+   "pts": [
+    5.5,
+    -110,
+    -115
+   ]
+  },
+  "Ja Morant": {
+   "pts": [
+    16.5,
+    -115,
+    -115
+   ]
+  },
+  "Deni Avdija": {
+   "pts": [
+    22.5,
+    -120,
+    -110
+   ]
+  },
+  "Ty Jerome": {
+   "pts": [
+    23.5,
+    -110,
+    -120
+   ]
+  },
+  "Jaylen Wells": {
+   "pts": [
+    11.5,
+    -105,
+    -125
+   ]
+  },
+  "Scoot Henderson": {
+   "pts": [
+    9.5,
+    100,
+    -130
+   ]
+  },
+  "Cedric Coward": {
+   "pts": [
+    13.5,
+    -105,
+    -125
+   ]
+  },
+  "Toumani Camara": {
+   "pts": [
+    10.5,
+    -105,
+    -125
+   ]
+  },
+  "Jerami Grant": {
+   "pts": [
+    10.5,
+    -110,
+    -120
+   ]
+  }
+ }
+}

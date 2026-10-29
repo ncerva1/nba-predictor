@@ -1,0 +1,696 @@
+{
+ "game": {
+  "date": "2026-10-29",
+  "away": "MEM",
+  "home": "POR",
+  "venue": "Moda Center, Portland",
+  "tip_et": "22:00",
+  "notes": [
+   "POR: Sharpe OUT (hasta marzo); Youngblood (two-way) duda",
+   "MEM sin bajas reportadas",
+   "Récord: MEM 4-0, POR 3-0"
+  ],
+  "out": [],
+  "gtd": {}
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "POR": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 113.31,
+    "drtg": 113.77,
+    "pace": 101.91
+   },
+   "adj": {
+    "o": 2.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Vuelve Lillard (se perdió 2025-26) y llega Ja Morant; Sharpe OUT hasta marzo y se fue Jerami Grant"
+   }
+  },
+  "MEM": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 112.61,
+    "drtg": 118.67,
+    "pace": 101.97
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Se fueron Morant y JJJ respecto a 2025-26 (Edey ya volvió)"
+   }
+  }
+ },
+ "matchup": {
+  "POR": {},
+  "MEM": {}
+ },
+ "players": [
+  {
+   "team": "POR",
+   "name": "Deni Avdija",
+   "pos": "SF",
+   "starter": true,
+   "min": 29.6,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.3,
+    "pts": 22.3,
+    "reb": 6.7,
+    "ast": 6.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 33.3,
+    "pts": 24.2,
+    "reb": 6.9,
+    "ast": 6.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Damian Lillard",
+   "pos": "PG",
+   "starter": true,
+   "min": 27.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.3,
+    "pts": 21.7,
+    "reb": 4.3,
+    "ast": 4.0,
+    "fg3m": 4.0
+   },
+   "prior": {
+    "min": 29.3,
+    "pts": 21.7,
+    "reb": 4.3,
+    "ast": 4.0,
+    "fg3m": 4.0
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Ja Morant",
+   "pos": "PG",
+   "starter": true,
+   "min": 25.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.7,
+    "pts": 16.3,
+    "reb": 2.7,
+    "ast": 6.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 19.5,
+    "reb": 3.3,
+    "ast": 8.1,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Jrue Holiday",
+   "pos": "PG",
+   "starter": false,
+   "min": 24.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.7,
+    "pts": 14.0,
+    "reb": 3.3,
+    "ast": 4.0,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 29.4,
+    "pts": 16.3,
+    "reb": 4.6,
+    "ast": 6.1,
+    "fg3m": 2.6
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Toumani Camara",
+   "pos": "PF",
+   "starter": true,
+   "min": 23.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.7,
+    "pts": 16.3,
+    "reb": 2.0,
+    "ast": 1.7,
+    "fg3m": 4.3
+   },
+   "prior": {
+    "min": 33.3,
+    "pts": 13.4,
+    "reb": 5.1,
+    "ast": 2.5,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Sidy Cissoko",
+   "pos": "SF",
+   "starter": false,
+   "min": 22.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 8.0,
+    "reb": 4.3,
+    "ast": 2.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 19.1,
+    "pts": 5.1,
+    "reb": 2.2,
+    "ast": 1.5,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Donovan Clingan",
+   "pos": "C",
+   "starter": true,
+   "min": 21.1,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.3,
+    "pts": 9.3,
+    "reb": 9.0,
+    "ast": 2.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 27.2,
+    "pts": 12.1,
+    "reb": 11.6,
+    "ast": 2.1,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Scoot Henderson",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.0,
+    "pts": 7.0,
+    "reb": 1.7,
+    "ast": 2.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 24.9,
+    "pts": 14.2,
+    "reb": 2.7,
+    "ast": 3.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Robert Williams",
+   "pos": "C",
+   "starter": false,
+   "min": 17.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.0,
+    "pts": 9.7,
+    "reb": 8.7,
+    "ast": 0.7,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 17.1,
+    "pts": 6.7,
+    "reb": 7.0,
+    "ast": 1.0,
+    "fg3m": 0.2
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Micah Potter",
+   "pos": "C",
+   "starter": false,
+   "min": 11.4,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 12.0,
+    "pts": 4.0,
+    "reb": 3.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 12.0,
+    "pts": 4.0,
+    "reb": 3.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Yang Hansen",
+   "pos": "C",
+   "starter": false,
+   "min": 11.4,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 12.0,
+    "pts": 5.0,
+    "reb": 3.0,
+    "ast": 0.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 7.0,
+    "pts": 2.2,
+    "reb": 1.5,
+    "ast": 0.5,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "POR",
+   "name": "Vít Krejčí",
+   "pos": "PG",
+   "starter": false,
+   "min": 8.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.7,
+    "pts": 1.7,
+    "reb": 1.3,
+    "ast": 1.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 19.2,
+    "pts": 7.2,
+    "reb": 2.7,
+    "ast": 1.7,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Cameron Boozer",
+   "pos": "PF",
+   "starter": true,
+   "min": 29.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.0,
+    "pts": 15.3,
+    "reb": 10.5,
+    "ast": 4.8,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 33.0,
+    "pts": 15.3,
+    "reb": 10.5,
+    "ast": 4.8,
+    "fg3m": 1.8
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Ty Jerome",
+   "pos": "SG",
+   "starter": true,
+   "min": 28.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.3,
+    "pts": 29.8,
+    "reb": 3.5,
+    "ast": 6.3,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 22.6,
+    "pts": 19.7,
+    "reb": 2.8,
+    "ast": 5.7,
+    "fg3m": 2.8
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Cedric Coward",
+   "pos": "SG",
+   "starter": true,
+   "min": 27.4,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.3,
+    "pts": 12.7,
+    "reb": 9.7,
+    "ast": 2.3,
+    "fg3m": 2.7
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 13.6,
+    "reb": 5.9,
+    "ast": 2.8,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Jaylen Wells",
+   "pos": "SG",
+   "starter": true,
+   "min": 26.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.0,
+    "pts": 14.8,
+    "reb": 4.3,
+    "ast": 1.5,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 26.4,
+    "pts": 12.5,
+    "reb": 3.2,
+    "ast": 1.6,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Jerami Grant",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 9.8,
+    "reb": 2.5,
+    "ast": 2.3,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 29.7,
+    "pts": 18.6,
+    "reb": 3.5,
+    "ast": 2.1,
+    "fg3m": 2.4
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Zach Edey",
+   "pos": "C",
+   "starter": true,
+   "min": 19.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 6.0,
+    "reb": 7.3,
+    "ast": 1.7,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 13.6,
+    "reb": 11.1,
+    "ast": 1.1,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Isaiah Stewart",
+   "pos": "C",
+   "starter": false,
+   "min": 16.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.0,
+    "pts": 7.0,
+    "reb": 3.7,
+    "ast": 0.7,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 22.7,
+    "pts": 10.0,
+    "reb": 5.0,
+    "ast": 1.1,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Quinten Post",
+   "pos": "C",
+   "starter": false,
+   "min": 15.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 7.0,
+    "reb": 2.3,
+    "ast": 0.8,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 17.3,
+    "pts": 7.7,
+    "reb": 4.0,
+    "ast": 1.4,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Cam Spencer",
+   "pos": "SG",
+   "starter": false,
+   "min": 15.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.8,
+    "pts": 8.8,
+    "reb": 3.0,
+    "ast": 2.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 23.8,
+    "pts": 11.1,
+    "reb": 2.5,
+    "ast": 5.6,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Scotty Pippen Jr.",
+   "pos": "PG",
+   "starter": false,
+   "min": 14.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.5,
+    "pts": 7.5,
+    "reb": 3.0,
+    "ast": 2.8,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 21.2,
+    "pts": 11.4,
+    "reb": 2.2,
+    "ast": 4.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "GG Jackson II",
+   "pos": "PF",
+   "starter": false,
+   "min": 13.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 4.8,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 21.4,
+    "pts": 12.5,
+    "reb": 4.3,
+    "ast": 1.5,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "MEM",
+   "name": "Kris Murray",
+   "pos": "SF",
+   "starter": false,
+   "min": 11.8,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.0,
+    "pts": 0.0,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 23.4,
+    "pts": 5.8,
+    "reb": 3.6,
+    "ast": 1.4,
+    "fg3m": 0.6
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 29-oct (calendario, 3 partidos); Covers.com 29-oct (spread, total y ML de 9 casas en CLE@ATL y MEM@POR; solo ML en SAC@NOP; props de puntos)",
+  "spread_home": -7.5,
+  "total": 234.0,
+  "ml_home": -280,
+  "ml_away": 225
+ },
+ "prop_lines": {
+  "Ja Morant": {
+   "pts": [
+    16.5,
+    -115,
+    -115
+   ]
+  },
+  "Deni Avdija": {
+   "pts": [
+    22.5,
+    -120,
+    -110
+   ]
+  },
+  "Ty Jerome": {
+   "pts": [
+    23.5,
+    -110,
+    -120
+   ]
+  },
+  "Jaylen Wells": {
+   "pts": [
+    11.5,
+    -105,
+    -125
+   ]
+  },
+  "Scoot Henderson": {
+   "pts": [
+    9.5,
+    100,
+    -130
+   ]
+  },
+  "Cedric Coward": {
+   "pts": [
+    13.5,
+    -105,
+    -125
+   ]
+  },
+  "Toumani Camara": {
+   "pts": [
+    10.5,
+    -105,
+    -125
+   ]
+  },
+  "Jerami Grant": {
+   "pts": [
+    10.5,
+    -110,
+    -120
+   ]
+  }
+ }
+}
