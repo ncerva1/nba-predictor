@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T16:34+00:00",
+ "generated": "2026-10-29T17:16+00:00",
  "value_ev": 0.03,
  "history": [
   {
@@ -219,8 +219,8 @@
       "line": null,
       "stat": null,
       "p": 0.725,
-      "dec": 1.433,
-      "ev": 0.039,
+      "dec": 1.435,
+      "ev": 0.041,
       "gid": "2026-10-29-SAC-at-NOP",
       "game": "SAC @ NOP"
      }
@@ -231,7 +231,7 @@
     "corr": 1.0,
     "dec": 2.74,
     "fair": 1.73,
-    "ev": 0.579,
+    "ev": 0.581,
     "type": "cross",
     "result": null
    },
@@ -271,8 +271,8 @@
       "line": null,
       "stat": null,
       "p": 0.725,
-      "dec": 1.433,
-      "ev": 0.039,
+      "dec": 1.435,
+      "ev": 0.041,
       "gid": "2026-10-29-SAC-at-NOP",
       "game": "SAC @ NOP"
      }
@@ -283,7 +283,7 @@
     "corr": 1.0,
     "dec": 5.12,
     "fair": 2.69,
-    "ev": 0.901,
+    "ev": 0.904,
     "type": "cross",
     "result": null
    }
@@ -13139,24 +13139,79 @@
    },
    "proj_total": 237.0,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 2,
    "top_bets": [
+    {
+     "kind": "spread",
+     "label": "NOP -5.5",
+     "player": null,
+     "team": "NOP",
+     "line": -5.5,
+     "odds": -112,
+     "dec": 1.895,
+     "odds_assumed": false,
+     "p": 0.58,
+     "implied": 0.528,
+     "fair": -138,
+     "edge": 0.052,
+     "ev": 0.099,
+     "value": true,
+     "n_books": 2,
+     "best": {
+      "book": "BetPlay",
+      "line": -5.5,
+      "odds": -111.11,
+      "dec": 1.9,
+      "p": 0.58,
+      "ev": 0.102,
+      "region": "CO"
+     },
+     "books": [
+      {
+       "book": "BetPlay",
+       "line": -5.5,
+       "odds": -111.11,
+       "dec": 1.9,
+       "p": 0.58,
+       "ev": 0.102,
+       "region": "CO"
+      },
+      {
+       "book": "Rushbet",
+       "line": -5.5,
+       "odds": -112.36,
+       "dec": 1.89,
+       "p": 0.58,
+       "ev": 0.096,
+       "region": "CO"
+      }
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": -5.5,
+      "odds": -111.11,
+      "dec": 1.9,
+      "p": 0.58,
+      "ev": 0.102,
+      "region": "CO"
+     }
+    },
     {
      "kind": "ml",
      "label": "NOP gana",
      "player": null,
      "team": "NOP",
      "line": null,
-     "odds": -231,
-     "dec": 1.433,
+     "odds": -230,
+     "dec": 1.435,
      "odds_assumed": false,
      "p": 0.725,
-     "implied": 0.698,
+     "implied": 0.697,
      "fair": -264,
-     "edge": 0.027,
-     "ev": 0.039,
+     "edge": 0.028,
+     "ev": 0.041,
      "value": true,
-     "n_books": 9,
+     "n_books": 11,
      "best": {
       "book": "BetRivers",
       "line": null,
@@ -13175,12 +13230,30 @@
        "ev": 0.063
       },
       {
+       "book": "BetPlay",
+       "line": null,
+       "odds": -222.22,
+       "dec": 1.45,
+       "p": 0.725,
+       "ev": 0.052,
+       "region": "CO"
+      },
+      {
        "book": "Caesars",
        "line": null,
        "odds": -225,
        "dec": 1.444,
        "p": 0.725,
        "ev": 0.048
+      },
+      {
+       "book": "Rushbet",
+       "line": null,
+       "odds": -227.27,
+       "dec": 1.44,
+       "p": 0.725,
+       "ev": 0.044,
+       "region": "CO"
       },
       {
        "book": "theScore Bet",
@@ -13238,125 +13311,145 @@
        "p": 0.725,
        "ev": 0.027
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": null,
+      "odds": -222.22,
+      "dec": 1.45,
+      "p": 0.725,
+      "ev": 0.052,
+      "region": "CO"
+     }
     },
     {
-     "kind": "ml",
-     "label": "SAC gana",
+     "kind": "total",
+     "label": "Over 236.5",
      "player": null,
-     "team": "SAC",
-     "line": null,
-     "odds": 190,
-     "dec": 2.899,
+     "team": null,
+     "line": 236.5,
+     "odds": -108,
+     "dec": 1.925,
      "odds_assumed": false,
-     "p": 0.275,
-     "implied": 0.345,
-     "fair": 264,
-     "edge": -0.07,
-     "ev": -0.203,
+     "p": 0.508,
+     "implied": 0.519,
+     "fair": -103,
+     "edge": -0.011,
+     "ev": -0.022,
      "value": false,
-     "n_books": 9,
+     "n_books": 2,
      "best": {
-      "book": "BetMGM",
-      "line": null,
-      "odds": 195,
-      "dec": 2.95,
-      "p": 0.275,
-      "ev": -0.189
+      "book": "BetPlay",
+      "line": 236.5,
+      "odds": -107.53,
+      "dec": 1.93,
+      "p": 0.508,
+      "ev": -0.019,
+      "region": "CO"
      },
      "books": [
       {
-       "book": "BetMGM",
-       "line": null,
-       "odds": 195,
-       "dec": 2.95,
-       "p": 0.275,
-       "ev": -0.189
+       "book": "BetPlay",
+       "line": 236.5,
+       "odds": -107.53,
+       "dec": 1.93,
+       "p": 0.508,
+       "ev": -0.019,
+       "region": "CO"
       },
       {
-       "book": "bet365",
-       "line": null,
-       "odds": 195,
-       "dec": 2.95,
-       "p": 0.275,
-       "ev": -0.189
-      },
-      {
-       "book": "DraftKings",
-       "line": null,
-       "odds": 195,
-       "dec": 2.95,
-       "p": 0.275,
-       "ev": -0.189
-      },
-      {
-       "book": "theScore Bet",
-       "line": null,
-       "odds": 195,
-       "dec": 2.95,
-       "p": 0.275,
-       "ev": -0.189
-      },
-      {
-       "book": "FanDuel",
-       "line": null,
-       "odds": 194,
-       "dec": 2.94,
-       "p": 0.275,
-       "ev": -0.192
-      },
-      {
-       "book": "Fanatics",
-       "line": null,
-       "odds": 190,
-       "dec": 2.9,
-       "p": 0.275,
-       "ev": -0.203
-      },
-      {
-       "book": "Hard Rock Bet",
-       "line": null,
-       "odds": 190,
-       "dec": 2.9,
-       "p": 0.275,
-       "ev": -0.203
-      },
-      {
-       "book": "Caesars",
-       "line": null,
-       "odds": 185,
-       "dec": 2.85,
-       "p": 0.275,
-       "ev": -0.217
-      },
-      {
-       "book": "BetRivers",
-       "line": null,
-       "odds": 170,
-       "dec": 2.7,
-       "p": 0.275,
-       "ev": -0.258
+       "book": "Rushbet",
+       "line": 236.5,
+       "odds": -108.7,
+       "dec": 1.92,
+       "p": 0.508,
+       "ev": -0.024,
+       "region": "CO"
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": 236.5,
+      "odds": -107.53,
+      "dec": 1.93,
+      "p": 0.508,
+      "ev": -0.019,
+      "region": "CO"
+     }
     }
    ],
    "value_bets": [
     {
+     "kind": "spread",
+     "label": "NOP -5.5",
+     "player": null,
+     "team": "NOP",
+     "line": -5.5,
+     "odds": -112,
+     "dec": 1.895,
+     "odds_assumed": false,
+     "p": 0.58,
+     "implied": 0.528,
+     "fair": -138,
+     "edge": 0.052,
+     "ev": 0.099,
+     "value": true,
+     "n_books": 2,
+     "best": {
+      "book": "BetPlay",
+      "line": -5.5,
+      "odds": -111.11,
+      "dec": 1.9,
+      "p": 0.58,
+      "ev": 0.102,
+      "region": "CO"
+     },
+     "books": [
+      {
+       "book": "BetPlay",
+       "line": -5.5,
+       "odds": -111.11,
+       "dec": 1.9,
+       "p": 0.58,
+       "ev": 0.102,
+       "region": "CO"
+      },
+      {
+       "book": "Rushbet",
+       "line": -5.5,
+       "odds": -112.36,
+       "dec": 1.89,
+       "p": 0.58,
+       "ev": 0.096,
+       "region": "CO"
+      }
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": -5.5,
+      "odds": -111.11,
+      "dec": 1.9,
+      "p": 0.58,
+      "ev": 0.102,
+      "region": "CO"
+     }
+    },
+    {
      "kind": "ml",
      "label": "NOP gana",
      "player": null,
      "team": "NOP",
      "line": null,
-     "odds": -231,
-     "dec": 1.433,
+     "odds": -230,
+     "dec": 1.435,
      "odds_assumed": false,
      "p": 0.725,
-     "implied": 0.698,
+     "implied": 0.697,
      "fair": -264,
-     "edge": 0.027,
-     "ev": 0.039,
+     "edge": 0.028,
+     "ev": 0.041,
      "value": true,
-     "n_books": 9,
+     "n_books": 11,
      "best": {
       "book": "BetRivers",
       "line": null,
@@ -13375,12 +13468,30 @@
        "ev": 0.063
       },
       {
+       "book": "BetPlay",
+       "line": null,
+       "odds": -222.22,
+       "dec": 1.45,
+       "p": 0.725,
+       "ev": 0.052,
+       "region": "CO"
+      },
+      {
        "book": "Caesars",
        "line": null,
        "odds": -225,
        "dec": 1.444,
        "p": 0.725,
        "ev": 0.048
+      },
+      {
+       "book": "Rushbet",
+       "line": null,
+       "odds": -227.27,
+       "dec": 1.44,
+       "p": 0.725,
+       "ev": 0.044,
+       "region": "CO"
       },
       {
        "book": "theScore Bet",
@@ -13438,7 +13549,16 @@
        "p": 0.725,
        "ev": 0.027
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": null,
+      "odds": -222.22,
+      "dec": 1.45,
+      "p": 0.725,
+      "ev": 0.052,
+      "region": "CO"
+     }
     }
    ],
    "parlays": []
@@ -13595,16 +13715,16 @@
      "player": null,
      "team": "POR",
      "line": -7.5,
-     "odds": -111,
-     "dec": 1.905,
+     "odds": -112,
+     "dec": 1.895,
      "odds_assumed": false,
      "p": 0.611,
-     "implied": 0.525,
+     "implied": 0.528,
      "fair": -157,
-     "edge": 0.086,
-     "ev": 0.165,
+     "edge": 0.084,
+     "ev": 0.159,
      "value": true,
-     "n_books": 8,
+     "n_books": 10,
      "best": {
       "book": "DraftKings",
       "line": -7.5,
@@ -13685,8 +13805,35 @@
        "dec": 1.952,
        "p": 0.582,
        "ev": 0.137
+      },
+      {
+       "book": "BetPlay",
+       "line": -7.5,
+       "odds": -116.28,
+       "dec": 1.86,
+       "p": 0.611,
+       "ev": 0.137,
+       "region": "CO"
+      },
+      {
+       "book": "Rushbet",
+       "line": -7.5,
+       "odds": -117.65,
+       "dec": 1.85,
+       "p": 0.611,
+       "ev": 0.131,
+       "region": "CO"
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": -7.5,
+      "odds": -116.28,
+      "dec": 1.86,
+      "p": 0.611,
+      "ev": 0.137,
+      "region": "CO"
+     }
     },
     {
      "kind": "total",
@@ -13694,16 +13841,16 @@
      "player": null,
      "team": null,
      "line": 233.5,
-     "odds": -110,
-     "dec": 1.907,
+     "odds": -111,
+     "dec": 1.898,
      "odds_assumed": false,
      "p": 0.586,
-     "implied": 0.524,
+     "implied": 0.527,
      "fair": -142,
-     "edge": 0.062,
-     "ev": 0.118,
+     "edge": 0.059,
+     "ev": 0.112,
      "value": true,
-     "n_books": 3,
+     "n_books": 5,
      "best": {
       "book": "bet365",
       "line": 233.5,
@@ -13730,6 +13877,15 @@
        "ev": 0.119
       },
       {
+       "book": "BetPlay",
+       "line": 233.5,
+       "odds": -112.36,
+       "dec": 1.89,
+       "p": 0.586,
+       "ev": 0.107,
+       "region": "CO"
+      },
+      {
        "book": "Fanatics",
        "line": 234.0,
        "odds": -110,
@@ -13744,6 +13900,15 @@
        "dec": 1.909,
        "p": 0.578,
        "ev": 0.103
+      },
+      {
+       "book": "Rushbet",
+       "line": 233.5,
+       "odds": -113.64,
+       "dec": 1.88,
+       "p": 0.586,
+       "ev": 0.102,
+       "region": "CO"
       },
       {
        "book": "Hard Rock Bet",
@@ -13785,7 +13950,16 @@
        "p": 0.566,
        "ev": 0.081
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": 233.5,
+      "odds": -112.36,
+      "dec": 1.89,
+      "p": 0.586,
+      "ev": 0.107,
+      "region": "CO"
+     }
     },
     {
      "kind": "ml",
@@ -13793,16 +13967,16 @@
      "player": null,
      "team": "POR",
      "line": null,
-     "odds": -279,
-     "dec": 1.358,
+     "odds": -282,
+     "dec": 1.355,
      "odds_assumed": false,
      "p": 0.796,
-     "implied": 0.736,
+     "implied": 0.738,
      "fair": -391,
-     "edge": 0.06,
-     "ev": 0.082,
+     "edge": 0.058,
+     "ev": 0.079,
      "value": true,
-     "n_books": 9,
+     "n_books": 11,
      "best": {
       "book": "DraftKings",
       "line": null,
@@ -13877,6 +14051,24 @@
        "ev": 0.076
       },
       {
+       "book": "BetPlay",
+       "line": null,
+       "odds": -294.12,
+       "dec": 1.34,
+       "p": 0.796,
+       "ev": 0.067,
+       "region": "CO"
+      },
+      {
+       "book": "Rushbet",
+       "line": null,
+       "odds": -294.12,
+       "dec": 1.34,
+       "p": 0.796,
+       "ev": 0.067,
+       "region": "CO"
+      },
+      {
        "book": "BetRivers",
        "line": null,
        "odds": -305,
@@ -13884,7 +14076,16 @@
        "p": 0.796,
        "ev": 0.057
       }
-     ]
+     ],
+     "best_co": {
+      "book": "BetPlay",
+      "line": null,
+      "odds": -294.12,
+      "dec": 1.34,
+      "p": 0.796,
+      "ev": 0.067,
+      "region": "CO"
+     }
     },
     {
      "kind": "prop",
@@ -13932,8 +14133,8 @@
        "line": null,
        "stat": null,
        "p": 0.796,
-       "dec": 1.358,
-       "ev": 0.082,
+       "dec": 1.355,
+       "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
        "game": "MEM @ POR"
       },
@@ -13955,9 +14156,9 @@
      "p": 0.65,
      "p_indep": 0.63,
      "corr": 1.03,
-     "dec": 2.49,
+     "dec": 2.48,
      "fair": 1.54,
-     "ev": 0.618,
+     "ev": 0.614,
      "type": "sgp"
     },
     {
@@ -13970,8 +14171,8 @@
        "line": null,
        "stat": null,
        "p": 0.796,
-       "dec": 1.358,
-       "ev": 0.082,
+       "dec": 1.355,
+       "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
        "game": "MEM @ POR"
       },
@@ -14006,9 +14207,9 @@
      "p": 0.527,
      "p_indep": 0.492,
      "corr": 1.07,
-     "dec": 4.48,
+     "dec": 4.47,
      "fair": 1.9,
-     "ev": 1.362,
+     "ev": 1.357,
      "type": "sgp"
     },
     {
@@ -14034,8 +14235,8 @@
        "line": null,
        "stat": null,
        "p": 0.796,
-       "dec": 1.358,
-       "ev": 0.082,
+       "dec": 1.355,
+       "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
        "game": "MEM @ POR"
       },
@@ -14070,9 +14271,9 @@
      "p": 0.425,
      "p_indep": 0.391,
      "corr": 1.09,
-     "dec": 8.55,
+     "dec": 8.53,
      "fair": 2.35,
-     "ev": 2.635,
+     "ev": 2.627,
      "type": "sgp"
     }
    ]

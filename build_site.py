@@ -108,7 +108,7 @@ def multi_book_bets(cfg, s, books):
             p = float(prob(line))
             d = to_dec(odds)
             offers.append(dict(book=b["book"], line=line, odds=odds, dec=round(d, 3), p=round(p, 3),
-                               ev=round(p * (d - 1) - (1 - p), 3)))
+                               ev=round(p * (d - 1) - (1 - p), 3), **({"region": b["region"]} if b.get("region") else {})))
         if not offers:
             continue
         lines = [o["line"] for o in offers]
@@ -119,6 +119,9 @@ def multi_book_bets(cfg, s, books):
         r = bet(kind, lab(cl), p, prob_to_american(1 / dec), cl, team=team, dec=dec)
         offers.sort(key=lambda o: o["ev"], reverse=True)
         r.update(n_books=len(at), best=offers[0], books=offers)
+        co = [o for o in offers if o.get("region") == "CO"]  # casas colombianas (odds/fetch_co.py)
+        if co:
+            r["best_co"] = co[0]
         consensus[key] = (cl, prob_to_american(1 / dec))
         out.append(r)
     return out, consensus
