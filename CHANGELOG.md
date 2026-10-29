@@ -1,5 +1,22 @@
 # Cambios del modelo
 
+## 1.3 — 2026-10-29: más peso a los H2H de la temporada pasada
+Pedido de Nicolas tras el 28-oct (Curry: el modelo daba Under 25.5 con 80%; en los 2 H2H de 2025-26 contra MIN
+hizo 39 y 26, y anotó 42). Al empezar la temporada hay pocos partidos y cada rival defiende distinto.
+
+- `model.load_game` añade a cada jugador sus partidos contra el rival de hoy en `h2h/<temporada anterior>.json`,
+  solo los que jugó con su equipo actual y con >= 10 min (`apply_h2h`, informe en `h2h_report`).
+- Tasas por minuto = (1 - wh) x tasa normal + wh x tasa H2H, con wh = n / (n + 3): 1 partido 25%, 2 -> 40%,
+  3 -> 50%, 4 -> 57%. La defensa vs posición (DvP) ya no se aplica a la parte H2H (ese partido ya trae al rival).
+- Minutos: se mezclan con los minutos H2H con la mitad de ese peso y se re-escalan para que el equipo sume lo mismo.
+- Se desactiva con `"h2h": {"use": false}` en el JSON del partido o `python model.py <partido> --no-h2h`.
+- `backtest_h2h.py <fecha>` compara con y sin H2H en una jornada jugada. En el 27-oct (4 partidos, 48 jugadores
+  con H2H) el H2H empeoró un poco el log score (PTS 3.138 -> 3.181) y mejoró el error de minutos (4.75 -> 4.64):
+  muestra muy chica; revisar cada jornada y ajustar `H2H_K`.
+
+Curry 28-oct con 1.3: 20.7 pts proyectados (antes 18.9), P(over 25.5) 27% (antes 20%). El resto del error son
+sus minutos (proyectados 23 por sus 3 primeros partidos), que el H2H solo corrige en parte.
+
 ## Web — 2026-10-28: parlays recomendados
 - `build_site.py` arma parlays de 2, 3 y 4 patas por partido (SGP) y entre partidos de la jornada. Patas: cuota
   publicada, prob. >= 55%, EV >= 0 (entre partidos, solo picks con valor) y sin jugadores en duda (p_play < 0.9).

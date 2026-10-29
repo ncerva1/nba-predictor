@@ -1,10 +1,11 @@
 """
-NBA-Predictor 1.2 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.3 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
     python model.py games/2026-10-26_IND@MIL.json 20000 --db         # fuerza la BD
     python model.py games/2026-10-26_IND@MIL.json 20000 --no-db      # solo valores manuales del JSON
+    python model.py games/2026-10-28_GSW@MIN.json 20000 --no-h2h     # sin el peso de los H2H de la temporada pasada
 
 Flujo:
  1. Rating por equipo = mezcla (shrinkage) de la temporada actual con un prior
@@ -23,8 +24,10 @@ Flujo:
     jugador en el marcador simulado de su equipo; rebotes, asistencias y triples se escalan por los multiplicadores
     de enfrentamiento (rebote, asistencias, triples concedidos) y por la defensa vs posición del rival,
     y dibujadas con Poisson-gamma (sobre-dispersión).
+ 6. H2H (1.3): si el jugador enfrentó al rival de hoy la temporada pasada con su equipo actual, sus tasas por
+    minuto se mezclan con las de esos partidos (peso n / (n + H2H_K)) y sus minutos con la mitad de ese peso.
 """
-import json, os, sys
+import glob, json, os, re, sys, unicodedata
 import numpy as np
 
 STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
@@ -33,6 +36,10 @@ TEAM_SD, RHO, MARGIN_SD = 12.0, 0.35, 13.7
 MIN_SD = {True: 5.5, False: 6.0}  # DE de minutos titular / suplente (antes 3.5 / 4.0; el error real fue ~7)
 EXIT_P, EXIT_FRAC = 0.04, (0.15, 0.6)  # prob. de salir pronto (lesión, faltas) y fracción de minutos que juega
 PLAYER_K = 6  # partidos de encogimiento de las tasas por minuto hacia la temporada anterior (antes 3)
+# 1.3 (pedido de Nicolas, 29-oct): más peso a los enfrentamientos H2H de la temporada pasada contra el mismo
+# rival. Peso de las tasas H2H = n / (n + H2H_K) (1 partido 0.25, 2 -> 0.40, 4 -> 0.57); los minutos H2H
+# entran con la mitad de ese peso. Solo cuentan partidos en que jugó >= H2H_MIN_MIN con su equipo actual.
+H2H_K, H2H_MIN_W, H2H_MIN_MIN = 3, 0.5, 10
 MAX_MIN = 44
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -85,6 +92,49 @@ def player_weight(p):
     return g / (g + PLAYER_K)
 
 
+def _norm(name):
+    n = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"[^a-z ]", "", n.replace("-", " "))
+    return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
+def name_key(name):  # apellido + 3 primeras letras del nombre: "Ron Holland" = "Ronald Holland II"
+    w = _norm(name).split()
+    return f"{w[-1]} {w[0][:3]}" if len(w) > 1 else " ".join(w)
+
+
+def prior_season(date):
+    y = int(date[:4]) if int(date[5:7]) >= 8 else int(date[:4]) - 1  # la temporada y/y+1 empieza en octubre
+    return f"{y - 1}-{str(y)[2:]}"
+
+
+def apply_h2h(cfg):
+    """Añade a cada jugador sus partidos de la temporada pasada contra el rival de hoy (h2h/<temporada>.json),
+    jugando con su equipo actual: p["h2h"] = {g, min, pts, reb, ast, fg3m} (sumas). Lo usa simulate()."""
+    g = cfg["game"]
+    path = os.path.join(HERE, "h2h", f"{prior_season(g['date'])}.json")
+    if cfg.get("h2h", {}).get("use", True) is False or not os.path.exists(path):
+        return cfg
+    pair = {g["home"], g["away"]}
+    games = [x for x in json.load(open(path))["games"] if {x["home"], x["away"]} == pair]
+    lines = {}
+    for x in games:
+        for team, ps in x["players"].items():
+            for n, mi, pts, reb, ast, f3 in ps:
+                if mi >= H2H_MIN_MIN:
+                    lines.setdefault((team, name_key(n)), []).append((mi, pts, reb, ast, f3))
+    rep = {"season": prior_season(g["date"]), "games": len(games), "players": {}}
+    for p in cfg["players"]:
+        rows = lines.get((p["team"], name_key(p["name"])))
+        if rows:
+            tot = np.sum(rows, axis=0)
+            p["h2h"] = dict(g=len(rows), **{k: float(v) for k, v in zip(("min", "pts", "reb", "ast", "fg3m"), tot)})
+            rep["players"][p["name"]] = dict(g=len(rows), w=round(len(rows) / (len(rows) + H2H_K), 2),
+                                             min=round(tot[0] / len(rows), 1), pts=round(tot[1] / len(rows), 1))
+    cfg["_h2h_report"] = rep
+    return cfg
+
+
 def nb_draw(rng, mean, r):
     lam = rng.gamma(shape=r, scale=np.maximum(mean, 1e-6) / r)
     return rng.poisson(lam)
@@ -127,17 +177,30 @@ def simulate(cfg, n=20000, seed=7):
     team_sim = {h: sh, a: sa}
     opp = {h: a, a: h}
     dvp = lambda p, s: p.get("dvp", {}).get(s, 1.0)  # multiplicador defensa vs posición (1 si no hay BD)
+    base_min = {}
     for p in players:
         w = player_weight(p)
-        p["rate"] = {s: w * p["cur"][s] / max(p["cur"]["min"], 1) +
-                     (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1) for s in STAT_R}
+        # la DvP va dentro de la tasa; la parte H2H ya trae al rival de hoy, así que no se le aplica
+        p["rate"] = {s: (w * p["cur"][s] / max(p["cur"]["min"], 1) +
+                         (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1)) * dvp(p, s) for s in STAT_R}
+        base_min[p["name"]] = p["min"]
+        hh = p.get("h2h")
+        if hh and hh["g"] > 0 and hh["min"] > 0:
+            wh = hh["g"] / (hh["g"] + H2H_K)
+            p["rate"] = {s: (1 - wh) * p["rate"][s] + wh * hh[s] / hh["min"] for s in STAT_R}
+            base_min[p["name"]] = (1 - wh * H2H_MIN_W) * p["min"] + wh * H2H_MIN_W * hh["min"] / hh["g"]
+    for t in (h, a):  # los minutos H2H cambian el reparto, no el total del equipo
+        tp = [p for p in players if p["team"] == t]
+        k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)
+        for p in tp:
+            base_min[p["name"]] = min(base_min[p["name"]] * k, MAX_MIN)
 
     # minutos: ruido + salidas tempranas + bajas de última hora (p_play); los minutos que faltan
     # se reparten entre los que juegan para que el equipo siga sumando sus 240
     mins = {}
     for t in (h, a):
         tp = [p for p in players if p["team"] == t]
-        base = np.array([p["min"] for p in tp])[:, None]
+        base = np.array([base_min[p["name"]] for p in tp])[:, None]
         m_ = np.clip(base + rng.normal(0, 1, (len(tp), n)) * np.array([[MIN_SD[p["starter"]]] for p in tp]), 0, MAX_MIN)
         early = rng.random((len(tp), n)) < EXIT_P
         m_ = np.where(early, m_ * rng.uniform(*EXIT_FRAC, (len(tp), n)), m_)
@@ -153,7 +216,7 @@ def simulate(cfg, n=20000, seed=7):
 
     # puntos: cada jugador se lleva su parte (tasa x minutos x DvP) del marcador simulado de su equipo,
     # así una baja o una salida temprana pasa sus tiros a los compañeros
-    pts_w = {p["name"]: p["rate"]["pts"] * mins[p["name"]] * dvp(p, "pts") * cfg["matchup"][p["team"]].get("pts_mult", 1)
+    pts_w = {p["name"]: p["rate"]["pts"] * mins[p["name"]] * cfg["matchup"][p["team"]].get("pts_mult", 1)
              for p in players}
     pts_sum = {t: sum(pts_w[p["name"]] for p in players if p["team"] == t) for t in (h, a)}
 
@@ -166,9 +229,9 @@ def simulate(cfg, n=20000, seed=7):
         mm = cfg["matchup"][t]
         means = {
             "pts": team_sim[t] * pts_w[p["name"]] / np.maximum(pts_sum[t], 1e-6),
-            "reb": p["rate"]["reb"] * mn * mm.get("reb_mult", 1) * of ** 0.5 * dvp(p, "reb"),
-            "ast": p["rate"]["ast"] * mn * mm.get("ast_mult", 1) * tf ** 0.8 * dvp(p, "ast"),
-            "fg3m": p["rate"]["fg3m"] * mn * tf ** 0.5 * mm.get("fg3_mult", 1) * dvp(p, "fg3m"),
+            "reb": p["rate"]["reb"] * mn * mm.get("reb_mult", 1) * of ** 0.5,
+            "ast": p["rate"]["ast"] * mn * mm.get("ast_mult", 1) * tf ** 0.8,
+            "fg3m": p["rate"]["fg3m"] * mn * tf ** 0.5 * mm.get("fg3_mult", 1),
         }
         draws = {s: nb_draw(rng, means[s], STAT_R[s]) for s in STAT_R}
         draws["pra"] = draws["pts"] + draws["reb"] + draws["ast"]
@@ -215,6 +278,7 @@ def summarize(cfg, s):
         "margin_hist": np.histogram(-m, bins=np.arange(-40, 42, 4))[0].tolist(),
         "total_pcts": {q: float(np.percentile(tot, q)) for q in (10, 25, 50, 75, 90)},
         "db_report": cfg.get("_db_report"),
+        "h2h_report": cfg.get("_h2h_report"),
         "players": [],
     }
     lines = cfg.get("prop_lines", {})
@@ -242,15 +306,18 @@ def summarize(cfg, s):
     return out
 
 
-def load_game(path, use_db=None):
-    """Carga el JSON del partido y, si corresponde, lo completa con la BD de rankings."""
+def load_game(path, use_db=None, use_h2h=None):
+    """Carga el JSON del partido, lo completa con la BD de rankings si corresponde y le añade los H2H de
+    la temporada pasada (desactivar con "h2h": {"use": false} en el JSON o use_h2h=False)."""
     cfg = json.load(open(path))
+    if use_h2h is not None:
+        cfg.setdefault("h2h", {})["use"] = use_h2h
     want = cfg.get("db", {}).get("use", False) if use_db is None else use_db
     if want:
         from db_link import apply_db
         rk = cfg.get("db", {}).get("rankings") or os.path.join(HERE, "db", "rankings_latest.json")
         cfg = apply_db(cfg, rk)
-    return cfg
+    return apply_h2h(cfg)
 
 
 if __name__ == "__main__":
@@ -258,7 +325,7 @@ if __name__ == "__main__":
     flag = True if "--db" in sys.argv else (False if "--no-db" in sys.argv else None)
     path = args[0]
     n = int(args[1]) if len(args) > 1 else 20000
-    cfg = load_game(path, flag)
+    cfg = load_game(path, flag, False if "--no-h2h" in sys.argv else None)
     s = simulate(cfg, n)
     summ = summarize(cfg, s)
     outp = path.replace(".json", "_results.json")
