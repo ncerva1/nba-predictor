@@ -14,6 +14,11 @@ hizo 39 y 26, y anotó 42). Al empezar la temporada hay pocos partidos y cada ri
   (los box scores de ESPN listan primero a los 5 titulares). Si cambió de rol (p. ej. un suplente que ahora es
   titular) sus minutos H2H no cuentan; las tasas por minuto sí. Los H2H con otro equipo nunca cuentan (caso
   Naz Reid: sus H2H con MIN no se usan para CHA). Backtest 27-oct: error de minutos 4.75 -> 5.06, PTS 3.138 -> 3.213.
+- 1.3.2 (mismo día, pedido de Nicolas: ponderar según el contexto del jugador): cada H2H cuenta según los minutos
+  que jugó frente a los que se le proyectan hoy (15 de 34 min = 0.44 partidos), así un H2H corto por lesión,
+  faltas o paliza pesa poco y manda la forma reciente + la defensa del rival (DvP). Para los minutos solo cuentan
+  los H2H en que jugó al menos la mitad de sus minutos de hoy, y si cambió de rol pesan un tercio (antes nada).
+  Backtest 27-oct: minutos 4.75 -> 4.85, PTS 3.138 -> 3.201.
 - Se desactiva con `"h2h": {"use": false}` en el JSON del partido o `python model.py <partido> --no-h2h`.
 - `backtest_h2h.py <fecha>` compara con y sin H2H en una jornada jugada. En el 27-oct (4 partidos, 48 jugadores
   con H2H) el H2H empeoró un poco el log score (PTS 3.138 -> 3.181) y mejoró el error de minutos (4.75 -> 4.64):
