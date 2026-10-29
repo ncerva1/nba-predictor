@@ -1,6 +1,6 @@
 {
  "season": "2025-26",
- "source": "ESPN box scores (espn.co.uk / espn.in /nba/boxscore/_/gameId/<id>) y 'Largest Lead' de la página matchup; fechas EE. UU. de basketball-reference (cruces del 28-oct: fecha de la página de ESPN)",
+ "source": "ESPN box scores (espn.co.uk / espn.in /nba/boxscore/_/gameId/<id>) y 'Largest Lead' de la página matchup; fechas EE. UU. de basketball-reference (cruces del 28 y 29-oct: fecha de la página de ESPN)",
  "format": "players[equipo] = [nombre, MIN, PTS, REB, AST, 3PM]; largest_lead = máxima ventaja de cada equipo (blowout si >= 20)",
  "games": [
   {
@@ -10661,6 +10661,2037 @@
       3,
       5,
       2
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-02-10",
+   "espn_id": "401810621",
+   "away": "SAC",
+   "home": "NOP",
+   "score": {
+    "SAC": 94,
+    "NOP": 120
+   },
+   "ot": 0,
+   "largest_lead": {
+    "SAC": 5,
+    "NOP": 32
+   },
+   "players": {
+    "SAC": [
+     [
+      "Precious Achiuwa",
+      20,
+      8,
+      3,
+      0,
+      0
+     ],
+     [
+      "Maxime Raynaud",
+      38,
+      21,
+      19,
+      1,
+      0
+     ],
+     [
+      "Russell Westbrook",
+      21,
+      17,
+      2,
+      2,
+      1
+     ],
+     [
+      "DeMar DeRozan",
+      20,
+      8,
+      1,
+      1,
+      0
+     ],
+     [
+      "Nique Clifford",
+      37,
+      10,
+      5,
+      6,
+      1
+     ],
+     [
+      "Doug McDermott",
+      8,
+      3,
+      2,
+      1,
+      1
+     ],
+     [
+      "Drew Eubanks",
+      6,
+      4,
+      1,
+      1,
+      0
+     ],
+     [
+      "Dylan Cardwell",
+      32,
+      6,
+      11,
+      1,
+      0
+     ],
+     [
+      "Daeqwon Plowden",
+      28,
+      5,
+      3,
+      2,
+      1
+     ],
+     [
+      "Devin Carter",
+      30,
+      12,
+      3,
+      4,
+      0
+     ]
+    ],
+    "NOP": [
+     [
+      "Herbert Jones",
+      30,
+      8,
+      4,
+      6,
+      2
+     ],
+     [
+      "Zion Williamson",
+      27,
+      18,
+      5,
+      6,
+      0
+     ],
+     [
+      "Trey Murphy III",
+      29,
+      21,
+      2,
+      7,
+      5
+     ],
+     [
+      "Derik Queen",
+      24,
+      8,
+      5,
+      1,
+      0
+     ],
+     [
+      "Saddiq Bey",
+      26,
+      12,
+      4,
+      1,
+      1
+     ],
+     [
+      "Karlo Matkovic",
+      19,
+      12,
+      9,
+      1,
+      2
+     ],
+     [
+      "Yves Missi",
+      22,
+      7,
+      5,
+      1,
+      0
+     ],
+     [
+      "Micah Peavy",
+      5,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "Bryce McGowens",
+      24,
+      8,
+      1,
+      3,
+      2
+     ],
+     [
+      "Jordan Hawkins",
+      5,
+      6,
+      0,
+      1,
+      2
+     ],
+     [
+      "Jeremiah Fears",
+      30,
+      20,
+      4,
+      3,
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-03-06",
+   "espn_id": "401810762",
+   "away": "NOP",
+   "home": "SAC",
+   "score": {
+    "NOP": 133,
+    "SAC": 123
+   },
+   "ot": 0,
+   "largest_lead": {
+    "NOP": 17,
+    "SAC": 9
+   },
+   "players": {
+    "NOP": [
+     [
+      "Herbert Jones",
+      24,
+      12,
+      3,
+      2,
+      2
+     ],
+     [
+      "Zion Williamson",
+      29,
+      23,
+      9,
+      5,
+      0
+     ],
+     [
+      "Trey Murphy III",
+      32,
+      21,
+      7,
+      4,
+      4
+     ],
+     [
+      "Yves Missi",
+      16,
+      7,
+      2,
+      1,
+      0
+     ],
+     [
+      "Saddiq Bey",
+      33,
+      20,
+      1,
+      0,
+      3
+     ],
+     [
+      "Karlo Matkovic",
+      25,
+      9,
+      9,
+      2,
+      1
+     ],
+     [
+      "Derik Queen",
+      26,
+      12,
+      9,
+      5,
+      0
+     ],
+     [
+      "Micah Peavy",
+      1,
+      2,
+      0,
+      0,
+      0
+     ],
+     [
+      "Bryce McGowens",
+      27,
+      14,
+      6,
+      2,
+      1
+     ],
+     [
+      "Jeremiah Fears",
+      28,
+      13,
+      6,
+      6,
+      1
+     ]
+    ],
+    "SAC": [
+     [
+      "Precious Achiuwa",
+      41,
+      29,
+      12,
+      5,
+      1
+     ],
+     [
+      "Maxime Raynaud",
+      26,
+      10,
+      5,
+      1,
+      0
+     ],
+     [
+      "Russell Westbrook",
+      34,
+      19,
+      2,
+      10,
+      2
+     ],
+     [
+      "DeMar DeRozan",
+      27,
+      15,
+      2,
+      2,
+      0
+     ],
+     [
+      "Nique Clifford",
+      21,
+      7,
+      5,
+      3,
+      1
+     ],
+     [
+      "Doug McDermott",
+      4,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      "Drew Eubanks",
+      22,
+      15,
+      11,
+      0,
+      0
+     ],
+     [
+      "Malik Monk",
+      30,
+      18,
+      1,
+      4,
+      2
+     ],
+     [
+      "Daeqwon Plowden",
+      18,
+      6,
+      1,
+      1,
+      2
+     ],
+     [
+      "Patrick Baldwin Jr.",
+      6,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      "Killian Hayes",
+      11,
+      4,
+      1,
+      3,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-04-04",
+   "espn_id": "401810983",
+   "away": "NOP",
+   "home": "SAC",
+   "score": {
+    "NOP": 113,
+    "SAC": 117
+   },
+   "ot": 0,
+   "largest_lead": {
+    "NOP": 17,
+    "SAC": 4
+   },
+   "players": {
+    "NOP": [
+     [
+      "Herbert Jones",
+      13,
+      3,
+      1,
+      1,
+      1
+     ],
+     [
+      "Zion Williamson",
+      29,
+      13,
+      6,
+      3,
+      0
+     ],
+     [
+      "Trey Murphy III",
+      32,
+      13,
+      4,
+      4,
+      1
+     ],
+     [
+      "Yves Missi",
+      20,
+      6,
+      7,
+      2,
+      0
+     ],
+     [
+      "Saddiq Bey",
+      29,
+      20,
+      1,
+      3,
+      1
+     ],
+     [
+      "Derik Queen",
+      28,
+      8,
+      6,
+      2,
+      0
+     ],
+     [
+      "Micah Peavy",
+      32,
+      8,
+      3,
+      3,
+      2
+     ],
+     [
+      "Jordan Hawkins",
+      21,
+      14,
+      0,
+      0,
+      4
+     ],
+     [
+      "Jeremiah Fears",
+      37,
+      28,
+      8,
+      6,
+      5
+     ]
+    ],
+    "SAC": [
+     [
+      "Precious Achiuwa",
+      25,
+      12,
+      7,
+      2,
+      0
+     ],
+     [
+      "Maxime Raynaud",
+      29,
+      28,
+      9,
+      4,
+      0
+     ],
+     [
+      "DeMar DeRozan",
+      23,
+      14,
+      2,
+      5,
+      0
+     ],
+     [
+      "Devin Carter",
+      32,
+      9,
+      6,
+      3,
+      2
+     ],
+     [
+      "Nique Clifford",
+      39,
+      23,
+      5,
+      6,
+      4
+     ],
+     [
+      "Doug McDermott",
+      18,
+      3,
+      3,
+      2,
+      1
+     ],
+     [
+      "Dylan Cardwell",
+      24,
+      6,
+      8,
+      1,
+      0
+     ],
+     [
+      "Daeqwon Plowden",
+      31,
+      17,
+      3,
+      1,
+      2
+     ],
+     [
+      "Killian Hayes",
+      20,
+      5,
+      3,
+      5,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2025-11-02",
+   "espn_id": "401810006",
+   "away": "ATL",
+   "home": "CLE",
+   "score": {
+    "ATL": 109,
+    "CLE": 117
+   },
+   "ot": 0,
+   "largest_lead": {
+    "ATL": 4,
+    "CLE": 14
+   },
+   "players": {
+    "ATL": [
+     [
+      "Jalen Johnson",
+      35,
+      23,
+      13,
+      5,
+      1
+     ],
+     [
+      "Zaccharie Risacher",
+      24,
+      8,
+      2,
+      5,
+      0
+     ],
+     [
+      "Kristaps Porzingis",
+      28,
+      15,
+      12,
+      5,
+      0
+     ],
+     [
+      "Nickeil Alexander-Walker",
+      34,
+      16,
+      3,
+      5,
+      0
+     ],
+     [
+      "Dyson Daniels",
+      36,
+      18,
+      4,
+      3,
+      0
+     ],
+     [
+      "Onyeka Okongwu",
+      26,
+      7,
+      5,
+      2,
+      1
+     ],
+     [
+      "Mouhamed Gueye",
+      8,
+      4,
+      3,
+      0,
+      0
+     ],
+     [
+      "Luke Kennard",
+      32,
+      15,
+      2,
+      2,
+      3
+     ],
+     [
+      "Vit Krejci",
+      17,
+      3,
+      2,
+      1,
+      1
+     ]
+    ],
+    "CLE": [
+     [
+      "Larry Nance Jr.",
+      25,
+      2,
+      4,
+      4,
+      0
+     ],
+     [
+      "De'Andre Hunter",
+      31,
+      19,
+      7,
+      3,
+      2
+     ],
+     [
+      "Evan Mobley",
+      35,
+      14,
+      8,
+      5,
+      1
+     ],
+     [
+      "Donovan Mitchell",
+      36,
+      37,
+      2,
+      5,
+      8
+     ],
+     [
+      "Jaylon Tyson",
+      25,
+      18,
+      3,
+      2,
+      5
+     ],
+     [
+      "Dean Wade",
+      25,
+      11,
+      6,
+      3,
+      2
+     ],
+     [
+      "Thomas Bryant",
+      5,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      "Lonzo Ball",
+      27,
+      8,
+      6,
+      3,
+      2
+     ],
+     [
+      "Craig Porter Jr.",
+      21,
+      4,
+      7,
+      3,
+      0
+     ],
+     [
+      "Tyrese Proctor",
+      11,
+      4,
+      0,
+      2,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2025-11-29",
+   "espn_id": "401809811",
+   "away": "CLE",
+   "home": "ATL",
+   "score": {
+    "CLE": 123,
+    "ATL": 130
+   },
+   "ot": 0,
+   "largest_lead": {
+    "CLE": 7,
+    "ATL": 13
+   },
+   "players": {
+    "CLE": [
+     [
+      "De'Andre Hunter",
+      32,
+      16,
+      4,
+      1,
+      2
+     ],
+     [
+      "Jarrett Allen",
+      28,
+      8,
+      8,
+      1,
+      0
+     ],
+     [
+      "Evan Mobley",
+      34,
+      20,
+      14,
+      7,
+      3
+     ],
+     [
+      "Donovan Mitchell",
+      35,
+      42,
+      3,
+      3,
+      7
+     ],
+     [
+      "Darius Garland",
+      33,
+      15,
+      5,
+      10,
+      1
+     ],
+     [
+      "Larry Nance Jr.",
+      10,
+      0,
+      3,
+      1,
+      0
+     ],
+     [
+      "Dean Wade",
+      19,
+      5,
+      3,
+      1,
+      1
+     ],
+     [
+      "Nae'Qwan Tomlin",
+      11,
+      5,
+      1,
+      0,
+      1
+     ],
+     [
+      "Lonzo Ball",
+      17,
+      3,
+      5,
+      4,
+      1
+     ],
+     [
+      "Jaylon Tyson",
+      21,
+      9,
+      2,
+      1,
+      1
+     ]
+    ],
+    "ATL": [
+     [
+      "Onyeka Okongwu",
+      34,
+      18,
+      7,
+      4,
+      2
+     ],
+     [
+      "Jalen Johnson",
+      39,
+      29,
+      12,
+      12,
+      3
+     ],
+     [
+      "Zaccharie Risacher",
+      27,
+      14,
+      3,
+      1,
+      2
+     ],
+     [
+      "Nickeil Alexander-Walker",
+      35,
+      30,
+      3,
+      1,
+      5
+     ],
+     [
+      "Dyson Daniels",
+      37,
+      10,
+      8,
+      9,
+      0
+     ],
+     [
+      "Mouhamed Gueye",
+      24,
+      12,
+      3,
+      2,
+      0
+     ],
+     [
+      "Luke Kennard",
+      16,
+      3,
+      0,
+      2,
+      1
+     ],
+     [
+      "Keaton Wallace",
+      9,
+      0,
+      0,
+      2,
+      0
+     ],
+     [
+      "Vit Krejci",
+      21,
+      14,
+      2,
+      3,
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-04-09",
+   "espn_id": "401811013",
+   "away": "ATL",
+   "home": "CLE",
+   "score": {
+    "ATL": 116,
+    "CLE": 122
+   },
+   "ot": 0,
+   "largest_lead": {
+    "ATL": 11,
+    "CLE": 18
+   },
+   "players": {
+    "ATL": [
+     [
+      "Onyeka Okongwu",
+      33,
+      18,
+      5,
+      0,
+      1
+     ],
+     [
+      "Jalen Johnson",
+      34,
+      12,
+      11,
+      6,
+      0
+     ],
+     [
+      "CJ McCollum",
+      32,
+      12,
+      4,
+      4,
+      0
+     ],
+     [
+      "Nickeil Alexander-Walker",
+      39,
+      25,
+      4,
+      2,
+      4
+     ],
+     [
+      "Dyson Daniels",
+      33,
+      12,
+      7,
+      6,
+      1
+     ],
+     [
+      "Corey Kispert",
+      7,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "Jonathan Kuminga",
+      30,
+      24,
+      6,
+      3,
+      2
+     ],
+     [
+      "Mouhamed Gueye",
+      16,
+      3,
+      5,
+      1,
+      1
+     ],
+     [
+      "Gabe Vincent",
+      15,
+      10,
+      1,
+      1,
+      3
+     ]
+    ],
+    "CLE": [
+     [
+      "Dean Wade",
+      21,
+      8,
+      4,
+      2,
+      2
+     ],
+     [
+      "Jarrett Allen",
+      29,
+      16,
+      8,
+      0,
+      0
+     ],
+     [
+      "Evan Mobley",
+      36,
+      22,
+      19,
+      3,
+      0
+     ],
+     [
+      "James Harden",
+      34,
+      21,
+      5,
+      4,
+      4
+     ],
+     [
+      "Donovan Mitchell",
+      35,
+      31,
+      7,
+      4,
+      1
+     ],
+     [
+      "Dennis Schroder",
+      15,
+      5,
+      1,
+      3,
+      0
+     ],
+     [
+      "Max Strus",
+      21,
+      8,
+      2,
+      2,
+      2
+     ],
+     [
+      "Sam Merrill",
+      27,
+      6,
+      0,
+      3,
+      2
+     ],
+     [
+      "Keon Ellis",
+      22,
+      5,
+      1,
+      1,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-04-11",
+   "espn_id": "401811028",
+   "away": "CLE",
+   "home": "ATL",
+   "score": {
+    "CLE": 102,
+    "ATL": 124
+   },
+   "ot": 0,
+   "largest_lead": {
+    "CLE": 5,
+    "ATL": 36
+   },
+   "players": {
+    "CLE": [
+     [
+      "Dean Wade",
+      17,
+      3,
+      3,
+      0,
+      1
+     ],
+     [
+      "Evan Mobley",
+      22,
+      10,
+      6,
+      1,
+      0
+     ],
+     [
+      "James Harden",
+      25,
+      20,
+      0,
+      5,
+      2
+     ],
+     [
+      "Max Strus",
+      23,
+      2,
+      4,
+      0,
+      0
+     ],
+     [
+      "Jaylon Tyson",
+      24,
+      15,
+      4,
+      3,
+      0
+     ],
+     [
+      "Larry Nance Jr.",
+      16,
+      4,
+      1,
+      0,
+      0
+     ],
+     [
+      "Olivier Sarr",
+      10,
+      3,
+      5,
+      3,
+      1
+     ],
+     [
+      "Tristan Enaruna",
+      12,
+      7,
+      1,
+      1,
+      0
+     ],
+     [
+      "Nae'Qwan Tomlin",
+      19,
+      4,
+      5,
+      1,
+      0
+     ],
+     [
+      "Riley Minix",
+      8,
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      "Dennis Schroder",
+      16,
+      7,
+      2,
+      4,
+      1
+     ],
+     [
+      "Craig Porter Jr.",
+      17,
+      6,
+      5,
+      3,
+      0
+     ],
+     [
+      "Keon Ellis",
+      19,
+      2,
+      3,
+      0,
+      0
+     ],
+     [
+      "Tyrese Proctor",
+      12,
+      15,
+      1,
+      4,
+      2
+     ]
+    ],
+    "ATL": [
+     [
+      "Onyeka Okongwu",
+      27,
+      2,
+      5,
+      1,
+      0
+     ],
+     [
+      "Jalen Johnson",
+      25,
+      18,
+      9,
+      2,
+      2
+     ],
+     [
+      "CJ McCollum",
+      24,
+      29,
+      4,
+      4,
+      6
+     ],
+     [
+      "Nickeil Alexander-Walker",
+      32,
+      18,
+      1,
+      1,
+      3
+     ],
+     [
+      "Dyson Daniels",
+      30,
+      13,
+      10,
+      12,
+      0
+     ],
+     [
+      "Corey Kispert",
+      9,
+      8,
+      0,
+      1,
+      2
+     ],
+     [
+      "Jonathan Kuminga",
+      23,
+      15,
+      5,
+      1,
+      0
+     ],
+     [
+      "Mouhamed Gueye",
+      12,
+      5,
+      3,
+      1,
+      1
+     ],
+     [
+      "Asa Newell",
+      8,
+      2,
+      2,
+      1,
+      0
+     ],
+     [
+      "Zaccharie Risacher",
+      19,
+      4,
+      4,
+      1,
+      0
+     ],
+     [
+      "Tony Bradley",
+      9,
+      7,
+      2,
+      0,
+      1
+     ],
+     [
+      "Gabe Vincent",
+      14,
+      3,
+      1,
+      0,
+      1
+     ],
+     [
+      "Keaton Wallace",
+      8,
+      0,
+      0,
+      2,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2025-12-07",
+   "espn_id": "401810215",
+   "away": "POR",
+   "home": "MEM",
+   "score": {
+    "POR": 96,
+    "MEM": 119
+   },
+   "ot": 0,
+   "largest_lead": {
+    "POR": 1,
+    "MEM": 26
+   },
+   "players": {
+    "POR": [
+     [
+      "Jerami Grant",
+      32,
+      21,
+      7,
+      3,
+      2
+     ],
+     [
+      "Toumani Camara",
+      33,
+      13,
+      6,
+      1,
+      3
+     ],
+     [
+      "Deni Avdija",
+      31,
+      17,
+      7,
+      7,
+      2
+     ],
+     [
+      "Yang Hansen",
+      19,
+      4,
+      5,
+      2,
+      0
+     ],
+     [
+      "Sidy Cissoko",
+      24,
+      6,
+      4,
+      0,
+      2
+     ],
+     [
+      "Kris Murray",
+      22,
+      2,
+      3,
+      1,
+      0
+     ],
+     [
+      "Duop Reath",
+      19,
+      12,
+      2,
+      1,
+      3
+     ],
+     [
+      "Caleb Love",
+      20,
+      4,
+      2,
+      3,
+      0
+     ],
+     [
+      "Javonte Cooke",
+      3,
+      0,
+      1,
+      1,
+      0
+     ],
+     [
+      "Shaedon Sharpe",
+      27,
+      17,
+      2,
+      2,
+      3
+     ],
+     [
+      "Rayan Rupert",
+      11,
+      0,
+      1,
+      0,
+      0
+     ]
+    ],
+    "MEM": [
+     [
+      "Jaren Jackson Jr.",
+      24,
+      6,
+      3,
+      4,
+      0
+     ],
+     [
+      "Cedric Coward",
+      25,
+      11,
+      6,
+      3,
+      0
+     ],
+     [
+      "Jaylen Wells",
+      26,
+      16,
+      5,
+      3,
+      2
+     ],
+     [
+      "Zach Edey",
+      22,
+      12,
+      10,
+      3,
+      0
+     ],
+     [
+      "Vince Williams Jr.",
+      16,
+      5,
+      2,
+      0,
+      1
+     ],
+     [
+      "Santi Aldama",
+      28,
+      22,
+      7,
+      1,
+      3
+     ],
+     [
+      "Olivier-Maxence Prosper",
+      3,
+      2,
+      2,
+      0,
+      0
+     ],
+     [
+      "Jock Landale",
+      21,
+      15,
+      8,
+      2,
+      0
+     ],
+     [
+      "Kentavious Caldwell-Pope",
+      23,
+      16,
+      2,
+      5,
+      3
+     ],
+     [
+      "John Konchar",
+      17,
+      2,
+      3,
+      1,
+      0
+     ],
+     [
+      "Cam Spencer",
+      32,
+      12,
+      3,
+      6,
+      1
+     ],
+     [
+      "Jahmai Mashack",
+      3,
+      0,
+      0,
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-02-07",
+   "espn_id": "401810600",
+   "away": "MEM",
+   "home": "POR",
+   "score": {
+    "MEM": 115,
+    "POR": 135
+   },
+   "ot": 0,
+   "largest_lead": {
+    "MEM": 15,
+    "POR": 30
+   },
+   "players": {
+    "MEM": [
+     [
+      "Olivier-Maxence Prosper",
+      28,
+      13,
+      6,
+      2,
+      2
+     ],
+     [
+      "Cedric Coward",
+      25,
+      11,
+      8,
+      1,
+      1
+     ],
+     [
+      "GG Jackson II",
+      27,
+      15,
+      3,
+      2,
+      3
+     ],
+     [
+      "Jaylen Wells",
+      27,
+      13,
+      3,
+      4,
+      2
+     ],
+     [
+      "Scotty Pippen Jr.",
+      22,
+      13,
+      3,
+      6,
+      1
+     ],
+     [
+      "Taylor Hendricks",
+      21,
+      5,
+      5,
+      0,
+      1
+     ],
+     [
+      "Cam Spencer",
+      26,
+      18,
+      0,
+      5,
+      2
+     ],
+     [
+      "Jahmai Mashack",
+      20,
+      5,
+      1,
+      1,
+      1
+     ],
+     [
+      "Javon Small",
+      22,
+      11,
+      5,
+      3,
+      1
+     ],
+     [
+      "Walter Clayton Jr.",
+      22,
+      11,
+      3,
+      4,
+      1
+     ]
+    ],
+    "POR": [
+     [
+      "Jerami Grant",
+      28,
+      23,
+      2,
+      2,
+      3
+     ],
+     [
+      "Toumani Camara",
+      30,
+      15,
+      4,
+      3,
+      3
+     ],
+     [
+      "Donovan Clingan",
+      25,
+      13,
+      17,
+      0,
+      0
+     ],
+     [
+      "Jrue Holiday",
+      25,
+      20,
+      5,
+      7,
+      1
+     ],
+     [
+      "Shaedon Sharpe",
+      14,
+      2,
+      2,
+      2,
+      0
+     ],
+     [
+      "Robert Williams",
+      19,
+      13,
+      7,
+      2,
+      1
+     ],
+     [
+      "Yang Hansen",
+      4,
+      2,
+      1,
+      0,
+      0
+     ],
+     [
+      "Vít Krejčí",
+      23,
+      11,
+      0,
+      1,
+      2
+     ],
+     [
+      "Scoot Henderson",
+      21,
+      11,
+      5,
+      9,
+      2
+     ],
+     [
+      "Blake Wesley",
+      15,
+      4,
+      1,
+      3,
+      0
+     ],
+     [
+      "Sidy Cissoko",
+      25,
+      9,
+      1,
+      2,
+      1
+     ],
+     [
+      "Rayan Rupert",
+      12,
+      12,
+      1,
+      0,
+      4
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-02-08",
+   "espn_id": "401810610",
+   "away": "MEM",
+   "home": "POR",
+   "score": {
+    "MEM": 115,
+    "POR": 122
+   },
+   "ot": 0,
+   "largest_lead": {
+    "MEM": 11,
+    "POR": 9
+   },
+   "players": {
+    "MEM": [
+     [
+      "Kyle Anderson",
+      27,
+      11,
+      6,
+      2,
+      0
+     ],
+     [
+      "GG Jackson II",
+      30,
+      11,
+      8,
+      2,
+      2
+     ],
+     [
+      "Kentavious Caldwell-Pope",
+      31,
+      11,
+      4,
+      0,
+      1
+     ],
+     [
+      "Ty Jerome",
+      20,
+      13,
+      1,
+      1,
+      2
+     ],
+     [
+      "Jahmai Mashack",
+      30,
+      8,
+      1,
+      1,
+      2
+     ],
+     [
+      "Olivier-Maxence Prosper",
+      25,
+      25,
+      5,
+      0,
+      7
+     ],
+     [
+      "Taylor Hendricks",
+      22,
+      6,
+      1,
+      2,
+      0
+     ],
+     [
+      "Javon Small",
+      28,
+      22,
+      6,
+      4,
+      2
+     ],
+     [
+      "Walter Clayton Jr.",
+      28,
+      8,
+      4,
+      7,
+      0
+     ]
+    ],
+    "POR": [
+     [
+      "Jerami Grant",
+      33,
+      29,
+      5,
+      3,
+      6
+     ],
+     [
+      "Toumani Camara",
+      34,
+      8,
+      7,
+      1,
+      1
+     ],
+     [
+      "Donovan Clingan",
+      36,
+      20,
+      19,
+      3,
+      2
+     ],
+     [
+      "Jrue Holiday",
+      27,
+      21,
+      2,
+      4,
+      4
+     ],
+     [
+      "Sidy Cissoko",
+      33,
+      7,
+      10,
+      4,
+      1
+     ],
+     [
+      "Yang Hansen",
+      3,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      "Caleb Love",
+      27,
+      17,
+      0,
+      8,
+      3
+     ],
+     [
+      "Vít Krejčí",
+      26,
+      10,
+      3,
+      4,
+      2
+     ],
+     [
+      "Blake Wesley",
+      9,
+      10,
+      1,
+      0,
+      2
+     ],
+     [
+      "Rayan Rupert",
+      11,
+      0,
+      0,
+      3,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "date": "2026-03-05",
+   "espn_id": "401810751",
+   "away": "POR",
+   "home": "MEM",
+   "score": {
+    "POR": 122,
+    "MEM": 114
+   },
+   "ot": 0,
+   "largest_lead": {
+    "POR": 11,
+    "MEM": 8
+   },
+   "players": {
+    "POR": [
+     [
+      "Jerami Grant",
+      36,
+      30,
+      9,
+      4,
+      3
+     ],
+     [
+      "Toumani Camara",
+      40,
+      9,
+      7,
+      3,
+      0
+     ],
+     [
+      "Donovan Clingan",
+      12,
+      7,
+      9,
+      1,
+      0
+     ],
+     [
+      "Jrue Holiday",
+      32,
+      35,
+      5,
+      11,
+      8
+     ],
+     [
+      "Scoot Henderson",
+      24,
+      8,
+      1,
+      3,
+      1
+     ],
+     [
+      "Robert Williams",
+      23,
+      20,
+      11,
+      0,
+      0
+     ],
+     [
+      "Matisse Thybulle",
+      13,
+      0,
+      3,
+      1,
+      0
+     ],
+     [
+      "Vít Krejčí",
+      21,
+      3,
+      6,
+      3,
+      1
+     ],
+     [
+      "Blake Wesley",
+      16,
+      6,
+      0,
+      2,
+      2
+     ],
+     [
+      "Sidy Cissoko",
+      22,
+      4,
+      2,
+      1,
+      0
+     ]
+    ],
+    "MEM": [
+     [
+      "Olivier-Maxence Prosper",
+      33,
+      17,
+      9,
+      1,
+      2
+     ],
+     [
+      "GG Jackson II",
+      34,
+      20,
+      4,
+      1,
+      1
+     ],
+     [
+      "Jaylen Wells",
+      31,
+      24,
+      3,
+      2,
+      4
+     ],
+     [
+      "Javon Small",
+      33,
+      11,
+      7,
+      5,
+      1
+     ],
+     [
+      "Rayan Rupert",
+      32,
+      5,
+      5,
+      0,
+      1
+     ],
+     [
+      "Cam Spencer",
+      28,
+      12,
+      7,
+      7,
+      2
+     ],
+     [
+      "Jahmai Mashack",
+      21,
+      13,
+      1,
+      1,
+      3
+     ],
+     [
+      "Walter Clayton Jr.",
+      27,
+      12,
+      2,
+      8,
+      0
      ]
     ]
    }

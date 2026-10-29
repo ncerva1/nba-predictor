@@ -1,0 +1,580 @@
+{
+ "game": {
+  "date": "2026-10-29",
+  "away": "CLE",
+  "home": "ATL",
+  "venue": "State Farm Arena, Atlanta",
+  "tip_et": "19:00",
+  "notes": [
+   "Los dos en back-to-back (CLE ganó 121-111 a WAS; ATL perdió 129-117 con MIA)",
+   "CLE: Tomlin OUT (fuera de la rotación). ATL: Gueye y Veesaar OUT (fuera de la rotación)",
+   "Covers no publica props de Mitchell, Mobley ni Allen: vigilar descanso por back-to-back",
+   "Récord: CLE 3-1, ATL 2-3"
+  ],
+  "out": [],
+  "gtd": {}
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "ATL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.21,
+    "drtg": 113.17,
+    "pace": 102.78
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 1.0,
+    "pace": -0.5
+   },
+   "context": {
+    "b2b": true,
+    "roster_note": ""
+   }
+  },
+  "CLE": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 118.51,
+    "drtg": 114.37,
+    "pace": 100.98
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 1.0,
+    "pace": -0.5
+   },
+   "context": {
+    "b2b": true,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "ATL": {},
+  "CLE": {}
+ },
+ "players": [
+  {
+   "team": "ATL",
+   "name": "Jalen Johnson",
+   "pos": "SF",
+   "starter": true,
+   "min": 34.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.2,
+    "pts": 19.6,
+    "reb": 9.6,
+    "ast": 9.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 35.2,
+    "pts": 22.5,
+    "reb": 10.3,
+    "ast": 7.9,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Nickeil Alexander-Walker",
+   "pos": "SG",
+   "starter": true,
+   "min": 31.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 19.6,
+    "reb": 3.4,
+    "ast": 3.2,
+    "fg3m": 3.6
+   },
+   "prior": {
+    "min": 33.4,
+    "pts": 20.8,
+    "reb": 3.4,
+    "ast": 3.7,
+    "fg3m": 3.2
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "starter": true,
+   "min": 29.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.6,
+    "pts": 12.0,
+    "reb": 5.0,
+    "ast": 4.2,
+    "fg3m": 0.2
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 11.9,
+    "reb": 6.8,
+    "ast": 5.9,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Onyeka Okongwu",
+   "pos": "C",
+   "starter": true,
+   "min": 28.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.4,
+    "pts": 9.6,
+    "reb": 5.6,
+    "ast": 3.0,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 15.2,
+    "reb": 7.6,
+    "ast": 3.1,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Aaron Wiggins",
+   "pos": "SG",
+   "starter": false,
+   "min": 27.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.4,
+    "pts": 14.6,
+    "reb": 3.4,
+    "ast": 1.8,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 21.8,
+    "pts": 9.4,
+    "reb": 3.1,
+    "ast": 1.7,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "CJ McCollum",
+   "pos": "PG",
+   "starter": true,
+   "min": 26.1,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.2,
+    "pts": 16.4,
+    "reb": 1.6,
+    "ast": 2.0,
+    "fg3m": 2.4
+   },
+   "prior": {
+    "min": 29.8,
+    "pts": 18.7,
+    "reb": 3.3,
+    "ast": 3.9,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Luguentz Dort",
+   "pos": "SF",
+   "starter": false,
+   "min": 23.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.0,
+    "pts": 8.6,
+    "reb": 3.2,
+    "ast": 1.8,
+    "fg3m": 1.2
+   },
+   "prior": {
+    "min": 26.8,
+    "pts": 8.3,
+    "reb": 3.6,
+    "ast": 1.2,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Kingston Flemings",
+   "pos": "PG",
+   "starter": false,
+   "min": 20.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.2,
+    "pts": 7.2,
+    "reb": 3.4,
+    "ast": 4.2,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 20.2,
+    "pts": 7.2,
+    "reb": 3.4,
+    "ast": 4.2,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Jock Landale",
+   "pos": "C",
+   "starter": false,
+   "min": 18.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.0,
+    "pts": 7.6,
+    "reb": 4.8,
+    "ast": 2.6,
+    "fg3m": 0.2
+   },
+   "prior": {
+    "min": 22.1,
+    "pts": 10.6,
+    "reb": 5.7,
+    "ast": 1.7,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Evan Mobley",
+   "pos": "PF",
+   "starter": true,
+   "min": 34.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.0,
+    "pts": 20.0,
+    "reb": 10.0,
+    "ast": 2.8,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 31.9,
+    "pts": 18.2,
+    "reb": 9.0,
+    "ast": 3.6,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "James Harden",
+   "pos": "PG",
+   "starter": true,
+   "min": 34.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.0,
+    "pts": 15.8,
+    "reb": 4.5,
+    "ast": 6.8,
+    "fg3m": 2.2
+   },
+   "prior": {
+    "min": 34.8,
+    "pts": 23.6,
+    "reb": 4.8,
+    "ast": 8.0,
+    "fg3m": 3.1
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Donovan Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 34.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.0,
+    "pts": 24.8,
+    "reb": 6.3,
+    "ast": 5.3,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 27.9,
+    "reb": 4.5,
+    "ast": 5.7,
+    "fg3m": 3.2
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Peyton Watson",
+   "pos": "SF",
+   "starter": true,
+   "min": 30.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.5,
+    "pts": 14.0,
+    "reb": 4.5,
+    "ast": 2.2,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 29.6,
+    "pts": 14.6,
+    "reb": 4.9,
+    "ast": 2.1,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Jarrett Allen",
+   "pos": "C",
+   "starter": true,
+   "min": 27.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.3,
+    "pts": 13.2,
+    "reb": 9.0,
+    "ast": 1.0,
+    "fg3m": 0.2
+   },
+   "prior": {
+    "min": 27.1,
+    "pts": 15.4,
+    "reb": 8.5,
+    "ast": 1.8,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "starter": false,
+   "min": 23.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 7.2,
+    "reb": 3.0,
+    "ast": 2.0,
+    "fg3m": 1.2
+   },
+   "prior": {
+    "min": 26.5,
+    "pts": 12.8,
+    "reb": 2.6,
+    "ast": 2.4,
+    "fg3m": 3.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Jaylon Tyson",
+   "pos": "SG",
+   "starter": false,
+   "min": 20.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.5,
+    "pts": 9.0,
+    "reb": 3.0,
+    "ast": 3.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 26.9,
+    "pts": 13.2,
+    "reb": 5.1,
+    "ast": 2.2,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Meleek Thomas",
+   "pos": "SG",
+   "starter": false,
+   "min": 18.9,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.5,
+    "pts": 13.0,
+    "reb": 3.0,
+    "ast": 0.5,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 19.5,
+    "pts": 13.0,
+    "reb": 3.0,
+    "ast": 0.5,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Mario Hezonja",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.5,
+    "pts": 6.7,
+    "reb": 3.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 17.5,
+    "pts": 6.7,
+    "reb": 3.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 29-oct (calendario, 3 partidos); Covers.com 29-oct (spread, total y ML de 9 casas en CLE@ATL y MEM@POR; solo ML en SAC@NOP; props de puntos)",
+  "spread_home": -1.5,
+  "total": 237.5,
+  "ml_home": -115,
+  "ml_away": -105
+ },
+ "prop_lines": {
+  "Jalen Johnson": {
+   "pts": [
+    21.5,
+    -123,
+    -104
+   ]
+  },
+  "Nickeil Alexander-Walker": {
+   "pts": [
+    18.5,
+    -110,
+    -116
+   ]
+  },
+  "CJ McCollum": {
+   "pts": [
+    16.5,
+    -107,
+    -119
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    17.5,
+    -116,
+    -110
+   ]
+  },
+  "Peyton Watson": {
+   "pts": [
+    14.5,
+    -115,
+    -115
+   ]
+  },
+  "Onyeka Okongwu": {
+   "pts": [
+    11.5,
+    -104,
+    -106
+   ]
+  },
+  "Aaron Wiggins": {
+   "pts": [
+    11.5,
+    -115,
+    -110
+   ]
+  },
+  "Dyson Daniels": {
+   "pts": [
+    11.5,
+    -115,
+    -111
+   ]
+  },
+  "Luguentz Dort": {
+   "pts": [
+    6.5,
+    -125,
+    100
+   ]
+  },
+  "Jaylon Tyson": {
+   "pts": [
+    8.5,
+    -110,
+    -115
+   ]
+  },
+  "Mario Hezonja": {
+   "pts": [
+    5.5,
+    -110,
+    -115
+   ]
+  }
+ }
+}
