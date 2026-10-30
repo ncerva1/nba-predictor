@@ -32,6 +32,14 @@ import csv, glob, json, os, re, sys, unicodedata
 import numpy as np
 
 STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
+# 1.3.4: props secundarias si el JSON trae FG, FGA, 3PA, STL, BLK, TOV y PF del jugador (ver build_slate.EXTRA_COL).
+# Los tiros salen de los puntos simulados: lo que no son triples (pts - 3 x triples) se reparte entre dobles y
+# tiros libres con la proporción del jugador, y los fallos se dibujan aparte; robos, tapones, pérdidas y faltas
+# van por minutos (robos y pérdidas también por el ritmo). Las faltas se cortan en 6.
+EXTRA = ("fgm", "fga", "fg3a", "stl", "blk", "tov", "pf")
+EXTRA_R = {"stl": 8.0, "blk": 4.0, "tov": 10.0, "pf": 30.0, "miss": 10.0}
+COMBOS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
+          "stocks": ("stl", "blk")}
 TEAM_SD, RHO, MARGIN_SD = 12.0, 0.35, 13.7
 # Calibración 1.2 (resultados del 26-oct, ver results/2026-10-26_eval.json):
 MIN_SD = {True: 5.5, False: 6.0}  # DE de minutos titular / suplente (antes 3.5 / 4.0; el error real fue ~7)
@@ -260,6 +268,17 @@ def simulate(cfg, n=20000, seed=7):
             p["rate"] = {s: (1 - wh) * p["rate"][s] + wh * hh[s] / hh["min"] for s in STAT_R}
             if wm > 0:  # con otro rol (suplente que ahora es titular...) sus minutos H2H pesan un tercio
                 base_min[p["name"]] = (1 - wm) * p["min"] + wm * mh2h
+    for p in players:  # tasas por minuto de las props secundarias (sin DvP ni H2H: no hay datos por rival)
+        if all(k in p["cur"] for k in EXTRA):
+            w = player_weight(p)
+            pr = p["prior"] if all(k in p["prior"] for k in EXTRA) and p["prior"]["min"] > 0 else p["cur"]
+            x = {k: w * p["cur"][k] / max(p["cur"]["min"], 1) + (1 - w) * pr[k] / max(pr["min"], 1)
+                 for k in EXTRA + ("pts", "fg3m")}
+            fg2m, fg2a = x["fgm"] - x["fg3m"], x["fga"] - x["fg3a"]
+            p["xrate"] = dict(stl=x["stl"], blk=x["blk"], tov=x["tov"], pf=x["pf"],
+                              miss2=max(fg2a - fg2m, 0), miss3=max(x["fg3a"] - x["fg3m"], 0),
+                              # parte de los puntos que no son triples que llega en dobles (el resto, tiros libres)
+                              s2=float(np.clip(2 * fg2m / max(x["pts"] - 3 * x["fg3m"], 1e-6), 0.05, 1)))
     for t in (h, a):  # los minutos H2H cambian el reparto, no el total del equipo
         tp = [p for p in players if p["team"] == t]
         k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)
@@ -305,7 +324,22 @@ def simulate(cfg, n=20000, seed=7):
             "fg3m": p["rate"]["fg3m"] * mn * tf ** 0.5 * mm.get("fg3_mult", 1),
         }
         draws = {s: nb_draw(rng, means[s], STAT_R[s]) for s in STAT_R}
-        draws["pra"] = draws["pts"] + draws["reb"] + draws["ast"]
+        xr = p.get("xrate")
+        if xr:
+            pf_ = pace / cfg["league"]["pace"]
+            rest = np.maximum(draws["pts"] - 3 * draws["fg3m"], 0)
+            draws["fg2m"] = rng.binomial(rest // 2, xr["s2"])
+            draws["fg2a"] = draws["fg2m"] + nb_draw(rng, xr["miss2"] * mn, EXTRA_R["miss"])
+            draws["fg3a"] = draws["fg3m"] + nb_draw(rng, xr["miss3"] * mn, EXTRA_R["miss"])
+            draws["fgm"] = draws["fg2m"] + draws["fg3m"]
+            draws["fga"] = draws["fg2a"] + draws["fg3a"]
+            draws["stl"] = nb_draw(rng, xr["stl"] * mn * pf_, EXTRA_R["stl"])
+            draws["blk"] = nb_draw(rng, xr["blk"] * mn, EXTRA_R["blk"])
+            draws["tov"] = nb_draw(rng, xr["tov"] * mn * pf_, EXTRA_R["tov"])
+            draws["pf"] = np.minimum(nb_draw(rng, xr["pf"] * mn, EXTRA_R["pf"]), 6)
+        for c, parts in COMBOS.items():
+            if all(k in draws for k in parts):
+                draws[c] = sum(draws[k] for k in parts)
         draws["min"] = mn
         res[p["name"]] = dict(team=t, pos=p["pos"], draws=draws, p_play=p.get("p_play", 1.0))
 
@@ -357,9 +391,9 @@ def summarize(cfg, s):
         on = d["draws"]["min"] > 0  # las props se anulan si no juega: todo condicionado a que juegue
         row = dict(name=name, team=d["team"], pos=d["pos"], min=round(float(d["draws"]["min"][on].mean()), 1),
                    p_play=round(float(on.mean()), 3))
-        for st in ("pts", "reb", "ast", "fg3m", "pra"):
+        for st in (k for k in d["draws"] if k != "min"):
             x = d["draws"][st][on]
-            fl = float(np.floor(np.mean(x)) + 0.5) if st != "fg3m" else float(np.floor(np.mean(x) - 0.25) + 0.5)
+            fl = float(np.floor(np.mean(x)) + 0.5) if np.mean(x) >= 4 else float(np.floor(np.mean(x) - 0.25) + 0.5)
             fl = max(fl, 0.5)
             mu = float(x.mean())
             ks = range(max(1, int(mu * 0.6)), int(np.ceil(mu * 1.45)) + 2)
@@ -367,7 +401,7 @@ def summarize(cfg, s):
                            p90=float(np.percentile(x, 90)), line=fl,
                            p_over=round(float((x > fl).mean()), 3),
                            ladder={int(k): round(float((x >= k).mean()), 3) for k in ks})
-            if name in lines and st in lines[name]:
+            if name in lines and st in lines[name] and lines[name][st][1] is not None:
                 ln, odds = lines[name][st][:2]  # [línea, cuota over] o [línea, over, under]
                 po = float((x > ln).mean())
                 row[st]["market"] = dict(line=ln, odds=odds, p_over=round(po, 3),

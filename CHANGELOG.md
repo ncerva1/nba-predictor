@@ -1,5 +1,26 @@
 # Cambios del modelo
 
+## 1.3.4 — 2026-10-30: más mercados de player props y picks por categoría
+Pedido de Nicolas: además de puntos, rebotes, asistencias, triples, combinadas (PTS+REB, PTS+AST, REB+AST, PRA),
+robos, tapones, faltas y tiros de campo / dobles / triples anotados e intentados.
+
+- `model.simulate` dibuja PTS+REB, PTS+AST, REB+AST y robos+tapones a partir de las mismas simulaciones (así
+  mantienen la correlación). Si el JSON del jugador trae FG, FGA, 3PA, STL, BLK, TOV y PF (columnas opcionales de
+  `raw/<fecha>/cur.csv` y `prior.csv`, ver `build_slate.EXTRA_COL`), también dobles y triples anotados e intentados,
+  tiros de campo, robos, tapones, pérdidas y faltas: los tiros salen de los puntos simulados (lo que no son triples
+  se reparte entre dobles y libres con la proporción del jugador; los fallos se dibujan aparte), robos y pérdidas
+  van por minutos y ritmo, tapones y faltas por minutos (faltas con tope 6). Sin temporada anterior con esos datos,
+  robos, tapones, pérdidas y faltas se encogen hacia la media de su posición (G / F / C) y el perfil de tiro sale
+  de su temporada actual.
+- `prop_lines` acepta cualquier estadística de `build_site.STAT_LABEL` y líneas de un solo lado
+  (`[línea, null, cuota under]`). `evaluate.py` liquida por `stat` y acepta box scores ampliados
+  (`[min, pts, reb, ast, 3pm, fgm, fga, 3pa, stl, blk, tov, pf]`).
+- Web: los picks de la portada se ven por categoría (Con valor, Equipo, Puntos, Rebotes, Asistencias, Triples,
+  Combinadas, Robos y tapones, Tiros, Pérdidas y faltas) con el top 20 por EV de cada una en verde / azul (dorado
+  en Copa) / rojo, y la página "Ver todo" (`#todos`, `#todos-cup`) lista todas las apuestas de la jornada por EV
+  con buscador. `index.json` lleva `all_bets` solo de la última jornada. En cada partido la tabla de proyecciones
+  tiene vista Resumen (todas las estadísticas) y se ordena por minutos, puntos o cualquier columna.
+
 ## 1.3.3 — 2026-10-30: H2H de esta temporada también, y Copa marcada
 Pedido de Nicolas para la noche de Copa: usar como referencia los cruces entre ambos equipos de esta temporada y
 la pasada, de liga y de Copa.

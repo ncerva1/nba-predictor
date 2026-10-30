@@ -25,6 +25,7 @@ Mercado opcional en el JSON del partido (si falta la cuota de spread/total se as
                "total": 239.5, "over_odds": -110, "under_odds": -110, "ml_away": -170, "ml_home": 142}
     "prop_lines": {"Jugador": {"pts": [24.5, 117]}}            # cuota del over
     "prop_lines": {"Jugador": {"pts": [24.5, 117, -145]}}       # over y under
+    "prop_lines": {"Jugador": {"reb": [7.5, null, -120]}}       # solo under (cualquier estadística de STAT_LABEL)
 """
 import glob, json, os, re, subprocess, sys, unicodedata
 from datetime import datetime, timezone
@@ -36,7 +37,11 @@ from model import american_to_prob, current_h2h_games, load_game, prob_to_americ
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "docs", "data")
-STAT_LABEL = {"pts": "Puntos", "reb": "Rebotes", "ast": "Asistencias", "fg3m": "Triples", "pra": "PTS+REB+AST"}
+STAT_LABEL = {"pts": "Puntos", "reb": "Rebotes", "ast": "Asistencias", "fg3m": "Triples", "pra": "PTS+REB+AST",
+              "pr": "PTS+REB", "pa": "PTS+AST", "ra": "REB+AST", "stl": "Robos", "blk": "Tapones",
+              "stocks": "Robos+Tapones", "tov": "Pérdidas", "pf": "Faltas", "fgm": "Tiros de campo anotados",
+              "fga": "Tiros de campo intentados", "fg3a": "Triples intentados", "fg2m": "Dobles anotados",
+              "fg2a": "Dobles intentados"}
 DEFAULT_ODDS = -110
 VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 
@@ -159,7 +164,7 @@ def prop_bets(cfg, s):
             continue
         d = s["players"][name]
         for st, v in stats.items():
-            x = d["draws"]["pra"] if st == "pra" else d["draws"].get(st)
+            x = d["draws"].get(st)
             if x is None:
                 continue
             x = x[d["draws"]["min"] > 0]  # la prop se anula si no juega
@@ -167,7 +172,8 @@ def prop_bets(cfg, s):
             o_under = v[2] if len(v) > 2 else None
             po, push = (x > ln).mean(), (x == ln).mean()
             lab = STAT_LABEL.get(st, st)
-            out.append(dict(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]), stat=st))
+            if o_over is not None:  # algunas fuentes solo dan una selección (over o under)
+                out.append(dict(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]), stat=st))
             if o_under is not None:
                 out.append(dict(bet("prop", f"{name} Under {ln:g} {lab}", (1 - po - push) / (1 - push), o_under, ln, name,
                                     d["team"]), stat=st))
@@ -508,7 +514,8 @@ def index_entry(r):
              venue=g.get("venue"), competition=g.get("competition", "regular"), cup_round=g.get("cup_round"),
              records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
              proj_total=sm["proj_total"], used_db=r["used_db"],
-             n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []))
+             n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []),
+             all_bets=[{k: v for k, v in b.items() if k not in ("books", "fair")} for b in r["bets"]])
     if "result" in r:
         e["result"] = dict(r["result"], picks_won=sum(b["result"] == "won" for b in vb),
                            picks_lost=sum(b["result"] == "lost" for b in vb),
@@ -562,6 +569,10 @@ def main():
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "
               f"{keep[r['id']]['n_value']} apuestas con valor" + (" (resultado real cargado)" if res else ""))
     games = sorted(keep.values(), key=lambda g: (g["date"], g.get("tip_et") or "", g["id"]), reverse=False)
+    last = max((g["date"] for g in games), default=None)
+    for g in games:  # la lista completa de apuestas ("Ver todo" y top por categoría) solo de la última jornada
+        if g["date"] != last:
+            g.pop("all_bets", None)
     for date, lbg in legs_by_date.items():
         # solo se rehacen si se simularon todos los partidos aún sin jugar de esa jornada
         if len(lbg) == sum(g["date"] == date and "result" not in g for g in games):

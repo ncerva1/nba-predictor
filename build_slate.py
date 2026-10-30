@@ -6,8 +6,9 @@ Uso:
 
 Entradas:
   slates/<fecha>.json        partidos, cuotas, bajas, back-to-back y ajustes manuales de roster
-  raw/<fecha>/cur.csv        stats por jugador de la temporada actual (Team,Player,Pos,G,GS,MP,PTS,TRB,AST,3P)
-  raw/<fecha>/prior.csv      stats por jugador de la temporada anterior (Player,MP,PTS,TRB,AST,3P)
+  raw/<fecha>/cur.csv        stats por jugador de la temporada actual (Team,Player,Pos,G,GS,MP,PTS,TRB,AST,3P
+                             y opcionales FG,FGA,3PA,STL,BLK,TOV,PF para las props de tiros, robos, tapones...)
+  raw/<fecha>/prior.csv      stats por jugador de la temporada anterior (Player,MP,PTS,TRB,AST,3P + las mismas opcionales)
   db/rankings_latest.json    BD de rankings (python db/build_db.py)
 
 Salidas (en games/):
@@ -31,6 +32,12 @@ from model import load_game, simulate, summarize, american_to_prob, prob_to_amer
 HERE = os.path.dirname(os.path.abspath(__file__))
 LG = {"ortg": 115.0, "pace": 100.5, "home_adv_per100": 1.0}
 STAT_COL = {"pts": "PTS", "reb": "TRB", "ast": "AST", "fg3m": "3P"}
+# columnas opcionales (1.3.4): tiros de campo, triples intentados, robos, tapones, pérdidas y faltas
+EXTRA_COL = {"fgm": "FG", "fga": "FGA", "fg3a": "3PA", "stl": "STL", "blk": "BLK", "tov": "TOV", "pf": "PF"}
+
+
+def extra(r):
+    return {s: float(r[c]) for s, c in EXTRA_COL.items() if r and r.get(c) not in (None, "")}
 
 
 def read_csv(p):
@@ -47,7 +54,26 @@ def prior_team(R, t):
             "pace": round(val(t, "PACE") - lg["PACE"] + LG["pace"], 2)}
 
 
-def team_players(team, cur, prior, out, gtd):
+def pos_rates(cur):
+    """Tasas por minuto de las columnas opcionales por posición (G / F / C): prior de robos, tapones, pérdidas y
+    faltas de quien no tiene temporada anterior con esos datos, para que 4 partidos sin un robo no den 0 robos."""
+    tot = {}
+    for r in cur:
+        x = extra(r)
+        if len(x) < len(EXTRA_COL) or float(r["MP"]) <= 0:
+            continue
+        t = tot.setdefault(pos_group(r.get("Pos") or ""), {k: 0.0 for k in ["min", *EXTRA_COL]})
+        t["min"] += float(r["MP"])
+        for k, v in x.items():
+            t[k] += v
+    return {g: {k: t[k] / t["min"] for k in EXTRA_COL} for g, t in tot.items()}
+
+
+def pos_group(pos):
+    return "C" if pos.startswith("C") else "G" if pos.endswith("G") else "F"
+
+
+def team_players(team, cur, prior, out, gtd, prates=None):
     rows = [r for r in cur if r["Team"] == team and float(r["MP"]) >= 8 and r["Player"] not in out]
     for r in rows:
         r["_min"] = float(r["MP"])
@@ -58,9 +84,14 @@ def team_players(team, cur, prior, out, gtd):
     players = []
     for r in sorted(rows, key=lambda r: -r["_min"]):
         g = int(r["G"])
-        c = {"min": float(r["MP"]), **{s: float(r[col]) for s, col in STAT_COL.items()}}
+        c = {"min": float(r["MP"]), **{s: float(r[col]) for s, col in STAT_COL.items()}, **extra(r)}
         p = prior.get(r["Player"])
-        pr = {"min": float(p["MP"]), **{s: float(p[col]) for s, col in STAT_COL.items()}} if p else dict(c)
+        pr = {"min": float(p["MP"]), **{s: float(p[col]) for s, col in STAT_COL.items()}, **extra(p)} if p else dict(c)
+        if prates and len(extra(r)) == len(EXTRA_COL) and len(extra(p)) < len(EXTRA_COL):
+            # el perfil de tiro es del jugador (su temporada actual); robos, tapones, pérdidas y faltas, de su posición
+            pg = prates.get(pos_group(r["Pos"] or ""), {})
+            pr.update({k: round((pg[k] if k in ("stl", "blk", "tov", "pf") else c[k] / max(c["min"], 1)) * pr["min"], 2)
+                       for k in EXTRA_COL})
         players.append({"team": team, "name": r["Player"], "pos": r["Pos"] or "F",
                         "starter": r["Player"] in starters, "min": round(min(r["_min"] * scale, 38.0), 1),
                         "g_cur": g, "p_play": gtd.get(r["Player"], 1.0), "cur": c, "prior": pr})
@@ -82,7 +113,7 @@ def build_game(slate, g, R, cur, prior):
                     "context": {"b2b": t in g.get("b2b", []), "roster_note": adj_r.get("why", "")}}
     players = []
     for t in (h, a):
-        players += team_players(t, cur, prior, set(g.get("out", [])), g.get("gtd", {}))
+        players += team_players(t, cur, prior, set(g.get("out", [])), g.get("gtd", {}), pos_rates(cur))
     names = {p["name"] for p in players}
     return {
         "game": {"date": slate["date"], "away": a, "home": h, "venue": g.get("venue", ""), "tip_et": g["tip_et"],
@@ -122,9 +153,12 @@ def value_bets(cfg, s, summ):
         x = s["players"][name]["draws"]
         for st, v in lines.items():
             ln, o_over = v[0], v[1]
+            if st not in x:
+                continue
             po = float((x[st] > ln).mean())
-            out.append(bet(gid, f"{name} Over {ln} {st.upper()}", "Prop", po, o_over, {"player": name}))
-            if len(v) > 2:
+            if o_over is not None:
+                out.append(bet(gid, f"{name} Over {ln} {st.upper()}", "Prop", po, o_over, {"player": name}))
+            if len(v) > 2 and v[2] is not None:
                 out.append(bet(gid, f"{name} Under {ln} {st.upper()}", "Prop", 1 - po, v[2], {"player": name}))
     return out
 

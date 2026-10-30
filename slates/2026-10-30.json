@@ -6,7 +6,8 @@
   "players_prior": "prior.csv acumulado (26-29 oct) + Basketball-Reference 2025-26 (BRK y PHO completos; Keon Ellis, Kennard, Caleb Martin, Hardy, Champagnie, Wagner y Vanderbilt). Sin temporada previa: novatos, Haliburton, VanVleet, Kyrie (lesionados en 2025-26) y algunos suplentes (Capela, Clarkson, Lyles, Niang, Brazile, Sasser)",
   "injuries": "ESPN injuries (Rotowire) 30-oct ~17:00 UTC, comentarios hasta el 29-oct",
   "b2b": "Ningún equipo de hoy jugó el 29-oct",
-  "db": "BD de rankings: snapshot del 30-oct (B-Ref 2026-27 con partidos hasta el 29-oct; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 29-oct)"
+  "db": "BD de rankings: snapshot del 30-oct (B-Ref 2026-27 con partidos hasta el 29-oct; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 29-oct)",
+  "props_other": "covers.com/sport/basketball/nba/player-props (destacadas: una sola selección por jugador, 30-oct 13:45 ET)"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -376,6 +377,11 @@
     21.5,
     -115,
     -115
+   ],
+   "fg3m": [
+    0.5,
+    -200,
+    null
    ]
   },
   "Dennis Schröder": {
@@ -446,6 +452,11 @@
     12.5,
     -105,
     -115
+   ],
+   "ast": [
+    4.5,
+    null,
+    -159
    ]
   },
   "Jamal Shead": {
@@ -593,6 +604,11 @@
     11.5,
     -120,
     -105
+   ],
+   "reb": [
+    7.5,
+    null,
+    -120
    ]
   },
   "Jayson Tatum": {
@@ -600,6 +616,11 @@
     27.5,
     -115,
     -110
+   ],
+   "ast": [
+    7.5,
+    null,
+    -146
    ]
   },
   "Sam Hauser": {
@@ -670,6 +691,16 @@
     11.5,
     -105,
     -115
+   ],
+   "ast": [
+    3.5,
+    null,
+    -120
+   ],
+   "fg3m": [
+    0.5,
+    -160,
+    null
    ]
   },
   "Marcus Sasser": {
@@ -740,6 +771,11 @@
     16.5,
     -115,
     -105
+   ],
+   "ast": [
+    8.5,
+    null,
+    106
    ]
   },
   "Pascal Siakam": {
@@ -796,6 +832,11 @@
     7.5,
     -115,
     -110
+   ],
+   "ast": [
+    4.5,
+    null,
+    110
    ]
   },
   "Dillon Brooks": {
@@ -831,6 +872,16 @@
     9.5,
     -110,
     -115
+   ],
+   "reb": [
+    2.5,
+    -120,
+    null
+   ],
+   "fg3m": [
+    1.5,
+    168,
+    null
    ]
   },
   "Collin Sexton": {
@@ -859,6 +910,11 @@
     9.5,
     100,
     -125
+   ],
+   "reb": [
+    3.5,
+    -145,
+    null
    ]
   },
   "Luka Dončić": {
@@ -866,6 +922,11 @@
     32.5,
     -115,
     -105
+   ],
+   "fg3m": [
+    4.5,
+    null,
+    -150
    ]
   },
   "Matisse Thybulle": {
@@ -873,6 +934,97 @@
     6.5,
     -112,
     -112
+   ]
+  },
+  "Joel Embiid": {
+   "reb": [
+    9.5,
+    null,
+    -105
+   ]
+  },
+  "VJ Edgecombe": {
+   "reb": [
+    6.5,
+    null,
+    -159
+   ]
+  },
+  "Aaron Nesmith": {
+   "reb": [
+    3.5,
+    127,
+    null
+   ]
+  },
+  "Kelly Oubre Jr.": {
+   "reb": [
+    3.5,
+    -146,
+    null
+   ]
+  },
+  "Wendell Carter Jr.": {
+   "reb": [
+    7.5,
+    null,
+    114
+   ]
+  },
+  "Moussa Diabaté": {
+   "reb": [
+    10.5,
+    null,
+    -115
+   ]
+  },
+  "Trevon Brazile": {
+   "reb": [
+    4.5,
+    -140,
+    null
+   ]
+  },
+  "Sion James": {
+   "ast": [
+    3.5,
+    null,
+    -115
+   ]
+  },
+  "Trae Young": {
+   "ast": [
+    9.5,
+    null,
+    -102
+   ]
+  },
+  "Terrence Shannon Jr.": {
+   "ast": [
+    2.5,
+    null,
+    105
+   ]
+  },
+  "Desmond Bane": {
+   "fg3m": [
+    2.5,
+    null,
+    105
+   ]
+  },
+  "Caleb Wilson": {
+   "fg3m": [
+    1.5,
+    null,
+    114
+   ]
+  },
+  "Tristan Da Silva": {
+   "fg3m": [
+    2.5,
+    null,
+    -123
    ]
   }
  }

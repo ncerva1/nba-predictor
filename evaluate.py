@@ -31,7 +31,11 @@ def actual_line(players, name):
     if v is None:
         return None
     out = dict(min=v[0], pts=v[1], reb=v[2], ast=v[3], fg3m=v[4])
-    out["pra"] = out["pts"] + out["reb"] + out["ast"]
+    if len(v) >= 12:  # box score ampliado (1.3.4): ..., fgm, fga, fg3a, stl, blk, tov, pf
+        out.update(zip(("fgm", "fga", "fg3a", "stl", "blk", "tov", "pf"), v[5:12]))
+        out.update(fg2m=out["fgm"] - out["fg3m"], fg2a=out["fga"] - out["fg3a"], stocks=out["stl"] + out["blk"])
+    out.update(pra=out["pts"] + out["reb"] + out["ast"], pr=out["pts"] + out["reb"], pa=out["pts"] + out["ast"],
+               ra=out["reb"] + out["ast"])
     return out
 
 
@@ -51,11 +55,11 @@ def settle(b, g, res):
             return None
         return int(x > 0) if b["label"].startswith("Over") else int(x < 0)
     if b["kind"] == "prop":
-        st = next(k for k, lab in (("pts", "Puntos"), ("reb", "Rebotes"), ("ast", "Asistencias"),
-                                   ("fg3m", "Triples"), ("pra", "PTS+REB+AST")) if b["label"].endswith(lab))
+        st = b.get("stat") or next(k for k, lab in (("pts", "Puntos"), ("reb", "Rebotes"), ("ast", "Asistencias"),
+                                                    ("fg3m", "Triples"), ("pra", "PTS+REB+AST")) if b["label"].endswith(lab))
         al = actual_line(res["players"], b["player"])
-        if al is None or al["min"] == 0:
-            return None  # no jugó: apuesta anulada
+        if al is None or al["min"] == 0 or st not in al:
+            return None  # no jugó (o el box score no trae esa estadística): apuesta anulada
         x = al[st] - b["line"]
         return None if x == 0 else int(x > 0) if " Over " in b["label"] else int(x < 0)
 
@@ -108,14 +112,18 @@ def evaluate(date):
             if al and al["min"] > 0:
                 for st in ("pts", "reb", "ast", "fg3m", "pra"):
                     cal["prop_line"][0].append(p[st]["p_over"]); cal["prop_line"][1].append(int(al[st] > p[st]["line"]))
-                row["err"] = {st: round(al[st] - p[st]["mean"], 1) for st in ("pts", "reb", "ast", "fg3m", "pra")}
+                # 1.3.4: también robos, tapones, tiros... si el box score es el ampliado y el partido los proyectó
+                row["err"] = {st: round(al[st] - p[st]["mean"], 1) for st in al if st != "min" and isinstance(p.get(st), dict)}
                 row["err"]["min"] = round(al["min"] - p["min"], 1)
             players.append(row)
 
     played = [p for p in players if p["played"]]
     pstats = {}
-    for st in ("min", "pts", "reb", "ast", "fg3m", "pra"):
-        e = np.array([p["err"][st] for p in played])
+    for st in ("min", "pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "stocks", "tov", "pf",
+               "fgm", "fga", "fg2m", "fg2a", "fg3a"):
+        e = np.array([p["err"][st] for p in played if st in p["err"]])
+        if not len(e):
+            continue
         pstats[st] = dict(bias=round(float(e.mean()), 2), mae=round(float(np.abs(e).mean()), 2), n=len(e))
     settled = [b for b in bets if b["result"] is not None]
     calib = {}
