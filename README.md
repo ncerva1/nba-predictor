@@ -11,6 +11,11 @@ por partido las apuestas con mayor valor (probabilidad del modelo vs cuota).
 - `h2h/<temporada>.json`: enfrentamientos de la temporada anterior entre los equipos de cada jornada (box scores de ESPN
   por jugador y máxima ventaja de cada equipo); `build_site.py` los muestra en la web junto a los player props.
   Añadir los cruces de cada jornada nueva antes de correr `build_site.py`.
+- `cup/`: NBA Cup. `cup/<temporada>.json` lista los partidos de Copa por fecha y grupo: `build_site.py` marca esos
+  partidos como de Copa (pestaña NBA Cup) aunque su JSON no lo diga; añadir cada noche de Copa nueva (martes/viernes de
+  la fase de grupos, nba.com/games los etiqueta). `cup/history.json` (de `python cup/cup_stats.py` con `cup/raw/`):
+  fase de grupos 2023-24 a 2025-26 con la línea de cierre, para los precedentes de Copa de cada partido y el estudio
+  de si la Copa tiene más puntos (no: -1.2 pts por partido frente a la liga, 58-61 al over).
 - `results/`: resultados reales por jornada (`results/<fecha>.json`, box scores) y su evaluación
 - `evaluate.py`: compara lo publicado con lo real (`python evaluate.py <fecha>` -> `results/<fecha>_eval.json`)
 - `docs/`: la web (GitHub Pages: rama `main`, carpeta `/docs`)
