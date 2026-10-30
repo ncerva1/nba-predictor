@@ -10,14 +10,13 @@
    "MIN: Anthony Edwards OUT hasta diciembre (operado de la rodilla) y DiVincenzo OUT",
    "LAC: Ingram, Beal, Strus y Konan Niederhauser OUT; Hachimura duda",
    "Récord: LAC 1-3, MIN 3-2",
-   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Rui Hachimura 90%"
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Rui Hachimura 90%",
+   "Quintetos confirmados (Underdog NBA): LAC: Darius Garland, Kris Dunn, Derrick Jones Jr., Rui Hachimura, Isaiah Jackson; MIN: LaMelo Ball, Ayo Dosunmu, Jaden McDaniels, Jonathan Kuminga, Rudy Gobert"
   ],
   "out": [
    "Anthony Edwards"
   ],
-  "gtd": {
-   "Rui Hachimura": 0.9
-  },
+  "gtd": {},
   "reserves": {
    "LAC": [
     {
@@ -502,7 +501,7 @@
    "name": "Darius Garland",
    "pos": "PG",
    "starter": true,
-   "min": 31.2,
+   "min": 30.8,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -544,9 +543,9 @@
    "name": "Rui Hachimura",
    "pos": "PF",
    "starter": true,
-   "min": 30.0,
+   "min": 29.7,
    "g_cur": 3,
-   "p_play": 0.9,
+   "p_play": 1.0,
    "cur": {
     "min": 31.3,
     "pts": 10.3,
@@ -586,7 +585,7 @@
    "name": "Kris Dunn",
    "pos": "PG",
    "starter": true,
-   "min": 28.8,
+   "min": 28.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -628,7 +627,7 @@
    "name": "Derrick Jones Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 28.6,
+   "min": 28.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -670,7 +669,7 @@
    "name": "Keaton Wagler",
    "pos": "SG",
    "starter": false,
-   "min": 25.4,
+   "min": 25.1,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -708,51 +707,10 @@
   },
   {
    "team": "LAC",
-   "name": "Brook Lopez",
-   "pos": "C",
-   "starter": false,
-   "min": 21.9,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 22.8,
-    "pts": 14.0,
-    "reb": 4.8,
-    "ast": 1.5,
-    "fg3m": 1.5,
-    "fgm": 5.3,
-    "fga": 9.0,
-    "fg3a": 3.3,
-    "stl": 0.3,
-    "blk": 1.3,
-    "tov": 1.3,
-    "pf": 2.3,
-    "ftm": 2.0,
-    "fta": 2.5
-   },
-   "prior": {
-    "min": 21.8,
-    "pts": 8.5,
-    "reb": 3.6,
-    "ast": 1.3,
-    "fg3m": 1.5,
-    "fgm": 5.07,
-    "fga": 8.61,
-    "fg3a": 3.16,
-    "stl": 0.73,
-    "blk": 0.89,
-    "tov": 1.54,
-    "pf": 2.65,
-    "ftm": 1.91,
-    "fta": 2.39
-   }
-  },
-  {
-   "team": "LAC",
    "name": "Isaiah Jackson",
    "pos": "C",
    "starter": true,
-   "min": 20.4,
+   "min": 22.8,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -791,10 +749,51 @@
   },
   {
    "team": "LAC",
+   "name": "Brook Lopez",
+   "pos": "C",
+   "starter": false,
+   "min": 21.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.8,
+    "pts": 14.0,
+    "reb": 4.8,
+    "ast": 1.5,
+    "fg3m": 1.5,
+    "fgm": 5.3,
+    "fga": 9.0,
+    "fg3a": 3.3,
+    "stl": 0.3,
+    "blk": 1.3,
+    "tov": 1.3,
+    "pf": 2.3,
+    "ftm": 2.0,
+    "fta": 2.5
+   },
+   "prior": {
+    "min": 21.8,
+    "pts": 8.5,
+    "reb": 3.6,
+    "ast": 1.3,
+    "fg3m": 1.5,
+    "fgm": 5.07,
+    "fga": 8.61,
+    "fg3a": 3.16,
+    "stl": 0.73,
+    "blk": 0.89,
+    "tov": 1.54,
+    "pf": 2.65,
+    "ftm": 1.91,
+    "fta": 2.39
+   }
+  },
+  {
+   "team": "LAC",
    "name": "Kobe Sanders",
    "pos": "SG",
    "starter": false,
-   "min": 20.4,
+   "min": 20.2,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -835,7 +834,7 @@
    "name": "Gradey Dick",
    "pos": "SG",
    "starter": false,
-   "min": 16.3,
+   "min": 16.1,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -876,7 +875,7 @@
    "name": "Baba Miller",
    "pos": "SF",
    "starter": false,
-   "min": 9.3,
+   "min": 9.2,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -917,7 +916,7 @@
    "name": "Cam Christie",
    "pos": "SG",
    "starter": false,
-   "min": 7.7,
+   "min": 7.6,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {

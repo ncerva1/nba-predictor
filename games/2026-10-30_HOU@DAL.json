@@ -12,7 +12,8 @@
    "Récord: HOU 5-0, DAL 3-2",
    "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Sergio de Larrea, Naji Marshall 90%, Santi Aldama 20%, Tarik Biberovic 20%",
    "Confirmado 30-oct ~19:15 ET: Alperen Şengün OUT",
-   "Marcus Smart (antebrazo) disponible (Underdog NBA)."
+   "Marcus Smart (antebrazo) disponible (Underdog NBA).",
+   "Quintetos confirmados (Underdog NBA): HOU: Fred VanVleet, Amen Thompson, Kevin Durant, Jabari Smith Jr., Clint Capela; DAL: Kyrie Irving, Max Christie, Cooper Flagg, P.J. Washington, Daniel Gafford"
   ],
   "out": [
    "Reed Sheppard",
@@ -135,7 +136,7 @@
    "name": "P.J. Washington",
    "pos": "PF",
    "starter": true,
-   "min": 30.7,
+   "min": 30.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -177,7 +178,7 @@
    "name": "Cooper Flagg",
    "pos": "SF",
    "starter": true,
-   "min": 28.3,
+   "min": 28.1,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -219,7 +220,7 @@
    "name": "Zaccharie Risacher",
    "pos": "SF",
    "starter": false,
-   "min": 27.3,
+   "min": 27.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -260,7 +261,7 @@
    "name": "Max Christie",
    "pos": "SG",
    "starter": true,
-   "min": 25.7,
+   "min": 25.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -302,7 +303,7 @@
    "name": "Naji Marshall",
    "pos": "SF",
    "starter": false,
-   "min": 25.4,
+   "min": 25.3,
    "g_cur": 3,
    "p_play": 0.9,
    "cur": {
@@ -343,7 +344,7 @@
    "name": "Kyrie Irving",
    "pos": "SG",
    "starter": true,
-   "min": 24.8,
+   "min": 24.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -385,7 +386,7 @@
    "name": "Daniel Gafford",
    "pos": "C",
    "starter": true,
-   "min": 20.6,
+   "min": 21.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -427,7 +428,7 @@
    "name": "Marcus Sasser",
    "pos": "PG",
    "starter": false,
-   "min": 19.6,
+   "min": 19.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -468,7 +469,7 @@
    "name": "Morez Johnson Jr.",
    "pos": "PF",
    "starter": false,
-   "min": 14.0,
+   "min": 13.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -591,7 +592,7 @@
    "name": "Kevin Durant",
    "pos": "PF",
    "starter": true,
-   "min": 37.4,
+   "min": 35.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -633,7 +634,7 @@
    "name": "Jabari Smith Jr.",
    "pos": "PF",
    "starter": true,
-   "min": 37.4,
+   "min": 35.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -675,7 +676,7 @@
    "name": "Amen Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 36.9,
+   "min": 34.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -717,7 +718,7 @@
    "name": "Fred VanVleet",
    "pos": "PG",
    "starter": true,
-   "min": 32.4,
+   "min": 30.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -758,8 +759,8 @@
    "team": "HOU",
    "name": "Tari Eason",
    "pos": "PF",
-   "starter": true,
-   "min": 26.9,
+   "starter": false,
+   "min": 25.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -793,15 +794,14 @@
     "pf": 2.3,
     "ftm": 0.9,
     "fta": 1.1
-   },
-   "slot": "C"
+   }
   },
   {
    "team": "HOU",
    "name": "Marcus Smart",
    "pos": "PG",
    "starter": false,
-   "min": 26.1,
+   "min": 24.7,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -839,10 +839,52 @@
   },
   {
    "team": "HOU",
+   "name": "Clint Capela",
+   "pos": "C",
+   "starter": true,
+   "min": 24.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.3,
+    "pts": 3.5,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 0.0,
+    "fgm": 1.8,
+    "fga": 2.0,
+    "fg3a": 0.0,
+    "stl": 0.8,
+    "blk": 0.5,
+    "tov": 1.0,
+    "pf": 1.8,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 11.3,
+    "pts": 3.5,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 0.0,
+    "fgm": 1.8,
+    "fga": 2.0,
+    "fg3a": 0.0,
+    "stl": 0.38,
+    "blk": 0.46,
+    "tov": 0.8,
+    "pf": 1.38,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "slot": "C"
+  },
+  {
+   "team": "HOU",
    "name": "Bogdan Bogdanović",
    "pos": "SG",
    "starter": false,
-   "min": 15.4,
+   "min": 14.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -883,7 +925,7 @@
    "name": "Oscar Tshiebwe",
    "pos": "C",
    "starter": false,
-   "min": 15.2,
+   "min": 14.4,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -917,47 +959,6 @@
     "pf": 1.7,
     "ftm": 1.0,
     "fta": 2.0
-   }
-  },
-  {
-   "team": "HOU",
-   "name": "Clint Capela",
-   "pos": "C",
-   "starter": false,
-   "min": 12.3,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 11.3,
-    "pts": 3.5,
-    "reb": 4.0,
-    "ast": 0.8,
-    "fg3m": 0.0,
-    "fgm": 1.8,
-    "fga": 2.0,
-    "fg3a": 0.0,
-    "stl": 0.8,
-    "blk": 0.5,
-    "tov": 1.0,
-    "pf": 1.8,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 11.3,
-    "pts": 3.5,
-    "reb": 4.0,
-    "ast": 0.8,
-    "fg3m": 0.0,
-    "fgm": 1.8,
-    "fga": 2.0,
-    "fg3a": 0.0,
-    "stl": 0.38,
-    "blk": 0.46,
-    "tov": 0.8,
-    "pf": 1.38,
-    "ftm": 0.0,
-    "fta": 0.0
    }
   }
  ],
