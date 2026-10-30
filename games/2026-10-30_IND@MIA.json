@@ -9,15 +9,17 @@
    "NBA Cup, Grupo Este B",
    "IND: Haliburton, Sheppard y McConnell OUT; Zubac duda",
    "MIA: Fontecchio duda (enfermedad)",
-   "Récord: IND 2-3, MIA 1-4"
+   "Récord: IND 2-3, MIA 1-4",
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Ivica Zubac, Obi Toppin 50%, Simone Fontecchio 90%"
   ],
   "out": [
    "Tyrese Haliburton",
-   "Ben Sheppard"
+   "Ben Sheppard",
+   "Ivica Zubac"
   ],
   "gtd": {
-   "Ivica Zubac": 0.5,
-   "Simone Fontecchio": 0.5
+   "Simone Fontecchio": 0.9,
+   "Obi Toppin": 0.5
   },
   "reserves": {
    "IND": [
@@ -544,7 +546,7 @@
    "name": "Andrew Nembhard",
    "pos": "SG",
    "starter": true,
-   "min": 33.6,
+   "min": 36.9,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -586,7 +588,7 @@
    "name": "Pascal Siakam",
    "pos": "PF",
    "starter": true,
-   "min": 33.0,
+   "min": 36.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -628,7 +630,7 @@
    "name": "Kelly Oubre Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 24.6,
+   "min": 27.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -670,9 +672,9 @@
    "name": "Obi Toppin",
    "pos": "PF",
    "starter": false,
-   "min": 23.3,
+   "min": 25.7,
    "g_cur": 5,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 22.8,
     "pts": 15.2,
@@ -711,7 +713,7 @@
    "name": "Aaron Nesmith",
    "pos": "SF",
    "starter": true,
-   "min": 22.3,
+   "min": 24.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -750,52 +752,10 @@
   },
   {
    "team": "IND",
-   "name": "Ivica Zubac",
-   "pos": "C",
-   "starter": true,
-   "min": 21.8,
-   "g_cur": 3,
-   "p_play": 0.5,
-   "cur": {
-    "min": 21.3,
-    "pts": 9.0,
-    "reb": 9.0,
-    "ast": 1.3,
-    "fg3m": 0.0,
-    "fgm": 4.0,
-    "fga": 6.7,
-    "fg3a": 0.0,
-    "stl": 0.0,
-    "blk": 1.0,
-    "tov": 1.7,
-    "pf": 2.7,
-    "ftm": 1.0,
-    "fta": 2.0
-   },
-   "prior": {
-    "min": 30.1,
-    "pts": 14.1,
-    "reb": 10.6,
-    "ast": 2.2,
-    "fg3m": 0.0,
-    "fgm": 6.0,
-    "fga": 10.0,
-    "fg3a": 0.0,
-    "stl": 0.4,
-    "blk": 0.8,
-    "tov": 1.8,
-    "pf": 2.3,
-    "ftm": 2.1,
-    "fta": 3.0
-   },
-   "slot": "C"
-  },
-  {
-   "team": "IND",
    "name": "Jarace Walker",
    "pos": "PF",
    "starter": false,
-   "min": 21.5,
+   "min": 23.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -836,7 +796,7 @@
    "name": "Quenton Jackson",
    "pos": "PG",
    "starter": false,
-   "min": 18.8,
+   "min": 20.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -876,8 +836,8 @@
    "team": "IND",
    "name": "Jay Huff",
    "pos": "C",
-   "starter": false,
-   "min": 16.7,
+   "starter": true,
+   "min": 18.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -911,14 +871,15 @@
     "pf": 2.4,
     "ftm": 1.0,
     "fta": 1.2
-   }
+   },
+   "slot": "C"
   },
   {
    "team": "IND",
    "name": "Larry Nance Jr.",
    "pos": "PF",
    "starter": false,
-   "min": 14.3,
+   "min": 15.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -959,7 +920,7 @@
    "name": "Jalen Slawson",
    "pos": "SF",
    "starter": false,
-   "min": 10.0,
+   "min": 11.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
