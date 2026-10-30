@@ -26,6 +26,7 @@ Mercado opcional en el JSON del partido (si falta la cuota de spread/total se as
     "prop_lines": {"Jugador": {"pts": [24.5, 117]}}            # cuota del over
     "prop_lines": {"Jugador": {"pts": [24.5, 117, -145]}}       # over y under
     "prop_lines": {"Jugador": {"reb": [7.5, null, -120]}}       # solo under (cualquier estadística de STAT_LABEL)
+    "prop_lines": {"Jugador": {"reb": [6.5, -135, -162, 7.5]}}  # under con otra línea (4.º valor)
 """
 import glob, json, os, re, subprocess, sys, unicodedata
 from datetime import datetime, timezone
@@ -170,12 +171,14 @@ def prop_bets(cfg, s):
             x = x[d["draws"]["min"] > 0]  # la prop se anula si no juega
             ln, o_over = v[0], v[1]
             o_under = v[2] if len(v) > 2 else None
-            po, push = (x > ln).mean(), (x == ln).mean()
+            lu = v[3] if len(v) > 3 else ln  # la mejor cuota del under puede ser con otra línea
             lab = STAT_LABEL.get(st, st)
             if o_over is not None:  # algunas fuentes solo dan una selección (over o under)
+                po, push = (x > ln).mean(), (x == ln).mean()
                 out.append(dict(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]), stat=st))
             if o_under is not None:
-                out.append(dict(bet("prop", f"{name} Under {ln:g} {lab}", (1 - po - push) / (1 - push), o_under, ln, name,
+                pu, push = (x < lu).mean(), (x == lu).mean()
+                out.append(dict(bet("prop", f"{name} Under {lu:g} {lab}", pu / (1 - push), o_under, lu, name,
                                     d["team"]), stat=st))
     return out
 
