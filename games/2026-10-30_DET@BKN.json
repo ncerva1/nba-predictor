@@ -1,0 +1,663 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "DET",
+  "home": "BKN",
+  "venue": "Barclays Center, Brooklyn",
+  "tip_et": "19:30",
+  "notes": [
+   "NBA Cup, Grupo Este A",
+   "DET: Duren OUT; Isaiah Joe duda (cadera). BKN: Dëmin OUT",
+   "H2H 2025-26: DET 3-1 con tres blowouts (55, 43 y 24 de ventaja)",
+   "Récord: DET 4-1, BKN 0-4"
+  ],
+  "out": [
+   "Jalen Duren",
+   "Egor Dëmin"
+  ],
+  "gtd": {
+   "Isaiah Joe": 0.5
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "BKN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 108.41,
+    "drtg": 118.47,
+    "pace": 97.88
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Egor Dëmin OUT (hasta 7-nov)"
+   }
+  },
+  "DET": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.51,
+    "drtg": 109.17,
+    "pace": 100.16
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Jalen Duren OUT (isquio, hasta 9-nov); Isaiah Joe duda"
+   }
+  }
+ },
+ "matchup": {
+  "BKN": {},
+  "DET": {}
+ },
+ "players": [
+  {
+   "team": "BKN",
+   "name": "Julius Randle",
+   "pos": "PF",
+   "starter": true,
+   "min": 33.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.3,
+    "pts": 22.5,
+    "reb": 7.5,
+    "ast": 5.8,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 33.0,
+    "pts": 21.1,
+    "reb": 6.7,
+    "ast": 5.0,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Michael Porter Jr.",
+   "pos": "SF",
+   "starter": true,
+   "min": 30.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.0,
+    "pts": 22.8,
+    "reb": 7.0,
+    "ast": 1.0,
+    "fg3m": 3.8
+   },
+   "prior": {
+    "min": 32.5,
+    "pts": 24.2,
+    "reb": 7.1,
+    "ast": 3.0,
+    "fg3m": 3.4
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Keon Ellis",
+   "pos": "SG",
+   "starter": true,
+   "min": 25.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.3,
+    "pts": 6.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 17.6,
+    "pts": 5.6,
+    "reb": 1.3,
+    "ast": 0.6,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Mikel Brown Jr.",
+   "pos": "PG",
+   "starter": false,
+   "min": 21.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.7,
+    "pts": 10.3,
+    "reb": 3.3,
+    "ast": 4.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 22.7,
+    "pts": 10.3,
+    "reb": 3.3,
+    "ast": 4.3,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Day'Ron Sharpe",
+   "pos": "C",
+   "starter": true,
+   "min": 20.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.5,
+    "pts": 7.5,
+    "reb": 6.5,
+    "ast": 1.3,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 18.7,
+    "pts": 8.7,
+    "reb": 6.7,
+    "ast": 2.3,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Noah Clowney",
+   "pos": "PF",
+   "starter": false,
+   "min": 20.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.5,
+    "pts": 6.3,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 12.3,
+    "reb": 4.1,
+    "ast": 1.6,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Chaney Johnson",
+   "pos": "SF",
+   "starter": false,
+   "min": 19.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.8,
+    "pts": 7.3,
+    "reb": 3.5,
+    "ast": 1.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 8.2,
+    "reb": 4.6,
+    "ast": 2.1,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Nolan Traoré",
+   "pos": "PG",
+   "starter": true,
+   "min": 16.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.3,
+    "pts": 9.5,
+    "reb": 1.8,
+    "ast": 2.0,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 22.2,
+    "pts": 8.9,
+    "reb": 1.8,
+    "ast": 3.8,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Moritz Wagner",
+   "pos": "C",
+   "starter": false,
+   "min": 16.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.8,
+    "pts": 10.3,
+    "reb": 2.8,
+    "ast": 1.5,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 11.9,
+    "pts": 6.9,
+    "reb": 3.2,
+    "ast": 0.8,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Danny Wolf",
+   "pos": "PF",
+   "starter": false,
+   "min": 14.3,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 6.0,
+    "reb": 2.0,
+    "ast": 1.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 20.8,
+    "pts": 8.9,
+    "reb": 4.9,
+    "ast": 2.2,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Drake Powell",
+   "pos": "SG",
+   "starter": false,
+   "min": 11.5,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 12.0,
+    "pts": 0.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 21.0,
+    "pts": 6.5,
+    "reb": 1.8,
+    "ast": 1.4,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "BKN",
+   "name": "Josh Minott",
+   "pos": "SF",
+   "starter": false,
+   "min": 9.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 10.3,
+    "pts": 6.3,
+    "reb": 3.3,
+    "ast": 0.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 15.9,
+    "pts": 5.8,
+    "reb": 3.6,
+    "ast": 1.0,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Cade Cunningham",
+   "pos": "PG",
+   "starter": true,
+   "min": 35.2,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.6,
+    "pts": 22.6,
+    "reb": 5.6,
+    "ast": 7.8,
+    "fg3m": 2.4
+   },
+   "prior": {
+    "min": 33.9,
+    "pts": 23.9,
+    "reb": 5.5,
+    "ast": 9.9,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Duncan Robinson",
+   "pos": "SF",
+   "starter": true,
+   "min": 30.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.4,
+    "pts": 16.8,
+    "reb": 1.6,
+    "ast": 2.2,
+    "fg3m": 4.0
+   },
+   "prior": {
+    "min": 27.4,
+    "pts": 12.2,
+    "reb": 2.7,
+    "ast": 2.1,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "starter": true,
+   "min": 27.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.8,
+    "pts": 8.3,
+    "reb": 7.3,
+    "ast": 5.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 26.0,
+    "pts": 9.9,
+    "reb": 5.7,
+    "ast": 3.1,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "DET",
+   "name": "John Collins",
+   "pos": "PF",
+   "starter": true,
+   "min": 27.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.8,
+    "pts": 10.2,
+    "reb": 6.8,
+    "ast": 0.6,
+    "fg3m": 1.4
+   },
+   "prior": {
+    "min": 27.1,
+    "pts": 13.6,
+    "reb": 5.3,
+    "ast": 1.0,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Paul Reed",
+   "pos": "C",
+   "starter": true,
+   "min": 26.5,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.0,
+    "pts": 14.2,
+    "reb": 7.6,
+    "ast": 2.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 13.9,
+    "pts": 7.8,
+    "reb": 4.5,
+    "ast": 1.2,
+    "fg3m": 0.2
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Daniss Jenkins",
+   "pos": "PG",
+   "starter": false,
+   "min": 25.2,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.8,
+    "pts": 12.2,
+    "reb": 4.0,
+    "ast": 3.8,
+    "fg3m": 1.6
+   },
+   "prior": {
+    "min": 20.2,
+    "pts": 9.3,
+    "reb": 2.3,
+    "ast": 3.9,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Kevin Huerter",
+   "pos": "SG",
+   "starter": false,
+   "min": 20.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.0,
+    "pts": 5.4,
+    "reb": 3.0,
+    "ast": 1.8,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.4,
+    "pts": 10.0,
+    "reb": 3.5,
+    "ast": 2.6,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Javonte Green",
+   "pos": "SG",
+   "starter": false,
+   "min": 18.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.0,
+    "pts": 7.2,
+    "reb": 2.6,
+    "ast": 0.4,
+    "fg3m": 1.6
+   },
+   "prior": {
+    "min": 17.6,
+    "pts": 6.9,
+    "reb": 2.8,
+    "ast": 0.7,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Ron Holland",
+   "pos": "SF",
+   "starter": false,
+   "min": 14.7,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.4,
+    "pts": 2.8,
+    "reb": 4.0,
+    "ast": 2.4,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 19.9,
+    "pts": 8.2,
+    "reb": 4.0,
+    "ast": 1.2,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DET",
+   "name": "Isaiah Joe",
+   "pos": "SG",
+   "starter": false,
+   "min": 14.2,
+   "g_cur": 3,
+   "p_play": 0.5,
+   "cur": {
+    "min": 14.0,
+    "pts": 7.3,
+    "reb": 1.7,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 21.2,
+    "pts": 11.1,
+    "reb": 2.5,
+    "ast": 1.3,
+    "fg3m": 2.5
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": 7.5,
+  "total": 222.0,
+  "ml_home": 240,
+  "ml_away": -290
+ },
+ "prop_lines": {
+  "Day'Ron Sharpe": {
+   "pts": [
+    8.5,
+    -112,
+    -105
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    20.5,
+    -115,
+    -110
+   ]
+  },
+  "Duncan Robinson": {
+   "pts": [
+    12.5,
+    -115,
+    100
+   ]
+  },
+  "John Collins": {
+   "pts": [
+    14.5,
+    -115,
+    -105
+   ]
+  },
+  "Keon Ellis": {
+   "pts": [
+    5.5,
+    -125,
+    100
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    18.5,
+    -120,
+    -105
+   ]
+  },
+  "Paul Reed": {
+   "pts": [
+    14.5,
+    -110,
+    -115
+   ]
+  },
+  "Cade Cunningham": {
+   "pts": [
+    25.5,
+    -115,
+    -110
+   ]
+  },
+  "Ausar Thompson": {
+   "pts": [
+    9.5,
+    -115,
+    -110
+   ]
+  }
+ }
+}

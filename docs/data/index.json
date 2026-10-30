@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T17:16+00:00",
+ "generated": "2026-10-30T16:47+00:00",
  "value_ev": 0.03,
  "history": [
   {
@@ -25,6 +25,14 @@
    "picks_won": 32,
    "picks_lost": 39,
    "units": -11.66
+  },
+  {
+   "date": "2026-10-29",
+   "games": 3,
+   "winners_ok": 2,
+   "picks_won": 9,
+   "picks_lost": 10,
+   "units": -2.59
   }
  ],
  "parlays": {
@@ -209,7 +217,8 @@
       "dec": 1.909,
       "ev": 0.52,
       "gid": "2026-10-29-MEM-at-POR",
-      "game": "MEM @ POR"
+      "game": "MEM @ POR",
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -222,7 +231,8 @@
       "dec": 1.435,
       "ev": 0.041,
       "gid": "2026-10-29-SAC-at-NOP",
-      "game": "SAC @ NOP"
+      "game": "SAC @ NOP",
+      "result": "won"
      }
     ],
     "n": 2,
@@ -233,7 +243,7 @@
     "fair": 1.73,
     "ev": 0.581,
     "type": "cross",
-    "result": null
+    "result": "lost"
    },
    {
     "legs": [
@@ -248,7 +258,8 @@
       "dec": 1.87,
       "ev": 0.204,
       "gid": "2026-10-29-CLE-at-ATL",
-      "game": "CLE @ ATL"
+      "game": "CLE @ ATL",
+      "result": "won"
      },
      {
       "kind": "prop",
@@ -261,7 +272,8 @@
       "dec": 1.909,
       "ev": 0.52,
       "gid": "2026-10-29-MEM-at-POR",
-      "game": "MEM @ POR"
+      "game": "MEM @ POR",
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -274,7 +286,8 @@
       "dec": 1.435,
       "ev": 0.041,
       "gid": "2026-10-29-SAC-at-NOP",
-      "game": "SAC @ NOP"
+      "game": "SAC @ NOP",
+      "result": "won"
      }
     ],
     "n": 3,
@@ -285,9 +298,260 @@
     "fair": 2.69,
     "ev": 0.904,
     "type": "cross",
+    "result": "lost"
+   }
+  ],
+  "2026-10-30": [
+   {
+    "legs": [
+     {
+      "kind": "ml",
+      "label": "BOS gana",
+      "player": null,
+      "team": "BOS",
+      "line": null,
+      "stat": null,
+      "p": 0.93,
+      "dec": 1.108,
+      "ev": 0.031,
+      "gid": "2026-10-30-CHI-at-BOS",
+      "game": "CHI @ BOS"
+     },
+     {
+      "kind": "prop",
+      "label": "Davion Mitchell Under 11.5 Puntos",
+      "player": "Davion Mitchell",
+      "team": "MIA",
+      "line": 11.5,
+      "stat": "pts",
+      "p": 0.776,
+      "dec": 1.909,
+      "ev": 0.481,
+      "gid": "2026-10-30-IND-at-MIA",
+      "game": "IND @ MIA"
+     }
+    ],
+    "n": 2,
+    "p": 0.722,
+    "p_indep": 0.722,
+    "corr": 1.0,
+    "dec": 2.12,
+    "fair": 1.39,
+    "ev": 0.526,
+    "type": "cross",
+    "result": null
+   },
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Kyshawn George Under 14.5 Puntos",
+      "player": "Kyshawn George",
+      "team": "WAS",
+      "line": 14.5,
+      "stat": "pts",
+      "p": 0.854,
+      "dec": 1.769,
+      "ev": 0.511,
+      "gid": "2026-10-30-CHA-at-WAS",
+      "game": "CHA @ WAS"
+     },
+     {
+      "kind": "ml",
+      "label": "BOS gana",
+      "player": null,
+      "team": "BOS",
+      "line": null,
+      "stat": null,
+      "p": 0.93,
+      "dec": 1.108,
+      "ev": 0.031,
+      "gid": "2026-10-30-CHI-at-BOS",
+      "game": "CHI @ BOS"
+     },
+     {
+      "kind": "ml",
+      "label": "DET gana",
+      "player": null,
+      "team": "DET",
+      "line": null,
+      "stat": null,
+      "p": 0.835,
+      "dec": 1.351,
+      "ev": 0.129,
+      "gid": "2026-10-30-DET-at-BKN",
+      "game": "DET @ BKN"
+     }
+    ],
+    "n": 3,
+    "p": 0.663,
+    "p_indep": 0.663,
+    "corr": 1.0,
+    "dec": 2.65,
+    "fair": 1.51,
+    "ev": 0.756,
+    "type": "cross",
+    "result": null
+   },
+   {
+    "legs": [
+     {
+      "kind": "prop",
+      "label": "Kyshawn George Under 14.5 Puntos",
+      "player": "Kyshawn George",
+      "team": "WAS",
+      "line": 14.5,
+      "stat": "pts",
+      "p": 0.854,
+      "dec": 1.769,
+      "ev": 0.511,
+      "gid": "2026-10-30-CHA-at-WAS",
+      "game": "CHA @ WAS"
+     },
+     {
+      "kind": "ml",
+      "label": "BOS gana",
+      "player": null,
+      "team": "BOS",
+      "line": null,
+      "stat": null,
+      "p": 0.93,
+      "dec": 1.108,
+      "ev": 0.031,
+      "gid": "2026-10-30-CHI-at-BOS",
+      "game": "CHI @ BOS"
+     },
+     {
+      "kind": "ml",
+      "label": "DET gana",
+      "player": null,
+      "team": "DET",
+      "line": null,
+      "stat": null,
+      "p": 0.835,
+      "dec": 1.351,
+      "ev": 0.129,
+      "gid": "2026-10-30-DET-at-BKN",
+      "game": "DET @ BKN"
+     },
+     {
+      "kind": "ml",
+      "label": "TOR gana",
+      "player": null,
+      "team": "TOR",
+      "line": null,
+      "stat": null,
+      "p": 0.814,
+      "dec": 1.486,
+      "ev": 0.209,
+      "gid": "2026-10-30-ORL-at-TOR",
+      "game": "ORL @ TOR"
+     }
+    ],
+    "n": 4,
+    "p": 0.54,
+    "p_indep": 0.54,
+    "corr": 1.0,
+    "dec": 3.93,
+    "fair": 1.85,
+    "ev": 1.124,
+    "type": "cross",
     "result": null
    }
   ]
+ },
+ "cup": {
+  "seasons": {
+   "2024-25": {
+    "opening": {
+     "date": "2024-11-12",
+     "games": 8,
+     "avg_total": 221.6,
+     "reg_before": {
+      "games": 156,
+      "avg_total": 226.3
+     },
+     "n": 8,
+     "over": 5,
+     "under": 3,
+     "vs_line": -0.7
+    },
+    "group": {
+     "games": 60,
+     "avg_total": 224.5,
+     "avg_regulation": 223.6,
+     "ot": 3,
+     "n": 60,
+     "over": 32,
+     "under": 27,
+     "vs_line": -1.9
+    },
+    "regular": {
+     "games": 231,
+     "avg_total": 226.2,
+     "avg_regulation": 225.1,
+     "ot": 13
+    }
+   },
+   "2025-26": {
+    "opening": {
+     "date": "2025-10-31",
+     "games": 8,
+     "avg_total": 229.4,
+     "reg_before": {
+      "games": 72,
+      "avg_total": 235.5
+     },
+     "n": 8,
+     "over": 3,
+     "under": 5,
+     "vs_line": -5.1
+    },
+    "group": {
+     "games": 60,
+     "avg_total": 233.4,
+     "avg_regulation": 231.6,
+     "ot": 3,
+     "n": 60,
+     "over": 26,
+     "under": 34,
+     "vs_line": -0.4
+    },
+    "regular": {
+     "games": 201,
+     "avg_total": 234.1,
+     "avg_regulation": 232.3,
+     "ot": 12
+    }
+   }
+  },
+  "pooled": {
+   "cup": {
+    "games": 120,
+    "avg_total": 228.9,
+    "n": 120,
+    "over": 58,
+    "under": 61,
+    "vs_line": -1.1
+   },
+   "regular": {
+    "games": 432,
+    "avg_total": 229.9
+   },
+   "regular_lines": {
+    "n": 127,
+    "over": 67,
+    "under": 60,
+    "vs_line": 0.6
+   },
+   "opening": {
+    "games": 16,
+    "over": 8,
+    "under": 8
+   },
+   "cup_minus_regular": -1.2
+  },
+  "model_total_adj": 0.0
  },
  "games": [
   {
@@ -12785,7 +13049,8 @@
      "edge": 0.132,
      "ev": 0.258,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -12802,7 +13067,8 @@
      "edge": 0.108,
      "ev": 0.207,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -12819,7 +13085,8 @@
      "edge": 0.109,
      "ev": 0.204,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -12838,7 +13105,8 @@
      "edge": 0.132,
      "ev": 0.258,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -12855,7 +13123,8 @@
      "edge": 0.108,
      "ev": 0.207,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -12872,7 +13141,8 @@
      "edge": 0.109,
      "ev": 0.204,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -12889,7 +13159,8 @@
      "edge": 0.103,
      "ev": 0.192,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -12906,7 +13177,8 @@
      "edge": 0.077,
      "ev": 0.147,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -12923,7 +13195,8 @@
      "edge": 0.073,
      "ev": 0.141,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -12940,7 +13213,8 @@
      "edge": 0.056,
      "ev": 0.102,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -12957,7 +13231,8 @@
      "edge": 0.04,
      "ev": 0.075,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     }
    ],
    "parlays": [
@@ -12974,7 +13249,8 @@
        "dec": 1.962,
        "ev": 0.258,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -12987,7 +13263,8 @@
        "dec": 1.87,
        "ev": 0.192,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -12997,7 +13274,8 @@
      "dec": 3.67,
      "fair": 2.41,
      "ev": 0.523,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -13012,7 +13290,8 @@
        "dec": 1.962,
        "ev": 0.258,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -13025,7 +13304,8 @@
        "dec": 1.87,
        "ev": 0.192,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -13038,7 +13318,8 @@
        "dec": 1.909,
        "ev": 0.207,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -13048,7 +13329,8 @@
      "dec": 7.0,
      "fair": 3.69,
      "ev": 0.899,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -13063,7 +13345,8 @@
        "dec": 1.87,
        "ev": 0.204,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -13076,7 +13359,8 @@
        "dec": 1.962,
        "ev": 0.258,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -13089,7 +13373,8 @@
        "dec": 1.87,
        "ev": 0.192,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -13102,7 +13387,8 @@
        "dec": 1.909,
        "ev": 0.207,
        "gid": "2026-10-29-CLE-at-ATL",
-       "game": "CLE @ ATL"
+       "game": "CLE @ ATL",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -13112,9 +13398,22 @@
      "dec": 13.1,
      "fair": 5.68,
      "ev": 1.308,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CLE": 111,
+     "ATL": 114
+    },
+    "ot": 0,
+    "winner": "ATL",
+    "winner_ok": true,
+    "picks_won": 4,
+    "picks_lost": 4,
+    "units": -0.39
+   }
   },
   {
    "id": "2026-10-29-SAC-at-NOP",
@@ -13194,7 +13493,8 @@
       "p": 0.58,
       "ev": 0.102,
       "region": "CO"
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -13320,7 +13620,8 @@
       "p": 0.725,
       "ev": 0.052,
       "region": "CO"
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -13375,7 +13676,8 @@
       "p": 0.508,
       "ev": -0.019,
       "region": "CO"
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -13432,7 +13734,8 @@
       "p": 0.58,
       "ev": 0.102,
       "region": "CO"
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -13558,10 +13861,23 @@
       "p": 0.725,
       "ev": 0.052,
       "region": "CO"
-     }
+     },
+     "result": "won"
     }
    ],
-   "parlays": []
+   "parlays": [],
+   "result": {
+    "score": {
+     "SAC": 120,
+     "NOP": 132
+    },
+    "ot": 0,
+    "winner": "NOP",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 0,
+    "units": 1.33
+   }
   },
   {
    "id": "2026-10-29-MEM-at-POR",
@@ -13603,7 +13919,8 @@
      "edge": 0.272,
      "ev": 0.52,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -13620,7 +13937,8 @@
      "edge": 0.247,
      "ev": 0.452,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -13637,7 +13955,8 @@
      "edge": 0.225,
      "ev": 0.404,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -13656,7 +13975,8 @@
      "edge": 0.272,
      "ev": 0.52,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -13673,7 +13993,8 @@
      "edge": 0.247,
      "ev": 0.452,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -13690,7 +14011,8 @@
      "edge": 0.225,
      "ev": 0.404,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -13707,7 +14029,8 @@
      "edge": 0.103,
      "ev": 0.193,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -13833,7 +14156,8 @@
       "p": 0.611,
       "ev": 0.137,
       "region": "CO"
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -13959,7 +14283,8 @@
       "p": 0.586,
       "ev": 0.107,
       "region": "CO"
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -14085,7 +14410,8 @@
       "p": 0.796,
       "ev": 0.067,
       "region": "CO"
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -14102,7 +14428,8 @@
      "edge": 0.038,
      "ev": 0.066,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -14119,7 +14446,8 @@
      "edge": 0.034,
      "ev": 0.061,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -14136,7 +14464,8 @@
        "dec": 1.355,
        "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -14149,7 +14478,8 @@
        "dec": 1.833,
        "ev": 0.452,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -14159,7 +14489,8 @@
      "dec": 2.48,
      "fair": 1.54,
      "ev": 0.614,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -14174,7 +14505,8 @@
        "dec": 1.355,
        "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -14187,7 +14519,8 @@
        "dec": 1.833,
        "ev": 0.452,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -14200,7 +14533,8 @@
        "dec": 1.8,
        "ev": 0.404,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -14210,7 +14544,8 @@
      "dec": 4.47,
      "fair": 1.9,
      "ev": 1.357,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -14225,7 +14560,8 @@
        "dec": 1.909,
        "ev": 0.52,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       },
       {
        "kind": "ml",
@@ -14238,7 +14574,8 @@
        "dec": 1.355,
        "ev": 0.079,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -14251,7 +14588,8 @@
        "dec": 1.833,
        "ev": 0.452,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -14264,7 +14602,8 @@
        "dec": 1.8,
        "ev": 0.404,
        "gid": "2026-10-29-MEM-at-POR",
-       "game": "MEM @ POR"
+       "game": "MEM @ POR",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -14274,6 +14613,5401 @@
      "dec": 8.53,
      "fair": 2.35,
      "ev": 2.627,
+     "type": "sgp",
+     "result": "lost"
+    }
+   ],
+   "result": {
+    "score": {
+     "MEM": 124,
+     "POR": 103
+    },
+    "ot": 0,
+    "winner": "MEM",
+    "winner_ok": false,
+    "picks_won": 3,
+    "picks_lost": 6,
+    "units": -3.53
+   }
+  },
+  {
+   "id": "2026-10-30-CHA-at-WAS",
+   "date": "2026-10-30",
+   "away": "CHA",
+   "home": "WAS",
+   "tip_et": "19:00",
+   "venue": "Capital One Arena, Washington",
+   "competition": "cup",
+   "cup_round": "Grupo Este C",
+   "records": {
+    "CHA": null,
+    "WAS": null
+   },
+   "proj": {
+    "WAS": 111.1,
+    "CHA": 117.7
+   },
+   "win_prob": {
+    "WAS": 0.316675,
+    "CHA": 0.683325
+   },
+   "proj_total": 228.9,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Kyshawn George Under 14.5 Puntos",
+     "player": "Kyshawn George",
+     "team": "WAS",
+     "line": 14.5,
+     "odds": -130,
+     "dec": 1.769,
+     "odds_assumed": false,
+     "p": 0.854,
+     "implied": 0.565,
+     "fair": -586,
+     "edge": 0.289,
+     "ev": 0.511,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": -100,
+     "dec": 1.999,
+     "odds_assumed": false,
+     "p": 0.683,
+     "implied": 0.5,
+     "fair": -216,
+     "edge": 0.183,
+     "ev": 0.366,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": 108,
+      "dec": 2.08,
+      "p": 0.683,
+      "ev": 0.421
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 108,
+       "dec": 2.08,
+       "p": 0.683,
+       "ev": 0.421
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.683,
+       "ev": 0.38
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -101,
+       "dec": 1.99,
+       "p": 0.683,
+       "ev": 0.36
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.683,
+       "ev": 0.334
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.683,
+       "ev": 0.334
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "CHA +1.5",
+     "player": null,
+     "team": "CHA",
+     "line": 1.5,
+     "odds": -113,
+     "dec": 1.881,
+     "odds_assumed": false,
+     "p": 0.712,
+     "implied": 0.532,
+     "fair": -248,
+     "edge": 0.181,
+     "ev": 0.34,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": -0.5,
+      "odds": 108,
+      "dec": 2.08,
+      "p": 0.683,
+      "ev": 0.421
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -0.5,
+       "odds": 108,
+       "dec": 2.08,
+       "p": 0.683,
+       "ev": 0.421
+      },
+      {
+       "book": "FanDuel",
+       "line": 1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.712,
+       "ev": 0.36
+      },
+      {
+       "book": "theScore Bet",
+       "line": 1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.712,
+       "ev": 0.36
+      },
+      {
+       "book": "BetMGM",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "bet365",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "DraftKings",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "Fanatics",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Kyshawn George Under 14.5 Puntos",
+     "player": "Kyshawn George",
+     "team": "WAS",
+     "line": 14.5,
+     "odds": -130,
+     "dec": 1.769,
+     "odds_assumed": false,
+     "p": 0.854,
+     "implied": 0.565,
+     "fair": -586,
+     "edge": 0.289,
+     "ev": 0.511,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": -100,
+     "dec": 1.999,
+     "odds_assumed": false,
+     "p": 0.683,
+     "implied": 0.5,
+     "fair": -216,
+     "edge": 0.183,
+     "ev": 0.366,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": 108,
+      "dec": 2.08,
+      "p": 0.683,
+      "ev": 0.421
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 108,
+       "dec": 2.08,
+       "p": 0.683,
+       "ev": 0.421
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 102,
+       "dec": 2.02,
+       "p": 0.683,
+       "ev": 0.38
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.683,
+       "ev": 0.367
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -101,
+       "dec": 1.99,
+       "p": 0.683,
+       "ev": 0.36
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.683,
+       "ev": 0.334
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.683,
+       "ev": 0.334
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "CHA +1.5",
+     "player": null,
+     "team": "CHA",
+     "line": 1.5,
+     "odds": -113,
+     "dec": 1.881,
+     "odds_assumed": false,
+     "p": 0.712,
+     "implied": 0.532,
+     "fair": -248,
+     "edge": 0.181,
+     "ev": 0.34,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": -0.5,
+      "odds": 108,
+      "dec": 2.08,
+      "p": 0.683,
+      "ev": 0.421
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -0.5,
+       "odds": 108,
+       "dec": 2.08,
+       "p": 0.683,
+       "ev": 0.421
+      },
+      {
+       "book": "FanDuel",
+       "line": 1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.712,
+       "ev": 0.36
+      },
+      {
+       "book": "theScore Bet",
+       "line": 1.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.712,
+       "ev": 0.36
+      },
+      {
+       "book": "BetMGM",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "bet365",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "DraftKings",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "Fanatics",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.712,
+       "ev": 0.332
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Over 220.5",
+     "player": null,
+     "team": null,
+     "line": 220.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.66,
+     "implied": 0.524,
+     "fair": -194,
+     "edge": 0.136,
+     "ev": 0.26,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "BetRivers",
+      "line": 223.5,
+      "odds": 128,
+      "dec": 2.28,
+      "p": 0.603,
+      "ev": 0.376
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 223.5,
+       "odds": 128,
+       "dec": 2.28,
+       "p": 0.603,
+       "ev": 0.376
+      },
+      {
+       "book": "theScore Bet",
+       "line": 219.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.678,
+       "ev": 0.295
+      },
+      {
+       "book": "Fanatics",
+       "line": 220.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.672,
+       "ev": 0.283
+      },
+      {
+       "book": "BetMGM",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.66,
+       "ev": 0.26
+      },
+      {
+       "book": "DraftKings",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.66,
+       "ev": 0.26
+      },
+      {
+       "book": "FanDuel",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.66,
+       "ev": 0.26
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 220.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.66,
+       "ev": 0.26
+      },
+      {
+       "book": "bet365",
+       "line": 223.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.603,
+       "ev": 0.152
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Anthony Davis Under 21.5 Puntos",
+     "player": "Anthony Davis",
+     "team": "WAS",
+     "line": 21.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.674,
+     "implied": 0.535,
+     "fair": -207,
+     "edge": 0.139,
+     "ev": 0.26,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Naz Reid Under 16.5 Puntos",
+     "player": "Naz Reid",
+     "team": "CHA",
+     "line": 16.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.662,
+     "implied": 0.535,
+     "fair": -196,
+     "edge": 0.127,
+     "ev": 0.238,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Dennis Schröder Under 15.5 Puntos",
+     "player": "Dennis Schröder",
+     "team": "CHA",
+     "line": 15.5,
+     "odds": -130,
+     "dec": 1.769,
+     "odds_assumed": false,
+     "p": 0.694,
+     "implied": 0.565,
+     "fair": -226,
+     "edge": 0.128,
+     "ev": 0.227,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Alex Sarr Over 10.5 Puntos",
+     "player": "Alex Sarr",
+     "team": "WAS",
+     "line": 10.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.609,
+     "implied": 0.512,
+     "fair": -156,
+     "edge": 0.097,
+     "ev": 0.188,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.854,
+       "dec": 1.769,
+       "ev": 0.511,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "spread",
+       "label": "CHA +1.5",
+       "player": null,
+       "team": "CHA",
+       "line": 1.5,
+       "stat": null,
+       "p": 0.712,
+       "dec": 1.881,
+       "ev": 0.34,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      }
+     ],
+     "n": 2,
+     "p": 0.62,
+     "p_indep": 0.608,
+     "corr": 1.02,
+     "dec": 3.33,
+     "fair": 1.61,
+     "ev": 1.062,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.854,
+       "dec": 1.769,
+       "ev": 0.511,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "spread",
+       "label": "CHA +1.5",
+       "player": null,
+       "team": "CHA",
+       "line": 1.5,
+       "stat": null,
+       "p": 0.712,
+       "dec": 1.881,
+       "ev": 0.34,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "prop",
+       "label": "Anthony Davis Under 21.5 Puntos",
+       "player": "Anthony Davis",
+       "team": "WAS",
+       "line": 21.5,
+       "stat": "pts",
+       "p": 0.674,
+       "dec": 1.87,
+       "ev": 0.26,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      }
+     ],
+     "n": 3,
+     "p": 0.443,
+     "p_indep": 0.41,
+     "corr": 1.08,
+     "dec": 6.22,
+     "fair": 2.26,
+     "ev": 1.756,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.854,
+       "dec": 1.769,
+       "ev": 0.511,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "spread",
+       "label": "CHA +1.5",
+       "player": null,
+       "team": "CHA",
+       "line": 1.5,
+       "stat": null,
+       "p": 0.712,
+       "dec": 1.881,
+       "ev": 0.34,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "prop",
+       "label": "Dennis Schröder Under 15.5 Puntos",
+       "player": "Dennis Schröder",
+       "team": "CHA",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.694,
+       "dec": 1.769,
+       "ev": 0.227,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      },
+      {
+       "kind": "prop",
+       "label": "Anthony Davis Under 21.5 Puntos",
+       "player": "Anthony Davis",
+       "team": "WAS",
+       "line": 21.5,
+       "stat": "pts",
+       "p": 0.674,
+       "dec": 1.87,
+       "ev": 0.26,
+       "gid": "2026-10-30-CHA-at-WAS",
+       "game": "CHA @ WAS"
+      }
+     ],
+     "n": 4,
+     "p": 0.306,
+     "p_indep": 0.284,
+     "corr": 1.08,
+     "dec": 11.01,
+     "fair": 3.27,
+     "ev": 2.369,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-CHI-at-BOS",
+   "date": "2026-10-30",
+   "away": "CHI",
+   "home": "BOS",
+   "tip_et": "19:30",
+   "venue": "TD Garden, Boston",
+   "competition": "cup",
+   "cup_round": "Grupo Este C",
+   "records": {
+    "CHI": null,
+    "BOS": null
+   },
+   "proj": {
+    "BOS": 127.6,
+    "CHI": 107.3
+   },
+   "win_prob": {
+    "BOS": 0.930075,
+    "CHI": 0.069925
+   },
+   "proj_total": 235.0,
+   "used_db": true,
+   "n_value": 13,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Josh Giddey Under 10.5 Puntos",
+     "player": "Josh Giddey",
+     "team": "CHI",
+     "line": 10.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.767,
+     "implied": 0.528,
+     "fair": -329,
+     "edge": 0.238,
+     "ev": 0.451,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Derrick White Under 15.5 Puntos",
+     "player": "Derrick White",
+     "team": "BOS",
+     "line": 15.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.755,
+     "implied": 0.556,
+     "fair": -308,
+     "edge": 0.199,
+     "ev": 0.359,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Payton Pritchard Over 14.5 Puntos",
+     "player": "Payton Pritchard",
+     "team": "BOS",
+     "line": 14.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.688,
+     "implied": 0.528,
+     "fair": -221,
+     "edge": 0.16,
+     "ev": 0.303,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Josh Giddey Under 10.5 Puntos",
+     "player": "Josh Giddey",
+     "team": "CHI",
+     "line": 10.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.767,
+     "implied": 0.528,
+     "fair": -329,
+     "edge": 0.238,
+     "ev": 0.451,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Derrick White Under 15.5 Puntos",
+     "player": "Derrick White",
+     "team": "BOS",
+     "line": 15.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.755,
+     "implied": 0.556,
+     "fair": -308,
+     "edge": 0.199,
+     "ev": 0.359,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Payton Pritchard Over 14.5 Puntos",
+     "player": "Payton Pritchard",
+     "team": "BOS",
+     "line": 14.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.688,
+     "implied": 0.528,
+     "fair": -221,
+     "edge": 0.16,
+     "ev": 0.303,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "BOS -15.5",
+     "player": null,
+     "team": "BOS",
+     "line": -15.5,
+     "odds": -107,
+     "dec": 1.931,
+     "odds_assumed": false,
+     "p": 0.635,
+     "implied": 0.518,
+     "fair": -174,
+     "edge": 0.117,
+     "ev": 0.226,
+     "value": true,
+     "n_books": 6,
+     "best": {
+      "book": "BetMGM",
+      "line": -15.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.635,
+      "ev": 0.24
+     },
+     "books": [
+      {
+       "book": "BetMGM",
+       "line": -15.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.635,
+       "ev": 0.24
+      },
+      {
+       "book": "Caesars",
+       "line": -15.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.635,
+       "ev": 0.24
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -15.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.635,
+       "ev": 0.24
+      },
+      {
+       "book": "Fanatics",
+       "line": -14.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.663,
+       "ev": 0.239
+      },
+      {
+       "book": "FanDuel",
+       "line": -14.5,
+       "odds": -116,
+       "dec": 1.862,
+       "p": 0.663,
+       "ev": 0.234
+      },
+      {
+       "book": "bet365",
+       "line": -15.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.635,
+       "ev": 0.212
+      },
+      {
+       "book": "DraftKings",
+       "line": -15.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.635,
+       "ev": 0.212
+      },
+      {
+       "book": "theScore Bet",
+       "line": -15.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.635,
+       "ev": 0.212
+      },
+      {
+       "book": "BetRivers",
+       "line": -16.5,
+       "odds": -103,
+       "dec": 1.971,
+       "p": 0.607,
+       "ev": 0.196
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Sam Hauser Over 8.5 Puntos",
+     "player": "Sam Hauser",
+     "team": "BOS",
+     "line": 8.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.65,
+     "implied": 0.535,
+     "fair": -185,
+     "edge": 0.115,
+     "ev": 0.214,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jalen Smith Under 11.5 Puntos",
+     "player": "Jalen Smith",
+     "team": "CHI",
+     "line": 11.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.619,
+     "implied": 0.512,
+     "fair": -163,
+     "edge": 0.107,
+     "ev": 0.209,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jayson Tatum Under 27.5 Puntos",
+     "player": "Jayson Tatum",
+     "team": "BOS",
+     "line": 27.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.599,
+     "implied": 0.524,
+     "fair": -149,
+     "edge": 0.075,
+     "ev": 0.143,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Mitchell Robinson Under 5.5 Puntos",
+     "player": "Mitchell Robinson",
+     "team": "BOS",
+     "line": 5.5,
+     "odds": 105,
+     "dec": 2.05,
+     "odds_assumed": false,
+     "p": 0.558,
+     "implied": 0.488,
+     "fair": -126,
+     "edge": 0.07,
+     "ev": 0.143,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jordan Walsh Over 5.5 Puntos",
+     "player": "Jordan Walsh",
+     "team": "BOS",
+     "line": 5.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.628,
+     "implied": 0.556,
+     "fair": -169,
+     "edge": 0.072,
+     "ev": 0.13,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Neemias Queta Over 8.5 Puntos",
+     "player": "Neemias Queta",
+     "team": "BOS",
+     "line": 8.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.5,
+     "fair": -128,
+     "edge": 0.061,
+     "ev": 0.121,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Norman Powell Under 19.5 Puntos",
+     "player": "Norman Powell",
+     "team": "CHI",
+     "line": 19.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.578,
+     "implied": 0.545,
+     "fair": -137,
+     "edge": 0.033,
+     "ev": 0.06,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Paul George Under 20.5 Puntos",
+     "player": "Paul George",
+     "team": "BOS",
+     "line": 20.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.577,
+     "implied": 0.545,
+     "fair": -137,
+     "edge": 0.032,
+     "ev": 0.058,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "BOS gana",
+     "player": null,
+     "team": "BOS",
+     "line": null,
+     "odds": -923,
+     "dec": 1.108,
+     "odds_assumed": false,
+     "p": 0.93,
+     "implied": 0.902,
+     "fair": -1330,
+     "edge": 0.028,
+     "ev": 0.031,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": null,
+      "odds": -850,
+      "dec": 1.118,
+      "p": 0.93,
+      "ev": 0.039
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -850,
+       "dec": 1.118,
+       "p": 0.93,
+       "ev": 0.039
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -850,
+       "dec": 1.118,
+       "p": 0.93,
+       "ev": 0.039
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -900,
+       "dec": 1.111,
+       "p": 0.93,
+       "ev": 0.033
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -909,
+       "dec": 1.11,
+       "p": 0.93,
+       "ev": 0.032
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -950,
+       "dec": 1.105,
+       "p": 0.93,
+       "ev": 0.028
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -950,
+       "dec": 1.105,
+       "p": 0.93,
+       "ev": 0.028
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -1000,
+       "dec": 1.1,
+       "p": 0.93,
+       "ev": 0.023
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -1000,
+       "dec": 1.1,
+       "p": 0.93,
+       "ev": 0.023
+      }
+     ]
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "BOS gana",
+       "player": null,
+       "team": "BOS",
+       "line": null,
+       "stat": null,
+       "p": 0.93,
+       "dec": 1.108,
+       "ev": 0.031,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.893,
+       "ev": 0.451,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      }
+     ],
+     "n": 2,
+     "p": 0.722,
+     "p_indep": 0.713,
+     "corr": 1.01,
+     "dec": 2.1,
+     "fair": 1.39,
+     "ev": 0.514,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "BOS gana",
+       "player": null,
+       "team": "BOS",
+       "line": null,
+       "stat": null,
+       "p": 0.93,
+       "dec": 1.108,
+       "ev": 0.031,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.893,
+       "ev": 0.451,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Derrick White Under 15.5 Puntos",
+       "player": "Derrick White",
+       "team": "BOS",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.755,
+       "dec": 1.8,
+       "ev": 0.359,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      }
+     ],
+     "n": 3,
+     "p": 0.547,
+     "p_indep": 0.539,
+     "corr": 1.02,
+     "dec": 3.78,
+     "fair": 1.83,
+     "ev": 1.065,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "BOS gana",
+       "player": null,
+       "team": "BOS",
+       "line": null,
+       "stat": null,
+       "p": 0.93,
+       "dec": 1.108,
+       "ev": 0.031,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 10.5 Puntos",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.767,
+       "dec": 1.893,
+       "ev": 0.451,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Derrick White Under 15.5 Puntos",
+       "player": "Derrick White",
+       "team": "BOS",
+       "line": 15.5,
+       "stat": "pts",
+       "p": 0.755,
+       "dec": 1.8,
+       "ev": 0.359,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      },
+      {
+       "kind": "prop",
+       "label": "Payton Pritchard Over 14.5 Puntos",
+       "player": "Payton Pritchard",
+       "team": "BOS",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.688,
+       "dec": 1.893,
+       "ev": 0.303,
+       "gid": "2026-10-30-CHI-at-BOS",
+       "game": "CHI @ BOS"
+      }
+     ],
+     "n": 4,
+     "p": 0.388,
+     "p_indep": 0.371,
+     "corr": 1.05,
+     "dec": 7.15,
+     "fair": 2.58,
+     "ev": 1.775,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-DET-at-BKN",
+   "date": "2026-10-30",
+   "away": "DET",
+   "home": "BKN",
+   "tip_et": "19:30",
+   "venue": "Barclays Center, Brooklyn",
+   "competition": "cup",
+   "cup_round": "Grupo Este A",
+   "records": {
+    "DET": null,
+    "BKN": null
+   },
+   "proj": {
+    "BKN": 104.9,
+    "DET": 118.3
+   },
+   "win_prob": {
+    "BKN": 0.164775,
+    "DET": 0.835225
+   },
+   "proj_total": 223.2,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Day'Ron Sharpe Under 8.5 Puntos",
+     "player": "Day'Ron Sharpe",
+     "team": "BKN",
+     "line": 8.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.677,
+     "implied": 0.512,
+     "fair": -210,
+     "edge": 0.165,
+     "ev": 0.322,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "John Collins Under 14.5 Puntos",
+     "player": "John Collins",
+     "team": "DET",
+     "line": 14.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.666,
+     "implied": 0.512,
+     "fair": -199,
+     "edge": 0.153,
+     "ev": 0.3,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "DET -7.5",
+     "player": null,
+     "team": "DET",
+     "line": -7.5,
+     "odds": -108,
+     "dec": 1.922,
+     "odds_assumed": false,
+     "p": 0.668,
+     "implied": 0.52,
+     "fair": -201,
+     "edge": 0.147,
+     "ev": 0.283,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": -6.5,
+      "odds": -114,
+      "dec": 1.877,
+      "p": 0.696,
+      "ev": 0.306
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -6.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.696,
+       "ev": 0.306
+      },
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.668,
+       "ev": 0.303
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.668,
+       "ev": 0.303
+      },
+      {
+       "book": "bet365",
+       "line": -7.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.668,
+       "ev": 0.286
+      },
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "FanDuel",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Caesars",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Day'Ron Sharpe Under 8.5 Puntos",
+     "player": "Day'Ron Sharpe",
+     "team": "BKN",
+     "line": 8.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.677,
+     "implied": 0.512,
+     "fair": -210,
+     "edge": 0.165,
+     "ev": 0.322,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "John Collins Under 14.5 Puntos",
+     "player": "John Collins",
+     "team": "DET",
+     "line": 14.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.666,
+     "implied": 0.512,
+     "fair": -199,
+     "edge": 0.153,
+     "ev": 0.3,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "DET -7.5",
+     "player": null,
+     "team": "DET",
+     "line": -7.5,
+     "odds": -108,
+     "dec": 1.922,
+     "odds_assumed": false,
+     "p": 0.668,
+     "implied": 0.52,
+     "fair": -201,
+     "edge": 0.147,
+     "ev": 0.283,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": -6.5,
+      "odds": -114,
+      "dec": 1.877,
+      "p": 0.696,
+      "ev": 0.306
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -6.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.696,
+       "ev": 0.306
+      },
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.668,
+       "ev": 0.303
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.668,
+       "ev": 0.303
+      },
+      {
+       "book": "bet365",
+       "line": -7.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.668,
+       "ev": 0.286
+      },
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "FanDuel",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Caesars",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.668,
+       "ev": 0.274
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Julius Randle Under 18.5 Puntos",
+     "player": "Julius Randle",
+     "team": "BKN",
+     "line": 18.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.639,
+     "implied": 0.512,
+     "fair": -177,
+     "edge": 0.127,
+     "ev": 0.248,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Cade Cunningham Under 25.5 Puntos",
+     "player": "Cade Cunningham",
+     "team": "DET",
+     "line": 25.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.622,
+     "implied": 0.524,
+     "fair": -164,
+     "edge": 0.098,
+     "ev": 0.187,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "DET gana",
+     "player": null,
+     "team": "DET",
+     "line": null,
+     "odds": -285,
+     "dec": 1.351,
+     "odds_assumed": false,
+     "p": 0.835,
+     "implied": 0.74,
+     "fair": -507,
+     "edge": 0.095,
+     "ev": 0.129,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -265,
+      "dec": 1.377,
+      "p": 0.835,
+      "ev": 0.15
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -265,
+       "dec": 1.377,
+       "p": 0.835,
+       "ev": 0.15
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.835,
+       "ev": 0.139
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -280,
+       "dec": 1.357,
+       "p": 0.835,
+       "ev": 0.134
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -285,
+       "dec": 1.351,
+       "p": 0.835,
+       "ev": 0.128
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -290,
+       "dec": 1.345,
+       "p": 0.835,
+       "ev": 0.123
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -290,
+       "dec": 1.345,
+       "p": 0.835,
+       "ev": 0.123
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -295,
+       "dec": 1.339,
+       "p": 0.835,
+       "ev": 0.118
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -300,
+       "dec": 1.333,
+       "p": 0.835,
+       "ev": 0.114
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Michael Porter Jr. Under 20.5 Puntos",
+     "player": "Michael Porter Jr.",
+     "team": "BKN",
+     "line": 20.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.584,
+     "implied": 0.524,
+     "fair": -140,
+     "edge": 0.06,
+     "ev": 0.114,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Keon Ellis Under 5.5 Puntos",
+     "player": "Keon Ellis",
+     "team": "BKN",
+     "line": 5.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.543,
+     "implied": 0.5,
+     "fair": -119,
+     "edge": 0.043,
+     "ev": 0.085,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "DET gana",
+       "player": null,
+       "team": "DET",
+       "line": null,
+       "stat": null,
+       "p": 0.835,
+       "dec": 1.351,
+       "ev": 0.129,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "Day'Ron Sharpe Under 8.5 Puntos",
+       "player": "Day'Ron Sharpe",
+       "team": "BKN",
+       "line": 8.5,
+       "stat": "pts",
+       "p": 0.677,
+       "dec": 1.952,
+       "ev": 0.322,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      }
+     ],
+     "n": 2,
+     "p": 0.584,
+     "p_indep": 0.565,
+     "corr": 1.03,
+     "dec": 2.64,
+     "fair": 1.71,
+     "ev": 0.539,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "DET gana",
+       "player": null,
+       "team": "DET",
+       "line": null,
+       "stat": null,
+       "p": 0.835,
+       "dec": 1.351,
+       "ev": 0.129,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "Day'Ron Sharpe Under 8.5 Puntos",
+       "player": "Day'Ron Sharpe",
+       "team": "BKN",
+       "line": 8.5,
+       "stat": "pts",
+       "p": 0.677,
+       "dec": 1.952,
+       "ev": 0.322,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "Julius Randle Under 18.5 Puntos",
+       "player": "Julius Randle",
+       "team": "BKN",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.639,
+       "dec": 1.952,
+       "ev": 0.248,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      }
+     ],
+     "n": 3,
+     "p": 0.4,
+     "p_indep": 0.361,
+     "corr": 1.11,
+     "dec": 5.15,
+     "fair": 2.5,
+     "ev": 1.057,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "DET gana",
+       "player": null,
+       "team": "DET",
+       "line": null,
+       "stat": null,
+       "p": 0.835,
+       "dec": 1.351,
+       "ev": 0.129,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "Day'Ron Sharpe Under 8.5 Puntos",
+       "player": "Day'Ron Sharpe",
+       "team": "BKN",
+       "line": 8.5,
+       "stat": "pts",
+       "p": 0.677,
+       "dec": 1.952,
+       "ev": 0.322,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "John Collins Under 14.5 Puntos",
+       "player": "John Collins",
+       "team": "DET",
+       "line": 14.5,
+       "stat": "pts",
+       "p": 0.666,
+       "dec": 1.952,
+       "ev": 0.3,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      },
+      {
+       "kind": "prop",
+       "label": "Julius Randle Under 18.5 Puntos",
+       "player": "Julius Randle",
+       "team": "BKN",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.639,
+       "dec": 1.952,
+       "ev": 0.248,
+       "gid": "2026-10-30-DET-at-BKN",
+       "game": "DET @ BKN"
+      }
+     ],
+     "n": 4,
+     "p": 0.271,
+     "p_indep": 0.241,
+     "corr": 1.13,
+     "dec": 10.05,
+     "fair": 3.69,
+     "ev": 1.722,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-NYK-at-PHI",
+   "date": "2026-10-30",
+   "away": "NYK",
+   "home": "PHI",
+   "tip_et": "19:30",
+   "venue": "Xfinity Mobile Arena, Philadelphia",
+   "competition": "cup",
+   "cup_round": "Grupo Este B",
+   "records": {
+    "NYK": null,
+    "PHI": null
+   },
+   "proj": {
+    "PHI": 111.2,
+    "NYK": 113.0
+   },
+   "win_prob": {
+    "PHI": 0.44875,
+    "NYK": 0.55125
+   },
+   "proj_total": 224.2,
+   "used_db": true,
+   "n_value": 3,
+   "top_bets": [
+    {
+     "kind": "total",
+     "label": "Under 229.5",
+     "player": null,
+     "team": null,
+     "line": 229.5,
+     "odds": -110,
+     "dec": 1.91,
+     "odds_assumed": false,
+     "p": 0.608,
+     "implied": 0.523,
+     "fair": -155,
+     "edge": 0.084,
+     "ev": 0.161,
+     "value": true,
+     "n_books": 3,
+     "best": {
+      "book": "FanDuel",
+      "line": 230.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.626,
+      "ev": 0.195
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 230.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.626,
+       "ev": 0.195
+      },
+      {
+       "book": "BetMGM",
+       "line": 229.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.608,
+       "ev": 0.187
+      },
+      {
+       "book": "BetRivers",
+       "line": 230.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.626,
+       "ev": 0.175
+      },
+      {
+       "book": "Fanatics",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.608,
+       "ev": 0.16
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.608,
+       "ev": 0.136
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "NYK +1.5",
+     "player": null,
+     "team": "NYK",
+     "line": 1.5,
+     "odds": -118,
+     "dec": 1.85,
+     "odds_assumed": false,
+     "p": 0.582,
+     "implied": 0.541,
+     "fair": -139,
+     "edge": 0.042,
+     "ev": 0.077,
+     "value": true,
+     "n_books": 3,
+     "best": {
+      "book": "FanDuel",
+      "line": 1.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.582,
+      "ev": 0.089
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.582,
+       "ev": 0.089
+      },
+      {
+       "book": "DraftKings",
+       "line": 1.5,
+       "odds": -118,
+       "dec": 1.847,
+       "p": 0.582,
+       "ev": 0.076
+      },
+      {
+       "book": "BetMGM",
+       "line": 1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.582,
+       "ev": 0.068
+      },
+      {
+       "book": "Fanatics",
+       "line": -1.0,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.537,
+       "ev": 0.049
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "NYK gana",
+     "player": null,
+     "team": "NYK",
+     "line": null,
+     "odds": -109,
+     "dec": 1.916,
+     "odds_assumed": false,
+     "p": 0.551,
+     "implied": 0.522,
+     "fair": -123,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -104,
+      "dec": 1.962,
+      "p": 0.551,
+      "ev": 0.081
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.551,
+       "ev": 0.081
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.551,
+       "ev": 0.043
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "total",
+     "label": "Under 229.5",
+     "player": null,
+     "team": null,
+     "line": 229.5,
+     "odds": -110,
+     "dec": 1.91,
+     "odds_assumed": false,
+     "p": 0.608,
+     "implied": 0.523,
+     "fair": -155,
+     "edge": 0.084,
+     "ev": 0.161,
+     "value": true,
+     "n_books": 3,
+     "best": {
+      "book": "FanDuel",
+      "line": 230.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.626,
+      "ev": 0.195
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 230.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.626,
+       "ev": 0.195
+      },
+      {
+       "book": "BetMGM",
+       "line": 229.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.608,
+       "ev": 0.187
+      },
+      {
+       "book": "BetRivers",
+       "line": 230.5,
+       "odds": -114,
+       "dec": 1.877,
+       "p": 0.626,
+       "ev": 0.175
+      },
+      {
+       "book": "Fanatics",
+       "line": 229.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.608,
+       "ev": 0.16
+      },
+      {
+       "book": "DraftKings",
+       "line": 229.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.608,
+       "ev": 0.136
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "label": "NYK +1.5",
+     "player": null,
+     "team": "NYK",
+     "line": 1.5,
+     "odds": -118,
+     "dec": 1.85,
+     "odds_assumed": false,
+     "p": 0.582,
+     "implied": 0.541,
+     "fair": -139,
+     "edge": 0.042,
+     "ev": 0.077,
+     "value": true,
+     "n_books": 3,
+     "best": {
+      "book": "FanDuel",
+      "line": 1.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.582,
+      "ev": 0.089
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": 1.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.582,
+       "ev": 0.089
+      },
+      {
+       "book": "DraftKings",
+       "line": 1.5,
+       "odds": -118,
+       "dec": 1.847,
+       "p": 0.582,
+       "ev": 0.076
+      },
+      {
+       "book": "BetMGM",
+       "line": 1.5,
+       "odds": -120,
+       "dec": 1.833,
+       "p": 0.582,
+       "ev": 0.068
+      },
+      {
+       "book": "Fanatics",
+       "line": -1.0,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.537,
+       "ev": 0.049
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "NYK gana",
+     "player": null,
+     "team": "NYK",
+     "line": null,
+     "odds": -109,
+     "dec": 1.916,
+     "odds_assumed": false,
+     "p": 0.551,
+     "implied": 0.522,
+     "fair": -123,
+     "edge": 0.029,
+     "ev": 0.056,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": -104,
+      "dec": 1.962,
+      "p": 0.551,
+      "ev": 0.081
+     },
+     "books": [
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -104,
+       "dec": 1.962,
+       "p": 0.551,
+       "ev": 0.081
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.551,
+       "ev": 0.052
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.551,
+       "ev": 0.043
+      }
+     ]
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "total",
+       "label": "Under 229.5",
+       "player": null,
+       "team": null,
+       "line": 229.5,
+       "stat": null,
+       "p": 0.608,
+       "dec": 1.91,
+       "ev": 0.161,
+       "gid": "2026-10-30-NYK-at-PHI",
+       "game": "NYK @ PHI"
+      },
+      {
+       "kind": "spread",
+       "label": "NYK +1.5",
+       "player": null,
+       "team": "NYK",
+       "line": 1.5,
+       "stat": null,
+       "p": 0.582,
+       "dec": 1.85,
+       "ev": 0.077,
+       "gid": "2026-10-30-NYK-at-PHI",
+       "game": "NYK @ PHI"
+      }
+     ],
+     "n": 2,
+     "p": 0.354,
+     "p_indep": 0.354,
+     "corr": 1.0,
+     "dec": 3.53,
+     "fair": 2.82,
+     "ev": 0.251,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-ORL-at-TOR",
+   "date": "2026-10-30",
+   "away": "ORL",
+   "home": "TOR",
+   "tip_et": "19:30",
+   "venue": "Scotiabank Arena, Toronto",
+   "competition": "cup",
+   "cup_round": "Grupo Este A",
+   "records": {
+    "ORL": null,
+    "TOR": null
+   },
+   "proj": {
+    "TOR": 117.9,
+    "ORL": 105.6
+   },
+   "win_prob": {
+    "TOR": 0.813625,
+    "ORL": 0.186375
+   },
+   "proj_total": 223.4,
+   "used_db": true,
+   "n_value": 12,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Jase Richardson Under 6.5 Puntos",
+     "player": "Jase Richardson",
+     "team": "ORL",
+     "line": 6.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.757,
+     "implied": 0.512,
+     "fair": -311,
+     "edge": 0.244,
+     "ev": 0.477,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Anthony Black Over 12.5 Puntos",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.716,
+     "implied": 0.512,
+     "fair": -253,
+     "edge": 0.204,
+     "ev": 0.399,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "TOR -5.5",
+     "player": null,
+     "team": "TOR",
+     "line": -5.5,
+     "odds": -108,
+     "dec": 1.929,
+     "odds_assumed": false,
+     "p": 0.692,
+     "implied": 0.519,
+     "fair": -225,
+     "edge": 0.174,
+     "ev": 0.335,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": -5.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.692,
+      "ev": 0.352
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "theScore Bet",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "bet365",
+       "line": -5.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.692,
+       "ev": 0.339
+      },
+      {
+       "book": "FanDuel",
+       "line": -5.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.692,
+       "ev": 0.333
+      },
+      {
+       "book": "BetMGM",
+       "line": -5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.692,
+       "ev": 0.322
+      },
+      {
+       "book": "Fanatics",
+       "line": -5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.692,
+       "ev": 0.322
+      },
+      {
+       "book": "BetRivers",
+       "line": -5.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.692,
+       "ev": 0.311
+      }
+     ]
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Jase Richardson Under 6.5 Puntos",
+     "player": "Jase Richardson",
+     "team": "ORL",
+     "line": 6.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.757,
+     "implied": 0.512,
+     "fair": -311,
+     "edge": 0.244,
+     "ev": 0.477,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Anthony Black Over 12.5 Puntos",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.716,
+     "implied": 0.512,
+     "fair": -253,
+     "edge": 0.204,
+     "ev": 0.399,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "TOR -5.5",
+     "player": null,
+     "team": "TOR",
+     "line": -5.5,
+     "odds": -108,
+     "dec": 1.929,
+     "odds_assumed": false,
+     "p": 0.692,
+     "implied": 0.519,
+     "fair": -225,
+     "edge": 0.174,
+     "ev": 0.335,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "DraftKings",
+      "line": -5.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.692,
+      "ev": 0.352
+     },
+     "books": [
+      {
+       "book": "DraftKings",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "theScore Bet",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -5.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.692,
+       "ev": 0.352
+      },
+      {
+       "book": "bet365",
+       "line": -5.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.692,
+       "ev": 0.339
+      },
+      {
+       "book": "FanDuel",
+       "line": -5.5,
+       "odds": -108,
+       "dec": 1.926,
+       "p": 0.692,
+       "ev": 0.333
+      },
+      {
+       "book": "BetMGM",
+       "line": -5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.692,
+       "ev": 0.322
+      },
+      {
+       "book": "Fanatics",
+       "line": -5.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.692,
+       "ev": 0.322
+      },
+      {
+       "book": "BetRivers",
+       "line": -5.5,
+       "odds": -112,
+       "dec": 1.893,
+       "p": 0.692,
+       "ev": 0.311
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Immanuel Quickley Under 16.5 Puntos",
+     "player": "Immanuel Quickley",
+     "team": "TOR",
+     "line": 16.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.667,
+     "implied": 0.524,
+     "fair": -201,
+     "edge": 0.143,
+     "ev": 0.274,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jamal Shead Over 8.5 Puntos",
+     "player": "Jamal Shead",
+     "team": "TOR",
+     "line": 8.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.638,
+     "implied": 0.512,
+     "fair": -176,
+     "edge": 0.126,
+     "ev": 0.245,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Allen Graves Over 5.5 Puntos",
+     "player": "Allen Graves",
+     "team": "TOR",
+     "line": 5.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.634,
+     "implied": 0.524,
+     "fair": -173,
+     "edge": 0.11,
+     "ev": 0.21,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "TOR gana",
+     "player": null,
+     "team": "TOR",
+     "line": null,
+     "odds": -206,
+     "dec": 1.486,
+     "odds_assumed": false,
+     "p": 0.814,
+     "implied": 0.673,
+     "fair": -437,
+     "edge": 0.14,
+     "ev": 0.209,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "theScore Bet",
+      "line": null,
+      "odds": -190,
+      "dec": 1.526,
+      "p": 0.814,
+      "ev": 0.242
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.814,
+       "ev": 0.242
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -192,
+       "dec": 1.521,
+       "p": 0.814,
+       "ev": 0.237
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -200,
+       "dec": 1.5,
+       "p": 0.814,
+       "ev": 0.22
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -210,
+       "dec": 1.476,
+       "p": 0.814,
+       "ev": 0.201
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -210,
+       "dec": 1.476,
+       "p": 0.814,
+       "ev": 0.201
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -215,
+       "dec": 1.465,
+       "p": 0.814,
+       "ev": 0.192
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -215,
+       "dec": 1.465,
+       "p": 0.814,
+       "ev": 0.192
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -220,
+       "dec": 1.455,
+       "p": 0.814,
+       "ev": 0.183
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Ja'Kobe Walter Over 10.5 Puntos",
+     "player": "Ja'Kobe Walter",
+     "team": "TOR",
+     "line": 10.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.638,
+     "implied": 0.528,
+     "fair": -176,
+     "edge": 0.11,
+     "ev": 0.208,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jamison Battle Over 4.5 Puntos",
+     "player": "Jamison Battle",
+     "team": "TOR",
+     "line": 4.5,
+     "odds": -140,
+     "dec": 1.714,
+     "odds_assumed": false,
+     "p": 0.697,
+     "implied": 0.583,
+     "fair": -230,
+     "edge": 0.114,
+     "ev": 0.196,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Under 23.5 Puntos",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 23.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.626,
+     "implied": 0.524,
+     "fair": -168,
+     "edge": 0.103,
+     "ev": 0.196,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jevon Carter Over 5.5 Puntos",
+     "player": "Jevon Carter",
+     "team": "ORL",
+     "line": 5.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.595,
+     "implied": 0.528,
+     "fair": -147,
+     "edge": 0.066,
+     "ev": 0.126,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "RJ Barrett Under 22.5 Puntos",
+     "player": "RJ Barrett",
+     "team": "TOR",
+     "line": 22.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.557,
+     "implied": 0.524,
+     "fair": -126,
+     "edge": 0.033,
+     "ev": 0.063,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "TOR gana",
+       "player": null,
+       "team": "TOR",
+       "line": null,
+       "stat": null,
+       "p": 0.814,
+       "dec": 1.486,
+       "ev": 0.209,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Jase Richardson Under 6.5 Puntos",
+       "player": "Jase Richardson",
+       "team": "ORL",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.757,
+       "dec": 1.952,
+       "ev": 0.477,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      }
+     ],
+     "n": 2,
+     "p": 0.629,
+     "p_indep": 0.616,
+     "corr": 1.02,
+     "dec": 2.9,
+     "fair": 1.59,
+     "ev": 0.825,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "TOR gana",
+       "player": null,
+       "team": "TOR",
+       "line": null,
+       "stat": null,
+       "p": 0.814,
+       "dec": 1.486,
+       "ev": 0.209,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Jase Richardson Under 6.5 Puntos",
+       "player": "Jase Richardson",
+       "team": "ORL",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.757,
+       "dec": 1.952,
+       "ev": 0.477,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Jamison Battle Over 4.5 Puntos",
+       "player": "Jamison Battle",
+       "team": "TOR",
+       "line": 4.5,
+       "stat": "pts",
+       "p": 0.697,
+       "dec": 1.714,
+       "ev": 0.196,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      }
+     ],
+     "n": 3,
+     "p": 0.451,
+     "p_indep": 0.429,
+     "corr": 1.05,
+     "dec": 4.97,
+     "fair": 2.22,
+     "ev": 1.243,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "ml",
+       "label": "TOR gana",
+       "player": null,
+       "team": "TOR",
+       "line": null,
+       "stat": null,
+       "p": 0.814,
+       "dec": 1.486,
+       "ev": 0.209,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Jase Richardson Under 6.5 Puntos",
+       "player": "Jase Richardson",
+       "team": "ORL",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.757,
+       "dec": 1.952,
+       "ev": 0.477,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Anthony Black Over 12.5 Puntos",
+       "player": "Anthony Black",
+       "team": "ORL",
+       "line": 12.5,
+       "stat": "pts",
+       "p": 0.716,
+       "dec": 1.952,
+       "ev": 0.399,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      },
+      {
+       "kind": "prop",
+       "label": "Jamison Battle Over 4.5 Puntos",
+       "player": "Jamison Battle",
+       "team": "TOR",
+       "line": 4.5,
+       "stat": "pts",
+       "p": 0.697,
+       "dec": 1.714,
+       "ev": 0.196,
+       "gid": "2026-10-30-ORL-at-TOR",
+       "game": "ORL @ TOR"
+      }
+     ],
+     "n": 4,
+     "p": 0.309,
+     "p_indep": 0.308,
+     "corr": 1.01,
+     "dec": 9.7,
+     "fair": 3.23,
+     "ev": 2.001,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-HOU-at-DAL",
+   "date": "2026-10-30",
+   "away": "HOU",
+   "home": "DAL",
+   "tip_et": "20:00",
+   "venue": "American Airlines Center, Dallas",
+   "competition": "cup",
+   "cup_round": "Grupo Oeste A",
+   "records": {
+    "HOU": null,
+    "DAL": null
+   },
+   "proj": {
+    "DAL": 110.8,
+    "HOU": 119.3
+   },
+   "win_prob": {
+    "DAL": 0.2686,
+    "HOU": 0.7314
+   },
+   "proj_total": 230.1,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Cooper Flagg Under 23.5 Puntos",
+     "player": "Cooper Flagg",
+     "team": "DAL",
+     "line": 23.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.766,
+     "implied": 0.528,
+     "fair": -326,
+     "edge": 0.237,
+     "ev": 0.449,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Max Christie Over 8.5 Puntos",
+     "player": "Max Christie",
+     "team": "DAL",
+     "line": 8.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.68,
+     "implied": 0.528,
+     "fair": -212,
+     "edge": 0.151,
+     "ev": 0.287,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Marcus Sasser Over 6.5 Puntos",
+     "player": "Marcus Sasser",
+     "team": "DAL",
+     "line": 6.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.62,
+     "implied": 0.5,
+     "fair": -163,
+     "edge": 0.12,
+     "ev": 0.24,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Cooper Flagg Under 23.5 Puntos",
+     "player": "Cooper Flagg",
+     "team": "DAL",
+     "line": 23.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.766,
+     "implied": 0.528,
+     "fair": -326,
+     "edge": 0.237,
+     "ev": 0.449,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Max Christie Over 8.5 Puntos",
+     "player": "Max Christie",
+     "team": "DAL",
+     "line": 8.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.68,
+     "implied": 0.528,
+     "fair": -212,
+     "edge": 0.151,
+     "ev": 0.287,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Marcus Sasser Over 6.5 Puntos",
+     "player": "Marcus Sasser",
+     "team": "DAL",
+     "line": 6.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.62,
+     "implied": 0.5,
+     "fair": -163,
+     "edge": 0.12,
+     "ev": 0.24,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Amen Thompson Under 18.5 Puntos",
+     "player": "Amen Thompson",
+     "team": "HOU",
+     "line": 18.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.588,
+     "implied": 0.528,
+     "fair": -142,
+     "edge": 0.059,
+     "ev": 0.112,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "HOU -5.5",
+     "player": null,
+     "team": "HOU",
+     "line": -5.5,
+     "odds": -114,
+     "dec": 1.879,
+     "odds_assumed": false,
+     "p": 0.589,
+     "implied": 0.532,
+     "fair": -143,
+     "edge": 0.056,
+     "ev": 0.106,
+     "value": true,
+     "n_books": 5,
+     "best": {
+      "book": "BetRivers",
+      "line": -5.5,
+      "odds": -109,
+      "dec": 1.917,
+      "p": 0.589,
+      "ev": 0.129
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -5.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.589,
+       "ev": 0.129
+      },
+      {
+       "book": "DraftKings",
+       "line": -5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.589,
+       "ev": 0.1
+      },
+      {
+       "book": "Fanatics",
+       "line": -5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.589,
+       "ev": 0.1
+      },
+      {
+       "book": "theScore Bet",
+       "line": -5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.589,
+       "ev": 0.1
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -5.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.589,
+       "ev": 0.1
+      },
+      {
+       "book": "BetMGM",
+       "line": -6.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.559,
+       "ev": 0.091
+      },
+      {
+       "book": "FanDuel",
+       "line": -6.5,
+       "odds": -106,
+       "dec": 1.943,
+       "p": 0.559,
+       "ev": 0.086
+      }
+     ]
+    },
+    {
+     "kind": "ml",
+     "label": "HOU gana",
+     "player": null,
+     "team": "HOU",
+     "line": null,
+     "odds": -204,
+     "dec": 1.49,
+     "odds_assumed": false,
+     "p": 0.731,
+     "implied": 0.671,
+     "fair": -272,
+     "edge": 0.06,
+     "ev": 0.09,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": -190,
+      "dec": 1.526,
+      "p": 0.731,
+      "ev": 0.116
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -190,
+       "dec": 1.526,
+       "p": 0.731,
+       "ev": 0.116
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -200,
+       "dec": 1.5,
+       "p": 0.731,
+       "ev": 0.097
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -200,
+       "dec": 1.5,
+       "p": 0.731,
+       "ev": 0.097
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -205,
+       "dec": 1.488,
+       "p": 0.731,
+       "ev": 0.088
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -205,
+       "dec": 1.488,
+       "p": 0.731,
+       "ev": 0.088
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -210,
+       "dec": 1.476,
+       "p": 0.731,
+       "ev": 0.08
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -210,
+       "dec": 1.476,
+       "p": 0.731,
+       "ev": 0.08
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -215,
+       "dec": 1.465,
+       "p": 0.731,
+       "ev": 0.072
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Naji Marshall Under 11.5 Puntos",
+     "player": "Naji Marshall",
+     "team": "DAL",
+     "line": 11.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.578,
+     "implied": 0.535,
+     "fair": -137,
+     "edge": 0.043,
+     "ev": 0.081,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "total",
+     "label": "Over 227.5",
+     "player": null,
+     "team": null,
+     "line": 227.5,
+     "odds": -110,
+     "dec": 1.91,
+     "odds_assumed": false,
+     "p": 0.548,
+     "implied": 0.524,
+     "fair": -121,
+     "edge": 0.025,
+     "ev": 0.047,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": 227.5,
+      "odds": -109,
+      "dec": 1.917,
+      "p": 0.548,
+      "ev": 0.051
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": 227.5,
+       "odds": -109,
+       "dec": 1.917,
+       "p": 0.548,
+       "ev": 0.051
+      },
+      {
+       "book": "BetMGM",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "bet365",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "DraftKings",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "FanDuel",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "Fanatics",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "theScore Bet",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 227.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.548,
+       "ev": 0.047
+      }
+     ]
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Cooper Flagg Under 23.5 Puntos",
+       "player": "Cooper Flagg",
+       "team": "DAL",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.766,
+       "dec": 1.893,
+       "ev": 0.449,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "ml",
+       "label": "HOU gana",
+       "player": null,
+       "team": "HOU",
+       "line": null,
+       "stat": null,
+       "p": 0.731,
+       "dec": 1.49,
+       "ev": 0.09,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      }
+     ],
+     "n": 2,
+     "p": 0.582,
+     "p_indep": 0.56,
+     "corr": 1.04,
+     "dec": 2.82,
+     "fair": 1.72,
+     "ev": 0.643,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Cooper Flagg Under 23.5 Puntos",
+       "player": "Cooper Flagg",
+       "team": "DAL",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.766,
+       "dec": 1.893,
+       "ev": 0.449,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "ml",
+       "label": "HOU gana",
+       "player": null,
+       "team": "HOU",
+       "line": null,
+       "stat": null,
+       "p": 0.731,
+       "dec": 1.49,
+       "ev": 0.09,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Max Christie Over 8.5 Puntos",
+       "player": "Max Christie",
+       "team": "DAL",
+       "line": 8.5,
+       "stat": "pts",
+       "p": 0.68,
+       "dec": 1.893,
+       "ev": 0.287,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      }
+     ],
+     "n": 3,
+     "p": 0.374,
+     "p_indep": 0.381,
+     "corr": 0.98,
+     "dec": 5.34,
+     "fair": 2.67,
+     "ev": 0.998,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Cooper Flagg Under 23.5 Puntos",
+       "player": "Cooper Flagg",
+       "team": "DAL",
+       "line": 23.5,
+       "stat": "pts",
+       "p": 0.766,
+       "dec": 1.893,
+       "ev": 0.449,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "ml",
+       "label": "HOU gana",
+       "player": null,
+       "team": "HOU",
+       "line": null,
+       "stat": null,
+       "p": 0.731,
+       "dec": 1.49,
+       "ev": 0.09,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Max Christie Over 8.5 Puntos",
+       "player": "Max Christie",
+       "team": "DAL",
+       "line": 8.5,
+       "stat": "pts",
+       "p": 0.68,
+       "dec": 1.893,
+       "ev": 0.287,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      },
+      {
+       "kind": "prop",
+       "label": "Marcus Sasser Over 6.5 Puntos",
+       "player": "Marcus Sasser",
+       "team": "DAL",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.62,
+       "dec": 2.0,
+       "ev": 0.24,
+       "gid": "2026-10-30-HOU-at-DAL",
+       "game": "HOU @ DAL"
+      }
+     ],
+     "n": 4,
+     "p": 0.231,
+     "p_indep": 0.236,
+     "corr": 0.98,
+     "dec": 10.68,
+     "fair": 4.34,
+     "ev": 1.463,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-IND-at-MIA",
+   "date": "2026-10-30",
+   "away": "IND",
+   "home": "MIA",
+   "tip_et": "20:00",
+   "venue": "Kaseya Center, Miami",
+   "competition": "cup",
+   "cup_round": "Grupo Este B",
+   "records": {
+    "IND": null,
+    "MIA": null
+   },
+   "proj": {
+    "MIA": 122.9,
+    "IND": 113.0
+   },
+   "win_prob": {
+    "MIA": 0.764175,
+    "IND": 0.235825
+   },
+   "proj_total": 235.9,
+   "used_db": true,
+   "n_value": 9,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Davion Mitchell Under 11.5 Puntos",
+     "player": "Davion Mitchell",
+     "team": "MIA",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.776,
+     "implied": 0.524,
+     "fair": -346,
+     "edge": 0.252,
+     "ev": 0.481,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Bam Adebayo Under 18.5 Puntos",
+     "player": "Bam Adebayo",
+     "team": "MIA",
+     "line": 18.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.686,
+     "implied": 0.535,
+     "fair": -219,
+     "edge": 0.151,
+     "ev": 0.283,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Pascal Siakam Under 24.5 Puntos",
+     "player": "Pascal Siakam",
+     "team": "IND",
+     "line": 24.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.605,
+     "implied": 0.512,
+     "fair": -153,
+     "edge": 0.093,
+     "ev": 0.181,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Davion Mitchell Under 11.5 Puntos",
+     "player": "Davion Mitchell",
+     "team": "MIA",
+     "line": 11.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.776,
+     "implied": 0.524,
+     "fair": -346,
+     "edge": 0.252,
+     "ev": 0.481,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Bam Adebayo Under 18.5 Puntos",
+     "player": "Bam Adebayo",
+     "team": "MIA",
+     "line": 18.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.686,
+     "implied": 0.535,
+     "fair": -219,
+     "edge": 0.151,
+     "ev": 0.283,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Pascal Siakam Under 24.5 Puntos",
+     "player": "Pascal Siakam",
+     "team": "IND",
+     "line": 24.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.605,
+     "implied": 0.512,
+     "fair": -153,
+     "edge": 0.093,
+     "ev": 0.181,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Giannis Antetokounmpo Under 30.5 Puntos",
+     "player": "Giannis Antetokounmpo",
+     "team": "MIA",
+     "line": 30.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.628,
+     "implied": 0.535,
+     "fair": -169,
+     "edge": 0.093,
+     "ev": 0.174,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "MIA -7.5",
+     "player": null,
+     "team": "MIA",
+     "line": -7.5,
+     "odds": -107,
+     "dec": 1.937,
+     "odds_assumed": false,
+     "p": 0.568,
+     "implied": 0.516,
+     "fair": -131,
+     "edge": 0.051,
+     "ev": 0.1,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "BetRivers",
+      "line": -3.5,
+      "odds": -157,
+      "dec": 1.637,
+      "p": 0.685,
+      "ev": 0.121
+     },
+     "books": [
+      {
+       "book": "BetRivers",
+       "line": -3.5,
+       "odds": -157,
+       "dec": 1.637,
+       "p": 0.685,
+       "ev": 0.121
+      },
+      {
+       "book": "DraftKings",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.568,
+       "ev": 0.108
+      },
+      {
+       "book": "Fanatics",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.568,
+       "ev": 0.108
+      },
+      {
+       "book": "theScore Bet",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.568,
+       "ev": 0.108
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": -7.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.568,
+       "ev": 0.108
+      },
+      {
+       "book": "bet365",
+       "line": -7.5,
+       "odds": -107,
+       "dec": 1.935,
+       "p": 0.568,
+       "ev": 0.098
+      },
+      {
+       "book": "BetMGM",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.568,
+       "ev": 0.084
+      },
+      {
+       "book": "FanDuel",
+       "line": -7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.568,
+       "ev": 0.084
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Andrew Nembhard Over 16.5 Puntos",
+     "player": "Andrew Nembhard",
+     "team": "IND",
+     "line": 16.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.578,
+     "implied": 0.535,
+     "fair": -137,
+     "edge": 0.043,
+     "ev": 0.081,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "MIA gana",
+     "player": null,
+     "team": "MIA",
+     "line": null,
+     "odds": -260,
+     "dec": 1.385,
+     "odds_assumed": false,
+     "p": 0.764,
+     "implied": 0.722,
+     "fair": -324,
+     "edge": 0.042,
+     "ev": 0.058,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "theScore Bet",
+      "line": null,
+      "odds": -240,
+      "dec": 1.417,
+      "p": 0.764,
+      "ev": 0.083
+     },
+     "books": [
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": -240,
+       "dec": 1.417,
+       "p": 0.764,
+       "ev": 0.083
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": -245,
+       "dec": 1.408,
+       "p": 0.764,
+       "ev": 0.076
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": -250,
+       "dec": 1.4,
+       "p": 0.764,
+       "ev": 0.07
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": -260,
+       "dec": 1.385,
+       "p": 0.764,
+       "ev": 0.058
+      },
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": -265,
+       "dec": 1.377,
+       "p": 0.764,
+       "ev": 0.053
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.764,
+       "ev": 0.042
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.764,
+       "ev": 0.042
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": -275,
+       "dec": 1.364,
+       "p": 0.764,
+       "ev": 0.042
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "label": "Under 238.5",
+     "player": null,
+     "team": null,
+     "line": 238.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.553,
+     "implied": 0.524,
+     "fair": -124,
+     "edge": 0.029,
+     "ev": 0.055,
+     "value": true,
+     "n_books": 4,
+     "best": {
+      "book": "bet365",
+      "line": 238.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.553,
+      "ev": 0.055
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.553,
+       "ev": 0.055
+      },
+      {
+       "book": "DraftKings",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.553,
+       "ev": 0.055
+      },
+      {
+       "book": "theScore Bet",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.553,
+       "ev": 0.055
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 238.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.553,
+       "ev": 0.055
+      },
+      {
+       "book": "BetMGM",
+       "line": 237.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.534,
+       "ev": 0.042
+      },
+      {
+       "book": "FanDuel",
+       "line": 237.5,
+       "odds": -105,
+       "dec": 1.952,
+       "p": 0.534,
+       "ev": 0.042
+      },
+      {
+       "book": "Fanatics",
+       "line": 238.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.544,
+       "ev": 0.039
+      },
+      {
+       "book": "BetRivers",
+       "line": 239.5,
+       "odds": -130,
+       "dec": 1.769,
+       "p": 0.572,
+       "ev": 0.012
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Klay Thompson Under 8.5 Puntos",
+     "player": "Klay Thompson",
+     "team": "MIA",
+     "line": 8.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.54,
+     "implied": 0.524,
+     "fair": -117,
+     "edge": 0.016,
+     "ev": 0.03,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Davion Mitchell Under 11.5 Puntos",
+       "player": "Davion Mitchell",
+       "team": "MIA",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.776,
+       "dec": 1.909,
+       "ev": 0.481,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "ml",
+       "label": "MIA gana",
+       "player": null,
+       "team": "MIA",
+       "line": null,
+       "stat": null,
+       "p": 0.764,
+       "dec": 1.385,
+       "ev": 0.058,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      }
+     ],
+     "n": 2,
+     "p": 0.586,
+     "p_indep": 0.593,
+     "corr": 0.99,
+     "dec": 2.64,
+     "fair": 1.71,
+     "ev": 0.549,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Davion Mitchell Under 11.5 Puntos",
+       "player": "Davion Mitchell",
+       "team": "MIA",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.776,
+       "dec": 1.909,
+       "ev": 0.481,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "ml",
+       "label": "MIA gana",
+       "player": null,
+       "team": "MIA",
+       "line": null,
+       "stat": null,
+       "p": 0.764,
+       "dec": 1.385,
+       "ev": 0.058,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "prop",
+       "label": "Bam Adebayo Under 18.5 Puntos",
+       "player": "Bam Adebayo",
+       "team": "MIA",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.686,
+       "dec": 1.87,
+       "ev": 0.283,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      }
+     ],
+     "n": 3,
+     "p": 0.398,
+     "p_indep": 0.407,
+     "corr": 0.98,
+     "dec": 4.94,
+     "fair": 2.51,
+     "ev": 0.967,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Davion Mitchell Under 11.5 Puntos",
+       "player": "Davion Mitchell",
+       "team": "MIA",
+       "line": 11.5,
+       "stat": "pts",
+       "p": 0.776,
+       "dec": 1.909,
+       "ev": 0.481,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "ml",
+       "label": "MIA gana",
+       "player": null,
+       "team": "MIA",
+       "line": null,
+       "stat": null,
+       "p": 0.764,
+       "dec": 1.385,
+       "ev": 0.058,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "prop",
+       "label": "Bam Adebayo Under 18.5 Puntos",
+       "player": "Bam Adebayo",
+       "team": "MIA",
+       "line": 18.5,
+       "stat": "pts",
+       "p": 0.686,
+       "dec": 1.87,
+       "ev": 0.283,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      },
+      {
+       "kind": "prop",
+       "label": "Pascal Siakam Under 24.5 Puntos",
+       "player": "Pascal Siakam",
+       "team": "IND",
+       "line": 24.5,
+       "stat": "pts",
+       "p": 0.605,
+       "dec": 1.952,
+       "ev": 0.181,
+       "gid": "2026-10-30-IND-at-MIA",
+       "game": "IND @ MIA"
+      }
+     ],
+     "n": 4,
+     "p": 0.264,
+     "p_indep": 0.246,
+     "corr": 1.07,
+     "dec": 9.65,
+     "fair": 3.78,
+     "ev": 1.552,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-LAC-at-MIN",
+   "date": "2026-10-30",
+   "away": "LAC",
+   "home": "MIN",
+   "tip_et": "20:00",
+   "venue": "Target Center, Minneapolis",
+   "competition": "cup",
+   "cup_round": "Grupo Oeste B",
+   "records": {
+    "LAC": null,
+    "MIN": null
+   },
+   "proj": {
+    "MIN": 114.1,
+    "LAC": 109.7
+   },
+   "win_prob": {
+    "MIN": 0.624575,
+    "LAC": 0.375425
+   },
+   "proj_total": 223.7,
+   "used_db": true,
+   "n_value": 8,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "LaMelo Ball Under 20.5 Puntos",
+     "player": "LaMelo Ball",
+     "team": "MIN",
+     "line": 20.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.675,
+     "implied": 0.524,
+     "fair": -208,
+     "edge": 0.152,
+     "ev": 0.29,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "LAC gana",
+     "player": null,
+     "team": "LAC",
+     "line": null,
+     "odds": 216,
+     "dec": 3.156,
+     "odds_assumed": false,
+     "p": 0.375,
+     "implied": 0.317,
+     "fair": 166,
+     "edge": 0.059,
+     "ev": 0.185,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "bet365",
+      "line": null,
+      "odds": 225,
+      "dec": 3.25,
+      "p": 0.375,
+      "ev": 0.22
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 225,
+       "dec": 3.25,
+       "p": 0.375,
+       "ev": 0.22
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 215,
+       "dec": 3.15,
+       "p": 0.375,
+       "ev": 0.183
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 215,
+       "dec": 3.15,
+       "p": 0.375,
+       "ev": 0.183
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 190,
+       "dec": 2.9,
+       "p": 0.375,
+       "ev": 0.089
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Kris Dunn Over 7.5 Puntos",
+     "player": "Kris Dunn",
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.623,
+     "implied": 0.535,
+     "fair": -165,
+     "edge": 0.088,
+     "ev": 0.164,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "LaMelo Ball Under 20.5 Puntos",
+     "player": "LaMelo Ball",
+     "team": "MIN",
+     "line": 20.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.675,
+     "implied": 0.524,
+     "fair": -208,
+     "edge": 0.152,
+     "ev": 0.29,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "ml",
+     "label": "LAC gana",
+     "player": null,
+     "team": "LAC",
+     "line": null,
+     "odds": 216,
+     "dec": 3.156,
+     "odds_assumed": false,
+     "p": 0.375,
+     "implied": 0.317,
+     "fair": 166,
+     "edge": 0.059,
+     "ev": 0.185,
+     "value": true,
+     "n_books": 8,
+     "best": {
+      "book": "bet365",
+      "line": null,
+      "odds": 225,
+      "dec": 3.25,
+      "p": 0.375,
+      "ev": 0.22
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": null,
+       "odds": 225,
+       "dec": 3.25,
+       "p": 0.375,
+       "ev": 0.22
+      },
+      {
+       "book": "BetMGM",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "FanDuel",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "Fanatics",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": null,
+       "odds": 220,
+       "dec": 3.2,
+       "p": 0.375,
+       "ev": 0.201
+      },
+      {
+       "book": "DraftKings",
+       "line": null,
+       "odds": 215,
+       "dec": 3.15,
+       "p": 0.375,
+       "ev": 0.183
+      },
+      {
+       "book": "theScore Bet",
+       "line": null,
+       "odds": 215,
+       "dec": 3.15,
+       "p": 0.375,
+       "ev": 0.183
+      },
+      {
+       "book": "BetRivers",
+       "line": null,
+       "odds": 190,
+       "dec": 2.9,
+       "p": 0.375,
+       "ev": 0.089
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Kris Dunn Over 7.5 Puntos",
+     "player": "Kris Dunn",
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.623,
+     "implied": 0.535,
+     "fair": -165,
+     "edge": 0.088,
+     "ev": 0.164,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "spread",
+     "label": "LAC +7.5",
+     "player": null,
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -111,
+     "dec": 1.9,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.526,
+     "fair": -142,
+     "edge": 0.06,
+     "ev": 0.114,
+     "value": true,
+     "n_books": 7,
+     "best": {
+      "book": "bet365",
+      "line": 7.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.587,
+      "ev": 0.12
+     },
+     "books": [
+      {
+       "book": "bet365",
+       "line": 7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "DraftKings",
+       "line": 7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "FanDuel",
+       "line": 7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "theScore Bet",
+       "line": 7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Hard Rock Bet",
+       "line": 7.5,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.587,
+       "ev": 0.12
+      },
+      {
+       "book": "Fanatics",
+       "line": 6.5,
+       "odds": 100,
+       "dec": 2.0,
+       "p": 0.558,
+       "ev": 0.115
+      },
+      {
+       "book": "BetRivers",
+       "line": 7.5,
+       "odds": -113,
+       "dec": 1.885,
+       "p": 0.587,
+       "ev": 0.106
+      },
+      {
+       "book": "BetMGM",
+       "line": 7.5,
+       "odds": -115,
+       "dec": 1.87,
+       "p": 0.587,
+       "ev": 0.097
+      },
+      {
+       "book": "Caesars",
+       "line": 7.0,
+       "odds": -110,
+       "dec": 1.909,
+       "p": 0.574,
+       "ev": 0.096
+      }
+     ]
+    },
+    {
+     "kind": "prop",
+     "label": "Derrick Jones Jr. Over 10.5 Puntos",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 10.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.616,
+     "implied": 0.556,
+     "fair": -160,
+     "edge": 0.06,
+     "ev": 0.108,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jaden McDaniels Under 15.5 Puntos",
+     "player": "Jaden McDaniels",
+     "team": "MIN",
+     "line": 15.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.553,
+     "implied": 0.512,
+     "fair": -124,
+     "edge": 0.04,
+     "ev": 0.079,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Jonathan Kuminga Over 15.5 Puntos",
+     "player": "Jonathan Kuminga",
+     "team": "MIN",
+     "line": 15.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.545,
+     "implied": 0.524,
+     "fair": -120,
+     "edge": 0.021,
+     "ev": 0.04,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Isaiah Jackson Under 9.5 Puntos",
+     "player": "Isaiah Jackson",
+     "team": "LAC",
+     "line": 9.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.563,
+     "implied": 0.545,
+     "fair": -129,
+     "edge": 0.017,
+     "ev": 0.032,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LaMelo Ball Under 20.5 Puntos",
+       "player": "LaMelo Ball",
+       "team": "MIN",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.675,
+       "dec": 1.909,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Kris Dunn Over 7.5 Puntos",
+       "player": "Kris Dunn",
+       "team": "LAC",
+       "line": 7.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.87,
+       "ev": 0.164,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      }
+     ],
+     "n": 2,
+     "p": 0.418,
+     "p_indep": 0.421,
+     "corr": 0.99,
+     "dec": 3.57,
+     "fair": 2.39,
+     "ev": 0.492,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LaMelo Ball Under 20.5 Puntos",
+       "player": "LaMelo Ball",
+       "team": "MIN",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.675,
+       "dec": 1.909,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Kris Dunn Over 7.5 Puntos",
+       "player": "Kris Dunn",
+       "team": "LAC",
+       "line": 7.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.87,
+       "ev": 0.164,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "spread",
+       "label": "LAC +7.5",
+       "player": null,
+       "team": "LAC",
+       "line": 7.5,
+       "stat": null,
+       "p": 0.587,
+       "dec": 1.9,
+       "ev": 0.114,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      }
+     ],
+     "n": 3,
+     "p": 0.269,
+     "p_indep": 0.247,
+     "corr": 1.09,
+     "dec": 6.78,
+     "fair": 3.71,
+     "ev": 0.827,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "LaMelo Ball Under 20.5 Puntos",
+       "player": "LaMelo Ball",
+       "team": "MIN",
+       "line": 20.5,
+       "stat": "pts",
+       "p": 0.675,
+       "dec": 1.909,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Kris Dunn Over 7.5 Puntos",
+       "player": "Kris Dunn",
+       "team": "LAC",
+       "line": 7.5,
+       "stat": "pts",
+       "p": 0.623,
+       "dec": 1.87,
+       "ev": 0.164,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "prop",
+       "label": "Derrick Jones Jr. Over 10.5 Puntos",
+       "player": "Derrick Jones Jr.",
+       "team": "LAC",
+       "line": 10.5,
+       "stat": "pts",
+       "p": 0.616,
+       "dec": 1.8,
+       "ev": 0.108,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      },
+      {
+       "kind": "spread",
+       "label": "LAC +7.5",
+       "player": null,
+       "team": "LAC",
+       "line": 7.5,
+       "stat": null,
+       "p": 0.587,
+       "dec": 1.9,
+       "ev": 0.114,
+       "gid": "2026-10-30-LAC-at-MIN",
+       "game": "LAC @ MIN"
+      }
+     ],
+     "n": 4,
+     "p": 0.18,
+     "p_indep": 0.152,
+     "corr": 1.18,
+     "dec": 12.21,
+     "fair": 5.56,
+     "ev": 1.196,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-DEN-at-PHX",
+   "date": "2026-10-30",
+   "away": "DEN",
+   "home": "PHX",
+   "tip_et": "22:00",
+   "venue": "Mortgage Matchup Center, Phoenix",
+   "competition": "cup",
+   "cup_round": "Grupo Oeste A",
+   "records": {
+    "DEN": null,
+    "PHX": null
+   },
+   "proj": {
+    "PHX": 114.3,
+    "DEN": 117.8
+   },
+   "win_prob": {
+    "PHX": 0.40165,
+    "DEN": 0.59835
+   },
+   "proj_total": 232.1,
+   "used_db": true,
+   "n_value": 2,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "Jamal Murray Under 22.5 Puntos",
+     "player": "Jamal Murray",
+     "team": "DEN",
+     "line": 22.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.558,
+     "implied": 0.512,
+     "fair": -126,
+     "edge": 0.046,
+     "ev": 0.09,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Dillon Brooks Over 16.5 Puntos",
+     "player": "Dillon Brooks",
+     "team": "PHX",
+     "line": 16.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.524,
+     "fair": -128,
+     "edge": 0.037,
+     "ev": 0.07,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Collin Gillespie Under 9.5 Puntos",
+     "player": "Collin Gillespie",
+     "team": "PHX",
+     "line": 9.5,
+     "odds": -114,
+     "dec": 1.877,
+     "odds_assumed": false,
+     "p": 0.545,
+     "implied": 0.533,
+     "fair": -120,
+     "edge": 0.012,
+     "ev": 0.023,
+     "value": false,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "Jamal Murray Under 22.5 Puntos",
+     "player": "Jamal Murray",
+     "team": "DEN",
+     "line": 22.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.558,
+     "implied": 0.512,
+     "fair": -126,
+     "edge": 0.046,
+     "ev": 0.09,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Dillon Brooks Over 16.5 Puntos",
+     "player": "Dillon Brooks",
+     "team": "PHX",
+     "line": 16.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.524,
+     "fair": -128,
+     "edge": 0.037,
+     "ev": 0.07,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Dillon Brooks Over 16.5 Puntos",
+       "player": "Dillon Brooks",
+       "team": "PHX",
+       "line": 16.5,
+       "stat": "pts",
+       "p": 0.561,
+       "dec": 1.909,
+       "ev": 0.07,
+       "gid": "2026-10-30-DEN-at-PHX",
+       "game": "DEN @ PHX"
+      },
+      {
+       "kind": "prop",
+       "label": "Jamal Murray Under 22.5 Puntos",
+       "player": "Jamal Murray",
+       "team": "DEN",
+       "line": 22.5,
+       "stat": "pts",
+       "p": 0.558,
+       "dec": 1.952,
+       "ev": 0.09,
+       "gid": "2026-10-30-DEN-at-PHX",
+       "game": "DEN @ PHX"
+      }
+     ],
+     "n": 2,
+     "p": 0.305,
+     "p_indep": 0.313,
+     "corr": 0.98,
+     "dec": 3.73,
+     "fair": 3.27,
+     "ev": 0.138,
+     "type": "sgp"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-LAL-at-GSW",
+   "date": "2026-10-30",
+   "away": "LAL",
+   "home": "GSW",
+   "tip_et": "22:00",
+   "venue": "Chase Center, San Francisco",
+   "competition": "cup",
+   "cup_round": "Grupo Oeste C",
+   "records": {
+    "LAL": null,
+    "GSW": null
+   },
+   "proj": {
+    "GSW": 117.4,
+    "LAL": 119.7
+   },
+   "win_prob": {
+    "GSW": 0.434525,
+    "LAL": 0.565475
+   },
+   "proj_total": 237.1,
+   "used_db": true,
+   "n_value": 7,
+   "top_bets": [
+    {
+     "kind": "prop",
+     "label": "De'Anthony Melton Under 9.5 Puntos",
+     "player": "De'Anthony Melton",
+     "team": "GSW",
+     "line": 9.5,
+     "odds": -114,
+     "dec": 1.877,
+     "odds_assumed": false,
+     "p": 0.687,
+     "implied": 0.533,
+     "fair": -220,
+     "edge": 0.154,
+     "ev": 0.29,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Luka Dončić Under 32.5 Puntos",
+     "player": "Luka Dončić",
+     "team": "LAL",
+     "line": 32.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.648,
+     "implied": 0.512,
+     "fair": -184,
+     "edge": 0.136,
+     "ev": 0.266,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Walker Kessler Under 13.5 Puntos",
+     "player": "Walker Kessler",
+     "team": "LAL",
+     "line": 13.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.636,
+     "implied": 0.512,
+     "fair": -175,
+     "edge": 0.124,
+     "ev": 0.241,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "value_bets": [
+    {
+     "kind": "prop",
+     "label": "De'Anthony Melton Under 9.5 Puntos",
+     "player": "De'Anthony Melton",
+     "team": "GSW",
+     "line": 9.5,
+     "odds": -114,
+     "dec": 1.877,
+     "odds_assumed": false,
+     "p": 0.687,
+     "implied": 0.533,
+     "fair": -220,
+     "edge": 0.154,
+     "ev": 0.29,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Luka Dončić Under 32.5 Puntos",
+     "player": "Luka Dončić",
+     "team": "LAL",
+     "line": 32.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.648,
+     "implied": 0.512,
+     "fair": -184,
+     "edge": 0.136,
+     "ev": 0.266,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Walker Kessler Under 13.5 Puntos",
+     "player": "Walker Kessler",
+     "team": "LAL",
+     "line": 13.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.636,
+     "implied": 0.512,
+     "fair": -175,
+     "edge": 0.124,
+     "ev": 0.241,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Matisse Thybulle Over 6.5 Puntos",
+     "player": "Matisse Thybulle",
+     "team": "LAL",
+     "line": 6.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.608,
+     "implied": 0.528,
+     "fair": -155,
+     "edge": 0.08,
+     "ev": 0.151,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Collin Sexton Under 12.5 Puntos",
+     "player": "Collin Sexton",
+     "team": "LAL",
+     "line": 12.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.612,
+     "implied": 0.545,
+     "fair": -158,
+     "edge": 0.067,
+     "ev": 0.122,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Sandro Mamukelashvili Over 9.5 Puntos",
+     "player": "Sandro Mamukelashvili",
+     "team": "LAL",
+     "line": 9.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.522,
+     "implied": 0.5,
+     "fair": -109,
+     "edge": 0.022,
+     "ev": 0.044,
+     "value": true,
+     "stat": "pts"
+    },
+    {
+     "kind": "prop",
+     "label": "Ziaire Williams Over 9.5 Puntos",
+     "player": "Ziaire Williams",
+     "team": "LAL",
+     "line": 9.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.542,
+     "implied": 0.524,
+     "fair": -118,
+     "edge": 0.018,
+     "ev": 0.034,
+     "value": true,
+     "stat": "pts"
+    }
+   ],
+   "parlays": [
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Anthony Melton Under 9.5 Puntos",
+       "player": "De'Anthony Melton",
+       "team": "GSW",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.877,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Walker Kessler Under 13.5 Puntos",
+       "player": "Walker Kessler",
+       "team": "LAL",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.636,
+       "dec": 1.952,
+       "ev": 0.241,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      }
+     ],
+     "n": 2,
+     "p": 0.437,
+     "p_indep": 0.437,
+     "corr": 1.0,
+     "dec": 3.66,
+     "fair": 2.29,
+     "ev": 0.603,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Anthony Melton Under 9.5 Puntos",
+       "player": "De'Anthony Melton",
+       "team": "GSW",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.877,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Walker Kessler Under 13.5 Puntos",
+       "player": "Walker Kessler",
+       "team": "LAL",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.636,
+       "dec": 1.952,
+       "ev": 0.241,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Collin Sexton Under 12.5 Puntos",
+       "player": "Collin Sexton",
+       "team": "LAL",
+       "line": 12.5,
+       "stat": "pts",
+       "p": 0.612,
+       "dec": 1.833,
+       "ev": 0.122,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      }
+     ],
+     "n": 3,
+     "p": 0.275,
+     "p_indep": 0.267,
+     "corr": 1.03,
+     "dec": 6.72,
+     "fair": 3.63,
+     "ev": 0.848,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "De'Anthony Melton Under 9.5 Puntos",
+       "player": "De'Anthony Melton",
+       "team": "GSW",
+       "line": 9.5,
+       "stat": "pts",
+       "p": 0.687,
+       "dec": 1.877,
+       "ev": 0.29,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Walker Kessler Under 13.5 Puntos",
+       "player": "Walker Kessler",
+       "team": "LAL",
+       "line": 13.5,
+       "stat": "pts",
+       "p": 0.636,
+       "dec": 1.952,
+       "ev": 0.241,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Collin Sexton Under 12.5 Puntos",
+       "player": "Collin Sexton",
+       "team": "LAL",
+       "line": 12.5,
+       "stat": "pts",
+       "p": 0.612,
+       "dec": 1.833,
+       "ev": 0.122,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 6.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 6.5,
+       "stat": "pts",
+       "p": 0.608,
+       "dec": 1.893,
+       "ev": 0.151,
+       "gid": "2026-10-30-LAL-at-GSW",
+       "game": "LAL @ GSW"
+      }
+     ],
+     "n": 4,
+     "p": 0.161,
+     "p_indep": 0.163,
+     "corr": 0.99,
+     "dec": 12.71,
+     "fair": 6.23,
+     "ev": 1.042,
      "type": "sgp"
     }
    ]

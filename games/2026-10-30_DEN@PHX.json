@@ -1,0 +1,599 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "DEN",
+  "home": "PHX",
+  "venue": "Mortgage Matchup Center, Phoenix",
+  "tip_et": "22:00",
+  "notes": [
+   "NBA Cup, Grupo Oeste A",
+   "DEN: Cameron Johnson (tobillo) y Diallo dudosos; Strawther OUT",
+   "PHX: Mark Williams OUT; Ighodaro duda; PHX no juega desde el 26-oct (3 días de descanso)",
+   "H2H 2025-26: DEN 3-0",
+   "Récord: DEN 2-2, PHX 1-2",
+   "Prop de Cameron Johnson (11.5) no incluida: solo tiene 1 partido de 11 min en 2026-27 y el modelo le proyecta ~20 min, cuando es titular"
+  ],
+  "out": [],
+  "gtd": {
+   "Cameron Johnson": 0.6,
+   "Alpha Diallo": 0.5,
+   "Oso Ighodaro": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "PHX": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 114.41,
+    "drtg": 113.17,
+    "pace": 98.42
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "DEN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 121.41,
+    "drtg": 116.27,
+    "pace": 99.77
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Cam Johnson y Alpha Diallo dudosos; Strawther y Spencer Jones OUT"
+   }
+  }
+ },
+ "matchup": {
+  "PHX": {},
+  "DEN": {}
+ },
+ "players": [
+  {
+   "team": "PHX",
+   "name": "Devin Booker",
+   "pos": "SG",
+   "starter": true,
+   "min": 33.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.3,
+    "pts": 23.0,
+    "reb": 4.3,
+    "ast": 5.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 26.1,
+    "reb": 3.9,
+    "ast": 6.0,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Miles Bridges",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.3,
+    "pts": 13.7,
+    "reb": 6.3,
+    "ast": 2.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 17.1,
+    "reb": 5.8,
+    "ast": 3.2,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Dillon Brooks",
+   "pos": "SF",
+   "starter": true,
+   "min": 31.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.0,
+    "pts": 14.7,
+    "reb": 3.7,
+    "ast": 3.3,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 30.4,
+    "pts": 20.2,
+    "reb": 3.6,
+    "ast": 1.8,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Jalen Green",
+   "pos": "SG",
+   "starter": true,
+   "min": 27.8,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.3,
+    "pts": 14.0,
+    "reb": 2.7,
+    "ast": 2.7,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 25.9,
+    "pts": 17.8,
+    "reb": 3.6,
+    "ast": 2.8,
+    "fg3m": 2.2
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Collin Gillespie",
+   "pos": "PG",
+   "starter": false,
+   "min": 24.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.3,
+    "pts": 6.7,
+    "reb": 2.0,
+    "ast": 4.3,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 12.7,
+    "reb": 4.1,
+    "ast": 4.6,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Khaman Maluach",
+   "pos": "C",
+   "starter": true,
+   "min": 23.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.3,
+    "pts": 7.7,
+    "reb": 7.3,
+    "ast": 1.7,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 8.9,
+    "pts": 3.0,
+    "reb": 2.9,
+    "ast": 0.1,
+    "fg3m": 0.1
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Jordan Goodwin",
+   "pos": "PG",
+   "starter": false,
+   "min": 20.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.7,
+    "pts": 8.0,
+    "reb": 3.3,
+    "ast": 2.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 22.5,
+    "pts": 8.7,
+    "reb": 4.9,
+    "ast": 2.2,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Luke Kennard",
+   "pos": "SG",
+   "starter": false,
+   "min": 17.3,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 10.0,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 3.0
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 7.9,
+    "reb": 2.2,
+    "ast": 2.1,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Oso Ighodaro",
+   "pos": "PF",
+   "starter": false,
+   "min": 15.3,
+   "g_cur": 1,
+   "p_play": 0.6,
+   "cur": {
+    "min": 15.0,
+    "pts": 8.0,
+    "reb": 3.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 6.5,
+    "reb": 5.1,
+    "ast": 2.3,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "PHX",
+   "name": "Ryan Dunn",
+   "pos": "SF",
+   "starter": false,
+   "min": 13.9,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.7,
+    "pts": 4.7,
+    "reb": 3.0,
+    "ast": 0.3,
+    "fg3m": 0.7
+   },
+   "prior": {
+    "min": 19.4,
+    "pts": 5.8,
+    "reb": 4.2,
+    "ast": 1.5,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Jamal Murray",
+   "pos": "PG",
+   "starter": true,
+   "min": 35.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 38.5,
+    "pts": 22.5,
+    "reb": 5.0,
+    "ast": 5.8,
+    "fg3m": 4.0
+   },
+   "prior": {
+    "min": 35.4,
+    "pts": 25.4,
+    "reb": 4.4,
+    "ast": 7.1,
+    "fg3m": 3.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "starter": true,
+   "min": 33.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 37.3,
+    "pts": 22.0,
+    "reb": 10.5,
+    "ast": 9.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 34.8,
+    "pts": 27.7,
+    "reb": 12.9,
+    "ast": 10.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Christian Braun",
+   "pos": "SG",
+   "starter": true,
+   "min": 32.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.8,
+    "pts": 11.5,
+    "reb": 4.5,
+    "ast": 2.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 31.8,
+    "pts": 12.0,
+    "reb": 4.8,
+    "ast": 2.7,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Aaron Gordon",
+   "pos": "PF",
+   "starter": true,
+   "min": 27.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.5,
+    "pts": 12.3,
+    "reb": 6.5,
+    "ast": 2.5,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 27.9,
+    "pts": 16.2,
+    "reb": 5.8,
+    "ast": 2.7,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "DeMar DeRozan",
+   "pos": "SF",
+   "starter": false,
+   "min": 24.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.5,
+    "pts": 13.0,
+    "reb": 2.8,
+    "ast": 2.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 31.2,
+    "pts": 18.4,
+    "reb": 2.9,
+    "ast": 4.1,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Trevon Brazile",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.8,
+    "pts": 9.5,
+    "reb": 7.5,
+    "ast": 0.0,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 23.8,
+    "pts": 9.5,
+    "reb": 7.5,
+    "ast": 0.0,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Alpha Diallo",
+   "pos": "SF",
+   "starter": false,
+   "min": 20.0,
+   "g_cur": 1,
+   "p_play": 0.5,
+   "cur": {
+    "min": 22.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 3.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Bryce Hopkins",
+   "pos": "SF",
+   "starter": false,
+   "min": 15.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.5,
+    "pts": 3.8,
+    "reb": 2.0,
+    "ast": 0.5,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 16.5,
+    "pts": 3.8,
+    "reb": 2.0,
+    "ast": 0.5,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "starter": false,
+   "min": 11.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 12.5,
+    "pts": 5.5,
+    "reb": 3.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 20.0,
+    "pts": 10.5,
+    "reb": 6.1,
+    "ast": 1.4,
+    "fg3m": 0.4
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Cameron Johnson",
+   "pos": "PF",
+   "starter": true,
+   "min": 10.0,
+   "g_cur": 1,
+   "p_play": 0.6,
+   "cur": {
+    "min": 11.0,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 30.5,
+    "pts": 12.2,
+    "reb": 3.8,
+    "ast": 2.4,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "DEN",
+   "name": "Tyus Jones",
+   "pos": "PG",
+   "starter": false,
+   "min": 8.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.8,
+    "pts": 2.3,
+    "reb": 0.0,
+    "ast": 0.8,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 15.7,
+    "pts": 3.0,
+    "reb": 1.1,
+    "ast": 2.4,
+    "fg3m": 0.6
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": 4.5,
+  "total": 231.5,
+  "ml_home": 150,
+  "ml_away": -180
+ },
+ "prop_lines": {
+  "Dillon Brooks": {
+   "pts": [
+    16.5,
+    -110,
+    100
+   ]
+  },
+  "Jamal Murray": {
+   "pts": [
+    22.5,
+    -115,
+    -105
+   ]
+  },
+  "Collin Gillespie": {
+   "pts": [
+    9.5,
+    102,
+    -114
+   ]
+  }
+ }
+}
