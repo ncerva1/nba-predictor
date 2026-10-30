@@ -10,15 +10,16 @@
    "HOU: Sheppard y Adams OUT; Şengün y Smart dudosos (Covers sí publica prop de Şengün)",
    "DAL: Lively, Aldama y Biberovic OUT; Marshall (enfermedad) y de Larrea (rodilla) dudosos",
    "Récord: HOU 5-0, DAL 3-2",
-   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Sergio de Larrea, Naji Marshall 90%, Santi Aldama 20%, Tarik Biberovic 20%"
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Sergio de Larrea, Naji Marshall 90%, Santi Aldama 20%, Tarik Biberovic 20%",
+   "Confirmado 30-oct ~19:15 ET: Alperen Şengün OUT"
   ],
   "out": [
    "Reed Sheppard",
    "Steven Adams",
-   "Sergio de Larrea"
+   "Sergio de Larrea",
+   "Alperen Şengün"
   ],
   "gtd": {
-   "Alperen Şengün": 0.6,
    "Marcus Smart": 0.4,
    "Naji Marshall": 0.9,
    "Santi Aldama": 0.2,
@@ -114,13 +115,13 @@
     "pace": 97.26
    },
    "adj": {
-    "o": -1.0,
-    "d": 0.5,
+    "o": -2.5,
+    "d": 1.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Reed Sheppard y Steven Adams OUT; Şengün (espalda) y Smart (antebrazo) dudosos"
+    "roster_note": "Reed Sheppard y Steven Adams OUT; Şengün (espalda) y Smart (antebrazo) dudosos; Şengün OUT (espalda)"
    }
   }
  },
@@ -590,7 +591,7 @@
    "name": "Kevin Durant",
    "pos": "PF",
    "starter": true,
-   "min": 32.4,
+   "min": 37.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -632,7 +633,7 @@
    "name": "Jabari Smith Jr.",
    "pos": "PF",
    "starter": true,
-   "min": 32.4,
+   "min": 37.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -671,52 +672,10 @@
   },
   {
    "team": "HOU",
-   "name": "Alperen Şengün",
-   "pos": "C",
-   "starter": true,
-   "min": 32.0,
-   "g_cur": 4,
-   "p_play": 0.6,
-   "cur": {
-    "min": 34.0,
-    "pts": 24.5,
-    "reb": 9.0,
-    "ast": 7.0,
-    "fg3m": 1.5,
-    "fgm": 9.0,
-    "fga": 15.5,
-    "fg3a": 2.3,
-    "stl": 1.8,
-    "blk": 0.5,
-    "tov": 4.0,
-    "pf": 3.0,
-    "ftm": 5.0,
-    "fta": 6.5
-   },
-   "prior": {
-    "min": 33.3,
-    "pts": 20.4,
-    "reb": 8.9,
-    "ast": 6.2,
-    "fg3m": 0.6,
-    "fgm": 8.1,
-    "fga": 15.6,
-    "fg3a": 1.8,
-    "stl": 1.2,
-    "blk": 1.1,
-    "tov": 3.2,
-    "pf": 3.3,
-    "ftm": 3.6,
-    "fta": 5.2
-   },
-   "slot": "C"
-  },
-  {
-   "team": "HOU",
    "name": "Amen Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 32.0,
+   "min": 36.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -758,7 +717,7 @@
    "name": "Fred VanVleet",
    "pos": "PG",
    "starter": true,
-   "min": 28.1,
+   "min": 32.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -799,8 +758,8 @@
    "team": "HOU",
    "name": "Tari Eason",
    "pos": "PF",
-   "starter": false,
-   "min": 23.4,
+   "starter": true,
+   "min": 26.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -834,14 +793,15 @@
     "pf": 2.3,
     "ftm": 0.9,
     "fta": 1.1
-   }
+   },
+   "slot": "C"
   },
   {
    "team": "HOU",
    "name": "Marcus Smart",
    "pos": "PG",
    "starter": false,
-   "min": 22.6,
+   "min": 26.1,
    "g_cur": 2,
    "p_play": 0.4,
    "cur": {
@@ -882,7 +842,7 @@
    "name": "Bogdan Bogdanović",
    "pos": "SG",
    "starter": false,
-   "min": 13.4,
+   "min": 15.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -923,7 +883,7 @@
    "name": "Oscar Tshiebwe",
    "pos": "C",
    "starter": false,
-   "min": 13.2,
+   "min": 15.2,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -964,7 +924,7 @@
    "name": "Clint Capela",
    "pos": "C",
    "starter": false,
-   "min": 10.6,
+   "min": 12.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -1009,58 +969,6 @@
   "ml_away": -205
  },
  "prop_lines": {
-  "Alperen Şengün": {
-   "pts": [
-    18.5,
-    -112,
-    -112
-   ],
-   "reb": [
-    8.5,
-    -115,
-    100
-   ],
-   "ast": [
-    5.5,
-    -100,
-    -105
-   ],
-   "stl": [
-    0.5,
-    -235,
-    175
-   ],
-   "blk": [
-    0.5,
-    -150,
-    110
-   ],
-   "ra": [
-    14.5,
-    -106.38,
-    -125.0
-   ],
-   "pr": [
-    29.5,
-    -108.7,
-    -125.0
-   ],
-   "stocks": [
-    1.5,
-    -153.85,
-    114.0
-   ],
-   "pa": [
-    25.5,
-    -121.95,
-    -111.11
-   ],
-   "pra": [
-    34.5,
-    -119.05,
-    -111.11
-   ]
-  },
   "Daniel Gafford": {
    "pts": [
     8.5,
