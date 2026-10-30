@@ -195,6 +195,14 @@ details.howto dd { margin: 0 }
   background: var(--surface); color: var(--ink); cursor: pointer }
 .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
 .filters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+th.sort { cursor: pointer; user-select: none }
+th.sort:hover { color: var(--ink) }
+th.sort[aria-sort]::after { content: " ▼"; font-size: 9px }
+th.sort[aria-sort="ascending"]::after { content: " ▲" }
+.sortsel { font: 500 12px var(--mono); padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink) }
+.seeall { justify-self: start; font: 600 13px var(--mono); text-decoration: none; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--accent); color: var(--accent) }
+.seeall:hover { background: var(--accent); color: var(--surface) }
+.search { font: 14px var(--sans, inherit); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: min(100%, 320px) }
 .more { display: block; margin-top: 4px; font: 500 11px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
 tr.detail td { background: var(--bg) }
 .books { display: flex; flex-wrap: wrap; gap: 6px }
@@ -583,19 +591,30 @@ function setupTicker() {
 // Inicio: picks agrupados por partido (por defecto en móvil, donde la lista larga cansa) o lista única por EV
 let GROUP = matchMedia("(max-width: 640px)").matches ? "game" : "ev";
 const GROUPS = { game: "Por partido", ev: "Lista por EV" };
-// Picks segmentados: todos / de equipo (ganador, hándicap, total) / player props
+// Picks por categoría: con valor / de equipo (ganador, hándicap, total) / cada estadística de los player props
+const STAT_LABEL = { pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PTS+REB+AST", pr: "PTS+REB",
+  pa: "PTS+AST", ra: "REB+AST", stl: "Robos", blk: "Tapones", stocks: "Robos+Tapones", tov: "Pérdidas", pf: "Faltas",
+  fgm: "Tiros de campo anotados", fga: "Tiros de campo intentados", fg2m: "Dobles anotados", fg2a: "Dobles intentados", fg3a: "Triples intentados" };
+const STAT_SHORT = { pts: "PTS", reb: "REB", ast: "AST", fg3m: "3PM", pra: "PRA", pr: "P+R", pa: "P+A", ra: "R+A", stl: "ROB", blk: "TAP",
+  stocks: "R+T", tov: "PÉR", pf: "FAL", fgm: "TCA", fga: "TCI", fg2m: "2PA", fg2a: "2PI", fg3a: "3PI" };
+const STAT_BTN = { pra: "PRA", pr: "PTS+REB", pa: "PTS+AST", ra: "REB+AST", stocks: "Robos+Tap.", fgm: "TC anotados", fga: "TC intentados",
+  fg2m: "Dobles anot.", fg2a: "Dobles int.", fg3a: "Triples int." };
+const CATS = { all: "Todas", value: "Con valor", team: "Equipo", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples",
+  combo: "Combinadas", def: "Robos y tapones", shots: "Tiros", other: "Pérdidas y faltas" };
+const CAT_OF = { pra: "combo", pr: "combo", pa: "combo", ra: "combo", stl: "def", blk: "def", stocks: "def", fgm: "shots", fga: "shots",
+  fg2m: "shots", fg2a: "shots", fg3a: "shots", tov: "other", pf: "other" };
+const catOf = b => b.kind !== "prop" ? "team" : CAT_OF[b.stat] || b.stat || "pts";
 let SEG = "all";
-const SEGS = { all: "Todos", team: "Equipo", prop: "Player props" };
-const inSeg = (b, k) => k === "all" || (k === "prop" ? b.kind === "prop" : b.kind !== "prop");
-function segBar(bets, id) {
-  return `<div class="filters" role="group" aria-label="Tipo de pick" id="${id}">${Object.entries(SEGS).map(([k, t]) =>
-    `<button type="button" data-seg="${k}" aria-pressed="${k === SEG}">${t} · ${bets.filter(b => inSeg(b, k)).length}</button>`).join("")}</div>`;
+const inSeg = (b, k) => k === "all" || (k === "value" ? b.value : catOf(b) === k);
+function segBar(bets, id, keys = Object.keys(CATS).filter(k => k !== "value")) {
+  return `<div class="filters" role="group" aria-label="Categoría" id="${id}">${keys.filter(k => k === SEG || k === "all" || k === "value" || bets.some(b => inSeg(b, k))).map(k =>
+    `<button type="button" data-seg="${k}" aria-pressed="${k === SEG}">${CATS[k]} · ${bets.filter(b => inSeg(b, k)).length}</button>`).join("")}</div>`;
 }
 function bindSeg(id, draw) {
   document.querySelectorAll(`#${id} button`).forEach(b => b.addEventListener("click", () => {
     SEG = b.dataset.seg;
     document.querySelectorAll(`#${id} button`).forEach(x => x.setAttribute("aria-pressed", x.dataset.seg === SEG));
-    draw();
+    draw && draw();
   }));
 }
 
@@ -633,11 +652,46 @@ const CUP_HERO = n => `<section class="cup-hero">
       <li><b>Final</b><span>Campeón de la Copa</span></li>
     </ol>
   </section>`;
+// Todas las apuestas de la jornada (index.json trae "all_bets" de los partidos del último día), ordenadas por EV
+const TOP_N = 20;
+const dayBets = todays => todays.flatMap(g => (g.all_bets || g.value_bets || g.top_bets.filter(b => b.value))
+  .map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` }))).sort((a, b) => b.ev - a.ev);
+
+// "Ver todo": todas las apuestas de la jornada en una sola lista por EV, con categorías y buscador
+function renderAll(scope) {
+  const thr = INDEX.value_ev, cup = scope === "cup";
+  const todays = INDEX.games.filter(g => g.date === DAY && inScope(g, scope));
+  const all = dayBets(todays);
+  let q = "";
+  $("#app").innerHTML = `<a class="back" href="#${cup ? "cup" : ""}">← ${cup ? "NBA Cup" : "Liga regular"}</a>
+  <section class="section">
+    <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
+    <h1>Todos los picks</h1>
+    <p class="lede">Las ${all.length} apuestas con cuota de los ${todays.length} partidos, ordenadas por valor esperado (EV), de la que más rinde según el modelo a la que menos. Filtra por categoría o busca un jugador o equipo.</p>
+    ${legend(thr)}
+    ${segBar(all, "seg-all")}
+    <input class="search" id="q" type="search" placeholder="Buscar jugador o equipo" aria-label="Buscar jugador o equipo">
+    <div id="all-picks"></div>
+    ${howto}
+  </section>`;
+  const draw = () => {
+    const list = all.filter(b => inSeg(b, SEG) && (!q || (b.label + " " + b._game).toLowerCase().includes(q)));
+    $("#all-picks").innerHTML = list.length ? `<p class="muted">${list.length} apuesta${list.length > 1 ? "s" : ""} · ${list.filter(b => b.value).length} con valor</p>
+      <div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`
+      : `<div class="panel"><div class="empty">Ninguna apuesta con ese filtro.</div></div>`;
+    document.querySelectorAll("#all-picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+  };
+  let t;
+  $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { q = e.target.value.trim().toLowerCase(); draw(); }, 150); });
+  bindSeg("seg-all", draw);
+  draw();
+}
+
 function renderIndex(scope = "reg") {
   const thr = INDEX.value_ev;
   const todays = INDEX.games.filter(g => g.date === DAY && inScope(g, scope));
-  const picks = todays.flatMap(g => (g.value_bets || g.top_bets.filter(b => b.value)).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })))
-    .sort((a, b) => b.ev - a.ev);
+  const allBets = dayBets(todays);
+  const picks = allBets.filter(b => b.value);
   const older = INDEX.games.filter(g => g.date !== DAY && inScope(g, scope));
   const hist = scope === "cup" ? [] : INDEX.history || [];
   const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok }), { w: 0, l: 0, u: 0, g: 0, ok: 0 });
@@ -660,13 +714,14 @@ function renderIndex(scope = "reg") {
   </section>` : ""}
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
-    <h2>${todays.some(g => g.result) ? "Picks con valor de la jornada" : "Picks con valor de hoy"} ${qh("ev", "picks con valor y EV")}</h2>
-    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} en ${todays.length} partidos donde la probabilidad del modelo supera a la que paga la casa. Agrupados por partido o en una sola lista ordenada por valor esperado (EV). Toca un pick para ver el análisis del partido.</p>
+    <h2>${todays.some(g => g.result) ? "Picks de la jornada" : "Picks de hoy"} ${qh("ev", "picks con valor y EV")}</h2>
+    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos (la probabilidad del modelo supera a la que paga la casa). En cada categoría (equipo, puntos, rebotes, asistencias...) se ven los ${TOP_N} mejores por valor esperado (EV), con su color aunque no tengan valor. Toca un pick para ver el análisis del partido.</p>
     ${legend(thr)}
-    ${picks.length ? segBar(picks, "seg-idx") : ""}
-    ${picks.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
+    ${allBets.length ? segBar(allBets, "seg-idx", Object.keys(CATS).filter(k => k !== "all")) : ""}
+    ${allBets.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
       `<button type="button" data-grp="${k}" aria-pressed="${k === GROUP}">${t}</button>`).join("")}</div>` : ""}
     <div id="picks"></div>
+    ${allBets.length ? `<a class="seeall" href="#todos${cup ? "-cup" : ""}">Ver todos los picks de la jornada (${allBets.length}) →</a>` : ""}
     ${howto}
   </section>
   ${parlaySection(todays, thr)}
@@ -693,8 +748,8 @@ function renderIndex(scope = "reg") {
     }).join("")}</div>`;
   };
   const drawPicks = () => {
-    const list = picks.filter(b => inSeg(b, SEG));
-    $("#picks").innerHTML = !list.length ? `<div class="panel"><div class="empty">${picks.length ? `Ningún pick de este tipo con EV ≥ +${(thr * 100).toFixed(0)}% en la jornada.` : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`
+    const list = SEG === "value" ? picks : allBets.filter(b => inSeg(b, SEG)).slice(0, TOP_N);
+    $("#picks").innerHTML = !list.length ? `<div class="panel"><div class="empty">${SEG !== "value" ? "Sin apuestas de esta categoría en la jornada." : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`
       : GROUP === "game" ? groupHtml(list)
       : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`;
     document.querySelectorAll("#picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
@@ -926,13 +981,16 @@ function cupStudy() {
     </tbody></table></div>
   </section>`;
 }
+const COMBO = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"] };
 function h2hCell(d, p, k, line) {
   const L = d.h2h?.players?.[p.name];
   if (!L) return '<span class="muted">—</span>';
-  const v = L.map(x => x[k]), avg = v.reduce((s, x) => s + x, 0) / v.length, over = v.filter(x => x > line).length;
+  const sv = x => COMBO[k] ? COMBO[k].reduce((t, c) => t + x[c], 0) : x[k];
+  if (L.some(x => sv(x) === undefined || Number.isNaN(sv(x)))) return '<span class="muted">—</span>';
+  const v = L.map(sv), avg = v.reduce((s, x) => s + x, 0) / v.length, over = v.filter(x => x > line).length;
   const other = L.filter(x => x.team !== p.team).map(x => x.team);
   return `<span class="h2h-cell"><b>${avg.toFixed(1)}</b> <span class="pill ${over * 2 > v.length ? "value" : over * 2 < v.length ? "neg" : "flat"}">${over}/${v.length} over</span>
-    <span class="vals" title="${L.map(x => `${x.date}${x.cup ? " Copa" : ""} (${x.team}, ${x.min} min): ${x[k]}`).join("\n")}">${L.map(x => x[k] + (x.cup ? "ᶜ" : "")).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
+    <span class="vals" title="${L.map(x => `${x.date}${x.cup ? " Copa" : ""} (${x.team}, ${x.min} min): ${sv(x)}`).join("\n")}">${L.map(x => sv(x) + (x.cup ? "ᶜ" : "")).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
 }
 
 async function renderGame(id) {
@@ -944,7 +1002,8 @@ async function renderGame(id) {
   const players = [...s.players];
   const nVal = d.bets.filter(b => b.ev >= thr).length;
   // en el celular se muestra un solo equipo a la vez para no tener la lista entera desplegada
-  let stat = "pts", team = matchMedia("(max-width: 640px)").matches ? a : "all";
+  let stat = "all", team = matchMedia("(max-width: 640px)").matches ? a : "all", sortK = "min", sortAsc = false;
+  const stats = Object.keys(STAT_LABEL).filter(k => players.some(p => p[k]));
   $("#app").innerHTML = `
   <a class="back" href="#${isCup(g) ? "cup" : ""}">← ${isCup(g) ? "NBA Cup" : "Liga regular"} · todos los picks</a>
   ${NEWBIE()}
@@ -986,26 +1045,57 @@ async function renderGame(id) {
   ${h2hSection(d)}
   <section class="section">
     <h2>Player props proyectados ${qh("props", "player props")}</h2>
-    <div class="filters" role="group" aria-label="Estadística">${["pts", "reb", "ast", "fg3m", "pra"].map((k, i) =>
-      `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${i === 0}">${{ pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PTS+REB+AST" }[k]}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Estadística">${["all", ...stats].map(k =>
+      `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${k === stat}"${STAT_BTN[k] ? ` title="${STAT_LABEL[k]}"` : ""}>${k === "all" ? "Resumen" : STAT_BTN[k] || STAT_LABEL[k]}</button>`).join("")}</div>
     <div class="filters" role="group" aria-label="Equipo" id="teams"><span class="lbl">Equipo</span>${[a, h, "all"].map(t =>
       `<button type="button" data-t="${esc(t)}" aria-pressed="${t === team}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
+    <div class="filters"><span class="lbl">Ordenar</span><select class="sortsel" id="sortsel" aria-label="Ordenar por"></select>
+      <button type="button" id="sortdir" aria-pressed="false">Mayor a menor</button></div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
+    <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (ROB robos, TAP tapones, PÉR pérdidas, TCA / TCI tiros de campo anotados / intentados); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
+  // apuestas de props del partido por jugador y estadística (over y/o under, con su EV)
+  const propBets = {};
+  d.bets.filter(b => b.kind === "prop").forEach(b => { (propBets[b.player + "|" + b.stat] ||= []).push(b); });
+  const casa = (p, k) => { const bs = propBets[p.name + "|" + k]; return bs ? bs.map(b => `${b.label.includes(" Over ") ? "O" : "U"} ${b.line} @ ${b.dec.toFixed(2)} ${evPill(b.ev, thr)}`).join("<br>") : "—"; };
+  const bestEv = (p, k) => Math.max(...(propBets[p.name + "|" + k] || []).map(b => b.ev), -9);
+  const SUMMARY = ["pts", "reb", "ast", "fg3m", "pra", "stl", "blk", "tov", "fgm", "fga"].filter(k => stats.includes(k));
+  const sortOpts = () => stat === "all" ? [["min", "Minutos"], ...SUMMARY.map(k => [k, STAT_LABEL[k]])]
+    : [["mean", "Media"], ["min", "Minutos"], ["p_over", "P(over)"], ["ev", "EV de la casa"], ["name", "Nombre"]];
+  const val = (p, key) => key === "min" ? p.min : key === "name" ? p.name : stat === "all" ? (p[key] ? p[key].mean : -1)
+    : key === "mean" ? p[stat].mean : key === "p_over" ? p[stat].p_over : key === "ev" ? bestEv(p, stat) : 0;
   const draw = (k = stat) => {
-    stat = k;
+    if (k !== stat) { stat = k; sortK = k === "all" ? "min" : "mean"; sortAsc = false; }
     document.querySelectorAll("button[data-k]").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
     document.querySelectorAll("#teams button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === team));
-    const rows = players.filter(p => team === "all" || p.team === team).sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
+    $("#sortsel").innerHTML = sortOpts().map(([v, t]) => `<option value="${v}"${v === sortK ? " selected" : ""}>${t}</option>`).join("");
+    $("#sortdir").textContent = sortK === "name" ? (sortAsc ? "A → Z" : "Z → A") : sortAsc ? "Menor a mayor" : "Mayor a menor";
+    const rows = players.filter(p => (team === "all" || p.team === team) && (k === "all" || p[k])).sort((x, y) => {
+      const vx = val(x, sortK), vy = val(y, sortK);
+      const c = typeof vx === "string" ? vx.localeCompare(vy) : vx - vy;
+      return (sortAsc ? c : -c) || y.min - x.min;
+    });
+    const th = (key, txt, cls = "r") => `<th class="${cls} sort" data-s="${key}"${key === sortK ? ` aria-sort="${sortAsc ? "ascending" : "descending"}"` : ""}>${txt}</th>`;
     const played = players.some(p => p.actual !== undefined);
+    if (k === "all") {
+      $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
+      ${rows.map(p => `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
+        <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? p[s].mean.toFixed(1) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${p.actual[s]})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
+      ${played ? `<p class="muted">Entre paréntesis, lo que hizo en el partido real.</p>` : ""}`;
+    } else {
     const hh = d.h2h && d.h2h.games.length;
-    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
-    ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
+    $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
+    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
-      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, m ? m.line : st.line)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
+    }
+    document.querySelectorAll("#props th.sort").forEach(t => t.addEventListener("click", () => {
+      const key = t.dataset.s; if (key === sortK) sortAsc = !sortAsc; else { sortK = key; sortAsc = key === "name"; } draw();
+    }));
   };
+  $("#sortsel").addEventListener("change", e => { sortK = e.target.value; sortAsc = sortK === "name"; draw(); });
+  $("#sortdir").addEventListener("click", () => { sortAsc = !sortAsc; draw(); });
   document.querySelectorAll("button[data-k]").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
   const drawBets = () => {
@@ -1142,15 +1232,15 @@ function route() {
   const id = location.hash.slice(1);
   window.scrollTo(0, 0);
   const game = id && INDEX.games.find(g => g.id === id);
-  const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" ? "cup" : "reg";
+  const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" ? "cup" : "reg";
   // la pestaña NBA Cup (y sus partidos) cambia la paleta y la tipografía
   if (scope === "cup") document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
   $("#tab-reg").toggleAttribute("aria-current", false); $("#tab-cup").toggleAttribute("aria-current", false);
   $(scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
   markTicker(game ? id : null);
   $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
-  SEG = "all";
-  if (game) renderGame(id); else renderIndex(scope);
+  SEG = game || id.startsWith("todos") ? "all" : "value";
+  if (game) renderGame(id); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
 }
 
 // Botón flotante para volver arriba (al inicio del análisis en la página de un partido) tras bajar un poco
