@@ -1,0 +1,25 @@
+{
+ "season": "2026-27",
+ "source": "nba.com/games?date=2026-10-30 (etiqueta Emirates NBA Cup y grupo de cada partido)",
+ "note": "Partidos de Copa por fecha. build_site.py marca como \"competition\": \"cup\" (con su grupo en cup_round) todo partido de games/*.json que esté aquí, aunque el JSON del partido no lo diga. Añadir cada noche de Copa nueva (martes y viernes de la fase de grupos) antes de correr build_site.py.",
+ "groups": {
+  "Este A": ["DET", "BKN", "ORL", "TOR"],
+  "Este B": ["NYK", "PHI", "IND", "MIA"],
+  "Este C": ["CHA", "WAS", "CHI", "BOS"],
+  "Oeste A": ["HOU", "DAL", "DEN", "PHX"],
+  "Oeste B": ["LAC", "MIN"],
+  "Oeste C": ["LAL", "GSW"]
+ },
+ "games": [
+  {"date": "2026-10-30", "away": "CHA", "home": "WAS", "round": "Grupo Este C"},
+  {"date": "2026-10-30", "away": "NYK", "home": "PHI", "round": "Grupo Este B"},
+  {"date": "2026-10-30", "away": "CHI", "home": "BOS", "round": "Grupo Este C"},
+  {"date": "2026-10-30", "away": "DET", "home": "BKN", "round": "Grupo Este A"},
+  {"date": "2026-10-30", "away": "ORL", "home": "TOR", "round": "Grupo Este A"},
+  {"date": "2026-10-30", "away": "IND", "home": "MIA", "round": "Grupo Este B"},
+  {"date": "2026-10-30", "away": "HOU", "home": "DAL", "round": "Grupo Oeste A"},
+  {"date": "2026-10-30", "away": "LAC", "home": "MIN", "round": "Grupo Oeste B"},
+  {"date": "2026-10-30", "away": "LAL", "home": "GSW", "round": "Grupo Oeste C"},
+  {"date": "2026-10-30", "away": "DEN", "home": "PHX", "round": "Grupo Oeste A"}
+ ]
+}

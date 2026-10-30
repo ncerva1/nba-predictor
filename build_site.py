@@ -376,6 +376,48 @@ def h2h_view(g, players):
     return dict(season=H["season"], games=out_games, players=pl)
 
 
+def cup_schedule():
+    """cup/<temporada>.json: {(fecha, visitante, local): ronda} de los partidos de Copa ya conocidos."""
+    out = {}
+    for p in glob.glob(os.path.join(HERE, "cup", "20??-??.json")):
+        for x in json.load(open(p)).get("games", []):
+            out[(x["date"], x["away"], x["home"])] = x.get("round")
+    return out
+
+
+def tag_cup(g):
+    """Marca el partido como de Copa si está en cup/<temporada>.json (la rutina diaria no tiene que saberlo)."""
+    k = (g["date"], g["away"], g["home"])
+    sched = cup_schedule()
+    if k in sched and g.get("competition") != "cup":
+        g["competition"] = "cup"
+        g.setdefault("cup_round", sched[k])
+    return g
+
+
+def cup_history():
+    p = os.path.join(HERE, "cup", "history.json")
+    return json.load(open(p)) if os.path.exists(p) else None
+
+
+def cup_view(g):
+    """Para partidos de Copa: cruces previos de Copa entre ambos equipos (con la línea de cierre del total) y cómo
+    anotó cada equipo en la Copa frente a sus partidos de liga del mismo tramo (cup/history.json)."""
+    C = cup_history()
+    if g.get("competition") != "cup" or not C:
+        return None
+    pair = {g["home"], g["away"]}
+    meetings = [x for x in C["games"] if {x["home"], x["away"]} == pair and x["date"] < g["date"]]
+    return dict(meetings=meetings, teams={t: C["teams"].get(t, {}) for t in (g["away"], g["home"])},
+                model_total_adj=C.get("model_total_adj", 0.0))
+
+
+def cup_summary():
+    """Resumen de liga para el inicio de la pestaña NBA Cup."""
+    C = cup_history()
+    return C and dict(seasons=C["seasons"], pooled=C["pooled"], model_total_adj=C.get("model_total_adj", 0.0))
+
+
 def game_id(path):
     return os.path.basename(path)[:-5].replace("@", "-at-").replace("_", "-")
 
@@ -385,7 +427,7 @@ def run_game(path, n):
     use_db = cfg_raw.get("db", {}).get("use", False) and os.path.exists(os.path.join(HERE, "db", "rankings_latest.json"))
     cfg = load_game(path, use_db)
     s = simulate(cfg, n)
-    g = cfg["game"]
+    g = tag_cup(cfg["game"])
     od = load_odds(g["date"])
     books = (od or {}).get("games", {}).get(f"{g['away']}@{g['home']}", {}).get("books")
     if books:
@@ -404,7 +446,7 @@ def run_game(path, n):
     R = load_rankings()
     mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
     r = dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
-                summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]),
+                summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]), cup=cup_view(g),
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
     r["parlays"], r["_legs"] = sgp(r, g, s)
@@ -480,6 +522,8 @@ def main():
                                                      r["summary"].get("db_report"))
                 if not (r.get("h2h") or {}).get("games"):
                     r["h2h"] = h2h_view(r["game"], r["summary"]["players"])
+                if "cup" not in r:
+                    r["cup"] = cup_view(tag_cup(r["game"]))
             else:
                 r = run_game(p, n)
                 if res:
@@ -512,7 +556,7 @@ def main():
                             picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
                             units=round(sum(x["units"] for x in rs), 2)))
     json.dump(dict(generated=datetime.now(timezone.utc).isoformat(timespec="minutes"), value_ev=VALUE_EV,
-                   history=history, parlays=cross, games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+                   history=history, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":

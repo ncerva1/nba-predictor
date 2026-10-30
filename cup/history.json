@@ -1,0 +1,3803 @@
+{
+ "source": "basketball-reference (marcadores, marca NBA Cup) + covers.com (línea de cierre del total)",
+ "seasons": {
+  "2024-25": {
+   "opening": {
+    "date": "2024-11-12",
+    "games": 8,
+    "avg_total": 221.6,
+    "reg_before": {
+     "games": 156,
+     "avg_total": 226.3
+    },
+    "n": 8,
+    "over": 5,
+    "under": 3,
+    "vs_line": -0.7
+   },
+   "group": {
+    "games": 60,
+    "avg_total": 224.5,
+    "avg_regulation": 223.6,
+    "ot": 3,
+    "n": 60,
+    "over": 32,
+    "under": 27,
+    "vs_line": -1.9
+   },
+   "regular": {
+    "games": 231,
+    "avg_total": 226.2,
+    "avg_regulation": 225.1,
+    "ot": 13
+   }
+  },
+  "2025-26": {
+   "opening": {
+    "date": "2025-10-31",
+    "games": 8,
+    "avg_total": 229.4,
+    "reg_before": {
+     "games": 72,
+     "avg_total": 235.5
+    },
+    "n": 8,
+    "over": 3,
+    "under": 5,
+    "vs_line": -5.1
+   },
+   "group": {
+    "games": 60,
+    "avg_total": 233.4,
+    "avg_regulation": 231.6,
+    "ot": 3,
+    "n": 60,
+    "over": 26,
+    "under": 34,
+    "vs_line": -0.4
+   },
+   "regular": {
+    "games": 201,
+    "avg_total": 234.1,
+    "avg_regulation": 232.3,
+    "ot": 12
+   }
+  }
+ },
+ "teams": {
+  "ATL": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 121.2,
+    "pa": 117.5,
+    "reg_g": 16,
+    "reg_pf": 114.8,
+    "reg_pa": 118.5,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": -0.2
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 117,
+    "pa": 118,
+    "reg_g": 15,
+    "reg_pf": 118.3,
+    "reg_pa": 115.5,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": -1.1
+   }
+  },
+  "BKN": {
+   "2024-25": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 109,
+    "pa": 118.8,
+    "reg_g": 16,
+    "reg_pf": 108.1,
+    "reg_pa": 112.4,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 14.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 105.2,
+    "pa": 112.5,
+    "reg_g": 12,
+    "reg_pf": 110.8,
+    "reg_pa": 122.3,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -6.2
+   }
+  },
+  "BOS": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 120.5,
+    "pa": 114.8,
+    "reg_g": 16,
+    "reg_pf": 121,
+    "reg_pa": 110.4,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 0.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 110.2,
+    "pa": 114.5,
+    "reg_g": 13,
+    "reg_pf": 114.4,
+    "reg_pa": 107.5,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -4.0
+   }
+  },
+  "CHA": {
+   "2024-25": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 101.5,
+    "pa": 109.8,
+    "reg_g": 14,
+    "reg_pf": 110.6,
+    "reg_pa": 115.2,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -4.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 116.5,
+    "pa": 129.5,
+    "reg_g": 14,
+    "reg_pf": 115.9,
+    "reg_pa": 118.6,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": 4.9
+   }
+  },
+  "CHI": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 129.5,
+    "pa": 128,
+    "reg_g": 17,
+    "reg_pf": 116.9,
+    "reg_pa": 120.5,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 14.5
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 117,
+    "pa": 129.2,
+    "reg_g": 12,
+    "reg_pf": 121.6,
+    "reg_pa": 121.2,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 3.1
+   }
+  },
+  "CLE": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 120,
+    "pa": 112.5,
+    "reg_g": 17,
+    "reg_pf": 122.4,
+    "reg_pa": 110,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -5.1
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 123,
+    "pa": 116.5,
+    "reg_g": 14,
+    "reg_pf": 119.2,
+    "reg_pa": 116.4,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.6
+   }
+  },
+  "DAL": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 123.2,
+    "pa": 111.8,
+    "reg_g": 15,
+    "reg_pf": 117.3,
+    "reg_pa": 110.7,
+    "n": 4,
+    "over": 2,
+    "under": 1,
+    "vs_line": 2.1
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 117,
+    "pa": 123.8,
+    "reg_g": 14,
+    "reg_pf": 109.6,
+    "reg_pa": 115.7,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 10.5
+   }
+  },
+  "DEN": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 113.8,
+    "pa": 112.2,
+    "reg_g": 13,
+    "reg_pf": 118.1,
+    "reg_pa": 118.2,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -1.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 121,
+    "pa": 115.2,
+    "reg_g": 12,
+    "reg_pf": 125.8,
+    "reg_pa": 114.2,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.4
+   }
+  },
+  "DET": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 114.8,
+    "pa": 112.5,
+    "reg_g": 16,
+    "reg_pf": 110.9,
+    "reg_pa": 113.2,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 4.2
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 115.5,
+    "pa": 110.2,
+    "reg_g": 13,
+    "reg_pf": 118.8,
+    "reg_pa": 113.1,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -4.0
+   }
+  },
+  "GSW": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 117.5,
+    "pa": 115.5,
+    "reg_g": 13,
+    "reg_pf": 117.8,
+    "reg_pa": 106.6,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.5
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 109,
+    "pa": 117,
+    "reg_g": 15,
+    "reg_pf": 115.4,
+    "reg_pa": 113.6,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -5.5
+   }
+  },
+  "HOU": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 117.2,
+    "pa": 105.8,
+    "reg_g": 17,
+    "reg_pf": 113,
+    "reg_pa": 106.5,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 0.1
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 115.8,
+    "pa": 112.2,
+    "reg_g": 11,
+    "reg_pf": 123.7,
+    "reg_pa": 111.5,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -2.2
+   }
+  },
+  "IND": {
+   "2024-25": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 111.2,
+    "pa": 126.2,
+    "reg_g": 16,
+    "reg_pf": 113.4,
+    "reg_pa": 117.9,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 4.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 107.8,
+    "pa": 107.8,
+    "reg_g": 14,
+    "reg_pf": 110.3,
+    "reg_pa": 122.7,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -21.8
+   }
+  },
+  "LAC": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 106.8,
+    "pa": 102.8,
+    "reg_g": 17,
+    "reg_pf": 108.5,
+    "reg_pa": 107.9,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -7.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 121,
+    "pa": 124.5,
+    "reg_g": 14,
+    "reg_pf": 109.8,
+    "reg_pa": 115.9,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 21.1
+   }
+  },
+  "LAL": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 109.2,
+    "pa": 115.2,
+    "reg_g": 16,
+    "reg_pf": 112.1,
+    "reg_pa": 116.1,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -7.1
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 124.8,
+    "pa": 113.2,
+    "reg_g": 13,
+    "reg_pf": 117.9,
+    "reg_pa": 116.3,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 6.5
+   }
+  },
+  "MEM": {
+   "2024-25": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 116,
+    "pa": 118.8,
+    "reg_g": 16,
+    "reg_pf": 120.4,
+    "reg_pa": 111.7,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.4
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 118.8,
+    "pa": 114,
+    "reg_g": 14,
+    "reg_pf": 112.4,
+    "reg_pa": 118.8,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -0.1
+   }
+  },
+  "MIA": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 117.2,
+    "pa": 112.8,
+    "reg_g": 14,
+    "reg_pf": 109.7,
+    "reg_pa": 108.4,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 8.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 126.8,
+    "pa": 114.5,
+    "reg_g": 13,
+    "reg_pf": 122.8,
+    "reg_pa": 119.2,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.8
+   }
+  },
+  "MIL": {
+   "2024-25": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 115.5,
+    "pa": 103,
+    "reg_g": 15,
+    "reg_pf": 111.6,
+    "reg_pa": 114.5,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -8.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 121.2,
+    "pa": 117,
+    "reg_g": 14,
+    "reg_pf": 114.6,
+    "reg_pa": 118.6,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": 1.5
+   }
+  },
+  "MIN": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 110.5,
+    "pa": 114.2,
+    "reg_g": 15,
+    "reg_pf": 111.9,
+    "reg_pa": 105.1,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 5.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 119.8,
+    "pa": 108.5,
+    "reg_g": 13,
+    "reg_pf": 119.1,
+    "reg_pa": 115.7,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -4.6
+   }
+  },
+  "NOP": {
+   "2024-25": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 102.2,
+    "pa": 114.5,
+    "reg_g": 17,
+    "reg_pf": 105.1,
+    "reg_pa": 116.8,
+    "n": 4,
+    "over": 0,
+    "under": 3,
+    "vs_line": -6.8
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 117.8,
+    "pa": 123.8,
+    "reg_g": 14,
+    "reg_pf": 107.4,
+    "reg_pa": 121.6,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 11.5
+   }
+  },
+  "NYK": {
+   "2024-25": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 113.8,
+    "pa": 106.2,
+    "reg_g": 15,
+    "reg_pf": 118.8,
+    "reg_pa": 109.5,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 4.5
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 128,
+    "pa": 119.2,
+    "reg_g": 13,
+    "reg_pf": 119,
+    "reg_pa": 113.5,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 10.2
+   }
+  },
+  "OKC": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 109.2,
+    "pa": 98,
+    "reg_g": 16,
+    "reg_pf": 116.9,
+    "reg_pa": 104.8,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -19.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 128,
+    "pa": 109.2,
+    "reg_g": 15,
+    "reg_pf": 120.6,
+    "reg_pa": 106.3,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 7.9
+   }
+  },
+  "ORL": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 110.2,
+    "pa": 99,
+    "reg_g": 17,
+    "reg_pf": 106.4,
+    "reg_pa": 104.4,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -1.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 121,
+    "pa": 105,
+    "reg_g": 15,
+    "reg_pf": 118.1,
+    "reg_pa": 114.9,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -1.9
+   }
+  },
+  "PHI": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 102,
+    "pa": 102.8,
+    "reg_g": 13,
+    "reg_pf": 105.5,
+    "reg_pa": 113.4,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -7.2
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 107.8,
+    "pa": 117.5,
+    "reg_g": 13,
+    "reg_pf": 120.2,
+    "reg_pa": 116.8,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -2.9
+   }
+  },
+  "PHX": {
+   "2024-25": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 108.5,
+    "pa": 101,
+    "reg_g": 15,
+    "reg_pf": 114.3,
+    "reg_pa": 116.5,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -20.8
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 115.8,
+    "pa": 108,
+    "reg_g": 14,
+    "reg_pf": 119.4,
+    "reg_pa": 115.4,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -7.8
+   }
+  },
+  "POR": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 107.5,
+    "pa": 114.2,
+    "reg_g": 15,
+    "reg_pf": 107.4,
+    "reg_pa": 115.8,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -2.0
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 113.5,
+    "pa": 121.2,
+    "reg_g": 13,
+    "reg_pf": 122,
+    "reg_pa": 122.3,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -3.6
+   }
+  },
+  "SAC": {
+   "2024-25": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 110,
+    "pa": 115,
+    "reg_g": 16,
+    "reg_pf": 116.4,
+    "reg_pa": 113.6,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 1.5
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 107.5,
+    "pa": 124,
+    "reg_g": 14,
+    "reg_pf": 111.8,
+    "reg_pa": 123.9,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -6.1
+   }
+  },
+  "SAS": {
+   "2024-25": {
+    "g": 4,
+    "w": 2,
+    "l": 2,
+    "pf": 111.5,
+    "pa": 110.8,
+    "reg_g": 16,
+    "reg_pf": 111.8,
+    "reg_pa": 112.6,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": -3.6
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 3,
+    "l": 1,
+    "pf": 120.8,
+    "pa": 114.2,
+    "reg_g": 13,
+    "reg_pf": 120.1,
+    "reg_pa": 112.7,
+    "n": 4,
+    "over": 2,
+    "under": 2,
+    "vs_line": 0.8
+   }
+  },
+  "TOR": {
+   "2024-25": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 103.2,
+    "pa": 107.5,
+    "reg_g": 16,
+    "reg_pf": 115.1,
+    "reg_pa": 121.6,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -16.2
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 4,
+    "l": 0,
+    "pf": 114.5,
+    "pa": 100.8,
+    "reg_g": 13,
+    "reg_pf": 121.3,
+    "reg_pa": 117.4,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -21.0
+   }
+  },
+  "UTA": {
+   "2024-25": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 112.8,
+    "pa": 126.2,
+    "reg_g": 14,
+    "reg_pf": 107.4,
+    "reg_pa": 117.9,
+    "n": 4,
+    "over": 4,
+    "under": 0,
+    "vs_line": 10.8
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 108.2,
+    "pa": 129.5,
+    "reg_g": 12,
+    "reg_pf": 123.2,
+    "reg_pa": 124.4,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 1.1
+   }
+  },
+  "WAS": {
+   "2024-25": {
+    "g": 4,
+    "w": 0,
+    "l": 4,
+    "pf": 102,
+    "pa": 120.5,
+    "reg_g": 13,
+    "reg_pf": 108.7,
+    "reg_pa": 125.3,
+    "n": 4,
+    "over": 1,
+    "under": 3,
+    "vs_line": -16.9
+   },
+   "2025-26": {
+    "g": 4,
+    "w": 1,
+    "l": 3,
+    "pf": 110.8,
+    "pa": 130,
+    "reg_g": 13,
+    "reg_pf": 112.5,
+    "reg_pa": 127.5,
+    "n": 4,
+    "over": 3,
+    "under": 1,
+    "vs_line": 0.8
+   }
+  }
+ },
+ "games": [
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "CLE",
+   "home": "IND",
+   "score": {
+    "CLE": 116,
+    "IND": 121
+   },
+   "ot": "",
+   "total": 237,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "NYK",
+   "home": "MIL",
+   "score": {
+    "NYK": 105,
+    "MIL": 110
+   },
+   "ot": "",
+   "total": 215,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "BKN",
+   "home": "CHI",
+   "score": {
+    "BKN": 109,
+    "CHI": 107
+   },
+   "ot": "",
+   "total": 216,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "WAS",
+   "home": "MIA",
+   "score": {
+    "WAS": 114,
+    "MIA": 121
+   },
+   "ot": "",
+   "total": 235,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "GSW",
+   "home": "OKC",
+   "score": {
+    "GSW": 141,
+    "OKC": 139
+   },
+   "ot": "",
+   "total": 280,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "DAL",
+   "home": "DEN",
+   "score": {
+    "DAL": 114,
+    "DEN": 125
+   },
+   "ot": "",
+   "total": 239,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-03",
+   "away": "MEM",
+   "home": "POR",
+   "score": {
+    "MEM": 113,
+    "POR": 115
+   },
+   "ot": "OT",
+   "total": 228,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "PHI",
+   "home": "DET",
+   "score": {
+    "PHI": 114,
+    "DET": 106
+   },
+   "ot": "",
+   "total": 220,
+   "line": 224.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "CHA",
+   "home": "WAS",
+   "score": {
+    "CHA": 124,
+    "WAS": 117
+   },
+   "ot": "",
+   "total": 241,
+   "line": 240.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "BKN",
+   "home": "BOS",
+   "score": {
+    "BKN": 107,
+    "BOS": 121
+   },
+   "ot": "",
+   "total": 228,
+   "line": 229.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "NOP",
+   "home": "HOU",
+   "score": {
+    "NOP": 101,
+    "HOU": 104
+   },
+   "ot": "",
+   "total": 205,
+   "line": 219.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "UTA",
+   "home": "MEM",
+   "score": {
+    "UTA": 127,
+    "MEM": 121
+   },
+   "ot": "",
+   "total": 248,
+   "line": 230.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "MIN",
+   "home": "SAS",
+   "score": {
+    "MIN": 117,
+    "SAS": 110
+   },
+   "ot": "",
+   "total": 227,
+   "line": 225.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "LAC",
+   "home": "DAL",
+   "score": {
+    "LAC": 126,
+    "DAL": 144
+   },
+   "ot": "",
+   "total": 270,
+   "line": 236.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "LAL",
+   "home": "PHX",
+   "score": {
+    "LAL": 122,
+    "PHX": 119
+   },
+   "ot": "",
+   "total": 241,
+   "line": 225.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-10",
+   "away": "OKC",
+   "home": "SAC",
+   "score": {
+    "OKC": 98,
+    "SAC": 105
+   },
+   "ot": "",
+   "total": 203,
+   "line": 232.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "MIA",
+   "home": "CHA",
+   "score": {
+    "MIA": 111,
+    "CHA": 105
+   },
+   "ot": "",
+   "total": 216,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "ATL",
+   "home": "DET",
+   "score": {
+    "ATL": 126,
+    "DET": 120
+   },
+   "ot": "",
+   "total": 246,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "IND",
+   "home": "PHI",
+   "score": {
+    "IND": 132,
+    "PHI": 126
+   },
+   "ot": "",
+   "total": 258,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "ORL",
+   "home": "BKN",
+   "score": {
+    "ORL": 104,
+    "BKN": 124
+   },
+   "ot": "",
+   "total": 228,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "SAS",
+   "home": "OKC",
+   "score": {
+    "SAS": 87,
+    "OKC": 123
+   },
+   "ot": "",
+   "total": 210,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "DAL",
+   "home": "NOP",
+   "score": {
+    "DAL": 110,
+    "NOP": 131
+   },
+   "ot": "",
+   "total": 241,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "POR",
+   "home": "UTA",
+   "score": {
+    "POR": 99,
+    "UTA": 115
+   },
+   "ot": "",
+   "total": 214,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "LAC",
+   "home": "DEN",
+   "score": {
+    "LAC": 108,
+    "DEN": 111
+   },
+   "ot": "",
+   "total": 219,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "MIN",
+   "home": "GSW",
+   "score": {
+    "MIN": 104,
+    "GSW": 101
+   },
+   "ot": "",
+   "total": 205,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-14",
+   "away": "MEM",
+   "home": "LAL",
+   "score": {
+    "MEM": 107,
+    "LAL": 134
+   },
+   "ot": "",
+   "total": 241,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "MIL",
+   "home": "CHA",
+   "score": {
+    "MIL": 130,
+    "CHA": 99
+   },
+   "ot": "",
+   "total": 229,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "NYK",
+   "home": "WAS",
+   "score": {
+    "NYK": 120,
+    "WAS": 99
+   },
+   "ot": "",
+   "total": 219,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "PHI",
+   "home": "ATL",
+   "score": {
+    "PHI": 126,
+    "ATL": 116
+   },
+   "ot": "",
+   "total": 242,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "DET",
+   "home": "CLE",
+   "score": {
+    "DET": 100,
+    "CLE": 108
+   },
+   "ot": "",
+   "total": 208,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "SAC",
+   "home": "SAS",
+   "score": {
+    "SAC": 129,
+    "SAS": 120
+   },
+   "ot": "",
+   "total": 249,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "BOS",
+   "home": "TOR",
+   "score": {
+    "BOS": 108,
+    "TOR": 105
+   },
+   "ot": "",
+   "total": 213,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "ORL",
+   "home": "CHI",
+   "score": {
+    "ORL": 103,
+    "CHI": 97
+   },
+   "ot": "",
+   "total": 200,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "DEN",
+   "home": "NOP",
+   "score": {
+    "DEN": 110,
+    "NOP": 115
+   },
+   "ot": "",
+   "total": 225,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "LAL",
+   "home": "POR",
+   "score": {
+    "LAL": 107,
+    "POR": 95
+   },
+   "ot": "",
+   "total": 202,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "PHX",
+   "home": "UTA",
+   "score": {
+    "PHX": 131,
+    "UTA": 128
+   },
+   "ot": "",
+   "total": 259,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-17",
+   "away": "HOU",
+   "home": "LAC",
+   "score": {
+    "HOU": 100,
+    "LAC": 106
+   },
+   "ot": "",
+   "total": 206,
+   "line": null,
+   "ou": null,
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-21",
+   "away": "TOR",
+   "home": "ORL",
+   "score": {
+    "TOR": 107,
+    "ORL": 126
+   },
+   "ot": "",
+   "total": 233,
+   "line": 215.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-21",
+   "away": "IND",
+   "home": "ATL",
+   "score": {
+    "IND": 157,
+    "ATL": 152
+   },
+   "ot": "",
+   "total": 309,
+   "line": 253.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-21",
+   "away": "CLE",
+   "home": "PHI",
+   "score": {
+    "CLE": 122,
+    "PHI": 119
+   },
+   "ot": "OT",
+   "total": 241,
+   "line": 218.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-21",
+   "away": "POR",
+   "home": "PHX",
+   "score": {
+    "POR": 107,
+    "PHX": 120
+   },
+   "ot": "",
+   "total": 227,
+   "line": 223.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-21",
+   "away": "UTA",
+   "home": "LAL",
+   "score": {
+    "UTA": 99,
+    "LAL": 131
+   },
+   "ot": "",
+   "total": 230,
+   "line": 239.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "BOS",
+   "home": "ORL",
+   "score": {
+    "BOS": 96,
+    "ORL": 113
+   },
+   "ot": "",
+   "total": 209,
+   "line": 221.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "PHX",
+   "home": "MEM",
+   "score": {
+    "PHX": 110,
+    "MEM": 89
+   },
+   "ot": "",
+   "total": 199,
+   "line": 221.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "MIA",
+   "home": "NYK",
+   "score": {
+    "MIA": 98,
+    "NYK": 100
+   },
+   "ot": "",
+   "total": 198,
+   "line": 210.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "CHI",
+   "home": "TOR",
+   "score": {
+    "CHI": 108,
+    "TOR": 121
+   },
+   "ot": "",
+   "total": 229,
+   "line": 218.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "WAS",
+   "home": "MIL",
+   "score": {
+    "WAS": 128,
+    "MIL": 131
+   },
+   "ot": "",
+   "total": 259,
+   "line": 248.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "SAC",
+   "home": "MIN",
+   "score": {
+    "SAC": 124,
+    "MIN": 111
+   },
+   "ot": "",
+   "total": 235,
+   "line": 230.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "DEN",
+   "home": "HOU",
+   "score": {
+    "DEN": 86,
+    "HOU": 105
+   },
+   "ot": "",
+   "total": 191,
+   "line": 216.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "DET",
+   "home": "IND",
+   "score": {
+    "DET": 113,
+    "IND": 136
+   },
+   "ot": "",
+   "total": 249,
+   "line": 246.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "SAS",
+   "home": "GSW",
+   "score": {
+    "SAS": 112,
+    "GSW": 118
+   },
+   "ot": "",
+   "total": 230,
+   "line": 236.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-24",
+   "away": "NOP",
+   "home": "LAC",
+   "score": {
+    "NOP": 116,
+    "LAC": 106
+   },
+   "ot": "",
+   "total": 222,
+   "line": 228.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "CHA",
+   "home": "NYK",
+   "score": {
+    "CHA": 91,
+    "NYK": 115
+   },
+   "ot": "",
+   "total": 206,
+   "line": 220.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "MIL",
+   "home": "MIA",
+   "score": {
+    "MIL": 131,
+    "MIA": 124
+   },
+   "ot": "",
+   "total": 255,
+   "line": 230.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "ATL",
+   "home": "CLE",
+   "score": {
+    "ATL": 105,
+    "CLE": 128
+   },
+   "ot": "",
+   "total": 233,
+   "line": 238.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "CHI",
+   "home": "BOS",
+   "score": {
+    "CHI": 97,
+    "BOS": 124
+   },
+   "ot": "",
+   "total": 221,
+   "line": 220.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "TOR",
+   "home": "BKN",
+   "score": {
+    "TOR": 103,
+    "BKN": 115
+   },
+   "ot": "",
+   "total": 218,
+   "line": 223.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "OKC",
+   "home": "MIN",
+   "score": {
+    "OKC": 103,
+    "MIN": 106
+   },
+   "ot": "",
+   "total": 209,
+   "line": 228.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "HOU",
+   "home": "DAL",
+   "score": {
+    "HOU": 115,
+    "DAL": 121
+   },
+   "ot": "",
+   "total": 236,
+   "line": 227.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2023-24",
+   "date": "2023-11-28",
+   "away": "GSW",
+   "home": "SAC",
+   "score": {
+    "GSW": 123,
+    "SAC": 124
+   },
+   "ot": "",
+   "total": 247,
+   "line": 237.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "ATL",
+   "home": "BOS",
+   "score": {
+    "ATL": 117,
+    "BOS": 116
+   },
+   "ot": "",
+   "total": 233,
+   "line": 225.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "MIA",
+   "home": "DET",
+   "score": {
+    "MIA": 121,
+    "DET": 123
+   },
+   "ot": "OT",
+   "total": 244,
+   "line": 214.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "CHA",
+   "home": "ORL",
+   "score": {
+    "CHA": 89,
+    "ORL": 114
+   },
+   "ot": "",
+   "total": 203,
+   "line": 213.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "NYK",
+   "home": "PHI",
+   "score": {
+    "NYK": 111,
+    "PHI": 99
+   },
+   "ot": "",
+   "total": 210,
+   "line": 213.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "TOR",
+   "home": "MIL",
+   "score": {
+    "TOR": 85,
+    "MIL": 99
+   },
+   "ot": "",
+   "total": 184,
+   "line": 226.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "PHX",
+   "home": "UTA",
+   "score": {
+    "PHX": 120,
+    "UTA": 112
+   },
+   "ot": "",
+   "total": 232,
+   "line": 230.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "DAL",
+   "home": "GSW",
+   "score": {
+    "DAL": 117,
+    "GSW": 120
+   },
+   "ot": "",
+   "total": 237,
+   "line": 234.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-12",
+   "away": "MIN",
+   "home": "POR",
+   "score": {
+    "MIN": 108,
+    "POR": 122
+   },
+   "ot": "",
+   "total": 230,
+   "line": 222.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "MIA",
+   "home": "IND",
+   "score": {
+    "MIA": 124,
+    "IND": 111
+   },
+   "ot": "",
+   "total": 235,
+   "line": 228.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "PHI",
+   "home": "ORL",
+   "score": {
+    "PHI": 86,
+    "ORL": 98
+   },
+   "ot": "",
+   "total": 184,
+   "line": 209.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "DET",
+   "home": "TOR",
+   "score": {
+    "DET": 99,
+    "TOR": 95
+   },
+   "ot": "",
+   "total": 194,
+   "line": 225.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "WAS",
+   "home": "ATL",
+   "score": {
+    "WAS": 117,
+    "ATL": 129
+   },
+   "ot": "",
+   "total": 246,
+   "line": 241.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "CHI",
+   "home": "CLE",
+   "score": {
+    "CHI": 126,
+    "CLE": 144
+   },
+   "ot": "",
+   "total": 270,
+   "line": 239.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "BKN",
+   "home": "NYK",
+   "score": {
+    "BKN": 122,
+    "NYK": 124
+   },
+   "ot": "",
+   "total": 246,
+   "line": 214.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "LAL",
+   "home": "SAS",
+   "score": {
+    "LAL": 120,
+    "SAS": 115
+   },
+   "ot": "",
+   "total": 235,
+   "line": 228.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "LAC",
+   "home": "HOU",
+   "score": {
+    "LAC": 104,
+    "HOU": 125
+   },
+   "ot": "",
+   "total": 229,
+   "line": 215.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "DEN",
+   "home": "NOP",
+   "score": {
+    "DEN": 94,
+    "NOP": 101
+   },
+   "ot": "",
+   "total": 195,
+   "line": 217.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "PHX",
+   "home": "OKC",
+   "score": {
+    "PHX": 83,
+    "OKC": 99
+   },
+   "ot": "",
+   "total": 182,
+   "line": 228.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "MEM",
+   "home": "GSW",
+   "score": {
+    "MEM": 118,
+    "GSW": 123
+   },
+   "ot": "",
+   "total": 241,
+   "line": 236.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-15",
+   "away": "MIN",
+   "home": "SAC",
+   "score": {
+    "MIN": 130,
+    "SAC": 126
+   },
+   "ot": "OT",
+   "total": 256,
+   "line": 221.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "CLE",
+   "home": "BOS",
+   "score": {
+    "CLE": 117,
+    "BOS": 120
+   },
+   "ot": "",
+   "total": 237,
+   "line": 234.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "CHA",
+   "home": "BKN",
+   "score": {
+    "CHA": 115,
+    "BKN": 116
+   },
+   "ot": "",
+   "total": 231,
+   "line": 219.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "DEN",
+   "home": "MEM",
+   "score": {
+    "DEN": 122,
+    "MEM": 110
+   },
+   "ot": "",
+   "total": 232,
+   "line": 224.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "NOP",
+   "home": "DAL",
+   "score": {
+    "NOP": 91,
+    "DAL": 132
+   },
+   "ot": "",
+   "total": 223,
+   "line": 223.0,
+   "ou": "push",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "OKC",
+   "home": "SAS",
+   "score": {
+    "OKC": 104,
+    "SAS": 110
+   },
+   "ot": "",
+   "total": 214,
+   "line": 222.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-19",
+   "away": "UTA",
+   "home": "LAL",
+   "score": {
+    "UTA": 118,
+    "LAL": 124
+   },
+   "ot": "",
+   "total": 242,
+   "line": 234.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "BKN",
+   "home": "PHI",
+   "score": {
+    "BKN": 98,
+    "PHI": 113
+   },
+   "ot": "",
+   "total": 211,
+   "line": 214.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "BOS",
+   "home": "WAS",
+   "score": {
+    "BOS": 108,
+    "WAS": 96
+   },
+   "ot": "",
+   "total": 204,
+   "line": 238.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "GSW",
+   "home": "NOP",
+   "score": {
+    "GSW": 112,
+    "NOP": 108
+   },
+   "ot": "",
+   "total": 220,
+   "line": 221.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "ATL",
+   "home": "CHI",
+   "score": {
+    "ATL": 122,
+    "CHI": 136
+   },
+   "ot": "",
+   "total": 258,
+   "line": 246.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "IND",
+   "home": "MIL",
+   "score": {
+    "IND": 117,
+    "MIL": 129
+   },
+   "ot": "",
+   "total": 246,
+   "line": 235.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "POR",
+   "home": "HOU",
+   "score": {
+    "POR": 88,
+    "HOU": 116
+   },
+   "ot": "",
+   "total": 204,
+   "line": 226.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "DAL",
+   "home": "DEN",
+   "score": {
+    "DAL": 123,
+    "DEN": 120
+   },
+   "ot": "",
+   "total": 243,
+   "line": 229.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-22",
+   "away": "SAC",
+   "home": "LAC",
+   "score": {
+    "SAC": 88,
+    "LAC": 104
+   },
+   "ot": "",
+   "total": 192,
+   "line": 217.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-26",
+   "away": "CHI",
+   "home": "WAS",
+   "score": {
+    "CHI": 127,
+    "WAS": 108
+   },
+   "ot": "",
+   "total": 235,
+   "line": 243.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-26",
+   "away": "MIL",
+   "home": "MIA",
+   "score": {
+    "MIL": 106,
+    "MIA": 103
+   },
+   "ot": "",
+   "total": 209,
+   "line": 222.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-26",
+   "away": "HOU",
+   "home": "MIN",
+   "score": {
+    "HOU": 117,
+    "MIN": 111
+   },
+   "ot": "OT",
+   "total": 228,
+   "line": 220.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-26",
+   "away": "SAS",
+   "home": "UTA",
+   "score": {
+    "SAS": 128,
+    "UTA": 115
+   },
+   "ot": "",
+   "total": 243,
+   "line": 224.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-26",
+   "away": "LAL",
+   "home": "PHX",
+   "score": {
+    "LAL": 100,
+    "PHX": 127
+   },
+   "ot": "",
+   "total": 227,
+   "line": 234.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "NYK",
+   "home": "CHA",
+   "score": {
+    "NYK": 99,
+    "CHA": 98
+   },
+   "ot": "",
+   "total": 197,
+   "line": 220.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "CLE",
+   "home": "ATL",
+   "score": {
+    "CLE": 101,
+    "ATL": 117
+   },
+   "ot": "",
+   "total": 218,
+   "line": 243.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "NOP",
+   "home": "MEM",
+   "score": {
+    "NOP": 109,
+    "MEM": 120
+   },
+   "ot": "",
+   "total": 229,
+   "line": 232.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "LAC",
+   "home": "MIN",
+   "score": {
+    "LAC": 92,
+    "MIN": 93
+   },
+   "ot": "",
+   "total": 185,
+   "line": 212.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "ORL",
+   "home": "BKN",
+   "score": {
+    "ORL": 123,
+    "BKN": 100
+   },
+   "ot": "",
+   "total": 223,
+   "line": 207.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "BOS",
+   "home": "CHI",
+   "score": {
+    "BOS": 138,
+    "CHI": 129
+   },
+   "ot": "",
+   "total": 267,
+   "line": 243.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "DET",
+   "home": "IND",
+   "score": {
+    "DET": 130,
+    "IND": 106
+   },
+   "ot": "",
+   "total": 236,
+   "line": 230.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "TOR",
+   "home": "MIA",
+   "score": {
+    "TOR": 111,
+    "MIA": 121
+   },
+   "ot": "",
+   "total": 232,
+   "line": 220.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "SAC",
+   "home": "POR",
+   "score": {
+    "SAC": 106,
+    "POR": 115
+   },
+   "ot": "",
+   "total": 221,
+   "line": 225.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-11-29",
+   "away": "OKC",
+   "home": "LAL",
+   "score": {
+    "OKC": 101,
+    "LAL": 93
+   },
+   "ot": "",
+   "total": 194,
+   "line": 230.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "WAS",
+   "home": "CLE",
+   "score": {
+    "WAS": 87,
+    "CLE": 118
+   },
+   "ot": "",
+   "total": 205,
+   "line": 234.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "PHI",
+   "home": "CHA",
+   "score": {
+    "PHI": 110,
+    "CHA": 104
+   },
+   "ot": "",
+   "total": 214,
+   "line": 211.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "MIL",
+   "home": "DET",
+   "score": {
+    "MIL": 128,
+    "DET": 107
+   },
+   "ot": "",
+   "total": 235,
+   "line": 222.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "IND",
+   "home": "TOR",
+   "score": {
+    "IND": 111,
+    "TOR": 122
+   },
+   "ot": "",
+   "total": 233,
+   "line": 237.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "ORL",
+   "home": "NYK",
+   "score": {
+    "ORL": 106,
+    "NYK": 121
+   },
+   "ot": "",
+   "total": 227,
+   "line": 214.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "UTA",
+   "home": "OKC",
+   "score": {
+    "UTA": 106,
+    "OKC": 133
+   },
+   "ot": "",
+   "total": 239,
+   "line": 224.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "MEM",
+   "home": "DAL",
+   "score": {
+    "MEM": 116,
+    "DAL": 121
+   },
+   "ot": "",
+   "total": 237,
+   "line": 245.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "SAS",
+   "home": "PHX",
+   "score": {
+    "SAS": 93,
+    "PHX": 104
+   },
+   "ot": "",
+   "total": 197,
+   "line": 228.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "GSW",
+   "home": "DEN",
+   "score": {
+    "GSW": 115,
+    "DEN": 119
+   },
+   "ot": "",
+   "total": 234,
+   "line": 237.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "HOU",
+   "home": "SAC",
+   "score": {
+    "HOU": 111,
+    "SAC": 120
+   },
+   "ot": "",
+   "total": 231,
+   "line": 230.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2024-25",
+   "date": "2024-12-03",
+   "away": "POR",
+   "home": "LAC",
+   "score": {
+    "POR": 105,
+    "LAC": 127
+   },
+   "ot": "",
+   "total": 232,
+   "line": 221.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "ATL",
+   "home": "IND",
+   "score": {
+    "ATL": 128,
+    "IND": 108
+   },
+   "ot": "",
+   "total": 236,
+   "line": 232.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "BOS",
+   "home": "PHI",
+   "score": {
+    "BOS": 109,
+    "PHI": 108
+   },
+   "ot": "",
+   "total": 217,
+   "line": 233.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "TOR",
+   "home": "CLE",
+   "score": {
+    "TOR": 112,
+    "CLE": 101
+   },
+   "ot": "",
+   "total": 213,
+   "line": 237.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "NYK",
+   "home": "CHI",
+   "score": {
+    "NYK": 125,
+    "CHI": 135
+   },
+   "ot": "",
+   "total": 260,
+   "line": 233.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "LAL",
+   "home": "MEM",
+   "score": {
+    "LAL": 117,
+    "MEM": 112
+   },
+   "ot": "",
+   "total": 229,
+   "line": 238.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "UTA",
+   "home": "PHX",
+   "score": {
+    "UTA": 96,
+    "PHX": 118
+   },
+   "ot": "",
+   "total": 214,
+   "line": 237.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "DEN",
+   "home": "POR",
+   "score": {
+    "DEN": 107,
+    "POR": 109
+   },
+   "ot": "",
+   "total": 216,
+   "line": 240.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-10-31",
+   "away": "NOP",
+   "home": "LAC",
+   "score": {
+    "NOP": 124,
+    "LAC": 126
+   },
+   "ot": "",
+   "total": 250,
+   "line": 223.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "BOS",
+   "home": "ORL",
+   "score": {
+    "BOS": 110,
+    "ORL": 123
+   },
+   "ot": "",
+   "total": 233,
+   "line": 226.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "CLE",
+   "home": "WAS",
+   "score": {
+    "CLE": 148,
+    "WAS": 115
+   },
+   "ot": "",
+   "total": 263,
+   "line": 240.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "TOR",
+   "home": "ATL",
+   "score": {
+    "TOR": 109,
+    "ATL": 97
+   },
+   "ot": "",
+   "total": 206,
+   "line": 235.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "HOU",
+   "home": "SAS",
+   "score": {
+    "HOU": 110,
+    "SAS": 121
+   },
+   "ot": "",
+   "total": 231,
+   "line": 225.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "DET",
+   "home": "BKN",
+   "score": {
+    "DET": 125,
+    "BKN": 107
+   },
+   "ot": "",
+   "total": 232,
+   "line": 227.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "DAL",
+   "home": "MEM",
+   "score": {
+    "DAL": 104,
+    "MEM": 118
+   },
+   "ot": "",
+   "total": 222,
+   "line": 233.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "CHI",
+   "home": "MIL",
+   "score": {
+    "CHI": 110,
+    "MIL": 126
+   },
+   "ot": "",
+   "total": 236,
+   "line": 240.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "CHA",
+   "home": "MIA",
+   "score": {
+    "CHA": 108,
+    "MIA": 126
+   },
+   "ot": "",
+   "total": 234,
+   "line": 235.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "UTA",
+   "home": "MIN",
+   "score": {
+    "UTA": 97,
+    "MIN": 137
+   },
+   "ot": "",
+   "total": 234,
+   "line": 233.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "GSW",
+   "home": "DEN",
+   "score": {
+    "GSW": 104,
+    "DEN": 129
+   },
+   "ot": "",
+   "total": 233,
+   "line": 230.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-07",
+   "away": "OKC",
+   "home": "SAC",
+   "score": {
+    "OKC": 132,
+    "SAC": 101
+   },
+   "ot": "",
+   "total": 233,
+   "line": 234.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "MIA",
+   "home": "NYK",
+   "score": {
+    "MIA": 132,
+    "NYK": 140
+   },
+   "ot": "",
+   "total": 272,
+   "line": 240.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "BKN",
+   "home": "ORL",
+   "score": {
+    "BKN": 98,
+    "ORL": 105
+   },
+   "ot": "",
+   "total": 203,
+   "line": 225.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "PHI",
+   "home": "DET",
+   "score": {
+    "PHI": 105,
+    "DET": 114
+   },
+   "ot": "",
+   "total": 219,
+   "line": 228.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "CHA",
+   "home": "MIL",
+   "score": {
+    "CHA": 134,
+    "MIL": 147
+   },
+   "ot": "OT",
+   "total": 281,
+   "line": 238.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "LAL",
+   "home": "NOP",
+   "score": {
+    "LAL": 118,
+    "NOP": 104
+   },
+   "ot": "",
+   "total": 222,
+   "line": 227.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "POR",
+   "home": "HOU",
+   "score": {
+    "POR": 116,
+    "HOU": 140
+   },
+   "ot": "",
+   "total": 256,
+   "line": 236.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "SAC",
+   "home": "MIN",
+   "score": {
+    "SAC": 110,
+    "MIN": 124
+   },
+   "ot": "",
+   "total": 234,
+   "line": 240.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "LAC",
+   "home": "DAL",
+   "score": {
+    "LAC": 133,
+    "DAL": 127
+   },
+   "ot": "2OT",
+   "total": 260,
+   "line": 221.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-14",
+   "away": "GSW",
+   "home": "SAS",
+   "score": {
+    "GSW": 109,
+    "SAS": 108
+   },
+   "ot": "",
+   "total": 217,
+   "line": 233.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "IND",
+   "home": "CLE",
+   "score": {
+    "IND": 109,
+    "CLE": 120
+   },
+   "ot": "",
+   "total": 229,
+   "line": 242.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "WAS",
+   "home": "TOR",
+   "score": {
+    "WAS": 110,
+    "TOR": 140
+   },
+   "ot": "",
+   "total": 250,
+   "line": 238.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "BKN",
+   "home": "BOS",
+   "score": {
+    "BKN": 113,
+    "BOS": 105
+   },
+   "ot": "",
+   "total": 218,
+   "line": 222.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "MIA",
+   "home": "CHI",
+   "score": {
+    "MIA": 143,
+    "CHI": 107
+   },
+   "ot": "",
+   "total": 250,
+   "line": 249.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "NOP",
+   "home": "DAL",
+   "score": {
+    "NOP": 115,
+    "DAL": 118
+   },
+   "ot": "",
+   "total": 233,
+   "line": 234.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "MIN",
+   "home": "PHX",
+   "score": {
+    "MIN": 113,
+    "PHX": 114
+   },
+   "ot": "",
+   "total": 227,
+   "line": 231.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "DEN",
+   "home": "HOU",
+   "score": {
+    "DEN": 112,
+    "HOU": 109
+   },
+   "ot": "",
+   "total": 221,
+   "line": 234.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "OKC",
+   "home": "UTA",
+   "score": {
+    "OKC": 144,
+    "UTA": 112
+   },
+   "ot": "",
+   "total": 256,
+   "line": 233.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-21",
+   "away": "POR",
+   "home": "GSW",
+   "score": {
+    "POR": 127,
+    "GSW": 123
+   },
+   "ot": "",
+   "total": 250,
+   "line": 237.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-25",
+   "away": "ATL",
+   "home": "WAS",
+   "score": {
+    "ATL": 113,
+    "WAS": 132
+   },
+   "ot": "",
+   "total": 245,
+   "line": 240.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-25",
+   "away": "ORL",
+   "home": "PHI",
+   "score": {
+    "ORL": 144,
+    "PHI": 103
+   },
+   "ot": "",
+   "total": 247,
+   "line": 229.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-25",
+   "away": "LAC",
+   "home": "LAL",
+   "score": {
+    "LAC": 118,
+    "LAL": 135
+   },
+   "ot": "",
+   "total": 253,
+   "line": 228.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "DET",
+   "home": "BOS",
+   "score": {
+    "DET": 114,
+    "BOS": 117
+   },
+   "ot": "",
+   "total": 231,
+   "line": 233.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "NYK",
+   "home": "CHA",
+   "score": {
+    "NYK": 129,
+    "CHA": 101
+   },
+   "ot": "",
+   "total": 230,
+   "line": 242.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "MIL",
+   "home": "MIA",
+   "score": {
+    "MIL": 103,
+    "MIA": 106
+   },
+   "ot": "",
+   "total": 209,
+   "line": 237.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "IND",
+   "home": "TOR",
+   "score": {
+    "IND": 95,
+    "TOR": 97
+   },
+   "ot": "",
+   "total": 192,
+   "line": 234.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "MIN",
+   "home": "OKC",
+   "score": {
+    "MIN": 105,
+    "OKC": 113
+   },
+   "ot": "",
+   "total": 218,
+   "line": 226.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "MEM",
+   "home": "NOP",
+   "score": {
+    "MEM": 133,
+    "NOP": 128
+   },
+   "ot": "OT",
+   "total": 261,
+   "line": 235.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "PHX",
+   "home": "SAC",
+   "score": {
+    "PHX": 112,
+    "SAC": 100
+   },
+   "ot": "",
+   "total": 212,
+   "line": 234.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "HOU",
+   "home": "GSW",
+   "score": {
+    "HOU": 104,
+    "GSW": 100
+   },
+   "ot": "",
+   "total": 204,
+   "line": 225.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-26",
+   "away": "SAS",
+   "home": "POR",
+   "score": {
+    "SAS": 115,
+    "POR": 102
+   },
+   "ot": "",
+   "total": 217,
+   "line": 239.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "WAS",
+   "home": "IND",
+   "score": {
+    "WAS": 86,
+    "IND": 119
+   },
+   "ot": "",
+   "total": 205,
+   "line": 240.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "CLE",
+   "home": "ATL",
+   "score": {
+    "CLE": 123,
+    "ATL": 130
+   },
+   "ot": "",
+   "total": 253,
+   "line": 236.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "MIL",
+   "home": "NYK",
+   "score": {
+    "MIL": 109,
+    "NYK": 118
+   },
+   "ot": "",
+   "total": 227,
+   "line": 232.0,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "PHI",
+   "home": "BKN",
+   "score": {
+    "PHI": 115,
+    "BKN": 103
+   },
+   "ot": "",
+   "total": 218,
+   "line": 221.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "ORL",
+   "home": "DET",
+   "score": {
+    "ORL": 112,
+    "DET": 109
+   },
+   "ot": "",
+   "total": 221,
+   "line": 230.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "CHI",
+   "home": "CHA",
+   "score": {
+    "CHI": 116,
+    "CHA": 123
+   },
+   "ot": "",
+   "total": 239,
+   "line": 249.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "SAC",
+   "home": "UTA",
+   "score": {
+    "SAC": 119,
+    "UTA": 128
+   },
+   "ot": "",
+   "total": 247,
+   "line": 242.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "SAS",
+   "home": "DEN",
+   "score": {
+    "SAS": 139,
+    "DEN": 136
+   },
+   "ot": "",
+   "total": 275,
+   "line": 239.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "PHX",
+   "home": "OKC",
+   "score": {
+    "PHX": 119,
+    "OKC": 123
+   },
+   "ot": "",
+   "total": 242,
+   "line": 223.0,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "DAL",
+   "home": "LAL",
+   "score": {
+    "DAL": 119,
+    "LAL": 129
+   },
+   "ot": "",
+   "total": 248,
+   "line": 232.5,
+   "ou": "over",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-11-28",
+   "away": "MEM",
+   "home": "LAC",
+   "score": {
+    "MEM": 112,
+    "LAC": 107
+   },
+   "ot": "",
+   "total": 219,
+   "line": 224.5,
+   "ou": "under",
+   "round": "Fase de grupos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-09",
+   "away": "MIA",
+   "home": "ORL",
+   "score": {
+    "MIA": 108,
+    "ORL": 117
+   },
+   "ot": "",
+   "total": 225,
+   "line": null,
+   "ou": null,
+   "round": "Cuartos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-09",
+   "away": "NYK",
+   "home": "TOR",
+   "score": {
+    "NYK": 117,
+    "TOR": 101
+   },
+   "ot": "",
+   "total": 218,
+   "line": null,
+   "ou": null,
+   "round": "Cuartos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-10",
+   "away": "PHX",
+   "home": "OKC",
+   "score": {
+    "PHX": 89,
+    "OKC": 138
+   },
+   "ot": "",
+   "total": 227,
+   "line": null,
+   "ou": null,
+   "round": "Cuartos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-10",
+   "away": "SAS",
+   "home": "LAL",
+   "score": {
+    "SAS": 132,
+    "LAL": 119
+   },
+   "ot": "",
+   "total": 251,
+   "line": null,
+   "ou": null,
+   "round": "Cuartos"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-13",
+   "away": "NYK",
+   "home": "ORL",
+   "score": {
+    "NYK": 132,
+    "ORL": 120
+   },
+   "ot": "",
+   "total": 252,
+   "line": null,
+   "ou": null,
+   "round": "Semifinal (Las Vegas)"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-13",
+   "away": "SAS",
+   "home": "OKC",
+   "score": {
+    "SAS": 111,
+    "OKC": 109
+   },
+   "ot": "",
+   "total": 220,
+   "line": null,
+   "ou": null,
+   "round": "Semifinal (Las Vegas)"
+  },
+  {
+   "season": "2025-26",
+   "date": "2025-12-16",
+   "away": "SAS",
+   "home": "NYK",
+   "score": {
+    "SAS": 113,
+    "NYK": 124
+   },
+   "ot": "",
+   "total": 237,
+   "line": null,
+   "ou": null,
+   "round": "Final (Las Vegas)"
+  }
+ ],
+ "pooled": {
+  "cup": {
+   "games": 120,
+   "avg_total": 228.9,
+   "n": 120,
+   "over": 58,
+   "under": 61,
+   "vs_line": -1.1
+  },
+  "regular": {
+   "games": 432,
+   "avg_total": 229.9
+  },
+  "regular_lines": {
+   "n": 127,
+   "over": 67,
+   "under": 60,
+   "vs_line": 0.6
+  },
+  "opening": {
+   "games": 16,
+   "over": 8,
+   "under": 8
+  },
+  "cup_minus_regular": -1.2
+ },
+ "model_total_adj": 0.0
+}

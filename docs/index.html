@@ -608,7 +608,7 @@ function renderIndex(scope = "reg") {
   const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
-    $("#app").innerHTML = INTRO() + CUP_HERO(0) + (older.length ? `<section class="section"><h2>Partidos de Copa anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : "");
+    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + (older.length ? `<section class="section"><h2>Partidos de Copa anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : "");
     return;
   }
   $("#app").innerHTML = `
@@ -634,6 +634,7 @@ function renderIndex(scope = "reg") {
     ${howto}
   </section>
   ${parlaySection(todays, thr)}
+  ${cup ? cupStudy() : ""}
   <section class="section">
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
@@ -844,6 +845,47 @@ function h2hSection(d) {
         ${x.blowout.length ? `<span class="pill flat" style="justify-self:start">Paliza de ${x.blowout.map(esc).join(" y ")}</span>` : ""}</div>`; }).join("")}</div>
   </section>`;
 }
+// Copa: cruces previos de Copa entre ambos equipos y cómo anotó cada uno en la Copa frente a la liga (cup/history.json)
+const ouPill = o => o ? `<span class="pill ${o === "over" ? "value" : o === "under" ? "neg" : "flat"}" style="justify-self:start">${o === "over" ? "Over" : o === "under" ? "Under" : "Push"}</span>` : "";
+const sgn = x => `${x > 0 ? "+" : ""}${x.toFixed(1)}`;
+function cupSection(d) {
+  const C = d.cup; if (!C) return "";
+  const a = d.game.away, h = d.game.home, M = C.meetings;
+  const no = M.filter(x => x.ou === "over").length, nu = M.filter(x => x.ou === "under").length;
+  const rows = [a, h].flatMap(t => Object.entries(C.teams[t] || {}).filter(([, v]) => v).map(([s, v]) => `<tr>
+    <td class="head">${esc(t)} <span class="muted">${esc(s)}</span></td>
+    <td class="r num" data-label="Copa G–P">${v.w}–${v.l}</td>
+    <td class="r num" data-label="Anota (vs liga)">${v.pf} <span class="muted">${sgn(v.pf - v.reg_pf)}</span></td>
+    <td class="r num" data-label="Recibe (vs liga)">${v.pa} <span class="muted">${sgn(v.pa - v.reg_pa)}</span></td>
+    <td class="r num" data-label="Over–Under">${v.over}–${v.under}</td></tr>`)).join("");
+  return `<section class="section">
+    <h2>Precedentes de Copa ${qh("copa", "NBA Cup")}</h2>
+    <p class="lede">${M.length ? `${esc(a)} y ${esc(h)} ya se cruzaron ${M.length === 1 ? "una vez" : M.length + " veces"} en la Copa: ${no} over y ${nu} under frente a la línea de cierre.` : `${esc(a)} y ${esc(h)} no se habían enfrentado nunca en la Copa.`}
+      Con rosters distintos y tan pocos partidos es contexto, no una señal: el modelo ${C.model_total_adj ? `ajusta el total ${sgn(C.model_total_adj)} pts` : "no ajusta el total por ser partido de Copa"} (ver el estudio en la pestaña NBA Cup).</p>
+    ${M.length ? `<div class="h2h-games">${M.map(x => { const t1 = x.away, t2 = x.home, w = x.score[t1] > x.score[t2] ? t1 : t2;
+      return `<div class="h2h-g"><span class="eyebrow">${esc(x.date)} · ${esc(x.round)}${x.ot ? " · " + esc(x.ot) : ""}</span>
+        <div class="sc"><span class="${w === t1 ? "w" : "l"}">${esc(t1)}</span><span class="${w === t1 ? "w" : "l"}">${x.score[t1]}</span>
+        <span class="${w === t2 ? "w" : "l"}">@ ${esc(t2)}</span><span class="${w === t2 ? "w" : "l"}">${x.score[t2]}</span></div>
+        <span class="ld">Total ${x.total}${x.line ? ` · línea ${x.line}` : " · sin línea"}</span>${ouPill(x.ou)}</div>`; }).join("")}</div>` : ""}
+    ${rows ? `<h3>Cada equipo en la fase de grupos</h3>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Equipo</th><th class="r">Copa G–P</th><th class="r">Anota (vs liga)</th><th class="r">Recibe (vs liga)</th><th class="r">Over–Under</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="foot">Puntos por partido en sus 4 partidos de grupo; entre paréntesis, la diferencia con sus partidos de liga regular del mismo tramo de la temporada. Over–Under frente a la línea de cierre.</p>` : ""}
+  </section>`;
+}
+function cupStudy() {
+  const C = INDEX.cup; if (!C) return "";
+  const S = Object.entries(C.seasons), P = C.pooled;
+  return `<section class="section">
+    <h2>¿Hay más puntos en la Copa? ${qh("copa", "NBA Cup")}</h2>
+    <p class="lede">Fase de grupos de las dos últimas Copas (${P.cup.games} partidos) frente a los partidos de liga regular del mismo tramo de cada temporada: la Copa tuvo <b>${sgn(P.cup_minus_regular)} pts por partido</b> y fue ${P.cup.over}–${P.cup.under} al over frente a la línea de cierre (en noches sin Copa: ${P.regular_lines.over}–${P.regular_lines.under}). En la primera jornada de Copa: ${P.opening.over} over y ${P.opening.under} under. No se ve el efecto de más puntos, así que el modelo ${C.model_total_adj ? `ajusta ${sgn(C.model_total_adj)}` : "no ajusta el total"} en los partidos de Copa.</p>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Temporada</th><th class="r">1ª jornada (pts)</th><th class="r">Liga antes</th><th class="r">1ª jornada O–U</th><th class="r">Grupos (pts)</th><th class="r">Liga mismo tramo</th><th class="r">Grupos O–U</th></tr></thead><tbody>
+      ${S.map(([s, x]) => `<tr><td class="head">${esc(s)} <span class="muted">${esc(x.opening.date)}</span></td>
+        <td class="r num" data-label="1ª jornada">${x.opening.avg_total}</td><td class="r num" data-label="Liga antes">${x.opening.reg_before.avg_total}</td>
+        <td class="r num" data-label="1ª jornada O–U">${x.opening.over}–${x.opening.under}</td><td class="r num" data-label="Grupos">${x.group.avg_total}</td>
+        <td class="r num" data-label="Liga mismo tramo">${x.regular.avg_total}</td><td class="r num" data-label="Grupos O–U">${x.group.over}–${x.group.under}</td></tr>`).join("")}
+    </tbody></table></div>
+  </section>`;
+}
 function h2hCell(d, p, k, line) {
   const L = d.h2h?.players?.[p.name];
   if (!L) return '<span class="muted">—</span>';
@@ -900,6 +942,7 @@ async function renderGame(id) {
       <tr><td>Total de puntos (rango 10–90%)</td><td class="r num">${s.total_pcts[10]} – ${s.total_pcts[90]}</td></tr></table></section>
   </div>
   ${mvSection(d)}
+  ${cupSection(d)}
   ${h2hSection(d)}
   <section class="section">
     <h2>Player props proyectados ${qh("props", "player props")}</h2>
@@ -1005,6 +1048,8 @@ const GUIDE = [
     <dt>Casa</dt><dd>La línea y la cuota de la casa, si la publicó, con su EV.</dd>
     <dt>Real</dt><dd>Lo que hizo de verdad, cuando el partido ya se jugó.</dd></dl>
     <p>Arriba eliges la estadística (puntos, rebotes, asistencias, triples, PRA) y el equipo.</p>`],
+  ["copa", "NBA Cup", "Partidos de la NBA Cup", () => `<p>Los partidos de la fase de grupos de la Copa cuentan para la liga regular, pero en la web van en su propia pestaña. En cada partido de Copa verás los <b>precedentes de Copa</b>: las veces que esos dos equipos ya se cruzaron en la Copa (2023-24 a 2025-26), con el total de puntos frente a la línea de cierre, y cómo anotó y recibió cada equipo en sus partidos de Copa comparado con sus partidos de liga del mismo tramo.</p>
+    <p>En el inicio de la pestaña está el estudio de si la Copa tiene más puntos: en las dos últimas temporadas no fue así (ni en la primera jornada ni en toda la fase de grupos), así que el modelo simula los partidos de Copa igual que los de liga.</p>`],
   ["historial", "Resultados", "Cómo le ha ido al modelo", () => `<p>Cada jornada, los picks con valor publicados antes de los partidos se liquidan con el resultado real.</p>
     <dl><dt>Ganador acertado</dt><dd>En cuántos partidos el favorito del modelo ganó.</dd>
     <dt>Unidades</dt><dd>Ganancia o pérdida apostando 1 unidad (la misma cantidad) a cada pick con la cuota promedio. +2.50 u = se ganó 2.5 veces lo que se apuesta a cada pick.</dd></dl>
