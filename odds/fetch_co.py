@@ -30,8 +30,22 @@ TEAMS = {
     "Phoenix Suns": "PHX", "Portland Trail Blazers": "POR", "Sacramento Kings": "SAC", "San Antonio Spurs": "SAS",
     "Toronto Raptors": "TOR", "Utah Jazz": "UTA", "Washington Wizards": "WAS",
 }
-PROP_STATS = [("points, rebounds & assists", "pra"), ("3-point field goals made", "fg3m"), ("points scored", "pts"),
-              ("rebounds by", "reb"), ("assists by", "ast")]  # por prefijo: "Points & Rebounds" etc. no entran
+# mercado de jugador -> estadística del modelo, por palabras clave en orden (las combinadas antes que sus partes)
+PROP_STATS = [(("points", "rebounds", "assists"), "pra"), (("points", "rebounds"), "pr"), (("points", "assists"), "pa"),
+              (("rebounds", "assists"), "ra"), (("steals", "blocks"), "stocks"),
+              (("3-point", "attempt"), "fg3a"), (("three", "attempt"), "fg3a"), (("3-point",), "fg3m"), (("three",), "fg3m"),
+              (("2-point", "attempt"), "fg2a"), (("2-point",), "fg2m"),
+              (("free throw", "attempt"), "fta"), (("free throw",), "ftm"),
+              (("field goal", "attempt"), "fga"), (("field goal",), "fgm"),
+              (("points",), "pts"), (("rebounds",), "reb"), (("assists",), "ast"), (("steals",), "stl"),
+              (("blocks",), "blk"), (("turnovers",), "tov"), (("fouls",), "pf")]
+PROP_SKIP = ("quarter", "half", "1st", "2nd", "3rd", "4th", "first", "double", "triple")
+
+
+def prop_stat(crit):
+    if any(x in crit for x in PROP_SKIP):
+        return None
+    return next((k for words, k in PROP_STATS if all(w in crit for w in words)), None)
 SKIP = ("quarter", "half", "player", "by ", "race", "margin", "odd/even", "3-way", "winning")
 
 
@@ -92,6 +106,30 @@ def even(outs):  # qué tan cerca de cuotas parejas está una línea (para queda
     return abs(outs[0]["odds"] - outs[1]["odds"])
 
 
+UNMAPPED = set()  # mercados de jugador sin estadística conocida (se listan al final para añadirlos)
+
+
+def player_name(n):
+    """Kambi escribe "Tatum, Jayson"; las stats, "Jayson Tatum"."""
+    return " ".join(reversed([x.strip() for x in n.split(",", 1)])) if "," in n else n
+
+
+def to_prop_lines(co):
+    """Props de las casas CO en el formato de slates/<fecha>.json: {jugador: {stat: [línea, over, under]}},
+    con la línea más pareja entre las dos casas (y si coinciden, la mejor cuota de cada lado)."""
+    out = {}
+    for g in co.values():
+        for b in g["books"]:
+            for p in b.get("props", []):
+                cur = out.setdefault(player_name(p["player"]), {}).get(p["stat"])
+                new = [p["line"], p["over"], p["under"]]
+                if cur and cur[0] == new[0]:
+                    new = [new[0], max(cur[1], new[1], key=lambda o: o if o > 0 else 10000 / -o),
+                           max(cur[2], new[2], key=lambda o: o if o > 0 else 10000 / -o)]
+                out[player_name(p["player"])][p["stat"]] = new
+    return out
+
+
 def parse_event(data):
     ev = data["events"][0]
     home, away = team(ev.get("homeName")), team(ev.get("awayName"))
@@ -103,7 +141,9 @@ def parse_event(data):
         typ = (bo.get("betOfferType", {}).get("englishName") or "").lower()
         outs = [o for o in bo.get("outcomes", []) if o.get("status", "OPEN") == "OPEN" and o.get("odds")]
         if "by the player" in crit or ("player" in crit and typ == "over/under"):
-            stat = next((k for s, k in PROP_STATS if crit.startswith(s)), None)
+            stat = prop_stat(crit)
+            if not stat:
+                UNMAPPED.add(crit)
             ov = next((o for o in outs if o.get("type") == "OT_OVER"), None)
             un = next((o for o in outs if o.get("type") == "OT_UNDER"), None)
             if stat and ov and un and ov.get("line") is not None:
@@ -161,6 +201,23 @@ def merge(date, co):
     print(f"mezclado en {path}")
 
 
+def merge_props(date, co):
+    """Añade a slates/<fecha>.json las props CO de estadísticas que no tenían línea (combinadas, robos, tapones...);
+    las que ya tenían línea de varias casas de EE. UU. se quedan como estaban."""
+    path = os.path.join(HERE, "..", "slates", f"{date}.json")
+    sl = json.load(open(path))
+    pl, n = sl.setdefault("prop_lines", {}), 0
+    for name, stats in to_prop_lines(co).items():
+        for st, v in stats.items():
+            if st not in pl.get(name, {}):
+                pl.setdefault(name, {})[st] = v
+                n += 1
+    src = sl.setdefault("sources", {})
+    src["props_co"] = f"Rushbet / BetPlay (Kambi): {n} líneas añadidas"
+    json.dump(sl, open(path, "w"), indent=1, ensure_ascii=False)
+    print(f"{n} props CO añadidas a {path}")
+
+
 if __name__ == "__main__":
     date = sys.argv[1]
     raw_dir = os.path.join(HERE, "co_raw", date)
@@ -172,5 +229,10 @@ if __name__ == "__main__":
     for key, g in co.items():
         for b in g["books"]:
             print(key, b["book"], {k: v for k, v in b.items() if k not in ("book", "region", "props")}, f"{len(b.get('props', []))} props")
+    pl = to_prop_lines(co)
+    from collections import Counter
+    print("props por estadística:", dict(Counter(st for p in pl.values() for st in p)))
+    if UNMAPPED:
+        print("mercados de jugador sin mapear:", sorted(UNMAPPED))
     if "--no-merge" not in sys.argv and co:
         merge(date, co)
