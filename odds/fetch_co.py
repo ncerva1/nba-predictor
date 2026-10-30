@@ -86,7 +86,7 @@ def download(date, raw_dir):
                 except Exception as e:
                     print(f"  {ev.get('englishName', ev['id'])}: {e}")
                 time.sleep(0.3)
-            json.dump(full, open(os.path.join(raw_dir, f"{book}.json"), "w"))
+            json.dump(full, open(os.path.join(raw_dir, f"{book}.json"), "w", encoding="utf-8"))
             break
 
 
@@ -181,7 +181,7 @@ def parse(raw_dir):
     out = {}
     for fn in sorted(os.listdir(raw_dir)):
         book = fn[:-5]
-        for data in json.load(open(os.path.join(raw_dir, fn)))["events"]:
+        for data in json.load(open(os.path.join(raw_dir, fn), encoding="utf-8"))["events"]:
             key, rec = parse_event(data)
             if key and rec:
                 out.setdefault(key, {"books": []})["books"].append(dict(book=book, region="CO", **rec))
@@ -190,31 +190,42 @@ def parse(raw_dir):
 
 def merge(date, co):
     path = os.path.join(HERE, f"{date}.json")
-    od = json.load(open(path)) if os.path.exists(path) else {"date": date, "source": "", "games": {}}
+    od = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {"date": date, "source": "", "games": {}}
     names = {b["book"] for g in co.values() for b in g["books"]}
     for key, g in co.items():
         books = [b for b in od["games"].get(key, {}).get("books", []) if b["book"] not in names]
         od["games"].setdefault(key, {})["books"] = books + g["books"]
     note = f"Casas de Colombia ({', '.join(sorted(names))}) vía Kambi, {datetime.now(BOGOTA):%Y-%m-%d %H:%M} Bogotá"
     od["source"] = " | ".join([s for s in od.get("source", "").split(" | ") if not s.startswith("Casas de Colombia")] + [note]).strip(" |")
-    json.dump(od, open(path, "w"), indent=1, ensure_ascii=False)
+    json.dump(od, open(path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(f"mezclado en {path}")
+
+
+ALIASES = {"alexandre sarr": "alex sarr"}  # nombres que Kambi escribe distinto (ya normalizados)
 
 
 def merge_props(date, co):
     """Añade a slates/<fecha>.json las props CO de estadísticas que no tenían línea (combinadas, robos, tapones...);
     las que ya tenían línea de varias casas de EE. UU. se quedan como estaban."""
+    import csv, unicodedata
+    def norm(x):
+        x = unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().lower().replace(".", "").replace("'", "")
+        x = " ".join(w for w in x.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+        return ALIASES.get(x, x)
     path = os.path.join(HERE, "..", "slates", f"{date}.json")
-    sl = json.load(open(path))
+    sl = json.load(open(path, encoding="utf-8"))
+    cur = os.path.join(HERE, "..", "raw", date, "cur.csv")
+    known = {norm(r["Player"]): r["Player"] for r in csv.DictReader(open(cur, encoding="utf-8"))} if os.path.exists(cur) else {}
     pl, n = sl.setdefault("prop_lines", {}), 0
     for name, stats in to_prop_lines(co).items():
+        name = known.get(norm(name), name)  # "Dennis Schroder" (Kambi) -> "Dennis Schröder" (stats)
         for st, v in stats.items():
             if st not in pl.get(name, {}):
                 pl.setdefault(name, {})[st] = v
                 n += 1
     src = sl.setdefault("sources", {})
     src["props_co"] = f"Rushbet / BetPlay (Kambi): {n} líneas añadidas"
-    json.dump(sl, open(path, "w"), indent=1, ensure_ascii=False)
+    json.dump(sl, open(path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(f"{n} props CO añadidas a {path}")
 
 
@@ -225,7 +236,7 @@ if __name__ == "__main__":
         download(date, raw_dir)
     co = parse(raw_dir)
     os.makedirs(os.path.join(HERE, "co"), exist_ok=True)
-    json.dump({"date": date, "games": co}, open(os.path.join(HERE, "co", f"{date}.json"), "w"), indent=1, ensure_ascii=False)
+    json.dump({"date": date, "games": co}, open(os.path.join(HERE, "co", f"{date}.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     for key, g in co.items():
         for b in g["books"]:
             print(key, b["book"], {k: v for k, v in b.items() if k not in ("book", "region", "props")}, f"{len(b.get('props', []))} props")
