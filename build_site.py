@@ -42,7 +42,7 @@ STAT_LABEL = {"pts": "Puntos", "reb": "Rebotes", "ast": "Asistencias", "fg3m": "
               "pr": "PTS+REB", "pa": "PTS+AST", "ra": "REB+AST", "stl": "Robos", "blk": "Tapones",
               "stocks": "Robos+Tapones", "tov": "Pérdidas", "pf": "Faltas", "fgm": "Tiros de campo anotados",
               "fga": "Tiros de campo intentados", "fg3a": "Triples intentados", "fg2m": "Dobles anotados",
-              "fg2a": "Dobles intentados"}
+              "fg2a": "Dobles intentados", "ftm": "Tiros libres anotados", "fta": "Tiros libres intentados"}
 DEFAULT_ODDS = -110
 VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 
@@ -444,6 +444,29 @@ def cup_view(g):
                 model_total_adj=C.get("model_total_adj", 0.0))
 
 
+def rotation_view(cfg, summ):
+    """Quinteto probable (puesto que cubre cada titular) y rotación estimada: minutos proyectados por el modelo y
+    papel de cada jugador. Los tramos de cada cuarto los dibuja la web con el patrón típico de la NBA."""
+    mins = {p["name"]: p["min"] for p in summ["players"]}
+    g = cfg["game"]
+    out = {}
+    for t in (g["away"], g["home"]):
+        rows = []
+        for p in cfg["players"]:
+            if p["team"] != t:
+                continue
+            m = mins.get(p["name"], p["min"])
+            role = "titular" if p["starter"] else "rotacion" if m >= 18 else "rol" if m >= 8 else "reserva"
+            rows.append(dict(name=p["name"], pos=p["pos"], slot=p.get("slot"), min=round(m, 1), role=role,
+                             p_play=p.get("p_play", 1.0), mpg=p["cur"]["min"]))
+        rows += [dict(name=x["name"], pos=x["pos"], slot=None, min=0.0, role="reserva", mpg=x["min"])
+                 for x in g.get("reserves", {}).get(t, [])]
+        order = {"PG": 0, "SG": 1, "SF": 2, "PF": 3, "C": 4}
+        rows.sort(key=lambda r: (r["role"] != "titular", order.get(r["slot"], 9), -r["min"], -r["mpg"]))
+        out[t] = rows
+    return out
+
+
 def cup_summary():
     """Resumen de liga para el inicio de la pestaña NBA Cup."""
     C = cup_history()
@@ -481,6 +504,7 @@ def run_game(path, n):
                 summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]), cup=cup_view(g),
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
+    r["rotation"] = rotation_view(cfg, summ)
     r["parlays"], r["_legs"] = sgp(r, g, s)
     return r
 

@@ -34,6 +34,8 @@ def actual_line(players, name):
     if len(v) >= 12:  # box score ampliado (1.3.4): ..., fgm, fga, fg3a, stl, blk, tov, pf
         out.update(zip(("fgm", "fga", "fg3a", "stl", "blk", "tov", "pf"), v[5:12]))
         out.update(fg2m=out["fgm"] - out["fg3m"], fg2a=out["fga"] - out["fg3a"], stocks=out["stl"] + out["blk"])
+    if len(v) >= 14:  # 1.3.5: ..., ftm, fta
+        out.update(ftm=v[12], fta=v[13])
     out.update(pra=out["pts"] + out["reb"] + out["ast"], pr=out["pts"] + out["reb"], pa=out["pts"] + out["ast"],
                ra=out["reb"] + out["ast"])
     return out
@@ -120,7 +122,7 @@ def evaluate(date):
     played = [p for p in players if p["played"]]
     pstats = {}
     for st in ("min", "pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "stocks", "tov", "pf",
-               "fgm", "fga", "fg2m", "fg2a", "fg3a"):
+               "fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta"):
         e = np.array([p["err"][st] for p in played if st in p["err"]])
         if not len(e):
             continue

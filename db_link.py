@@ -129,7 +129,11 @@ def apply_db(cfg, rankings_path):
             continue
         raw = {}
         for p in ps:
+            # 1.3.5: el titular defiende y es defendido sobre todo en el puesto que cubre en el quinteto (mitad y mitad
+            # con su posición listada): un escolta que hace de base recibe la DvP de base del rival
             poss = _positions(p["pos"])
+            if p.get("slot"):
+                poss = [p["slot"]] * len(poss) + poss
             raw[p["name"]] = {s: 1 + k_dvp * (np.mean([R["teams"][o]["dvp"][q][col]["value"] / dvp_lg[(q, s)] for q in poss]) - 1)
                               for s, col in DVP_STAT.items()}
         tot_min = sum(p["min"] for p in ps)

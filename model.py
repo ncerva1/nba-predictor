@@ -36,6 +36,8 @@ STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
 # Los tiros salen de los puntos simulados: lo que no son triples (pts - 3 x triples) se reparte entre dobles y
 # tiros libres con la proporción del jugador, y los fallos se dibujan aparte; robos, tapones, pérdidas y faltas
 # van por minutos (robos y pérdidas también por el ritmo). Las faltas se cortan en 6.
+# 1.3.5: con FT y FTA, los libres metidos son lo que queda (pts - 2 x dobles - 3 x triples) y los fallados van
+# en proporción a los metidos.
 EXTRA = ("fgm", "fga", "fg3a", "stl", "blk", "tov", "pf")
 EXTRA_R = {"stl": 8.0, "blk": 4.0, "tov": 10.0, "pf": 30.0, "miss": 10.0}
 COMBOS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
@@ -279,6 +281,14 @@ def simulate(cfg, n=20000, seed=7):
                               miss2=max(fg2a - fg2m, 0), miss3=max(x["fg3a"] - x["fg3m"], 0),
                               # parte de los puntos que no son triples que llega en dobles (el resto, tiros libres)
                               s2=float(np.clip(2 * fg2m / max(x["pts"] - 3 * x["fg3m"], 1e-6), 0.05, 1)))
+            if "ftm" in p["cur"] and "fta" in p["cur"]:
+                pf_ = p["prior"] if "fta" in p["prior"] and p["prior"]["min"] > 0 else p["cur"]
+                ft = {k: w * p["cur"][k] / max(p["cur"]["min"], 1) + (1 - w) * pf_[k] / max(pf_["min"], 1)
+                      for k in ("ftm", "fta")}
+                # fallos por cada libre metido: más viajes a la línea, más fallos
+                p["xrate"]["missft"] = float(np.clip((ft["fta"] - ft["ftm"]) / max(ft["ftm"], 1e-6), 0, 1.5))
+                # parte de los puntos que no son triples que llega desde la línea
+                p["xrate"]["qft"] = float(np.clip(ft["ftm"] / max(x["pts"] - 3 * x["fg3m"], 1e-6), 0, 0.6))
     for t in (h, a):  # los minutos H2H cambian el reparto, no el total del equipo
         tp = [p for p in players if p["team"] == t]
         k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)
@@ -328,7 +338,14 @@ def simulate(cfg, n=20000, seed=7):
         if xr:
             pf_ = pace / cfg["league"]["pace"]
             rest = np.maximum(draws["pts"] - 3 * draws["fg3m"], 0)
-            draws["fg2m"] = rng.binomial(rest // 2, xr["s2"])
+            if "qft" in xr:  # libres primero; si lo que queda es impar, un libre más o uno menos (sin sesgo)
+                ftm = rng.binomial(rest, xr["qft"])
+                odd = (rest - ftm) % 2 == 1
+                ftm = np.clip(ftm + odd * rng.choice([-1, 1], size=ftm.shape), 0, rest)
+                ftm = np.where((rest - ftm) % 2 == 1, ftm + 1, ftm)  # rest impar y ftm = 0 o = rest
+                draws["fg2m"] = (rest - ftm) // 2
+            else:
+                draws["fg2m"] = rng.binomial(rest // 2, xr["s2"])
             draws["fg2a"] = draws["fg2m"] + nb_draw(rng, xr["miss2"] * mn, EXTRA_R["miss"])
             draws["fg3a"] = draws["fg3m"] + nb_draw(rng, xr["miss3"] * mn, EXTRA_R["miss"])
             draws["fgm"] = draws["fg2m"] + draws["fg3m"]
@@ -337,6 +354,9 @@ def simulate(cfg, n=20000, seed=7):
             draws["blk"] = nb_draw(rng, xr["blk"] * mn, EXTRA_R["blk"])
             draws["tov"] = nb_draw(rng, xr["tov"] * mn * pf_, EXTRA_R["tov"])
             draws["pf"] = np.minimum(nb_draw(rng, xr["pf"] * mn, EXTRA_R["pf"]), 6)
+            if "missft" in xr:  # los puntos que no llegan en tiros de campo son tiros libres metidos
+                draws["ftm"] = rest - 2 * draws["fg2m"]
+                draws["fta"] = draws["ftm"] + nb_draw(rng, xr["missft"] * draws["ftm"], EXTRA_R["miss"])
         for c, parts in COMBOS.items():
             if all(k in draws for k in parts):
                 draws[c] = sum(draws[k] for k in parts)
