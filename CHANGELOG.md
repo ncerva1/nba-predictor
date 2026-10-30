@@ -1,5 +1,24 @@
 # Cambios del modelo
 
+## 1.3.5 — 2026-10-30: tiros libres, quinteto por puesto y rotación
+Pedido de Nicolas tras ver la 1.3.4.
+
+- Tiros libres anotados e intentados: columnas opcionales FT y FTA (`build_slate.FT_COL`, aparte de las demás para
+  que un CSV sin ellas siga teniendo el resto). Los libres metidos se dibujan primero sobre los puntos que no son
+  triples (proporción del jugador, sin sesgo por paridad) y el resto son dobles; los fallados van en proporción a los
+  metidos. `evaluate.py` acepta `..., ftm, fta` al final del box score ampliado.
+- Quinteto probable por puesto (`build_slate.assign_slots`): los 5 titulares se reparten PG/SG/SF/PF/C con la
+  asignación más cercana a su posición listada (el que más asiste va de base, el que más rebotea de pívot). La DvP
+  del titular (`db_link`) mezcla mitad el puesto que cubre y mitad su posición: Derrick White como base de BOS
+  recibe la defensa de CHI contra bases.
+- Web: "Top 20" (los 20 picks de mayor EV entre todas las categorías) es la vista por defecto; todas las tablas de
+  apuestas se ordenan por columna (clic en el encabezado o selector "Ordenar") y cada sección se puede plegar; la
+  tabla Resumen de props trae todas las estadísticas; las categorías sin líneas publicadas (combinadas, tiros,
+  faltas) se muestran con una explicación; "Calcula tu apuesta" en cada partido da la probabilidad y el EV de
+  cualquier prop con la línea y la cuota de tu casa; "Quinteto probable y rotación" muestra puesto, papel (titular,
+  rotación, rol, reserva de paliza), minutos proyectados y en qué tramos de cada cuarto suele estar en cancha
+  (patrón típico de la NBA, no cambios reales).
+
 ## 1.3.4 — 2026-10-30: más mercados de player props y picks por categoría
 Pedido de Nicolas: además de puntos, rebotes, asistencias, triples, combinadas (PTS+REB, PTS+AST, REB+AST, PRA),
 robos, tapones, faltas y tiros de campo / dobles / triples anotados e intentados.

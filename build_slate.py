@@ -34,10 +34,15 @@ LG = {"ortg": 115.0, "pace": 100.5, "home_adv_per100": 1.0}
 STAT_COL = {"pts": "PTS", "reb": "TRB", "ast": "AST", "fg3m": "3P"}
 # columnas opcionales (1.3.4): tiros de campo, triples intentados, robos, tapones, pérdidas y faltas
 EXTRA_COL = {"fgm": "FG", "fga": "FGA", "fg3a": "3PA", "stl": "STL", "blk": "BLK", "tov": "TOV", "pf": "PF"}
+FT_COL = {"ftm": "FT", "fta": "FTA"}  # opcionales aparte: un CSV sin tiros libres sigue teniendo las demás props
+
+
+def has_extra(x):
+    return all(k in x for k in EXTRA_COL)
 
 
 def extra(r):
-    return {s: float(r[c]) for s, c in EXTRA_COL.items() if r and r.get(c) not in (None, "")}
+    return {s: float(r[c]) for s, c in {**EXTRA_COL, **FT_COL}.items() if r and r.get(c) not in (None, "")}
 
 
 def read_csv(p):
@@ -60,17 +65,42 @@ def pos_rates(cur):
     tot = {}
     for r in cur:
         x = extra(r)
-        if len(x) < len(EXTRA_COL) or float(r["MP"]) <= 0:
+        if not has_extra(x) or float(r["MP"]) <= 0:
             continue
         t = tot.setdefault(pos_group(r.get("Pos") or ""), {k: 0.0 for k in ["min", *EXTRA_COL]})
         t["min"] += float(r["MP"])
-        for k, v in x.items():
-            t[k] += v
+        for k in EXTRA_COL:
+            t[k] += x[k]
     return {g: {k: t[k] / t["min"] for k in EXTRA_COL} for g, t in tot.items()}
 
 
 def pos_group(pos):
     return "C" if pos.startswith("C") else "G" if pos.endswith("G") else "F"
+
+
+SLOTS = ("PG", "SG", "SF", "PF", "C")
+POS_NUM = {"PG": 1, "SG": 2, "SF": 3, "PF": 4, "C": 5, "G": 1.5, "W": 2.5, "F": 3.5}
+
+
+def assign_slots(starters):
+    """Puesto que cubre cada titular en el quinteto probable (PG..C): la asignación que menos se aleja de la posición
+    listada, y entre parecidas, el que más asiste va de base y el que más rebotea de pívot. Así, si un equipo no tiene
+    base natural titular (BOS sin Pritchard), se ve quién sube el balón (Derrick White) y se le aplica la DvP de base."""
+    from itertools import permutations
+    def num(p):
+        parts = [POS_NUM[x] for x in (p["pos"] or "SF").replace("/", "-").split("-") if x in POS_NUM]
+        return sum(parts) / len(parts) if parts else 3
+    def per36(p, s):
+        return p["cur"][s] / max(p["cur"]["min"], 1) * 36
+    best, bc = None, 1e9
+    for perm in permutations(range(len(starters))):
+        c = 0.0
+        for slot, i in enumerate(perm, 1):
+            p = starters[i]
+            c += (slot - num(p)) ** 2 - (0.12 * per36(p, "ast") if slot == 1 else 0) - (0.06 * per36(p, "reb") if slot == 5 else 0)
+        if c < bc:
+            best, bc = perm, c
+    return {starters[i]["name"]: SLOTS[k] for k, i in enumerate(best)}
 
 
 def team_players(team, cur, prior, out, gtd, prates=None):
@@ -87,15 +117,28 @@ def team_players(team, cur, prior, out, gtd, prates=None):
         c = {"min": float(r["MP"]), **{s: float(r[col]) for s, col in STAT_COL.items()}, **extra(r)}
         p = prior.get(r["Player"])
         pr = {"min": float(p["MP"]), **{s: float(p[col]) for s, col in STAT_COL.items()}, **extra(p)} if p else dict(c)
-        if prates and len(extra(r)) == len(EXTRA_COL) and len(extra(p)) < len(EXTRA_COL):
+        if prates and has_extra(extra(r)) and not has_extra(extra(p)):
             # el perfil de tiro es del jugador (su temporada actual); robos, tapones, pérdidas y faltas, de su posición
             pg = prates.get(pos_group(r["Pos"] or ""), {})
             pr.update({k: round((pg[k] if k in ("stl", "blk", "tov", "pf") else c[k] / max(c["min"], 1)) * pr["min"], 2)
                        for k in EXTRA_COL})
+        for k in FT_COL:  # sin tiros libres del año pasado, los de este año
+            if k in c and k not in pr:
+                pr[k] = round(c[k] / max(c["min"], 1) * pr["min"], 2)
         players.append({"team": team, "name": r["Player"], "pos": r["Pos"] or "F",
                         "starter": r["Player"] in starters, "min": round(min(r["_min"] * scale, 38.0), 1),
                         "g_cur": g, "p_play": gtd.get(r["Player"], 1.0), "cur": c, "prior": pr})
+    st = [p for p in players if p["starter"]]
+    if len(st) == 5:
+        for p in st:
+            p["slot"] = assign_slots(st)[p["name"]]
     return players
+
+
+def reserves(team, cur, out):
+    """Los que no entran en la rotación (menos de 8 min): solo juegan con el partido decidido."""
+    return [{"name": r["Player"], "pos": r["Pos"] or "F", "min": float(r["MP"]), "g": int(r["G"])}
+            for r in cur if r["Team"] == team and float(r["MP"]) < 8 and r["Player"] not in out]
 
 
 def build_game(slate, g, R, cur, prior):
@@ -117,7 +160,8 @@ def build_game(slate, g, R, cur, prior):
     names = {p["name"] for p in players}
     return {
         "game": {"date": slate["date"], "away": a, "home": h, "venue": g.get("venue", ""), "tip_et": g["tip_et"],
-                 "notes": g.get("notes", []), "out": g.get("out", []), "gtd": g.get("gtd", {})},
+                 "notes": g.get("notes", []), "out": g.get("out", []), "gtd": g.get("gtd", {}),
+                 "reserves": {t: reserves(t, cur, set(g.get("out", []))) for t in (a, h)}},
         "db": {"use": True, "k_team": 0.6, "k_dvp": 0.3},
         "league": LG, "shrink_games": 10, "teams": teams,
         "matchup": {h: {}, a: {}}, "players": players,
