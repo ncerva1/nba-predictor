@@ -124,6 +124,12 @@ a { color: var(--accent) }
 .chip .v { color: #7fe3b0 }
 .chip { border-left: 3px solid var(--ca, rgba(255,255,255,.12)) }
 .chip.cup { border-color: rgba(226,183,90,.45); border-left-color: #e2b75a; background: rgba(226,183,90,.08) }
+/* hoy resalta (fondo más claro, etiqueta HOY); ayer queda atenuado */
+.chip.past { opacity: .62 } .chip.past:hover, .chip.past:focus-visible, .chip.past.active { opacity: 1 }
+.chip.today { background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.38) }
+.chip.today.cup { background: rgba(226,183,90,.16); border-color: rgba(226,183,90,.7) }
+.chip .hoy { display: inline-block; background: var(--stripe); color: #fff; font: 700 10px/1.5 var(--mono); letter-spacing: .08em; padding: 0 5px; border-radius: 3px; margin-right: 6px; vertical-align: 1px }
+.tk-label.today { background: var(--stripe); color: #fff; font-weight: 700; border-left: 0; border-radius: 4px; padding: 0 4px }
 .chip .cupk { color: #e2b75a; font-weight: 600 }
 
 main.wrap { padding-block: 28px 64px }
@@ -305,6 +311,13 @@ tr.detail td { background: var(--bg) }
 .pgroup[open] .pg-r::after { transform: rotate(180deg) }
 .pgroup .pg-n { font: 600 12px var(--mono); color: var(--good) }
 .pgroup .pg-body { padding: 0 16px 12px; border-top: 1px solid var(--line) }
+.pgroup.day .pg-body { padding-top: 14px }
+.pgroup.day .pg-t { text-transform: capitalize }
+.to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 20; display: inline-flex; align-items: center; gap: 6px;
+  border: 0; border-radius: 999px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); font: 600 14px var(--body, inherit);
+  box-shadow: 0 4px 14px rgba(0,0,0,.25); cursor: pointer; transition: opacity .2s, transform .2s }
+.to-top[hidden] { display: none }
+.to-top:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px }
 .pgroup .pg-body table td:first-child, .pgroup .pg-body table th:first-child { display: none }
 .pgroup .pg-go { display: inline-block; margin-top: 10px; font: 500 13px var(--mono); text-decoration: none }
 .pg-tools { display: flex; justify-content: flex-end; margin-bottom: -2px }
@@ -411,6 +424,7 @@ body:has(dialog.guide[open]) { overflow: hidden }
   <button type="button" class="tk-btn next" id="tk-next" aria-label="Partidos siguientes">›</button>
 </nav>
 <main class="wrap gutter"><div class="inner" id="app"><p class="muted">Cargando partidos…</p></div></main>
+<button type="button" class="to-top" id="to-top" hidden><span aria-hidden="true">↑</span> <span id="to-top-t">Arriba</span></button>
 <dialog class="guide" id="guide" aria-labelledby="g-title">
   <div class="g-head"><h2 id="g-title">Cómo funciona</h2><button type="button" class="g-close" id="g-close" aria-label="Cerrar guía">×</button></div>
   <nav class="g-toc" id="g-toc" aria-label="Temas de la guía"></nav>
@@ -491,15 +505,15 @@ function betRows(bets, thr, withGame) {
 const betHead = (withGame, withRes) => `<thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Cuota</th>
   <th class="r">Prob. modelo</th><th class="r">Prob. casa</th><th class="r">Cuota justa</th><th class="r">EV</th><th>Mejor casa</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead>`;
 
-function chip(g, dup) {
-  const r = g.result, hid = dup ? ' aria-hidden="true" tabindex="-1"' : "";
-  if (r) return `<a class="chip done${isCup(g) ? " cup" : ""}" href="#${g.id}" data-id="${g.id}" draggable="false" style="--ca:${tc(g.away)}"${hid}>
+function chip(g, dup, when = "") {   // when: "past" (ayer) o "today"
+  const r = g.result, hid = dup ? ' aria-hidden="true" tabindex="-1"' : "", hoy = when === "today" ? '<span class="hoy">Hoy</span>' : "";
+  if (r) return `<a class="chip done ${when}${isCup(g) ? " cup" : ""}" href="#${g.id}" data-id="${g.id}" draggable="false" style="--ca:${tc(g.away)}"${hid}>
     <span class="t">${esc(g.away)} @ ${esc(g.home)}</span><span class="s">${r.score[g.away]}–${r.score[g.home]}</span>
-    <span class="x">Final${r.ot ? " (OT)" : ""} · ${r.winner_ok ? '<span class="ok">ganador ✓</span>' : '<span class="ko">ganador ✗</span>'}${g.n_value ? ` · picks ${r.picks_won}–${r.picks_lost}` : ""}</span></a>`;
+    <span class="x">${hoy}Final${r.ot ? " (OT)" : ""} · ${r.winner_ok ? '<span class="ok">ganador ✓</span>' : '<span class="ko">ganador ✗</span>'}${g.n_value ? ` · picks ${r.picks_won}–${r.picks_lost}` : ""}</span></a>`;
   const fav = g.win_prob[g.away] >= g.win_prob[g.home] ? g.away : g.home;
-  return `<a class="chip${isCup(g) ? " cup" : ""}" href="#${g.id}" data-id="${g.id}" draggable="false" style="--ca:${tc(g.away)}"${hid}>
+  return `<a class="chip ${when}${isCup(g) ? " cup" : ""}" href="#${g.id}" data-id="${g.id}" draggable="false" style="--ca:${tc(g.away)}"${hid}>
     <span class="t">${esc(g.away)} @ ${esc(g.home)}</span><span class="s">${g.proj[g.away]}–${g.proj[g.home]}</span>
-    <span class="x">${isCup(g) ? '<span class="cupk">Cup · </span>' : ""}${g.tip_et ? esc(g.tip_et) + " ET · " : ""}${esc(fav)} ${pct(g.win_prob[fav], 0)}${g.n_value ? ` · <span class="v">${g.n_value} pick${g.n_value > 1 ? "s" : ""}</span>` : ""}</span></a>`;
+    <span class="x">${hoy}${isCup(g) ? '<span class="cupk">Cup · </span>' : ""}${g.tip_et ? esc(g.tip_et) + " ET · " : ""}${esc(fav)} ${pct(g.win_prob[fav], 0)}${g.n_value ? ` · <span class="v">${g.n_value} pick${g.n_value > 1 ? "s" : ""}</span>` : ""}</span></a>`;
 }
 
 // Barra: resultados de la jornada anterior + partidos de hoy. Se repite 3 veces para poder dar la
@@ -508,8 +522,8 @@ const TK = { set: 0, loop: false, pauseUntil: 0, hover: false, drag: null, pos: 
 const calm = matchMedia("(prefers-reduced-motion: reduce)");
 function renderTicker(prev, todays) {
   const sc = $("#tscroll"), tr = $("#track");
-  const group = (games, label, dup) => games.length ? `<span class="tk-label"${dup ? ' aria-hidden="true"' : ""}>${label}</span>${games.map(g => chip(g, dup)).join("")}` : "";
-  const copy = dup => group(prev, prev[0] ? "Ayer · " + prev[0].date.slice(5) : "", dup) + group(todays, todays.some(g => g.result) ? "Jornada" : "Hoy", dup);
+  const group = (games, label, dup, when) => games.length ? `<span class="tk-label ${when}"${dup ? ' aria-hidden="true"' : ""}>${label}</span>${games.map(g => chip(g, dup, when)).join("")}` : "";
+  const copy = dup => group(prev, prev[0] ? "Ayer · " + prev[0].date.slice(5) : "", dup, "past") + group(todays, todays.some(g => g.result) ? "Jornada" : "Hoy", dup, "today");
   tr.innerHTML = `<span class="tk-copy" style="display:contents">${copy(false)}</span>`;
   const one = tr.scrollWidth;
   TK.loop = !calm.matches && one > sc.clientWidth;
@@ -519,6 +533,9 @@ function renderTicker(prev, todays) {
     TK.set = m[1].offsetLeft - m[0].offsetLeft;
     sc.scrollLeft = TK.pos = m[0].offsetLeft - tr.offsetLeft;
   }
+  // arranca mostrando los partidos de hoy (en el bucle, los de la copia del medio)
+  const lb = tr.querySelectorAll(".tk-label.today"), hoyLb = lb[TK.loop ? 1 : 0];
+  if (hoyLb && prev.length) { sc.scrollLeft = TK.pos = Math.max(0, hoyLb.offsetLeft - tr.offsetLeft - 8); tkPause(4000); }
   $("#tk-prev").hidden = $("#tk-next").hidden = one <= sc.clientWidth;
 }
 function tkWrap() {   // vuelve a la copia del medio cuando el usuario no está desplazando
@@ -584,6 +601,25 @@ function bindSeg(id, draw) {
 
 function markTicker(id) { document.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c.dataset.id === id)); }
 
+// Jornadas anteriores: un desplegable por día, solo los últimos OLD_DAYS días con partidos (para que la página no crezca)
+const OLD_DAYS = 7;
+const DOW = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"], MON = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const dayName = d => { const x = new Date(d + "T12:00:00"); return `${DOW[x.getDay()]} ${x.getDate()} ${MON[x.getMonth()]}`; };
+function olderSection(older, cup) {
+  const dates = [...new Set(older.map(g => g.date))].sort().reverse(), shown = dates.slice(0, OLD_DAYS);
+  if (!shown.length) return "";
+  return `<section class="section"><h2>${cup ? "Partidos de Copa anteriores" : "Jornadas anteriores"}</h2>
+    <p class="lede">Últimos ${shown.length === 1 ? "día" : shown.length + " días"} con partidos${dates.length > OLD_DAYS ? ` (se muestran solo los ${OLD_DAYS} más recientes)` : ""}. Toca un día para ver sus partidos.</p>
+    <div class="pgroups">${shown.map(d => {
+      const gs = older.filter(g => g.date === d), rs = gs.filter(g => g.result).map(g => g.result);
+      const w = rs.reduce((s, r) => s + r.picks_won, 0), l = rs.reduce((s, r) => s + r.picks_lost, 0), u = rs.reduce((s, r) => s + r.units, 0);
+      const info = `${gs.length} partido${gs.length > 1 ? "s" : ""}${rs.length ? ` · ganador ${rs.filter(r => r.winner_ok).length} de ${rs.length} · picks ${w}–${l}` : " · sin resultados"}`;
+      return `<details class="pgroup day"><summary><span class="pg-t">${dayName(d)}</span><span class="pg-x">${info}</span>
+        <span class="pg-r">${rs.length ? `<span class="pg-n" style="color:var(${u >= 0 ? "--good" : "--bad"})">${u >= 0 ? "+" : ""}${u.toFixed(2)} u</span>` : ""}</span></summary>
+        <div class="pg-body"><div class="games">${gs.map(card).join("")}</div></div></details>`;
+    }).join("")}</div></section>`;
+}
+
 // Inicio de cada pestaña: "reg" = liga regular, "cup" = partidos marcados con "competition": "cup" en games/*.json
 const inScope = (g, scope) => (scope === "cup") === isCup(g);
 const CUP_HERO = n => `<section class="cup-hero">
@@ -608,7 +644,7 @@ function renderIndex(scope = "reg") {
   const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
-    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + (older.length ? `<section class="section"><h2>Partidos de Copa anteriores</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : "");
+    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + olderSection(older, true);
     return;
   }
   $("#app").innerHTML = `
@@ -639,7 +675,7 @@ function renderIndex(scope = "reg") {
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
-  ${older.length ? `<section class="section"><h2>${cup ? "Partidos de Copa anteriores" : "Jornadas anteriores"}</h2><div class="games">${older.reverse().map(card).join("")}</div></section>` : ""}
+  ${olderSection(older, cup)}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
   const open = new Set();   // acordeones abiertos, se conservan al cambiar de filtro
   const groupHtml = list => {
@@ -997,7 +1033,8 @@ const GUIDE = [
     <li>el contexto: lesionados, back-to-back (jugar dos días seguidos), local o visitante, fichajes y cambios de entrenador.</li></ul>
     <p>Contando en cuántas simulaciones pasa cada cosa sale su <b>probabilidad</b>. Después se compara con las cuotas de las casas de apuestas para encontrar <b>picks con valor</b>: apuestas que, según el modelo, pagan más de lo que deberían.</p>`],
   ["usar", "Cómo usarla", "Cómo usar la página", () => `<ol>
-    <li><b>Barra de partidos</b> (debajo del título): los resultados de ayer y los partidos de hoy. Se mueve sola; puedes deslizarla y tocar cualquiera.</li>
+    <li><b>Barra de partidos</b> (debajo del título): los partidos de hoy (resaltados, con la etiqueta <b>Hoy</b>) y, atenuados, los resultados de ayer. Se mueve sola; puedes deslizarla y tocar cualquiera.</li>
+    <li><b>Jornadas anteriores</b>: un desplegable por día con los últimos 7 días. El botón <b>↑</b> de abajo a la derecha te devuelve al inicio de la página o del análisis del partido.</li>
     <li><b>Inicio</b>: los picks con valor del día, agrupados por partido o en una lista ordenada por EV, los parlays recomendados y las tarjetas de cada partido.</li>
     <li><b>Página de un partido</b>: toca un pick o una tarjeta para ver el análisis completo (marcador proyectado, todas las apuestas, rankings, temporada pasada y player props).</li>
     <li><b>Compara con tu casa</b>: si tu casa paga una cuota mayor que la <i>cuota justa</i> del modelo, la apuesta tiene valor.</li></ol>
@@ -1107,9 +1144,17 @@ function route() {
   $("#tab-reg").toggleAttribute("aria-current", false); $("#tab-cup").toggleAttribute("aria-current", false);
   $(scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
   markTicker(game ? id : null);
+  $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
   SEG = "all";
   if (game) renderGame(id); else renderIndex(scope);
 }
+
+// Botón flotante para volver arriba (al inicio del análisis en la página de un partido) tras bajar un poco
+const toTop = () => { $("#to-top").hidden = scrollY < 600; };
+addEventListener("scroll", toTop, { passive: true });
+$("#to-top").addEventListener("click", () => {
+  scrollTo({ top: 0, behavior: calm.matches ? "auto" : "smooth" });
+});
 
 // Modo claro / oscuro: el botón alterna y guarda la elección; sin elección sigue al sistema
 const darkMQ = matchMedia("(prefers-color-scheme: dark)");
