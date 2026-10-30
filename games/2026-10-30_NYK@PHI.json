@@ -10,15 +10,15 @@
    "NYK: Alvarado duda (tobillo). PHI: Jabari Walker duda (rodilla); Barlow, Fall y Hukporti OUT",
    "Solo 5 casas con cuotas en Covers; ninguna prop de puntos publicada",
    "Récord: NYK 2-3, PHI 4-1",
-   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Jose Alvarado, Jabari Walker, Jaylen Brown 20%"
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Jose Alvarado, Jabari Walker, Jaylen Brown 20%",
+   "Confirmado 30-oct ~19:15 ET: Jaylen Brown OUT"
   ],
   "out": [
    "Jose Alvarado",
-   "Jabari Walker"
+   "Jabari Walker",
+   "Jaylen Brown"
   ],
-  "gtd": {
-   "Jaylen Brown": 0.2
-  },
+  "gtd": {},
   "reserves": {
    "NYK": [
     {
@@ -87,13 +87,13 @@
     "pace": 100.67
    },
    "adj": {
-    "o": -1.0,
+    "o": -1.5,
     "d": 0.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Jaylen Brown doubtful (rodilla)"
+    "roster_note": "Jaylen Brown OUT (rodilla)"
    }
   },
   "NYK": {
@@ -129,7 +129,7 @@
    "name": "Tyrese Maxey",
    "pos": "PG",
    "starter": true,
-   "min": 33.1,
+   "min": 38.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -168,52 +168,10 @@
   },
   {
    "team": "PHI",
-   "name": "Jaylen Brown",
-   "pos": "SF",
-   "starter": true,
-   "min": 32.1,
-   "g_cur": 5,
-   "p_play": 0.2,
-   "cur": {
-    "min": 36.4,
-    "pts": 20.6,
-    "reb": 6.6,
-    "ast": 4.2,
-    "fg3m": 1.8,
-    "fgm": 7.6,
-    "fga": 17.2,
-    "fg3a": 4.4,
-    "stl": 1.2,
-    "blk": 0.6,
-    "tov": 3.0,
-    "pf": 3.2,
-    "ftm": 3.6,
-    "fta": 4.6
-   },
-   "prior": {
-    "min": 34.4,
-    "pts": 28.7,
-    "reb": 6.9,
-    "ast": 5.1,
-    "fg3m": 2.0,
-    "fgm": 10.4,
-    "fga": 21.7,
-    "fg3a": 5.7,
-    "stl": 1.0,
-    "blk": 0.4,
-    "tov": 3.6,
-    "pf": 2.7,
-    "ftm": 6.0,
-    "fta": 7.5
-   },
-   "slot": "SF"
-  },
-  {
-   "team": "PHI",
    "name": "Joel Embiid",
    "pos": "C",
    "starter": true,
-   "min": 31.5,
+   "min": 36.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -255,7 +213,7 @@
    "name": "LeBron James",
    "pos": "SF",
    "starter": true,
-   "min": 29.3,
+   "min": 33.9,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -290,14 +248,14 @@
     "ftm": 3.9,
     "fta": 5.3
    },
-   "slot": "PF"
+   "slot": "SF"
   },
   {
    "team": "PHI",
    "name": "VJ Edgecombe",
    "pos": "SG",
    "starter": true,
-   "min": 28.0,
+   "min": 32.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -338,8 +296,8 @@
    "team": "PHI",
    "name": "Dean Wade",
    "pos": "PF",
-   "starter": false,
-   "min": 24.0,
+   "starter": true,
+   "min": 27.8,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -373,14 +331,15 @@
     "pf": 2.19,
     "ftm": 0.82,
     "fta": 1.39
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "PHI",
    "name": "Kentavious Caldwell-Pope",
    "pos": "SG",
    "starter": false,
-   "min": 23.1,
+   "min": 26.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -421,7 +380,7 @@
    "name": "Anfernee Simons",
    "pos": "SG",
    "starter": false,
-   "min": 20.4,
+   "min": 23.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -462,7 +421,7 @@
    "name": "Adem Bona",
    "pos": "C",
    "starter": false,
-   "min": 10.9,
+   "min": 12.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -503,7 +462,7 @@
    "name": "Labaron Philon Jr.",
    "pos": "PG",
    "starter": false,
-   "min": 7.5,
+   "min": 8.6,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -1250,35 +1209,6 @@
     1.5,
     -161.29,
     120.0
-   ]
-  },
-  "Jaylen Brown": {
-   "reb": [
-    5.5,
-    -150,
-    -125,
-    6.5
-   ],
-   "ast": [
-    3.5,
-    120,
-    -138
-   ],
-   "fg3m": [
-    1.5,
-    125,
-    -145
-   ],
-   "stl": [
-    0.5,
-    -190,
-    -195,
-    1.5
-   ],
-   "blk": [
-    0.5,
-    -160,
-    120
    ]
   },
   "OG Anunoby": {
