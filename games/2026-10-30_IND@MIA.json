@@ -10,16 +10,17 @@
    "IND: Haliburton, Sheppard y McConnell OUT; Zubac duda",
    "MIA: Fontecchio duda (enfermedad)",
    "Récord: IND 2-3, MIA 1-4",
-   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Ivica Zubac, Obi Toppin 50%, Simone Fontecchio 90%"
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Ivica Zubac, Obi Toppin 50%, Simone Fontecchio 90%",
+   "Obi Toppin (espalda) OUT (Underdog NBA). Nesmith y Nembhard disponibles."
   ],
   "out": [
    "Tyrese Haliburton",
    "Ben Sheppard",
-   "Ivica Zubac"
+   "Ivica Zubac",
+   "Obi Toppin"
   ],
   "gtd": {
-   "Simone Fontecchio": 0.9,
-   "Obi Toppin": 0.5
+   "Simone Fontecchio": 0.9
   },
   "reserves": {
    "IND": [
@@ -546,7 +547,7 @@
    "name": "Andrew Nembhard",
    "pos": "SG",
    "starter": true,
-   "min": 36.9,
+   "min": 38.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -588,7 +589,7 @@
    "name": "Pascal Siakam",
    "pos": "PF",
    "starter": true,
-   "min": 36.3,
+   "min": 38.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -630,7 +631,7 @@
    "name": "Kelly Oubre Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 27.0,
+   "min": 30.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -669,51 +670,10 @@
   },
   {
    "team": "IND",
-   "name": "Obi Toppin",
-   "pos": "PF",
-   "starter": false,
-   "min": 25.7,
-   "g_cur": 5,
-   "p_play": 0.5,
-   "cur": {
-    "min": 22.8,
-    "pts": 15.2,
-    "reb": 5.2,
-    "ast": 1.2,
-    "fg3m": 2.2,
-    "fgm": 5.6,
-    "fga": 10.4,
-    "fg3a": 5.4,
-    "stl": 0.4,
-    "blk": 0.4,
-    "tov": 0.4,
-    "pf": 1.2,
-    "ftm": 1.8,
-    "fta": 2.8
-   },
-   "prior": {
-    "min": 17.7,
-    "pts": 11.6,
-    "reb": 4.4,
-    "ast": 2.3,
-    "fg3m": 1.5,
-    "fgm": 4.2,
-    "fga": 8.3,
-    "fg3a": 4.4,
-    "stl": 0.5,
-    "blk": 0.0,
-    "tov": 1.2,
-    "pf": 1.2,
-    "ftm": 1.8,
-    "fta": 1.9
-   }
-  },
-  {
-   "team": "IND",
    "name": "Aaron Nesmith",
    "pos": "SF",
    "starter": true,
-   "min": 24.6,
+   "min": 27.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -755,7 +715,7 @@
    "name": "Jarace Walker",
    "pos": "PF",
    "starter": false,
-   "min": 23.7,
+   "min": 26.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -796,7 +756,7 @@
    "name": "Quenton Jackson",
    "pos": "PG",
    "starter": false,
-   "min": 20.7,
+   "min": 23.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -837,7 +797,7 @@
    "name": "Jay Huff",
    "pos": "C",
    "starter": true,
-   "min": 18.4,
+   "min": 20.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -879,7 +839,7 @@
    "name": "Larry Nance Jr.",
    "pos": "PF",
    "starter": false,
-   "min": 15.8,
+   "min": 17.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -920,7 +880,7 @@
    "name": "Jalen Slawson",
    "pos": "SF",
    "starter": false,
-   "min": 11.0,
+   "min": 12.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -1393,43 +1353,6 @@
     1.5,
     170.0,
     -238.1
-   ]
-  },
-  "Obi Toppin": {
-   "reb": [
-    5.5,
-    112,
-    -112
-   ],
-   "fg3m": [
-    1.5,
-    -135,
-    121
-   ],
-   "pra": [
-    21.5,
-    100.0,
-    -131.58
-   ],
-   "pr": [
-    19.5,
-    -102.04,
-    -131.58
-   ],
-   "pa": [
-    15.5,
-    -109.89,
-    -123.46
-   ],
-   "ra": [
-    7.5,
-    104.0,
-    -136.99
-   ],
-   "stl": [
-    0.5,
-    100.0,
-    -135.14
    ]
   },
   "Jarace Walker": {

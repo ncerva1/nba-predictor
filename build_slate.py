@@ -103,14 +103,20 @@ def assign_slots(starters):
     return {starters[i]["name"]: SLOTS[k] for k, i in enumerate(best)}
 
 
-def team_players(team, cur, prior, out, gtd, prates=None):
+def team_players(team, cur, prior, out, gtd, prates=None, listed=None):
     rows = [r for r in cur if r["Team"] == team and float(r["MP"]) >= 8 and r["Player"] not in out]
     for r in rows:
         r["_min"] = float(r["MP"])
-    tot = sum(r["_min"] for r in rows)
-    scale = 240 / tot
     rows.sort(key=lambda r: (-int(r["GS"]) / max(int(r["G"]), 1), -r["_min"]))
     starters = {r["Player"] for r in rows[:5]}
+    if listed and len(set(listed) & {r["Player"] for r in rows}) == 5:
+        # quinteto confirmado (slate "starters"); el titular nuevo juega al menos 24 min antes de escalar
+        starters = set(listed)
+        for r in rows:
+            if r["Player"] in starters:
+                r["_min"] = max(r["_min"], 24.0)
+    tot = sum(r["_min"] for r in rows)
+    scale = 240 / tot
     players = []
     for r in sorted(rows, key=lambda r: -r["_min"]):
         g = int(r["G"])
@@ -156,7 +162,8 @@ def build_game(slate, g, R, cur, prior):
                     "context": {"b2b": t in g.get("b2b", []), "roster_note": adj_r.get("why", "")}}
     players = []
     for t in (h, a):
-        players += team_players(t, cur, prior, set(g.get("out", [])), g.get("gtd", {}), pos_rates(cur))
+        players += team_players(t, cur, prior, set(g.get("out", [])), g.get("gtd", {}), pos_rates(cur),
+                               g.get("starters", {}).get(t))
     names = {p["name"] for p in players}
     return {
         "game": {"date": slate["date"], "away": a, "home": h, "venue": g.get("venue", ""), "tip_et": g["tip_et"],
