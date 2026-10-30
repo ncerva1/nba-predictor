@@ -9,17 +9,20 @@
    "NBA Cup, Grupo Oeste A",
    "HOU: Sheppard y Adams OUT; Şengün y Smart dudosos (Covers sí publica prop de Şengün)",
    "DAL: Lively, Aldama y Biberovic OUT; Marshall (enfermedad) y de Larrea (rodilla) dudosos",
-   "Récord: HOU 5-0, DAL 3-2"
+   "Récord: HOU 5-0, DAL 3-2",
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Sergio de Larrea, Naji Marshall 90%, Santi Aldama 20%, Tarik Biberovic 20%"
   ],
   "out": [
    "Reed Sheppard",
-   "Steven Adams"
+   "Steven Adams",
+   "Sergio de Larrea"
   ],
   "gtd": {
    "Alperen Şengün": 0.6,
    "Marcus Smart": 0.4,
-   "Naji Marshall": 0.6,
-   "Sergio de Larrea": 0.5
+   "Naji Marshall": 0.9,
+   "Santi Aldama": 0.2,
+   "Tarik Biberovic": 0.2
   },
   "reserves": {
    "HOU": [
@@ -131,7 +134,7 @@
    "name": "P.J. Washington",
    "pos": "PF",
    "starter": true,
-   "min": 29.4,
+   "min": 30.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -173,7 +176,7 @@
    "name": "Cooper Flagg",
    "pos": "SF",
    "starter": true,
-   "min": 27.1,
+   "min": 28.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -215,7 +218,7 @@
    "name": "Zaccharie Risacher",
    "pos": "SF",
    "starter": false,
-   "min": 26.2,
+   "min": 27.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -256,7 +259,7 @@
    "name": "Max Christie",
    "pos": "SG",
    "starter": true,
-   "min": 24.6,
+   "min": 25.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -298,9 +301,9 @@
    "name": "Naji Marshall",
    "pos": "SF",
    "starter": false,
-   "min": 24.4,
+   "min": 25.4,
    "g_cur": 3,
-   "p_play": 0.6,
+   "p_play": 0.9,
    "cur": {
     "min": 27.7,
     "pts": 13.7,
@@ -339,7 +342,7 @@
    "name": "Kyrie Irving",
    "pos": "SG",
    "starter": true,
-   "min": 23.7,
+   "min": 24.8,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -381,7 +384,7 @@
    "name": "Daniel Gafford",
    "pos": "C",
    "starter": true,
-   "min": 19.7,
+   "min": 20.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -423,7 +426,7 @@
    "name": "Marcus Sasser",
    "pos": "PG",
    "starter": false,
-   "min": 18.8,
+   "min": 19.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -464,7 +467,7 @@
    "name": "Morez Johnson Jr.",
    "pos": "PF",
    "starter": false,
-   "min": 13.4,
+   "min": 14.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -505,7 +508,7 @@
    "name": "Caleb Martin",
    "pos": "SF",
    "starter": false,
-   "min": 12.3,
+   "min": 12.8,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -546,7 +549,7 @@
    "name": "Walter Clayton",
    "pos": "PG",
    "starter": false,
-   "min": 10.4,
+   "min": 10.8,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -580,47 +583,6 @@
     "pf": 1.82,
     "ftm": 0.52,
     "fta": 1.38
-   }
-  },
-  {
-   "team": "DAL",
-   "name": "Sergio de Larrea",
-   "pos": "PG",
-   "starter": false,
-   "min": 10.1,
-   "g_cur": 4,
-   "p_play": 0.5,
-   "cur": {
-    "min": 11.5,
-    "pts": 5.3,
-    "reb": 2.0,
-    "ast": 1.3,
-    "fg3m": 0.8,
-    "fgm": 2.3,
-    "fga": 4.5,
-    "fg3a": 1.3,
-    "stl": 0.0,
-    "blk": 0.0,
-    "tov": 1.0,
-    "pf": 0.8,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 11.5,
-    "pts": 5.3,
-    "reb": 2.0,
-    "ast": 1.3,
-    "fg3m": 0.8,
-    "fgm": 2.3,
-    "fga": 4.5,
-    "fg3a": 1.3,
-    "stl": 0.49,
-    "blk": 0.15,
-    "tov": 0.82,
-    "pf": 1.03,
-    "ftm": 0.0,
-    "fta": 0.0
    }
   },
   {

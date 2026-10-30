@@ -9,12 +9,15 @@
    "NBA Cup, Grupo Este B",
    "NYK: Alvarado duda (tobillo). PHI: Jabari Walker duda (rodilla); Barlow, Fall y Hukporti OUT",
    "Solo 5 casas con cuotas en Covers; ninguna prop de puntos publicada",
-   "Récord: NYK 2-3, PHI 4-1"
+   "Récord: NYK 2-3, PHI 4-1",
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Jose Alvarado, Jabari Walker, Jaylen Brown 20%"
   ],
-  "out": [],
+  "out": [
+   "Jose Alvarado",
+   "Jabari Walker"
+  ],
   "gtd": {
-   "Jose Alvarado": 0.5,
-   "Jabari Walker": 0.5
+   "Jaylen Brown": 0.2
   },
   "reserves": {
    "NYK": [
@@ -44,12 +47,6 @@
     }
    ],
    "PHI": [
-    {
-     "name": "Jabari Walker",
-     "pos": "SF",
-     "min": 6.3,
-     "g": 3
-    },
     {
      "name": "Justin Edwards",
      "pos": "SF",
@@ -90,13 +87,13 @@
     "pace": 100.67
    },
    "adj": {
-    "o": 0.0,
+    "o": -1.0,
     "d": 0.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Jaylen Brown doubtful (rodilla)"
    }
   },
   "NYK": {
@@ -176,7 +173,7 @@
    "starter": true,
    "min": 32.1,
    "g_cur": 5,
-   "p_play": 1.0,
+   "p_play": 0.2,
    "cur": {
     "min": 36.4,
     "pts": 20.6,
@@ -547,7 +544,7 @@
    "name": "Jalen Brunson",
    "pos": "PG",
    "starter": true,
-   "min": 33.4,
+   "min": 35.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -589,7 +586,7 @@
    "name": "OG Anunoby",
    "pos": "PF",
    "starter": true,
-   "min": 31.7,
+   "min": 33.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -631,7 +628,7 @@
    "name": "Josh Hart",
    "pos": "SG",
    "starter": true,
-   "min": 31.1,
+   "min": 32.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -673,7 +670,7 @@
    "name": "Karl-Anthony Towns",
    "pos": "C",
    "starter": true,
-   "min": 29.4,
+   "min": 31.1,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -715,7 +712,7 @@
    "name": "Mikal Bridges",
    "pos": "SF",
    "starter": true,
-   "min": 25.6,
+   "min": 27.1,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -757,7 +754,7 @@
    "name": "Landry Shamet",
    "pos": "SG",
    "starter": false,
-   "min": 24.3,
+   "min": 25.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -798,7 +795,7 @@
    "name": "Miles McBride",
    "pos": "PG",
    "starter": false,
-   "min": 16.7,
+   "min": 17.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -839,7 +836,7 @@
    "name": "Tyler Kolek",
    "pos": "PG",
    "starter": false,
-   "min": 14.2,
+   "min": 15.0,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -880,7 +877,7 @@
    "name": "Andre Drummond",
    "pos": "C",
    "starter": false,
-   "min": 12.9,
+   "min": 13.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -918,51 +915,10 @@
   },
   {
    "team": "NYK",
-   "name": "Jose Alvarado",
-   "pos": "PG",
-   "starter": false,
-   "min": 12.8,
-   "g_cur": 2,
-   "p_play": 0.5,
-   "cur": {
-    "min": 13.5,
-    "pts": 5.0,
-    "reb": 2.5,
-    "ast": 2.5,
-    "fg3m": 1.0,
-    "fgm": 2.0,
-    "fga": 4.5,
-    "fg3a": 2.0,
-    "stl": 1.5,
-    "blk": 0.0,
-    "tov": 2.0,
-    "pf": 1.0,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 16.9,
-    "pts": 6.6,
-    "reb": 2.0,
-    "ast": 3.8,
-    "fg3m": 1.1,
-    "fgm": 2.5,
-    "fga": 5.63,
-    "fg3a": 2.5,
-    "stl": 0.72,
-    "blk": 0.22,
-    "tov": 1.21,
-    "pf": 1.51,
-    "ftm": 0.0,
-    "fta": 0.0
-   }
-  },
-  {
-   "team": "NYK",
    "name": "Jordan Clarkson",
    "pos": "SG",
    "starter": false,
-   "min": 7.9,
+   "min": 8.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {

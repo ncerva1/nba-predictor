@@ -9,14 +9,16 @@
    "NBA Cup, Grupo Este A",
    "DET: Duren OUT; Isaiah Joe duda (cadera). BKN: Dëmin OUT",
    "H2H 2025-26: DET 3-1 con tres blowouts (55, 43 y 24 de ventaja)",
-   "Récord: DET 4-1, BKN 0-4"
+   "Récord: DET 4-1, BKN 0-4",
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Isaiah Joe, Noah Clowney 50%"
   ],
   "out": [
    "Jalen Duren",
-   "Egor Dëmin"
+   "Egor Dëmin",
+   "Isaiah Joe"
   ],
   "gtd": {
-   "Isaiah Joe": 0.5
+   "Noah Clowney": 0.5
   },
   "reserves": {
    "DET": [
@@ -351,7 +353,7 @@
    "starter": false,
    "min": 20.5,
    "g_cur": 4,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 21.5,
     "pts": 6.3,
@@ -637,7 +639,7 @@
    "name": "Cade Cunningham",
    "pos": "PG",
    "starter": true,
-   "min": 35.2,
+   "min": 37.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -679,7 +681,7 @@
    "name": "Duncan Robinson",
    "pos": "SF",
    "starter": true,
-   "min": 30.9,
+   "min": 32.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -721,7 +723,7 @@
    "name": "Ausar Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 27.3,
+   "min": 29.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -763,7 +765,7 @@
    "name": "John Collins",
    "pos": "PF",
    "starter": true,
-   "min": 27.3,
+   "min": 29.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -805,7 +807,7 @@
    "name": "Paul Reed",
    "pos": "C",
    "starter": true,
-   "min": 26.5,
+   "min": 28.1,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -847,7 +849,7 @@
    "name": "Daniss Jenkins",
    "pos": "PG",
    "starter": false,
-   "min": 25.2,
+   "min": 26.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -888,7 +890,7 @@
    "name": "Kevin Huerter",
    "pos": "SG",
    "starter": false,
-   "min": 20.4,
+   "min": 21.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -929,7 +931,7 @@
    "name": "Javonte Green",
    "pos": "SG",
    "starter": false,
-   "min": 18.3,
+   "min": 19.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -970,7 +972,7 @@
    "name": "Ron Holland",
    "pos": "SF",
    "starter": false,
-   "min": 14.7,
+   "min": 15.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1004,47 +1006,6 @@
     "pf": 1.95,
     "ftm": 0.55,
     "fta": 0.55
-   }
-  },
-  {
-   "team": "DET",
-   "name": "Isaiah Joe",
-   "pos": "SG",
-   "starter": false,
-   "min": 14.2,
-   "g_cur": 3,
-   "p_play": 0.5,
-   "cur": {
-    "min": 14.0,
-    "pts": 7.3,
-    "reb": 1.7,
-    "ast": 1.0,
-    "fg3m": 1.0,
-    "fgm": 2.3,
-    "fga": 6.3,
-    "fg3a": 4.3,
-    "stl": 0.3,
-    "blk": 0.3,
-    "tov": 0.7,
-    "pf": 0.3,
-    "ftm": 1.7,
-    "fta": 2.7
-   },
-   "prior": {
-    "min": 21.2,
-    "pts": 11.1,
-    "reb": 2.5,
-    "ast": 1.3,
-    "fg3m": 2.5,
-    "fgm": 3.5,
-    "fga": 7.6,
-    "fg3a": 6.0,
-    "stl": 0.7,
-    "blk": 0.2,
-    "tov": 0.6,
-    "pf": 1.7,
-    "ftm": 1.5,
-    "fta": 1.7
    }
   }
  ],
@@ -1599,13 +1560,6 @@
     5.5,
     -151.52,
     114.0
-   ]
-  },
-  "Isaiah Joe": {
-   "fg3m": [
-    1.5,
-    -138,
-    122
    ]
   },
   "Moritz Wagner": {

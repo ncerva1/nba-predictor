@@ -10,12 +10,15 @@
    "LAL: Luka probable (Covers publica su prop de 32.5); Ziaire Williams duda",
    "GSW: Butler, Porziņģis y Moody OUT; Gui Santos duda",
    "H2H 2025-26: LAL 3-1 (dos blowouts de 32 y 27)",
-   "Récord: LAL 4-1, GSW 2-3"
+   "Récord: LAL 4-1, GSW 2-3",
+   "Bajas actualizadas 30-oct 18:40 ET (ESPN injuries): Ziaire Williams, Adou Thiero"
   ],
-  "out": [],
+  "out": [
+   "Ziaire Williams",
+   "Adou Thiero"
+  ],
   "gtd": {
    "Luka Dončić": 0.8,
-   "Ziaire Williams": 0.6,
    "Gui Santos": 0.5
   },
   "reserves": {
@@ -660,7 +663,7 @@
    "name": "Luka Dončić",
    "pos": "PG",
    "starter": true,
-   "min": 31.1,
+   "min": 34.7,
    "g_cur": 4,
    "p_play": 0.8,
    "cur": {
@@ -702,7 +705,7 @@
    "name": "Austin Reaves",
    "pos": "SG",
    "starter": true,
-   "min": 30.8,
+   "min": 34.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -744,7 +747,7 @@
    "name": "Walker Kessler",
    "pos": "C",
    "starter": true,
-   "min": 26.6,
+   "min": 29.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -783,52 +786,10 @@
   },
   {
    "team": "LAL",
-   "name": "Ziaire Williams",
-   "pos": "SF",
-   "starter": true,
-   "min": 25.0,
-   "g_cur": 4,
-   "p_play": 0.6,
-   "cur": {
-    "min": 28.5,
-    "pts": 11.3,
-    "reb": 3.0,
-    "ast": 2.3,
-    "fg3m": 1.8,
-    "fgm": 4.0,
-    "fga": 7.0,
-    "fg3a": 3.8,
-    "stl": 1.5,
-    "blk": 0.3,
-    "tov": 0.8,
-    "pf": 3.0,
-    "ftm": 1.5,
-    "fta": 1.8
-   },
-   "prior": {
-    "min": 22.9,
-    "pts": 10.2,
-    "reb": 2.4,
-    "ast": 1.1,
-    "fg3m": 1.5,
-    "fgm": 3.3,
-    "fga": 7.7,
-    "fg3a": 4.5,
-    "stl": 1.4,
-    "blk": 0.4,
-    "tov": 1.1,
-    "pf": 2.1,
-    "ftm": 2.1,
-    "fta": 2.5
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "LAL",
    "name": "Quentin Grimes",
    "pos": "SG",
    "starter": false,
-   "min": 23.6,
+   "min": 26.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -869,7 +830,7 @@
    "name": "Matisse Thybulle",
    "pos": "SG",
    "starter": true,
-   "min": 21.5,
+   "min": 24.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -911,7 +872,7 @@
    "name": "Sandro Mamukelashvili",
    "pos": "PF",
    "starter": false,
-   "min": 21.2,
+   "min": 23.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -951,8 +912,8 @@
    "team": "LAL",
    "name": "Jake LaRavia",
    "pos": "PF",
-   "starter": false,
-   "min": 19.1,
+   "starter": true,
+   "min": 21.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -986,14 +947,15 @@
     "pf": 2.47,
     "ftm": 0.0,
     "fta": 0.0
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "LAL",
    "name": "Jarred Vanderbilt",
    "pos": "PF",
    "starter": false,
-   "min": 18.4,
+   "min": 20.5,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -1034,7 +996,7 @@
    "name": "Collin Sexton",
    "pos": "SG",
    "starter": false,
-   "min": 15.6,
+   "min": 17.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -1075,7 +1037,7 @@
    "name": "Jaden Hardy",
    "pos": "SG",
    "starter": false,
-   "min": 7.0,
+   "min": 7.8,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -1160,28 +1122,6 @@
     0.5,
     123.0,
     -166.67
-   ]
-  },
-  "Ziaire Williams": {
-   "pts": [
-    9.5,
-    -110,
-    -115
-   ],
-   "reb": [
-    2.5,
-    -120,
-    null
-   ],
-   "fg3m": [
-    1.5,
-    168,
-    null
-   ],
-   "stl": [
-    1.5,
-    144,
-    -160
    ]
   },
   "Collin Sexton": {
