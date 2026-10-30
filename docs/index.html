@@ -321,7 +321,7 @@ tr.detail td { background: var(--bg) }
 .pgroup .pg-body { padding: 0 16px 12px; border-top: 1px solid var(--line) }
 .pgroup.day .pg-body { padding-top: 14px }
 .pgroup.day .pg-t { text-transform: capitalize }
-.to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 20; display: inline-flex; align-items: center; gap: 6px;
+.to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 6px;
   border: 0; border-radius: 999px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); font: 600 14px var(--body, inherit);
   box-shadow: 0 4px 14px rgba(0,0,0,.25); cursor: pointer; transition: opacity .2s, transform .2s }
 .to-top[hidden] { display: none }
@@ -1244,8 +1244,9 @@ function route() {
 }
 
 // Botón flotante para volver arriba (al inicio del análisis en la página de un partido) tras bajar un poco
-const toTop = () => { $("#to-top").hidden = scrollY < 600; };
-addEventListener("scroll", toTop, { passive: true });
+// aparece al bajar media pantalla (en el celular unos 400 px); también con desplazamiento táctil e inercia
+const toTop = () => { $("#to-top").hidden = (scrollY || document.scrollingElement.scrollTop) < Math.min(600, innerHeight * 0.5); };
+["scroll", "touchmove", "touchend", "resize"].forEach(e => addEventListener(e, toTop, { passive: true }));
 $("#to-top").addEventListener("click", () => {
   scrollTo({ top: 0, behavior: calm.matches ? "auto" : "smooth" });
 });
