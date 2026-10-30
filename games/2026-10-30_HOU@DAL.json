@@ -1,0 +1,659 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "HOU",
+  "home": "DAL",
+  "venue": "American Airlines Center, Dallas",
+  "tip_et": "20:00",
+  "notes": [
+   "NBA Cup, Grupo Oeste A",
+   "HOU: Sheppard y Adams OUT; Şengün y Smart dudosos (Covers sí publica prop de Şengün)",
+   "DAL: Lively, Aldama y Biberovic OUT; Marshall (enfermedad) y de Larrea (rodilla) dudosos",
+   "Récord: HOU 5-0, DAL 3-2"
+  ],
+  "out": [
+   "Reed Sheppard",
+   "Steven Adams"
+  ],
+  "gtd": {
+   "Alperen Şengün": 0.6,
+   "Marcus Smart": 0.4,
+   "Naji Marshall": 0.6,
+   "Sergio de Larrea": 0.5
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "DAL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 110.51,
+    "drtg": 115.77,
+    "pace": 102.9
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Lively, Aldama y Biberovic OUT; Naji Marshall y de Larrea dudosos"
+   }
+  },
+  "HOU": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.71,
+    "drtg": 112.37,
+    "pace": 97.26
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Reed Sheppard y Steven Adams OUT; Şengün (espalda) y Smart (antebrazo) dudosos"
+   }
+  }
+ },
+ "matchup": {
+  "DAL": {},
+  "HOU": {}
+ },
+ "players": [
+  {
+   "team": "DAL",
+   "name": "P.J. Washington",
+   "pos": "PF",
+   "starter": true,
+   "min": 29.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.4,
+    "pts": 16.0,
+    "reb": 7.8,
+    "ast": 1.2,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 31.0,
+    "pts": 14.2,
+    "reb": 7.0,
+    "ast": 1.8,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Cooper Flagg",
+   "pos": "SF",
+   "starter": true,
+   "min": 27.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.8,
+    "pts": 25.3,
+    "reb": 5.3,
+    "ast": 6.8,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 21.0,
+    "reb": 6.7,
+    "ast": 4.5,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Zaccharie Risacher",
+   "pos": "SF",
+   "starter": false,
+   "min": 26.2,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.8,
+    "pts": 9.0,
+    "reb": 6.0,
+    "ast": 1.4,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.4,
+    "pts": 9.6,
+    "reb": 3.8,
+    "ast": 1.1,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Max Christie",
+   "pos": "SG",
+   "starter": true,
+   "min": 24.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.0,
+    "pts": 9.6,
+    "reb": 4.4,
+    "ast": 2.4,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 29.1,
+    "pts": 12.3,
+    "reb": 3.2,
+    "ast": 2.0,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Naji Marshall",
+   "pos": "SF",
+   "starter": false,
+   "min": 24.4,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 27.7,
+    "pts": 13.7,
+    "reb": 3.3,
+    "ast": 5.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 29.5,
+    "pts": 15.2,
+    "reb": 4.7,
+    "ast": 3.3,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Kyrie Irving",
+   "pos": "SG",
+   "starter": true,
+   "min": 23.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.0,
+    "pts": 18.0,
+    "reb": 3.3,
+    "ast": 3.8,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 18.0,
+    "reb": 3.3,
+    "ast": 3.8,
+    "fg3m": 2.8
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Daniel Gafford",
+   "pos": "C",
+   "starter": true,
+   "min": 19.7,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.4,
+    "pts": 6.6,
+    "reb": 7.0,
+    "ast": 2.6,
+    "fg3m": 0.2
+   },
+   "prior": {
+    "min": 21.7,
+    "pts": 9.5,
+    "reb": 6.9,
+    "ast": 1.1,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Marcus Sasser",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.4,
+    "pts": 9.0,
+    "reb": 1.6,
+    "ast": 2.6,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 21.4,
+    "pts": 9.0,
+    "reb": 1.6,
+    "ast": 2.6,
+    "fg3m": 1.8
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Morez Johnson Jr.",
+   "pos": "PF",
+   "starter": false,
+   "min": 13.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.2,
+    "pts": 7.2,
+    "reb": 3.6,
+    "ast": 1.4,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 15.2,
+    "pts": 7.2,
+    "reb": 3.6,
+    "ast": 1.4,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Caleb Martin",
+   "pos": "SF",
+   "starter": false,
+   "min": 12.3,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 10.0,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 14.8,
+    "pts": 3.9,
+    "reb": 2.5,
+    "ast": 1.4,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Walter Clayton",
+   "pos": "PG",
+   "starter": false,
+   "min": 10.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.8,
+    "pts": 4.5,
+    "reb": 2.3,
+    "ast": 3.5,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 20.4,
+    "pts": 7.8,
+    "reb": 2.0,
+    "ast": 4.1,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "DAL",
+   "name": "Sergio de Larrea",
+   "pos": "PG",
+   "starter": false,
+   "min": 10.1,
+   "g_cur": 4,
+   "p_play": 0.5,
+   "cur": {
+    "min": 11.5,
+    "pts": 5.3,
+    "reb": 2.0,
+    "ast": 1.3,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 11.5,
+    "pts": 5.3,
+    "reb": 2.0,
+    "ast": 1.3,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Kevin Durant",
+   "pos": "PF",
+   "starter": true,
+   "min": 32.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.4,
+    "pts": 22.4,
+    "reb": 6.2,
+    "ast": 3.6,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 36.4,
+    "pts": 26.0,
+    "reb": 5.5,
+    "ast": 4.8,
+    "fg3m": 2.4
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Jabari Smith Jr.",
+   "pos": "PF",
+   "starter": true,
+   "min": 32.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.4,
+    "pts": 16.2,
+    "reb": 5.8,
+    "ast": 2.4,
+    "fg3m": 2.4
+   },
+   "prior": {
+    "min": 35.1,
+    "pts": 15.8,
+    "reb": 6.9,
+    "ast": 1.9,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Alperen Şengün",
+   "pos": "C",
+   "starter": true,
+   "min": 32.0,
+   "g_cur": 4,
+   "p_play": 0.6,
+   "cur": {
+    "min": 34.0,
+    "pts": 24.5,
+    "reb": 9.0,
+    "ast": 7.0,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 33.3,
+    "pts": 20.4,
+    "reb": 8.9,
+    "ast": 6.2,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Amen Thompson",
+   "pos": "SF",
+   "starter": true,
+   "min": 32.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.0,
+    "pts": 18.2,
+    "reb": 8.0,
+    "ast": 3.8,
+    "fg3m": 0.4
+   },
+   "prior": {
+    "min": 37.4,
+    "pts": 18.3,
+    "reb": 7.8,
+    "ast": 5.3,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Fred VanVleet",
+   "pos": "PG",
+   "starter": true,
+   "min": 28.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.8,
+    "pts": 12.3,
+    "reb": 3.8,
+    "ast": 6.5,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 29.8,
+    "pts": 12.3,
+    "reb": 3.8,
+    "ast": 6.5,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Tari Eason",
+   "pos": "PF",
+   "starter": false,
+   "min": 23.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.8,
+    "pts": 10.2,
+    "reb": 5.4,
+    "ast": 0.6,
+    "fg3m": 0.4
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 10.5,
+    "reb": 6.3,
+    "ast": 1.5,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Marcus Smart",
+   "pos": "PG",
+   "starter": false,
+   "min": 22.6,
+   "g_cur": 2,
+   "p_play": 0.4,
+   "cur": {
+    "min": 24.0,
+    "pts": 7.5,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 9.3,
+    "reb": 2.8,
+    "ast": 3.0,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Bogdan Bogdanović",
+   "pos": "SG",
+   "starter": false,
+   "min": 13.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.2,
+    "pts": 8.0,
+    "reb": 1.4,
+    "ast": 1.6,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 19.7,
+    "pts": 7.4,
+    "reb": 2.6,
+    "ast": 2.2,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Oscar Tshiebwe",
+   "pos": "C",
+   "starter": false,
+   "min": 13.2,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 7.0,
+    "reb": 5.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 14.0,
+    "pts": 7.0,
+    "reb": 5.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "HOU",
+   "name": "Clint Capela",
+   "pos": "C",
+   "starter": false,
+   "min": 10.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.3,
+    "pts": 3.5,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 11.3,
+    "pts": 3.5,
+    "reb": 4.0,
+    "ast": 0.8,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": 5.5,
+  "total": 227.5,
+  "ml_home": 170,
+  "ml_away": -205
+ },
+ "prop_lines": {
+  "Alperen Şengün": {
+   "pts": [
+    18.5,
+    -112,
+    -112
+   ]
+  },
+  "Daniel Gafford": {
+   "pts": [
+    8.5,
+    -110,
+    -115
+   ]
+  },
+  "Kevin Durant": {
+   "pts": [
+    23.5,
+    -115,
+    -110
+   ]
+  },
+  "Amen Thompson": {
+   "pts": [
+    18.5,
+    -112,
+    -112
+   ]
+  },
+  "Naji Marshall": {
+   "pts": [
+    11.5,
+    -105,
+    -115
+   ]
+  },
+  "Marcus Sasser": {
+   "pts": [
+    6.5,
+    100,
+    -125
+   ]
+  },
+  "Cooper Flagg": {
+   "pts": [
+    23.5,
+    -112,
+    -112
+   ]
+  },
+  "Max Christie": {
+   "pts": [
+    8.5,
+    -112,
+    100
+   ]
+  }
+ }
+}

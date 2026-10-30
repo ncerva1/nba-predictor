@@ -1,0 +1,702 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "LAL",
+  "home": "GSW",
+  "venue": "Chase Center, San Francisco",
+  "tip_et": "22:00",
+  "notes": [
+   "NBA Cup, Grupo Oeste C",
+   "LAL: Luka probable (Covers publica su prop de 32.5); Ziaire Williams duda",
+   "GSW: Butler, Porziņģis y Moody OUT; Gui Santos duda",
+   "H2H 2025-26: LAL 3-1 (dos blowouts de 32 y 27)",
+   "Récord: LAL 4-1, GSW 2-3"
+  ],
+  "out": [],
+  "gtd": {
+   "Luka Dončić": 0.8,
+   "Ziaire Williams": 0.6,
+   "Gui Santos": 0.5
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "GSW": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 114.01,
+    "drtg": 114.67,
+    "pace": 100.33
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Butler, Porziņģis y Moody OUT; Gui Santos duda (rodilla)"
+   }
+  },
+  "LAL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.21,
+    "drtg": 115.77,
+    "pace": 99.5
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Luka Dončić probable (espalda, descansó el 28-oct) y Ziaire Williams duda (pie); Carr y Thiero OUT"
+   }
+  }
+ },
+ "matchup": {
+  "GSW": {},
+  "LAL": {}
+ },
+ "players": [
+  {
+   "team": "GSW",
+   "name": "Yaxel Lendeborg",
+   "pos": "SF",
+   "starter": true,
+   "min": 29.7,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.6,
+    "pts": 22.6,
+    "reb": 9.2,
+    "ast": 4.0,
+    "fg3m": 2.2
+   },
+   "prior": {
+    "min": 33.6,
+    "pts": 22.6,
+    "reb": 9.2,
+    "ast": 4.0,
+    "fg3m": 2.2
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Brandin Podziemski",
+   "pos": "SG",
+   "starter": true,
+   "min": 28.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.3,
+    "pts": 14.7,
+    "reb": 4.7,
+    "ast": 4.7,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 28.5,
+    "pts": 13.8,
+    "reb": 5.1,
+    "ast": 3.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Draymond Green",
+   "pos": "PF",
+   "starter": true,
+   "min": 24.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.8,
+    "pts": 3.3,
+    "reb": 5.5,
+    "ast": 6.8,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 27.5,
+    "pts": 8.4,
+    "reb": 5.5,
+    "ast": 5.5,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "starter": true,
+   "min": 24.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.3,
+    "pts": 28.8,
+    "reb": 3.8,
+    "ast": 3.5,
+    "fg3m": 3.5
+   },
+   "prior": {
+    "min": 30.9,
+    "pts": 26.6,
+    "reb": 3.6,
+    "ast": 4.7,
+    "fg3m": 4.4
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Gui Santos",
+   "pos": "PF",
+   "starter": true,
+   "min": 21.2,
+   "g_cur": 4,
+   "p_play": 0.5,
+   "cur": {
+    "min": 24.0,
+    "pts": 9.3,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 9.2,
+    "reb": 3.9,
+    "ast": 2.3,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "De'Anthony Melton",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.4,
+    "pts": 9.2,
+    "reb": 3.6,
+    "ast": 2.0,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 23.0,
+    "pts": 12.3,
+    "reb": 3.2,
+    "ast": 2.6,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Georges Niang",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.1,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.4,
+    "pts": 6.2,
+    "reb": 2.8,
+    "ast": 1.2,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 19.4,
+    "pts": 6.2,
+    "reb": 2.8,
+    "ast": 1.2,
+    "fg3m": 0.8
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Al Horford",
+   "pos": "C",
+   "starter": false,
+   "min": 16.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.3,
+    "pts": 4.5,
+    "reb": 4.3,
+    "ast": 1.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 21.5,
+    "pts": 8.3,
+    "reb": 4.9,
+    "ast": 2.6,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Will Richard",
+   "pos": "SG",
+   "starter": false,
+   "min": 14.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.2,
+    "pts": 5.0,
+    "reb": 1.6,
+    "ast": 0.4,
+    "fg3m": 0.6
+   },
+   "prior": {
+    "min": 20.0,
+    "pts": 6.4,
+    "reb": 2.5,
+    "ast": 1.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Brandon Williams",
+   "pos": "PG",
+   "starter": false,
+   "min": 14.1,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.0,
+    "pts": 11.0,
+    "reb": 3.0,
+    "ast": 2.6,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 22.2,
+    "pts": 13.0,
+    "reb": 2.9,
+    "ast": 3.9,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Gary Payton II",
+   "pos": "SG",
+   "starter": false,
+   "min": 12.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.6,
+    "pts": 5.6,
+    "reb": 1.6,
+    "ast": 0.2,
+    "fg3m": 0.4
+   },
+   "prior": {
+    "min": 15.6,
+    "pts": 7.5,
+    "reb": 3.6,
+    "ast": 1.7,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "Graham Ike",
+   "pos": "C",
+   "starter": false,
+   "min": 11.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.3,
+    "pts": 8.3,
+    "reb": 3.5,
+    "ast": 1.3,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 13.3,
+    "pts": 8.3,
+    "reb": 3.5,
+    "ast": 1.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "GSW",
+   "name": "LJ Cryer",
+   "pos": "PG",
+   "starter": false,
+   "min": 7.7,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.7,
+    "pts": 6.0,
+    "reb": 0.7,
+    "ast": 2.0,
+    "fg3m": 1.7
+   },
+   "prior": {
+    "min": 16.2,
+    "pts": 8.2,
+    "reb": 1.6,
+    "ast": 1.0,
+    "fg3m": 2.1
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Luka Dončić",
+   "pos": "PG",
+   "starter": true,
+   "min": 31.1,
+   "g_cur": 4,
+   "p_play": 0.8,
+   "cur": {
+    "min": 35.5,
+    "pts": 36.0,
+    "reb": 6.8,
+    "ast": 8.3,
+    "fg3m": 5.3
+   },
+   "prior": {
+    "min": 35.8,
+    "pts": 33.5,
+    "reb": 7.7,
+    "ast": 8.3,
+    "fg3m": 4.0
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Austin Reaves",
+   "pos": "SG",
+   "starter": true,
+   "min": 30.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 35.2,
+    "pts": 24.4,
+    "reb": 3.4,
+    "ast": 5.4,
+    "fg3m": 2.6
+   },
+   "prior": {
+    "min": 34.5,
+    "pts": 23.3,
+    "reb": 4.7,
+    "ast": 5.5,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Walker Kessler",
+   "pos": "C",
+   "starter": true,
+   "min": 26.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.4,
+    "pts": 14.8,
+    "reb": 8.2,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 30.8,
+    "pts": 14.4,
+    "reb": 10.8,
+    "ast": 3.0,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Ziaire Williams",
+   "pos": "SF",
+   "starter": true,
+   "min": 25.0,
+   "g_cur": 4,
+   "p_play": 0.6,
+   "cur": {
+    "min": 28.5,
+    "pts": 11.3,
+    "reb": 3.0,
+    "ast": 2.3,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 22.9,
+    "pts": 10.2,
+    "reb": 2.4,
+    "ast": 1.1,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Quentin Grimes",
+   "pos": "SG",
+   "starter": false,
+   "min": 23.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.0,
+    "pts": 10.2,
+    "reb": 3.6,
+    "ast": 2.8,
+    "fg3m": 0.6
+   },
+   "prior": {
+    "min": 29.4,
+    "pts": 13.4,
+    "reb": 3.6,
+    "ast": 3.3,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Matisse Thybulle",
+   "pos": "SG",
+   "starter": true,
+   "min": 21.5,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.6,
+    "pts": 9.4,
+    "reb": 1.6,
+    "ast": 1.0,
+    "fg3m": 2.4
+   },
+   "prior": {
+    "min": 16.0,
+    "pts": 5.8,
+    "reb": 2.0,
+    "ast": 0.9,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Sandro Mamukelashvili",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.2,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.2,
+    "pts": 10.2,
+    "reb": 4.8,
+    "ast": 1.8,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 21.9,
+    "pts": 11.2,
+    "reb": 4.9,
+    "ast": 1.9,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Jake LaRavia",
+   "pos": "PF",
+   "starter": false,
+   "min": 19.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.8,
+    "pts": 4.3,
+    "reb": 4.3,
+    "ast": 1.0,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 25.1,
+    "pts": 8.2,
+    "reb": 4.0,
+    "ast": 1.8,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Jarred Vanderbilt",
+   "pos": "PF",
+   "starter": false,
+   "min": 18.4,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 0.0,
+    "reb": 7.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 17.4,
+    "pts": 4.4,
+    "reb": 4.5,
+    "ast": 1.3,
+    "fg3m": 0.4
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Collin Sexton",
+   "pos": "SG",
+   "starter": false,
+   "min": 15.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.8,
+    "pts": 12.0,
+    "reb": 2.0,
+    "ast": 2.3,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 23.7,
+    "pts": 15.4,
+    "reb": 2.3,
+    "ast": 3.3,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "LAL",
+   "name": "Jaden Hardy",
+   "pos": "SG",
+   "starter": false,
+   "min": 7.0,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 2.5,
+    "reb": 1.0,
+    "ast": 1.0,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 12.6,
+    "pts": 6.9,
+    "reb": 1.4,
+    "ast": 0.9,
+    "fg3m": 1.4
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": 2.5,
+  "total": 235.0,
+  "ml_home": 115,
+  "ml_away": -135
+ },
+ "prop_lines": {
+  "Al Horford": {
+   "pts": [
+    5.5,
+    105,
+    -125
+   ]
+  },
+  "Ziaire Williams": {
+   "pts": [
+    9.5,
+    -110,
+    -115
+   ]
+  },
+  "Collin Sexton": {
+   "pts": [
+    12.5,
+    -105,
+    -120
+   ]
+  },
+  "Walker Kessler": {
+   "pts": [
+    13.5,
+    -120,
+    -105
+   ]
+  },
+  "De'Anthony Melton": {
+   "pts": [
+    9.5,
+    102,
+    -114
+   ]
+  },
+  "Sandro Mamukelashvili": {
+   "pts": [
+    9.5,
+    100,
+    -125
+   ]
+  },
+  "Luka Dončić": {
+   "pts": [
+    32.5,
+    -115,
+    -105
+   ]
+  },
+  "Matisse Thybulle": {
+   "pts": [
+    6.5,
+    -112,
+    -112
+   ]
+  }
+ }
+}

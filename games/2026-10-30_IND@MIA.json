@@ -1,0 +1,634 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "IND",
+  "home": "MIA",
+  "venue": "Kaseya Center, Miami",
+  "tip_et": "20:00",
+  "notes": [
+   "NBA Cup, Grupo Este B",
+   "IND: Haliburton, Sheppard y McConnell OUT; Zubac duda",
+   "MIA: Fontecchio duda (enfermedad)",
+   "Récord: IND 2-3, MIA 1-4"
+  ],
+  "out": [
+   "Tyrese Haliburton",
+   "Ben Sheppard"
+  ],
+  "gtd": {
+   "Ivica Zubac": 0.5,
+   "Simone Fontecchio": 0.5
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "MIA": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 116.01,
+    "drtg": 113.87,
+    "pace": 104.5
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "IND": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 110.31,
+    "drtg": 118.17,
+    "pace": 102.06
+   },
+   "adj": {
+    "o": -2.0,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Haliburton OUT (isquio, ~2 semanas), Sheppard OUT (menisco) y McConnell OUT; Zubac duda (tobillo)"
+   }
+  }
+ },
+ "matchup": {
+  "MIA": {},
+  "IND": {}
+ },
+ "players": [
+  {
+   "team": "MIA",
+   "name": "Davion Mitchell",
+   "pos": "PG",
+   "starter": true,
+   "min": 33.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 34.0,
+    "pts": 16.4,
+    "reb": 0.8,
+    "ast": 7.6,
+    "fg3m": 1.8
+   },
+   "prior": {
+    "min": 28.6,
+    "pts": 9.3,
+    "reb": 2.7,
+    "ast": 6.5,
+    "fg3m": 1.3
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Giannis Antetokounmpo",
+   "pos": "PF",
+   "starter": true,
+   "min": 31.2,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.4,
+    "pts": 27.6,
+    "reb": 11.2,
+    "ast": 4.6,
+    "fg3m": 0.6
+   },
+   "prior": {
+    "min": 28.9,
+    "pts": 27.6,
+    "reb": 9.8,
+    "ast": 5.4,
+    "fg3m": 0.4
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Bam Adebayo",
+   "pos": "C",
+   "starter": true,
+   "min": 31.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.2,
+    "pts": 14.2,
+    "reb": 7.6,
+    "ast": 3.4,
+    "fg3m": 0.6
+   },
+   "prior": {
+    "min": 32.4,
+    "pts": 20.1,
+    "reb": 10.0,
+    "ast": 3.2,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Pelle Larsson",
+   "pos": "SG",
+   "starter": false,
+   "min": 30.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.6,
+    "pts": 10.6,
+    "reb": 3.6,
+    "ast": 4.2,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 26.4,
+    "pts": 11.4,
+    "reb": 3.5,
+    "ast": 3.4,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Andrew Wiggins",
+   "pos": "SF",
+   "starter": true,
+   "min": 26.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.8,
+    "pts": 10.6,
+    "reb": 3.2,
+    "ast": 1.4,
+    "fg3m": 1.2
+   },
+   "prior": {
+    "min": 30.3,
+    "pts": 15.4,
+    "reb": 4.8,
+    "ast": 2.7,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Bobby Portis",
+   "pos": "PF",
+   "starter": false,
+   "min": 23.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 10.4,
+    "reb": 8.2,
+    "ast": 1.8,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 24.2,
+    "pts": 13.7,
+    "reb": 6.4,
+    "ast": 1.6,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Klay Thompson",
+   "pos": "SF",
+   "starter": true,
+   "min": 19.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.0,
+    "pts": 7.8,
+    "reb": 1.6,
+    "ast": 1.0,
+    "fg3m": 2.4
+   },
+   "prior": {
+    "min": 21.7,
+    "pts": 11.7,
+    "reb": 2.1,
+    "ast": 1.4,
+    "fg3m": 2.9
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Tim Hardaway Jr.",
+   "pos": "SG",
+   "starter": false,
+   "min": 19.5,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.6,
+    "pts": 7.0,
+    "reb": 2.4,
+    "ast": 0.8,
+    "fg3m": 1.2
+   },
+   "prior": {
+    "min": 26.6,
+    "pts": 13.5,
+    "reb": 2.6,
+    "ast": 1.4,
+    "fg3m": 2.8
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Nikola Jović",
+   "pos": "PF",
+   "starter": false,
+   "min": 12.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 12.8,
+    "pts": 3.5,
+    "reb": 3.3,
+    "ast": 0.8,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 17.2,
+    "pts": 7.3,
+    "reb": 3.3,
+    "ast": 2.2,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MIA",
+   "name": "Dru Smith",
+   "pos": "SG",
+   "starter": false,
+   "min": 11.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.3,
+    "pts": 4.0,
+    "reb": 1.0,
+    "ast": 1.7,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 16.3,
+    "pts": 5.6,
+    "reb": 2.5,
+    "ast": 2.6,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Andrew Nembhard",
+   "pos": "SG",
+   "starter": true,
+   "min": 33.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.8,
+    "pts": 16.5,
+    "reb": 2.0,
+    "ast": 7.8,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 31.3,
+    "pts": 16.9,
+    "reb": 2.8,
+    "ast": 7.7,
+    "fg3m": 1.9
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Pascal Siakam",
+   "pos": "PF",
+   "starter": true,
+   "min": 33.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.2,
+    "pts": 24.0,
+    "reb": 8.4,
+    "ast": 3.8,
+    "fg3m": 1.6
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 24.0,
+    "reb": 6.6,
+    "ast": 3.8,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Kelly Oubre Jr.",
+   "pos": "SF",
+   "starter": true,
+   "min": 24.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 9.0,
+    "reb": 2.4,
+    "ast": 1.8,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 31.5,
+    "pts": 14.1,
+    "reb": 5.0,
+    "ast": 1.6,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Obi Toppin",
+   "pos": "PF",
+   "starter": false,
+   "min": 23.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.8,
+    "pts": 15.2,
+    "reb": 5.2,
+    "ast": 1.2,
+    "fg3m": 2.2
+   },
+   "prior": {
+    "min": 17.7,
+    "pts": 11.6,
+    "reb": 4.4,
+    "ast": 2.3,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Aaron Nesmith",
+   "pos": "SF",
+   "starter": true,
+   "min": 22.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.8,
+    "pts": 13.3,
+    "reb": 1.8,
+    "ast": 1.3,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 29.7,
+    "pts": 13.8,
+    "reb": 4.2,
+    "ast": 1.9,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Ivica Zubac",
+   "pos": "C",
+   "starter": true,
+   "min": 21.8,
+   "g_cur": 3,
+   "p_play": 0.5,
+   "cur": {
+    "min": 21.3,
+    "pts": 9.0,
+    "reb": 9.0,
+    "ast": 1.3,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 30.1,
+    "pts": 14.1,
+    "reb": 10.6,
+    "ast": 2.2,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Jarace Walker",
+   "pos": "PF",
+   "starter": false,
+   "min": 21.5,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 5.6,
+    "reb": 6.0,
+    "ast": 1.4,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 25.7,
+    "pts": 11.6,
+    "reb": 5.1,
+    "ast": 2.5,
+    "fg3m": 1.8
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Quenton Jackson",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.4,
+    "pts": 5.0,
+    "reb": 2.0,
+    "ast": 3.2,
+    "fg3m": 0.2
+   },
+   "prior": {
+    "min": 18.3,
+    "pts": 9.1,
+    "reb": 2.3,
+    "ast": 2.9,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Jay Huff",
+   "pos": "C",
+   "starter": false,
+   "min": 16.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.3,
+    "pts": 5.8,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 21.0,
+    "pts": 9.5,
+    "reb": 4.0,
+    "ast": 1.5,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Larry Nance Jr.",
+   "pos": "PF",
+   "starter": false,
+   "min": 14.3,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 2.6,
+    "reb": 2.8,
+    "ast": 0.4,
+    "fg3m": 0.4
+   },
+   "prior": {
+    "min": 12.8,
+    "pts": 3.7,
+    "reb": 2.7,
+    "ast": 1.0,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "IND",
+   "name": "Jalen Slawson",
+   "pos": "SF",
+   "starter": false,
+   "min": 10.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.8,
+    "pts": 2.3,
+    "reb": 2.3,
+    "ast": 0.8,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 23.9,
+    "pts": 7.3,
+    "reb": 4.4,
+    "ast": 2.8,
+    "fg3m": 1.2
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": -7.5,
+  "total": 238.5,
+  "ml_home": -265,
+  "ml_away": 215
+ },
+ "prop_lines": {
+  "Klay Thompson": {
+   "pts": [
+    8.5,
+    -110,
+    -110
+   ]
+  },
+  "Giannis Antetokounmpo": {
+   "pts": [
+    30.5,
+    -105,
+    -115
+   ]
+  },
+  "Davion Mitchell": {
+   "pts": [
+    11.5,
+    -115,
+    -110
+   ]
+  },
+  "Bam Adebayo": {
+   "pts": [
+    18.5,
+    -105,
+    -115
+   ]
+  },
+  "Jay Huff": {
+   "pts": [
+    7.5,
+    -105,
+    -120
+   ]
+  },
+  "Tim Hardaway Jr.": {
+   "pts": [
+    8.5,
+    -130,
+    102
+   ]
+  },
+  "Andrew Nembhard": {
+   "pts": [
+    16.5,
+    -115,
+    -105
+   ]
+  },
+  "Pascal Siakam": {
+   "pts": [
+    24.5,
+    -110,
+    -105
+   ]
+  }
+ }
+}

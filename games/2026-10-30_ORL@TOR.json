@@ -1,0 +1,631 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "ORL",
+  "home": "TOR",
+  "venue": "Scotiabank Arena, Toronto",
+  "tip_et": "19:30",
+  "notes": [
+   "NBA Cup, Grupo Este A",
+   "ORL: Banchero, Suggs e Isaac OUT",
+   "TOR: Kawhi Leonard OUT (3-4 semanas); Bittle OUT",
+   "TOR ganó 129-99 a ORL el 28-oct",
+   "Récord: ORL 1-3, TOR 3-1"
+  ],
+  "out": [
+   "Paolo Banchero",
+   "Jalen Suggs",
+   "Kawhi Leonard"
+  ],
+  "gtd": {}
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "TOR": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.21,
+    "drtg": 112.37,
+    "pace": 99.5
+   },
+   "adj": {
+    "o": -1.0,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Kawhi Leonard OUT (rodilla, 3-4 semanas)"
+   }
+  },
+  "ORL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 114.41,
+    "drtg": 113.87,
+    "pace": 100.84
+   },
+   "adj": {
+    "o": -1.5,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Paolo Banchero OUT (tobillo, hasta 22-nov), Jalen Suggs OUT (rodilla, hasta 10-nov) e Isaac OUT"
+   }
+  }
+ },
+ "matchup": {
+  "TOR": {},
+  "ORL": {}
+ },
+ "players": [
+  {
+   "team": "TOR",
+   "name": "RJ Barrett",
+   "pos": "SF",
+   "starter": true,
+   "min": 35.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 31.3,
+    "pts": 22.0,
+    "reb": 6.0,
+    "ast": 3.8,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 30.3,
+    "pts": 19.3,
+    "reb": 5.3,
+    "ast": 3.3,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Scottie Barnes",
+   "pos": "PF",
+   "starter": true,
+   "min": 34.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.5,
+    "pts": 19.8,
+    "reb": 7.3,
+    "ast": 4.3,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 33.5,
+    "pts": 18.1,
+    "reb": 7.5,
+    "ast": 5.9,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Immanuel Quickley",
+   "pos": "PG",
+   "starter": true,
+   "min": 31.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.5,
+    "pts": 17.5,
+    "reb": 2.8,
+    "ast": 5.5,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 31.9,
+    "pts": 16.4,
+    "reb": 4.0,
+    "ast": 5.9,
+    "fg3m": 2.5
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Ja'Kobe Walter",
+   "pos": "SG",
+   "starter": true,
+   "min": 29.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.5,
+    "pts": 13.3,
+    "reb": 4.0,
+    "ast": 2.5,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 20.5,
+    "pts": 7.5,
+    "reb": 2.6,
+    "ast": 1.2,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Jamal Shead",
+   "pos": "PG",
+   "starter": false,
+   "min": 23.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 6.0,
+    "reb": 2.3,
+    "ast": 4.3,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 22.6,
+    "pts": 6.6,
+    "reb": 1.7,
+    "ast": 5.4,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Jakob Poeltl",
+   "pos": "C",
+   "starter": true,
+   "min": 21.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.5,
+    "pts": 2.8,
+    "reb": 4.5,
+    "ast": 0.5,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 25.0,
+    "pts": 10.7,
+    "reb": 7.0,
+    "ast": 2.0,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Collin Murray-Boyles",
+   "pos": "PF",
+   "starter": false,
+   "min": 19.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.8,
+    "pts": 6.8,
+    "reb": 5.0,
+    "ast": 1.5,
+    "fg3m": 0.5
+   },
+   "prior": {
+    "min": 21.9,
+    "pts": 8.5,
+    "reb": 5.0,
+    "ast": 1.9,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Allen Graves",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.0,
+    "pts": 5.3,
+    "reb": 3.5,
+    "ast": 1.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 16.0,
+    "pts": 5.3,
+    "reb": 3.5,
+    "ast": 1.0,
+    "fg3m": 0.3
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Jamison Battle",
+   "pos": "SF",
+   "starter": false,
+   "min": 15.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 6.0,
+    "reb": 1.5,
+    "ast": 0.8,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 8.5,
+    "pts": 3.1,
+    "reb": 1.5,
+    "ast": 0.4,
+    "fg3m": 0.6
+   }
+  },
+  {
+   "team": "TOR",
+   "name": "Trayce Jackson-Davis",
+   "pos": "C",
+   "starter": false,
+   "min": 10.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.3,
+    "pts": 4.5,
+    "reb": 3.3,
+    "ast": 0.8,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 9.3,
+    "pts": 4.5,
+    "reb": 3.3,
+    "ast": 0.8,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Franz Wagner",
+   "pos": "SF",
+   "starter": true,
+   "min": 37.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.5,
+    "pts": 19.5,
+    "reb": 7.3,
+    "ast": 6.0,
+    "fg3m": 0.8
+   },
+   "prior": {
+    "min": 30.0,
+    "pts": 20.6,
+    "reb": 5.2,
+    "ast": 3.3,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Desmond Bane",
+   "pos": "SG",
+   "starter": true,
+   "min": 35.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.3,
+    "pts": 14.5,
+    "reb": 4.5,
+    "ast": 2.0,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 33.6,
+    "pts": 20.1,
+    "reb": 4.1,
+    "ast": 4.1,
+    "fg3m": 2.0
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Wendell Carter Jr.",
+   "pos": "C",
+   "starter": true,
+   "min": 32.7,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.5,
+    "pts": 13.5,
+    "reb": 9.0,
+    "ast": 1.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 29.3,
+    "pts": 11.8,
+    "reb": 7.4,
+    "ast": 2.0,
+    "fg3m": 0.9
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Tristan Da Silva",
+   "pos": "SF",
+   "starter": false,
+   "min": 32.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.8,
+    "pts": 14.5,
+    "reb": 2.5,
+    "ast": 1.8,
+    "fg3m": 3.5
+   },
+   "prior": {
+    "min": 24.7,
+    "pts": 9.9,
+    "reb": 3.7,
+    "ast": 1.6,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Anthony Black",
+   "pos": "PG",
+   "starter": true,
+   "min": 26.6,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 13.0,
+    "reb": 2.5,
+    "ast": 3.0,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 29.8,
+    "pts": 15.0,
+    "reb": 3.8,
+    "ast": 3.7,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Jevon Carter",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.4,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.5,
+    "pts": 3.0,
+    "reb": 0.5,
+    "ast": 2.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 20.4,
+    "pts": 7.2,
+    "reb": 2.1,
+    "ast": 2.3,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Jase Richardson",
+   "pos": "SG",
+   "starter": true,
+   "min": 16.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 6.0,
+    "reb": 1.3,
+    "ast": 1.8,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 10.9,
+    "pts": 4.4,
+    "reb": 1.2,
+    "ast": 1.1,
+    "fg3m": 0.5
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Jamal Cain",
+   "pos": "SF",
+   "starter": false,
+   "min": 15.5,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 14.0,
+    "pts": 3.5,
+    "reb": 1.8,
+    "ast": 0.0,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 12.2,
+    "pts": 5.4,
+    "reb": 2.0,
+    "ast": 0.7,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Goga Bitadze",
+   "pos": "C",
+   "starter": false,
+   "min": 13.0,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.7,
+    "pts": 5.3,
+    "reb": 3.0,
+    "ast": 0.7,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 15.2,
+    "pts": 5.9,
+    "reb": 5.0,
+    "ast": 1.3,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "ORL",
+   "name": "Nikola Vučević",
+   "pos": "C",
+   "starter": false,
+   "min": 11.1,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 10.0,
+    "pts": 2.5,
+    "reb": 2.5,
+    "ast": 1.5,
+    "fg3m": 0.3
+   },
+   "prior": {
+    "min": 28.4,
+    "pts": 15.1,
+    "reb": 8.4,
+    "ast": 3.3,
+    "fg3m": 1.6
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": -5.5,
+  "total": 224.5,
+  "ml_home": -210,
+  "ml_away": 170
+ },
+ "prop_lines": {
+  "Jakob Poeltl": {
+   "pts": [
+    7.5,
+    -135,
+    105
+   ]
+  },
+  "Jevon Carter": {
+   "pts": [
+    5.5,
+    -112,
+    -112
+   ]
+  },
+  "Immanuel Quickley": {
+   "pts": [
+    16.5,
+    -110,
+    -110
+   ]
+  },
+  "Anthony Black": {
+   "pts": [
+    12.5,
+    -105,
+    -115
+   ]
+  },
+  "Jamal Shead": {
+   "pts": [
+    8.5,
+    -105,
+    -120
+   ]
+  },
+  "Jamison Battle": {
+   "pts": [
+    4.5,
+    -140,
+    110
+   ]
+  },
+  "Franz Wagner": {
+   "pts": [
+    23.5,
+    -115,
+    -110
+   ]
+  },
+  "RJ Barrett": {
+   "pts": [
+    22.5,
+    -115,
+    -110
+   ]
+  },
+  "Allen Graves": {
+   "pts": [
+    5.5,
+    -110,
+    -115
+   ]
+  },
+  "Ja'Kobe Walter": {
+   "pts": [
+    10.5,
+    -112,
+    -110
+   ]
+  },
+  "Jase Richardson": {
+   "pts": [
+    6.5,
+    -120,
+    -105
+   ]
+  }
+ }
+}

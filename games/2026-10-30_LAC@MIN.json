@@ -1,0 +1,602 @@
+{
+ "game": {
+  "date": "2026-10-30",
+  "away": "LAC",
+  "home": "MIN",
+  "venue": "Target Center, Minneapolis",
+  "tip_et": "20:00",
+  "notes": [
+   "NBA Cup, Grupo Oeste B",
+   "MIN: Anthony Edwards OUT hasta diciembre (operado de la rodilla) y DiVincenzo OUT",
+   "LAC: Ingram, Beal, Strus y Konan Niederhauser OUT; Hachimura duda",
+   "Récord: LAC 1-3, MIN 3-2"
+  ],
+  "out": [
+   "Anthony Edwards"
+  ],
+  "gtd": {
+   "Rui Hachimura": 0.6
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "MIN": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.81,
+    "drtg": 112.77,
+    "pace": 101.78
+   },
+   "adj": {
+    "o": -3.0,
+    "d": 0.5,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Anthony Edwards OUT (artroscopia de rodilla, hasta al menos 21-dic) y DiVincenzo OUT"
+   }
+  },
+  "LAC": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 116.51,
+    "drtg": 115.47,
+    "pace": 97.57
+   },
+   "adj": {
+    "o": -0.5,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Ingram, Beal y Strus OUT; Hachimura duda (cuádriceps)"
+   }
+  }
+ },
+ "matchup": {
+  "MIN": {},
+  "LAC": {}
+ },
+ "players": [
+  {
+   "team": "MIN",
+   "name": "Jaden McDaniels",
+   "pos": "PF",
+   "starter": true,
+   "min": 37.1,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.4,
+    "pts": 15.8,
+    "reb": 6.6,
+    "ast": 3.0,
+    "fg3m": 1.4
+   },
+   "prior": {
+    "min": 31.7,
+    "pts": 14.8,
+    "reb": 4.2,
+    "ast": 2.7,
+    "fg3m": 1.4
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Jonathan Kuminga",
+   "pos": "PF",
+   "starter": true,
+   "min": 34.8,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.4,
+    "pts": 13.2,
+    "reb": 5.2,
+    "ast": 3.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 23.1,
+    "pts": 12.2,
+    "reb": 5.6,
+    "ast": 2.3,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Rudy Gobert",
+   "pos": "C",
+   "starter": true,
+   "min": 34.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 6.6,
+    "reb": 12.2,
+    "ast": 1.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 31.3,
+    "pts": 10.9,
+    "reb": 11.5,
+    "ast": 1.7,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Ayo Dosunmu",
+   "pos": "SG",
+   "starter": true,
+   "min": 31.4,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.4,
+    "pts": 13.0,
+    "reb": 3.8,
+    "ast": 4.0,
+    "fg3m": 1.4
+   },
+   "prior": {
+    "min": 27.3,
+    "pts": 14.8,
+    "reb": 3.4,
+    "ast": 3.6,
+    "fg3m": 1.8
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "LaMelo Ball",
+   "pos": "PG",
+   "starter": true,
+   "min": 29.1,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.4,
+    "pts": 13.4,
+    "reb": 2.2,
+    "ast": 6.6,
+    "fg3m": 2.8
+   },
+   "prior": {
+    "min": 28.0,
+    "pts": 20.1,
+    "reb": 4.8,
+    "ast": 7.1,
+    "fg3m": 3.8
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Terrence Shannon Jr.",
+   "pos": "SG",
+   "starter": false,
+   "min": 26.6,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 23.2,
+    "pts": 14.2,
+    "reb": 3.8,
+    "ast": 2.4,
+    "fg3m": 2.2
+   },
+   "prior": {
+    "min": 12.5,
+    "pts": 5.6,
+    "reb": 1.1,
+    "ast": 0.9,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Joan Beringer",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.6,
+    "pts": 6.8,
+    "reb": 7.6,
+    "ast": 0.6,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 7.9,
+    "pts": 3.9,
+    "reb": 2.3,
+    "ast": 0.3,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Trey Lyles",
+   "pos": "PF",
+   "starter": false,
+   "min": 17.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.6,
+    "pts": 4.6,
+    "reb": 3.4,
+    "ast": 1.2,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 15.6,
+    "pts": 4.6,
+    "reb": 3.4,
+    "ast": 1.2,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "MIN",
+   "name": "Bones Hyland",
+   "pos": "PG",
+   "starter": false,
+   "min": 11.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.6,
+    "pts": 4.4,
+    "reb": 1.4,
+    "ast": 1.4,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 16.6,
+    "pts": 8.5,
+    "reb": 1.8,
+    "ast": 2.6,
+    "fg3m": 1.6
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Darius Garland",
+   "pos": "PG",
+   "starter": true,
+   "min": 31.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.5,
+    "pts": 21.5,
+    "reb": 1.5,
+    "ast": 6.5,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 29.9,
+    "pts": 18.8,
+    "reb": 2.4,
+    "ast": 6.7,
+    "fg3m": 2.7
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Rui Hachimura",
+   "pos": "PF",
+   "starter": true,
+   "min": 30.0,
+   "g_cur": 3,
+   "p_play": 0.6,
+   "cur": {
+    "min": 31.3,
+    "pts": 10.3,
+    "reb": 6.0,
+    "ast": 1.0,
+    "fg3m": 2.0
+   },
+   "prior": {
+    "min": 28.3,
+    "pts": 11.5,
+    "reb": 3.3,
+    "ast": 0.8,
+    "fg3m": 1.7
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Kris Dunn",
+   "pos": "PG",
+   "starter": true,
+   "min": 28.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 8.5,
+    "reb": 4.0,
+    "ast": 5.3,
+    "fg3m": 1.3
+   },
+   "prior": {
+    "min": 27.2,
+    "pts": 7.3,
+    "reb": 3.3,
+    "ast": 3.6,
+    "fg3m": 1.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Derrick Jones Jr.",
+   "pos": "SF",
+   "starter": true,
+   "min": 28.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.8,
+    "pts": 12.5,
+    "reb": 5.3,
+    "ast": 1.8,
+    "fg3m": 2.5
+   },
+   "prior": {
+    "min": 27.0,
+    "pts": 10.1,
+    "reb": 3.5,
+    "ast": 1.4,
+    "fg3m": 1.1
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Keaton Wagler",
+   "pos": "SG",
+   "starter": false,
+   "min": 25.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.5,
+    "pts": 15.0,
+    "reb": 4.3,
+    "ast": 3.5,
+    "fg3m": 2.3
+   },
+   "prior": {
+    "min": 26.5,
+    "pts": 15.0,
+    "reb": 4.3,
+    "ast": 3.5,
+    "fg3m": 2.3
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Brook Lopez",
+   "pos": "C",
+   "starter": false,
+   "min": 21.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.8,
+    "pts": 14.0,
+    "reb": 4.8,
+    "ast": 1.5,
+    "fg3m": 1.5
+   },
+   "prior": {
+    "min": 21.8,
+    "pts": 8.5,
+    "reb": 3.6,
+    "ast": 1.3,
+    "fg3m": 1.5
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Isaiah Jackson",
+   "pos": "C",
+   "starter": true,
+   "min": 20.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 8.3,
+    "reb": 5.5,
+    "ast": 2.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 16.8,
+    "pts": 6.4,
+    "reb": 5.6,
+    "ast": 0.8,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Kobe Sanders",
+   "pos": "SG",
+   "starter": false,
+   "min": 20.4,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.3,
+    "pts": 7.0,
+    "reb": 2.8,
+    "ast": 2.5,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 19.9,
+    "pts": 7.3,
+    "reb": 2.3,
+    "ast": 1.6,
+    "fg3m": 1.2
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Gradey Dick",
+   "pos": "SG",
+   "starter": false,
+   "min": 16.3,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 17.0,
+    "pts": 7.3,
+    "reb": 4.0,
+    "ast": 0.0,
+    "fg3m": 1.0
+   },
+   "prior": {
+    "min": 14.0,
+    "pts": 6.0,
+    "reb": 1.9,
+    "ast": 0.7,
+    "fg3m": 0.7
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Baba Miller",
+   "pos": "SF",
+   "starter": false,
+   "min": 9.3,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 9.7,
+    "pts": 2.7,
+    "reb": 3.7,
+    "ast": 0.7,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 9.7,
+    "pts": 2.7,
+    "reb": 3.7,
+    "ast": 0.7,
+    "fg3m": 0.0
+   }
+  },
+  {
+   "team": "LAC",
+   "name": "Cam Christie",
+   "pos": "SG",
+   "starter": false,
+   "min": 7.7,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 1.0,
+    "reb": 0.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   },
+   "prior": {
+    "min": 8.0,
+    "pts": 1.0,
+    "reb": 0.0,
+    "ast": 0.0,
+    "fg3m": 0.0
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 30-oct (10 partidos, todos de la NBA Cup); Covers.com matchup/<id>/odds (spread, total y ML de 8-9 casas; NYK@PHI solo 5 casas y sin props) y props de puntos (líneas principales con el mismo número a ambos lados)",
+  "spread_home": -7.5,
+  "total": 222.5,
+  "ml_home": -270,
+  "ml_away": 220
+ },
+ "prop_lines": {
+  "Jaden McDaniels": {
+   "pts": [
+    15.5,
+    -115,
+    -105
+   ]
+  },
+  "Isaiah Jackson": {
+   "pts": [
+    9.5,
+    -105,
+    -120
+   ]
+  },
+  "LaMelo Ball": {
+   "pts": [
+    20.5,
+    -112,
+    -110
+   ]
+  },
+  "Jonathan Kuminga": {
+   "pts": [
+    15.5,
+    -110,
+    -115
+   ]
+  },
+  "Derrick Jones Jr.": {
+   "pts": [
+    10.5,
+    -125,
+    100
+   ]
+  },
+  "Ayo Dosunmu": {
+   "pts": [
+    15.5,
+    -110,
+    -112
+   ]
+  },
+  "Kris Dunn": {
+   "pts": [
+    7.5,
+    -115,
+    -110
+   ]
+  }
+ }
+}
