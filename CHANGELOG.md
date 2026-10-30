@@ -1,5 +1,17 @@
 # Cambios del modelo
 
+## 1.3.3 — 2026-10-30: H2H de esta temporada también, y Copa marcada
+Pedido de Nicolas para la noche de Copa: usar como referencia los cruces entre ambos equipos de esta temporada y
+la pasada, de liga y de Copa.
+
+- `model.current_h2h_games` saca los cruces de esta temporada de `results/<fecha>.json` (los que carga la rutina
+  diaria; el equipo de cada jugador sale de `games/` o `raw/*/cur.csv`). `apply_h2h` los suma a los de
+  `h2h/<temporada anterior>.json` con el mismo peso (n / (n + H2H_K) por minutos), así que la rutina no tiene que
+  hacer nada nuevo. Esos partidos ya están en el promedio de la temporada: el H2H les da peso extra a propósito.
+- La web muestra los dos años juntos (más reciente primero), cada partido marcado Liga o Copa (fase de grupos de
+  2025-26 por `cup/history.json`, esta temporada por `cup/<temporada>.json`), y la columna "Vs rival" de los
+  props marca con ᶜ los partidos de Copa. `results/` acepta `largest_lead` opcional por partido.
+
 ## 1.3 — 2026-10-29: más peso a los H2H de la temporada pasada
 Pedido de Nicolas tras el 28-oct (Curry: el modelo daba Under 25.5 con 80%; en los 2 H2H de 2025-26 contra MIN
 hizo 39 y 26, y anotó 42). Al empezar la temporada hay pocos partidos y cada rival defiende distinto.

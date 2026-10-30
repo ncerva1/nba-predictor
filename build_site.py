@@ -32,7 +32,7 @@ from datetime import datetime, timezone
 import numpy as np
 
 from db_link import PT, _positions
-from model import american_to_prob, load_game, prob_to_american, simulate, summarize
+from model import american_to_prob, current_h2h_games, load_game, prob_to_american, simulate, summarize
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "docs", "data")
@@ -353,27 +353,50 @@ def _key(name):  # apellido + 3 primeras letras del nombre: "Ron Holland" = "Ron
 
 
 def h2h_view(g, players):
-    """Enfrentamientos de la temporada anterior (h2h/<temporada>.json, box scores de ESPN) entre los dos
-    equipos, y la línea de cada jugador de hoy en esos partidos (aunque entonces jugara en otro equipo)."""
+    """Enfrentamientos entre los dos equipos esta temporada (results/, vía model.current_h2h_games) y la anterior
+    (h2h/<temporada>.json, box scores de ESPN), de liga y de Copa, y la línea de cada jugador de hoy en esos
+    partidos (aunque entonces jugara en otro equipo)."""
     files = sorted(glob.glob(os.path.join(HERE, "h2h", "*.json")))
-    if not files:
-        return None
-    H = json.load(open(files[-1]))
     pair = {g["home"], g["away"]}
-    games = [x for x in H["games"] if {x["home"], x["away"]} == pair and x["date"] < g["date"]]
+    games = []
+    if files:
+        H = json.load(open(files[-1]))
+        games = [dict(x, season=H["season"]) for x in H["games"]
+                 if {x["home"], x["away"]} == pair and x["date"] < g["date"]]
+    games += current_h2h_games(g["date"], pair)
     if not games:  # todos los equipos se enfrentan 2-4 veces: vacío = ese cruce aún no está cargado
         return None
+    games.sort(key=lambda x: x["date"], reverse=True)
     out_games, lines = [], {}
     for x in games:
         lead = x.get("largest_lead", {})
-        out_games.append(dict(date=x["date"], away=x["away"], home=x["home"], score=x["score"], ot=x.get("ot", 0),
-                              largest_lead=lead, blowout=[t for t, v in lead.items() if v >= 20]))
+        comp = cup_round(x)
+        out_games.append(dict(date=x["date"], season=x["season"], away=x["away"], home=x["home"], score=x["score"],
+                              ot=x.get("ot", 0), largest_lead=lead, blowout=[t for t, v in lead.items() if v >= 20],
+                              comp="cup" if comp else "league", cup_round=comp))
         for team, ps in x["players"].items():
             for n, mi, pts, reb, ast, f3 in ps:
-                lines.setdefault(_key(n), []).append(dict(date=x["date"], team=team, min=mi, pts=pts, reb=reb,
-                                                           ast=ast, fg3m=f3, pra=pts + reb + ast))
+                lines.setdefault(_key(n), []).append(dict(date=x["date"], season=x["season"], team=team, min=mi,
+                                                           pts=pts, reb=reb, ast=ast, fg3m=f3, pra=pts + reb + ast,
+                                                           cup=bool(comp)))
     pl = {p["name"]: lines[_key(p["name"])] for p in players if _key(p["name"]) in lines}
-    return dict(season=H["season"], games=out_games, players=pl)
+    seasons = sorted({x["season"] for x in games}, reverse=True)
+    return dict(season=" y ".join(seasons), seasons=seasons, games=out_games, players=pl)
+
+
+def cup_round(x):
+    """Ronda de Copa de un partido ya jugado (None si fue de liga): cup/history.json para temporadas pasadas (las
+    fechas del H2H pueden ir un día corridas) y cup/<temporada>.json para la actual."""
+    pair = {x["home"], x["away"]}
+    sched = cup_schedule()
+    if (x["date"], x["away"], x["home"]) in sched:
+        return sched[(x["date"], x["away"], x["home"])] or "Copa"
+    C = cup_history() or {}
+    d = datetime.fromisoformat(x["date"])
+    for c in C.get("games", []):
+        if {c["home"], c["away"]} == pair and abs((datetime.fromisoformat(c["date"]) - d).days) <= 1:
+            return c.get("round") or "Copa"
+    return None
 
 
 def cup_schedule():

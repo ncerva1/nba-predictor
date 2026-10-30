@@ -864,21 +864,25 @@ function mvDraw(d, t) {
   $("#mv-body").innerHTML = dvp + styles + keys || `<div class="empty">Sin datos de rankings para este partido.</div>`;
 }
 
-// Enfrentamientos de la temporada pasada (d.h2h, de h2h/<temporada>.json vía build_site.py)
+// Enfrentamientos de esta temporada y la anterior, de liga y de Copa (d.h2h, de results/ y h2h/<temporada>.json vía build_site.py)
+const h2hSeasons = H => H.seasons || [H.season];
 function h2hSection(d) {
   const H = d.h2h; if (!H || !H.games.length) return "";
   const a = d.game.away, h = d.game.home;
-  const wins = t => H.games.filter(x => x.score[t] > x.score[t === a ? h : a]).length;
+  const rec = G => { const w = t => G.filter(x => x.score[t] > x.score[t === a ? h : a]).length; return `${esc(a)} ${w(a)}–${w(h)} ${esc(h)}`; };
+  const per = h2hSeasons(H).map(s => { const G = H.games.filter(x => (x.season || H.season) === s), nc = G.filter(x => x.comp === "cup").length;
+    return `<b>${esc(s)}</b>: ${rec(G)} en ${G.length} ${G.length === 1 ? "partido" : "partidos"}${nc ? ` (${nc} de Copa)` : ""}`; }).join(" · ");
   const nb = H.games.filter(x => x.blowout.length).length;
   return `<section class="section">
-    <h2>Enfrentamientos de la temporada pasada ${qh("h2h", "temporada pasada")}</h2>
-    <p class="lede">${esc(H.season)}: ${esc(a)} ${wins(a)}–${wins(h)} ${esc(h)} en ${H.games.length} partidos${nb ? `, ${nb} con paliza (ventaja de 20+ en algún momento)` : ", ninguno con paliza (ventaja de 20+)"}. Lo que hizo cada jugador en esos partidos está en la columna <b>Vs ${esc(a)}/${esc(h)} ${esc(H.season.slice(2))}</b> de los player props.</p>
+    <h2>Enfrentamientos esta temporada y la pasada ${qh("h2h", "enfrentamientos")}</h2>
+    <p class="lede">${per}${nb ? `. ${nb} con paliza (ventaja de 20+ en algún momento)` : ". Ninguno con paliza (ventaja de 20+)"}. Incluye liga y Copa. Lo que hizo cada jugador en esos partidos está en la columna <b>Vs rival</b> de los player props.</p>
     <div class="h2h-games">${H.games.map(x => { const t1 = x.away, t2 = x.home, w = x.score[t1] > x.score[t2] ? t1 : t2;
-      return `<div class="h2h-g"><span class="eyebrow">${esc(x.date)}${x.ot ? ` · ${x.ot > 1 ? x.ot : ""}OT` : ""}</span>
+      return `<div class="h2h-g"><span class="eyebrow">${esc(x.date)} · ${x.comp === "cup" ? `Copa${x.cup_round ? " (" + esc(x.cup_round) + ")" : ""}` : "Liga"}${x.ot ? ` · ${x.ot > 1 ? x.ot : ""}OT` : ""}</span>
         <div class="sc"><span class="${w === t1 ? "w" : "l"}">${esc(t1)}</span><span class="${w === t1 ? "w" : "l"}">${x.score[t1]}</span>
         <span class="${w === t2 ? "w" : "l"}">@ ${esc(t2)}</span><span class="${w === t2 ? "w" : "l"}">${x.score[t2]}</span></div>
         <span class="ld">Máx. ventaja: ${esc(t1)} ${x.largest_lead[t1] ?? "—"} · ${esc(t2)} ${x.largest_lead[t2] ?? "—"}</span>
-        ${x.blowout.length ? `<span class="pill flat" style="justify-self:start">Paliza de ${x.blowout.map(esc).join(" y ")}</span>` : ""}</div>`; }).join("")}</div>
+        ${x.blowout.length ? `<span class="pill flat" style="justify-self:start">Paliza de ${x.blowout.map(esc).join(" y ")}</span>` : ""}
+        ${x.season && h2hSeasons(H).length > 1 ? `<span class="ld">Temporada ${esc(x.season)}</span>` : ""}</div>`; }).join("")}</div>
   </section>`;
 }
 // Copa: cruces previos de Copa entre ambos equipos y cómo anotó cada uno en la Copa frente a la liga (cup/history.json)
@@ -928,7 +932,7 @@ function h2hCell(d, p, k, line) {
   const v = L.map(x => x[k]), avg = v.reduce((s, x) => s + x, 0) / v.length, over = v.filter(x => x > line).length;
   const other = L.filter(x => x.team !== p.team).map(x => x.team);
   return `<span class="h2h-cell"><b>${avg.toFixed(1)}</b> <span class="pill ${over * 2 > v.length ? "value" : over * 2 < v.length ? "neg" : "flat"}">${over}/${v.length} over</span>
-    <span class="vals" title="${L.map(x => `${x.date} (${x.team}, ${x.min} min): ${x[k]}`).join("\n")}">${L.map(x => x[k]).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
+    <span class="vals" title="${L.map(x => `${x.date}${x.cup ? " Copa" : ""} (${x.team}, ${x.min} min): ${x[k]}`).join("\n")}">${L.map(x => x[k] + (x.cup ? "ᶜ" : "")).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
 }
 
 async function renderGame(id) {
@@ -987,7 +991,7 @@ async function renderGame(id) {
     <div class="filters" role="group" aria-label="Equipo" id="teams"><span class="lbl">Equipo</span>${[a, h, "all"].map(t =>
       `<button type="button" data-t="${esc(t)}" aria-pressed="${t === team}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival la temporada pasada, cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido.` : ""}</p>
+    <p class="foot">Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
   const draw = (k = stat) => {
@@ -997,10 +1001,10 @@ async function renderGame(id) {
     const rows = players.filter(p => team === "all" || p.team === team).sort((x, y) => x.team === y.team ? y[k].mean - x[k].mean : (x.team === a ? -1 : 1));
     const played = players.some(p => p.actual !== undefined);
     const hh = d.h2h && d.h2h.games.length;
-    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${hh ? `<th class="r">Vs ${esc(a)}/${esc(h)} ${esc(d.h2h.season.slice(2))}</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
+    $("#props").innerHTML = `<table class="stack"><thead><tr><th>Jugador</th><th class="r">Min</th><th class="r">Media</th><th class="r">Rango</th><th class="r">Línea justa</th><th class="r">P(over)</th><th class="r">Casa</th>${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
     ${rows.map(p => { const st = p[k], m = st.market; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
-      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${hh ? `<td class="r num" data-label="Vs rival ${esc(d.h2h.season.slice(2))}">${h2hCell(d, p, k, m ? m.line : st.line)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${m ? `O ${m.line} @ ${dec(m.odds)} ${evPill(m.p_over * (dec(m.odds) - 1) - (1 - m.p_over), thr)}` : "—"}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, m ? m.line : st.line)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${p.actual ? `<b>${p.actual[k]}</b> ${resPill(p.actual[k] > st.line ? "won" : "lost").replace(/Ganada|Perdida/, p.actual[k] > st.line ? "over" : "under")}` : '<span class="muted">no jugó</span>'}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
   };
   document.querySelectorAll("button[data-k]").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
@@ -1074,7 +1078,7 @@ const GUIDE = [
     <dt>Colores</dt><dd><span class="pill value">Verde</span> favorece al que ataca, <span class="pill neg">rojo</span> favorece a la defensa.</dd>
     <dt>Por posición</dt><dd>Lo que concede la defensa rival a cada posición: PG (base), SG (escolta), SF (alero), PF (ala-pívot) y C (pívot), con los jugadores que juegan ahí.</dd>
     <dt>Estilo de juego</dt><dd>Cuánto usa el equipo cada tipo de jugada (pick &amp; roll, aislamiento, transición…), cuántos puntos saca por jugada y cuánto concede el rival a esa jugada.</dd></dl>`],
-  ["h2h", "Temporada pasada", "Enfrentamientos de la temporada pasada", () => `<p>Los partidos entre ambos equipos la temporada anterior, con el marcador, la máxima ventaja de cada uno y si hubo paliza (ventaja de 20 o más en algún momento).</p>
+  ["h2h", "Enfrentamientos", "Enfrentamientos esta temporada y la pasada", () => `<p>Los partidos entre ambos equipos esta temporada y la anterior, de liga y de Copa, con el marcador, la máxima ventaja de cada uno y si hubo paliza (ventaja de 20 o más en algún momento). El modelo usa estos partidos para dar peso extra a lo que hizo cada jugador contra este rival.</p>
     <p>En los player props, la columna <b>Vs rival</b> muestra el promedio del jugador en esos partidos y cuántas veces superó la línea: <span class="pill value">3/4 over</span> = la superó en 3 de 4 partidos.</p>`],
   ["props", "Player props", "Player props proyectados", () => `<dl>
     <dt>Min</dt><dd>Minutos que se espera que juegue.</dd>
