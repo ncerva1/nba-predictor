@@ -159,7 +159,8 @@ def value_bets(cfg, s, summ):
             if o_over is not None:
                 out.append(bet(gid, f"{name} Over {ln} {st.upper()}", "Prop", po, o_over, {"player": name}))
             if len(v) > 2 and v[2] is not None:
-                out.append(bet(gid, f"{name} Under {ln} {st.upper()}", "Prop", 1 - po, v[2], {"player": name}))
+                lu = v[3] if len(v) > 3 else ln
+                out.append(bet(gid, f"{name} Under {lu} {st.upper()}", "Prop", float((x[st] < lu).mean()), v[2], {"player": name}))
     return out
 
 
