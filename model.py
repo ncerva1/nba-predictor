@@ -1,5 +1,5 @@
 """
-NBA-Predictor 1.3 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.4 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
@@ -24,9 +24,11 @@ Flujo:
     jugador en el marcador simulado de su equipo; rebotes, asistencias y triples se escalan por los multiplicadores
     de enfrentamiento (rebote, asistencias, triples concedidos) y por la defensa vs posición del rival,
     y dibujadas con Poisson-gamma (sobre-dispersión).
- 6. H2H (1.3): si el jugador enfrentó al rival de hoy la temporada pasada con su equipo actual, sus tasas por
-    minuto se mezclan con las de esos partidos (peso n / (n + H2H_K), n contado en partidos completos según sus
-    minutos) y sus minutos con el mismo peso si su rol (titular / suplente) es el mismo que hoy, un tercio si no.
+ 6. H2H (1.4): si el jugador enfrentó al rival de hoy la temporada pasada (con su equipo actual o con otro),
+    se mide cuánto le subió ese rival respecto a su temporada (lift) y se mezcla con la DvP actual del rival:
+    peso n / (n + H2H_K) con n en partidos completos según sus minutos, x0.75 si fue con otro equipo, y menor si
+    la defensa del rival cambió mucho entre temporadas. Los minutos se ajustan igual (un tercio si cambió de rol
+    o de equipo).
 """
 import glob, json, os, re, sys, unicodedata
 import numpy as np
@@ -45,6 +47,15 @@ PLAYER_K = 6  # partidos de encogimiento de las tasas por minuto hacia la tempor
 # partidos), así un H2H corto (lesión, faltas, paliza) pesa poco. Para los minutos solo cuentan los H2H en que jugó
 # >= H2H_FULL de sus minutos de hoy, y si cambió de rol pesan un tercio (H2H_ROLE_W) en vez de nada.
 H2H_K, H2H_MIN_MIN, H2H_FULL, H2H_ROLE_W = 3, 10, 0.5, 1 / 3
+# 1.4 (30-oct, acordado con Nicolas): el H2H entra como "cuánto le sube ese rival" (lift = su tasa por minuto en
+# los H2H / su tasa de toda esa temporada), que se aplica a su nivel de hoy y se mezcla con la DvP del rival.
+# Así sirven también los H2H con su equipo anterior (pesan H2H_TEAM_W), y el peso baja si el rival cambió mucho
+# de una temporada a otra (H2H_CHG: desviaciones típicas entre equipos de su métrica concedida, ya encogida).
+# Los minutos H2H pesan un tercio de lo que pesaban en 1.3.2 (H2H_MIN_SCALE): en el backtest del 27 y 28-oct
+# siempre empeoraron el error de minutos.
+H2H_TEAM_W, LIFT_CAP, H2H_MIN_SCALE = 0.75, (0.5, 2.0), 1 / 3
+H2H_CHG = {"pts": ("DEF_RATING", "OPP_PTS"), "reb": ("DEF_RATING", "OPP_REB"),
+           "ast": ("DEF_RATING", "OPP_AST"), "fg3m": ("DEF_RATING", "OPP_FG3M")}
 MAX_MIN = 44
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -120,41 +131,78 @@ def h2h_same_role(p):
 
 
 def h2h_weights(p):
-    """(peso de las tasas H2H, peso de los minutos H2H, minutos medios de los H2H completos)."""
+    """(peso base de los H2H en las tasas, peso de los minutos H2H, minutos medios de los H2H completos)."""
     hh, today = p["h2h"], max(p["min"], 1)
     n_eff = sum(min(m / today, 1.0) for m in hh["mins"])
     full = [m for m in hh["mins"] if m >= H2H_FULL * today]
-    wm = len(full) / (len(full) + H2H_K) * (1.0 if h2h_same_role(p) else H2H_ROLE_W)
-    return n_eff / (n_eff + H2H_K), wm, (np.mean(full) if full else 0.0)
+    team_w = 1.0 if hh.get("same_team", True) else H2H_TEAM_W
+    role_w = 1.0 if h2h_same_role(p) and hh.get("same_team", True) else H2H_ROLE_W
+    wm = len(full) / (len(full) + H2H_K) * role_w * H2H_MIN_SCALE
+    return n_eff / (n_eff + H2H_K) * team_w, wm, (np.mean(full) if full else 0.0)
 
 
-def apply_h2h(cfg):
+def opp_change(R, opp):
+    """Cuánto cambió la defensa del rival de una temporada a otra, por estadística: factor de 0 a 1 que multiplica
+    el peso del H2H (1 = igual que la temporada pasada). Usa la mezcla actual/anterior de la BD (encogida por
+    partidos jugados) frente a la temporada anterior, en desviaciones típicas entre los 30 equipos."""
+    out = {}
+    for st, ms in H2H_CHG.items():
+        zs = []
+        for m in ms:
+            vals = [R["teams"][t]["metrics"][m][R["prior_season"]]["value"] for t in R["teams"]]
+            met = R["teams"][opp]["metrics"][m]
+            zs.append(abs(met["blend"]["value"] - met[R["prior_season"]]["value"]) / max(np.std(vals), 1e-6))
+        out[st] = round(1 / (1 + float(np.mean(zs)) ** 2), 3)
+    return out
+
+
+def apply_h2h(cfg, R=None):
     """Añade a cada jugador sus partidos de la temporada pasada contra el rival de hoy (h2h/<temporada>.json),
-    jugando con su equipo actual: p["h2h"] = {g, min, pts, reb, ast, fg3m} (sumas). Lo usa simulate()."""
+    con su equipo actual o con otro: p["h2h"] = {g, min, pts, reb, ast, fg3m, gs} (sumas), same_team y chg
+    (cuánto pesa según el cambio del rival, con la BD R). Lo usa simulate()."""
     g = cfg["game"]
     path = os.path.join(HERE, "h2h", f"{prior_season(g['date'])}.json")
     if cfg.get("h2h", {}).get("use", True) is False or not os.path.exists(path):
         return cfg
-    pair = {g["home"], g["away"]}
-    games = [x for x in json.load(open(path))["games"] if {x["home"], x["away"]} == pair]
-    lines = {}
-    for x in games:
-        for team, ps in x["players"].items():
-            for i, (n, mi, pts, reb, ast, f3) in enumerate(ps):
+    H = json.load(open(path))["games"]
+    rep = {"season": prior_season(g["date"]), "players": {}, "opp_change": {}}
+    for t, o in ((g["home"], g["away"]), (g["away"], g["home"])):
+        chg = opp_change(R, o) if R and o in R["teams"] else {st: 1.0 for st in H2H_CHG}
+        rep["opp_change"][o] = chg
+        lines = {}
+        for x in H:  # partidos del rival de hoy contra cualquier equipo; nunca los que el jugador jugó CON el rival
+            if o not in (x["home"], x["away"]):
+                continue
+            other = x["away"] if x["home"] == o else x["home"]
+            for i, (n, mi, pts, reb, ast, f3) in enumerate(x["players"].get(other, [])):
                 if mi >= H2H_MIN_MIN:  # los box scores de ESPN listan primero a los 5 titulares
-                    lines.setdefault((team, name_key(n)), []).append((mi, pts, reb, ast, f3, int(i < 5)))
-    rep = {"season": prior_season(g["date"]), "games": len(games), "players": {}}
-    for p in cfg["players"]:
-        rows = lines.get((p["team"], name_key(p["name"])))
-        if rows:
+                    lines.setdefault(name_key(n), []).append((other, (mi, pts, reb, ast, f3, int(i < 5))))
+        for p in cfg["players"]:
+            if p["team"] != t or name_key(p["name"]) not in lines:
+                continue
+            got = lines[name_key(p["name"])]
+            same = [r for tm, r in got if tm == t]
+            rows = same or [r for tm, r in got]  # con su equipo actual si los hay; si no, con el anterior
             tot = np.sum(rows, axis=0)
-            p["h2h"] = dict(g=len(rows), mins=[r[0] for r in rows],
+            p["h2h"] = dict(g=len(rows), mins=[r[0] for r in rows], same_team=bool(same), chg=chg,
+                            team=t if same else got[0][0],
                             **{k: float(v) for k, v in zip(("min", "pts", "reb", "ast", "fg3m", "gs"), tot)})
-            rep["players"][p["name"]] = dict(g=len(rows), w=round(h2h_weights(p)[0], 2),
+            rep["players"][p["name"]] = dict(g=len(rows), team=p["h2h"]["team"], w=round(h2h_weights(p)[0], 2),
                                              min=round(tot[0] / len(rows), 1), pts=round(tot[1] / len(rows), 1),
-                                             same_role=h2h_same_role(p))
+                                             same_role=h2h_same_role(p), lift=h2h_lift(p))
     cfg["_h2h_report"] = rep
     return cfg
+
+
+def h2h_lift(p):
+    """Cuánto le subió (o bajó) ese rival en los H2H respecto a su temporada: tasa por minuto H2H / tasa de la
+    temporada anterior, por estadística (acotado a LIFT_CAP), y lo mismo para los minutos."""
+    hh, pr = p["h2h"], p["prior"]
+    out = {}
+    for s in STAT_R:
+        season = pr[s] / max(pr["min"], 1)
+        out[s] = 1.0 if season < 0.02 else round(float(np.clip(hh[s] / hh["min"] / season, *LIFT_CAP)), 3)
+    return out
 
 
 def nb_draw(rng, mean, r):
@@ -202,16 +250,22 @@ def simulate(cfg, n=20000, seed=7):
     base_min = {}
     for p in players:
         w = player_weight(p)
-        # la DvP va dentro de la tasa; la parte H2H ya trae al rival de hoy, así que no se le aplica
-        p["rate"] = {s: (w * p["cur"][s] / max(p["cur"]["min"], 1) +
-                         (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1)) * dvp(p, s) for s in STAT_R}
+        base = {s: w * p["cur"][s] / max(p["cur"]["min"], 1) +
+                (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1) for s in STAT_R}
+        # efecto del rival = mezcla de su DvP actual y de lo que ese rival le subió en los H2H (lift), según
+        # cuántos H2H completos hay, con qué equipo los jugó y cuánto cambió el rival
+        p["rate"] = {s: base[s] * dvp(p, s) for s in STAT_R}
         base_min[p["name"]] = p["min"]
         hh = p.get("h2h")
         if hh and hh["g"] > 0 and hh["min"] > 0:
             wh, wm, mh2h = h2h_weights(p)
-            p["rate"] = {s: (1 - wh) * p["rate"][s] + wh * hh[s] / hh["min"] for s in STAT_R}
-            if wm > 0:  # con otro rol (suplente que ahora es titular...) sus minutos H2H pesan un tercio
-                base_min[p["name"]] = (1 - wm) * p["min"] + wm * mh2h
+            lift = h2h_lift(p)
+            for s in STAT_R:
+                ws = wh * hh.get("chg", {}).get(s, 1.0)
+                p["rate"][s] = base[s] * ((1 - ws) * dvp(p, s) + ws * lift[s])
+            if wm > 0:  # minutos: lo que jugó en los H2H frente a su media de esa temporada
+                ml = float(np.clip(mh2h / max(p["prior"]["min"], 1), 0.7, 1.3))
+                base_min[p["name"]] = p["min"] * ((1 - wm) + wm * ml)
     for t in (h, a):  # los minutos H2H cambian el reparto, no el total del equipo
         tp = [p for p in players if p["team"] == t]
         k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)
@@ -340,6 +394,7 @@ def load_game(path, use_db=None, use_h2h=None):
         from db_link import apply_db
         rk = cfg.get("db", {}).get("rankings") or os.path.join(HERE, "db", "rankings_latest.json")
         cfg = apply_db(cfg, rk)
+        return apply_h2h(cfg, json.load(open(rk)))
     return apply_h2h(cfg)
 
 

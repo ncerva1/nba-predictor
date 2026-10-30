@@ -1,5 +1,27 @@
 # Cambios del modelo
 
+## 1.4 — 2026-10-30: el H2H como "cuánto le sube ese rival"
+Acordado con Nicolas el 29-oct (casos LaMelo CHA -> MIN contra MIA, y MIA cambiada con Giannis).
+
+- **Lift relativo**: en vez de usar las stats H2H tal cual, se mide cuánto le subió ese rival respecto a su
+  temporada (tasa por minuto en los H2H / tasa de toda la temporada anterior, acotado a 0.5-2.0). Ese porcentaje
+  se aplica a su nivel de hoy y se mezcla con la DvP actual del rival: efecto rival = (1 - w) x DvP + w x lift.
+- **H2H con otro equipo**: como el lift no depende de su equipo, ahora cuentan los H2H que jugó contra ese rival
+  con su equipo anterior (pesan x0.75), si el partido está en `h2h/<temporada>.json`. Si tiene H2H con su
+  equipo actual, se usan solo esos.
+- **Cambio del rival**: el peso del H2H se multiplica por 1 / (1 + z^2), con z = cuánto cambió la defensa del
+  rival (DEF_RATING y la stat concedida: OPP_PTS, OPP_REB, OPP_AST, OPP_FG3M) entre la temporada pasada y la
+  mezcla actual de la BD (ya encogida por partidos jugados), en desviaciones típicas entre los 30 equipos. Va en
+  `h2h_report.opp_change` (p. ej. el 28-oct MIN 0.6-0.7, TOR y PHI ~0.5, MIA ~1).
+- **Minutos**: lo que jugó en los H2H frente a su media de esa temporada (acotado 0.7-1.3), con un tercio del peso
+  de 1.3.2: en el 27 y 28-oct los minutos H2H empeoraron siempre el error de minutos.
+- Forma reciente: con 4-5 partidos jugados la media de la temporada ya es la de los últimos partidos; queda para
+  cuando haya registros partido a partido (raw/ solo trae medias).
+
+Backtest (log score, menor es mejor; jugadores con H2H), sin H2H / 1.3.2 / 1.4:
+27-oct PTS 3.118 / 3.198 / 3.159, PRA 3.385 / 3.473 / 3.450, minutos 4.82 / 4.82 / 4.86;
+28-oct PTS 3.108 / 3.123 / 3.114, PRA 3.362 / 3.388 / 3.367, minutos 4.45 / 4.59 / 4.51.
+
 ## 1.3 — 2026-10-29: más peso a los H2H de la temporada pasada
 Pedido de Nicolas tras el 28-oct (Curry: el modelo daba Under 25.5 con 80%; en los 2 H2H de 2025-26 contra MIN
 hizo 39 y 26, y anotó 42). Al empezar la temporada hay pocos partidos y cada rival defiende distinto.
