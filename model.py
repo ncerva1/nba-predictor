@@ -28,7 +28,7 @@ Flujo:
     minuto se mezclan con las de esos partidos (peso n / (n + H2H_K), n contado en partidos completos según sus
     minutos) y sus minutos con el mismo peso si su rol (titular / suplente) es el mismo que hoy, un tercio si no.
 """
-import glob, json, os, re, sys, unicodedata
+import csv, glob, json, os, re, sys, unicodedata
 import numpy as np
 
 STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
@@ -113,6 +113,52 @@ def prior_season(date):
     return f"{y - 1}-{str(y)[2:]}"
 
 
+def season_of(date):
+    y = int(date[:4]) if int(date[5:7]) >= 8 else int(date[:4]) - 1
+    return f"{y}-{str(y + 1)[2:]}"
+
+
+def current_h2h_games(date, pair):
+    """Partidos de esta temporada entre los dos equipos jugados antes de `date`, sacados de results/<fecha>.json
+    (los resultados que carga la rutina diaria), en el mismo formato que h2h/<temporada>.json. El equipo de cada
+    jugador sale del JSON del partido (games/) o, si no estaba proyectado, de raw/<fecha>/cur.csv (o de otra fecha); los titulares
+    del JSON del partido van primero (como en los box scores de ESPN)."""
+    season, out = season_of(date), []
+    for rp in sorted(glob.glob(os.path.join(HERE, "results", "20??-??-??.json"))):
+        R = json.load(open(rp))
+        d = R["date"]
+        if d >= date or season_of(d) != season:
+            continue
+        for key, x in R["games"].items():
+            away, home = key.split("@")
+            if {away, home} != pair:
+                continue
+            team, start = {}, set()
+            gp = os.path.join(HERE, "games", f"{d}_{key}.json")
+            if os.path.exists(gp):
+                for p in json.load(open(gp))["players"]:
+                    team[name_key(p["name"])] = p["team"]
+                    if p.get("starter"):
+                        start.add(name_key(p["name"]))
+            for cp in [os.path.join(HERE, "raw", d, "cur.csv")] + sorted(
+                    glob.glob(os.path.join(HERE, "raw", "*", "cur.csv")), reverse=True):
+                if os.path.exists(cp):
+                    for r in csv.DictReader(open(cp, encoding="utf-8")):
+                        if r["Team"] in pair:
+                            team.setdefault(name_key(r["Player"]), r["Team"])
+            players = {away: [], home: []}
+            for n, line in x["players"].items():
+                t = team.get(name_key(n))
+                if t in players and line[0] > 0:
+                    players[t].append([n, *line])
+            for t in players:
+                players[t].sort(key=lambda r: name_key(r[0]) not in start)
+            out.append(dict(date=d, away=away, home=home, score={away: x["away"], home: x["home"]},
+                            ot=x.get("ot", 0), largest_lead=x.get("largest_lead", {}), players=players,
+                            season=season))
+    return out
+
+
 def h2h_same_role(p):
     """True si su rol en los H2H (titular en la mayoría o no) es el mismo que hoy."""
     hh = p["h2h"]
@@ -137,13 +183,15 @@ def apply_h2h(cfg):
         return cfg
     pair = {g["home"], g["away"]}
     games = [x for x in json.load(open(path))["games"] if {x["home"], x["away"]} == pair]
+    games += current_h2h_games(g["date"], pair)  # 1.3.3: también los cruces de esta temporada (results/)
     lines = {}
     for x in games:
         for team, ps in x["players"].items():
             for i, (n, mi, pts, reb, ast, f3) in enumerate(ps):
                 if mi >= H2H_MIN_MIN:  # los box scores de ESPN listan primero a los 5 titulares
                     lines.setdefault((team, name_key(n)), []).append((mi, pts, reb, ast, f3, int(i < 5)))
-    rep = {"season": prior_season(g["date"]), "games": len(games), "players": {}}
+    rep = {"season": prior_season(g["date"]), "games": len(games), "players": {},
+           "seasons": sorted({x.get("season", prior_season(g["date"])) for x in games})}
     for p in cfg["players"]:
         rows = lines.get((p["team"], name_key(p["name"])))
         if rows:
