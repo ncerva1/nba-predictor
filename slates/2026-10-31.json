@@ -1,0 +1,623 @@
+{
+ "date": "2026-10-31",
+ "sources": {
+  "schedule_odds": "NBA.com/games 31-oct (7 partidos, ninguno de Copa); Covers.com matchup/<id>/odds (spread, total y ML de 9 casas en 5 partidos; PHI@CHA y ATL@NOP solo ML del comparador + spread/total de consenso de FanDuel Research) y props de puntos (líneas destacadas, mejor over y mejor under)",
+  "players_cur": "Basketball-Reference, páginas de equipo 2026-27 consultadas el 31-oct; PHI, CHA, HOU y MIN completados con results/2026-10-30.json (partidos de Copa del 30-oct)",
+  "players_prior": "prior.csv acumulado (26-30 oct). Sin temporada previa: novatos (Boozer, Peterson, Acuff, Flemings, Burries, Ament, Mara, Stirtz, Dix, Meleek Thomas), Lillard y VanVleet (lesionados en 2025-26), Hezonja y algunos suplentes",
+  "injuries": "ESPN injuries y CBS Sports injuries, 31-oct ~16:30 UTC",
+  "b2b": "PHI, CHA, MIN y HOU jugaron el 30-oct",
+  "db": "BD de rankings: snapshot del 31-oct (B-Ref 2026-27 con partidos hasta el 30-oct; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 30-oct)",
+  "props_other": "Solo líneas de puntos (Covers). scoresandodds por la mañana todavía muestra la jornada anterior: rebotes/asistencias/triples sin línea"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "games": [
+  {
+   "away": "POR",
+   "home": "UTA",
+   "tip_et": "15:00",
+   "venue": "Delta Center, Salt Lake City",
+   "market": {
+    "spread_home": 8.5,
+    "total": 232.5,
+    "ml_home": 265,
+    "ml_away": -335
+   },
+   "b2b": [],
+   "adj": {
+    "POR": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Ja Morant OUT (isquio, ~4 semanas) y Shaedon Sharpe OUT (menisco)"
+    },
+    "UTA": {
+     "o": -1.0,
+     "d": 0.5,
+     "why": "Jaren Jackson Jr. OUT (MCL, hasta dic.), Nurkić y Trey Alexander OUT"
+    }
+   },
+   "out": [
+    "Ja Morant",
+    "Jaren Jackson Jr."
+   ],
+   "gtd": {
+    "Robert Williams": 0.5,
+    "Lauri Markkanen": 0.6
+   },
+   "notes": [
+    "Partido de tarde (15:00 ET)",
+    "POR: Morant y Sharpe OUT; Robert Williams III y Youngblood en duda",
+    "UTA: Jaren Jackson Jr., Nurkić y Trey Alexander OUT; Markkanen en duda (muñeca)",
+    "H2H 2025-26: POR 4-0 (dos con ventaja de 19+ y un blowout de 32)",
+    "Récord: POR 3-1, UTA 1-4"
+   ]
+  },
+  {
+   "away": "PHI",
+   "home": "CHA",
+   "tip_et": "18:00",
+   "venue": "Spectrum Center, Charlotte",
+   "market": {
+    "spread_home": 1.5,
+    "total": 216.5,
+    "ml_home": 108,
+    "ml_away": -128
+   },
+   "b2b": [
+    "PHI",
+    "CHA"
+   ],
+   "adj": {
+    "PHI": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Jaylen Brown en duda (rodilla, no jugó el 30-oct)"
+    },
+    "CHA": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Knueppel y Coby White en duda (aún sin jugar esta temporada), Grant Williams y Boswell OUT"
+    }
+   },
+   "out": [
+    "Jabari Walker"
+   ],
+   "gtd": {
+    "Jaylen Brown": 0.3
+   },
+   "notes": [
+    "Ambos equipos en back-to-back (jugaron el 30-oct en Copa)",
+    "PHI: Jaylen Brown en duda; Jabari Walker OUT; Barlow, Fall y Hukporti OUT. Embiid en back-to-back (no está en el parte)",
+    "CHA: Knueppel y Coby White en duda (CBS 31-oct: game time decision); si juegan, el modelo no los tiene en la rotación",
+    "Covers sin spread/total por casa: spread y total de consenso de FanDuel Research (PHI -1.5, 216.5), solo ML por casa",
+    "H2H 2025-26: 2-1 PHI, pero CHA ganó uno por 37 (ventaja máxima 50)",
+    "Récord: PHI 5-1, CHA 3-3"
+   ]
+  },
+  {
+   "away": "ATL",
+   "home": "NOP",
+   "tip_et": "19:00",
+   "venue": "Smoothie King Center, New Orleans",
+   "market": {
+    "spread_home": 4.5,
+    "total": 240.5,
+    "ml_home": 150,
+    "ml_away": -180
+   },
+   "b2b": [],
+   "adj": {
+    "NOP": {
+     "o": -0.5,
+     "d": 0.0,
+     "why": "Jordan Poole e Yves Missi OUT"
+    }
+   },
+   "out": [
+    "Jordan Poole",
+    "Yves Missi"
+   ],
+   "gtd": {},
+   "notes": [
+    "ATL: Gueye y Veesaar OUT",
+    "NOP: Poole (tobillo) y Missi (rodilla) OUT",
+    "Covers sin spread/total por casa: consenso FanDuel Research (ATL -4.5, 240.5), solo ML por casa",
+    "H2H 2025-26: ATL 2-0, ambos con ventaja de 24+ (blowouts)",
+    "Récord: ATL 3-3, NOP 1-4"
+   ]
+  },
+  {
+   "away": "CLE",
+   "home": "MIL",
+   "tip_et": "20:00",
+   "venue": "Fiserv Forum, Milwaukee",
+   "market": {
+    "spread_home": 9.5,
+    "total": 237.5,
+    "ml_home": 280,
+    "ml_away": -355
+   },
+   "b2b": [],
+   "adj": {
+    "CLE": {
+     "o": -0.3,
+     "d": 0.0,
+     "why": "Jaylon Tyson OUT (tobillo)"
+    }
+   },
+   "out": [
+    "Jaylon Tyson"
+   ],
+   "gtd": {
+    "Meleek Thomas": 0.5
+   },
+   "notes": [
+    "CLE: Jaylon Tyson OUT; Meleek Thomas en duda (pie)",
+    "MIL: sin bajas en el parte",
+    "H2H 2025-26: CLE 3-1 (los Bucks tenían a Giannis; el roster de MIL cambió mucho)",
+    "Récord: CLE 3-2, MIL 1-4"
+   ]
+  },
+  {
+   "away": "MIN",
+   "home": "SAS",
+   "tip_et": "20:00",
+   "venue": "Frost Bank Center, San Antonio",
+   "market": {
+    "spread_home": -12.5,
+    "total": 226.5,
+    "ml_home": -590,
+    "ml_away": 440
+   },
+   "b2b": [
+    "MIN"
+   ],
+   "adj": {
+    "MIN": {
+     "o": -3.0,
+     "d": 0.5,
+     "why": "Anthony Edwards OUT (artroscopia de rodilla, hasta dic.; 33.3 ppg)"
+    }
+   },
+   "out": [
+    "Anthony Edwards"
+   ],
+   "gtd": {},
+   "notes": [
+    "MIN en back-to-back (ganó a LAC el 30-oct en Copa) y sin Anthony Edwards (operado el 29-oct)",
+    "SAS: Tobias Harris y Quaintance OUT",
+    "H2H 2025-26: 2-1 MIN; Wembanyama 29 y 39 pts",
+    "Récord: MIN 4-2, SAS 3-2"
+   ]
+  },
+  {
+   "away": "SAC",
+   "home": "MEM",
+   "tip_et": "20:00",
+   "venue": "FedExForum, Memphis",
+   "market": {
+    "spread_home": -10.5,
+    "total": 233.5,
+    "ml_home": -500,
+    "ml_away": 375
+   },
+   "b2b": [],
+   "adj": {
+    "SAC": {
+     "o": -0.5,
+     "d": 0.5,
+     "why": "Keegan Murray, Cardwell y Raynaud OUT"
+    }
+   },
+   "out": [
+    "Keegan Murray"
+   ],
+   "gtd": {
+    "Ty Jerome": 0.65,
+    "Scotty Pippen Jr.": 0.6,
+    "Quinten Post": 0.35
+   },
+   "notes": [
+    "SAC: Keegan Murray, Cardwell, Raynaud y Simmons OUT",
+    "MEM: Ty Jerome y Scotty Pippen Jr. en duda (espalda), Quinten Post dudoso (tobillo)",
+    "H2H 2025-26: 2-2; MEM ganó uno por 41 (ventaja máxima 48)",
+    "Récord: SAC 0-5, MEM 5-0"
+   ]
+  },
+  {
+   "away": "OKC",
+   "home": "HOU",
+   "tip_et": "20:30",
+   "venue": "Toyota Center, Houston",
+   "market": {
+    "spread_home": -2.5,
+    "total": 218.5,
+    "ml_home": -145,
+    "ml_away": 120
+   },
+   "b2b": [
+    "HOU"
+   ],
+   "adj": {
+    "OKC": {
+     "o": -2.0,
+     "d": 2.0,
+     "why": "Holmgren, Jalen Williams, Cason Wallace y Caruso OUT (además Topic y Sorber)"
+    },
+    "HOU": {
+     "o": -0.5,
+     "d": 0.5,
+     "why": "Steven Adams OUT; Şengün y Sheppard en duda (espalda)"
+    }
+   },
+   "out": [
+    "Chet Holmgren",
+    "Jalen Williams",
+    "Cason Wallace",
+    "Alex Caruso",
+    "Steven Adams"
+   ],
+   "gtd": {
+    "Alperen Şengün": 0.45,
+    "Reed Sheppard": 0.5
+   },
+   "notes": [
+    "HOU en back-to-back (perdió en Dallas el 30-oct, en Copa)",
+    "OKC: Holmgren (tendón rotuliano, 8-10 semanas), Jalen Williams, Wallace, Caruso, Topic y Sorber OUT",
+    "HOU: Şengün y Sheppard en duda (no jugaron el 30-oct); Adams OUT",
+    "H2H 2025-26: OKC 2-1 (uno en 2OT)",
+    "Récord: OKC 4-1, HOU 5-1"
+   ]
+  }
+ ],
+ "prop_lines": {
+  "Deni Avdija": {
+   "pts": [
+    24.5,
+    -110,
+    -110
+   ]
+  },
+  "Lauri Markkanen": {
+   "pts": [
+    21.5,
+    -106,
+    -105,
+    22.5
+   ]
+  },
+  "Darryn Peterson": {
+   "pts": [
+    14.5,
+    -125,
+    -123,
+    15.5
+   ]
+  },
+  "Jrue Holiday": {
+   "pts": [
+    13.5,
+    -125,
+    -115,
+    14.5
+   ]
+  },
+  "Scoot Henderson": {
+   "pts": [
+    13.5,
+    -120,
+    -122,
+    14.5
+   ]
+  },
+  "Ace Bailey": {
+   "pts": [
+    14.5,
+    -115,
+    -117,
+    15.5
+   ]
+  },
+  "Toumani Camara": {
+   "pts": [
+    12.5,
+    -105,
+    -105
+   ]
+  },
+  "Donovan Clingan": {
+   "pts": [
+    10.5,
+    -125,
+    -112,
+    11.5
+   ]
+  },
+  "Jaxson Hayes": {
+   "pts": [
+    8.5,
+    -121,
+    104
+   ]
+  },
+  "Kyle Kuzma": {
+   "pts": [
+    11.5,
+    -112,
+    -130,
+    12.5
+   ]
+  },
+  "Tyler Herro": {
+   "pts": [
+    21.5,
+    -114,
+    -105
+   ]
+  },
+  "Ryan Rollins": {
+   "pts": [
+    13.5,
+    -120,
+    -122,
+    15.5
+   ]
+  },
+  "Kel'el Ware": {
+   "pts": [
+    9.5,
+    100,
+    -132,
+    10.5
+   ]
+  },
+  "Kasparas Jakučionis": {
+   "pts": [
+    6.5,
+    -125,
+    -115,
+    7.5
+   ]
+  },
+  "Mario Hezonja": {
+   "pts": [
+    7.5,
+    100,
+    -123,
+    8.5
+   ]
+  },
+  "Sam Merrill": {
+   "pts": [
+    8.5,
+    -122,
+    -105,
+    9.5
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    18.5,
+    -114,
+    -112,
+    19.5
+   ]
+  },
+  "Donovan Mitchell": {
+   "pts": [
+    23.5,
+    -129,
+    -115,
+    25.5
+   ]
+  },
+  "Zach LaVine": {
+   "pts": [
+    21.5,
+    -109,
+    -110
+   ]
+  },
+  "Ty Jerome": {
+   "pts": [
+    21.5,
+    -115,
+    -115,
+    22.5
+   ]
+  },
+  "De'Andre Hunter": {
+   "pts": [
+    12.5,
+    -106,
+    -108
+   ]
+  },
+  "Jaylen Wells": {
+   "pts": [
+    11.5,
+    -120,
+    -120,
+    12.5
+   ]
+  },
+  "Precious Achiuwa": {
+   "pts": [
+    12.5,
+    -102,
+    -105
+   ]
+  },
+  "Cedric Coward": {
+   "pts": [
+    15.5,
+    -105,
+    -105
+   ]
+  },
+  "Domantas Sabonis": {
+   "pts": [
+    16.5,
+    -115,
+    -107
+   ]
+  },
+  "Zach Edey": {
+   "pts": [
+    9.5,
+    -105,
+    105
+   ]
+  },
+  "Darius Acuff Jr.": {
+   "pts": [
+    21.5,
+    -110,
+    -114,
+    22.5
+   ]
+  },
+  "Victor Wembanyama": {
+   "pts": [
+    24.5,
+    -115,
+    -112,
+    25.5
+   ]
+  },
+  "LaMelo Ball": {
+   "pts": [
+    18.5,
+    -115,
+    -105,
+    19.5
+   ]
+  },
+  "Jonathan Kuminga": {
+   "pts": [
+    12.5,
+    -120,
+    -107,
+    13.5
+   ]
+  },
+  "De'Aaron Fox": {
+   "pts": [
+    14.5,
+    -112,
+    -104
+   ]
+  },
+  "Stephon Castle": {
+   "pts": [
+    16.5,
+    -110,
+    -105
+   ]
+  },
+  "Dylan Harper": {
+   "pts": [
+    15.5,
+    -124,
+    -121,
+    16.5
+   ]
+  },
+  "Jaden McDaniels": {
+   "pts": [
+    15.5,
+    -125,
+    -105,
+    16.5
+   ]
+  },
+  "Ayo Dosunmu": {
+   "pts": [
+    13.5,
+    -125,
+    -116,
+    15.5
+   ]
+  },
+  "Terrence Shannon Jr.": {
+   "pts": [
+    11.5,
+    100,
+    -110,
+    12.5
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "pts": [
+    28.5,
+    -125,
+    -115,
+    30.5
+   ]
+  },
+  "Kevin Durant": {
+   "pts": [
+    22.5,
+    -120,
+    -112,
+    24.5
+   ]
+  },
+  "Alperen Şengün": {
+   "pts": [
+    18.5,
+    -110,
+    -115,
+    19.5
+   ]
+  },
+  "Amen Thompson": {
+   "pts": [
+    16.5,
+    100,
+    -110,
+    17.5
+   ]
+  },
+  "Ajay Mitchell": {
+   "pts": [
+    18.5,
+    -110,
+    -109
+   ]
+  },
+  "Jabari Smith Jr.": {
+   "pts": [
+    14.5,
+    -120,
+    -125,
+    15.5
+   ]
+  },
+  "Jared McCain": {
+   "pts": [
+    14.5,
+    -112,
+    -103
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "pts": [
+    9.5,
+    -115,
+    -102
+   ]
+  },
+  "Kenrich Williams": {
+   "pts": [
+    6.5,
+    -115,
+    -132,
+    7.5
+   ]
+  }
+ }
+}
