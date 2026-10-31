@@ -28,7 +28,7 @@ Mercado opcional en el JSON del partido (si falta la cuota de spread/total se as
     "prop_lines": {"Jugador": {"reb": [7.5, null, -120]}}       # solo under (cualquier estadística de STAT_LABEL)
     "prop_lines": {"Jugador": {"reb": [6.5, -135, -162, 7.5]}}  # under con otra línea (4.º valor)
 """
-import glob, json, os, re, subprocess, sys, unicodedata
+import base64, glob, json, os, re, subprocess, sys, unicodedata
 from datetime import datetime, timezone
 
 import numpy as np
@@ -601,11 +601,52 @@ def game_id(path):
     return os.path.basename(path)[:-5].replace("@", "-at-").replace("_", "-")
 
 
+# Muestra de simulaciones para "Mi combinada" de la web (31-oct): con ella el navegador cuenta en cuántas simulaciones
+# aciertan a la vez las patas de un mismo partido que el usuario elija (incluidas líneas propias de la calculadora).
+# docs/data/sims/<id>.bin: 4 bytes (largo de la cabecera, little-endian) + cabecera JSON {n, cols} + n bytes (0-255)
+# por columna: marcador visitante/local y, por jugador, si juega y sus estadísticas base. Tiros de campo (dobles +
+# triples), combinadas (PRA, R+T...) y doble-doble se rehacen en la web. La web usa la muestra solo para la
+# correlación (conjunta / producto de las marginales en la muestra) y la aplica a las probabilidades publicadas.
+# Solo de partidos sin jugar: al cargar el resultado se borra (la combinada ya se liquida con el box score).
+SIMS_OUT = os.path.join(OUT, "sims")
+SAMPLE_N = 1500
+SAMPLE_STATS = ("pts", "reb", "ast", "fg3m", "stl", "blk", "tov", "pf", "fg2m", "fg2a", "fg3a", "ftm", "fta")
+
+
+def sample_path(gid):
+    return os.path.join(SIMS_OUT, f"{gid}.bin")
+
+
+def write_sample(gid, s):
+    os.makedirs(SIMS_OUT, exist_ok=True)
+    k = min(SAMPLE_N, len(s["sh"]))
+    u8 = lambda a: np.clip(np.round(np.asarray(a[:k], float)), 0, 255).astype(np.uint8).tobytes()
+    cols, data = ["sa", "sh"], [u8(s["sa"]), u8(s["sh"])]
+    for name, d in s["players"].items():
+        dr = d["draws"]
+        on = np.asarray(dr["min"][:k]) > 0
+        if not on.any():
+            continue
+        cols.append(f"{name}|on"); data.append(u8(on))
+        for st in SAMPLE_STATS:
+            if st in dr:
+                cols.append(f"{name}|{st}"); data.append(u8(dr[st]))
+    head = json.dumps(dict(n=k, cols=cols), ensure_ascii=False).encode()
+    with open(sample_path(gid), "wb") as f:
+        f.write(len(head).to_bytes(4, "little") + head + b"".join(data))
+
+
+def drop_sample(gid):
+    if os.path.exists(sample_path(gid)):
+        os.remove(sample_path(gid))
+
+
 def run_game(path, n):
     cfg_raw = json.load(open(path))
     use_db = cfg_raw.get("db", {}).get("use", False) and os.path.exists(os.path.join(HERE, "db", "rankings_latest.json"))
     cfg = load_game(path, use_db)
     s = simulate(cfg, n)
+    write_sample(game_id(path), s)
     g = tag_cup(cfg["game"])
     od = load_odds(g["date"])
     books = (od or {}).get("games", {}).get(f"{g['away']}@{g['home']}", {}).get("books")
@@ -703,6 +744,18 @@ def main():
     if args:
         paths = [p for p in paths if any(os.path.basename(p).startswith(a) for a in args)]
     os.makedirs(OUT, exist_ok=True)
+    if "--samples-only" in argv:
+        # solo la muestra de simulaciones de los partidos ya publicados que aún no se juegan (misma semilla y mismo
+        # número de simulaciones que lo publicado: no cambia ningún pick)
+        for p in paths:
+            gid, out_path = game_id(p), os.path.join(OUT, f"{game_id(p)}.json")
+            if not os.path.exists(out_path) or load_results(os.path.basename(p)[:10]).get(os.path.basename(p)[11:-5]):
+                continue
+            r = json.load(open(out_path))
+            cfg = load_game(p, r["used_db"])
+            write_sample(gid, simulate(cfg, r["sims"]))
+            print(f"OK muestra {gid}")
+        return
     idx_path = os.path.join(OUT, "index.json")
     index = json.load(open(idx_path)) if os.path.exists(idx_path) else {"games": []}
     keep = {g["id"]: g for g in index["games"]}
@@ -717,6 +770,7 @@ def main():
             if res and os.path.exists(out_path):
                 # partido ya jugado: no se vuelve a simular (la web muestra lo que se publicó antes del partido)
                 r = attach_result(json.load(open(out_path)), res)
+                drop_sample(gid)
                 if not r.get("matchup_view") and load_rankings():  # partidos publicados antes de esta sección
                     r["matchup_view"] = matchup_view(load_rankings(), r["game"], r["summary"]["players"],
                                                      r["summary"].get("db_report"))
@@ -731,6 +785,7 @@ def main():
                 r = run_game(p, n)
                 if res:
                     r = attach_result(r, res)
+                    drop_sample(gid)
         except Exception as e:  # un JSON roto no debe tumbar toda la jornada
             print(f"ERROR {os.path.basename(p)}: {e}")
             continue

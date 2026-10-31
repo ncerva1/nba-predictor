@@ -1600,7 +1600,7 @@ const GUIDE = [
   ["combinada", "Mi combinada", "Arma tu combinada", () => `<p>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (en el inicio, en "Ver todos" o en la página de un partido), <b>Agregar a mi combinada</b> en un parlay recomendado, o los botones Over/Under de <b>Calcula tu apuesta</b> con la cuota de tu casa.</p>
     <p>Los picks se juntan en <b>Mi combinada</b>, abajo a la izquierda. Puedes minimizarla y seguir navegando; al abrirla ves cada pata, la probabilidad de acertar todas, la cuota aproximada (producto de las cuotas), la cuota justa, el EV y el pago según lo que apuestes. Cuando terminan los partidos, cada pata y la combinada se marcan como ganadas o perdidas.</p>
     <dl><dt>Patas de partidos distintos</dt><dd>La probabilidad es la multiplicación de la de cada pata.</dd>
-    <dt>Patas del mismo partido</dt><dd>Si coinciden con un parlay recomendado se usa la probabilidad contada en las simulaciones. Si no, se multiplican y se marca con * porque es aproximada: en un mismo partido unas patas dependen de otras.</dd></dl>
+    <dt>Patas del mismo partido</dt><dd>Se cuentan juntas en una muestra de las simulaciones del partido (también las líneas propias de la calculadora), porque unas dependen de otras: si un equipo anota mucho, suben sus jugadores y el over. Si no hay muestra (partido ya jugado o jugador sin simular), se multiplican y se marca con * porque es aproximada.</dd></dl>
     <p>Se guarda solo en este navegador.</p>`],
   ["partido", "Un partido", "La página de un partido", () => `<dl>
     <dt>Marcador proyectado</dt><dd>El marcador medio de todas las simulaciones.</dd>
@@ -1712,7 +1712,7 @@ const COMBO_MAX = 12;
 const inCombo = k => MYC.some(l => l.k === k);
 function regLeg(b, gid, game) {
   const k = gid + "|" + b.label;
-  LEGREG[k] = { k, gid, game, label: b.label, kind: b.kind, player: b.player || null, stat: b.stat || null, line: b.line ?? null,
+  LEGREG[k] = { k, gid, game, label: b.label, kind: b.kind, player: b.player || null, stat: b.stat || null, line: b.line ?? null, team: b.team || null, side: b.side || null,
     p: b.p, dec: +(b.dec || +dec(b.odds)).toFixed(2), custom: !!b.custom, flag: b.flag || null };
   return k;
 }
@@ -1780,17 +1780,82 @@ function sgpMatch(gid, labels) {
   const g = INDEX.games.find(x => x.id === gid), d = cache[gid], key = [...labels].sort().join("|");
   return ((d && d.parlays) || (g && g.parlays) || []).find(pl => pl.legs.map(x => x.label).sort().join("|") === key);
 }
+// Patas del mismo partido: se cuentan juntas en la muestra de simulaciones del partido (data/sims/<id>.bin, la
+// escribe build_site.py: cabecera JSON {n, cols} + n bytes por columna). La muestra da la correlación
+// (conjunta / producto de las marginales en la muestra), que se aplica al producto de las probabilidades publicadas.
+const SIMS = {};   // gid -> {n, c} | "loading" | null (no hay muestra)
+function loadSims(gid) {
+  if (gid in SIMS) return;
+  SIMS[gid] = "loading";
+  fetch(`data/sims/${gid}.bin`).then(r => r.ok ? r.arrayBuffer() : null).then(b => {
+    if (!b) { SIMS[gid] = null; return drawCombo(); }
+    const len = new DataView(b).getUint32(0, true), h = JSON.parse(new TextDecoder().decode(new Uint8Array(b, 4, len))), c = {};
+    h.cols.forEach((k, i) => { c[k] = new Uint8Array(b, 4 + len + i * h.n, h.n); });
+    SIMS[gid] = { n: h.n, c }; drawCombo();
+  }).catch(() => { SIMS[gid] = null; drawCombo(); });
+}
+const SIM_SUM = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"], stocks: ["stl", "blk"], fgm: ["fg2m", "fg3m"], fga: ["fg2a", "fg3a"] };
+function simStat(S, name, st) {
+  const col = k => S.c[name + "|" + k];
+  if (col(st)) return col(st);
+  if (st === "dd" || st === "td") {
+    const cs = ["pts", "reb", "ast", "stl", "blk"].map(col).filter(Boolean), need = st === "dd" ? 2 : 3, out = new Uint8Array(S.n);
+    for (let i = 0; i < S.n; i++) { let t = 0; cs.forEach(a => { if (a[i] >= 10) t++; }); out[i] = t >= need ? 1 : 0; }
+    return out;
+  }
+  const parts = SIM_SUM[st];
+  if (!parts || parts.some(k => !col(k))) return null;
+  const out = new Uint16Array(S.n);
+  parts.forEach(k => { const a = col(k); for (let i = 0; i < S.n; i++) out[i] += a[i]; });
+  return out;
+}
+// (acierta, válida) por simulación, igual que leg_hits de build_site.py: el empate cuenta como acierto y una prop
+// solo vale en las simulaciones en que el jugador juega
+function simLeg(l, S) {
+  const n = S.n, hit = new Uint8Array(n), sa = S.c.sa, sh = S.c.sh;
+  const home = (l.game.split(" @ ")[1] || "").trim(), team = l.team || l.label.split(" ")[0];
+  if (l.kind === "ml" || l.kind === "spread" || l.kind === "total") {
+    if (l.kind !== "ml" && l.line == null) return null;
+    for (let i = 0; i < n; i++) {
+      const m = sh[i] - sa[i], t = sh[i] + sa[i];
+      hit[i] = l.kind === "ml" ? (m > 0) === (team === home) : l.kind === "spread" ? (team === home ? m : -m) + l.line >= 0
+        : l.label.startsWith("Over") ? t >= l.line : t <= l.line;
+    }
+    return { hit, ok: null };
+  }
+  const x = l.player && l.stat && simStat(S, l.player, l.stat), on = l.player && S.c[l.player + "|on"];
+  if (!x || !on || l.line == null) return null;
+  const over = l.side ? l.side === "over" : l.label.includes(" Over ");
+  for (let i = 0; i < n; i++) hit[i] = over ? x[i] >= l.line : x[i] <= l.line;
+  return { hit, ok: on };
+}
+function simJoint(legs, S) {
+  const hs = legs.map(l => simLeg(l, S));
+  if (hs.some(h => !h)) return null;
+  let both = 0, nok = 0;
+  const marg = hs.map(h => { let w = 0, k = 0; for (let i = 0; i < S.n; i++) if (!h.ok || h.ok[i]) { k++; w += h.hit[i]; } return k ? w / k : 0; });
+  for (let i = 0; i < S.n; i++) {
+    if (hs.some(h => h.ok && !h.ok[i])) continue;
+    nok++; if (hs.every(h => h.hit[i])) both++;
+  }
+  const ind = marg.reduce((t, m) => t * m, 1);
+  return nok >= 100 && ind > 0 ? both / nok / ind : null;   // factor de correlación
+}
 function comboCalc() {
   const groups = {};
   MYC.forEach(l => (groups[l.gid] ||= []).push(l));
-  let p = 1, decT = 1, approx = [], exact = [], clash = [];
+  let p = 1, decT = 1, approx = [], exact = [], sim = [], loading = false, clash = [];
   const res = MYC.map(legResult);
   Object.values(groups).forEach(ls_ => {
     const live = ls_.filter(l => res[MYC.indexOf(l)] !== "push");
     live.forEach(l => { decT *= l.dec; });
     if (live.length > 1) {
-      const m = sgpMatch(live[0].gid, live.map(l => l.label));
-      if (m) { p *= m.p; exact.push(live[0].game); } else { p *= live.reduce((t, l) => t * l.p, 1); approx.push(live[0].game); }
+      const gid = live[0].gid, g = INDEX.games.find(x => x.id === gid), prod = live.reduce((t, l) => t * l.p, 1);
+      if (g && !g.result) loadSims(gid);
+      const S = SIMS[gid], f = S && S !== "loading" ? simJoint(live, S) : null, m = sgpMatch(gid, live.map(l => l.label));
+      if (f != null) { const q = Math.min(prod * f, ...live.map(l => l.p)); p *= q; sim.push({ game: live[0].game, f, indep: prod, p: q }); }
+      else if (m) { p *= m.p; exact.push(live[0].game); }
+      else { p *= prod; approx.push(live[0].game); if (S === "loading") loading = true; }
     } else if (live.length) p *= live[0].p;
     for (let i = 0; i < ls_.length; i++) for (let j = i + 1; j < ls_.length; j++) {
       const a = ls_[i], b = ls_[j];
@@ -1799,7 +1864,7 @@ function comboCalc() {
     }
   });
   const st = res.some(r => r === "lost") ? "lost" : res.length && res.every(r => r === "push") ? "push" : res.length && res.every(r => r === "won" || r === "push") ? "won" : null;
-  return { p, dec: decT, ev: p * decT - 1, approx, exact, clash, res, st, done: res.filter(r => r).length };
+  return { p, dec: decT, ev: p * decT - 1, approx, exact, sim, loading, clash, res, st, done: res.filter(r => r).length };
 }
 const fmtMoney = x => x.toLocaleString("es-CO", { maximumFractionDigits: x < 100 ? 2 : 0 });
 function drawCombo() {
@@ -1825,12 +1890,14 @@ function drawCombo() {
       <div class="cb-r"><span class="num">${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(c.res[i])}</div>
       <button type="button" class="cb-x" data-rm="${i}" aria-label="Quitar ${esc(l.label)}">×</button></li>`).join("")}</ol>
     ${n === 1 ? `<p class="cb-note">Agrega al menos otra pata para armar la combinada.</p>` : ""}
-    ${c.approx.length ? `<p class="cb-note warn">Patas del mismo partido (${c.approx.map(esc).join(", ")}): la probabilidad se calcula multiplicando, como si fueran independientes. En la realidad pueden ayudarse o estorbarse, y la casa suele pagar menos por un parlay del mismo partido: tómala como aproximada.</p>` : ""}
+    ${c.sim.map(x => `<p class="cb-note">Patas de ${esc(x.game)} contadas juntas en las simulaciones del partido: ${x.f >= 1.02 ? `se ayudan entre sí, ${pct(x.f - 1, 0)} más probable que multiplicarlas` : x.f <= 0.98 ? `se estorban, ${pct(1 - x.f, 0)} menos probable que multiplicarlas` : "casi independientes"} (${pct(x.p)} frente a ${pct(x.indep)}).${x.f >= 1.02 ? " La casa suele pagar menos por un parlay así: compara su cuota con la cuota justa." : ""}</p>`).join("")}
+    ${c.loading ? `<p class="cb-note">Contando las patas del mismo partido en las simulaciones…</p>` : ""}
+    ${c.approx.length && !c.loading ? `<p class="cb-note warn">Patas del mismo partido (${c.approx.map(esc).join(", ")}): no hay simulaciones publicadas para contarlas juntas${c.res.some(r => r) ? " (el partido ya se jugó)" : ""}, así que la probabilidad se calcula multiplicando, como si fueran independientes. Tómala como aproximada.</p>` : ""}
     ${c.exact.length ? `<p class="cb-note">Las patas de ${c.exact.map(esc).join(", ")} coinciden con un parlay recomendado: se usa la probabilidad contada en las simulaciones, que ya tiene en cuenta cómo dependen unas de otras.</p>` : ""}
     ${c.clash.length ? `<p class="cb-note warn">Ojo, estas patas se pisan entre sí y muchas casas no las dejan combinar: ${c.clash.map(esc).join("; ")}.</p>` : ""}`;
   $("#cb-foot").hidden = false;
   $("#cb-stats").innerHTML = `
-    <div class="cell main"><span class="k">Prob. modelo</span><span class="v">${pct(c.p)}${c.approx.length ? "*" : ""}</span></div>
+    <div class="cell main"><span class="k">Prob. modelo</span><span class="v">${pct(c.p)}${c.approx.length || c.loading ? "*" : ""}</span></div>
     <div class="cell"><span class="k">Cuota aprox.</span><span class="v">${c.dec.toFixed(2)}</span></div>
     <div class="cell"><span class="k">Cuota justa</span><span class="v">${fairDec(c.p)}</span></div>
     <div class="cell"><span class="k">EV</span><span class="v">${n > 1 ? evPill(c.ev, thr) : "—"}</span></div>`;
