@@ -196,10 +196,11 @@ def prop_bets(cfg, s):
 # como en el modelo, en los minutos de hoy), que es de donde parten las casas; el pick es el lado que el modelo ve
 # con >= MP_P contra el .5 que menos le conviene (las cuentas de tiros son asimétricas: con la línea justo encima
 # del promedio el under gana más de la mitad de las veces sin que el modelo vea nada). Doble-doble y triple-doble: "Sí" desde MP_DD / MP_TD. Solo jugadores que seguro juegan.
-MP_SHOTS = ("fgm", "fga")
+MP_SHOTS = ("fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta")  # los triples anotados ya tienen líneas de casa
+SHOT_SRC = {"fg2m": ("fgm", "fg3m"), "fg2a": ("fga", "fg3a")}
 MP_P, MP_DD, MP_TD = 0.55, 0.35, 0.06
 MP_MIN, MP_P_PLAY = 20, 0.9   # minutos proyectados mínimos y prob. de jugar
-MP_MIN_AVG = {"fgm": 3.0, "fga": 7.0}  # con menos volumen las casas no publican línea
+MP_MIN_AVG = {"fgm": 3.0, "fga": 7.0, "fg2m": 2.0, "fg2a": 4.0, "fg3a": 3.0, "ftm": 2.0, "fta": 2.5}  # con menos volumen las casas no publican línea
 
 
 def model_picks(cfg, s):
@@ -221,11 +222,13 @@ def model_picks(cfg, s):
                             f"{p['name']} {'Over' if side == 'over' else 'Under'} {line:g} {STAT_LABEL[st]}"))
         for st in MP_SHOTS:
             x = d["draws"].get(st)
-            if x is None or st in mk or st not in p["cur"]:
+            src = SHOT_SRC.get(st, (st, None))  # dobles = tiros de campo - triples
+            if x is None or st in mk or any(c and c not in p["cur"] for c in src):
                 continue
             x, w = x[on], player_weight(p)
-            pr = shot_prior(p) if p["prior"].get(st) is not None and p["prior"].get("min", 0) > 0 else p["cur"]
-            per_min = w * p["cur"][st] / max(p["cur"]["min"], 1) + (1 - w) * pr[st] / max(pr["min"], 1)
+            pr = shot_prior(p) if all(c is None or p["prior"].get(c) is not None for c in src) and p["prior"].get("min", 0) > 0 else p["cur"]
+            per_g = lambda row: row[src[0]] - (row[src[1]] if src[1] else 0)
+            per_min = w * per_g(p["cur"]) / max(p["cur"]["min"], 1) + (1 - w) * per_g(pr) / max(pr["min"], 1)
             avg = per_min * p["min"]
             if avg < MP_MIN_AVG[st]:
                 continue
