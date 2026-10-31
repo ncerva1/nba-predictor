@@ -445,6 +445,15 @@ tr.detail td { background: var(--bg) }
 .cup-steps li::before { content: "0" counter(st); font: 600 11px var(--mono); color: #e2b75a; letter-spacing: .08em }
 .cup-steps b { font: 400 20px/1.05 "Bebas Neue", var(--display); letter-spacing: .05em }
 .cup-steps span { font-size: 12px; color: #b9ad90 }
+.pflag { display: inline-block; vertical-align: 1px; margin-left: 6px; font: 600 10px var(--mono); letter-spacing: .06em; text-transform: uppercase;
+  padding: 1px 6px; border-radius: 999px; white-space: nowrap; cursor: help; color: #8a4b00; background: #fdecd2; border: 1px solid #f1cf9c }
+.pflag.sin_datos { color: var(--muted); background: var(--line); border-color: transparent }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pflag:not(.sin_datos) { color: #f5b25c; background: #33230f; border-color: #563a17 } }
+:root[data-theme="dark"] .pflag:not(.sin_datos) { color: #f5b25c; background: #33230f; border-color: #563a17 }
+.pf-note { display: block; margin-top: 3px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: normal; text-transform: none; letter-spacing: 0 }
+.calc-warn { color: #8a4b00 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .calc-warn { color: #f5b25c } }
+:root[data-theme="dark"] .calc-warn { color: #f5b25c }
 .cup-tag { display: inline-flex; align-items: center; gap: 4px; font: 600 10px var(--mono); letter-spacing: .08em; text-transform: uppercase;
   color: #8a6412; background: #f3e8cc; border: 1px solid #e0cc97; padding: 2px 7px; border-radius: 999px }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cup-tag { color: #f0c66b; background: #2d2412; border-color: #4a3b1b } }
@@ -557,6 +566,16 @@ body:has(dialog.guide[open]) { overflow: hidden }
 <script>
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// etiqueta de jugadores con poca historia NBA (rookie, un año fuera por lesión o sin datos de la temporada pasada)
+const FLAG_TXT = { rookie: "Rookie", lesion: "Sin 2025-26", sin_datos: "Sin datos previos" };
+const FLAG_WHY = " Sus predicciones pueden variar mucho más que las del resto.";
+const ftag = f => f ? `<span class="pflag ${esc(f.t)}" title="${esc(f.note + "." + FLAG_WHY)}" role="button" tabindex="0">${FLAG_TXT[f.t] || esc(f.t)}</span><span class="pf-note" hidden>${esc(f.note + "." + FLAG_WHY)}</span>` : "";
+// en el celular no hay cursor: tocar la etiqueta muestra / oculta el detalle debajo del nombre
+document.addEventListener("click", e => {
+  const t = e.target.closest(".pflag"); if (!t) return;
+  e.stopPropagation(); e.preventDefault();
+  const n = t.nextElementSibling; if (n && n.classList.contains("pf-note")) n.hidden = !n.hidden;
+}, true);
 const pct = (p, d = 1) => (p * 100).toFixed(d) + "%";
 const dec = o => (o > 0 ? 1 + o / 100 : 1 + 100 / -o).toFixed(2);   // americana → decimal
 const fairDec = p => p > 0 ? (1 / p).toFixed(2) : "—";               // cuota justa = 1 / prob
@@ -647,7 +666,7 @@ function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
   return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head"><div class="pick-h"><div><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
+    <td class="head"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
     <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
@@ -992,7 +1011,7 @@ function parlayCard(pl, thr, withGame) {
     : `Patas casi independientes entre sí (${pct(pl.p_indep)} multiplicando).`;
   return `<article class="pl-card">
     <header><h3>${PL_N[pl.n] || pl.n + " patas"}</h3><span class="kind">${cross ? "Entre partidos" : "Mismo partido" + (withGame ? ` · <a href="#${pl.legs[0].gid}">${esc(pl.legs[0].game)}</a>` : "")}</span>${resPill(pl.result)}</header>
-    <ol class="pl-legs">${pl.legs.map(l => `<li><div><div class="lg">${esc(l.label)}</div><div class="kind">${KIND[l.kind] || l.kind}${cross ? ` · <a href="#${l.gid}">${esc(l.game)}</a>` : ""}</div></div>
+    <ol class="pl-legs">${pl.legs.map(l => `<li><div><div class="lg">${esc(l.label)}${ftag(l.flag)}</div><div class="kind">${KIND[l.kind] || l.kind}${cross ? ` · <a href="#${l.gid}">${esc(l.game)}</a>` : ""}</div></div>
       <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div></li>`).join("")}</ol>
     <div class="pl-stats">
       <div class="cell main"><span class="k">Prob. modelo</span><span class="v">${pct(pl.p)}</span></div>
@@ -1301,14 +1320,14 @@ async function renderGame(id) {
     <div class="filters"><span class="lbl">Ordenar</span><select class="sortsel" id="sortsel" aria-label="Ordenar por"></select>
       <button type="button" id="sortdir" aria-pressed="false">Mayor a menor</button></div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
+    <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV. Etiquetas: <b>Rookie</b> = novato, <b>Sin 2025-26</b> = no jugó la temporada pasada (lesión), <b>Sin datos previos</b> = el modelo no tiene su temporada pasada; con tan poca historia sus proyecciones varían mucho más (pasa el cursor o toca la etiqueta para ver el detalle).${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
   <section class="section">
     <h2>Calcula tu apuesta</h2>
     <p class="lede">Para las props que las casas que leemos no publican (combinadas, tiros, libres, faltas, robos + tapones...) o para comparar con tu casa: elige jugador y estadística, escribe la línea y la cuota decimal que te dan, y el modelo te dice la probabilidad y el EV.</p>
     <div class="panel calc" id="calc">
       <label>Jugador<select id="c-p">${players.filter(p => p.pts).sort((x, y) => x.team.localeCompare(y.team) || y.min - x.min).map((p, i) =>
-        `<option value="${esc(p.name)}">${esc(p.team)} · ${esc(p.name)}</option>`).join("")}</select></label>
+        `<option value="${esc(p.name)}">${esc(p.team)} · ${esc(p.name)}${p.flag ? " · " + FLAG_TXT[p.flag.t] : ""}</option>`).join("")}</select></label>
       <label>Estadística<select id="c-s">${stats.map(k => `<option value="${k}">${STAT_LABEL[k]}</option>`).join("")}</select></label>
       <label>Línea<input id="c-l" type="number" step="0.5" min="0" inputmode="decimal"></label>
       <label>Cuota over<input id="c-o" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
@@ -1344,13 +1363,13 @@ async function renderGame(id) {
     const played = players.some(p => p.actual !== undefined);
     if (k === "all") {
       $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
-      ${rows.map(p => `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
+      ${rows.map(p => `<tr><td class="head">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
         <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? p[s].mean.toFixed(1) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${p.actual[s]})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
       ${played ? `<p class="muted">Entre paréntesis, lo que hizo en el partido real.</p>` : ""}`;
     } else {
     const hh = d.h2h && d.h2h.games.length;
     $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
-    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
+    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
       <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
     }
@@ -1412,9 +1431,10 @@ function bindCalc(players, thr) {
     };
     const nm = el("c-p").value, sl = STAT_LABEL[el("c-s").value], legs = [["Over", pO, el("c-o").value], ["Under", pU, el("c-u").value]]
       .filter(([, , q]) => parseFloat(q) > 1).map(([side, p, q]) => regLeg({ kind: "prop", label: `${nm} ${side} ${L} ${sl}`, player: nm, stat: el("c-s").value, line: L,
-        p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true }, CUR_GAME.id, CUR_GAME.game));
+        p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true, flag: byName[nm]?.flag }, CUR_GAME.id, CUR_GAME.game));
     el("c-add").innerHTML = legs.length ? legs.map(k => addBtn(k, true)).join("") : `<span class="muted">Escribe la cuota over o under de tu casa para poder agregarla a tu combinada.</span>`;
-    el("c-out").innerHTML = `<div class="muted">Media ${st.mean} · rango ${st.p10}–${st.p90}${pPush ? ` · empate ${pct(pPush, 1)}` : ""}${approx}</div>`
+    const fl = byName[el("c-p").value]?.flag;
+    el("c-out").innerHTML = (fl ? `<div class="calc-warn">⚠ ${esc(fl.note)}.${FLAG_WHY}</div>` : "") + `<div class="muted">Media ${st.mean} · rango ${st.p10}–${st.p90}${pPush ? ` · empate ${pct(pPush, 1)}` : ""}${approx}</div>`
       + side("Over", pO, el("c-o").value) + side("Under", pU, el("c-u").value);
   };
   if (!el("c-p")) return;
@@ -1573,7 +1593,7 @@ const inCombo = k => MYC.some(l => l.k === k);
 function regLeg(b, gid, game) {
   const k = gid + "|" + b.label;
   LEGREG[k] = { k, gid, game, label: b.label, kind: b.kind, player: b.player || null, stat: b.stat || null, line: b.line ?? null,
-    p: b.p, dec: +(b.dec || +dec(b.odds)).toFixed(2), custom: !!b.custom };
+    p: b.p, dec: +(b.dec || +dec(b.odds)).toFixed(2), custom: !!b.custom, flag: b.flag || null };
   return k;
 }
 function addBtn(k, wide) {
@@ -1681,7 +1701,7 @@ function drawCombo() {
     ${c.st ? `<div class="cb-res ${c.st}">${c.st === "won" ? "Combinada ganada ✓" : c.st === "lost" ? "Combinada perdida ✗" : "Combinada nula (todas las patas anuladas)"}</div>`
       : c.done ? `<div class="cb-res">${c.res.filter(r => r === "won").length} de ${n} patas acertadas · faltan ${n - c.done} por jugarse</div>` : ""}
     <ol class="cb-legs">${MYC.map((l, i) => `<li>
-      <div class="cb-l"><div class="lg">${esc(l.label)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${esc(l.gid)}">${esc(l.game)}</a>${l.gid.slice(0, 10) !== DAY ? ` · ${esc(dayName(l.gid.slice(0, 10)))}` : ""}${l.custom ? " · tu cuota" : ""}</div></div>
+      <div class="cb-l"><div class="lg">${esc(l.label)}${ftag(l.flag)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${esc(l.gid)}">${esc(l.game)}</a>${l.gid.slice(0, 10) !== DAY ? ` · ${esc(dayName(l.gid.slice(0, 10)))}` : ""}${l.custom ? " · tu cuota" : ""}</div></div>
       <div class="cb-r"><span class="num">${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(c.res[i])}</div>
       <button type="button" class="cb-x" data-rm="${i}" aria-label="Quitar ${esc(l.label)}">×</button></li>`).join("")}</ol>
     ${n === 1 ? `<p class="cb-note">Agrega al menos otra pata para armar la combinada.</p>` : ""}
