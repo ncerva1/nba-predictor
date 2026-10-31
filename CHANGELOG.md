@@ -1,5 +1,25 @@
 # Cambios del modelo
 
+## 1.3.6 — 2026-10-31: doble-doble, triple-doble y picks de tiros de campo
+Pedido de Nicolas: no había picks de doble-doble, triple-doble ni tiros de campo anotados / intentados.
+
+- `model.simulate` dibuja `dd` y `td` (1 si lo logra) contando en cada simulación las categorías con 10 o más
+  (puntos, rebotes, asistencias, robos y tapones), así heredan la correlación de minutos y ritmo. En el resumen la
+  media es la probabilidad (línea 0.5). Con los partidos del 26 al 29-oct el modelo esperaba 54 doble-dobles y
+  hubo 46 (entre 30% y 70% de prob. sale algo alto: 0.38 vs 0.26 y 0.56 vs 0.47); triple-dobles 3.0 vs 3.
+- `model.shot_prior`: en `prior.csv` un 24% de las filas trae tiros que no cuadran con los puntos (2 x FGM + 3PM +
+  FTM a más de un 10% de PTS). Esas columnas se escalan para que cuadren; antes inflaban o encogían los intentados.
+- `build_site.model_picks`: picks sin cuota de casa (las casas que leemos no publican estas líneas). Tiros de campo
+  anotados / intentados: línea de referencia en el .5 alrededor de su promedio (temporada actual mezclada con la
+  anterior en los minutos de hoy) que menos le conviene al pick, lado con >= 55%, solo jugadores con 20+ minutos,
+  3+ anotados / 7+ intentados de promedio y que seguro juegan. Doble-doble "Sí" desde 35%, triple-doble desde 6%.
+  Cada pick trae la cuota justa y la cuota mínima que debe pagar la casa para tener valor (EV >= 3%); se liquidan
+  con el resultado real como los demás.
+- `prop_lines` acepta `dd` / `td` (`[0.5, cuota sí, cuota no]`; las apuestas se llaman "Doble-doble: Sí / No") y
+  `odds/fetch_co.py` lee esos mercados de Rushbet / BetPlay (sí / no por jugador, o lista de jugadores solo con sí).
+- Web: categoría "Doble y triple-doble" en los picks; en "Tiros" y "Doble y triple-doble" (inicio, "Ver todo" y
+  cada partido) aparece la tabla "Picks del modelo sin cuota de casa"; la tabla de props trae DD y TD en %.
+
 ## Web — 2026-10-31: etiquetas de rookies y jugadores sin temporada previa
 Pedido de Nicolas (casos Dybantsa: Under 4.5 rebotes con 1 partido NBA, y Kyrie: Under 26.5 PRA sin 2025-26).
 

@@ -1,5 +1,5 @@
 """
-NBA-Predictor 1.3 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.3.6 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
@@ -42,6 +42,8 @@ EXTRA = ("fgm", "fga", "fg3a", "stl", "blk", "tov", "pf")
 EXTRA_R = {"stl": 8.0, "blk": 4.0, "tov": 10.0, "pf": 30.0, "miss": 10.0}
 COMBOS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
           "stocks": ("stl", "blk")}
+DD_STATS = ("pts", "reb", "ast", "stl", "blk")  # categorías que cuentan para doble-doble y triple-doble
+BINARY = ("dd", "td")  # props de sí / no: media = probabilidad, línea 0.5
 TEAM_SD, RHO, MARGIN_SD = 12.0, 0.35, 13.7
 # Calibración 1.2 (resultados del 26-oct, ver results/2026-10-26_eval.json):
 MIN_SD = {True: 5.5, False: 6.0}  # DE de minutos titular / suplente (antes 3.5 / 4.0; el error real fue ~7)
@@ -215,6 +217,26 @@ def apply_h2h(cfg):
     return cfg
 
 
+SHOT_COLS = ("fgm", "fga", "fg3a", "ftm", "fta")
+
+
+def shot_prior(p):
+    """Temporada anterior con los tiros coherentes con los puntos (1.3.6). En prior.csv las columnas de tiros a veces
+    salen de otra fila (traspasos, otra escala) y no cuadran con PTS: Davion Mitchell 9.3 pts con 5.4 tiros de campo
+    anotados. Si 2 x FGM + 3PM + FTM se aleja más de un 10% de PTS, las columnas de tiros se escalan para que cuadre;
+    si no hay datos válidos se usa la temporada actual."""
+    pr = p.get("prior") or {}
+    if not pr.get("min") or any(pr.get(k) is None for k in ("fgm", "fga", "fg3a")):
+        return p["cur"]
+    made = 2 * pr["fgm"] + pr.get("fg3m", 0) + (pr.get("ftm") or 0)
+    if made <= 0 or pr.get("pts", 0) <= 0:
+        return pr
+    k = pr["pts"] / made
+    if abs(k - 1) <= 0.1:
+        return pr
+    return {**pr, **{c: pr[c] * k for c in SHOT_COLS if pr.get(c) is not None}}
+
+
 def nb_draw(rng, mean, r):
     lam = rng.gamma(shape=r, scale=np.maximum(mean, 1e-6) / r)
     return rng.poisson(lam)
@@ -274,6 +296,8 @@ def simulate(cfg, n=20000, seed=7):
         if all(k in p["cur"] for k in EXTRA):
             w = player_weight(p)
             pr = p["prior"] if all(k in p["prior"] for k in EXTRA) and p["prior"]["min"] > 0 else p["cur"]
+            if pr is p["prior"]:
+                pr = shot_prior(p)
             x = {k: w * p["cur"][k] / max(p["cur"]["min"], 1) + (1 - w) * pr[k] / max(pr["min"], 1)
                  for k in EXTRA + ("pts", "fg3m")}
             fg2m, fg2a = x["fgm"] - x["fg3m"], x["fga"] - x["fg3a"]
@@ -282,7 +306,7 @@ def simulate(cfg, n=20000, seed=7):
                               # parte de los puntos que no son triples que llega en dobles (el resto, tiros libres)
                               s2=float(np.clip(2 * fg2m / max(x["pts"] - 3 * x["fg3m"], 1e-6), 0.05, 1)))
             if "ftm" in p["cur"] and "fta" in p["cur"]:
-                pf_ = p["prior"] if "fta" in p["prior"] and p["prior"]["min"] > 0 else p["cur"]
+                pf_ = shot_prior(p) if p["prior"].get("fta") is not None and p["prior"]["min"] > 0 else p["cur"]
                 ft = {k: w * p["cur"][k] / max(p["cur"]["min"], 1) + (1 - w) * pf_[k] / max(pf_["min"], 1)
                       for k in ("ftm", "fta")}
                 # fallos por cada libre metido: más viajes a la línea, más fallos
@@ -360,6 +384,11 @@ def simulate(cfg, n=20000, seed=7):
         for c, parts in COMBOS.items():
             if all(k in draws for k in parts):
                 draws[c] = sum(draws[k] for k in parts)
+        # 1.3.6: doble-doble / triple-doble (1 = lo logra) contando las categorías con 10 o más en esa simulación:
+        # puntos, rebotes, asistencias y, si se proyectan, robos y tapones. Salen de las mismas simulaciones, así
+        # que llevan la correlación de minutos y ritmo (un jugador con muchos minutos sube en todo a la vez).
+        ten = sum((draws[k] >= 10).astype(int) for k in DD_STATS if k in draws)
+        draws["dd"], draws["td"] = (ten >= 2).astype(int), (ten >= 3).astype(int)
         draws["min"] = mn
         res[p["name"]] = dict(team=t, pos=p["pos"], draws=draws, p_play=p.get("p_play", 1.0))
 
@@ -416,6 +445,10 @@ def summarize(cfg, s):
             fl = float(np.floor(np.mean(x)) + 0.5) if np.mean(x) >= 4 else float(np.floor(np.mean(x) - 0.25) + 0.5)
             fl = max(fl, 0.5)
             mu = float(x.mean())
+            if st in BINARY:  # sí / no: la media es la probabilidad de lograrlo
+                row[st] = dict(mean=round(mu, 3), p10=float(np.percentile(x, 10)), p90=float(np.percentile(x, 90)),
+                               line=0.5, p_over=round(mu, 3), ladder={1: round(mu, 3)})
+                continue
             ks = range(max(1, int(mu * 0.6)), int(np.ceil(mu * 1.45)) + 2)
             row[st] = dict(mean=round(mu, 1), p10=float(np.percentile(x, 10)),
                            p90=float(np.percentile(x, 90)), line=fl,

@@ -40,6 +40,12 @@ PROP_STATS = [(("points", "rebounds", "assists"), "pra"), (("points", "rebounds"
               (("points",), "pts"), (("rebounds",), "reb"), (("assists",), "ast"), (("steals",), "stl"),
               (("blocks",), "blk"), (("turnovers",), "tov"), (("fouls",), "pf")]
 PROP_SKIP = ("quarter", "half", "1st", "2nd", "3rd", "4th", "first", "double", "triple")
+YES, NO = ("OT_YES", "yes", "sí", "si"), ("OT_NO", "no")
+
+
+def yes_no(o):
+    t = [o.get("type"), (o.get("englishLabel") or "").lower(), (o.get("label") or "").lower()]
+    return "yes" if any(x in YES for x in t) else "no" if any(x in NO for x in t) else None
 
 
 def prop_stat(crit):
@@ -124,8 +130,8 @@ def to_prop_lines(co):
                 cur = out.setdefault(player_name(p["player"]), {}).get(p["stat"])
                 new = [p["line"], p["over"], p["under"]]
                 if cur and cur[0] == new[0]:
-                    new = [new[0], max(cur[1], new[1], key=lambda o: o if o > 0 else 10000 / -o),
-                           max(cur[2], new[2], key=lambda o: o if o > 0 else 10000 / -o)]
+                    best = lambda a, b: a if b is None else b if a is None else max(a, b, key=lambda o: o if o > 0 else 10000 / -o)
+                    new = [new[0], best(cur[1], new[1]), best(cur[2], new[2])]
                 out[player_name(p["player"])][p["stat"]] = new
     return out
 
@@ -140,6 +146,24 @@ def parse_event(data):
         crit = (bo.get("criterion", {}).get("englishLabel") or bo.get("criterion", {}).get("label") or "").lower()
         typ = (bo.get("betOfferType", {}).get("englishName") or "").lower()
         outs = [o for o in bo.get("outcomes", []) if o.get("status", "OPEN") == "OPEN" and o.get("odds")]
+        if ("double" in crit or "triple" in crit) and "quarter" not in crit and "half" not in crit and (
+                "player" in crit or any(o.get("participant") for o in outs)):
+            # doble-doble / triple-doble (sí / no): va como línea 0.5, over = sí y under = no. Si la casa lo da como
+            # lista de jugadores (un outcome "sí" por jugador), solo hay over.
+            stat = "td" if "triple" in crit else "dd"
+            yn = {yes_no(o): o for o in outs if yes_no(o)}
+            if "yes" in yn:
+                who = yn["yes"].get("participant") or bo.get("participant") or ""
+                pairs = [(who, yn["yes"], yn.get("no"))]
+            else:
+                pairs = [(o.get("participant") or "", o, None) for o in outs if o.get("participant")]
+            for who, y, n in pairs:
+                if who and not team(who):  # "Double Chance" de equipos no es de jugador
+                    props[(who, stat)] = (0, dict(player=who, stat=stat, line=0.5, over=american(y["odds"] / 1000),
+                                                  under=american(n["odds"] / 1000) if n else None))
+            if not pairs:
+                UNMAPPED.add(crit)
+            continue
         if "by the player" in crit or ("player" in crit and typ == "over/under"):
             stat = prop_stat(crit)
             if not stat:

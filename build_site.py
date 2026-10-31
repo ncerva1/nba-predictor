@@ -34,7 +34,8 @@ from datetime import datetime, timezone
 import numpy as np
 
 from db_link import PT, _positions
-from model import (american_to_prob, current_h2h_games, load_game, prior_season, prob_to_american, season_of,
+from evaluate import is_over
+from model import (BINARY, american_to_prob, current_h2h_games, load_game, prior_season, prob_to_american, season_of,
                    simulate, summarize)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -43,7 +44,8 @@ STAT_LABEL = {"pts": "Puntos", "reb": "Rebotes", "ast": "Asistencias", "fg3m": "
               "pr": "PTS+REB", "pa": "PTS+AST", "ra": "REB+AST", "stl": "Robos", "blk": "Tapones",
               "stocks": "Robos+Tapones", "tov": "Pérdidas", "pf": "Faltas", "fgm": "Tiros de campo anotados",
               "fga": "Tiros de campo intentados", "fg3a": "Triples intentados", "fg2m": "Dobles anotados",
-              "fg2a": "Dobles intentados", "ftm": "Tiros libres anotados", "fta": "Tiros libres intentados"}
+              "fg2a": "Dobles intentados", "ftm": "Tiros libres anotados", "fta": "Tiros libres intentados",
+              "dd": "Doble-doble", "td": "Triple-doble"}
 DEFAULT_ODDS = -110
 VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 
@@ -174,14 +176,69 @@ def prop_bets(cfg, s):
             o_under = v[2] if len(v) > 2 else None
             lu = v[3] if len(v) > 3 else ln  # la mejor cuota del under puede ser con otra línea
             lab = STAT_LABEL.get(st, st)
+            yn = st in BINARY  # doble-doble / triple-doble: sí (over 0.5) / no (under 0.5)
             if o_over is not None:  # algunas fuentes solo dan una selección (over o under)
                 po, push = (x > ln).mean(), (x == ln).mean()
-                out.append(dict(bet("prop", f"{name} Over {ln:g} {lab}", po / (1 - push), o_over, ln, name, d["team"]), stat=st))
+                out.append(dict(bet("prop", f"{name} {lab}: Sí" if yn else f"{name} Over {ln:g} {lab}", po / (1 - push),
+                                    o_over, ln, name, d["team"]), stat=st, side="over"))
             if o_under is not None:
                 pu, push = (x < lu).mean(), (x == lu).mean()
-                out.append(dict(bet("prop", f"{name} Under {lu:g} {lab}", pu / (1 - push), o_under, lu, name,
-                                    d["team"]), stat=st))
+                out.append(dict(bet("prop", f"{name} {lab}: No" if yn else f"{name} Under {lu:g} {lab}", pu / (1 - push),
+                                    o_under, lu, name, d["team"]), stat=st, side="under"))
     return out
+
+
+# Picks del modelo sin cuota (1.3.6, pedido de Nicolas 31-oct): tiros de campo anotados / intentados, doble-doble y
+# triple-doble. Las casas que leemos casi nunca publican esas líneas, así que en vez de EV se da la probabilidad del
+# modelo y la cuota mínima que hace falta para que la apuesta tenga valor (EV >= VALUE_EV); el usuario la compara
+# con su casa. Tiros: la línea de referencia es su promedio por partido (temporada actual mezclada con la anterior
+# como en el modelo, en los minutos de hoy), que es de donde parten las casas; el pick es el lado que el modelo ve
+# con >= MP_P contra el .5 que menos le conviene (las cuentas de tiros son asimétricas: con la línea justo encima
+# del promedio el under gana más de la mitad de las veces sin que el modelo vea nada). Doble-doble y triple-doble: "Sí" desde MP_DD / MP_TD. Solo jugadores que seguro juegan.
+MP_SHOTS = ("fgm", "fga")
+MP_P, MP_DD, MP_TD = 0.55, 0.35, 0.06
+MP_MIN, MP_P_PLAY = 20, 0.9   # minutos proyectados mínimos y prob. de jugar
+MP_MIN_AVG = {"fgm": 3.0, "fga": 7.0}  # con menos volumen las casas no publican línea
+
+
+def model_picks(cfg, s):
+    from model import player_weight, shot_prior
+    lines = cfg.get("prop_lines", {})
+    out = []
+    for p in cfg["players"]:
+        d = s["players"].get(p["name"])
+        if not d or p["min"] < MP_MIN or d["p_play"] < MP_P_PLAY:
+            continue
+        on = d["draws"]["min"] > 0
+        mk = lines.get(p["name"], {})
+
+        def add(st, side, line, prob, ref=None):
+            out.append(dict(kind="prop", model_only=True, player=p["name"], team=p["team"], stat=st, side=side,
+                            line=line, p=round(float(prob), 3), fair=round(1 / max(prob, 1e-3), 2),
+                            min_dec=round((1 + VALUE_EV) / max(prob, 1e-3), 2), ref=ref,
+                            label=f"{p['name']} {STAT_LABEL[st]}: Sí" if st in BINARY else
+                            f"{p['name']} {'Over' if side == 'over' else 'Under'} {line:g} {STAT_LABEL[st]}"))
+        for st in MP_SHOTS:
+            x = d["draws"].get(st)
+            if x is None or st in mk or st not in p["cur"]:
+                continue
+            x, w = x[on], player_weight(p)
+            pr = shot_prior(p) if p["prior"].get(st) is not None and p["prior"].get("min", 0) > 0 else p["cur"]
+            per_min = w * p["cur"][st] / max(p["cur"]["min"], 1) + (1 - w) * pr[st] / max(pr["min"], 1)
+            avg = per_min * p["min"]
+            if avg < MP_MIN_AVG[st]:
+                continue
+            # la casa pone la línea en uno de los dos .5 alrededor del promedio: se prueba cada lado contra el que
+            # le es menos favorable (over contra el .5 de arriba, under contra el de abajo)
+            hi, lo = float(np.floor(avg) + 0.5), float(np.floor(avg) - 0.5)
+            po, pu = float((x > hi).mean()), float((x < lo).mean()) if lo > 0 else 0.0
+            if max(po, pu) >= MP_P:
+                add(st, "over" if po >= pu else "under", hi if po >= pu else lo, max(po, pu), round(avg, 1))
+        for st, thr in (("dd", MP_DD), ("td", MP_TD)):
+            x = d["draws"].get(st)
+            if x is not None and st not in mk and x[on].mean() >= thr:
+                add(st, "over", 0.5, x[on].mean())
+    return sorted(out, key=lambda b: -b["p"])
 
 
 # Parlays recomendados (estilo SGP de Linemate). Mismo partido: la prob. conjunta sale de contar en
@@ -193,7 +250,7 @@ PARLAY_LEG_P = 0.55     # prob. mínima de cada pata
 PARLAY_MIN_DEC = 2.0    # cuota combinada mínima para que valga la pena como parlay
 PARLAY_POOL = 14        # patas candidatas por partido (las más probables)
 PARLAY_P_PLAY = 0.9     # jugadores en duda (prob. de jugar menor) no entran en parlays
-LEG_KEYS = ("kind", "label", "player", "team", "line", "stat", "p", "dec", "ev")
+LEG_KEYS = ("kind", "label", "player", "team", "line", "stat", "side", "p", "dec", "ev")
 
 
 def leg_hits(b, g, s):
@@ -210,7 +267,7 @@ def leg_hits(b, g, s):
         return (tot >= b["line"] if b["label"].startswith("Over") else tot <= b["line"]), ok
     d = s["players"][b["player"]]["draws"]
     x = d[b["stat"]]
-    return (x >= b["line"]) if " Over " in b["label"] else (x <= b["line"]), d["min"] > 0
+    return (x >= b["line"]) if is_over(b) else (x <= b["line"]), d["min"] > 0
 
 
 def leg_group(b):  # patas que no se combinan entre sí: ganador/hándicap, total, y cada jugador
@@ -567,6 +624,7 @@ def run_game(path, n):
                 summary=summ, bets=bets, matchup_view=mv, h2h=h2h_view(g, summ["players"]), cup=cup_view(g),
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
+    r["model_picks"] = model_picks(cfg, s)
     r["rotation"] = rotation_view(cfg, summ)
     r["parlays"], r["_legs"] = sgp(r, g, s)
     return r
@@ -592,6 +650,9 @@ def attach_result(r, res):
     for p in r["summary"]["players"]:
         al = actual_line(res["players"], p["name"])
         p["actual"] = al if al and al["min"] > 0 else None
+    for b in r.get("model_picks", []):
+        x = settle(b, g, res)
+        b["result"] = "push" if x is None else ("won" if x else "lost")
     for pl in r.get("parlays", []):
         pl["result"] = settle_parlay(pl, {r["id"]: dict(game=g, res=res)})
     return r
@@ -605,6 +666,7 @@ def index_entry(r):
              records=r["records"], proj=sm["proj"], win_prob=sm["win_prob"],
              proj_total=sm["proj_total"], used_db=r["used_db"],
              n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []),
+             model_picks=r.get("model_picks", []),
              all_bets=[{k: v for k, v in b.items() if k not in ("books", "fair")} for b in r["bets"]])
     if "result" in r:
         e["result"] = dict(r["result"], picks_won=sum(b["result"] == "won" for b in vb),
