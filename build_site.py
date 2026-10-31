@@ -572,10 +572,22 @@ def index_entry(r):
     return e
 
 
+# Las tres actualizaciones diarias (--stage): "results" = madrugada, resultados reales de la jornada (partidos,
+# picks, SGP y parlays liquidados); "morning" = mañana, análisis y picks de la jornada con sus cuotas; "pregame" =
+# 30-60 min antes del primer partido, re-simulación con bajas de última hora. --for <fecha> = jornada a la que
+# corresponde (por defecto la fecha más reciente de los partidos procesados).
+STAGES = ("results", "morning", "pregame")
+
+
 def main():
-    args = [x for x in sys.argv[1:] if not x.startswith("--")]
-    n = int(sys.argv[sys.argv.index("--sims") + 1]) if "--sims" in sys.argv else 20000
-    args = [x for x in args if x != str(n)]
+    argv = sys.argv[1:]
+    opt = lambda k: argv[argv.index(k) + 1] if k in argv and argv.index(k) + 1 < len(argv) else None
+    n = int(opt("--sims") or 20000)
+    stage, stage_for = opt("--stage"), opt("--for")
+    if stage and stage not in STAGES:
+        sys.exit(f"--stage debe ser uno de {', '.join(STAGES)}")
+    skip = {i + 1 for i, x in enumerate(argv) if x in ("--sims", "--stage", "--for")}
+    args = [x for i, x in enumerate(argv) if not x.startswith("--") and i not in skip]
     if not os.path.exists(os.path.join(HERE, "db", "rankings_latest.json")):
         subprocess.run([sys.executable, os.path.join(HERE, "db", "build_db.py")], check=False)
     paths = sorted(p for p in glob.glob(os.path.join(HERE, "games", "*.json")) if not p.endswith("_results.json"))
@@ -634,10 +646,20 @@ def main():
     history = []  # récord de los picks con valor por jornada (solo jornadas con resultados)
     for date in sorted({g["date"] for g in games if "result" in g}):
         rs = [g["result"] for g in games if g["date"] == date and "result" in g]
+        sg = [pl.get("result") for g in games if g["date"] == date for pl in g.get("parlays", [])]
+        cr = [pl.get("result") for pl in cross.get(date, [])]
         history.append(dict(date=date, games=len(rs), winners_ok=sum(x["winner_ok"] for x in rs),
                             picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
-                            units=round(sum(x["units"] for x in rs), 2)))
-    json.dump(dict(generated=datetime.now(timezone.utc).isoformat(timespec="minutes"), value_ev=VALUE_EV,
+                            units=round(sum(x["units"] for x in rs), 2),
+                            sgp_won=sg.count("won"), sgp_lost=sg.count("lost"),
+                            cross_won=cr.count("won"), cross_lost=cr.count("lost")))
+    now = datetime.now(timezone.utc).isoformat(timespec="minutes")
+    updates = index.get("updates", {})  # las tres actualizaciones diarias: {jornada: {etapa: hora UTC}}
+    if stage:
+        day = stage_for or max((os.path.basename(p)[:10] for p in paths), default=last)
+        updates.setdefault(day, {})[stage] = now
+    updates = {d: updates[d] for d in sorted(updates)[-14:]}
+    json.dump(dict(generated=now, value_ev=VALUE_EV, last_stage=stage or index.get("last_stage"), updates=updates,
                    history=history, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
