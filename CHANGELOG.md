@@ -20,6 +20,17 @@ Pedido de Nicolas: no había picks de doble-doble, triple-doble ni tiros de camp
 - Web: categoría "Doble y triple-doble" en los picks; en "Tiros" y "Doble y triple-doble" (inicio, "Ver todo" y
   cada partido) aparece la tabla "Picks del modelo sin cuota de casa"; la tabla de props trae DD y TD en %.
 
+## Web — 2026-10-31: etiquetas de rookies y jugadores sin temporada previa
+Pedido de Nicolas (casos Dybantsa: Under 4.5 rebotes con 1 partido NBA, y Kyrie: Under 26.5 PRA sin 2025-26).
+
+- `players/<temporada>.json`: novatos (lista de basketball-reference) y veteranos que no jugaron la temporada anterior
+  (`missed_prior`, con el motivo). `build_site.player_flags` además marca "sin datos previos" a quien no esté en
+  `raw/<fecha>/prior.csv` (el modelo solo usa sus partidos de esta temporada).
+- La etiqueta (Rookie / Sin 2025-26 / Sin datos previos) sale junto al nombre en las props del partido, en las
+  tablas de picks, en las patas de los parlays y en la calculadora, con el aviso de que sus predicciones varían más.
+  Pasa el cursor o toca la etiqueta para ver el detalle. Se aplica también a las jornadas ya jugadas sin re-simular.
+- Solo informa: el modelo no cambia sus probabilidades por la etiqueta.
+
 ## Web — 2026-10-31: tres actualizaciones diarias
 Pedido de Nicolas: resultados de madrugada, análisis con cuotas por la mañana y revisión de bajas antes del primer
 partido. `build_site.py --stage results|morning|pregame [--for fecha]` registra cada actualización en `index.json`

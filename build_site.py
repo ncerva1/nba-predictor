@@ -35,7 +35,8 @@ import numpy as np
 
 from db_link import PT, _positions
 from evaluate import is_over
-from model import BINARY, american_to_prob, current_h2h_games, load_game, prob_to_american, simulate, summarize
+from model import (BINARY, american_to_prob, current_h2h_games, load_game, prior_season, prob_to_american, season_of,
+                   simulate, summarize)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "docs", "data")
@@ -551,6 +552,47 @@ def cup_summary():
     return C and dict(seasons=C["seasons"], pooled=C["pooled"], model_total_adj=C.get("model_total_adj", 0.0))
 
 
+def player_flags(date, cfg_path):
+    """Etiquetas de jugadores con poca historia NBA (más varianza): {nombre: {t, note}}.
+    t = "rookie" (players/<temporada>.json), "lesion" (no jugó la temporada pasada, misma lista) o
+    "sin_datos" (no está en raw/<fecha>/prior.csv: el modelo solo usa sus partidos de esta temporada)."""
+    meta_p = os.path.join(HERE, "players", f"{season_of(date)}.json")
+    meta = json.load(open(meta_p)) if os.path.exists(meta_p) else {}
+    rook = {_key(n) for n in meta.get("rookies", [])}
+    miss = {_key(n): why for n, why in meta.get("missed_prior", {}).items()}
+    prior_p = os.path.join(HERE, "raw", date, "prior.csv")
+    prior = None
+    if os.path.exists(prior_p):
+        import csv
+        prior = {_key(r["Player"]) for r in csv.DictReader(open(prior_p, encoding="utf-8"))}
+    cfg = json.load(open(cfg_path)) if os.path.exists(cfg_path) else {}
+    ps = season_of(date)
+    out = {}
+    for p in cfg.get("players", []):
+        k, g = _key(p["name"]), p.get("g_cur", 0)
+        games = f"{g} partido{'s' if g != 1 else ''} esta temporada"
+        if k in rook:
+            out[p["name"]] = dict(t="rookie", note=f"Rookie {ps}: sin temporada NBA previa, {games}")
+        elif k in miss:
+            out[p["name"]] = dict(t="lesion", note=f"{miss[k][0].upper() + miss[k][1:]}; {games}")
+        elif prior is not None and k not in prior:
+            out[p["name"]] = dict(t="sin_datos", note=f"Sin datos {prior_season(date)} en el modelo; {games}")
+    return out
+
+
+def apply_flags(r, flags):
+    """Pone la etiqueta en los jugadores del resumen, sus props y las patas de los parlays."""
+    for p in r["summary"]["players"]:
+        p.pop("flag", None)
+        if p["name"] in flags:
+            p["flag"] = flags[p["name"]]
+    for b in r["bets"] + [l for pl in r.get("parlays", []) for l in pl["legs"]]:
+        b.pop("flag", None)
+        if b.get("player") in flags:
+            b["flag"] = flags[b["player"]]
+    return r
+
+
 def game_id(path):
     return os.path.basename(path)[:-5].replace("@", "-at-").replace("_", "-")
 
@@ -661,6 +703,7 @@ def main():
     keep = {g["id"]: g for g in index["games"]}
     cross = index.get("parlays", {})  # parlays entre partidos por jornada
     legs_by_date = {}
+    all_flags = {}  # etiquetas de los jugadores de esta pasada (para las patas de los parlays entre partidos)
     for p in paths:
         gid, date = game_id(p), os.path.basename(p)[:10]
         res = load_results(date).get(os.path.basename(p)[11:-5])
@@ -683,6 +726,9 @@ def main():
         except Exception as e:  # un JSON roto no debe tumbar toda la jornada
             print(f"ERROR {os.path.basename(p)}: {e}")
             continue
+        flags = player_flags(date, p)
+        apply_flags(r, flags)
+        all_flags.update(flags)
         if "_legs" in r:
             legs_by_date.setdefault(date, []).append(r.pop("_legs"))
         json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
@@ -699,6 +745,10 @@ def main():
         # solo se rehacen si se simularon todos los partidos aún sin jugar de esa jornada
         if len(lbg) == sum(g["date"] == date and "result" not in g for g in games):
             cross[date] = cross_parlays(lbg)
+            for pl in cross[date]:
+                for l in pl["legs"]:
+                    if l.get("player") in all_flags:
+                        l["flag"] = all_flags[l["player"]]
     for date, pls in cross.items():
         res = load_results(date)
         rs = {g["id"]: dict(game=dict(home=g["home"], away=g["away"]), res=res[f"{g['away']}@{g['home']}"])
