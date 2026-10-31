@@ -1,5 +1,14 @@
 # Cambios del modelo
 
+## Web — 2026-10-31: "Si no juega…" (compañeros sin un jugador)
+Pedido de Nicolas (idea de ludocomparador). `without.py` añade a cada partido `without`: por equipo, a cada jugador con
+20+ minutos proyectados (o en duda con 12+) se le repite la simulación fuera (p_play = 0, misma semilla y mismas
+simulaciones, así la diferencia es solo su baja) y se guarda media y P(over) de cada compañero sobre la misma línea
+(la de la casa o la justa con él). Al ataque de su equipo se le resta el 30% de los puntos que aporta por encima de
+un suplente (LOST_SHARE). También los partidos reales de esta temporada (results/) sin él frente a con él, y los de
+los OUT de hoy (game.out). No cambia ningún pick. Los partidos ya jugados lo reciben al volver a correr
+`build_site.py` para su fecha (se re-simulan solo para esta sección).
+
 ## Web — 2026-10-31: etiquetas de rookies y jugadores sin temporada previa
 Pedido de Nicolas (casos Dybantsa: Under 4.5 rebotes con 1 partido NBA, y Kyrie: Under 26.5 PRA sin 2025-26).
 
