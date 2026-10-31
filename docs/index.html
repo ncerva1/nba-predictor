@@ -380,18 +380,19 @@ tr.detail td { background: var(--bg) }
 .pg-tools button { font: 500 12px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
 /* Mi combinada: botón "+" en cada pick y panel flotante (minimizado = píldora abajo a la izquierda) */
 /* Tablas de picks y player props: en móvil filas compactas que se deslizan a los lados (no se apilan) */
+/* que una tabla ancha nunca ensanche la página: los hijos de las rejillas pueden encogerse y la tabla se desliza dentro */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
+.inner > *, .section > *, .pgroup, .pg-body, .tbl-wrap { min-width: 0; max-width: 100% }
 .swipe-hint { display: none }
 @media (max-width: 640px) {
   .swipe-hint { display: block; position: sticky; left: 0; margin: -4px 0 6px; font: 500 10.5px var(--mono); color: var(--muted); letter-spacing: .03em }
   .tbl-wrap { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain }
   .panel.tbl-wrap:has(> table.swipe) { padding: 12px 0 12px 12px }
-  table.swipe { width: max-content; min-width: 100%; font-size: 13px }
-  table.swipe th { padding: 6px 8px; font-size: 10px }
-  table.swipe td { padding: 7px 8px; white-space: nowrap }
+  table.swipe { width: max-content; min-width: 100% }
+  table.swipe td { white-space: nowrap }
   table.swipe .pk { position: sticky; left: 0; z-index: 1; background: var(--surface); box-shadow: 1px 0 0 var(--line);
     white-space: normal; min-width: 128px; max-width: 46vw; text-align: left }
-  table.swipe td.pk { font-size: 13px; line-height: 1.25 }
-  table.swipe td.pk .muted { display: block; font-size: 11px }
+  table.swipe td.pk .muted { display: block }
   table.swipe td.pk .pick-h { gap: 6px }
   table.swipe td.r-sm { white-space: normal; min-width: 150px }
   table.swipe tr.link:hover td.pk { background: var(--surface) }
@@ -688,7 +689,7 @@ function updatesStrip() {
 // récord de parlays: [ganados, perdidos] (las nulas no cuentan)
 const plRec = pls => [pls.filter(p => p.result === "won").length, pls.filter(p => p.result === "lost").length];
 // En móvil, las tablas de picks y player props no se apilan: se deslizan a los lados con la 1.ª columna fija
-const SWIPE_HINT = `<div class="swipe-hint">Desliza la tabla a los lados para ver más columnas →</div>`;
+const SWIPE_HINT = `<div class="swipe-hint">Desliza la tabla → para ver más</div>`;
 const resPill = r => r ? `<span class="res ${r}">${RES[r]}</span>` : "";
 function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
