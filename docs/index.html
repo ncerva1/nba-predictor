@@ -372,6 +372,65 @@ tr.detail td { background: var(--bg) }
 .pgroup .pg-go { display: inline-block; margin-top: 10px; font: 500 13px var(--mono); text-decoration: none }
 .pg-tools { display: flex; justify-content: flex-end; margin-bottom: -2px }
 .pg-tools button { font: 500 12px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
+/* Mi combinada: botón "+" en cada pick y panel flotante (minimizado = píldora abajo a la izquierda) */
+.pick-h { display: flex; align-items: flex-start; gap: 10px; justify-content: space-between }
+.pick-h > div { min-width: 0 }
+.addc { flex: none; display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--accent); background: var(--surface);
+  color: var(--accent); font: 600 17px/1 var(--body); cursor: pointer; padding: 0; transition: background .15s, color .15s }
+.addc:hover { background: var(--accent-soft) }
+.addc[aria-pressed="true"] { background: var(--accent); color: var(--on-accent) }
+.addc:focus-visible, .combo-pill:focus-visible, .cb-x:focus-visible, .cb-min:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.empty .addc { width: 22px; height: 22px; font-size: 14px; vertical-align: middle; cursor: default }
+.pl-add { justify-self: start; font-size: 13px; padding: 6px 14px }
+.calc-add { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.calc-add .btn { font-size: 13px; padding: 6px 14px }
+.combo { position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 70 }
+.combo[hidden] { display: none }
+.combo-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--accent); border-radius: 999px; padding: 8px 10px 8px 16px; cursor: pointer;
+  background: var(--surface); color: var(--ink); font: 600 14px var(--body); box-shadow: 0 4px 14px rgba(0,0,0,.25) }
+.combo-pill .n { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: 600 13px var(--mono) }
+.combo-pill .n.won { background: var(--good) } .combo-pill .n.lost { background: var(--bad) }
+.combo-pill .d { font: 600 13px var(--mono); color: var(--muted) }
+.combo-pill.bump { animation: cbump .45s ease }
+@keyframes cbump { 40% { transform: scale(1.08) } }
+@media (prefers-reduced-motion: reduce) { .combo-pill.bump { animation: none } }
+.combo.open .combo-pill { display: none }
+.combo-panel { width: min(420px, calc(100vw - 32px)); max-height: min(78dvh, 720px); display: flex; flex-direction: column; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.35); overflow: hidden }
+.combo-panel[hidden] { display: none }
+.cb-head { flex: none; display: flex; align-items: center; gap: 12px; padding: 12px 14px 10px; border-bottom: 1px solid var(--line) }
+.cb-head h2 { font-size: 22px; flex: 1 }
+.cb-min { font: 500 13px var(--mono); color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer }
+.cb-msg { margin: 0; padding: 8px 14px; background: var(--bad-soft); color: var(--bad); font-size: 13px }
+.cb-body { overflow-y: auto; padding: 4px 14px 8px; overscroll-behavior: contain; flex: 1 1 auto; min-height: 0 }
+.cb-body .empty { padding: 18px 0; font-size: 14px }
+.cb-legs { list-style: none; margin: 0; padding: 0 }
+.cb-legs li { display: grid; grid-template-columns: 1fr auto 28px; gap: 4px 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line) }
+.cb-legs li:last-child { border-bottom: 0 }
+.cb-l { min-width: 0 } .cb-l .lg { font-weight: 500; font-size: 14px }
+.cb-r { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; font-size: 12px; white-space: nowrap }
+.cb-x { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--muted); font: 400 18px/1 var(--body); cursor: pointer; padding: 0 }
+.cb-x:hover { color: var(--bad); border-color: var(--bad) }
+.cb-note { margin: 8px 0 0; font-size: 12.5px; color: var(--muted) }
+.cb-note.warn { color: var(--ink); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px }
+.cb-res { margin: 8px 0 2px; font: 600 14px var(--body); padding: 8px 10px; border-radius: 8px; background: var(--accent-soft) }
+.cb-res.won { background: var(--good-soft); color: var(--good) } .cb-res.lost { background: var(--bad-soft); color: var(--bad) }
+.cb-foot { flex: none; display: grid; gap: 8px; padding: 10px 14px 14px; border-top: 1px solid var(--line) }
+.cb-foot[hidden] { display: none }
+.cb-foot .pl-stats { grid-template-columns: repeat(4, minmax(0, 1fr)) }
+.cb-stake { display: flex; align-items: center; gap: 10px; font-size: 14px }
+.cb-stake input { font: inherit; flex: 1; min-width: 0; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: inherit }
+.cb-pay { margin: 0; font-size: 13px }
+.cb-act { display: flex; align-items: center; gap: 12px; font-size: 11.5px }
+.cb-act .btn { flex: none; font-size: 13px; padding: 5px 14px }
+@media (max-width: 640px) {
+  .combo { left: 12px; bottom: calc(12px + env(safe-area-inset-bottom)) }
+  .combo.open { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)) }
+  .combo-panel { width: 100%; max-height: 82dvh }
+  .combo-pill { padding: 7px 8px 7px 14px; font-size: 13px }
+  body.has-combo .to-top #to-top-t { display: none }
+  .cb-foot .pl-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
 /* pestaña NBA Cup */
 .cup-hero { position: relative; overflow: hidden; border-radius: 14px; padding: 26px 22px; color: #faf6ec;
   background: radial-gradient(120% 140% at 100% 0%, #3a2e14 0%, #15120b 45%, #050504 100%); border: 1px solid #3a321f; display: grid; gap: 14px }
@@ -475,6 +534,20 @@ body:has(dialog.guide[open]) { overflow: hidden }
 </nav>
 <main class="wrap gutter"><div class="inner" id="app"><p class="muted">Cargando partidos…</p></div></main>
 <button type="button" class="to-top" id="to-top" hidden><span aria-hidden="true">↑</span> <span id="to-top-t">Arriba</span></button>
+<div class="combo" id="combo" hidden>
+  <button type="button" class="combo-pill" id="combo-pill" aria-expanded="false" aria-controls="combo-panel"><span class="t">Mi combinada</span> <span class="n" id="cp-n">0</span> <span class="d" id="cp-d"></span></button>
+  <section class="combo-panel" id="combo-panel" hidden aria-labelledby="cb-title">
+    <div class="cb-head"><h2 id="cb-title">Mi combinada</h2><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada">Minimizar ▾</button></div>
+    <p class="cb-msg" id="cb-msg" role="status" hidden></p>
+    <div class="cb-body" id="cb-body"></div>
+    <div class="cb-foot" id="cb-foot">
+      <div class="pl-stats" id="cb-stats"></div>
+      <label class="cb-stake">Apuesta <input id="cb-stake" type="number" min="0" step="1000" inputmode="decimal" placeholder="ej. 10000"></label>
+      <p class="cb-pay muted" id="cb-pay"></p>
+      <div class="cb-act"><button type="button" class="btn ghost" id="cb-clear">Vaciar</button><span class="muted">Cuota aprox. = producto de las cuotas de cada pata; compárala con la que te dé tu casa.</span></div>
+    </div>
+  </section>
+</div>
 <dialog class="guide" id="guide" aria-labelledby="g-title">
   <div class="g-head"><h2 id="g-title">Cómo funciona</h2><button type="button" class="g-close" id="g-close" aria-label="Cerrar guía">×</button></div>
   <nav class="g-toc" id="g-toc" aria-label="Temas de la guía"></nav>
@@ -574,7 +647,7 @@ function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
   return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head"><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</td>
+    <td class="head"><div class="pick-h"><div><div>${esc(b.label)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
     <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
@@ -928,6 +1001,7 @@ function parlayCard(pl, thr, withGame) {
       <div class="cell"><span class="k">EV</span><span class="v">${evPill(pl.ev, thr)}</span></div>
     </div>
     <p class="pl-corr">${corr}</p>
+    ${plAddBtn(pl)}
   </article>`;
 }
 const plHowto = `<details class="howto"><summary>¿Cómo se arman los parlays?</summary><dl>
@@ -1173,6 +1247,7 @@ async function renderGame(id) {
   const sc = Object.entries(s.scenarios);
   const players = [...s.players];
   const nVal = d.bets.filter(b => b.ev >= thr).length;
+  CUR_GAME = { id, game: `${g.away} @ ${g.home}` };
   // en el celular se muestra un solo equipo a la vez para no tener la lista entera desplegada
   let stat = "all", team = matchMedia("(max-width: 640px)").matches ? a : "all", sortK = "min", sortAsc = false;
   const stats = Object.keys(STAT_LABEL).filter(k => players.some(p => p[k]));
@@ -1239,6 +1314,7 @@ async function renderGame(id) {
       <label>Cuota over<input id="c-o" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
       <label>Cuota under<input id="c-u" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
       <div class="calc-out" id="c-out" aria-live="polite"></div>
+      <div class="calc-add" id="c-add"></div>
     </div>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
@@ -1323,17 +1399,21 @@ function bindCalc(players, thr) {
   const fill = () => { const st = byName[el("c-p").value]?.[el("c-s").value]; if (st) el("c-l").value = st.line; };
   const out = () => {
     const st = byName[el("c-p").value]?.[el("c-s").value], L = parseFloat(el("c-l").value);
-    if (!st || isNaN(L)) { el("c-out").innerHTML = `<span class="muted">Este jugador no tiene proyección de esa estadística.</span>`; return; }
+    if (!st || isNaN(L)) { el("c-out").innerHTML = `<span class="muted">Este jugador no tiene proyección de esa estadística.</span>`; el("c-add").innerHTML = ""; return; }
     const kO = Math.floor(L) + 1, o = ladderP(st, kO), isInt = Number.isInteger(L);
     const pu = isInt ? ladderP(st, L) : o;  // línea entera: el empate (push) devuelve la apuesta
     const pO = o.p ?? (o.gt != null ? Math.max(o.gt, .97) : o.lt != null ? Math.min(o.lt, .03) : null);
-    if (pO == null) { el("c-out").textContent = "Sin datos para esa línea."; return; }
+    if (pO == null) { el("c-out").textContent = "Sin datos para esa línea."; el("c-add").innerHTML = ""; return; }
     const pPush = isInt && pu.p != null ? Math.max(pu.p - pO, 0) : 0, pU = Math.max(1 - pO - pPush, 0);
     const approx = o.p == null ? " (aprox.: línea fuera del rango simulado)" : "";
     const side = (lab, p, q) => {
       const c = parseFloat(q), ev = c > 1 ? p * c + pPush - 1 : null;
       return `<div><b>${lab} ${L}</b>: ${pct(p, 1)} · cuota justa ${(1 / Math.max(p, 1e-3)).toFixed(2)}${ev == null ? "" : ` · EV ${evPill(ev, thr)}`}</div>`;
     };
+    const nm = el("c-p").value, sl = STAT_LABEL[el("c-s").value], legs = [["Over", pO, el("c-o").value], ["Under", pU, el("c-u").value]]
+      .filter(([, , q]) => parseFloat(q) > 1).map(([side, p, q]) => regLeg({ kind: "prop", label: `${nm} ${side} ${L} ${sl}`, player: nm, stat: el("c-s").value, line: L,
+        p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true }, CUR_GAME.id, CUR_GAME.game));
+    el("c-add").innerHTML = legs.length ? legs.map(k => addBtn(k, true)).join("") : `<span class="muted">Escribe la cuota over o under de tu casa para poder agregarla a tu combinada.</span>`;
     el("c-out").innerHTML = `<div class="muted">Media ${st.mean} · rango ${st.p10}–${st.p90}${pPush ? ` · empate ${pct(pPush, 1)}` : ""}${approx}</div>`
       + side("Over", pO, el("c-o").value) + side("Under", pU, el("c-u").value);
   };
@@ -1381,6 +1461,11 @@ const GUIDE = [
     <dl><dt>Entre partidos</dt><dd>Patas de partidos distintos. Su probabilidad es la multiplicación de la de cada pata.</dd>
     <dt>Mismo partido</dt><dd>Patas de un mismo partido (SGP). Se cuenta en cuántas simulaciones salen todas a la vez, porque unas dependen de otras: si un equipo anota mucho, suben sus jugadores y el over.</dd></dl>
     <p>Se eligen las combinaciones con más probabilidad de acertar todas, con cuota de al menos 2.00 y EV positivo. Aun así, un parlay acierta menos veces que cada pata por separado.</p>`],
+  ["combinada", "Mi combinada", "Arma tu combinada", () => `<p>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (en el inicio, en "Ver todos" o en la página de un partido), <b>Agregar a mi combinada</b> en un parlay recomendado, o los botones Over/Under de <b>Calcula tu apuesta</b> con la cuota de tu casa.</p>
+    <p>Los picks se juntan en <b>Mi combinada</b>, abajo a la izquierda. Puedes minimizarla y seguir navegando; al abrirla ves cada pata, la probabilidad de acertar todas, la cuota aproximada (producto de las cuotas), la cuota justa, el EV y el pago según lo que apuestes. Cuando terminan los partidos, cada pata y la combinada se marcan como ganadas o perdidas.</p>
+    <dl><dt>Patas de partidos distintos</dt><dd>La probabilidad es la multiplicación de la de cada pata.</dd>
+    <dt>Patas del mismo partido</dt><dd>Si coinciden con un parlay recomendado se usa la probabilidad contada en las simulaciones. Si no, se multiplican y se marca con * porque es aproximada: en un mismo partido unas patas dependen de otras.</dd></dl>
+    <p>Se guarda solo en este navegador.</p>`],
   ["partido", "Un partido", "La página de un partido", () => `<dl>
     <dt>Marcador proyectado</dt><dd>El marcador medio de todas las simulaciones.</dd>
     <dt>Victoria</dt><dd>Probabilidad de que gane cada equipo, con su cuota justa y la de la casa.</dd>
@@ -1475,6 +1560,158 @@ function route() {
   if (game) renderGame(id); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
 }
 
+// Mi combinada: el usuario junta picks de cualquier parte de la página (botón "+" de cada pick, "Agregar a mi combinada"
+// de cada parlay, Over/Under de la calculadora) en un panel flotante que se puede minimizar. Se guarda en este navegador
+// (localStorage "nbap-combo"). Prob. = producto por partido; las patas de un mismo partido usan la prob. contada en las
+// simulaciones solo si coinciden con un parlay recomendado (SGP), si no se multiplican y se avisa que es aproximada.
+let CUR_GAME = { id: "", game: "" };
+const LEGREG = {}, PLREG = [];
+const ls = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } };
+let MYC = (() => { try { const x = JSON.parse(ls("nbap-combo") || "[]"); return Array.isArray(x) ? x.filter(l => l && l.k && l.p > 0 && l.dec > 1) : []; } catch (e) { return []; } })();
+const COMBO_MAX = 12;
+const inCombo = k => MYC.some(l => l.k === k);
+function regLeg(b, gid, game) {
+  const k = gid + "|" + b.label;
+  LEGREG[k] = { k, gid, game, label: b.label, kind: b.kind, player: b.player || null, stat: b.stat || null, line: b.line ?? null,
+    p: b.p, dec: +(b.dec || +dec(b.odds)).toFixed(2), custom: !!b.custom };
+  return k;
+}
+function addBtn(k, wide) {
+  const on = inCombo(k), lab = LEGREG[k] ? LEGREG[k].label : "";
+  return wide ? `<button type="button" class="btn ${on ? "" : "ghost "}addc-w" data-addc="${esc(k)}" aria-pressed="${on}">${on ? "✓ En tu combinada" : `+ ${esc(lab.includes(" Over ") ? "Over" : "Under")} a mi combinada`}</button>`
+    : `<button type="button" class="addc" data-addc="${esc(k)}" aria-pressed="${on}" aria-label="${on ? "Quitar de" : "Agregar a"} mi combinada: ${esc(lab)}" title="${on ? "Quitar de mi combinada" : "Agregar a mi combinada"}">${on ? "✓" : "+"}</button>`;
+}
+function plAddBtn(pl) {
+  const ks = pl.legs.map(l => regLeg(l, l.gid, l.game)), i = PLREG.push(ks) - 1;
+  return `<button type="button" class="btn ghost pl-add" data-addpl="${i}">+ Agregar a mi combinada</button>`;
+}
+function saveCombo() { ls("nbap-combo", JSON.stringify(MYC)); }
+function syncAddBtns() {
+  document.querySelectorAll("[data-addc]").forEach(b => {
+    const k = b.dataset.addc, on = inCombo(k), lab = LEGREG[k] ? LEGREG[k].label : "";
+    b.setAttribute("aria-pressed", on);
+    if (b.classList.contains("addc-w")) { b.textContent = on ? "✓ En tu combinada" : `+ ${lab.includes(" Over ") ? "Over" : "Under"} a mi combinada`; b.classList.toggle("ghost", !on); }
+    else { b.textContent = on ? "✓" : "+"; b.setAttribute("aria-label", `${on ? "Quitar de" : "Agregar a"} mi combinada: ${lab}`); b.title = on ? "Quitar de mi combinada" : "Agregar a mi combinada"; }
+  });
+  document.querySelectorAll("[data-addpl]").forEach(b => {
+    const all = PLREG[b.dataset.addpl].every(inCombo);
+    b.textContent = all ? "✓ En tu combinada" : "+ Agregar a mi combinada"; b.classList.toggle("ghost", !all);
+  });
+}
+function comboChanged(flash) {
+  saveCombo(); syncAddBtns(); drawCombo();
+  if (flash) { const p = $("#combo-pill"); p.classList.remove("bump"); void p.offsetWidth; p.classList.add("bump"); }
+}
+function toggleLeg(k) {
+  const i = MYC.findIndex(l => l.k === k);
+  if (i >= 0) { MYC.splice(i, 1); comboChanged(); return; }
+  if (MYC.length >= COMBO_MAX) { comboMsg(`Máximo ${COMBO_MAX} patas.`); return; }
+  MYC.push({ ...LEGREG[k], added: Date.now() }); comboChanged(true);
+}
+function addParlay(ks) {
+  if (ks.every(inCombo)) { MYC = MYC.filter(l => !ks.includes(l.k)); comboChanged(); return; }
+  const add = ks.filter(k => !inCombo(k));
+  if (MYC.length + add.length > COMBO_MAX) { comboMsg(`Máximo ${COMBO_MAX} patas.`); return; }
+  add.forEach(k => MYC.push({ ...LEGREG[k], added: Date.now() })); comboChanged(true);
+}
+let comboMsgT;
+function comboMsg(t) { const m = $("#cb-msg"); m.textContent = t; m.hidden = false; clearTimeout(comboMsgT); comboMsgT = setTimeout(() => { m.hidden = true; }, 3500); openCombo(true); }
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-addc], [data-addpl]");
+  if (!a) return;
+  e.preventDefault(); e.stopPropagation();
+  if (a.dataset.addc) toggleLeg(a.dataset.addc); else addParlay(PLREG[a.dataset.addpl]);
+}, true);
+
+// resultado de una pata: el de la apuesta publicada (index o datos del partido) o, si es una línea propia, el box score
+const fetching = new Set();
+function legResult(l) {
+  const g = INDEX && INDEX.games.find(x => x.id === l.gid), d = cache[l.gid];
+  if (!g || !g.result) return null;
+  const pools = [g.all_bets, g.value_bets, g.top_bets, d && d.bets, ...(g.parlays || []).map(p => p.legs), ...((d && d.parlays) || []).map(p => p.legs),
+    ...((INDEX.parlays || {})[g.date] || []).map(p => p.legs)];
+  for (const arr of pools) { const b = (arr || []).find(x => x.label === l.label && (!x.gid || x.gid === l.gid)); if (b && b.result) return b.result; }
+  if (!d) { if (!fetching.has(l.gid)) { fetching.add(l.gid); getJSON(`data/${l.gid}.json`).then(x => { cache[l.gid] = x; drawCombo(); }).catch(() => {}); } return null; }
+  const pl = l.player && d.summary.players.find(p => p.name === l.player), a = pl && pl.actual ? pl.actual[l.stat] : undefined;
+  if (a === undefined || l.line == null) return null;
+  return a === l.line ? "push" : (a > l.line) === l.label.includes(" Over ") ? "won" : "lost";
+}
+function sgpMatch(gid, labels) {
+  const g = INDEX.games.find(x => x.id === gid), d = cache[gid], key = [...labels].sort().join("|");
+  return ((d && d.parlays) || (g && g.parlays) || []).find(pl => pl.legs.map(x => x.label).sort().join("|") === key);
+}
+function comboCalc() {
+  const groups = {};
+  MYC.forEach(l => (groups[l.gid] ||= []).push(l));
+  let p = 1, decT = 1, approx = [], exact = [], clash = [];
+  const res = MYC.map(legResult);
+  Object.values(groups).forEach(ls_ => {
+    const live = ls_.filter(l => res[MYC.indexOf(l)] !== "push");
+    live.forEach(l => { decT *= l.dec; });
+    if (live.length > 1) {
+      const m = sgpMatch(live[0].gid, live.map(l => l.label));
+      if (m) { p *= m.p; exact.push(live[0].game); } else { p *= live.reduce((t, l) => t * l.p, 1); approx.push(live[0].game); }
+    } else if (live.length) p *= live[0].p;
+    for (let i = 0; i < ls_.length; i++) for (let j = i + 1; j < ls_.length; j++) {
+      const a = ls_[i], b = ls_[j];
+      const side = x => x.kind === "spread" ? "ml" : x.kind;   // ganador y hándicap del mismo partido tampoco se combinan
+      if (a.player ? a.player === b.player && a.stat === b.stat : !b.player && side(a) === side(b)) clash.push(`${a.label} / ${b.label}`);
+    }
+  });
+  const st = res.some(r => r === "lost") ? "lost" : res.length && res.every(r => r === "push") ? "push" : res.length && res.every(r => r === "won" || r === "push") ? "won" : null;
+  return { p, dec: decT, ev: p * decT - 1, approx, exact, clash, res, st, done: res.filter(r => r).length };
+}
+const fmtMoney = x => x.toLocaleString("es-CO", { maximumFractionDigits: x < 100 ? 2 : 0 });
+function drawCombo() {
+  const box = $("#combo"), n = MYC.length;
+  box.hidden = !n && !box.classList.contains("open");
+  document.body.classList.toggle("has-combo", !!n);
+  $("#cp-n").textContent = n;
+  if (!n) {
+    $("#cp-d").textContent = "";
+    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí.</div>`;
+    $("#cb-foot").hidden = true;
+    return;
+  }
+  const c = comboCalc(), thr = INDEX ? INDEX.value_ev : .03;
+  $("#cp-d").textContent = "@ " + c.dec.toFixed(2);
+  $("#cp-n").classList.toggle("won", c.st === "won"); $("#cp-n").classList.toggle("lost", c.st === "lost");
+  const stake = parseFloat(ls("nbap-combo-stake")) || 0;
+  $("#cb-body").innerHTML = `
+    ${c.st ? `<div class="cb-res ${c.st}">${c.st === "won" ? "Combinada ganada ✓" : c.st === "lost" ? "Combinada perdida ✗" : "Combinada nula (todas las patas anuladas)"}</div>`
+      : c.done ? `<div class="cb-res">${c.res.filter(r => r === "won").length} de ${n} patas acertadas · faltan ${n - c.done} por jugarse</div>` : ""}
+    <ol class="cb-legs">${MYC.map((l, i) => `<li>
+      <div class="cb-l"><div class="lg">${esc(l.label)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${esc(l.gid)}">${esc(l.game)}</a>${l.gid.slice(0, 10) !== DAY ? ` · ${esc(dayName(l.gid.slice(0, 10)))}` : ""}${l.custom ? " · tu cuota" : ""}</div></div>
+      <div class="cb-r"><span class="num">${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(c.res[i])}</div>
+      <button type="button" class="cb-x" data-rm="${i}" aria-label="Quitar ${esc(l.label)}">×</button></li>`).join("")}</ol>
+    ${n === 1 ? `<p class="cb-note">Agrega al menos otra pata para armar la combinada.</p>` : ""}
+    ${c.approx.length ? `<p class="cb-note warn">Patas del mismo partido (${c.approx.map(esc).join(", ")}): la probabilidad se calcula multiplicando, como si fueran independientes. En la realidad pueden ayudarse o estorbarse, y la casa suele pagar menos por un parlay del mismo partido: tómala como aproximada.</p>` : ""}
+    ${c.exact.length ? `<p class="cb-note">Las patas de ${c.exact.map(esc).join(", ")} coinciden con un parlay recomendado: se usa la probabilidad contada en las simulaciones, que ya tiene en cuenta cómo dependen unas de otras.</p>` : ""}
+    ${c.clash.length ? `<p class="cb-note warn">Ojo, estas patas se pisan entre sí y muchas casas no las dejan combinar: ${c.clash.map(esc).join("; ")}.</p>` : ""}`;
+  $("#cb-foot").hidden = false;
+  $("#cb-stats").innerHTML = `
+    <div class="cell main"><span class="k">Prob. modelo</span><span class="v">${pct(c.p)}${c.approx.length ? "*" : ""}</span></div>
+    <div class="cell"><span class="k">Cuota aprox.</span><span class="v">${c.dec.toFixed(2)}</span></div>
+    <div class="cell"><span class="k">Cuota justa</span><span class="v">${fairDec(c.p)}</span></div>
+    <div class="cell"><span class="k">EV</span><span class="v">${n > 1 ? evPill(c.ev, thr) : "—"}</span></div>`;
+  const si = $("#cb-stake"); if (document.activeElement !== si) si.value = stake || "";
+  $("#cb-pay").textContent = stake > 0 ? `Pago posible ${fmtMoney(stake * c.dec)} (ganancia ${fmtMoney(stake * (c.dec - 1))})` : "Escribe cuánto apostarías para ver el pago.";
+  document.querySelectorAll("#cb-body [data-rm]").forEach(b => b.addEventListener("click", () => { MYC.splice(+b.dataset.rm, 1); comboChanged(); }));
+  document.querySelectorAll("#cb-body a").forEach(a => a.addEventListener("click", () => { if (matchMedia("(max-width: 640px)").matches) openCombo(false); }));
+}
+function openCombo(on) {
+  const box = $("#combo");
+  box.classList.toggle("open", on); $("#combo-panel").hidden = !on;
+  $("#combo-pill").setAttribute("aria-expanded", on);
+  if (on) { box.hidden = false; drawCombo(); $("#cb-min").focus({ preventScroll: true }); } else { drawCombo(); if (!box.hidden) $("#combo-pill").focus({ preventScroll: true }); }
+}
+$("#combo-pill").addEventListener("click", () => openCombo(true));
+$("#cb-min").addEventListener("click", () => openCombo(false));
+$("#cb-clear").addEventListener("click", () => { if (!MYC.length || confirm("¿Vaciar tu combinada?")) { MYC = []; comboChanged(); openCombo(false); } });
+$("#cb-stake").addEventListener("input", e => { ls("nbap-combo-stake", e.target.value); drawCombo(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#combo").classList.contains("open") && !$("#guide").open) openCombo(false); });
+addEventListener("storage", e => { if (e.key === "nbap-combo") { try { MYC = JSON.parse(e.newValue || "[]"); } catch (x) { MYC = []; } syncAddBtns(); drawCombo(); } });
+
 // Botón flotante para volver arriba (al inicio del análisis en la página de un partido) tras bajar un poco
 // aparece al bajar media pantalla (en el celular unos 400 px); también con desplazamiento táctil e inercia
 const toTop = () => { $("#to-top").hidden = (scrollY || document.scrollingElement.scrollTop) < Math.min(600, innerHeight * 0.5); };
@@ -1510,6 +1747,7 @@ getJSON("data/index.json").then(d => {
   renderTicker(prev, todays);
   let rw; addEventListener("resize", () => { clearTimeout(rw); rw = setTimeout(() => { renderTicker(prev, todays); markTicker(location.hash.slice(1)); }, 250); });
   route();
+  drawCombo();
   window.addEventListener("hashchange", route);
 }).catch(e => { $("#app").innerHTML = `<p>No se pudo cargar <code>data/index.json</code>. Ejecuta <code>python build_site.py</code> para generarlo.</p>`; });
 </script>
