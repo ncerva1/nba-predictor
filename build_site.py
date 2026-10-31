@@ -37,6 +37,7 @@ from db_link import PT, _positions
 from evaluate import is_over
 from model import (BINARY, american_to_prob, current_h2h_games, load_game, prior_season, prob_to_american, season_of,
                    simulate, summarize)
+from without import without_view
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "docs", "data")
@@ -626,6 +627,7 @@ def run_game(path, n):
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
     r["model_picks"] = model_picks(cfg, s)
     r["rotation"] = rotation_view(cfg, summ)
+    r["without"] = without_view(cfg, s, n)  # "Sin un jugador": compañeros con / sin cada titular
     r["parlays"], r["_legs"] = sgp(r, g, s)
     return r
 
@@ -719,6 +721,9 @@ def main():
                     r["h2h"] = h2h_view(r["game"], r["summary"]["players"])
                 if "cup" not in r:
                     r["cup"] = cup_view(tag_cup(r["game"]))
+                if "without" not in r:  # partidos publicados antes de "Sin un jugador": misma simulación, sin cada uno
+                    cfg = load_game(p, r["used_db"])
+                    r["without"] = without_view(cfg, simulate(cfg, r["sims"]), r["sims"])
             else:
                 r = run_game(p, n)
                 if res:

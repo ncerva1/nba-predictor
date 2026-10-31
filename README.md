@@ -13,6 +13,8 @@ por partido las apuestas con mayor valor (probabilidad del modelo vs cuota).
   Añadir los cruces de cada jornada nueva antes de correr `build_site.py`.
   Los cruces de esta temporada salen solos de `results/` (modelo 1.3.3) y se muestran junto a los de la anterior,
   marcando los de Copa.
+- `without.py`: sección "Si no juega…" de cada partido (compañeros con / sin cada titular: simulación sin él y
+  partidos reales sin él); `build_site.py` la llama sola. Añade ~15 s por partido.
 - `cup/`: NBA Cup. `cup/<temporada>.json` lista los partidos de Copa por fecha y grupo: `build_site.py` marca esos
   partidos como de Copa (pestaña NBA Cup) aunque su JSON no lo diga; añadir cada noche de Copa nueva (martes/viernes de
   la fase de grupos, nba.com/games los etiqueta). `cup/history.json` (de `python cup/cup_stats.py` con `cup/raw/`):
