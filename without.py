@@ -20,7 +20,7 @@ import numpy as np
 from model import name_key, season_of, simulate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STATS = ("pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "fgm", "fga", "fg3a")
+STATS = ("pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "fgm", "fga", "fg3a", "dd")
 REAL = ("min", "pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "stocks", "tov",
         "fgm", "fga", "fg3a", "ftm", "fta")
 MIN_ABSENT, MIN_GTD, MAX_ABSENT = 20.0, 12.0, 7  # a quién se le simula la baja (minutos proyectados)
