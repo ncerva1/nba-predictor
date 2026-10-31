@@ -158,6 +158,7 @@ main .inner { display: grid; gap: 30px }
   .rot-wrap h3::after{content:"  1.º · 2.º · 3.º · 4.º cuarto";font:400 .72rem var(--body);color:var(--muted)}
 }
 .mp-h{margin:18px 0 4px;font-size:1rem}
+.mp-wrap tr[hidden],.mp-wrap p[hidden]{display:none!important}
 .calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;align-items:end}
 .calc label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--muted, inherit)}
 .calc select,.calc input{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line, #8884);background:var(--bg, transparent);color:inherit;min-width:0}
@@ -688,17 +689,37 @@ const betHead = (withGame, withRes) => `<thead><tr>${withGame ? bth("game", "Par
 // así que se muestra la probabilidad y la cuota mínima que debe pagar tu casa para que haya valor (EV >= umbral)
 const MP_CATS = { shots: 1, dd: 1 };
 const dayModelPicks = todays => todays.flatMap(g => (g.model_picks || []).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })));
+// filtro por estadística dentro de la tabla (dobles, triples intentados, libres...): solo muestra u oculta filas;
+// en "Todas" se ven las MP_SHOW más probables
+const MP_SHOW = 20;
+let MP_ST = "all";
+function mpFilter(root) {
+  root.querySelectorAll(".mp-f button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mpst === MP_ST));
+  let n = 0;
+  root.querySelectorAll("tr[data-st]").forEach(tr => { const on = MP_ST === "all" ? n++ < MP_SHOW : tr.dataset.st === MP_ST; tr.hidden = !on; });
+  const all = root.querySelectorAll("tr[data-st]").length, more = root.querySelector(".mp-more");
+  if (more) more.hidden = MP_ST !== "all" || all <= MP_SHOW;
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mp-f button"); if (!b) return;
+  MP_ST = b.dataset.mpst; mpFilter(b.closest(".mp-wrap"));
+});
 function mpBlock(list, withGame) {
   if (!list.length) return "";
-  const withRes = list.some(b => b.result);
-  return `<h3 class="mp-h">Picks del modelo sin cuota de casa</h3>
-  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros de campo, la línea es la que pondría una casa a partir de su promedio (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Calcula tu apuesta</b> en la página del partido.</p>
+  const withRes = list.some(b => b.result), sts = [...new Set(list.map(b => b.stat))].sort((x, y) => Object.keys(STAT_LABEL).indexOf(x) - Object.keys(STAT_LABEL).indexOf(y));
+  if (MP_ST !== "all" && !sts.includes(MP_ST)) MP_ST = "all";
+  let n = 0;
+  const vis = b => MP_ST === "all" ? n++ < MP_SHOW : b.stat === MP_ST;
+  return `<div class="mp-wrap"><h3 class="mp-h">Picks del modelo sin cuota de casa</h3>
+  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Calcula tu apuesta</b> en la página del partido.</p>
+  ${sts.length > 1 ? `<div class="filters mp-f" role="group" aria-label="Estadística">${["all", ...sts].map(k => `<button type="button" data-mpst="${k}" aria-pressed="${k === MP_ST}">${k === "all" ? "Todas" : STAT_BTN[k] || STAT_LABEL[k]} · ${k === "all" ? list.length : list.filter(b => b.stat === k).length}</button>`).join("")}</div>` : ""}
   <div class="panel tbl-wrap"><table class="stack"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Prob. modelo</th><th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
-  ${list.map(b => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
+  ${list.map(b => `<tr data-st="${b.stat}"${vis(b) ? "" : " hidden"}${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
     <td class="head"><div>${esc(b.label)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td><td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
     <td class="r num" data-label="Cuota mínima"><b>${b.min_dec.toFixed(2)}</b></td><td class="r num" data-label="Su promedio">${b.ref != null ? b.ref : "—"}</td>
-    ${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>`).join("")}</tbody></table></div>`;
+    ${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>`).join("")}</tbody></table></div>
+  <p class="muted mp-more"${MP_ST !== "all" || list.length <= MP_SHOW ? " hidden" : ""}>Se ven los ${MP_SHOW} más probables de ${list.length}: elige una estadística para verlos todos.</p></div>`;
 }
 const bindLinks = root => root.querySelectorAll("tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
 
@@ -1000,7 +1021,7 @@ function renderIndex(scope = "reg") {
   };
   const drawPicks = () => {
     const list = sortBets(SEG === "value" ? picks : allBets.filter(b => inSeg(b, SEG)).slice(0, TOP_N));
-    const mp = MP_CATS[SEG] ? mps.filter(b => inSeg(b, SEG)).sort((x, y) => y.p - x.p).slice(0, TOP_N) : [];
+    const mp = MP_CATS[SEG] ? mps.filter(b => inSeg(b, SEG)).sort((x, y) => y.p - x.p) : [];
     $("#picks").innerHTML = (!list.length ? (mp.length ? "" : `<div class="panel"><div class="empty">${SEG !== "value" ? NO_LINES(SEG) : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`)
       : GROUP === "game" ? groupHtml(list)
       : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`) + mpBlock(mp, true);

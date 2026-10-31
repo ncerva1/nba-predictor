@@ -26,6 +26,9 @@ Pedido de Nicolas: no había picks de doble-doble, triple-doble ni tiros de camp
   con el resultado real como los demás.
 - `prop_lines` acepta `dd` / `td` (`[0.5, cuota sí, cuota no]`; las apuestas se llaman "Doble-doble: Sí / No") y
   `odds/fetch_co.py` lee esos mercados de Rushbet / BetPlay (sí / no por jugador, o lista de jugadores solo con sí).
+- 31-oct (aclaración de Nicolas): lo que pedía eran las props de tiros. Los picks sin cuota cubren ahora tiros de
+  campo, dobles (anotados e intentados), triples intentados y tiros libres (anotados e intentados); los triples
+  anotados ya tenían líneas de casa. La tabla se filtra por estadística (en "Todas", las 20 más probables).
 - Web: categoría "Doble y triple-doble" en los picks; en "Tiros" y "Doble y triple-doble" (inicio, "Ver todo" y
   cada partido) aparece la tabla "Picks del modelo sin cuota de casa"; la tabla de props trae DD y TD en %.
 
