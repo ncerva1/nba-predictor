@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:17+00:00",
+ "generated": "2026-10-31T13:21+00:00",
  "value_ev": 0.03,
  "last_stage": "pregame",
  "updates": {
@@ -338,7 +338,11 @@
       "dec": 1.87,
       "ev": 0.751,
       "gid": "2026-10-30-CHA-at-WAS",
-      "game": "CHA @ WAS"
+      "game": "CHA @ WAS",
+      "flag": {
+       "t": "rookie",
+       "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+      }
      },
      {
       "kind": "ml",
@@ -377,7 +381,11 @@
       "dec": 1.87,
       "ev": 0.751,
       "gid": "2026-10-30-CHA-at-WAS",
-      "game": "CHA @ WAS"
+      "game": "CHA @ WAS",
+      "flag": {
+       "t": "rookie",
+       "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+      }
      },
      {
       "kind": "ml",
@@ -429,7 +437,11 @@
       "dec": 1.87,
       "ev": 0.751,
       "gid": "2026-10-30-CHA-at-WAS",
-      "game": "CHA @ WAS"
+      "game": "CHA @ WAS",
+      "flag": {
+       "t": "rookie",
+       "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+      }
      },
      {
       "kind": "ml",
@@ -584,6 +596,8 @@
    "home": "CLE",
    "tip_et": "19:00",
    "venue": "Rocket Arena, Cleveland",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "MIN": null,
     "CLE": null
@@ -1103,6 +1117,7 @@
      "result": "won"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "MIN": 125,
@@ -1123,6 +1138,8 @@
    "home": "CHA",
    "tip_et": "19:00",
    "venue": "Spectrum Center, Charlotte",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "WAS": null,
     "CHA": null
@@ -1742,6 +1759,7 @@
      "result": "lost"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "WAS": 103,
@@ -1762,6 +1780,8 @@
    "home": "BOS",
    "tip_et": "19:30",
    "venue": "TD Garden, Boston",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "CHI": null,
     "BOS": null
@@ -2173,6 +2193,7 @@
      "result": "won"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "CHI": 99,
@@ -2193,6 +2214,8 @@
    "home": "MIA",
    "tip_et": "19:30",
    "venue": "Kaseya Center, Miami",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "DAL": null,
     "MIA": null
@@ -2511,6 +2534,7 @@
     }
    ],
    "value_bets": [],
+   "parlays": [],
    "result": {
     "score": {
      "DAL": 113,
@@ -2531,6 +2555,8 @@
    "home": "MIL",
    "tip_et": "20:00",
    "venue": "Fiserv Forum, Milwaukee",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "IND": "2-1",
     "MIL": "0-3"
@@ -2841,6 +2867,7 @@
     }
    ],
    "value_bets": [],
+   "parlays": [],
    "result": {
     "score": {
      "IND": 102,
@@ -2861,6 +2888,8 @@
    "home": "OKC",
    "tip_et": "20:00",
    "venue": "Paycom Center, Oklahoma City",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "PHX": null,
     "OKC": null
@@ -3280,6 +3309,7 @@
      "result": "lost"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "PHX": 114,
@@ -3300,6 +3330,8 @@
    "home": "HOU",
    "tip_et": "20:30",
    "venue": "Toyota Center, Houston",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "ATL": null,
     "HOU": null
@@ -3653,6 +3685,7 @@
      "result": "won"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "ATL": 110,
@@ -3673,6 +3706,8 @@
    "home": "UTA",
    "tip_et": "21:00",
    "venue": "Delta Center, Salt Lake City",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "MEM": null,
     "UTA": null
@@ -3991,6 +4026,7 @@
     }
    ],
    "value_bets": [],
+   "parlays": [],
    "result": {
     "score": {
      "MEM": 110,
@@ -4011,6 +4047,8 @@
    "home": "DEN",
    "tip_et": "22:00",
    "venue": "Ball Arena, Denver",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "GSW": null,
     "DEN": null
@@ -4378,6 +4416,7 @@
      "result": "lost"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "GSW": 134,
@@ -4398,6 +4437,8 @@
    "home": "BOS",
    "tip_et": "19:30",
    "venue": "TD Garden, Boston",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "BKN": null,
     "BOS": null
@@ -4429,7 +4470,11 @@
      "edge": 0.292,
      "ev": 0.592,
      "value": true,
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 3 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -4546,7 +4591,11 @@
      "edge": 0.154,
      "ev": 0.294,
      "value": true,
-     "result": "lost"
+     "result": "lost",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 2 partidos esta temporada"
+     }
     }
    ],
    "value_bets": [
@@ -4565,7 +4614,11 @@
      "edge": 0.292,
      "ev": 0.592,
      "value": true,
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 3 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -4682,7 +4735,11 @@
      "edge": 0.154,
      "ev": 0.294,
      "value": true,
-     "result": "lost"
+     "result": "lost",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 2 partidos esta temporada"
+     }
     },
     {
      "kind": "ml",
@@ -4802,6 +4859,7 @@
      "result": "lost"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "BKN": 124,
@@ -4822,6 +4880,8 @@
    "home": "NYK",
    "tip_et": "20:00",
    "venue": "Madison Square Garden, New York",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "DET": null,
     "NYK": null
@@ -5426,6 +5486,7 @@
      "result": "lost"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "DET": 97,
@@ -5446,6 +5507,8 @@
    "home": "SAS",
    "tip_et": "20:00",
    "venue": "Frost Bank Center, San Antonio",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "SAC": null,
     "SAS": null
@@ -5733,6 +5796,7 @@
      "result": "won"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "SAC": 94,
@@ -5753,6 +5817,8 @@
    "home": "LAL",
    "tip_et": "23:00",
    "venue": "Crypto.com Arena, Los Angeles",
+   "competition": "regular",
+   "cup_round": null,
    "records": {
     "POR": null,
     "LAL": null
@@ -5991,6 +6057,7 @@
      "result": "won"
     }
    ],
+   "parlays": [],
    "result": {
     "score": {
      "POR": 136,
@@ -9295,7 +9362,11 @@
      "ev": 0.362,
      "value": true,
      "stat": "pts",
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -9351,7 +9422,11 @@
      "ev": 0.362,
      "value": true,
      "stat": "pts",
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -9595,7 +9670,11 @@
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
        "game": "DEN @ NOP",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -9636,7 +9715,11 @@
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
        "game": "DEN @ NOP",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -9691,7 +9774,11 @@
        "ev": 0.362,
        "gid": "2026-10-28-DEN-at-NOP",
        "game": "DEN @ NOP",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -10697,7 +10784,11 @@
      "ev": 0.381,
      "value": true,
      "stat": "pts",
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -10753,7 +10844,11 @@
      "ev": 0.381,
      "value": true,
      "stat": "pts",
-     "result": "won"
+     "result": "won",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -10961,7 +11056,11 @@
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
        "game": "NYK @ CHI",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -11002,7 +11101,11 @@
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
        "game": "NYK @ CHI",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -11057,7 +11160,11 @@
        "ev": 0.381,
        "gid": "2026-10-28-NYK-at-CHI",
        "game": "NYK @ CHI",
-       "result": "won"
+       "result": "won",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -11185,7 +11292,11 @@
      "ev": 0.229,
      "value": true,
      "stat": "pts",
-     "result": "lost"
+     "result": "lost",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -11241,7 +11352,11 @@
      "ev": 0.229,
      "value": true,
      "stat": "pts",
-     "result": "lost"
+     "result": "lost",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -14693,7 +14808,11 @@
      "edge": 0.402,
      "ev": 0.751,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -14710,7 +14829,11 @@
      "edge": 0.36,
      "ev": 0.706,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -14746,7 +14869,11 @@
      "edge": 0.402,
      "ev": 0.751,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -14763,7 +14890,11 @@
      "edge": 0.36,
      "ev": 0.706,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -15237,7 +15368,11 @@
      "edge": 0.143,
      "ev": 0.279,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -15423,7 +15558,11 @@
      "edge": 0.132,
      "ev": 0.252,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -15474,7 +15613,11 @@
      "edge": 0.146,
      "ev": 0.235,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16001,7 +16144,11 @@
      "edge": 0.076,
      "ev": 0.133,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16018,7 +16165,11 @@
      "edge": 0.054,
      "ev": 0.131,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16341,7 +16492,11 @@
      "edge": 0.056,
      "ev": 0.089,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16358,7 +16513,11 @@
      "edge": 0.051,
      "ev": 0.084,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16715,7 +16874,11 @@
        "dec": 1.87,
        "ev": 0.751,
        "gid": "2026-10-30-CHA-at-WAS",
-       "game": "CHA @ WAS"
+       "game": "CHA @ WAS",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -16753,7 +16916,11 @@
        "dec": 1.87,
        "ev": 0.751,
        "gid": "2026-10-30-CHA-at-WAS",
-       "game": "CHA @ WAS"
+       "game": "CHA @ WAS",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -16804,7 +16971,11 @@
        "dec": 1.87,
        "ev": 0.751,
        "gid": "2026-10-30-CHA-at-WAS",
-       "game": "CHA @ WAS"
+       "game": "CHA @ WAS",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -16871,7 +17042,11 @@
      "edge": 0.402,
      "ev": 0.751,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -16887,7 +17062,11 @@
      "edge": 0.36,
      "ev": 0.706,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -17177,7 +17356,11 @@
      "edge": 0.143,
      "ev": 0.279,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -17274,7 +17457,11 @@
      "edge": 0.132,
      "ev": 0.252,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -17322,7 +17509,11 @@
      "edge": 0.146,
      "ev": 0.235,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -17818,7 +18009,11 @@
      "edge": 0.076,
      "ev": 0.133,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -17834,7 +18029,11 @@
      "edge": 0.054,
      "ev": 0.131,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -18138,7 +18337,11 @@
      "edge": 0.056,
      "ev": 0.089,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -18154,7 +18357,11 @@
      "edge": 0.051,
      "ev": 0.084,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -18586,7 +18793,11 @@
      "edge": 0.0,
      "ev": 0.0,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -18938,7 +19149,11 @@
      "edge": -0.027,
      "ev": -0.051,
      "value": false,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -19082,7 +19297,11 @@
      "edge": -0.043,
      "ev": -0.08,
      "value": false,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -19402,7 +19621,11 @@
      "edge": -0.076,
      "ev": -0.144,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -19754,7 +19977,11 @@
      "edge": -0.126,
      "ev": -0.193,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20010,7 +20237,11 @@
      "edge": -0.127,
      "ev": -0.266,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20218,7 +20449,11 @@
      "edge": -0.149,
      "ev": -0.295,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20587,7 +20822,11 @@
      "edge": -0.211,
      "ev": -0.378,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20603,7 +20842,11 @@
      "edge": -0.208,
      "ev": -0.379,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20669,7 +20912,11 @@
      "edge": -0.175,
      "ev": -0.429,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20927,7 +21174,11 @@
      "edge": -0.432,
      "ev": -0.77,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -20943,7 +21194,11 @@
      "edge": -0.442,
      "ev": -0.875,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 1 partido esta temporada"
+     }
     }
    ]
   },
@@ -21004,7 +21259,11 @@
      "edge": 0.223,
      "ev": 0.478,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -21057,7 +21316,11 @@
      "edge": 0.223,
      "ev": 0.478,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -21312,7 +21575,11 @@
      "edge": 0.166,
      "ev": 0.34,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -21465,7 +21732,11 @@
      "edge": 0.144,
      "ev": 0.297,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -21788,7 +22059,11 @@
      "edge": 0.126,
      "ev": 0.232,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -22016,7 +22291,11 @@
      "edge": 0.115,
      "ev": 0.203,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -22067,7 +22346,11 @@
      "edge": 0.095,
      "ev": 0.175,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -22135,7 +22418,11 @@
      "edge": 0.087,
      "ev": 0.148,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -22152,7 +22439,11 @@
      "edge": 0.081,
      "ev": 0.144,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -22305,7 +22596,11 @@
      "edge": 0.078,
      "ev": 0.11,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -22868,7 +23163,11 @@
      "edge": 0.223,
      "ev": 0.478,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23108,7 +23407,11 @@
      "edge": 0.166,
      "ev": 0.34,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23252,7 +23555,11 @@
      "edge": 0.144,
      "ev": 0.297,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23556,7 +23863,11 @@
      "edge": 0.126,
      "ev": 0.232,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -23685,7 +23996,11 @@
      "edge": 0.115,
      "ev": 0.203,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23733,7 +24048,11 @@
      "edge": 0.095,
      "ev": 0.175,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23797,7 +24116,11 @@
      "edge": 0.087,
      "ev": 0.148,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23813,7 +24136,11 @@
      "edge": 0.081,
      "ev": 0.144,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -23957,7 +24284,11 @@
      "edge": 0.078,
      "ev": 0.11,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -24279,7 +24610,11 @@
      "edge": 0.016,
      "ev": 0.026,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -24600,7 +24935,11 @@
      "edge": -0.019,
      "ev": -0.05,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25449,7 +25788,11 @@
      "edge": -0.158,
      "ev": -0.307,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -25498,7 +25841,11 @@
      "edge": -0.167,
      "ev": -0.314,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25722,7 +26069,11 @@
      "edge": -0.215,
      "ev": -0.367,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25738,7 +26089,11 @@
      "edge": -0.187,
      "ev": -0.369,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25770,7 +26125,11 @@
      "edge": -0.196,
      "ev": -0.373,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25802,7 +26161,11 @@
      "edge": -0.209,
      "ev": -0.377,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -25834,7 +26197,11 @@
      "edge": -0.138,
      "ev": -0.39,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -26122,7 +26489,11 @@
      "edge": -0.274,
      "ev": -0.469,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -26747,7 +27118,11 @@
      "edge": 0.171,
      "ev": 0.325,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -26866,7 +27241,11 @@
      "edge": 0.17,
      "ev": 0.295,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -27077,7 +27456,11 @@
      "edge": 0.158,
      "ev": 0.278,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -27094,7 +27477,11 @@
      "edge": 0.101,
      "ev": 0.263,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -27553,7 +27940,11 @@
      "edge": 0.098,
      "ev": 0.152,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -27570,7 +27961,11 @@
      "edge": 0.109,
      "ev": 0.149,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -27638,7 +28033,11 @@
      "edge": 0.062,
      "ev": 0.128,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "ml",
@@ -27841,7 +28240,11 @@
      "edge": 0.05,
      "ev": 0.103,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -28245,7 +28648,11 @@
        "dec": 1.37,
        "ev": 0.149,
        "gid": "2026-10-30-DET-at-BKN",
-       "game": "DET @ BKN"
+       "game": "DET @ BKN",
+       "flag": {
+        "t": "rookie",
+        "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+       }
       },
       {
        "kind": "ml",
@@ -28526,7 +28933,11 @@
      "edge": 0.171,
      "ev": 0.325,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -28638,7 +29049,11 @@
      "edge": 0.17,
      "ev": 0.295,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -28751,7 +29166,11 @@
      "edge": 0.158,
      "ev": 0.278,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -28767,7 +29186,11 @@
      "edge": 0.101,
      "ev": 0.263,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -29199,7 +29622,11 @@
      "edge": 0.098,
      "ev": 0.152,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -29215,7 +29642,11 @@
      "edge": 0.109,
      "ev": 0.149,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -29279,7 +29710,11 @@
      "edge": 0.062,
      "ev": 0.128,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "ml",
@@ -29392,7 +29827,11 @@
      "edge": 0.05,
      "ev": 0.103,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -29664,7 +30103,11 @@
      "edge": 0.019,
      "ev": 0.029,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -30450,7 +30893,11 @@
      "edge": -0.085,
      "ev": -0.135,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -30514,7 +30961,11 @@
      "edge": -0.088,
      "ev": -0.159,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -30786,7 +31237,11 @@
      "edge": -0.138,
      "ev": -0.231,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -30834,7 +31289,11 @@
      "edge": -0.173,
      "ev": -0.252,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -31284,7 +31743,11 @@
      "edge": -0.172,
      "ev": -0.401,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -31412,7 +31875,11 @@
      "edge": -0.247,
      "ev": -0.449,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "ml",
@@ -31478,7 +31945,11 @@
      "edge": -0.231,
      "ev": -0.458,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -31526,7 +31997,11 @@
      "edge": -0.244,
      "ev": -0.492,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -31622,7 +32097,11 @@
      "edge": -0.183,
      "ev": -0.532,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -38642,7 +39121,11 @@
      "edge": 0.082,
      "ev": 0.184,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -40456,7 +40939,11 @@
      "edge": 0.082,
      "ev": 0.184,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -41594,7 +42081,11 @@
      "edge": -0.001,
      "ev": -0.002,
      "value": false,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -42491,7 +42982,11 @@
      "edge": -0.058,
      "ev": -0.108,
      "value": false,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -43243,7 +43738,11 @@
      "edge": -0.149,
      "ev": -0.239,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44426,7 +44925,11 @@
      "edge": 0.249,
      "ev": 0.523,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44479,7 +44982,11 @@
      "edge": 0.249,
      "ev": 0.523,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44581,7 +45088,11 @@
      "edge": 0.245,
      "ev": 0.431,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44598,7 +45109,11 @@
      "edge": 0.226,
      "ev": 0.426,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44632,7 +45147,11 @@
      "edge": 0.238,
      "ev": 0.419,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44649,7 +45168,11 @@
      "edge": 0.215,
      "ev": 0.377,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44666,7 +45189,11 @@
      "edge": 0.171,
      "ev": 0.359,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44802,7 +45329,11 @@
      "edge": 0.117,
      "ev": 0.234,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -44955,7 +45486,11 @@
      "edge": 0.086,
      "ev": 0.168,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45125,7 +45660,11 @@
      "edge": 0.059,
      "ev": 0.097,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45278,7 +45817,11 @@
      "edge": 0.028,
      "ev": 0.07,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45312,7 +45855,11 @@
      "edge": 0.029,
      "ev": 0.061,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45431,7 +45978,11 @@
      "edge": 0.029,
      "ev": 0.05,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45465,7 +46016,11 @@
      "edge": 0.023,
      "ev": 0.047,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45482,7 +46037,11 @@
      "edge": 0.023,
      "ev": 0.046,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45546,7 +46105,11 @@
        "dec": 1.76,
        "ev": 0.431,
        "gid": "2026-10-30-HOU-at-DAL",
-       "game": "HOU @ DAL"
+       "game": "HOU @ DAL",
+       "flag": {
+        "t": "lesion",
+        "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+       }
       }
      ],
      "n": 2,
@@ -45584,7 +46147,11 @@
        "dec": 1.76,
        "ev": 0.431,
        "gid": "2026-10-30-HOU-at-DAL",
-       "game": "HOU @ DAL"
+       "game": "HOU @ DAL",
+       "flag": {
+        "t": "lesion",
+        "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -45597,7 +46164,11 @@
        "dec": 1.408,
        "ev": 0.017,
        "gid": "2026-10-30-HOU-at-DAL",
-       "game": "HOU @ DAL"
+       "game": "HOU @ DAL",
+       "flag": {
+        "t": "lesion",
+        "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+       }
       }
      ],
      "n": 3,
@@ -45635,7 +46206,11 @@
        "dec": 1.76,
        "ev": 0.431,
        "gid": "2026-10-30-HOU-at-DAL",
-       "game": "HOU @ DAL"
+       "game": "HOU @ DAL",
+       "flag": {
+        "t": "lesion",
+        "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -45648,7 +46223,11 @@
        "dec": 1.408,
        "ev": 0.017,
        "gid": "2026-10-30-HOU-at-DAL",
-       "game": "HOU @ DAL"
+       "game": "HOU @ DAL",
+       "flag": {
+        "t": "lesion",
+        "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -45689,7 +46268,11 @@
      "edge": 0.249,
      "ev": 0.523,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45785,7 +46368,11 @@
      "edge": 0.245,
      "ev": 0.431,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45801,7 +46388,11 @@
      "edge": 0.226,
      "ev": 0.426,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45833,7 +46424,11 @@
      "edge": 0.238,
      "ev": 0.419,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45849,7 +46444,11 @@
      "edge": 0.215,
      "ev": 0.377,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45865,7 +46464,11 @@
      "edge": 0.171,
      "ev": 0.359,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -45993,7 +46596,11 @@
      "edge": 0.117,
      "ev": 0.234,
      "value": true,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46137,7 +46744,11 @@
      "edge": 0.086,
      "ev": 0.168,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46297,7 +46908,11 @@
      "edge": 0.059,
      "ev": 0.097,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46441,7 +47056,11 @@
      "edge": 0.028,
      "ev": 0.07,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46473,7 +47092,11 @@
      "edge": 0.029,
      "ev": 0.061,
      "value": true,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46585,7 +47208,11 @@
      "edge": 0.029,
      "ev": 0.05,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46617,7 +47244,11 @@
      "edge": 0.023,
      "ev": 0.047,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46633,7 +47264,11 @@
      "edge": 0.023,
      "ev": 0.046,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46777,7 +47412,11 @@
      "edge": 0.012,
      "ev": 0.017,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46793,7 +47432,11 @@
      "edge": 0.012,
      "ev": 0.017,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -46924,7 +47567,11 @@
      "edge": 0.004,
      "ev": 0.008,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "spread",
@@ -46989,7 +47636,11 @@
      "edge": -0.002,
      "ev": -0.004,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47117,7 +47768,11 @@
      "edge": -0.018,
      "ev": -0.026,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47133,7 +47788,11 @@
      "edge": -0.017,
      "ev": -0.029,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47421,7 +48080,11 @@
      "edge": -0.03,
      "ev": -0.06,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47501,7 +48164,11 @@
      "edge": -0.038,
      "ev": -0.075,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47549,7 +48216,11 @@
      "edge": -0.045,
      "ev": -0.079,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47791,7 +48462,11 @@
      "edge": -0.068,
      "ev": -0.105,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47871,7 +48546,11 @@
      "edge": -0.056,
      "ev": -0.114,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -47967,7 +48646,11 @@
      "edge": -0.052,
      "ev": -0.132,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48112,7 +48795,11 @@
      "edge": -0.08,
      "ev": -0.146,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48128,7 +48815,11 @@
      "edge": -0.051,
      "ev": -0.15,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48224,7 +48915,11 @@
      "edge": -0.096,
      "ev": -0.165,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48240,7 +48935,11 @@
      "edge": -0.099,
      "ev": -0.166,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48256,7 +48955,11 @@
      "edge": -0.076,
      "ev": -0.167,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48304,7 +49007,11 @@
      "edge": -0.098,
      "ev": -0.168,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48480,7 +49187,11 @@
      "edge": -0.077,
      "ev": -0.216,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48528,7 +49239,11 @@
      "edge": -0.1,
      "ev": -0.231,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48560,7 +49275,11 @@
      "edge": -0.122,
      "ev": -0.233,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48816,7 +49535,11 @@
      "edge": -0.172,
      "ev": -0.31,
      "value": false,
-     "stat": "pts"
+     "stat": "pts",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48848,7 +49571,11 @@
      "edge": -0.184,
      "ev": -0.343,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48960,7 +49687,11 @@
      "edge": -0.26,
      "ev": -0.486,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -48976,7 +49707,11 @@
      "edge": -0.295,
      "ev": -0.546,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -49024,7 +49759,11 @@
      "edge": -0.292,
      "ev": -0.578,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -49072,7 +49811,11 @@
      "edge": -0.311,
      "ev": -0.617,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -49088,7 +49831,11 @@
      "edge": -0.318,
      "ev": -0.63,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -54923,7 +55670,11 @@
      "edge": 0.082,
      "ev": 0.155,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -54957,7 +55708,11 @@
      "edge": 0.08,
      "ev": 0.153,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -54974,7 +55729,11 @@
      "edge": 0.081,
      "ev": 0.152,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -55372,7 +56131,11 @@
      "edge": 0.035,
      "ev": 0.063,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -55457,7 +56220,11 @@
      "edge": 0.027,
      "ev": 0.048,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -55559,7 +56326,11 @@
      "edge": 0.022,
      "ev": 0.031,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     }
    ],
    "parlays": [
@@ -56389,7 +57160,11 @@
      "edge": 0.082,
      "ev": 0.155,
      "value": true,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -56421,7 +57196,11 @@
      "edge": 0.08,
      "ev": 0.153,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -56437,7 +57216,11 @@
      "edge": 0.081,
      "ev": 0.152,
      "value": true,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -56726,7 +57509,11 @@
      "edge": 0.035,
      "ev": 0.063,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -56806,7 +57593,11 @@
      "edge": 0.027,
      "ev": 0.048,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -56902,7 +57693,11 @@
      "edge": 0.022,
      "ev": 0.031,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57046,7 +57841,11 @@
      "edge": -0.002,
      "ev": -0.004,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57223,7 +58022,11 @@
      "edge": -0.01,
      "ev": -0.023,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57287,7 +58090,11 @@
      "edge": -0.016,
      "ev": -0.028,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57623,7 +58430,11 @@
      "edge": -0.051,
      "ev": -0.084,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "total",
@@ -57705,7 +58516,11 @@
      "edge": -0.063,
      "ev": -0.095,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57721,7 +58536,11 @@
      "edge": -0.062,
      "ev": -0.097,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57753,7 +58572,11 @@
      "edge": -0.052,
      "ev": -0.107,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -57865,7 +58688,11 @@
      "edge": -0.068,
      "ev": -0.139,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -58026,7 +58853,11 @@
      "edge": -0.072,
      "ev": -0.173,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -58411,7 +59242,11 @@
      "edge": -0.095,
      "ev": -0.261,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -58427,7 +59262,11 @@
      "edge": -0.15,
      "ev": -0.278,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -58459,7 +59298,11 @@
      "edge": -0.156,
      "ev": -0.284,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -58475,7 +59318,11 @@
      "edge": -0.157,
      "ev": -0.288,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -59232,7 +60079,11 @@
      "edge": 0.162,
      "ev": 0.324,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -59249,7 +60100,11 @@
      "edge": 0.179,
      "ev": 0.311,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -60404,7 +61259,11 @@
      "edge": 0.162,
      "ev": 0.324,
      "value": true,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -60420,7 +61279,11 @@
      "edge": 0.179,
      "ev": 0.311,
      "value": true,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -61653,7 +62516,11 @@
      "edge": -0.011,
      "ev": -0.016,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "total",
@@ -61975,7 +62842,11 @@
      "edge": -0.021,
      "ev": -0.047,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -62007,7 +62878,11 @@
      "edge": -0.027,
      "ev": -0.053,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -62234,7 +63109,11 @@
      "edge": -0.046,
      "ev": -0.074,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -62314,7 +63193,11 @@
      "edge": -0.047,
      "ev": -0.084,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -63004,7 +63887,11 @@
      "edge": -0.063,
      "ev": -0.171,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -63692,7 +64579,11 @@
      "edge": -0.233,
      "ev": -0.409,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -63724,7 +64615,11 @@
      "edge": -0.248,
      "ev": -0.425,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -63848,7 +64743,11 @@
      "edge": 0.274,
      "ev": 0.522,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -63901,7 +64800,11 @@
      "edge": 0.274,
      "ev": 0.522,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -64292,7 +65195,11 @@
      "edge": 0.117,
      "ev": 0.243,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -64751,7 +65658,11 @@
      "edge": 0.072,
      "ev": 0.137,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -64836,7 +65747,11 @@
      "edge": 0.059,
      "ev": 0.116,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -65057,7 +65972,11 @@
      "edge": 0.046,
      "ev": 0.066,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -65142,7 +66061,11 @@
      "edge": 0.031,
      "ev": 0.058,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -65274,7 +66197,11 @@
        "dec": 1.909,
        "ev": 0.522,
        "gid": "2026-10-30-LAL-at-GSW",
-       "game": "LAL @ GSW"
+       "game": "LAL @ GSW",
+       "flag": {
+        "t": "sin_datos",
+        "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+       }
       }
      ],
      "n": 2,
@@ -65312,7 +66239,11 @@
        "dec": 1.909,
        "ev": 0.522,
        "gid": "2026-10-30-LAL-at-GSW",
-       "game": "LAL @ GSW"
+       "game": "LAL @ GSW",
+       "flag": {
+        "t": "sin_datos",
+        "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -65363,7 +66294,11 @@
        "dec": 1.909,
        "ev": 0.522,
        "gid": "2026-10-30-LAL-at-GSW",
-       "game": "LAL @ GSW"
+       "game": "LAL @ GSW",
+       "flag": {
+        "t": "sin_datos",
+        "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+       }
       },
       {
        "kind": "prop",
@@ -65417,7 +66352,11 @@
      "edge": 0.274,
      "ev": 0.522,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -65785,7 +66724,11 @@
      "edge": 0.117,
      "ev": 0.243,
      "value": true,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66217,7 +67160,11 @@
      "edge": 0.072,
      "ev": 0.137,
      "value": true,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66297,7 +67244,11 @@
      "edge": 0.059,
      "ev": 0.116,
      "value": true,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66505,7 +67456,11 @@
      "edge": 0.046,
      "ev": 0.066,
      "value": true,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66585,7 +67540,11 @@
      "edge": 0.031,
      "ev": 0.058,
      "value": true,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66794,7 +67753,11 @@
      "edge": 0.007,
      "ev": 0.015,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -66986,7 +67949,11 @@
      "edge": -0.01,
      "ev": -0.019,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67002,7 +67969,11 @@
      "edge": -0.013,
      "ev": -0.022,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "ml",
@@ -67132,7 +68103,11 @@
      "edge": -0.02,
      "ev": -0.037,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67228,7 +68203,11 @@
      "edge": -0.031,
      "ev": -0.057,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67344,7 +68323,11 @@
      "edge": -0.031,
      "ev": -0.067,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67392,7 +68375,11 @@
      "edge": -0.04,
      "ev": -0.073,
      "value": false,
-     "stat": "reb"
+     "stat": "reb",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67408,7 +68395,11 @@
      "edge": -0.039,
      "ev": -0.073,
      "value": false,
-     "stat": "pra"
+     "stat": "pra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67520,7 +68511,11 @@
      "edge": -0.055,
      "ev": -0.104,
      "value": false,
-     "stat": "pr"
+     "stat": "pr",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67633,7 +68628,11 @@
      "edge": -0.057,
      "ev": -0.115,
      "value": false,
-     "stat": "ra"
+     "stat": "ra",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -67665,7 +68664,11 @@
      "edge": -0.062,
      "ev": -0.121,
      "value": false,
-     "stat": "pa"
+     "stat": "pa",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -68145,7 +69148,11 @@
      "edge": -0.135,
      "ev": -0.237,
      "value": false,
-     "stat": "stocks"
+     "stat": "stocks",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -68225,7 +69232,11 @@
      "edge": -0.141,
      "ev": -0.259,
      "value": false,
-     "stat": "blk"
+     "stat": "blk",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -68369,7 +69380,11 @@
      "edge": -0.17,
      "ev": -0.298,
      "value": false,
-     "stat": "ast"
+     "stat": "ast",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -68433,7 +69448,11 @@
      "edge": -0.111,
      "ev": -0.306,
      "value": false,
-     "stat": "stl"
+     "stat": "stl",
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -69025,7 +70044,11 @@
      "edge": -0.326,
      "ev": -0.617,
      "value": false,
-     "stat": "fg3m"
+     "stat": "fg3m",
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
+     }
     }
    ]
   }
