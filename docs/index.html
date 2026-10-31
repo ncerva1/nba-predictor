@@ -157,6 +157,7 @@ main .inner { display: grid; gap: 30px }
   .rot td.rot-tl{grid-column:1/-1}
   .rot-wrap h3::after{content:"  1.º · 2.º · 3.º · 4.º cuarto";font:400 .72rem var(--body);color:var(--muted)}
 }
+.mp-h{margin:18px 0 4px;font-size:1rem}
 .calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;align-items:end}
 .calc label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--muted, inherit)}
 .calc select,.calc input{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line, #8884);background:var(--bg, transparent);color:inherit;min-width:0}
@@ -660,6 +661,24 @@ const bth = (k, t, c = "r") => `<th class="${c} sort" data-bs="${k}"${BS.k === k
 const betHead = (withGame, withRes) => `<thead><tr>${withGame ? bth("game", "Partido", "") : ""}${bth("pick", "Pick", "")}${bth("dec", "Cuota")}
   ${bth("p", "Prob. modelo")}${bth("implied", "Prob. casa")}<th class="r">Cuota justa</th>${bth("ev", "EV")}<th>Mejor casa</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead>`;
 
+// Picks del modelo sin cuota (tiros de campo, doble-doble, triple-doble): las casas que leemos no publican esas líneas,
+// así que se muestra la probabilidad y la cuota mínima que debe pagar tu casa para que haya valor (EV >= umbral)
+const MP_CATS = { shots: 1, dd: 1 };
+const dayModelPicks = todays => todays.flatMap(g => (g.model_picks || []).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })));
+function mpBlock(list, withGame) {
+  if (!list.length) return "";
+  const withRes = list.some(b => b.result);
+  return `<h3 class="mp-h">Picks del modelo sin cuota de casa</h3>
+  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros de campo, la línea es la que pondría una casa a partir de su promedio (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Calcula tu apuesta</b> en la página del partido.</p>
+  <div class="panel tbl-wrap"><table class="stack"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Prob. modelo</th><th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
+  ${list.map(b => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
+    <td class="head"><div>${esc(b.label)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
+    <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td><td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
+    <td class="r num" data-label="Cuota mínima"><b>${b.min_dec.toFixed(2)}</b></td><td class="r num" data-label="Su promedio">${b.ref != null ? b.ref : "—"}</td>
+    ${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>`).join("")}</tbody></table></div>`;
+}
+const bindLinks = root => root.querySelectorAll("tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+
 function chip(g, dup, when = "") {   // when: "past" (ayer) o "today"
   const r = g.result, hid = dup ? ' aria-hidden="true" tabindex="-1"' : "", hoy = when === "today" ? '<span class="hoy">Hoy</span>' : "";
   if (r) return `<a class="chip done ${when}${isCup(g) ? " cup" : ""}" href="#${g.id}" data-id="${g.id}" draggable="false" style="--ca:${tc(g.away)}"${hid}>
@@ -742,15 +761,16 @@ const GROUPS = { game: "Por partido", ev: "Lista por EV" };
 const STAT_LABEL = { pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", pra: "PTS+REB+AST", pr: "PTS+REB",
   pa: "PTS+AST", ra: "REB+AST", stl: "Robos", blk: "Tapones", stocks: "Robos+Tapones", tov: "Pérdidas", pf: "Faltas",
   fgm: "Tiros de campo anotados", fga: "Tiros de campo intentados", fg2m: "Dobles anotados", fg2a: "Dobles intentados", fg3a: "Triples intentados",
-  ftm: "Tiros libres anotados", fta: "Tiros libres intentados" };
+  ftm: "Tiros libres anotados", fta: "Tiros libres intentados", dd: "Doble-doble", td: "Triple-doble" };
 const STAT_SHORT = { pts: "PTS", reb: "REB", ast: "AST", fg3m: "3PM", pra: "PRA", pr: "P+R", pa: "P+A", ra: "R+A", stl: "ROB", blk: "TAP",
-  stocks: "R+T", tov: "PÉR", pf: "FAL", fgm: "TCA", fga: "TCI", fg2m: "2PA", fg2a: "2PI", fg3a: "3PI", ftm: "TLA", fta: "TLI" };
+  stocks: "R+T", tov: "PÉR", pf: "FAL", fgm: "TCA", fga: "TCI", fg2m: "2PA", fg2a: "2PI", fg3a: "3PI", ftm: "TLA", fta: "TLI", dd: "DD", td: "TD" };
 const STAT_BTN = { pra: "PRA", pr: "PTS+REB", pa: "PTS+AST", ra: "REB+AST", stocks: "Robos+Tap.", fgm: "TC anotados", fga: "TC intentados",
-  fg2m: "Dobles anot.", fg2a: "Dobles int.", fg3a: "Triples int.", ftm: "Libres anot.", fta: "Libres int." };
+  fg2m: "Dobles anot.", fg2a: "Dobles int.", fg3a: "Triples int.", ftm: "Libres anot.", fta: "Libres int.", dd: "Doble-doble", td: "Triple-doble" };
 const CATS = { all: "Todas", top: "Top 20", value: "Con valor", team: "Equipo", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples",
-  combo: "Combinadas", def: "Robos y tapones", shots: "Tiros", other: "Pérdidas y faltas" };
+  combo: "Combinadas", def: "Robos y tapones", shots: "Tiros", dd: "Doble y triple-doble", other: "Pérdidas y faltas" };
 const CAT_OF = { pra: "combo", pr: "combo", pa: "combo", ra: "combo", stl: "def", blk: "def", stocks: "def", fgm: "shots", fga: "shots",
-  fg2m: "shots", fg2a: "shots", fg3a: "shots", ftm: "shots", fta: "shots", tov: "other", pf: "other" };
+  fg2m: "shots", fg2a: "shots", fg3a: "shots", ftm: "shots", fta: "shots", tov: "other", pf: "other", dd: "dd", td: "dd" };
+const YN = { dd: 1, td: 1 };  // props de sí / no: la "media" es la probabilidad de lograrlo
 const catOf = b => b.kind !== "prop" ? "team" : CAT_OF[b.stat] || b.stat || "pts";
 let SEG = "all";
 // categoría sin líneas publicadas: el modelo sí la proyecta, se compara con la casa en la calculadora de cada partido
@@ -860,7 +880,7 @@ const dayBets = todays => todays.flatMap(g => (g.all_bets || g.value_bets || g.t
 function renderAll(scope) {
   const thr = INDEX.value_ev, cup = scope === "cup";
   const todays = INDEX.games.filter(g => g.date === DAY && inScope(g, scope));
-  const all = dayBets(todays);
+  const all = dayBets(todays), mps = dayModelPicks(todays);
   let q = "";
   $("#app").innerHTML = `<a class="back" href="#${cup ? "cup" : ""}">← ${cup ? "NBA Cup" : "Liga regular"}</a>
   <section class="section">
@@ -868,18 +888,19 @@ function renderAll(scope) {
     <h1>Todos los picks</h1>
     <p class="lede">Las ${all.length} apuestas con cuota de los ${todays.length} partidos, ordenadas por valor esperado (EV), de la que más rinde según el modelo a la que menos. Filtra por categoría o busca un jugador o equipo.</p>
     ${legend(thr)}
-    ${segBar(all, "seg-all")}
+    ${segBar(all.concat(mps), "seg-all")}
     ${betSortBar("bs-all", true)}
     <input class="search" id="q" type="search" placeholder="Buscar jugador o equipo" aria-label="Buscar jugador o equipo">
     <div id="all-picks"></div>
     ${howto}
   </section>`;
   const draw = () => {
-    const list = sortBets(all.filter(b => inSeg(b, SEG) && (!q || (b.label + " " + b._game).toLowerCase().includes(q))));
-    $("#all-picks").innerHTML = list.length ? `<p class="muted">${list.length} apuesta${list.length > 1 ? "s" : ""} · ${list.filter(b => b.value).length} con valor</p>
+    const hit = b => inSeg(b, SEG) && (!q || (b.label + " " + b._game).toLowerCase().includes(q));
+    const list = sortBets(all.filter(hit)), mp = MP_CATS[SEG] ? mps.filter(hit).sort((x, y) => y.p - x.p) : [];
+    $("#all-picks").innerHTML = (list.length ? `<p class="muted">${list.length} apuesta${list.length > 1 ? "s" : ""} · ${list.filter(b => b.value).length} con valor</p>
       <div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`
-      : `<div class="panel"><div class="empty">Ninguna apuesta con ese filtro.</div></div>`;
-    document.querySelectorAll("#all-picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+      : mp.length ? "" : `<div class="panel"><div class="empty">Ninguna apuesta con ese filtro.</div></div>`) + mpBlock(mp, true);
+    bindLinks($("#all-picks"));
     bindBetSort("bs-all", $("#all-picks"), draw);
   };
   let t;
@@ -894,6 +915,7 @@ function renderIndex(scope = "reg") {
   const todays = INDEX.games.filter(g => g.date === DAY && inScope(g, scope));
   const allBets = dayBets(todays);
   const picks = allBets.filter(b => b.value);
+  const mps = dayModelPicks(todays);
   const older = INDEX.games.filter(g => g.date !== DAY && inScope(g, scope));
   const hist = scope === "cup" ? [] : INDEX.history || [];
   const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok,
@@ -922,7 +944,7 @@ function renderIndex(scope = "reg") {
     <h2>${todays.some(g => g.result) ? "Picks de la jornada" : "Picks de hoy"} ${qh("ev", "picks con valor y EV")}</h2>
     <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos (la probabilidad del modelo supera a la que paga la casa). "Top 20" son los ${TOP_N} picks de mayor valor esperado (EV) entre todas las categorías; en cada categoría (equipo, puntos, rebotes, asistencias...) se ven sus ${TOP_N} mejores, con su color aunque no tengan valor. Toca un pick para ver el análisis del partido.</p>
     ${legend(thr)}
-    ${allBets.length ? segBar(allBets, "seg-idx", Object.keys(CATS).filter(k => k !== "all")) : ""}
+    ${allBets.length || mps.length ? segBar(allBets.concat(mps), "seg-idx", Object.keys(CATS).filter(k => k !== "all")) : ""}
     ${allBets.length ? betSortBar("bs-idx", true) : ""}
     ${allBets.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
       `<button type="button" data-grp="${k}" aria-pressed="${k === GROUP}">${t}</button>`).join("")}</div>` : ""}
@@ -955,10 +977,11 @@ function renderIndex(scope = "reg") {
   };
   const drawPicks = () => {
     const list = sortBets(SEG === "value" ? picks : allBets.filter(b => inSeg(b, SEG)).slice(0, TOP_N));
-    $("#picks").innerHTML = !list.length ? `<div class="panel"><div class="empty">${SEG !== "value" ? NO_LINES(SEG) : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`
+    const mp = MP_CATS[SEG] ? mps.filter(b => inSeg(b, SEG)).sort((x, y) => y.p - x.p).slice(0, TOP_N) : [];
+    $("#picks").innerHTML = (!list.length ? (mp.length ? "" : `<div class="panel"><div class="empty">${SEG !== "value" ? NO_LINES(SEG) : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`)
       : GROUP === "game" ? groupHtml(list)
-      : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`;
-    document.querySelectorAll("#picks tr.link").forEach(tr => tr.addEventListener("click", e => { if (e.target.tagName !== "A") location.hash = tr.dataset.go; }));
+      : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`) + mpBlock(mp, true);
+    bindLinks($("#picks"));
     document.querySelectorAll("#picks details.pgroup").forEach(d => d.addEventListener("toggle", () => {
       d.open ? open.add(d.dataset.id) : open.delete(d.dataset.id);
       const all = [...document.querySelectorAll("#picks details.pgroup")].every(x => x.open);
@@ -1271,9 +1294,10 @@ async function renderGame(id) {
     <h2>Apuestas de este partido ${qh("ev", "EV y colores")}</h2>
     <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
     ${legend(thr)}
-    ${d.bets.length ? segBar(d.bets, "seg-game") : ""}
+    ${d.bets.length || (d.model_picks || []).length ? segBar(d.bets.concat(d.model_picks || []), "seg-game") : ""}
     ${d.bets.length ? betSortBar("bs-game", false) : ""}
     <div class="panel tbl-wrap" id="bets"></div>
+    <div id="mp-game"></div>
     ${howto}
   </section>
   ${(d.parlays || []).length ? `<section class="section">
@@ -1301,7 +1325,7 @@ async function renderGame(id) {
     <div class="filters"><span class="lbl">Ordenar</span><select class="sortsel" id="sortsel" aria-label="Ordenar por"></select>
       <button type="button" id="sortdir" aria-pressed="false">Mayor a menor</button></div>
     <div class="panel tbl-wrap" id="props"></div>
-    <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
+    <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres; DD / TD probabilidad de doble-doble / triple-doble, contando puntos, rebotes, asistencias, robos y tapones); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV.${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
   <section class="section">
     <h2>Calcula tu apuesta</h2>
@@ -1321,10 +1345,11 @@ async function renderGame(id) {
   // apuestas de props del partido por jugador y estadística (over y/o under, con su EV)
   const propBets = {};
   d.bets.filter(b => b.kind === "prop").forEach(b => { (propBets[b.player + "|" + b.stat] ||= []).push(b); });
-  const casa = (p, k) => { const bs = propBets[p.name + "|" + k]; return bs ? bs.map(b => `${b.label.includes(" Over ") ? "O" : "U"} ${b.line} @ ${b.dec.toFixed(2)} ${evPill(b.ev, thr)}`).join("<br>") : "—"; };
+  const casa = (p, k) => { const bs = propBets[p.name + "|" + k]; return bs ? bs.map(b => `${YN[k] ? (b.side === "over" ? "Sí" : "No") : `${(b.side ? b.side === "over" : b.label.includes(" Over ")) ? "O" : "U"} ${b.line}`} @ ${b.dec.toFixed(2)} ${evPill(b.ev, thr)}`).join("<br>") : "—"; };
   const bestEv = (p, k) => Math.max(...(propBets[p.name + "|" + k] || []).map(b => b.ev), -9);
   const SUMMARY = ["pts", "reb", "ast", "fg3m", "pr", "pa", "ra", "pra", "stl", "blk", "stocks", "tov", "pf", "fgm", "fga",
-    "fg2m", "fg2a", "fg3a", "ftm", "fta"].filter(k => stats.includes(k));
+    "fg2m", "fg2a", "fg3a", "ftm", "fta", "dd", "td"].filter(k => stats.includes(k));
+  const cellV = (s, x) => YN[s] ? pct(x.mean, 0) : x.mean.toFixed(1), actV = (s, v) => YN[s] ? (v ? "sí" : "no") : v;
   const sortOpts = () => stat === "all" ? [["min", "Minutos"], ...SUMMARY.map(k => [k, STAT_LABEL[k]])]
     : [["mean", "Media"], ["min", "Minutos"], ["p_over", "P(over)"], ["ev", "EV de la casa"], ["name", "Nombre"]];
   const val = (p, key) => key === "min" ? p.min : key === "name" ? p.name : stat === "all" ? (p[key] ? p[key].mean : -1)
@@ -1345,14 +1370,14 @@ async function renderGame(id) {
     if (k === "all") {
       $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
       ${rows.map(p => `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
-        <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? p[s].mean.toFixed(1) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${p.actual[s]})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
+        <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? cellV(s, p[s]) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${actV(s, p.actual[s])})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
       ${played ? `<p class="muted">Entre paréntesis, lo que hizo en el partido real.</p>` : ""}`;
     } else {
     const hh = d.h2h && d.h2h.games.length;
     $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
     ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head">${esc(p.name)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
-      <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${st.mean}</b></td><td class="r num" data-label="Rango">${st.p10}–${st.p90}</td><td class="r num" data-label="Línea justa">${st.line}</td>
-      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
+      <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${YN[k] ? pct(st.mean, 0) : st.mean}</b></td><td class="r num" data-label="Rango">${YN[k] ? "—" : `${st.p10}–${st.p90}`}</td><td class="r num" data-label="Línea justa">${YN[k] ? "Sí / No" : st.line}</td>
+      <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : YN[k] ? `<b>${act ? "Sí" : "No"}</b>` : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
     }
     document.querySelectorAll("#props th.sort").forEach(t => t.addEventListener("click", () => {
       const key = t.dataset.s; if (key === sortK) sortAsc = !sortAsc; else { sortK = key; sortAsc = key === "name"; } draw();
@@ -1364,9 +1389,11 @@ async function renderGame(id) {
   document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
   const drawBets = () => {
     const list = sortBets(d.bets.filter(b => inSeg(b, SEG)));
+    const mp = (SEG === "all" || MP_CATS[SEG]) ? (d.model_picks || []).filter(b => inSeg(b, SEG)) : [];
+    $("#mp-game").innerHTML = mpBlock(mp, false);
     if (!d.bets.length) { $("#bets").innerHTML = `<div class="empty">Sin cuotas cargadas para este partido.</div>`; return; }
     $("#bets").innerHTML = list.length ? `<table class="stack">${betHead(false, list.some(b => b.result))}<tbody>${betRows(list, thr, false)}</tbody></table>`
-      : `<div class="empty">Sin apuestas de este tipo para este partido.</div>`;
+      : `<div class="empty">Sin apuestas con cuota de este tipo para este partido.</div>`;
     document.querySelectorAll("#bets button.more").forEach(btn => btn.addEventListener("click", () => {
       const row = $("#det-" + btn.dataset.i), open = row.hidden;
       row.hidden = !open; btn.setAttribute("aria-expanded", open);

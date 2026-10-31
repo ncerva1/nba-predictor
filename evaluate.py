@@ -38,7 +38,14 @@ def actual_line(players, name):
         out.update(ftm=v[12], fta=v[13])
     out.update(pra=out["pts"] + out["reb"] + out["ast"], pr=out["pts"] + out["reb"], pa=out["pts"] + out["ast"],
                ra=out["reb"] + out["ast"])
+    ten = sum(out[k] >= 10 for k in ("pts", "reb", "ast", "stl", "blk") if k in out)
+    out.update(dd=int(ten >= 2), td=int(ten >= 3))  # doble-doble / triple-doble (1.3.6)
     return out
+
+
+def is_over(b):
+    """Prop al over (o "sí" en doble-doble / triple-doble, que llevan "side")."""
+    return b["side"] == "over" if b.get("side") else " Over " in b["label"]
 
 
 def settle(b, g, res):
@@ -63,7 +70,7 @@ def settle(b, g, res):
         if al is None or al["min"] == 0 or st not in al:
             return None  # no jugó (o el box score no trae esa estadística): apuesta anulada
         x = al[st] - b["line"]
-        return None if x == 0 else int(x > 0) if " Over " in b["label"] else int(x < 0)
+        return None if x == 0 else int(x > 0) if is_over(b) else int(x < 0)
 
 
 def brier_ll(ps, ys):
@@ -122,7 +129,7 @@ def evaluate(date):
     played = [p for p in players if p["played"]]
     pstats = {}
     for st in ("min", "pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "stocks", "tov", "pf",
-               "fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta"):
+               "fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta", "dd", "td"):
         e = np.array([p["err"][st] for p in played if st in p["err"]])
         if not len(e):
             continue
