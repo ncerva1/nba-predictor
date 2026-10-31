@@ -1,14 +1,14 @@
 {
  "season": "2026-27",
- "source": "nba.com/games?date=2026-10-30 (etiqueta Emirates NBA Cup y grupo de cada partido)",
- "note": "Partidos de Copa por fecha. build_site.py marca como \"competition\": \"cup\" (con su grupo en cup_round) todo partido de games/*.json que esté aquí, aunque el JSON del partido no lo diga. Añadir cada noche de Copa nueva (martes y viernes de la fase de grupos) antes de correr build_site.py.",
+ "source": "ESPN, calendario oficial de la fase de grupos (espn.com/nba/story/_/id/49577473) + nba.com/games?date=2026-10-30",
+ "note": "Calendario completo de la fase de grupos (60 partidos). build_site.py marca como Copa (competition \"cup\" + cup_round) todo partido de games/*.json que coincida por fecha y equipos, y como liga cualquier otro partido de esas mismas fechas: la rutina diaria no tiene que hacer nada. Solo falta añadir las eliminatorias (cuartos 4-5 dic, semis 8-9 dic, final 11 dic) cuando se conozcan los cruces, con round \"Cuartos de final\", \"Semifinal\" o \"Final\".",
  "groups": {
-  "Este A": ["DET", "BKN", "ORL", "TOR"],
-  "Este B": ["NYK", "PHI", "IND", "MIA"],
-  "Este C": ["CHA", "WAS", "CHI", "BOS"],
-  "Oeste A": ["HOU", "DAL", "DEN", "PHX"],
-  "Oeste B": ["LAC", "MIN"],
-  "Oeste C": ["LAL", "GSW"]
+  "Este A": ["DET", "TOR", "ORL", "MIL", "BKN"],
+  "Este B": ["NYK", "CLE", "PHI", "MIA", "IND"],
+  "Este C": ["BOS", "ATL", "CHA", "CHI", "WAS"],
+  "Oeste A": ["DEN", "HOU", "PHX", "DAL", "UTA"],
+  "Oeste B": ["OKC", "MIN", "LAC", "NOP", "MEM"],
+  "Oeste C": ["SAS", "LAL", "POR", "GSW", "SAC"]
  },
  "games": [
   {"date": "2026-10-30", "away": "CHA", "home": "WAS", "round": "Grupo Este C"},
@@ -20,6 +20,77 @@
   {"date": "2026-10-30", "away": "HOU", "home": "DAL", "round": "Grupo Oeste A"},
   {"date": "2026-10-30", "away": "LAC", "home": "MIN", "round": "Grupo Oeste B"},
   {"date": "2026-10-30", "away": "LAL", "home": "GSW", "round": "Grupo Oeste C"},
-  {"date": "2026-10-30", "away": "DEN", "home": "PHX", "round": "Grupo Oeste A"}
- ]
+  {"date": "2026-10-30", "away": "DEN", "home": "PHX", "round": "Grupo Oeste A"},
+  {"date": "2026-11-06", "away": "WAS", "home": "ATL", "round": "Grupo Este C"},
+  {"date": "2026-11-06", "away": "BOS", "home": "CHA", "round": "Grupo Este C"},
+  {"date": "2026-11-06", "away": "PHI", "home": "CLE", "round": "Grupo Este B"},
+  {"date": "2026-11-06", "away": "UTA", "home": "DAL", "round": "Grupo Oeste A"},
+  {"date": "2026-11-06", "away": "OKC", "home": "MEM", "round": "Grupo Oeste B"},
+  {"date": "2026-11-06", "away": "TOR", "home": "MIL", "round": "Grupo Este A"},
+  {"date": "2026-11-06", "away": "MIN", "home": "NOP", "round": "Grupo Oeste B"},
+  {"date": "2026-11-06", "away": "POR", "home": "LAL", "round": "Grupo Oeste C"},
+  {"date": "2026-11-06", "away": "SAS", "home": "SAC", "round": "Grupo Oeste C"},
+  {"date": "2026-11-13", "away": "NYK", "home": "IND", "round": "Grupo Este B"},
+  {"date": "2026-11-13", "away": "MIL", "home": "ORL", "round": "Grupo Este A"},
+  {"date": "2026-11-13", "away": "CLE", "home": "MIA", "round": "Grupo Este B"},
+  {"date": "2026-11-13", "away": "ATL", "home": "CHI", "round": "Grupo Este C"},
+  {"date": "2026-11-13", "away": "MEM", "home": "NOP", "round": "Grupo Oeste B"},
+  {"date": "2026-11-13", "away": "UTA", "home": "HOU", "round": "Grupo Oeste A"},
+  {"date": "2026-11-13", "away": "GSW", "home": "SAS", "round": "Grupo Oeste C"},
+  {"date": "2026-11-13", "away": "POR", "home": "SAC", "round": "Grupo Oeste C"},
+  {"date": "2026-11-13", "away": "OKC", "home": "LAC", "round": "Grupo Oeste B"},
+  {"date": "2026-11-20", "away": "CHA", "home": "ATL", "round": "Grupo Este C"},
+  {"date": "2026-11-20", "away": "ORL", "home": "BKN", "round": "Grupo Este A"},
+  {"date": "2026-11-20", "away": "IND", "home": "CLE", "round": "Grupo Este B"},
+  {"date": "2026-11-20", "away": "TOR", "home": "DET", "round": "Grupo Este A"},
+  {"date": "2026-11-20", "away": "WAS", "home": "CHI", "round": "Grupo Este C"},
+  {"date": "2026-11-20", "away": "NOP", "home": "OKC", "round": "Grupo Oeste B"},
+  {"date": "2026-11-20", "away": "PHX", "home": "UTA", "round": "Grupo Oeste A"},
+  {"date": "2026-11-20", "away": "HOU", "home": "DEN", "round": "Grupo Oeste A"},
+  {"date": "2026-11-20", "away": "SAC", "home": "LAL", "round": "Grupo Oeste C"},
+  {"date": "2026-11-24", "away": "DET", "home": "ORL", "round": "Grupo Este A"},
+  {"date": "2026-11-24", "away": "BOS", "home": "WAS", "round": "Grupo Este C"},
+  {"date": "2026-11-24", "away": "DAL", "home": "DEN", "round": "Grupo Oeste A"},
+  {"date": "2026-11-25", "away": "MIA", "home": "PHI", "round": "Grupo Este B"},
+  {"date": "2026-11-25", "away": "CHI", "home": "CHA", "round": "Grupo Este C"},
+  {"date": "2026-11-25", "away": "CLE", "home": "NYK", "round": "Grupo Este B"},
+  {"date": "2026-11-25", "away": "MIN", "home": "OKC", "round": "Grupo Oeste B"},
+  {"date": "2026-11-25", "away": "LAC", "home": "MEM", "round": "Grupo Oeste B"},
+  {"date": "2026-11-25", "away": "BKN", "home": "MIL", "round": "Grupo Este A"},
+  {"date": "2026-11-25", "away": "PHX", "home": "HOU", "round": "Grupo Oeste A"},
+  {"date": "2026-11-25", "away": "SAC", "home": "GSW", "round": "Grupo Oeste C"},
+  {"date": "2026-11-25", "away": "SAS", "home": "POR", "round": "Grupo Oeste C"},
+  {"date": "2026-11-27", "away": "MIA", "home": "NYK", "round": "Grupo Este B"},
+  {"date": "2026-11-27", "away": "MIL", "home": "DET", "round": "Grupo Este A"},
+  {"date": "2026-11-27", "away": "PHI", "home": "IND", "round": "Grupo Este B"},
+  {"date": "2026-11-27", "away": "BKN", "home": "TOR", "round": "Grupo Este A"},
+  {"date": "2026-11-27", "away": "ATL", "home": "BOS", "round": "Grupo Este C"},
+  {"date": "2026-11-27", "away": "MEM", "home": "MIN", "round": "Grupo Oeste B"},
+  {"date": "2026-11-27", "away": "DAL", "home": "PHX", "round": "Grupo Oeste A"},
+  {"date": "2026-11-27", "away": "LAL", "home": "SAS", "round": "Grupo Oeste C"},
+  {"date": "2026-11-27", "away": "DEN", "home": "UTA", "round": "Grupo Oeste A"},
+  {"date": "2026-11-27", "away": "NOP", "home": "LAC", "round": "Grupo Oeste B"},
+  {"date": "2026-11-27", "away": "GSW", "home": "POR", "round": "Grupo Oeste C"}
+ ],
+ "group_stage_dates": [
+  "2026-10-30",
+  "2026-11-06",
+  "2026-11-13",
+  "2026-11-20",
+  "2026-11-24",
+  "2026-11-25",
+  "2026-11-27"
+ ],
+ "knockout": {
+  "quarterfinals": [
+   "2026-12-04",
+   "2026-12-05"
+  ],
+  "semifinals": [
+   "2026-12-08",
+   "2026-12-09"
+  ],
+  "final": "2026-12-11",
+  "final_venue": "Hinkle Fieldhouse, Indianapolis"
+ }
 }

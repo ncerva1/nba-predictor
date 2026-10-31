@@ -398,8 +398,9 @@ def cup_round(x):
     fechas del H2H pueden ir un día corridas) y cup/<temporada>.json para la actual."""
     pair = {x["home"], x["away"]}
     sched = cup_schedule()
-    if (x["date"], x["away"], x["home"]) in sched:
-        return sched[(x["date"], x["away"], x["home"])] or "Copa"
+    k = (x["date"], frozenset(pair))
+    if k in sched:
+        return sched[k] or "Copa"
     C = cup_history() or {}
     d = datetime.fromisoformat(x["date"])
     for c in C.get("games", []):
@@ -408,22 +409,42 @@ def cup_round(x):
     return None
 
 
+_CUP = None
+
+
+def _cup_files():
+    global _CUP
+    if _CUP is None:
+        _CUP = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(HERE, "cup", "20??-??.json")))]
+    return _CUP
+
+
 def cup_schedule():
-    """cup/<temporada>.json: {(fecha, visitante, local): ronda} de los partidos de Copa ya conocidos."""
+    """cup/<temporada>.json: {(fecha, {equipo, equipo}): ronda} de los partidos de Copa conocidos (por pareja de
+    equipos, así no importa si una fuente invierte local y visitante)."""
     out = {}
-    for p in glob.glob(os.path.join(HERE, "cup", "20??-??.json")):
-        for x in json.load(open(p)).get("games", []):
-            out[(x["date"], x["away"], x["home"])] = x.get("round")
+    for d in _cup_files():
+        for x in d.get("games", []):
+            out[(x["date"], frozenset((x["away"], x["home"])))] = x.get("round")
     return out
 
 
+def cup_dates():
+    """Fechas cuyo calendario de Copa está completo en cup/<temporada>.json (fase de grupos): en ellas, un partido
+    que no esté en la lista es de liga aunque su JSON diga otra cosa."""
+    return {f for d in _cup_files() for f in d.get("group_stage_dates", [])}
+
+
 def tag_cup(g):
-    """Marca el partido como de Copa si está en cup/<temporada>.json (la rutina diaria no tiene que saberlo)."""
-    k = (g["date"], g["away"], g["home"])
+    """Separa liga y Copa según cup/<temporada>.json (la rutina diaria no tiene que saberlo)."""
+    k = (g["date"], frozenset((g["away"], g["home"])))
     sched = cup_schedule()
-    if k in sched and g.get("competition") != "cup":
+    if k in sched:
         g["competition"] = "cup"
-        g.setdefault("cup_round", sched[k])
+        g["cup_round"] = g.get("cup_round") or sched[k] or "Copa"
+    elif g["date"] in cup_dates() and g.get("competition") == "cup":
+        g["competition"] = "regular"
+        g.pop("cup_round", None)
     return g
 
 
