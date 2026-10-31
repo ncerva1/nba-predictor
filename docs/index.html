@@ -379,6 +379,25 @@ tr.detail td { background: var(--bg) }
 .pg-tools { display: flex; justify-content: flex-end; margin-bottom: -2px }
 .pg-tools button { font: 500 12px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
 /* Mi combinada: botón "+" en cada pick y panel flotante (minimizado = píldora abajo a la izquierda) */
+/* Tablas de picks y player props: en móvil filas compactas que se deslizan a los lados (no se apilan) */
+.swipe-hint { display: none }
+@media (max-width: 640px) {
+  .swipe-hint { display: block; position: sticky; left: 0; margin: -4px 0 6px; font: 500 10.5px var(--mono); color: var(--muted); letter-spacing: .03em }
+  .tbl-wrap { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain }
+  .panel.tbl-wrap:has(> table.swipe) { padding: 12px 0 12px 12px }
+  table.swipe { width: max-content; min-width: 100%; font-size: 13px }
+  table.swipe th { padding: 6px 8px; font-size: 10px }
+  table.swipe td { padding: 7px 8px; white-space: nowrap }
+  table.swipe .pk { position: sticky; left: 0; z-index: 1; background: var(--surface); box-shadow: 1px 0 0 var(--line);
+    white-space: normal; min-width: 128px; max-width: 46vw; text-align: left }
+  table.swipe td.pk { font-size: 13px; line-height: 1.25 }
+  table.swipe td.pk .muted { display: block; font-size: 11px }
+  table.swipe td.pk .pick-h { gap: 6px }
+  table.swipe td.r-sm { white-space: normal; min-width: 150px }
+  table.swipe tr.link:hover td.pk { background: var(--surface) }
+  table.swipe tr.detail td { white-space: normal; padding: 0 }
+  table.swipe tr.detail td > * { position: sticky; left: 0; width: calc(100vw - 72px); padding: 8px }
+}
 .pick-h { display: flex; align-items: flex-start; gap: 10px; justify-content: space-between }
 .pick-h > div { min-width: 0 }
 .addc { flex: none; display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--accent); background: var(--surface);
@@ -457,6 +476,7 @@ tr.detail td { background: var(--bg) }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pflag:not(.sin_datos) { color: #f5b25c; background: #33230f; border-color: #563a17 } }
 :root[data-theme="dark"] .pflag:not(.sin_datos) { color: #f5b25c; background: #33230f; border-color: #563a17 }
 .pf-note { display: block; margin-top: 3px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: normal; text-transform: none; letter-spacing: 0 }
+.pf-note[hidden] { display: none }
 .calc-warn { color: #8a4b00 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .calc-warn { color: #f5b25c } }
 :root[data-theme="dark"] .calc-warn { color: #f5b25c }
@@ -667,12 +687,14 @@ function updatesStrip() {
 }
 // récord de parlays: [ganados, perdidos] (las nulas no cuentan)
 const plRec = pls => [pls.filter(p => p.result === "won").length, pls.filter(p => p.result === "lost").length];
+// En móvil, las tablas de picks y player props no se apilan: se deslizan a los lados con la 1.ª columna fija
+const SWIPE_HINT = `<div class="swipe-hint">Desliza la tabla a los lados para ver más columnas →</div>`;
 const resPill = r => r ? `<span class="res ${r}">${RES[r]}</span>` : "";
 function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
   return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
+    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
     <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
@@ -682,7 +704,7 @@ function betRows(bets, thr, withGame) {
     ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="${withRes ? 9 : 8}">${bookList(b)}</td></tr>` : ""}`).join("");
 }
 const bth = (k, t, c = "r") => `<th class="${c} sort" data-bs="${k}"${BS.k === k ? ` aria-sort="${BS.asc ? "ascending" : "descending"}"` : ""}>${t}</th>`;
-const betHead = (withGame, withRes) => `<thead><tr>${withGame ? bth("game", "Partido", "") : ""}${bth("pick", "Pick", "")}${bth("dec", "Cuota")}
+const betHead = (withGame, withRes) => `<thead><tr>${withGame ? bth("game", "Partido", "") : ""}${bth("pick", "Pick", "pk")}${bth("dec", "Cuota")}
   ${bth("p", "Prob. modelo")}${bth("implied", "Prob. casa")}<th class="r">Cuota justa</th>${bth("ev", "EV")}<th>Mejor casa</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead>`;
 
 // Picks del modelo sin cuota (tiros de campo, doble-doble, triple-doble): las casas que leemos no publican esas líneas,
@@ -713,9 +735,9 @@ function mpBlock(list, withGame) {
   return `<div class="mp-wrap"><h3 class="mp-h">Picks del modelo sin cuota de casa</h3>
   <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Calcula tu apuesta</b> en la página del partido.</p>
   ${sts.length > 1 ? `<div class="filters mp-f" role="group" aria-label="Estadística">${["all", ...sts].map(k => `<button type="button" data-mpst="${k}" aria-pressed="${k === MP_ST}">${k === "all" ? "Todas" : STAT_BTN[k] || STAT_LABEL[k]} · ${k === "all" ? list.length : list.filter(b => b.stat === k).length}</button>`).join("")}</div>` : ""}
-  <div class="panel tbl-wrap"><table class="stack"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th>Pick</th><th class="r">Prob. modelo</th><th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
+  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th class="pk">Pick</th><th class="r">Prob. modelo</th><th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
   ${list.map(b => `<tr data-st="${b.stat}"${vis(b) ? "" : " hidden"}${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head"><div>${esc(b.label)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
+    <td class="head pk"><div>${esc(b.label)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td><td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
     <td class="r num" data-label="Cuota mínima"><b>${b.min_dec.toFixed(2)}</b></td><td class="r num" data-label="Su promedio">${b.ref != null ? b.ref : "—"}</td>
     ${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>`).join("")}</tbody></table></div>
@@ -942,7 +964,7 @@ function renderAll(scope) {
     const hit = b => inSeg(b, SEG) && (!q || (b.label + " " + b._game).toLowerCase().includes(q));
     const list = sortBets(all.filter(hit)), mp = MP_CATS[SEG] ? mps.filter(hit).sort((x, y) => y.p - x.p) : [];
     $("#all-picks").innerHTML = (list.length ? `<p class="muted">${list.length} apuesta${list.length > 1 ? "s" : ""} · ${list.filter(b => b.value).length} con valor</p>
-      <div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`
+      <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`
       : mp.length ? "" : `<div class="panel"><div class="empty">Ninguna apuesta con ese filtro.</div></div>`) + mpBlock(mp, true);
     bindLinks($("#all-picks"));
     bindBetSort("bs-all", $("#all-picks"), draw);
@@ -1015,7 +1037,7 @@ function renderIndex(scope = "reg") {
       return `<details class="pgroup" data-id="${g.id}"${open.has(g.id) ? " open" : ""}>
         <summary><span class="pg-t">${esc(g.away)} @ ${esc(g.home)}</span><span class="pg-x">${info}</span>
           <span class="pg-r"><span class="pg-n">${bets.length} pick${bets.length > 1 ? "s" : ""}</span>${evPill(Math.max(...bets.map(b => b.ev)), thr)}</span></summary>
-        <div class="pg-body"><table class="stack">${betHead(true, bets.some(b => b.result))}<tbody>${betRows(bets, thr, true)}</tbody></table>
+        <div class="pg-body"><div class="tbl-wrap">${SWIPE_HINT}<table class="swipe">${betHead(true, bets.some(b => b.result))}<tbody>${betRows(bets, thr, true)}</tbody></table></div>
           <a class="pg-go" href="#${g.id}">Ver análisis del partido →</a></div></details>`;
     }).join("")}</div>`;
   };
@@ -1024,7 +1046,7 @@ function renderIndex(scope = "reg") {
     const mp = MP_CATS[SEG] ? mps.filter(b => inSeg(b, SEG)).sort((x, y) => y.p - x.p) : [];
     $("#picks").innerHTML = (!list.length ? (mp.length ? "" : `<div class="panel"><div class="empty">${SEG !== "value" ? NO_LINES(SEG) : `Hoy el modelo no encuentra picks con EV ≥ +${(thr * 100).toFixed(0)}%.`}</div></div>`)
       : GROUP === "game" ? groupHtml(list)
-      : `<div class="panel tbl-wrap"><table class="stack">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`) + mpBlock(mp, true);
+      : `<div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe">${betHead(true, list.some(b => b.result))}<tbody>${betRows(list, thr, true)}</tbody></table></div>`) + mpBlock(mp, true);
     bindLinks($("#picks"));
     document.querySelectorAll("#picks details.pgroup").forEach(d => d.addEventListener("toggle", () => {
       d.open ? open.add(d.dataset.id) : open.delete(d.dataset.id);
@@ -1413,14 +1435,14 @@ async function renderGame(id) {
     const th = (key, txt, cls = "r") => `<th class="${cls} sort" data-s="${key}"${key === sortK ? ` aria-sort="${sortAsc ? "ascending" : "descending"}"` : ""}>${txt}</th>`;
     const played = players.some(p => p.actual !== undefined);
     if (k === "all") {
-      $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
-      ${rows.map(p => `<tr><td class="head">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
+      $("#props").innerHTML = `${SWIPE_HINT}<table class="swipe"><thead><tr>${th("name", "Jugador", "pk")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
+      ${rows.map(p => `<tr><td class="head pk">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
         <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? cellV(s, p[s]) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${actV(s, p.actual[s])})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
       ${played ? `<p class="muted">Entre paréntesis, lo que hizo en el partido real.</p>` : ""}`;
     } else {
     const hh = d.h2h && d.h2h.games.length;
-    $("#props").innerHTML = `<table class="stack"><thead><tr>${th("name", "Jugador", "")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
-    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
+    $("#props").innerHTML = `${SWIPE_HINT}<table class="swipe"><thead><tr>${th("name", "Jugador", "pk")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
+    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head pk">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${YN[k] ? pct(st.mean, 0) : st.mean}</b></td><td class="r num" data-label="Rango">${YN[k] ? "—" : `${st.p10}–${st.p90}`}</td><td class="r num" data-label="Línea justa">${YN[k] ? "Sí / No" : st.line}</td>
       <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : YN[k] ? `<b>${act ? "Sí" : "No"}</b>` : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
     }
@@ -1438,7 +1460,7 @@ async function renderGame(id) {
     $("#mp-game").innerHTML = mpBlock(mp, false);
     $("#bets").hidden = !list.length && !!mp.length;  // sin cuotas de este tipo pero con picks del modelo: solo la tabla de abajo
     if (!d.bets.length) { $("#bets").innerHTML = `<div class="empty">Sin cuotas cargadas para este partido.</div>`; return; }
-    $("#bets").innerHTML = list.length ? `<table class="stack">${betHead(false, list.some(b => b.result))}<tbody>${betRows(list, thr, false)}</tbody></table>`
+    $("#bets").innerHTML = list.length ? `${SWIPE_HINT}<table class="swipe">${betHead(false, list.some(b => b.result))}<tbody>${betRows(list, thr, false)}</tbody></table>`
       : `<div class="empty">Sin apuestas con cuota de este tipo para este partido.</div>`;
     document.querySelectorAll("#bets button.more").forEach(btn => btn.addEventListener("click", () => {
       const row = $("#det-" + btn.dataset.i), open = row.hidden;
