@@ -1391,6 +1391,7 @@ async function renderGame(id) {
     const list = sortBets(d.bets.filter(b => inSeg(b, SEG)));
     const mp = (SEG === "all" || MP_CATS[SEG]) ? (d.model_picks || []).filter(b => inSeg(b, SEG)) : [];
     $("#mp-game").innerHTML = mpBlock(mp, false);
+    $("#bets").hidden = !list.length && !!mp.length;  // sin cuotas de este tipo pero con picks del modelo: solo la tabla de abajo
     if (!d.bets.length) { $("#bets").innerHTML = `<div class="empty">Sin cuotas cargadas para este partido.</div>`; return; }
     $("#bets").innerHTML = list.length ? `<table class="stack">${betHead(false, list.some(b => b.result))}<tbody>${betRows(list, thr, false)}</tbody></table>`
       : `<div class="empty">Sin apuestas con cuota de este tipo para este partido.</div>`;
