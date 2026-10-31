@@ -24,6 +24,12 @@ Para solo marcar una etapa sin re-simular nada: `python build_site.py ninguno --
 que no coincide con ningún partido reconstruye solo `index.json`). `index.json` guarda `updates` = `{jornada: {etapa:
 hora UTC}}` (últimas 14 jornadas) y `last_stage`.
 
+**Commit de cada etapa: siempre `git add -A docs/`** (no solo `docs/data/*.json`). Desde "Mi combinada" (PR #40),
+`build_site.py` escribe `docs/data/sims/<id>.bin` para cada partido sin jugar y lo borra al cargar su resultado: la
+mañana y la revisión de bajas tienen que subir los `.bin` nuevos, y la de resultados tiene que subir los borrados.
+Si una jornada ya publicada quedó sin esos archivos, `python build_site.py <fecha> --samples-only` los regenera sin
+cambiar los picks.
+
 ## Publicar gratis en GitHub Pages
 1. Crear un repositorio en GitHub (por ejemplo `nba-predictor`) y subir esta carpeta `nba_predictor/` como raíz.
 2. En el repo: Settings → Pages → Source: "Deploy from a branch" → Branch `main`, carpeta `/docs`.
