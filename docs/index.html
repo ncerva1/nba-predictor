@@ -186,6 +186,10 @@ tr.link { cursor: pointer }
 tr.link:hover td { background: var(--accent-soft) }
 .pill { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap }
 .pill.value { background: var(--good-soft); color: var(--good) }
+.wo-d { font: 600 11px var(--mono); margin-left: 4px; padding: 1px 5px; border-radius: 4px; background: var(--line); color: var(--muted) }
+.wo-d.up { background: var(--good-soft); color: var(--good) } .wo-d.dn { background: var(--bad-soft); color: var(--bad) }
+.wo-c { white-space: nowrap } .wo-who { font-size: 13px } .wo-who .tag { font: 500 10px var(--mono); margin-left: 4px; color: var(--bad) }
+.wo-note { margin: 8px 0 12px; font-size: 14px } .wo-real h3 { margin: 18px 0 6px; font-size: 15px }
 .pill.neg { background: var(--bad-soft); color: var(--bad) }
 .pill.flat { background: var(--accent-soft); color: var(--accent) }
 .kind { font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em }
@@ -1346,6 +1350,7 @@ async function renderGame(id) {
     <div class="panel tbl-wrap" id="props"></div>
     <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres; DD / TD probabilidad de doble-doble / triple-doble, contando puntos, rebotes, asistencias, robos y tapones); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV. Etiquetas: <b>Rookie</b> = novato, <b>Sin 2025-26</b> = no jugó la temporada pasada (lesión), <b>Sin datos previos</b> = el modelo no tiene su temporada pasada; con tan poca historia sus proyecciones varían mucho más (pasa el cursor o toca la etiqueta para ver el detalle).${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
+  ${woSection(d)}
   <section class="section">
     <h2>Calcula tu apuesta</h2>
     <p class="lede">Para las props que las casas que leemos no publican (combinadas, tiros, libres, faltas, robos + tapones...) o para comparar con tu casa: elige jugador y estadística, escribe la línea y la cuota decimal que te dan, y el modelo te dice la probabilidad y el EV.</p>
@@ -1426,10 +1431,72 @@ async function renderGame(id) {
   draw();
   addFolds();
   bindCalc(players, thr);
+  woBind(d);
   if (d.matchup_view) {
     document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
     mvDraw(d, a);
   }
+}
+
+// "Sin un jugador" (d.without, de without.py): cómo cambian los compañeros si un jugador no juega.
+// Modelo = misma simulación sin él (sus minutos y tiros pasan a los demás); Real = partidos de esta temporada sin él.
+const WO_SUM = ["min", "pts", "reb", "ast", "fg3m", "pra"];
+function woSection(d) {
+  const W = d.without; if (!W) return "";
+  const g = d.game;
+  return `<section class="section" id="wo">
+    <h2>Si no juega… ${qh("sin", "sin un jugador")}</h2>
+    <p class="lede">Elige un jugador y mira cómo cambian las proyecciones de sus compañeros si no juega (baja de última hora, minutos restringidos o descanso). Útil para ver qué props suben cuando se confirma una baja.</p>
+    <div class="filters" role="group" aria-label="Equipo" id="wo-teams"><span class="lbl">Equipo</span>${[g.away, g.home].map(t =>
+      `<button type="button" data-t="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Jugador que no juega" id="wo-who"></div>
+    <div class="filters"><span class="lbl">Ver</span><select class="sortsel" id="wo-stat" aria-label="Estadística"></select></div>
+    <div id="wo-body"></div>
+  </section>`;
+}
+function woBind(d) {
+  const W = d.without; if (!W) return;
+  let t = d.game.away, who = null, k = "all";
+  const delta = (x, y, p) => { if (x == null || y == null) return ""; const dl = y - x, s = p ? Math.round(dl * 100) : Math.round(dl * 10) / 10;
+    const th = p ? 3 : 0.5; return `<span class="wo-d ${dl >= (p ? .03 : th) ? "up" : dl <= -(p ? .03 : th) ? "dn" : ""}">${s > 0 ? "+" : ""}${p ? s + "%" : s.toFixed(1)}</span>`; };
+  const cell = (x, y, p) => x == null && y == null ? "—" : `<span class="wo-c">${x == null ? "—" : p ? pct(x, 0) : x.toFixed(1)} → <b>${y == null ? "—" : p ? pct(y, 0) : y.toFixed(1)}</b>${delta(x, y, p)}</span>`;
+  const stats = Object.keys(STAT_LABEL).filter(s => Object.values(W[t].base).some(r => r[s]));
+  $("#wo-stat").innerHTML = [["all", "Resumen"], ...stats.map(s => [s, STAT_LABEL[s]])].map(([v, x]) => `<option value="${v}">${x}</option>`).join("");
+  const draw = () => {
+    const T = W[t], list = [...T.absent.map(x => ({ ...x, kind: "model" })), ...T.out_today.filter(x => x.real).map(x => ({ ...x, kind: "out" }))];
+    if (!list.some(x => x.name === who)) who = list.length ? list[0].name : null;
+    document.querySelectorAll("#wo-teams button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === t));
+    $("#wo-who").innerHTML = `<span class="lbl">Sin</span>` + list.map(x => `<button type="button" class="wo-who" data-n="${esc(x.name)}" aria-pressed="${x.name === who}">${esc(x.name)}${x.kind === "out" ? '<span class="tag">OUT hoy</span>' : x.p_play < 1 ? `<span class="tag">duda</span>` : ""}</button>`).join("");
+    document.querySelectorAll("#wo-who button").forEach(b => b.addEventListener("click", () => { who = b.dataset.n; draw(); }));
+    const A = list.find(x => x.name === who);
+    if (!A) { $("#wo-body").innerHTML = `<div class="empty">Sin jugadores para simular en ${esc(t)}.</div>`; return; }
+    const R = A.real, M = A.model, B = T.base;
+    let html = "";
+    if (M) {
+      const rows = Object.keys(M).filter(n => B[n]).sort((x, y) => k === "all" ? (M[y].pts?.[0] - B[y].pts?.[0]) - (M[x].pts?.[0] - B[x].pts?.[0])
+        : M[x][k] && M[y][k] ? (M[y][k][1] - B[y][k][1]) - (M[x][k][1] - B[x][k][1]) : 0);
+      html += `<p class="wo-note">Sin <b>${esc(A.name)}</b> (${A.min} min proyectados${A.p_play < 1 ? `, hoy juega en el ${pct(A.p_play, 0)} de las simulaciones` : ""}) sus minutos se reparten entre los que juegan y ${esc(t)} pasa de <b>${A.team_pts[0].toFixed(1)}</b> a <b>${A.team_pts[1].toFixed(1)}</b> puntos proyectados.</p>`;
+      if (k === "all") html += `<div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Compañero</th>${WO_SUM.map(s => `<th class="r">${s === "min" ? "Min" : STAT_SHORT[s]}</th>`).join("")}</tr></thead><tbody>
+        ${rows.map(n => `<tr><td class="head">${esc(n)}</td>${WO_SUM.map(s => `<td class="r num" data-label="${s === "min" ? "Minutos" : STAT_LABEL[s]}">${s === "min" ? cell(B[n].min, M[n].min) : cell(B[n][s]?.[0], M[n][s]?.[0])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+      else html += `<div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Compañero</th><th class="r">Línea</th><th class="r">Media con → sin</th><th class="r">P(over) con → sin</th>${R ? '<th class="r">Real con → sin</th>' : ""}</tr></thead><tbody>
+        ${rows.filter(n => B[n][k] && M[n][k]).map(n => { const rm = R && R.mates[n]; return `<tr><td class="head">${esc(n)}</td><td class="r num" data-label="Línea">${B[n][k][2]}</td>
+          <td class="r num" data-label="Media">${cell(B[n][k][0], M[n][k][0])}</td><td class="r num" data-label="P(over)">${cell(B[n][k][1], M[n][k][1], true)}</td>
+          ${R ? `<td class="r num" data-label="Real">${rm && rm.out[k] != null ? cell(rm.in?.[k], rm.out[k]) : "—"}</td>` : ""}</tr>`; }).join("")}</tbody></table></div>`;
+    } else html += `<p class="wo-note"><b>${esc(A.name)}</b> está fuera hoy: el modelo ya proyecta a ${esc(t)} sin él (tabla de player props). Aquí va lo que hicieron sus compañeros en los partidos reales sin él.</p>`;
+    if (R) {
+      const ks = (k === "all" ? WO_SUM : ["min", k]);
+      const mates = Object.entries(R.mates).sort((x, y) => (y[1].out.min || 0) - (x[1].out.min || 0));
+      html += `<div class="wo-real"><h3>Partidos reales sin ${esc(A.name)}</h3>
+        <p class="muted">Esta temporada ${esc(t)} jugó ${R.n_out} partido${R.n_out > 1 ? "s" : ""} sin él (${R.games_out.map(esc).join(", ")}) y ${R.n_in} con él. Promedio de cada compañero con él → sin él; con tan pocos partidos, tómalo como pista, no como regla.</p>
+        <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Compañero</th><th class="r">PJ sin</th>${ks.map(s => `<th class="r">${s === "min" ? "Min" : STAT_SHORT[s]}</th>`).join("")}</tr></thead><tbody>
+        ${mates.map(([n, m]) => `<tr><td class="head">${esc(n)}</td><td class="r num" data-label="PJ sin él">${m.out.n}</td>${ks.map(s => `<td class="r num" data-label="${s === "min" ? "Minutos" : STAT_LABEL[s]}">${m.out[s] == null ? "—" : cell(m.in?.[s], m.out[s])}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`;
+    } else if (M) html += `<p class="foot">Esta temporada ${esc(t)} no ha jugado ningún partido sin ${esc(A.name)}: solo hay proyección del modelo.</p>`;
+    if (M) html += `<p class="foot">Modelo: la misma simulación del partido con ${esc(A.name)} fuera. Sus minutos se reparten entre los demás y sus tiros pasan a los compañeros; al ataque de ${esc(t)} se le resta una parte de lo que aporta por encima de un suplente. Línea = la de la casa si existe, si no la línea justa con él; P(over) es la probabilidad de superar esa misma línea con y sin él. El color marca los cambios de 0.5 o más (3 puntos de probabilidad).</p>`;
+    $("#wo-body").innerHTML = html;
+  };
+  document.querySelectorAll("#wo-teams button").forEach(b => b.addEventListener("click", () => { t = b.dataset.t; who = null; draw(); }));
+  $("#wo-stat").addEventListener("change", e => { k = e.target.value; draw(); });
+  draw();
 }
 
 // Calculadora: P(over) sale de la escalera de la simulación (ladder[k] = P(estadística >= k))
@@ -1529,6 +1596,10 @@ const GUIDE = [
     <dt>Estilo de juego</dt><dd>Cuánto usa el equipo cada tipo de jugada (pick &amp; roll, aislamiento, transición…), cuántos puntos saca por jugada y cuánto concede el rival a esa jugada.</dd></dl>`],
   ["h2h", "Enfrentamientos", "Enfrentamientos esta temporada y la pasada", () => `<p>Los partidos entre ambos equipos esta temporada y la anterior, de liga y de Copa, con el marcador, la máxima ventaja de cada uno y si hubo paliza (ventaja de 20 o más en algún momento). El modelo usa estos partidos para dar peso extra a lo que hizo cada jugador contra este rival.</p>
     <p>En los player props, la columna <b>Vs rival</b> muestra el promedio del jugador en esos partidos y cuántas veces superó la línea: <span class="pill value">3/4 over</span> = la superó en 3 de 4 partidos.</p>`],
+  ["sin", "Si no juega…", "Si no juega un jugador", () => `<p>En cada partido, la sección <b>Si no juega…</b> muestra cómo cambian sus compañeros si un jugador importante no juega (los que tienen 20+ minutos proyectados y los que están en duda).</p>
+    <ul><li><b>Modelo</b>: se repite la misma simulación del partido con ese jugador fuera. Sus minutos se reparten entre los que juegan y sus tiros pasan a los compañeros; el ataque del equipo baja un poco según lo que aporta por encima de un suplente. Verás la media <b>con él → sin él</b> y, por estadística, la probabilidad de superar la misma línea.</li>
+    <li><b>Real</b>: los partidos de esta temporada en que su equipo jugó sin él, con el promedio de cada compañero con y sin él. Los que ya están <b>OUT hoy</b> solo tienen esta parte, porque el modelo ya los deja fuera.</li></ul>
+    <p>Úsalo cuando se confirma una baja de última hora: los props que más suben son candidatos a over antes de que la casa mueva la línea.</p>`],
   ["props", "Player props", "Player props proyectados", () => `<dl>
     <dt>Min</dt><dd>Minutos que se espera que juegue.</dd>
     <dt>Media</dt><dd>Su promedio en las simulaciones.</dd>
