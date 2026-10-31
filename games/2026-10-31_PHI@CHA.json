@@ -7,18 +7,18 @@
   "tip_et": "18:00",
   "notes": [
    "Ambos equipos en back-to-back (jugaron el 30-oct en Copa)",
-   "PHI: Jaylen Brown en duda; Jabari Walker OUT; Barlow, Fall y Hukporti OUT. Embiid en back-to-back (no está en el parte)",
-   "CHA: Knueppel y Coby White en duda (CBS 31-oct: game time decision); si juegan, el modelo no los tiene en la rotación",
+   "PHI: quinteto confirmado Maxey, Edgecombe, Brown, Wade, Bona. Embiid y LeBron no son titulares (no figuran en el parte de ESPN): el modelo los da fuera por el back-to-back. Jabari Walker, Barlow, Fall y Hukporti OUT",
+   "CHA: quinteto confirmado Schröder, Sion James, Miller, Naz Reid, Diabaté; Knueppel y Coby White OUT",
    "Covers sin spread/total por casa: spread y total de consenso de FanDuel Research (PHI -1.5, 216.5), solo ML por casa",
    "H2H 2025-26: 2-1 PHI, pero CHA ganó uno por 37 (ventaja máxima 50)",
    "Récord: PHI 5-1, CHA 3-3"
   ],
   "out": [
-   "Jabari Walker"
+   "Jabari Walker",
+   "Joel Embiid",
+   "LeBron James"
   ],
-  "gtd": {
-   "Jaylen Brown": 0.3
-  },
+  "gtd": {},
   "reserves": {
    "PHI": [
     {
@@ -93,7 +93,7 @@
    },
    "context": {
     "b2b": true,
-    "roster_note": "Knueppel y Coby White en duda (aún sin jugar esta temporada), Grant Williams y Boswell OUT"
+    "roster_note": "Knueppel y Coby White OUT (confirmado, quinteto Schröder-James-Miller-Reid-Diabaté); Grant Williams y Boswell OUT"
    }
   },
   "PHI": {
@@ -109,13 +109,13 @@
     "pace": 100.67
    },
    "adj": {
-    "o": -2.0,
-    "d": 1.0,
+    "o": -5.0,
+    "d": -0.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": "Jaylen Brown en duda (rodilla, no jugó el 30-oct)"
+    "roster_note": "Quinteto confirmado sin Embiid ni LeBron (fuera en el back-to-back); Jaylen Brown sí juega"
    }
   }
  },
@@ -544,7 +544,7 @@
    "name": "Tyrese Maxey",
    "pos": "PG",
    "starter": true,
-   "min": 34.1,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -586,9 +586,9 @@
    "name": "Jaylen Brown",
    "pos": "SF",
    "starter": true,
-   "min": 33.0,
+   "min": 38.0,
    "g_cur": 5,
-   "p_play": 0.3,
+   "p_play": 1.0,
    "cur": {
     "min": 36.4,
     "pts": 20.6,
@@ -625,94 +625,10 @@
   },
   {
    "team": "PHI",
-   "name": "Joel Embiid",
-   "pos": "C",
-   "starter": true,
-   "min": 31.9,
-   "g_cur": 5,
-   "p_play": 1.0,
-   "cur": {
-    "min": 35.24,
-    "pts": 19.2,
-    "reb": 9.4,
-    "ast": 5.24,
-    "fg3m": 0.64,
-    "fgm": 6.44,
-    "fga": 16.0,
-    "fg3a": 4.24,
-    "stl": 0.84,
-    "blk": 1.0,
-    "tov": 3.44,
-    "pf": 3.0,
-    "ftm": 5.84,
-    "fta": 6.8
-   },
-   "prior": {
-    "min": 31.6,
-    "pts": 26.9,
-    "reb": 7.7,
-    "ast": 3.9,
-    "fg3m": 1.4,
-    "fgm": 9.0,
-    "fga": 18.3,
-    "fg3a": 4.2,
-    "stl": 0.6,
-    "blk": 1.2,
-    "tov": 2.9,
-    "pf": 2.2,
-    "ftm": 7.5,
-    "fta": 8.8
-   },
-   "slot": "C"
-  },
-  {
-   "team": "PHI",
-   "name": "LeBron James",
-   "pos": "SF",
-   "starter": true,
-   "min": 30.3,
-   "g_cur": 5,
-   "p_play": 1.0,
-   "cur": {
-    "min": 33.44,
-    "pts": 16.4,
-    "reb": 7.0,
-    "ast": 7.04,
-    "fg3m": 1.04,
-    "fgm": 6.24,
-    "fga": 13.8,
-    "fg3a": 3.84,
-    "stl": 1.64,
-    "blk": 1.0,
-    "tov": 2.24,
-    "pf": 2.8,
-    "ftm": 3.04,
-    "fta": 4.84
-   },
-   "prior": {
-    "min": 33.2,
-    "pts": 20.9,
-    "reb": 6.1,
-    "ast": 7.2,
-    "fg3m": 1.3,
-    "fgm": 7.9,
-    "fga": 15.3,
-    "fg3a": 4.1,
-    "stl": 1.2,
-    "blk": 0.6,
-    "tov": 3.0,
-    "pf": 1.4,
-    "ftm": 3.9,
-    "fta": 5.3
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "PHI",
    "name": "VJ Edgecombe",
    "pos": "SG",
    "starter": true,
-   "min": 29.5,
+   "min": 37.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -753,8 +669,8 @@
    "team": "PHI",
    "name": "Dean Wade",
    "pos": "PF",
-   "starter": false,
-   "min": 24.6,
+   "starter": true,
+   "min": 31.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -788,14 +704,15 @@
     "pf": 1.93,
     "ftm": 0.61,
     "fta": 1.04
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "PHI",
    "name": "Kentavious Caldwell-Pope",
    "pos": "SG",
    "starter": false,
-   "min": 22.9,
+   "min": 29.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -836,7 +753,7 @@
    "name": "Anfernee Simons",
    "pos": "SG",
    "starter": false,
-   "min": 22.2,
+   "min": 28.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -876,8 +793,8 @@
    "team": "PHI",
    "name": "Adem Bona",
    "pos": "C",
-   "starter": false,
-   "min": 11.5,
+   "starter": true,
+   "min": 27.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -911,7 +828,8 @@
     "pf": 1.84,
     "ftm": 0.23,
     "fta": 0.45
-   }
+   },
+   "slot": "C"
   }
  ],
  "market": {

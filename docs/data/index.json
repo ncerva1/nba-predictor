@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T18:17+00:00",
+ "generated": "2026-10-31T21:36+00:00",
  "value_ev": 0.03,
  "last_stage": "pregame",
  "updates": {
@@ -10,7 +10,7 @@
   },
   "2026-10-31": {
    "morning": "2026-10-31T16:36+00:00",
-   "pregame": "2026-10-31T18:17+00:00"
+   "pregame": "2026-10-31T21:36+00:00"
   }
  },
  "history": [
@@ -35051,14 +35051,14 @@
     "CHA": null
    },
    "proj": {
-    "CHA": 108.0,
-    "PHI": 107.5
+    "CHA": 106.6,
+    "PHI": 104.5
    },
    "win_prob": {
-    "CHA": 0.51495,
-    "PHI": 0.48505
+    "CHA": 0.5561,
+    "PHI": 0.4439
    },
-   "proj_total": 215.5,
+   "proj_total": 211.1,
    "used_db": true,
    "n_value": 1,
    "top_bets": [
@@ -35071,11 +35071,11 @@
      "odds": 108,
      "dec": 2.077,
      "odds_assumed": false,
-     "p": 0.515,
+     "p": 0.556,
      "implied": 0.482,
-     "fair": -106,
-     "edge": 0.033,
-     "ev": 0.069,
+     "fair": -125,
+     "edge": 0.075,
+     "ev": 0.155,
      "value": true,
      "n_books": 9,
      "best": {
@@ -35083,8 +35083,8 @@
       "line": null,
       "odds": 115,
       "dec": 2.15,
-      "p": 0.515,
-      "ev": 0.107
+      "p": 0.556,
+      "ev": 0.196
      },
      "books": [
       {
@@ -35092,72 +35092,72 @@
        "line": null,
        "odds": 115,
        "dec": 2.15,
-       "p": 0.515,
-       "ev": 0.107
+       "p": 0.556,
+       "ev": 0.196
       },
       {
        "book": "DraftKings",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "Fanatics",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "theScore Bet",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "Hard Rock Bet",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "FanDuel",
        "line": null,
        "odds": 106,
        "dec": 2.06,
-       "p": 0.515,
-       "ev": 0.061
+       "p": 0.556,
+       "ev": 0.146
       },
       {
        "book": "BetMGM",
        "line": null,
        "odds": 105,
        "dec": 2.05,
-       "p": 0.515,
-       "ev": 0.056
+       "p": 0.556,
+       "ev": 0.14
       },
       {
        "book": "BetRivers",
        "line": null,
        "odds": 102,
        "dec": 2.02,
-       "p": 0.515,
-       "ev": 0.04
+       "p": 0.556,
+       "ev": 0.123
       },
       {
        "book": "bet365",
        "line": null,
        "odds": 101,
        "dec": 2.01,
-       "p": 0.515,
-       "ev": 0.035
+       "p": 0.556,
+       "ev": 0.118
       }
      ]
     },
@@ -35170,11 +35170,11 @@
      "odds": -128,
      "dec": 1.782,
      "odds_assumed": false,
-     "p": 0.485,
+     "p": 0.444,
      "implied": 0.561,
-     "fair": 106,
-     "edge": -0.076,
-     "ev": -0.136,
+     "fair": 125,
+     "edge": -0.117,
+     "ev": -0.209,
      "value": false,
      "n_books": 9,
      "best": {
@@ -35182,8 +35182,8 @@
       "line": null,
       "odds": -121,
       "dec": 1.826,
-      "p": 0.485,
-      "ev": -0.114
+      "p": 0.444,
+      "ev": -0.189
      },
      "books": [
       {
@@ -35191,72 +35191,72 @@
        "line": null,
        "odds": -121,
        "dec": 1.826,
-       "p": 0.485,
-       "ev": -0.114
+       "p": 0.444,
+       "ev": -0.189
       },
       {
        "book": "BetRivers",
        "line": null,
        "odds": -122,
        "dec": 1.82,
-       "p": 0.485,
-       "ev": -0.117
+       "p": 0.444,
+       "ev": -0.192
       },
       {
        "book": "FanDuel",
        "line": null,
        "odds": -124,
        "dec": 1.806,
-       "p": 0.485,
-       "ev": -0.124
+       "p": 0.444,
+       "ev": -0.198
       },
       {
        "book": "BetMGM",
        "line": null,
        "odds": -130,
        "dec": 1.769,
-       "p": 0.485,
-       "ev": -0.142
+       "p": 0.444,
+       "ev": -0.215
       },
       {
        "book": "DraftKings",
        "line": null,
        "odds": -130,
        "dec": 1.769,
-       "p": 0.485,
-       "ev": -0.142
+       "p": 0.444,
+       "ev": -0.215
       },
       {
        "book": "Fanatics",
        "line": null,
        "odds": -130,
        "dec": 1.769,
-       "p": 0.485,
-       "ev": -0.142
+       "p": 0.444,
+       "ev": -0.215
       },
       {
        "book": "theScore Bet",
        "line": null,
        "odds": -130,
        "dec": 1.769,
-       "p": 0.485,
-       "ev": -0.142
+       "p": 0.444,
+       "ev": -0.215
       },
       {
        "book": "Hard Rock Bet",
        "line": null,
        "odds": -130,
        "dec": 1.769,
-       "p": 0.485,
-       "ev": -0.142
+       "p": 0.444,
+       "ev": -0.215
       },
       {
        "book": "Caesars",
        "line": null,
        "odds": -135,
        "dec": 1.741,
-       "p": 0.485,
-       "ev": -0.156
+       "p": 0.444,
+       "ev": -0.227
       }
      ]
     }
@@ -35271,11 +35271,11 @@
      "odds": 108,
      "dec": 2.077,
      "odds_assumed": false,
-     "p": 0.515,
+     "p": 0.556,
      "implied": 0.482,
-     "fair": -106,
-     "edge": 0.033,
-     "ev": 0.069,
+     "fair": -125,
+     "edge": 0.075,
+     "ev": 0.155,
      "value": true,
      "n_books": 9,
      "best": {
@@ -35283,8 +35283,8 @@
       "line": null,
       "odds": 115,
       "dec": 2.15,
-      "p": 0.515,
-      "ev": 0.107
+      "p": 0.556,
+      "ev": 0.196
      },
      "books": [
       {
@@ -35292,72 +35292,72 @@
        "line": null,
        "odds": 115,
        "dec": 2.15,
-       "p": 0.515,
-       "ev": 0.107
+       "p": 0.556,
+       "ev": 0.196
       },
       {
        "book": "DraftKings",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "Fanatics",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "theScore Bet",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "Hard Rock Bet",
        "line": null,
        "odds": 110,
        "dec": 2.1,
-       "p": 0.515,
-       "ev": 0.081
+       "p": 0.556,
+       "ev": 0.168
       },
       {
        "book": "FanDuel",
        "line": null,
        "odds": 106,
        "dec": 2.06,
-       "p": 0.515,
-       "ev": 0.061
+       "p": 0.556,
+       "ev": 0.146
       },
       {
        "book": "BetMGM",
        "line": null,
        "odds": 105,
        "dec": 2.05,
-       "p": 0.515,
-       "ev": 0.056
+       "p": 0.556,
+       "ev": 0.14
       },
       {
        "book": "BetRivers",
        "line": null,
        "odds": 102,
        "dec": 2.02,
-       "p": 0.515,
-       "ev": 0.04
+       "p": 0.556,
+       "ev": 0.123
       },
       {
        "book": "bet365",
        "line": null,
        "odds": 101,
        "dec": 2.01,
-       "p": 0.515,
-       "ev": 0.035
+       "p": 0.556,
+       "ev": 0.118
       }
      ]
     }
@@ -35369,14 +35369,14 @@
      "model_only": true,
      "player": "Anfernee Simons",
      "team": "PHI",
-     "stat": "fgm",
+     "stat": "fga",
      "side": "over",
-     "line": 3.5,
-     "p": 0.673,
-     "fair": 1.49,
-     "min_dec": 1.53,
-     "ref": 4.0,
-     "label": "Anfernee Simons Over 3.5 Tiros de campo anotados"
+     "line": 11.5,
+     "p": 0.623,
+     "fair": 1.61,
+     "min_dec": 1.65,
+     "ref": 11.8,
+     "label": "Anfernee Simons Over 11.5 Tiros de campo intentados"
     },
     {
      "kind": "prop",
@@ -35386,53 +35386,67 @@
      "stat": "fga",
      "side": "over",
      "line": 10.5,
-     "p": 0.605,
-     "fair": 1.65,
-     "min_dec": 1.7,
+     "p": 0.604,
+     "fair": 1.66,
+     "min_dec": 1.71,
      "ref": 10.9,
      "label": "Grayson Allen Over 10.5 Tiros de campo intentados"
     },
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Tyrese Maxey",
+     "player": "Kentavious Caldwell-Pope",
      "team": "PHI",
-     "stat": "fta",
-     "side": "under",
-     "line": 5.5,
+     "stat": "fgm",
+     "side": "over",
+     "line": 3.5,
      "p": 0.6,
      "fair": 1.67,
      "min_dec": 1.72,
-     "ref": 6.0,
-     "label": "Tyrese Maxey Under 5.5 Tiros libres intentados"
+     "ref": 3.4,
+     "label": "Kentavious Caldwell-Pope Over 3.5 Tiros de campo anotados"
     },
     {
      "kind": "prop",
      "model_only": true,
      "player": "Tyrese Maxey",
      "team": "PHI",
-     "stat": "ftm",
+     "stat": "fga",
      "side": "under",
-     "line": 4.5,
-     "p": 0.577,
-     "fair": 1.73,
-     "min_dec": 1.78,
-     "ref": 5.1,
-     "label": "Tyrese Maxey Under 4.5 Tiros libres anotados"
+     "line": 20.5,
+     "p": 0.589,
+     "fair": 1.7,
+     "min_dec": 1.75,
+     "ref": 21.2,
+     "label": "Tyrese Maxey Under 20.5 Tiros de campo intentados"
     },
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Anfernee Simons",
+     "player": "Kentavious Caldwell-Pope",
      "team": "PHI",
      "stat": "fga",
      "side": "over",
-     "line": 9.5,
-     "p": 0.577,
-     "fair": 1.73,
-     "min_dec": 1.79,
-     "ref": 9.3,
-     "label": "Anfernee Simons Over 9.5 Tiros de campo intentados"
+     "line": 8.5,
+     "p": 0.565,
+     "fair": 1.77,
+     "min_dec": 1.82,
+     "ref": 8.2,
+     "label": "Kentavious Caldwell-Pope Over 8.5 Tiros de campo intentados"
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Tyrese Maxey",
+     "team": "PHI",
+     "stat": "fg2a",
+     "side": "under",
+     "line": 12.5,
+     "p": 0.563,
+     "fair": 1.77,
+     "min_dec": 1.83,
+     "ref": 13.1,
+     "label": "Tyrese Maxey Under 12.5 Dobles intentados"
     },
     {
      "kind": "prop",
@@ -35442,39 +35456,25 @@
      "stat": "fgm",
      "side": "over",
      "line": 4.5,
-     "p": 0.565,
-     "fair": 1.77,
-     "min_dec": 1.82,
+     "p": 0.556,
+     "fair": 1.8,
+     "min_dec": 1.85,
      "ref": 4.4,
      "label": "Grayson Allen Over 4.5 Tiros de campo anotados"
     },
     {
      "kind": "prop",
      "model_only": true,
-     "player": "VJ Edgecombe",
-     "team": "PHI",
-     "stat": "fga",
-     "side": "over",
-     "line": 10.5,
-     "p": 0.558,
-     "fair": 1.79,
-     "min_dec": 1.85,
-     "ref": 10.7,
-     "label": "VJ Edgecombe Over 10.5 Tiros de campo intentados"
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "VJ Edgecombe",
+     "player": "Tyrese Maxey",
      "team": "PHI",
      "stat": "fg3a",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.557,
+     "side": "under",
+     "line": 7.5,
+     "p": 0.556,
      "fair": 1.8,
      "min_dec": 1.85,
-     "ref": 4.8,
-     "label": "VJ Edgecombe Over 4.5 Triples intentados"
+     "ref": 8.1,
+     "label": "Tyrese Maxey Under 7.5 Triples intentados"
     },
     {
      "kind": "prop",
@@ -35483,12 +35483,26 @@
      "team": "PHI",
      "stat": "fg2m",
      "side": "under",
+     "line": 6.5,
+     "p": 0.551,
+     "fair": 1.81,
+     "min_dec": 1.87,
+     "ref": 7.1,
+     "label": "Tyrese Maxey Under 6.5 Dobles anotados"
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Anfernee Simons",
+     "team": "PHI",
+     "stat": "fgm",
+     "side": "over",
      "line": 5.5,
      "p": 0.55,
      "fair": 1.82,
      "min_dec": 1.87,
-     "ref": 6.4,
-     "label": "Tyrese Maxey Under 5.5 Dobles anotados"
+     "ref": 5.1,
+     "label": "Anfernee Simons Over 5.5 Tiros de campo anotados"
     }
    ],
    "all_bets": [
@@ -35501,10 +35515,10 @@
      "odds": 108,
      "dec": 2.077,
      "odds_assumed": false,
-     "p": 0.515,
+     "p": 0.556,
      "implied": 0.482,
-     "edge": 0.033,
-     "ev": 0.069,
+     "edge": 0.075,
+     "ev": 0.155,
      "value": true,
      "n_books": 9,
      "best": {
@@ -35512,8 +35526,8 @@
       "line": null,
       "odds": 115,
       "dec": 2.15,
-      "p": 0.515,
-      "ev": 0.107
+      "p": 0.556,
+      "ev": 0.196
      }
     },
     {
@@ -35525,10 +35539,10 @@
      "odds": -128,
      "dec": 1.782,
      "odds_assumed": false,
-     "p": 0.485,
+     "p": 0.444,
      "implied": 0.561,
-     "edge": -0.076,
-     "ev": -0.136,
+     "edge": -0.117,
+     "ev": -0.209,
      "value": false,
      "n_books": 9,
      "best": {
@@ -35536,8 +35550,8 @@
       "line": null,
       "odds": -121,
       "dec": 1.826,
-      "p": 0.485,
-      "ev": -0.114
+      "p": 0.444,
+      "ev": -0.189
      }
     }
    ]

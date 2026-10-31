@@ -72,30 +72,46 @@
    ],
    "adj": {
     "PHI": {
-     "o": -1.0,
-     "d": 0.0,
-     "why": "Jaylen Brown en duda (rodilla, no jugó el 30-oct)"
+     "o": -4.0,
+     "d": -1.5,
+     "why": "Quinteto confirmado sin Embiid ni LeBron (fuera en el back-to-back); Jaylen Brown sí juega"
     },
     "CHA": {
      "o": -1.0,
      "d": 0.0,
-     "why": "Knueppel y Coby White en duda (aún sin jugar esta temporada), Grant Williams y Boswell OUT"
+     "why": "Knueppel y Coby White OUT (confirmado, quinteto Schröder-James-Miller-Reid-Diabaté); Grant Williams y Boswell OUT"
     }
    },
    "out": [
-    "Jabari Walker"
+    "Jabari Walker",
+    "Joel Embiid",
+    "LeBron James"
    ],
-   "gtd": {
-    "Jaylen Brown": 0.3
-   },
+   "gtd": {},
    "notes": [
     "Ambos equipos en back-to-back (jugaron el 30-oct en Copa)",
-    "PHI: Jaylen Brown en duda; Jabari Walker OUT; Barlow, Fall y Hukporti OUT. Embiid en back-to-back (no está en el parte)",
-    "CHA: Knueppel y Coby White en duda (CBS 31-oct: game time decision); si juegan, el modelo no los tiene en la rotación",
+    "PHI: quinteto confirmado Maxey, Edgecombe, Brown, Wade, Bona. Embiid y LeBron no son titulares (no figuran en el parte de ESPN): el modelo los da fuera por el back-to-back. Jabari Walker, Barlow, Fall y Hukporti OUT",
+    "CHA: quinteto confirmado Schröder, Sion James, Miller, Naz Reid, Diabaté; Knueppel y Coby White OUT",
     "Covers sin spread/total por casa: spread y total de consenso de FanDuel Research (PHI -1.5, 216.5), solo ML por casa",
     "H2H 2025-26: 2-1 PHI, pero CHA ganó uno por 37 (ventaja máxima 50)",
     "Récord: PHI 5-1, CHA 3-3"
-   ]
+   ],
+   "starters": {
+    "PHI": [
+     "Tyrese Maxey",
+     "VJ Edgecombe",
+     "Jaylen Brown",
+     "Dean Wade",
+     "Adem Bona"
+    ],
+    "CHA": [
+     "Dennis Schröder",
+     "Sion James",
+     "Brandon Miller",
+     "Naz Reid",
+     "Moussa Diabaté"
+    ]
+   }
   },
   {
    "away": "ATL",
