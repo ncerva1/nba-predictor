@@ -1,5 +1,12 @@
 # Cambios del modelo
 
+## Web — 2026-10-31: tres actualizaciones diarias
+Pedido de Nicolas: resultados de madrugada, análisis con cuotas por la mañana y revisión de bajas antes del primer
+partido. `build_site.py --stage results|morning|pregame [--for fecha]` registra cada actualización en `index.json`
+(`updates`, `last_stage`) y la web la muestra en "Actualizaciones de la jornada" (hecha/pendiente, con la hora de la
+revisión de bajas calculada desde el primer partido). El historial del modelo suma el récord de SGP y de parlays entre
+partidos, y cada jornada anterior muestra sus parlays con Ganada/Perdida por pata.
+
 ## 1.3.5 — 2026-10-30: tiros libres, quinteto por puesto y rotación
 Pedido de Nicolas tras ver la 1.3.4.
 

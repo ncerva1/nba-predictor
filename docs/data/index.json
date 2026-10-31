@@ -1,6 +1,13 @@
 {
- "generated": "2026-10-30T23:44+00:00",
+ "generated": "2026-10-31T13:17+00:00",
  "value_ev": 0.03,
+ "last_stage": "pregame",
+ "updates": {
+  "2026-10-30": {
+   "morning": "2026-10-30T16:48+00:00",
+   "pregame": "2026-10-30T23:44+00:00"
+  }
+ },
  "history": [
   {
    "date": "2026-10-26",
@@ -8,7 +15,11 @@
    "winners_ok": 6,
    "picks_won": 6,
    "picks_lost": 5,
-   "units": 0.4
+   "units": 0.4,
+   "sgp_won": 0,
+   "sgp_lost": 0,
+   "cross_won": 0,
+   "cross_lost": 0
   },
   {
    "date": "2026-10-27",
@@ -16,7 +27,11 @@
    "winners_ok": 2,
    "picks_won": 8,
    "picks_lost": 12,
-   "units": -5.36
+   "units": -5.36,
+   "sgp_won": 0,
+   "sgp_lost": 0,
+   "cross_won": 0,
+   "cross_lost": 0
   },
   {
    "date": "2026-10-28",
@@ -24,7 +39,11 @@
    "winners_ok": 8,
    "picks_won": 32,
    "picks_lost": 39,
-   "units": -11.66
+   "units": -11.66,
+   "sgp_won": 7,
+   "sgp_lost": 19,
+   "cross_won": 1,
+   "cross_lost": 2
   },
   {
    "date": "2026-10-29",
@@ -32,7 +51,11 @@
    "winners_ok": 2,
    "picks_won": 9,
    "picks_lost": 10,
-   "units": -2.59
+   "units": -2.59,
+   "sgp_won": 1,
+   "sgp_lost": 5,
+   "cross_won": 0,
+   "cross_lost": 2
   }
  ],
  "parlays": {

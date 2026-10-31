@@ -10,6 +10,20 @@ python build_site.py 2026-10-27   # solo los partidos de una fecha
 ```
 Luego sube los cambios de `docs/` (git add docs && git commit && git push).
 
+## Las tres actualizaciones diarias
+Cada jornada se publica tres veces (tareas programadas en la nube, hora de Colombia). Cada una pasa `--stage` a
+`build_site.py` para que la web muestre en "Actualizaciones de la jornada" qué se hizo y cuándo:
+
+| Etapa | Cuándo | Qué hace | Comando |
+|---|---|---|---|
+| `results` | madrugada (~3:10) | box scores reales de AYER en `results/AYER.json`, `evaluate.py`; picks, SGP y parlays entre partidos quedan liquidados | `python build_site.py AYER --stage results --for AYER` |
+| `morning` | mañana (~11:20) | partidos de HOY con BD, bajas, H2H y cuotas; programa la revisión de bajas | `python build_site.py HOY --sims 40000 --stage morning --for HOY` |
+| `pregame` | 30-60 min antes del primer partido | bajas de última hora (ESPN injuries); re-simula solo si algo cambió | `python build_site.py HOY --sims 40000 --stage pregame --for HOY` |
+
+Para solo marcar una etapa sin re-simular nada: `python build_site.py ninguno --stage pregame --for HOY` (un filtro
+que no coincide con ningún partido reconstruye solo `index.json`). `index.json` guarda `updates` = `{jornada: {etapa:
+hora UTC}}` (últimas 14 jornadas) y `last_stage`.
+
 ## Publicar gratis en GitHub Pages
 1. Crear un repositorio en GitHub (por ejemplo `nba-predictor`) y subir esta carpeta `nba_predictor/` como raíz.
 2. En el repo: Settings → Pages → Source: "Deploy from a branch" → Branch `main`, carpeta `/docs`.

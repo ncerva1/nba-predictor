@@ -313,6 +313,17 @@ tr.detail td { background: var(--bg) }
   table.stack td .pill { margin-left: auto }
   .banner .meta { text-align: left }
 }
+/* las tres actualizaciones del día */
+.upd { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none }
+.upd li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0 }
+.upd li.done { border-color: var(--good) }
+.upd .st { font: 600 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted) }
+.upd li.done .st { color: var(--good) }
+.upd b { font-weight: 600 }
+.upd .muted { font-size: 12px }
+.pl-rec { font: 13px var(--mono); margin: 0 0 10px }
+.pl-day { margin: 18px 0 6px }
+@media (max-width: 640px) { .upd { grid-template-columns: 1fr } }
 /* parlays recomendados: tarjetas con las patas y la prob. conjunta del modelo */
 .pl-list { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
 .pl-card { display: grid; gap: 12px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0 }
@@ -527,6 +538,37 @@ function bookList(b) {
   return `<div class="books">${b.books.map(o => `<span class="book${o.ev >= INDEX.value_ev ? " good" : o.ev < 0 ? " bad" : ""}"><b>${esc(o.book)}</b>${coTag(o)} ${esc(lineTxt(b, o.line))}@ ${o.dec.toFixed(2)} <i>${evTxt(o.ev)}</i></span>`).join("")}</div>`;
 }
 const RES = { won: "Ganada", lost: "Perdida", push: "Nula" };
+// Las tres actualizaciones diarias (build_site.py --stage): resultados de madrugada, análisis de la mañana y
+// revisión de bajas antes del primer partido. INDEX.updates = {jornada: {etapa: hora UTC}}.
+const STAGE = { results: "Resultados de la jornada", morning: "Análisis y cuotas", pregame: "Revisión de bajas" };
+const toDate = iso => iso ? new Date(iso.length === 16 ? iso + "Z" : iso) : null;
+const hm = d => d.toLocaleTimeString("es-CO", { hour: "numeric", minute: "2-digit" });
+const whenTxt = d => `${d.toLocaleDateString("es-CO", { day: "numeric", month: "short" })}, ${hm(d)}`;
+// hora ET de un partido ("19:00" del día dado) como fecha real, con horario de verano o no según el día
+function etDate(day, t) {
+  for (const off of ["-04:00", "-05:00"]) {
+    const d = new Date(`${day}T${t}:00${off}`);
+    if (d.toLocaleTimeString("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit" }) === t) return d;
+  }
+  return null;
+}
+const firstTip = todays => todays.map(g => g.tip_et && etDate(g.date, g.tip_et)).filter(Boolean).sort((a, b) => a - b)[0];
+function updatesStrip() {
+  const todays = INDEX.games.filter(g => g.date === DAY);  // la jornada completa (liga y Copa)
+  if (!todays.length) return "";
+  const u = (INDEX.updates || {})[DAY] || {}, tip = firstTip(todays), allRes = todays.every(g => g.result);
+  const item = (k, done, at, todo) => `<li class="${done ? "done" : ""}"><span class="st">${done ? "✓ Hecha" : "Pendiente"}</span><b>${STAGE[k]}</b>
+    <span class="muted">${done ? (at ? whenTxt(toDate(at)) : "Publicada") : todo}</span></li>`;
+  const pre = tip ? new Date(tip - 45 * 60000) : null;
+  return `<section class="section"><h2>Actualizaciones de la jornada ${qh("actualizaciones", "actualizaciones del día")}</h2>
+    <ul class="upd">
+      ${item("morning", true, u.morning, "")}
+      ${item("pregame", !!u.pregame, u.pregame, pre ? `Hacia las ${hm(pre)}, entre 30 y 60 min antes del primer partido (${hm(tip)}).` : "Entre 30 y 60 min antes del primer partido.")}
+      ${item("results", allRes, u.results, todays.some(g => g.result) ? "Faltan partidos por terminar." : "En la madrugada, cuando termine el último partido.")}
+    </ul><p class="muted">Horas en tu zona horaria.</p></section>`;
+}
+// récord de parlays: [ganados, perdidos] (las nulas no cuentan)
+const plRec = pls => [pls.filter(p => p.result === "won").length, pls.filter(p => p.result === "lost").length];
 const resPill = r => r ? `<span class="res ${r}">${RES[r]}</span>` : "";
 function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
@@ -708,8 +750,19 @@ function olderSection(older, cup) {
       const info = `${gs.length} partido${gs.length > 1 ? "s" : ""}${rs.length ? ` · ganador ${rs.filter(r => r.winner_ok).length} de ${rs.length} · picks ${w}–${l}` : " · sin resultados"}`;
       return `<details class="pgroup day"><summary><span class="pg-t">${dayName(d)}</span><span class="pg-x">${info}</span>
         <span class="pg-r">${rs.length ? `<span class="pg-n" style="color:var(${u >= 0 ? "--good" : "--bad"})">${u >= 0 ? "+" : ""}${u.toFixed(2)} u</span>` : ""}</span></summary>
-        <div class="pg-body"><div class="games">${gs.map(card).join("")}</div></div></details>`;
+        <div class="pg-body"><div class="games">${gs.map(card).join("")}</div>${dayParlays(d, gs)}</div></details>`;
     }).join("")}</div></section>`;
+}
+
+// parlays recomendados de un día ya pasado, con su resultado
+function dayParlays(d, gs) {
+  const ids = new Set(gs.map(g => g.id));
+  const cross = ((INDEX.parlays || {})[d] || []).filter(pl => pl.legs.every(l => ids.has(l.gid))), sgp = gs.flatMap(g => g.parlays || []);
+  if (!cross.length && !sgp.length) return "";
+  const [cw, cl] = plRec(cross), [sw, sl] = plRec(sgp), thr = INDEX.value_ev;
+  return `<h3 class="pl-day">Parlays recomendados</h3>
+    <p class="pl-rec">${sgp.length ? `Mismo partido (SGP): ${sw}–${sl}` : ""}${sgp.length && cross.length ? " · " : ""}${cross.length ? `Entre partidos: ${cw}–${cl}` : ""}</p>
+    <div class="pl-list">${cross.map(pl => parlayCard(pl, thr, false)).join("")}${sgp.map(pl => parlayCard(pl, thr, true)).join("")}</div>`;
 }
 
 // Inicio de cada pestaña: "reg" = liga regular, "cup" = partidos marcados con "competition": "cup" en games/*.json
@@ -770,7 +823,9 @@ function renderIndex(scope = "reg") {
   const picks = allBets.filter(b => b.value);
   const older = INDEX.games.filter(g => g.date !== DAY && inScope(g, scope));
   const hist = scope === "cup" ? [] : INDEX.history || [];
-  const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok }), { w: 0, l: 0, u: 0, g: 0, ok: 0 });
+  const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok,
+    sw: t.sw + (x.sgp_won || 0), sl: t.sl + (x.sgp_lost || 0), cw: t.cw + (x.cross_won || 0), cl: t.cl + (x.cross_lost || 0) }), { w: 0, l: 0, u: 0, g: 0, ok: 0, sw: 0, sl: 0, cw: 0, cl: 0 });
+  const recTxt = (w, l) => w || l ? `${w}–${l}` : "—";
   const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
@@ -780,12 +835,13 @@ function renderIndex(scope = "reg") {
   $("#app").innerHTML = `
   ${INTRO()}
   ${cup ? CUP_HERO(todays.length) : ""}
+  ${updatesStrip()}
   ${hist.length ? `<section class="section">
     <h2>Cómo le ha ido al modelo ${qh("historial", "resultados del modelo")}</h2>
-    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th></tr></thead><tbody>
-      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td></tr>`).join("")}
-      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td></tr>` : ""}
+    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. SGP y parlays: combinadas recomendadas acertadas–falladas. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th><th class="r">SGP</th><th class="r">Parlays entre partidos</th></tr></thead><tbody>
+      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td><td class="r num" data-label="SGP">${recTxt(x.sgp_won, x.sgp_lost)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(x.cross_won, x.cross_lost)}</td></tr>`).join("")}
+      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td><td class="r num" data-label="SGP">${recTxt(tot.sw, tot.sl)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(tot.cw, tot.cl)}</td></tr>` : ""}
     </tbody></table></div>
   </section>` : ""}
   <section class="section">
@@ -894,6 +950,8 @@ function parlaySection(todays, thr) {
       ${cross.length ? `<button type="button" data-m="cross" aria-pressed="${PL_MODE === "cross"}">Entre partidos · ${cross.length}</button>` : ""}
       ${withSgp.length ? `<button type="button" data-m="sgp" aria-pressed="${PL_MODE === "sgp"}">Mismo partido · ${withSgp.length}</button>` : ""}
     </div>
+    ${todays.some(g => g.result) ? (() => { const [cw, cl] = plRec(cross), [sw, sl] = plRec(withSgp.flatMap(g => g.parlays));
+      return `<p class="pl-rec">Resultado: ${cross.length ? `entre partidos ${cw}–${cl}` : ""}${cross.length && withSgp.length ? " · " : ""}${withSgp.length ? `mismo partido (SGP) ${sw}–${sl}` : ""}</p>`; })() : ""}
     <div class="filters pl-games" role="group" aria-label="Partido" id="pl-games"></div>
     <div class="pl-list" id="pl-list"></div>
     ${plHowto}
@@ -1353,6 +1411,11 @@ const GUIDE = [
     <dl><dt>Ganador acertado</dt><dd>En cuántos partidos el favorito del modelo ganó.</dd>
     <dt>Unidades</dt><dd>Ganancia o pérdida apostando 1 unidad (la misma cantidad) a cada pick con la cuota promedio. +2.50 u = se ganó 2.5 veces lo que se apuesta a cada pick.</dd></dl>
     <p>Con pocos picks el resultado depende sobre todo de la suerte: hacen falta cientos para juzgar si el modelo funciona.</p>`],
+  ["actualizaciones", "Actualizaciones", "Tres actualizaciones al día", () => `<p>La página se actualiza sola tres veces por jornada:</p>
+    <dl><dt>Mañana · Análisis y cuotas</dt><dd>Se simulan los partidos del día con las estadísticas, las bajas conocidas y las cuotas de las casas, y se publican los picks y parlays.</dd>
+    <dt>Antes del primer partido · Revisión de bajas</dt><dd>Entre 30 y 60 minutos antes del primer partido se revisan las bajas de última hora (jugadores en duda o probables que finalmente no juegan) y se vuelve a simular si algo cambió.</dd>
+    <dt>Madrugada · Resultados</dt><dd>Cuando termina el último partido se cargan los marcadores y box scores reales: cada pick, cada parlay del mismo partido (SGP) y cada parlay entre partidos queda marcado como Ganada o Perdida, y el historial del modelo se actualiza.</dd></dl>
+    <p>Las horas se muestran en tu zona horaria. Si una actualización todavía no ha pasado, sale como Pendiente.</p>`],
   ["aviso", "Aviso", "Antes de apostar", () => `<p>Es una herramienta de análisis, no un consejo de apuesta ni una garantía: incluso los mejores picks se pierden a menudo. Revisa las bajas de última hora y apuesta solo lo que estés dispuesto a perder. Si eres menor de edad, no apuestes.</p>`],
 ];
 const qh = (id, what) => `<button type="button" class="qh" data-guide="${id}" aria-label="Qué significa: ${esc(what)}" title="¿Qué significa esto?">?</button>`;
@@ -1440,7 +1503,8 @@ getJSON("data/index.json").then(d => {
   const todays = d.games.filter(g => g.date === DAY);
   const nCup = todays.filter(isCup).length;
   $("#n-reg").textContent = todays.length - nCup || ""; $("#n-cup").textContent = nCup || "";
-  $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${esc((d.generated || "").replace("T", " ").replace("+00:00", ""))} UTC`;
+  const gen = toDate(d.generated);
+  $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${gen ? esc(whenTxt(gen)) : ""}${d.last_stage ? ` · ${esc(STAGE[d.last_stage] || "")}` : ""}`;
   const prevDay = dates[1], prev = prevDay ? d.games.filter(g => g.date === prevDay) : [];
   setupTicker();
   renderTicker(prev, todays);
