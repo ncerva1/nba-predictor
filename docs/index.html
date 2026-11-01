@@ -1641,9 +1641,9 @@ function bindPickForm(P, opts) {
         <label>Estadística<select id="${P}-s">${stats.map(k => `<option value="${k}"${k === st.stat ? " selected" : ""}>${STAT_LABEL[k]}</option>`).join("")}</select></label>`
       : `<label>Mercado<select id="${P}-m">${Object.entries(TEAM_MK).map(([k, t]) => `<option value="${k}"${k === st.mk ? " selected" : ""}>${t}</option>`).join("")}</select></label>
         ${st.mk === "total" ? "" : `<label>Equipo<select id="${P}-T">${[g.away, g.home].map(t => `<option value="${t}"${t === st.T ? " selected" : ""}>${esc(t)}${t === g.home ? " (local)" : " (visitante)"}</option>`).join("")}</select></label>`}`}
-      ${st.type === "t" && st.mk === "ml" ? "" : `<label>Línea${st.type === "t" && st.mk === "spread" ? ` de ${esc(st.T)}` : ""}<input id="${P}-l" type="number" step="0.5" ${st.type === "t" && st.mk === "spread" ? "" : 'min="0"'} inputmode="decimal" value="${defLine()}"></label>`}
-      <label>${one ? "Cuota" : "Cuota over"}<input id="${P}-o" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
-      ${one ? "" : `<label>Cuota under<input id="${P}-u" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>`}
+      ${st.type === "t" && st.mk === "ml" ? "" : `<label>Línea${st.type === "t" && st.mk === "spread" ? ` de ${esc(st.T)}` : ""}<input id="${P}-l" type="text" inputmode="decimal" autocomplete="off" value="${defLine()}"></label>`}
+      <label>${one ? "Cuota" : "Cuota over"}<input id="${P}-o" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 1.87"></label>
+      ${one ? "" : `<label>Cuota under<input id="${P}-u" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 1.87"></label>`}
       <div class="calc-out" id="${P}-out" aria-live="polite"></div>
       <div class="calc-add" id="${P}-add"></div>`;
     if (st.type === "t" && !d.result) loadSims(d.id);
@@ -1662,7 +1662,9 @@ function bindPickForm(P, opts) {
   const out = st.out = () => {
     const d = st.d, o = el("out"), add = el("add");
     if (!d || !o) return;
-    const g = d.game, game = `${g.away} @ ${g.home}`, L = el("l") ? parseFloat(el("l").value) : null, q1 = el("o")?.value, q2 = el("u")?.value;
+    // campos de texto (no type=number): el teclado del celular en español pone coma decimal y type=number la rechaza
+    const num = v => parseFloat(String(v ?? "").trim().replace(",", "."));
+    const g = d.game, game = `${g.away} @ ${g.home}`, L = el("l") ? num(el("l").value) : null, q1 = num(el("o")?.value), q2 = num(el("u")?.value);
     const evOf = (p, push, q) => { const c = parseFloat(q); return c > 1 ? p * c + push - 1 : null; };
     const line = (lab, p, push, q) => { const ev = evOf(p, push, q); return `<div><b>${esc(lab)}</b>: ${pct(p, 1)} · cuota justa ${(1 / Math.max(p, 1e-3)).toFixed(2)}${ev == null ? "" : ` · EV ${evPill(ev, thr)}`}</div>`; };
     let legs = [], html = "";
