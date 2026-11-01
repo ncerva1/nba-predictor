@@ -410,6 +410,19 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 .pl-add { justify-self: start; font-size: 13px; padding: 6px 14px }
 .calc-add { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
 .calc-add .btn { font-size: 13px; padding: 6px 14px }
+/* Crea tu pick: el mismo formulario en la página del partido y dentro de Mi combinada */
+.calc .wide { grid-column: 1 / -1 }
+.calc > .filters.wide { margin: 0 }
+.cb-form { overflow-y: auto; padding: 4px 14px 14px; overscroll-behavior: contain; flex: 1 1 auto; min-height: 0 }
+.cb-form .calc { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 10px }
+.cb-form[hidden], .combo-panel.mk-open .cb-body, .combo-panel.mk-open .cb-foot { display: none }
+.cb-mk { white-space: nowrap }
+.cb-head h2 { min-width: 0 }
+.cb-head button { flex: none }
+@media (max-width: 640px) { .cb-head .cbm-t { display: none } .cb-head h2 { font-size: 20px } }
+.cb-head .cb-mk + .cb-min { margin-left: -4px }
+.mk-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 12px 0 0 }
+.mk-cta .btn { font-size: 13px; padding: 6px 14px }
 .combo { position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 70 }
 .combo[hidden] { display: none }
 .combo-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--accent); border-radius: 999px; padding: 8px 10px 8px 16px; cursor: pointer;
@@ -573,8 +586,9 @@ body:has(dialog.guide[open]) { overflow: hidden }
 <div class="combo" id="combo" hidden>
   <button type="button" class="combo-pill" id="combo-pill" aria-expanded="false" aria-controls="combo-panel"><span class="t">Mi combinada</span> <span class="n" id="cp-n">0</span> <span class="d" id="cp-d"></span></button>
   <section class="combo-panel" id="combo-panel" hidden aria-labelledby="cb-title">
-    <div class="cb-head"><h2 id="cb-title">Mi combinada</h2><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada">Minimizar ▾</button></div>
+    <div class="cb-head"><h2 id="cb-title">Mi combinada</h2><button type="button" class="cb-min cb-mk" id="cb-mk">+ Crear pick</button><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada"><span class="cbm-t">Minimizar </span>▾</button></div>
     <p class="cb-msg" id="cb-msg" role="status" hidden></p>
+    <div class="cb-form" id="cb-form" hidden></div>
     <div class="cb-body" id="cb-body"></div>
     <div class="cb-foot" id="cb-foot">
       <div class="pl-stats" id="cb-stats"></div>
@@ -616,7 +630,7 @@ const tc = t => TEAM[t] || "#5b6577";
 const tf = t => { const h = tc(t), [r, g, b] = [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)); return (r * 299 + g * 587 + b * 114) / 1000 > 150 ? "#111" : "#fff"; };
 const badge = t => `<span class="badge" style="--tc:${tc(t)};--tf:${tf(t)}">${esc(t)}</span>`;
 const isCup = g => g.competition === "cup";
-const KIND = { ml: "Ganador", spread: "Hándicap", total: "Total de puntos", prop: "Player prop" };
+const KIND = { ml: "Ganador", spread: "Hándicap", total: "Total de puntos", tt: "Puntos de equipo", prop: "Player prop" };
 let INDEX = null, DAY = null;
 const cache = {};
 
@@ -734,7 +748,7 @@ function mpBlock(list, withGame) {
   let n = 0;
   const vis = b => MP_ST === "all" ? n++ < MP_SHOW : b.stat === MP_ST;
   return `<div class="mp-wrap"><h3 class="mp-h">Picks del modelo sin cuota de casa</h3>
-  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Calcula tu apuesta</b> en la página del partido.</p>
+  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Crea tu pick</b> en la página del partido o en Mi combinada.</p>
   ${sts.length > 1 ? `<div class="filters mp-f" role="group" aria-label="Estadística">${["all", ...sts].map(k => `<button type="button" data-mpst="${k}" aria-pressed="${k === MP_ST}">${k === "all" ? "Todas" : STAT_BTN[k] || STAT_LABEL[k]} · ${k === "all" ? list.length : list.filter(b => b.stat === k).length}</button>`).join("")}</div>` : ""}
   <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th class="pk">Pick</th><th class="r">Prob. modelo</th><th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
   ${list.map(b => `<tr data-st="${b.stat}"${vis(b) ? "" : " hidden"}${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
@@ -841,7 +855,7 @@ const YN = { dd: 1, td: 1 };  // props de sí / no: la "media" es la probabilida
 const catOf = b => b.kind !== "prop" ? "team" : CAT_OF[b.stat] || b.stat || "pts";
 let SEG = "all";
 // categoría sin líneas publicadas: el modelo sí la proyecta, se compara con la casa en la calculadora de cada partido
-const NO_LINES = k => `Hoy las casas que podemos leer no publican líneas de ${(CATS[k] || "esta categoría").toLowerCase()}. El modelo sí las proyecta: abre un partido, mira la tabla de player props y usa <b>Calcula tu apuesta</b> con la línea y la cuota de tu casa para ver la probabilidad y el EV.`;
+const NO_LINES = k => `Hoy las casas que podemos leer no publican líneas de ${(CATS[k] || "esta categoría").toLowerCase()}. El modelo sí las proyecta: abre un partido, mira la tabla de player props y usa <b>Crea tu pick</b> con la línea y la cuota de tu casa para ver la probabilidad y el EV.`;
 const inSeg = (b, k) => k === "all" || k === "top" || (k === "value" ? b.value : catOf(b) === k);
 function segBar(bets, id, keys = Object.keys(CATS).filter(k => k !== "value" && k !== "top")) {
   return `<div class="filters" role="group" aria-label="Categoría" id="${id}">${keys.map(k =>
@@ -1017,6 +1031,7 @@ function renderIndex(scope = "reg") {
       `<button type="button" data-grp="${k}" aria-pressed="${k === GROUP}">${t}</button>`).join("")}</div>` : ""}
     <div id="picks"></div>
     ${allBets.length ? `<a class="seeall" href="#todos${cup ? "-cup" : ""}">Ver todos los picks de la jornada (${allBets.length}) →</a>` : ""}
+    ${todays.some(g => !g.result) ? `<p class="mk-cta"><button type="button" class="btn ghost" data-mkpick>+ Crea tu propio pick</button><span class="muted">Cualquier jugador o mercado de equipo de los partidos de hoy, con la línea y la cuota de tu casa, para sumarlo a tu combinada.</span></p>` : ""}
     ${howto}
   </section>
   ${parlaySection(todays, thr)}
@@ -1395,19 +1410,10 @@ async function renderGame(id) {
     <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres; DD / TD probabilidad de doble-doble / triple-doble, contando puntos, rebotes, asistencias, robos y tapones); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV. Etiquetas: <b>Rookie</b> = novato, <b>Sin 2025-26</b> = no jugó la temporada pasada (lesión), <b>Sin datos previos</b> = el modelo no tiene su temporada pasada; con tan poca historia sus proyecciones varían mucho más (pasa el cursor o toca la etiqueta para ver el detalle).${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
   ${woSection(d)}
-  <section class="section">
-    <h2>Calcula tu apuesta</h2>
-    <p class="lede">Para las props que las casas que leemos no publican (combinadas, tiros, libres, faltas, robos + tapones...) o para comparar con tu casa: elige jugador y estadística, escribe la línea y la cuota decimal que te dan, y el modelo te dice la probabilidad y el EV.</p>
-    <div class="panel calc" id="calc">
-      <label>Jugador<select id="c-p">${players.filter(p => p.pts).sort((x, y) => x.team.localeCompare(y.team) || y.min - x.min).map((p, i) =>
-        `<option value="${esc(p.name)}">${esc(p.team)} · ${esc(p.name)}${p.flag ? " · " + FLAG_TXT[p.flag.t] : ""}</option>`).join("")}</select></label>
-      <label>Estadística<select id="c-s">${stats.map(k => `<option value="${k}">${STAT_LABEL[k]}</option>`).join("")}</select></label>
-      <label>Línea<input id="c-l" type="number" step="0.5" min="0" inputmode="decimal"></label>
-      <label>Cuota over<input id="c-o" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
-      <label>Cuota under<input id="c-u" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
-      <div class="calc-out" id="c-out" aria-live="polite"></div>
-      <div class="calc-add" id="c-add"></div>
-    </div>
+  <section class="section" id="crea-pick">
+    <h2>Crea tu pick</h2>
+    <p class="lede">Arma tu propio pick con la línea y la cuota decimal que te da tu casa, también para lo que las casas que leemos no publican (combinadas, tiros, libres, faltas, robos + tapones...): elige <b>Jugador</b> (cualquier estadística) o <b>Equipo</b> (ganador, hándicap, total del partido o puntos de un equipo). El modelo te dice la probabilidad y el EV, y lo puedes sumar a tu combinada.</p>
+    <div class="panel calc" id="c-calc"></div>
   </section>
   ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
   // apuestas de props del partido por jugador y estadística (over y/o under, con su EV)
@@ -1474,7 +1480,7 @@ async function renderGame(id) {
   drawBets();
   draw();
   addFolds();
-  bindCalc(players, thr);
+  bindPickForm("c", { d });
   woBind(d);
   if (d.matchup_view) {
     document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
@@ -1552,36 +1558,162 @@ function ladderP(st, k) {
   if (k > hi) return { p: null, lt: st.ladder[hi] };
   return { p: st.ladder[k] ?? 0 };
 }
-function bindCalc(players, thr) {
-  const el = id => $("#" + id), byName = Object.fromEntries(players.map(p => [p.name, p]));
-  const fill = () => { const st = byName[el("c-p").value]?.[el("c-s").value]; if (st) el("c-l").value = st.line; };
-  const out = () => {
-    const st = byName[el("c-p").value]?.[el("c-s").value], L = parseFloat(el("c-l").value);
-    if (!st || isNaN(L)) { el("c-out").innerHTML = `<span class="muted">Este jugador no tiene proyección de esa estadística.</span>`; el("c-add").innerHTML = ""; return; }
-    const kO = Math.floor(L) + 1, o = ladderP(st, kO), isInt = Number.isInteger(L);
-    const pu = isInt ? ladderP(st, L) : o;  // línea entera: el empate (push) devuelve la apuesta
-    const pO = o.p ?? (o.gt != null ? Math.max(o.gt, .97) : o.lt != null ? Math.min(o.lt, .03) : null);
-    if (pO == null) { el("c-out").textContent = "Sin datos para esa línea."; el("c-add").innerHTML = ""; return; }
-    const pPush = isInt && pu.p != null ? Math.max(pu.p - pO, 0) : 0, pU = Math.max(1 - pO - pPush, 0);
-    const approx = o.p == null ? " (aprox.: línea fuera del rango simulado)" : "";
-    const side = (lab, p, q) => {
-      const c = parseFloat(q), ev = c > 1 ? p * c + pPush - 1 : null;
-      return `<div><b>${lab} ${L}</b>: ${pct(p, 1)} · cuota justa ${(1 / Math.max(p, 1e-3)).toFixed(2)}${ev == null ? "" : ` · EV ${evPill(ev, thr)}`}</div>`;
-    };
-    const nm = el("c-p").value, sl = STAT_LABEL[el("c-s").value], legs = [["Over", pO, el("c-o").value], ["Under", pU, el("c-u").value]]
-      .filter(([, , q]) => parseFloat(q) > 1).map(([side, p, q]) => regLeg({ kind: "prop", label: `${nm} ${side} ${L} ${sl}`, player: nm, stat: el("c-s").value, line: L,
-        p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true, flag: byName[nm]?.flag }, CUR_GAME.id, CUR_GAME.game));
-    el("c-add").innerHTML = legs.length ? legs.map(k => addBtn(k, true)).join("") : `<span class="muted">Escribe la cuota over o under de tu casa para poder agregarla a tu combinada.</span>`;
-    const fl = byName[el("c-p").value]?.flag;
-    el("c-out").innerHTML = (fl ? `<div class="calc-warn">⚠ ${esc(fl.note)}.${FLAG_WHY}</div>` : "") + `<div class="muted">Media ${st.mean} · rango ${st.p10}–${st.p90}${pPush ? ` · empate ${pct(pPush, 1)}` : ""}${approx}</div>`
-      + side("Over", pO, el("c-o").value) + side("Under", pU, el("c-u").value);
-  };
-  if (!el("c-p")) return;
-  el("c-p").addEventListener("change", () => { fill(); out(); });
-  el("c-s").addEventListener("change", () => { fill(); out(); });
-  ["c-l", "c-o", "c-u"].forEach(id => el(id).addEventListener("input", out));
-  fill(); out();
+// Crea tu pick (1-nov): una pata propia, de jugador (cualquier estadística) o de equipo (ganador, hándicap, total del
+// partido, puntos de un equipo), con la línea y la cuota de tu casa. El mismo formulario está en la página de cada
+// partido (partido fijo) y en Mi combinada ("+ Crear pick", eliges el partido entre los que faltan por jugarse).
+// Props: P(over) de la escalera de la simulación. Equipo: si existe la apuesta publicada con esa línea se usa su
+// probabilidad; si no, se cuenta en la muestra de simulaciones del partido (data/sims/<id>.bin) y, sin muestra,
+// se aproxima con una normal centrada en la proyección (desviación sacada del histograma del margen y del rango del total).
+function propProb(st, L) {
+  const kO = Math.floor(L) + 1, o = ladderP(st, kO), isInt = Number.isInteger(L);
+  const pu = isInt ? ladderP(st, L) : o;  // línea entera: el empate (push) devuelve la apuesta
+  const pO = o.p ?? (o.gt != null ? Math.max(o.gt, .97) : o.lt != null ? Math.min(o.lt, .03) : null);
+  if (pO == null) return null;
+  const push = isInt && pu.p != null ? Math.max(pu.p - pO, 0) : 0;
+  return { a: pO, b: Math.max(1 - pO - push, 0), push, approx: o.p == null };
 }
+const PHI = z => { const t = 1 / (1 + .3275911 * Math.abs(z) / Math.SQRT2), y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - .284496736) * t + .254829592) * t * Math.exp(-z * z / 2); return z >= 0 ? (1 + y) / 2 : (1 - y) / 2; };
+const half = x => Math.floor(x) + .5;   // línea .5 más cercana (sin empate)
+const TEAM_MK = { ml: "Ganador", spread: "Hándicap", total: "Total del partido", tt: "Puntos de un equipo" };
+// Y = margen del equipo (hándicap), total del partido o puntos del equipo; devuelve P(Y > t) y P(Y = t)
+function teamDist(d, mk, T) {
+  const g = d.game, s = d.summary, opp = T === g.home ? g.away : g.home, S = SIMS[d.id];
+  if (S && S !== "loading" && S.c.sa) {
+    const sc = t => t === g.home ? S.c.sh : S.c.sa, A = sc(T), B = sc(opp), y = new Int16Array(S.n);
+    for (let i = 0; i < S.n; i++) y[i] = mk === "spread" ? A[i] - B[i] : mk === "total" ? A[i] + B[i] : A[i];
+    return { src: "sims", n: S.n, at: t => { let gt = 0, eq = 0; for (let i = 0; i < S.n; i++) { if (y[i] > t) gt++; else if (y[i] === t) eq++; } return { gt: gt / S.n, eq: eq / S.n }; } };
+  }
+  const h = s.margin_hist || [], tot = h.reduce((x, v) => x + v, 0) || 1;   // margen visitante − local en tramos de 4 desde −40
+  const mm = h.reduce((x, v, i) => x + v * (-38 + i * 4), 0) / tot;
+  const sdM = Math.sqrt(h.reduce((x, v, i) => x + v * (-38 + i * 4 - mm) ** 2, 0) / tot) || 12;
+  const tp = s.total_pcts || {}, sdT = tp[90] && tp[10] ? (tp[90] - tp[10]) / 2.563 : 18;
+  const pT = s.proj[T], pO = s.proj[opp];
+  const [mu, sd] = mk === "spread" ? [pT - pO, sdM] : mk === "total" ? [s.proj_total ?? pT + pO, sdT] : [pT, Math.sqrt((sdT ** 2 + sdM ** 2) / 4)];
+  return { src: "normal", at: t => Number.isInteger(t) ? { gt: 1 - PHI((t + .5 - mu) / sd), eq: PHI((t + .5 - mu) / sd) - PHI((t - .5 - mu) / sd) } : { gt: 1 - PHI((t - mu) / sd), eq: 0 } };
+}
+function teamLabel(mk, T, L, side) {
+  return mk === "ml" ? `${T} gana` : mk === "spread" ? `${T} ${L > 0 ? "+" : ""}${L}` : mk === "total" ? `${side} ${L}` : `${T} ${side} ${L} puntos`;
+}
+// a = P(acierta el lado 1: el equipo / over), b = P(lado 2: under), push = P(empate)
+function teamProb(d, mk, T, L) {
+  const pub = lab => (d.bets || []).find(b => b.label === lab && b.kind === mk);
+  if (mk === "ml") return { a: d.summary.win_prob[T], b: null, push: 0, src: "pub" };
+  if (mk === "spread") {
+    const b = pub(teamLabel(mk, T, L));
+    if (b && !Number.isInteger(L)) return { a: b.p, b: null, push: 0, src: "pub" };
+    const D = teamDist(d, mk, T), r = D.at(-L);
+    return { a: r.gt, b: null, push: r.eq, src: D.src, n: D.n };
+  }
+  const bo = pub(teamLabel(mk, T, L, "Over")), bu = pub(teamLabel(mk, T, L, "Under"));
+  if (bo && bu && !Number.isInteger(L)) return { a: bo.p, b: bu.p, push: 0, src: "pub" };
+  const D = teamDist(d, mk, T), r = D.at(L);
+  return { a: r.gt, b: Math.max(1 - r.gt - r.eq, 0), push: r.eq, src: D.src, n: D.n };
+}
+const FORMS = {};
+document.addEventListener("sims", e => Object.values(FORMS).forEach(f => f.gid === e.detail && f.out()));
+// P = prefijo de los ids; opts.games = partidos a elegir (en Mi combinada) o opts.d = datos del partido fijo
+function bindPickForm(P, opts) {
+  const box = $("#" + P + "-calc"), el = id => $("#" + P + "-" + id), thr = INDEX ? INDEX.value_ev : .03;
+  if (!box) return;
+  const st = FORMS[P] = { gid: opts.d ? opts.d.id : opts.gid, d: opts.d || null, type: "p", mk: "spread", T: null, player: null, stat: "pts" };
+  const players = () => st.d ? st.d.summary.players.filter(p => p.pts).sort((x, y) => x.team.localeCompare(y.team) || y.min - x.min) : [];
+  const defLine = () => {
+    const d = st.d, g = d.game, s = d.summary, m = d.market || {};
+    if (st.type === "p") { const x = players().find(p => p.name === st.player)?.[st.stat]; return x ? x.line : ""; }
+    if (st.mk === "spread") return m.spread_home != null ? (st.T === g.home ? m.spread_home : -m.spread_home) : -half(s.proj[st.T] - s.proj[st.T === g.home ? g.away : g.home]);
+    if (st.mk === "total") return m.total ?? half(s.proj_total);
+    if (st.mk === "tt") return half(s.proj[st.T]);
+    return "";
+  };
+  const draw = focus => {
+    const games = opts.games;
+    if (games && !games.length) { box.innerHTML = `<div class="empty">No hay partidos por jugarse publicados todavía. Cuando salgan los picks de la jornada podrás crear los tuyos aquí.</div>`; return; }
+    const gsel = games ? `<label class="wide">Partido<select id="${P}-g">${games.map(g => `<option value="${esc(g.id)}"${g.id === st.gid ? " selected" : ""}>${esc(g.away)} @ ${esc(g.home)} · ${esc(g.date === DAY ? "hoy" : dayName(g.date))}${g.tip_et ? " " + esc(g.tip_et) + " ET" : ""}</option>`).join("")}</select></label>` : "";
+    if (!st.d) { box.innerHTML = gsel + `<p class="muted wide">Cargando el partido…</p>`; bindG(); return; }
+    const d = st.d, g = d.game, ps = players(), stats = Object.keys(STAT_LABEL).filter(k => ps.some(p => p[k]));
+    if (!st.T || ![g.away, g.home].includes(st.T)) st.T = g.away;
+    if (!ps.some(p => p.name === st.player)) st.player = ps[0]?.name || null;
+    if (!stats.includes(st.stat)) st.stat = stats[0];
+    const one = st.type === "t" && (st.mk === "ml" || st.mk === "spread");
+    box.innerHTML = gsel + `<div class="filters wide" role="group" aria-label="Tipo de pick" id="${P}-ty">
+        <button type="button" data-ty="p" aria-pressed="${st.type === "p"}">Jugador</button><button type="button" data-ty="t" aria-pressed="${st.type === "t"}">Equipo</button></div>
+      ${st.type === "p" ? `<label>Jugador<select id="${P}-p">${ps.map(p => `<option value="${esc(p.name)}"${p.name === st.player ? " selected" : ""}>${esc(p.team)} · ${esc(p.name)}${p.flag ? " · " + FLAG_TXT[p.flag.t] : ""}</option>`).join("")}</select></label>
+        <label>Estadística<select id="${P}-s">${stats.map(k => `<option value="${k}"${k === st.stat ? " selected" : ""}>${STAT_LABEL[k]}</option>`).join("")}</select></label>`
+      : `<label>Mercado<select id="${P}-m">${Object.entries(TEAM_MK).map(([k, t]) => `<option value="${k}"${k === st.mk ? " selected" : ""}>${t}</option>`).join("")}</select></label>
+        ${st.mk === "total" ? "" : `<label>Equipo<select id="${P}-T">${[g.away, g.home].map(t => `<option value="${t}"${t === st.T ? " selected" : ""}>${esc(t)}${t === g.home ? " (local)" : " (visitante)"}</option>`).join("")}</select></label>`}`}
+      ${st.type === "t" && st.mk === "ml" ? "" : `<label>Línea${st.type === "t" && st.mk === "spread" ? ` de ${esc(st.T)}` : ""}<input id="${P}-l" type="number" step="0.5" ${st.type === "t" && st.mk === "spread" ? "" : 'min="0"'} inputmode="decimal" value="${defLine()}"></label>`}
+      <label>${one ? "Cuota" : "Cuota over"}<input id="${P}-o" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>
+      ${one ? "" : `<label>Cuota under<input id="${P}-u" type="number" step="0.01" min="1.01" inputmode="decimal" placeholder="ej. 1.87"></label>`}
+      <div class="calc-out" id="${P}-out" aria-live="polite"></div>
+      <div class="calc-add" id="${P}-add"></div>`;
+    if (st.type === "t" && !d.result) loadSims(d.id);
+    bindG();
+    box.querySelectorAll("[data-ty]").forEach(b => b.addEventListener("click", () => { st.type = b.dataset.ty; draw(P + "-ty"); }));
+    [["p", "player"], ["s", "stat"], ["m", "mk"], ["T", "T"]].forEach(([id, k]) => el(id)?.addEventListener("change", e => { st[k] = e.target.value; draw(P + "-" + id); }));
+    ["l", "o", "u"].forEach(id => el(id)?.addEventListener("input", out));
+    out();
+    if (focus) { const f = $("#" + focus); if (f) (f.matches("select, input") ? f : f.querySelector('[aria-pressed="true"]'))?.focus({ preventScroll: true }); }
+  };
+  const bindG = () => el("g")?.addEventListener("change", e => load(e.target.value, P + "-g"));
+  const load = async (gid, focus) => {
+    st.gid = gid; st.d = cache[gid] || null; draw(focus);
+    if (!st.d) { try { st.d = cache[gid] = await getJSON(`data/${gid}.json`); } catch (x) { box.innerHTML = `<div class="empty">No se pudo cargar el partido.</div>`; return; } if (st.gid === gid) draw(focus); }
+  };
+  const out = st.out = () => {
+    const d = st.d, o = el("out"), add = el("add");
+    if (!d || !o) return;
+    const g = d.game, game = `${g.away} @ ${g.home}`, L = el("l") ? parseFloat(el("l").value) : null, q1 = el("o")?.value, q2 = el("u")?.value;
+    const evOf = (p, push, q) => { const c = parseFloat(q); return c > 1 ? p * c + push - 1 : null; };
+    const line = (lab, p, push, q) => { const ev = evOf(p, push, q); return `<div><b>${esc(lab)}</b>: ${pct(p, 1)} · cuota justa ${(1 / Math.max(p, 1e-3)).toFixed(2)}${ev == null ? "" : ` · EV ${evPill(ev, thr)}`}</div>`; };
+    let legs = [], html = "";
+    if (st.type === "p") {
+      const pl = players().find(p => p.name === st.player), x = pl?.[st.stat];
+      if (!x || L == null || isNaN(L)) { o.innerHTML = `<span class="muted">${x ? "Escribe la línea." : "Este jugador no tiene proyección de esa estadística."}</span>`; add.innerHTML = ""; return; }
+      const r = propProb(x, L);
+      if (!r) { o.textContent = "Sin datos para esa línea."; add.innerHTML = ""; return; }
+      const sl = STAT_LABEL[st.stat];
+      html = (pl.flag ? `<div class="calc-warn">⚠ ${esc(pl.flag.note)}.${FLAG_WHY}</div>` : "") + `<div class="muted">Media ${x.mean} · rango ${x.p10}–${x.p90}${r.push ? ` · empate ${pct(r.push, 1)}` : ""}${r.approx ? " (aprox.: línea fuera del rango simulado)" : ""}</div>`
+        + line(`Over ${L}`, r.a, r.push, q1) + line(`Under ${L}`, r.b, r.push, q2);
+      legs = [["Over", r.a, q1], ["Under", r.b, q2]].filter(([, , q]) => parseFloat(q) > 1).map(([sd, p, q]) => regLeg({ kind: "prop", label: `${pl.name} ${sd} ${L} ${sl}`, player: pl.name,
+        stat: st.stat, line: L, side: sd.toLowerCase(), p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true, flag: pl.flag }, d.id, game));
+    } else {
+      if (st.mk !== "ml" && (L == null || isNaN(L))) { o.innerHTML = `<span class="muted">Escribe la línea.</span>`; add.innerHTML = ""; return; }
+      const T = st.mk === "total" ? null : st.T, r = teamProb(d, st.mk, T || g.away, L), s = d.summary;
+      const src = r.src === "pub" ? "Probabilidad publicada por el modelo para esta apuesta." : r.src === "sims" ? `Contado en ${r.n.toLocaleString("es")} simulaciones del partido.`
+        : SIMS[d.id] === "loading" ? "Contando en las simulaciones del partido…" : "Aproximación a partir de la proyección (no hay simulaciones guardadas de este partido).";
+      const ctx = st.mk === "ml" ? `Victoria ${esc(g.away)} ${pct(s.win_prob[g.away], 0)} · ${esc(g.home)} ${pct(s.win_prob[g.home], 0)}`
+        : st.mk === "spread" ? `Margen proyectado de ${esc(T)}: ${(s.proj[T] - s.proj[T === g.home ? g.away : g.home] > 0 ? "+" : "")}${(s.proj[T] - s.proj[T === g.home ? g.away : g.home]).toFixed(1)}`
+        : st.mk === "total" ? `Total proyectado ${(s.proj_total ?? 0).toFixed(1)}${s.total_pcts ? ` · rango ${s.total_pcts[10]}–${s.total_pcts[90]}` : ""}` : `Puntos proyectados de ${esc(T)}: ${s.proj[T].toFixed(1)}`;
+      html = `<div class="muted">${ctx}${r.push ? ` · empate ${pct(r.push, 1)}` : ""}</div><div class="muted">${src}</div>`;
+      const mkLeg = (side, p, q) => regLeg({ kind: st.mk, label: teamLabel(st.mk, T, L, side), team: T, line: st.mk === "ml" ? null : L, side: side ? side.toLowerCase() : null,
+        p: Math.round(p * 1000) / 1000, dec: parseFloat(q), custom: true }, d.id, game);
+      if (r.b == null) { html += line(teamLabel(st.mk, T, L), r.a, r.push, q1); if (parseFloat(q1) > 1) legs.push(mkLeg(null, r.a, q1)); }
+      else {
+        html += line(teamLabel(st.mk, T, L, "Over"), r.a, r.push, q1) + line(teamLabel(st.mk, T, L, "Under"), r.b, r.push, q2);
+        [["Over", r.a, q1], ["Under", r.b, q2]].forEach(([sd, p, q]) => { if (parseFloat(q) > 1) legs.push(mkLeg(sd, p, q)); });
+      }
+    }
+    o.innerHTML = html;
+    add.innerHTML = legs.length ? legs.map(k => addBtn(k, true)).join("") : `<span class="muted">Escribe la cuota de tu casa para poder agregarlo a tu combinada.</span>`;
+  };
+  if (opts.d) draw(); else load(st.gid);
+}
+// Mi combinada → "+ Crear pick": el formulario reemplaza la lista de patas hasta que vuelves a "Ver combinada"
+let MK_OPEN = false;
+function pickGames() { return INDEX ? INDEX.games.filter(g => !g.result).sort((x, y) => x.date.localeCompare(y.date) || (x.tip_et || "").localeCompare(y.tip_et || "")) : []; }
+function syncMkBtn() { const b = $("#cb-mk"); if (b) b.textContent = MK_OPEN ? `Ver combinada (${MYC.length})` : "+ Crear pick"; }
+function showPickForm(on, gid) {
+  MK_OPEN = on;
+  $("#combo-panel").classList.toggle("mk-open", on); $("#cb-form").hidden = !on;
+  if (on) {
+    const games = pickGames(), want = gid || CUR_GAME.id;
+    $("#cb-form").innerHTML = `<p class="cb-note">Elige el partido, el jugador o el mercado de equipo, la línea y la cuota que te da tu casa: el modelo te dice la probabilidad y el EV, y lo sumas a tu combinada.</p><div class="calc mk" id="f-calc"></div>`;
+    bindPickForm("f", { games, gid: games.some(g => g.id === want) ? want : games[0]?.id });
+  } else delete FORMS.f;
+  syncMkBtn();
+}
+function openPickForm(gid) { openCombo(true); showPickForm(true, gid); }
+document.addEventListener("click", e => { const b = e.target.closest("[data-mkpick]"); if (b) { e.preventDefault(); openPickForm(b.dataset.mkpick || null); } });
 
 // Guía para quien entra por primera vez (dialog #guide). Cada tema tiene un id: los botones "?" (qh) de las secciones
 // abren la guía en ese tema. La bienvenida del inicio se oculta con "Entendido" (localStorage "nbap-intro").
@@ -1620,7 +1752,8 @@ const GUIDE = [
     <dl><dt>Entre partidos</dt><dd>Patas de partidos distintos. Su probabilidad es la multiplicación de la de cada pata.</dd>
     <dt>Mismo partido</dt><dd>Patas de un mismo partido (SGP). Se cuenta en cuántas simulaciones salen todas a la vez, porque unas dependen de otras: si un equipo anota mucho, suben sus jugadores y el over.</dd></dl>
     <p>Se eligen las combinaciones con más probabilidad de acertar todas, con cuota de al menos 2.00 y EV positivo. Aun así, un parlay acierta menos veces que cada pata por separado.</p>`],
-  ["combinada", "Mi combinada", "Arma tu combinada", () => `<p>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (en el inicio, en "Ver todos" o en la página de un partido), <b>Agregar a mi combinada</b> en un parlay recomendado, o los botones Over/Under de <b>Calcula tu apuesta</b> con la cuota de tu casa.</p>
+  ["combinada", "Mi combinada", "Arma tu combinada", () => `<p>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (en el inicio, en "Ver todos" o en la página de un partido), <b>Agregar a mi combinada</b> en un parlay recomendado, o crea tu propio pick.</p>
+    <p><b>Crea tu pick</b>: en la página de cada partido (con ese partido) o con <b>+ Crear pick</b> dentro de Mi combinada (eliges cualquier partido que falte por jugarse, sin salir de donde estás). Puede ser de <b>jugador</b> (cualquier estadística que proyecta el modelo) o de <b>equipo</b> (ganador, hándicap, total del partido o puntos de un equipo). Escribe la línea y la cuota decimal de tu casa: ves la probabilidad del modelo, la cuota justa y el EV, y lo sumas con el botón. Para los mercados de equipo se usa la probabilidad publicada si la línea coincide con la de las casas; si no, se cuenta en las simulaciones del partido.</p>
     <p>Los picks se juntan en <b>Mi combinada</b>, abajo a la izquierda. Puedes minimizarla y seguir navegando; al abrirla ves cada pata, la probabilidad de acertar todas, la cuota aproximada (producto de las cuotas), la cuota justa, el EV y el pago según lo que apuestes. Cuando terminan los partidos, cada pata y la combinada se marcan como ganadas o perdidas.</p>
     <dl><dt>Patas de partidos distintos</dt><dd>La probabilidad es la multiplicación de la de cada pata.</dd>
     <dt>Patas del mismo partido</dt><dd>Se cuentan juntas en una muestra de las simulaciones del partido (también las líneas propias de la calculadora), porque unas dependen de otras: si un equipo anota mucho, suben sus jugadores y el over. Si no hay muestra (partido ya jugado o jugador sin simular), se multiplican y se marca con * porque es aproximada.</dd></dl>
@@ -1739,9 +1872,11 @@ function regLeg(b, gid, game) {
     p: b.p, dec: +(b.dec || +dec(b.odds)).toFixed(2), custom: !!b.custom, flag: b.flag || null };
   return k;
 }
+// texto del botón ancho (formulario "Crea tu pick"): Over / Under, o el pick entero si es ganador o hándicap
+const addTxt = k => { const l = LEGREG[k] || {}, lab = l.label || ""; return `+ ${l.kind === "ml" || l.kind === "spread" ? lab : /^Over | Over /.test(lab) ? "Over" : "Under"} a mi combinada`; };
 function addBtn(k, wide) {
   const on = inCombo(k), lab = LEGREG[k] ? LEGREG[k].label : "";
-  return wide ? `<button type="button" class="btn ${on ? "" : "ghost "}addc-w" data-addc="${esc(k)}" aria-pressed="${on}">${on ? "✓ En tu combinada" : `+ ${esc(lab.includes(" Over ") ? "Over" : "Under")} a mi combinada`}</button>`
+  return wide ? `<button type="button" class="btn ${on ? "" : "ghost "}addc-w" data-addc="${esc(k)}" aria-pressed="${on}">${on ? "✓ En tu combinada" : esc(addTxt(k))}</button>`
     : `<button type="button" class="addc" data-addc="${esc(k)}" aria-pressed="${on}" aria-label="${on ? "Quitar de" : "Agregar a"} mi combinada: ${esc(lab)}" title="${on ? "Quitar de mi combinada" : "Agregar a mi combinada"}">${on ? "✓" : "+"}</button>`;
 }
 function plAddBtn(pl) {
@@ -1753,7 +1888,7 @@ function syncAddBtns() {
   document.querySelectorAll("[data-addc]").forEach(b => {
     const k = b.dataset.addc, on = inCombo(k), lab = LEGREG[k] ? LEGREG[k].label : "";
     b.setAttribute("aria-pressed", on);
-    if (b.classList.contains("addc-w")) { b.textContent = on ? "✓ En tu combinada" : `+ ${lab.includes(" Over ") ? "Over" : "Under"} a mi combinada`; b.classList.toggle("ghost", !on); }
+    if (b.classList.contains("addc-w")) { b.textContent = on ? "✓ En tu combinada" : addTxt(k); b.classList.toggle("ghost", !on); }
     else { b.textContent = on ? "✓" : "+"; b.setAttribute("aria-label", `${on ? "Quitar de" : "Agregar a"} mi combinada: ${lab}`); b.title = on ? "Quitar de mi combinada" : "Agregar a mi combinada"; }
   });
   document.querySelectorAll("[data-addpl]").forEach(b => {
@@ -1794,6 +1929,13 @@ function legResult(l) {
   const pools = [g.all_bets, g.value_bets, g.top_bets, d && d.bets, ...(g.parlays || []).map(p => p.legs), ...((d && d.parlays) || []).map(p => p.legs),
     ...((INDEX.parlays || {})[g.date] || []).map(p => p.legs)];
   for (const arr of pools) { const b = (arr || []).find(x => x.label === l.label && (!x.gid || x.gid === l.gid)); if (b && b.result) return b.result; }
+  if (["ml", "spread", "total", "tt"].includes(l.kind) && g.result.score) {   // pick de equipo propio: con el marcador
+    const sc = g.result.score, T = l.team, O = T === g.home ? g.away : g.home, over = l.side ? l.side === "over" : /^Over | Over /.test(l.label);
+    if (l.kind === "ml") return sc[T] > sc[O] ? "won" : "lost";
+    if (l.line == null) return null;
+    const y = l.kind === "spread" ? sc[T] - sc[O] + l.line : (l.kind === "total" ? sc[g.away] + sc[g.home] : sc[T]) - l.line;
+    return y === 0 ? "push" : (l.kind === "spread" || over) === (y > 0) ? "won" : "lost";
+  }
   if (!d) { if (!fetching.has(l.gid)) { fetching.add(l.gid); getJSON(`data/${l.gid}.json`).then(x => { cache[l.gid] = x; drawCombo(); }).catch(() => {}); } return null; }
   const pl = l.player && d.summary.players.find(p => p.name === l.player), a = pl && pl.actual ? pl.actual[l.stat] : undefined;
   if (a === undefined || l.line == null) return null;
@@ -1811,11 +1953,11 @@ function loadSims(gid) {
   if (gid in SIMS) return;
   SIMS[gid] = "loading";
   fetch(`data/sims/${gid}.bin`).then(r => r.ok ? r.arrayBuffer() : null).then(b => {
-    if (!b) { SIMS[gid] = null; return drawCombo(); }
+    if (!b) { SIMS[gid] = null; drawCombo(); return document.dispatchEvent(new CustomEvent("sims", { detail: gid })); }
     const len = new DataView(b).getUint32(0, true), h = JSON.parse(new TextDecoder().decode(new Uint8Array(b, 4, len))), c = {};
     h.cols.forEach((k, i) => { c[k] = new Uint8Array(b, 4 + len + i * h.n, h.n); });
-    SIMS[gid] = { n: h.n, c }; drawCombo();
-  }).catch(() => { SIMS[gid] = null; drawCombo(); });
+    SIMS[gid] = { n: h.n, c }; drawCombo(); document.dispatchEvent(new CustomEvent("sims", { detail: gid }));
+  }).catch(() => { SIMS[gid] = null; drawCombo(); document.dispatchEvent(new CustomEvent("sims", { detail: gid })); });
 }
 const SIM_SUM = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"], stocks: ["stl", "blk"], fgm: ["fg2m", "fg3m"], fga: ["fg2a", "fg3a"] };
 function simStat(S, name, st) {
@@ -1844,6 +1986,12 @@ function simLeg(l, S) {
       hit[i] = l.kind === "ml" ? (m > 0) === (team === home) : l.kind === "spread" ? (team === home ? m : -m) + l.line >= 0
         : l.label.startsWith("Over") ? t >= l.line : t <= l.line;
     }
+    return { hit, ok: null };
+  }
+  if (l.kind === "tt") {   // puntos de un equipo (pick propio)
+    if (l.line == null) return null;
+    const pts = team === home ? sh : sa, over = l.side ? l.side === "over" : l.label.includes(" Over ");
+    for (let i = 0; i < n; i++) hit[i] = over ? pts[i] >= l.line : pts[i] <= l.line;
     return { hit, ok: null };
   }
   const x = l.player && l.stat && simStat(S, l.player, l.stat), on = l.player && S.c[l.player + "|on"];
@@ -1882,7 +2030,7 @@ function comboCalc() {
     } else if (live.length) p *= live[0].p;
     for (let i = 0; i < ls_.length; i++) for (let j = i + 1; j < ls_.length; j++) {
       const a = ls_[i], b = ls_[j];
-      const side = x => x.kind === "spread" ? "ml" : x.kind;   // ganador y hándicap del mismo partido tampoco se combinan
+      const side = x => x.kind === "spread" ? "ml" : x.kind === "tt" ? "tt" + x.team : x.kind;   // ganador y hándicap del mismo partido tampoco se combinan
       if (a.player ? a.player === b.player && a.stat === b.stat : !b.player && side(a) === side(b)) clash.push(`${a.label} / ${b.label}`);
     }
   });
@@ -1895,9 +2043,10 @@ function drawCombo() {
   box.hidden = !n && !box.classList.contains("open");
   document.body.classList.toggle("has-combo", !!n);
   $("#cp-n").textContent = n;
+  syncMkBtn();
   if (!n) {
     $("#cp-d").textContent = "";
-    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí.</div>`;
+    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí, o crea el tuyo con <b>+ Crear pick</b>.</div>`;
     $("#cb-foot").hidden = true;
     return;
   }
@@ -1933,10 +2082,11 @@ function openCombo(on) {
   const box = $("#combo");
   box.classList.toggle("open", on); $("#combo-panel").hidden = !on;
   $("#combo-pill").setAttribute("aria-expanded", on);
-  if (on) { box.hidden = false; drawCombo(); $("#cb-min").focus({ preventScroll: true }); } else { drawCombo(); if (!box.hidden) $("#combo-pill").focus({ preventScroll: true }); }
+  if (on) { box.hidden = false; drawCombo(); $("#cb-min").focus({ preventScroll: true }); } else { if (MK_OPEN) showPickForm(false); drawCombo(); if (!box.hidden) $("#combo-pill").focus({ preventScroll: true }); }
 }
 $("#combo-pill").addEventListener("click", () => openCombo(true));
 $("#cb-min").addEventListener("click", () => openCombo(false));
+$("#cb-mk").addEventListener("click", () => showPickForm(!MK_OPEN));
 $("#cb-clear").addEventListener("click", () => { if (!MYC.length || confirm("¿Vaciar tu combinada?")) { MYC = []; comboChanged(); openCombo(false); } });
 $("#cb-stake").addEventListener("input", e => { ls("nbap-combo-stake", e.target.value); drawCombo(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#combo").classList.contains("open") && !$("#guide").open) openCombo(false); });

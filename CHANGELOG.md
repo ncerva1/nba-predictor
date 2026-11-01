@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Web — 2026-11-01: "Crea tu pick" (picks propios en la combinada)
+Pedido de Nicolas. El mismo formulario está en la página de cada partido (sustituye a "Calcula tu apuesta") y en Mi
+combinada ("+ Crear pick", eliges cualquier partido que falte por jugarse; en el inicio, "+ Crea tu propio pick").
+Jugador: cualquier estadística proyectada, como antes. Equipo: ganador, hándicap, total del partido y puntos de un
+equipo (nuevo tipo de pata `tt`). Probabilidad de equipo: la publicada si la línea coincide con una apuesta de las
+casas; si no, contada en data/sims/<id>.bin; sin muestra, normal centrada en la proyección. Las patas de equipo
+propias se liquidan con el marcador y entran en el conteo conjunto del mismo partido. No cambia ningún pick.
+
 ## Web — 2026-10-31: "Si no juega…" (compañeros sin un jugador)
 Pedido de Nicolas (idea de ludocomparador). `without.py` añade a cada partido `without`: por equipo, a cada jugador con
 20+ minutos proyectados (o en duda con 12+) se le repite la simulación fuera (p_play = 0, misma semilla y mismas
