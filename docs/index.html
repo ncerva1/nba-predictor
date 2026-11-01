@@ -643,7 +643,7 @@ function evPill(ev, thr) {
 }
 
 const legend = thr => `<div class="legend-row">
-  <div class="legend-item"><span class="pill value">Verde · EV ≥ +${(thr * 100).toFixed(0)}%</span>Pick con valor: el modelo ve el resultado más probable de lo que paga la cuota.</div>
+  <div class="legend-item"><span class="pill value">Verde · EV ≥ +${(thr * 100).toFixed(0)}%</span>Pick con valor: la probabilidad (modelo mezclado con la casa) supera a la que paga la cuota. Máximo ${INDEX.max_daily || 15} por jornada.</div>
   <div class="legend-item"><span class="pill flat">${document.documentElement.dataset.mode === "cup" ? "Dorado" : "Azul"} · EV 0 a +${(thr * 100).toFixed(0)}%</span>Ligeramente a favor, pero el margen es tan pequeño que no se recomienda.</div>
   <div class="legend-item"><span class="pill neg">Rojo · EV negativo</span>La cuota paga menos de lo que vale según el modelo. Evitar.</div>
 </div>`;
@@ -1023,7 +1023,7 @@ function renderIndex(scope = "reg") {
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>${todays.some(g => g.result) ? "Picks de la jornada" : "Picks de hoy"} ${qh("ev", "picks con valor y EV")}</h2>
-    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos (la probabilidad del modelo supera a la que paga la casa). "Top 20" son los ${TOP_N} picks de mayor valor esperado (EV) entre todas las categorías; en cada categoría (equipo, puntos, rebotes, asistencias...) se ven sus ${TOP_N} mejores, con su color aunque no tengan valor. Toca un pick para ver el análisis del partido.</p>
+    <p class="lede">${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos. Desde el modelo 1.5 la probabilidad mezcla la del modelo (25%) con la de la casa sin su margen (75%), solo se recomiendan player props (no Unders de rookies ni de quien no jugó la temporada pasada) y como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador, los de mayor EV. "Top 20" son los ${TOP_N} picks de mayor valor esperado (EV) entre todas las categorías; en cada categoría (equipo, puntos, rebotes, asistencias...) se ven sus ${TOP_N} mejores, con su color aunque no tengan valor. Toca un pick para ver el análisis del partido.</p>
     ${legend(thr)}
     ${allBets.length || mps.length ? segBar(allBets.concat(mps), "seg-idx", Object.keys(CATS).filter(k => k !== "all")) : ""}
     ${allBets.length ? betSortBar("bs-idx", true) : ""}
@@ -1110,7 +1110,7 @@ function parlayCard(pl, thr, withGame) {
   </article>`;
 }
 const plHowto = `<details class="howto"><summary>¿Cómo se arman los parlays?</summary><dl>
-  <dt>Patas</dt><dd>Solo entran apuestas con cuota publicada, probabilidad del modelo de al menos 55% y EV no negativo. En los parlays entre partidos, solo picks con valor (EV ≥ +3%), los dos más probables de cada partido. No se combinan dos patas del mismo jugador ni ganador con hándicap del mismo partido.</dd>
+  <dt>Patas</dt><dd>Solo entran player props con cuota a los dos lados, probabilidad (mezclada con la casa) de al menos 55% y EV no negativo, sin rookies ni jugadores sin temporada previa. Cada SGP de un partido usa patas distintas a las de los otros, así una pata fallada no tumba a todos. Los parlays entre partidos son de 2 patas, con picks con valor (EV ≥ +3%). No se combinan dos patas del mismo jugador.</dd>
   <dt>Elección</dt><dd>Para 2, 3 y 4 patas se elige la combinación con la mayor probabilidad de acertar todas, siempre que la cuota combinada sea de al menos 2.00 y el EV sea positivo.</dd>
   <dt>Prob. modelo</dt><dd>Mismo partido: porcentaje de las simulaciones en que aciertan todas las patas a la vez, así se tiene en cuenta que unas dependen de otras (si un equipo anota mucho suben sus jugadores y el over). Entre partidos: producto de las probabilidades. Se calcula suponiendo que juegan todos los jugadores de las props (si uno no juega, la casa anula esa pata) y no entran jugadores en duda.</dd>
   <dt>Cuota aprox.</dt><dd>Producto de las cuotas promedio de cada pata. En un parlay del mismo partido la casa suele pagar menos que esto cuando las patas van en la misma dirección: compara con la cuota que te ofrezca y con la cuota justa.</dd>
@@ -1739,7 +1739,7 @@ const GUIDE = [
     <dt>Mejor casa</dt><dd>La casa donde esa apuesta rinde más. Las marcadas con <span class="co">CO</span> son casas de Colombia (Rushbet, BetPlay).</dd></dl>`],
   ["ev", "EV y colores", "EV (valor esperado) y colores", () => `<p>El EV dice cuánto ganarías de media por cada 100 apostados si hicieras esa misma apuesta muchas veces. Se calcula con la probabilidad del modelo y la cuota:</p>
     <div class="ex">EV = prob. modelo × cuota − 1<br>Prob. 55% y cuota 2.00 → 0.55 × 2.00 − 1 = <b>+10%</b>: a la larga, +10 por cada 100 apostados.</div>
-    <dl><dt><span class="pill value">Verde</span></dt><dd>Pick con valor: EV de al menos +${((INDEX?.value_ev ?? .03) * 100).toFixed(0)}%. Son los que se recomiendan.</dd>
+    <dl><dt><span class="pill value">Verde</span></dt><dd>Pick con valor: EV de al menos +${((INDEX?.value_ev ?? .03) * 100).toFixed(0)}% con la probabilidad mezclada con la de la casa (modelo 1.5). Son los que se recomiendan, como mucho ${INDEX?.max_daily || 15} por jornada.</dd>
     <dt><span class="pill flat">Azul</span></dt><dd>EV positivo pero pequeño: margen demasiado justo para recomendarlo.</dd>
     <dt><span class="pill neg">Rojo</span></dt><dd>EV negativo: la casa paga menos de lo que vale. Mejor evitarlo.</dd></dl>
     <p>Un EV muy alto (+15% o más) no es "más seguro": suele indicar que al modelo le falta algo (una baja de última hora, un cambio de rotación). Conviene revisar el contexto del partido.</p>`],
