@@ -50,6 +50,23 @@ STAT_LABEL = {"pts": "Puntos", "reb": "Rebotes", "ast": "Asistencias", "fg3m": "
 DEFAULT_ODDS = -110
 VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 
+# Modelo 1.5 (1-nov, diagnóstico + backtest 26-31 oct aprobado por Nicolas): el modelo se creía con más ventaja de
+# la que tenía (decía 64% en sus picks, la casa pedía 54%, se acertó 49%). Ahora:
+# - la probabilidad publicada mezcla la de la casa sin margen con la del modelo: p = p_casa + MKT_W * (p_modelo -
+#   p_casa) (p_model guarda la del modelo). Solo hay p_casa si la casa da los dos lados de la misma línea;
+#   sin ella la apuesta se muestra pero no se recomienda.
+# - solo se recomiendan props (ganador, hándicap y total se muestran sin marca de valor: el mercado proyecta mejor
+#   el margen) y nunca el Under de un rookie o de quien no jugó la temporada pasada (el modelo los subestima).
+# - por jornada, como mucho MAX_PER_PLAYER picks por jugador (y uno por familia: puntos/P+R/P+A/PRA, rebotes/R+A,
+#   asistencias, robos/tapones...) y MAX_DAILY picks en total, los de mayor EV. "cand" = pasa el filtro por apuesta;
+#   "value" = además entra en el tope de la jornada.
+MKT_W = 0.25
+MAX_PER_PLAYER = 2
+MAX_DAILY = 15
+PICK_FAMILY = {"pts": "p", "pr": "p", "pa": "p", "pra": "p", "reb": "r", "ra": "r", "ast": "a",
+               "stl": "d", "blk": "d", "stocks": "d"}
+NO_UNDER_FLAGS = ("rookie", "lesion")
+
 
 def to_dec(odds):
     return 1 + (odds / 100 if odds > 0 else 100 / -odds)
@@ -63,6 +80,80 @@ def bet(kind, label, p, odds, line=None, player=None, team=None, assumed=False, 
                 odds_assumed=assumed, p=round(float(p), 3), implied=round(imp, 3),
                 fair=prob_to_american(p), edge=round(float(p - imp), 3), ev=round(float(ev), 3),
                 value=bool(ev >= VALUE_EV))
+
+
+def pair_key(b):
+    """Selecciones opuestas de una misma línea (las dos caras de la apuesta)."""
+    if b["kind"] == "prop":
+        return ("prop", b["player"], b.get("stat"), b["line"])
+    if b["kind"] == "total":
+        return ("total", b["line"])
+    if b["kind"] == "spread":
+        return ("spread", abs(b["line"]))
+    return (b["kind"],)
+
+
+def market_blend(bets, flags=None, w=MKT_W):
+    """1.5: mezcla cada probabilidad con la de la casa sin margen y marca las candidatas a pick con valor."""
+    flags = flags or {}
+    groups = {}
+    for b in bets:
+        groups.setdefault(pair_key(b), []).append(b)
+    for b in bets:
+        pm = b.get("p_model", b["p"])
+        g = groups[pair_key(b)]
+        mkt = None
+        if len(g) == 2 and not any(x.get("odds_assumed") for x in g):
+            i0, i1 = 1 / g[0]["dec"], 1 / g[1]["dec"]
+            mkt = (1 / b["dec"]) / (i0 + i1)
+        p = pm if mkt is None else mkt + w * (pm - mkt)
+        ev = p * b["dec"] - 1
+        shift = p - pm
+        b.update(p_model=round(float(pm), 3), p_mkt=None if mkt is None else round(float(mkt), 3), p=round(float(p), 3),
+                 fair=prob_to_american(p), edge=round(float(p - 1 / b["dec"]), 3), ev=round(float(ev), 3))
+        for o in b.get("books", []):  # otras casas / líneas: mismo ajuste que la línea de consenso
+            o["p"] = round(min(max(o["p"] + shift, 0.0), 1.0), 3)
+            o["ev"] = round(o["p"] * o["dec"] - 1, 3)
+        if "best" in b and b.get("books"):
+            b["best"] = max(b["books"], key=lambda o: o["ev"])
+        why = None
+        if mkt is None:
+            why = "sin cuota de la casa para el otro lado"
+        elif b["kind"] != "prop":
+            why = "picks de equipo en pausa"
+        elif b.get("side") == "under" and (flags.get(b["player"]) or {}).get("t") in NO_UNDER_FLAGS:
+            why = "sin Unders de rookies ni de quien no jugó la temporada pasada"
+        b["cand"] = bool(ev >= VALUE_EV and why is None)
+        b["value"] = b["cand"]
+        if why and ev >= VALUE_EV:
+            b["no_value_why"] = why
+        else:
+            b.pop("no_value_why", None)
+    bets.sort(key=lambda b: b["ev"], reverse=True)
+    return bets
+
+
+def daily_cap(rs, max_player=MAX_PER_PLAYER, max_daily=MAX_DAILY):
+    """1.5: entre los partidos sin jugar de una jornada, deja con valor solo los mejores candidatos por EV."""
+    cands = sorted(((b["ev"], i, b) for i, r in enumerate(rs) for b in r["bets"]
+                    if b.get("cand", b.get("value"))), key=lambda x: -x[0])
+    for r in rs:
+        for b in r["bets"]:
+            b["value"] = False
+    n, per, fam = 0, {}, set()
+    for _, i, b in cands:
+        if n >= max_daily:
+            break
+        k = (rs[i]["id"], b.get("player") or b.get("team"))
+        if b["kind"] == "prop":
+            f = (k, PICK_FAMILY.get(b.get("stat"), b.get("stat")))
+            if per.get(k, 0) >= max_player or f in fam:
+                continue
+            fam.add(f)
+        per[k] = per.get(k, 0) + 1
+        b["value"] = True
+        n += 1
+    return rs
 
 
 def load_odds(date):
@@ -285,13 +376,14 @@ def parlay(legs, p, n_ind=None):
                 dec=round(dec, 2), fair=round(1 / p, 2) if p else None, ev=round(p * dec - 1, 3))
 
 
-def best_parlays(cands, joint, distinct):
-    """Para 2, 3 y 4 patas: la combinación con mayor prob. conjunta, con cuota >= PARLAY_MIN_DEC y EV > 0."""
+def best_parlays(cands, joint, distinct, exclusive=False, sizes=(2, 3, 4)):
+    """Para 2, 3 y 4 patas: la combinación con mayor prob. conjunta, con cuota >= PARLAY_MIN_DEC y EV > 0.
+    exclusive (1.5): cada parlay usa patas que no están en los anteriores, así una pata fallada no tumba a todos."""
     from itertools import combinations
-    out = []
-    for k in (2, 3, 4):
+    out, used = [], set()
+    for k in sizes:
         best = None
-        for c in combinations(range(len(cands)), k):
+        for c in combinations([i for i in range(len(cands)) if i not in used], k):
             if not distinct([cands[i] for i in c]):
                 continue
             dec = float(np.prod([cands[i]["dec"] for i in c]))
@@ -304,23 +396,34 @@ def best_parlays(cands, joint, distinct):
                 best = (p, dec, c)
         if best:
             out.append(best)
+            if exclusive:
+                used |= set(best[2])
     return out
 
 
 def sgp(r, g, s):
     """Parlays del mismo partido. Devuelve (parlays, patas candidatas para los parlays entre partidos)."""
-    pool = [b for b in r["bets"] if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and
-            (b["kind"] != "prop" or (b.get("stat") and s["players"][b["player"]]["p_play"] >= PARLAY_P_PLAY))]
+    flags = player_flags(g["date"], os.path.join(HERE, "games", f"{g['date']}_{g['away']}@{g['home']}.json"))
+    pool = [b for b in r["bets"] if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and b.get("p_mkt") is not None and
+            b["kind"] == "prop" and b.get("stat") and s["players"][b["player"]]["p_play"] >= PARLAY_P_PLAY
+            and (flags.get(b["player"]) or {}).get("t") not in NO_UNDER_FLAGS]  # 1.5: solo props, sin rookies
     pool = sorted(pool, key=lambda b: -b["p"])[:PARLAY_POOL]
     hits = [leg_hits(b, g, s) for b in pool]
     legs = [dict({k: b.get(k) for k in LEG_KEYS}, gid=r["id"], game=f"{g['away']} @ {g['home']}") for b in pool]
     distinct = lambda ls: len({leg_group(l) for l in ls}) == len(ls)
 
     def joint(c):
+        # correlación de las simulaciones (conjunta / producto de las marginales del modelo) aplicada a las
+        # probabilidades publicadas (mezcladas con la casa, 1.5)
         win = np.logical_and.reduce([hits[i][0] for i in c])
         ok = np.logical_and.reduce([hits[i][1] for i in c])
-        return float(win[ok].mean()) if ok.any() else 0.0
-    res = best_parlays(legs, joint, distinct)
+        if not ok.any():
+            return 0.0
+        pj = float(win[ok].mean())
+        marg = float(np.prod([hits[i][0][ok].mean() for i in c]))
+        q = [legs[i]["p"] for i in c]
+        return min(pj / marg * float(np.prod(q)), min(q)) if marg else 0.0
+    res = best_parlays(legs, joint, distinct, exclusive=True)
     return [dict(parlay([legs[i] for i in c], p), type="sgp") for p, _, c in res], legs
 
 
@@ -328,10 +431,11 @@ def cross_parlays(legs_by_game):
     """Parlays entre partidos con las 2 patas más probables y con valor (EV >= VALUE_EV) de cada partido."""
     cands = []
     for legs in legs_by_game:
-        cands += sorted([l for l in legs if l["ev"] >= VALUE_EV], key=lambda l: -l["p"])[:2]
+        cands += sorted([l for l in legs if l["ev"] >= VALUE_EV and l["kind"] == "prop"], key=lambda l: -l["p"])[:2]
     distinct = lambda ls: len({l["gid"] for l in ls}) == len(ls)
     joint = lambda c: float(np.prod([cands[i]["p"] for i in c]))
-    return [dict(parlay([cands[i] for i in c], p), type="cross") for p, _, c in best_parlays(cands, joint, distinct)]
+    return [dict(parlay([cands[i] for i in c], p), type="cross")
+            for p, _, c in best_parlays(cands, joint, distinct, exclusive=True, sizes=(2,))]  # 1.5: solo de 2 patas
 
 
 def settle_parlay(pl, results):
@@ -661,8 +765,7 @@ def run_game(path, n):
     else:
         tb = team_bets(cfg, s)
     summ = summarize(cfg, s)
-    bets = tb + prop_bets(cfg, s)
-    bets.sort(key=lambda b: b["ev"], reverse=True)
+    bets = market_blend(tb + prop_bets(cfg, s), player_flags(g["date"], path))
     R = load_rankings()
     mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
     r = dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,
@@ -761,6 +864,7 @@ def main():
     keep = {g["id"]: g for g in index["games"]}
     cross = index.get("parlays", {})  # parlays entre partidos por jornada
     legs_by_date = {}
+    sim_dates = set()  # jornadas con partidos sin jugar en esta pasada (tope diario de picks, 1.5)
     all_flags = {}  # etiquetas de los jugadores de esta pasada (para las patas de los parlays entre partidos)
     for p in paths:
         gid, date = game_id(p), os.path.basename(p)[:10]
@@ -796,9 +900,19 @@ def main():
             legs_by_date.setdefault(date, []).append(r.pop("_legs"))
         json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
         keep[r["id"]] = index_entry(r)
+        if "result" not in r:
+            sim_dates.add(date)
         g, sm = r["game"], r["summary"]
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "
               f"{keep[r['id']]['n_value']} apuestas con valor" + (" (resultado real cargado)" if res else ""))
+    for date in sorted(sim_dates):  # 1.5: tope de picks por jugador y por jornada, entre todos sus partidos sin jugar
+        ps = [os.path.join(OUT, f"{gid}.json") for gid, e in keep.items() if e["date"] == date and "result" not in e]
+        rs = daily_cap([json.load(open(x)) for x in ps if os.path.exists(x)])
+        for r in rs:
+            json.dump(r, open(os.path.join(OUT, f"{r['id']}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+            keep[r["id"]] = index_entry(r)
+        print(f"Jornada {date}: {sum(b['value'] for r in rs for b in r['bets'])} picks con valor "
+              f"(de {sum(b.get('cand', False) for r in rs for b in r['bets'])} candidatos)")
     games = sorted(keep.values(), key=lambda g: (g["date"], g.get("tip_et") or "", g["id"]), reverse=False)
     last = max((g["date"] for g in games), default=None)
     for g in games:  # la lista completa de apuestas ("Ver todo" y top por categoría) solo de la última jornada
@@ -834,7 +948,7 @@ def main():
         day = stage_for or max((os.path.basename(p)[:10] for p in paths), default=last)
         updates.setdefault(day, {})[stage] = now
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
-    json.dump(dict(generated=now, value_ev=VALUE_EV, last_stage=stage or index.get("last_stage"), updates=updates,
+    json.dump(dict(generated=now, value_ev=VALUE_EV, model="1.5", mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
                    history=history, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 

@@ -1,5 +1,23 @@
 # Cambios del modelo
 
+## 1.5 — 2026-11-01: probabilidades mezcladas con la casa y menos picks
+Diagnóstico de Nicolas (por qué el modelo pierde unidades): en los 955 picks con valor del 26 al 31-oct el modelo
+decía 64%, la casa pedía 54% y se acertó 49% (−91 u). Backtest con esas jornadas (`backtest_market.py`): con los
+cambios de abajo, 39 picks, 26–13, +12,2 u (muestra pequeña: intervalo del ROI +6% a +56%).
+
+- `market_blend`: p = p_casa sin margen + 0,25 × (p_modelo − p_casa) (`MKT_W`); `p_model` y `p_mkt` se guardan.
+  Sin cuota a los dos lados de la misma línea no hay p_casa y la apuesta no se recomienda.
+- Solo se recomiendan player props (ganador, hándicap y total: 28–44, −23,6 u) y nunca el Under de un rookie o de
+  quien no jugó la temporada pasada (etiquetas `rookie` / `lesion`). `no_value_why` dice por qué no se marca.
+- `daily_cap`: por jornada, como mucho 2 picks por jugador (uno por familia: puntos/P+R/P+A/PRA, rebotes/R+A,
+  asistencias, robos/tapones) y 15 en total, los de mayor EV. `cand` = pasa el filtro; `value` = entra en el tope.
+- SGP: solo props con cuota a los dos lados, sin rookies; los de 2, 3 y 4 patas no comparten patas; la
+  probabilidad conjunta aplica la correlación de las simulaciones a las probabilidades mezcladas. Parlays entre
+  partidos: solo de 2 patas. Con la mezcla habrá bastantes menos SGP.
+- Descartado: no recomendar cuando el modelo se separa más de 15 puntos de la casa (empeoraba el backtest).
+- Pendiente: ensanchar la varianza de las simulaciones (no se puede medir sin re-simular; revisar con la calibración
+  de las próximas jornadas) y recalcular `MKT_W` cada semana con todas las líneas liquidadas.
+
 ## Web — 2026-11-01: "Crea tu pick" (picks propios en la combinada)
 Pedido de Nicolas. El mismo formulario está en la página de cada partido (sustituye a "Calcula tu apuesta") y en Mi
 combinada ("+ Crear pick", eliges cualquier partido que falte por jugarse; en el inicio, "+ Crea tu propio pick").
