@@ -1,0 +1,561 @@
+{
+ "date": "2026-11-01",
+ "sources": {
+  "schedule_odds": "NBA.com/games 1-nov (4 partidos, ninguno de Copa); Covers.com matchup/<id>/odds (spread, total y ML de 9 casas en los 4 partidos, ~16:50 UTC) y props de puntos (líneas destacadas, mejor over y mejor under); covers.com player-props para algunas de rebotes, asistencias y triples (un solo lado)",
+  "players_cur": "Basketball-Reference, páginas de equipo 2026-27 consultadas el 1-nov (ya incluyen los partidos de Copa del 30-oct)",
+  "players_prior": "prior.csv acumulado (26-31 oct). Sin temporada previa: novatos (Mikel Brown Jr., Wagler, Lendeborg, Graves, Ike) y Haliburton (lesionado en 2025-26)",
+  "injuries": "ESPN injuries y CBS Sports injuries, 1-nov ~16:40 UTC",
+  "b2b": "Ninguno: los 8 equipos jugaron por última vez el 30-oct",
+  "db": "BD de rankings: snapshot del 1-nov (B-Ref 2026-27 heredado del 31-oct; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 31-oct)",
+  "props_other": "Rebotes/asistencias/triples: solo las líneas destacadas de covers.com/player-props (un lado)"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "prop_lines": {
+  "Jayson Tatum": {
+   "pts": [
+    26.5,
+    -114,
+    -105
+   ],
+   "ast": [
+    6.5,
+    null,
+    100
+   ]
+  },
+  "Paul George": {
+   "pts": [
+    17.5,
+    -112,
+    -125,
+    18.5
+   ]
+  },
+  "Desmond Bane": {
+   "pts": [
+    18.5,
+    -110,
+    -125,
+    19.5
+   ],
+   "fg3m": [
+    2.5,
+    null,
+    125
+   ]
+  },
+  "Payton Pritchard": {
+   "pts": [
+    15.5,
+    -104,
+    -105
+   ]
+  },
+  "Derrick White": {
+   "pts": [
+    14.5,
+    -106,
+    -110
+   ]
+  },
+  "Jordan Walsh": {
+   "pts": [
+    4.5,
+    -112,
+    -110
+   ]
+  },
+  "Jase Richardson": {
+   "pts": [
+    8.5,
+    -112,
+    -109
+   ],
+   "ast": [
+    2.5,
+    null,
+    -170
+   ],
+   "reb": [
+    2.5,
+    null,
+    122
+   ],
+   "fg3m": [
+    1.5,
+    null,
+    -210
+   ]
+  },
+  "Franz Wagner": {
+   "pts": [
+    22.5,
+    -110,
+    -105
+   ],
+   "ast": [
+    6.5,
+    null,
+    -132
+   ]
+  },
+  "Anthony Black": {
+   "pts": [
+    13.5,
+    -105,
+    -110
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    21.5,
+    -128,
+    -112,
+    23.5
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    20.5,
+    100,
+    -110
+   ]
+  },
+  "Aaron Nesmith": {
+   "pts": [
+    12.5,
+    100,
+    -120
+   ]
+  },
+  "Obi Toppin": {
+   "pts": [
+    11.5,
+    -130,
+    -120,
+    12.5
+   ]
+  },
+  "Nolan Traoré": {
+   "pts": [
+    10.5,
+    -130,
+    -125,
+    12.5
+   ],
+   "ast": [
+    4.5,
+    null,
+    -108
+   ]
+  },
+  "Kelly Oubre Jr.": {
+   "pts": [
+    10.5,
+    -105,
+    -105
+   ],
+   "fg3m": [
+    1.5,
+    null,
+    -210
+   ]
+  },
+  "Moritz Wagner": {
+   "pts": [
+    9.5,
+    -115,
+    -125,
+    10.5
+   ],
+   "ast": [
+    1.5,
+    null,
+    -110
+   ]
+  },
+  "Keon Ellis": {
+   "pts": [
+    4.5,
+    -200,
+    -105,
+    6.5
+   ]
+  },
+  "Jay Huff": {
+   "pts": [
+    7.5,
+    -110,
+    -110
+   ],
+   "reb": [
+    4.5,
+    null,
+    -135
+   ]
+  },
+  "Darius Garland": {
+   "pts": [
+    23.5,
+    -105,
+    -112
+   ],
+   "ast": [
+    7.5,
+    null,
+    -122
+   ]
+  },
+  "Yaxel Lendeborg": {
+   "pts": [
+    20.5,
+    -113,
+    -105
+   ],
+   "reb": [
+    7.5,
+    null,
+    -102
+   ]
+  },
+  "Rui Hachimura": {
+   "pts": [
+    14.5,
+    -135,
+    -107,
+    15.5
+   ]
+  },
+  "Brandin Podziemski": {
+   "pts": [
+    16.5,
+    -104,
+    -110
+   ],
+   "ast": [
+    4.5,
+    null,
+    -125
+   ]
+  },
+  "Keaton Wagler": {
+   "pts": [
+    12.5,
+    -125,
+    -120,
+    13.5
+   ]
+  },
+  "Derrick Jones Jr.": {
+   "pts": [
+    10.5,
+    -105,
+    -125,
+    11.5
+   ]
+  },
+  "Brook Lopez": {
+   "pts": [
+    9.5,
+    -127,
+    -115,
+    10.5
+   ]
+  },
+  "Isaiah Jackson": {
+   "pts": [
+    8.5,
+    -117,
+    -115,
+    9.5
+   ]
+  },
+  "Kris Dunn": {
+   "pts": [
+    8.5,
+    100,
+    -120
+   ],
+   "ast": [
+    5.5,
+    null,
+    -147
+   ]
+  },
+  "Kobe Sanders": {
+   "pts": [
+    7.5,
+    100,
+    null
+   ]
+  },
+  "Luka Dončić": {
+   "pts": [
+    33.5,
+    -107,
+    -106
+   ],
+   "fg3m": [
+    4.5,
+    null,
+    -130
+   ]
+  },
+  "Austin Reaves": {
+   "pts": [
+    21.5,
+    -115,
+    -125,
+    23.5
+   ]
+  },
+  "Scottie Barnes": {
+   "pts": [
+    23.5,
+    -110,
+    -107
+   ]
+  },
+  "RJ Barrett": {
+   "pts": [
+    20.5,
+    -110,
+    -120,
+    21.5
+   ]
+  },
+  "Immanuel Quickley": {
+   "pts": [
+    16.5,
+    -125,
+    -118,
+    17.5
+   ]
+  },
+  "Ja'Kobe Walter": {
+   "pts": [
+    10.5,
+    -112,
+    -113,
+    11.5
+   ]
+  },
+  "Walker Kessler": {
+   "pts": [
+    11.5,
+    -136,
+    -103,
+    12.5
+   ]
+  },
+  "Ziaire Williams": {
+   "pts": [
+    8.5,
+    -107,
+    100
+   ],
+   "reb": [
+    2.5,
+    120,
+    null
+   ]
+  },
+  "Jakob Poeltl": {
+   "pts": [
+    7.5,
+    -108,
+    -110
+   ]
+  },
+  "Andrew Nembhard": {
+   "ast": [
+    9.5,
+    null,
+    -125
+   ]
+  },
+  "Mitchell Robinson": {
+   "reb": [
+    6.5,
+    -114,
+    null
+   ]
+  },
+  "Pascal Siakam": {
+   "reb": [
+    7.5,
+    null,
+    -110
+   ]
+  },
+  "Matisse Thybulle": {
+   "reb": [
+    2.5,
+    140,
+    null
+   ]
+  },
+  "Collin Murray-Boyles": {
+   "reb": [
+    5.5,
+    null,
+    -118
+   ],
+   "fg3m": [
+    0.5,
+    null,
+    115
+   ]
+  }
+ },
+ "games": [
+  {
+   "away": "BOS",
+   "home": "ORL",
+   "tip_et": "15:30",
+   "venue": "Kia Center, Orlando",
+   "market": {
+    "spread_home": 6.5,
+    "total": 222.5,
+    "ml_home": 205,
+    "ml_away": -250
+   },
+   "b2b": [],
+   "adj": {
+    "ORL": {
+     "o": -1.0,
+     "d": 0.5,
+     "why": "Banchero OUT (tobillo, hasta ~22-nov), Suggs OUT (rodilla, hasta ~10-nov), Isaac y Penda OUT"
+    }
+   },
+   "out": [
+    "Paolo Banchero",
+    "Jalen Suggs"
+   ],
+   "gtd": {
+    "Mitchell Robinson": 0.6
+   },
+   "notes": [
+    "BOS: Mitchell Robinson en duda (descanso, 'game time decision'); Devin Carter OUT",
+    "ORL: Banchero, Suggs, Isaac, Penda e Izaiyah Nelson OUT",
+    "H2H 2025-26: BOS 3-1 (uno de NBA Cup ganado por ORL); BOS llegó a ir +26 el 23-nov (blowout)",
+    "Récord: BOS 4-1, ORL 2-3"
+   ]
+  },
+  {
+   "away": "BKN",
+   "home": "IND",
+   "tip_et": "17:00",
+   "venue": "Gainbridge Fieldhouse, Indianapolis",
+   "market": {
+    "spread_home": -3.5,
+    "total": 230.5,
+    "ml_home": -167,
+    "ml_away": 140
+   },
+   "b2b": [],
+   "adj": {
+    "BKN": {
+     "o": -0.5,
+     "d": 0.0,
+     "why": "Mikel Brown Jr. OUT (descanso) y Egor Dëmin OUT (hasta ~7-nov); Bilodeau OUT"
+    },
+    "IND": {
+     "o": -1.5,
+     "d": 0.5,
+     "why": "Haliburton OUT (isquio, hasta ~13-nov), Zubac OUT (tobillo), Sheppard y McConnell OUT; Toppin y Nesmith en duda"
+    }
+   },
+   "out": [
+    "Mikel Brown Jr.",
+    "Egor Dëmin",
+    "Tyrese Haliburton",
+    "Ivica Zubac",
+    "Ben Sheppard"
+   ],
+   "gtd": {
+    "Obi Toppin": 0.5,
+    "Aaron Nesmith": 0.5
+   },
+   "notes": [
+    "IND: Toppin (espalda) y Nesmith (isquio) 'game time decision' en CBS",
+    "BKN 0-5: único equipo sin victorias",
+    "H2H 2025-26: IND 2-1; IND fue +32 el 9-abr (blowout, con plantillas de final de temporada)",
+    "Récord: BKN 0-5, IND 2-4"
+   ]
+  },
+  {
+   "away": "LAC",
+   "home": "GSW",
+   "tip_et": "20:30",
+   "venue": "Chase Center, San Francisco",
+   "market": {
+    "spread_home": -1.5,
+    "total": 221.5,
+    "ml_home": -133,
+    "ml_away": 112
+   },
+   "b2b": [],
+   "adj": {
+    "GSW": {
+     "o": -4.5,
+     "d": 1.0,
+     "why": "Stephen Curry (descanso) y Draymond Green (espalda) OUT; Butler, Porziņģis y Moody OUT"
+    },
+    "LAC": {
+     "o": -0.5,
+     "d": 0.0,
+     "why": "Ingram, Beal y Strus OUT (hasta ~8-nov)"
+    }
+   },
+   "out": [
+    "Stephen Curry",
+    "Draymond Green"
+   ],
+   "gtd": {
+    "Gui Santos": 0.75
+   },
+   "notes": [
+    "GSW sin Curry (29,2 ppg) ni Green; Gui Santos probable (rodilla)",
+    "El mercado solo da a GSW -1,5 en casa: ya descuenta las bajas",
+    "H2H 2025-26: LAC 3-1; GSW fue +24 el 28-oct-2025 (blowout)",
+    "Récord: LAC 1-4, GSW 3-3"
+   ]
+  },
+  {
+   "away": "TOR",
+   "home": "LAL",
+   "tip_et": "21:00",
+   "venue": "Crypto.com Arena, Los Angeles",
+   "market": {
+    "spread_home": -2.5,
+    "total": 225.5,
+    "ml_home": -150,
+    "ml_away": 125
+   },
+   "b2b": [],
+   "adj": {
+    "TOR": {
+     "o": -1.0,
+     "d": 0.5,
+     "why": "Kawhi Leonard OUT (rodilla, 3-4 semanas); Bittle OUT"
+    }
+   },
+   "out": [
+    "Kawhi Leonard"
+   ],
+   "gtd": {
+    "Ziaire Williams": 0.5
+   },
+   "notes": [
+    "LAL: Ziaire Williams (pie) y Adou Thiero en duda",
+    "H2H 2025-26: LAL 2-0 (con LeBron y Ayton, ya no están)",
+    "Récord: TOR 3-2, LAL 4-2"
+   ]
+  }
+ ]
+}
