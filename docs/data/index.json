@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-31T21:36+00:00",
+ "generated": "2026-11-01T08:17+00:00",
  "value_ev": 0.03,
- "last_stage": "pregame",
+ "last_stage": "results",
  "updates": {
   "2026-10-30": {
    "morning": "2026-10-30T16:48+00:00",
@@ -10,7 +10,8 @@
   },
   "2026-10-31": {
    "morning": "2026-10-31T16:36+00:00",
-   "pregame": "2026-10-31T21:36+00:00"
+   "pregame": "2026-10-31T21:36+00:00",
+   "results": "2026-11-01T08:17+00:00"
   }
  },
  "history": [
@@ -71,6 +72,18 @@
    "units": -67.69,
    "sgp_won": 12,
    "sgp_lost": 18,
+   "cross_won": 0,
+   "cross_lost": 3
+  },
+  {
+   "date": "2026-10-31",
+   "games": 7,
+   "winners_ok": 5,
+   "picks_won": 23,
+   "picks_lost": 24,
+   "units": -4.07,
+   "sgp_won": 0,
+   "sgp_lost": 15,
    "cross_won": 0,
    "cross_lost": 3
   }
@@ -539,7 +552,8 @@
       "flag": {
        "t": "rookie",
        "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
-      }
+      },
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -553,7 +567,8 @@
       "dec": 1.198,
       "ev": 0.031,
       "gid": "2026-10-31-SAC-at-MEM",
-      "game": "SAC @ MEM"
+      "game": "SAC @ MEM",
+      "result": "won"
      }
     ],
     "n": 2,
@@ -564,7 +579,7 @@
     "fair": 1.46,
     "ev": 0.491,
     "type": "cross",
-    "result": null
+    "result": "lost"
    },
    {
     "legs": [
@@ -580,7 +595,8 @@
       "dec": 1.82,
       "ev": 0.417,
       "gid": "2026-10-31-CLE-at-MIL",
-      "game": "CLE @ MIL"
+      "game": "CLE @ MIL",
+      "result": "lost"
      },
      {
       "kind": "prop",
@@ -598,7 +614,8 @@
       "flag": {
        "t": "rookie",
        "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
-      }
+      },
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -612,7 +629,8 @@
       "dec": 1.198,
       "ev": 0.031,
       "gid": "2026-10-31-SAC-at-MEM",
-      "game": "SAC @ MEM"
+      "game": "SAC @ MEM",
+      "result": "won"
      }
     ],
     "n": 3,
@@ -623,7 +641,7 @@
     "fair": 1.87,
     "ev": 1.113,
     "type": "cross",
-    "result": null
+    "result": "lost"
    },
    {
     "legs": [
@@ -639,7 +657,8 @@
       "dec": 1.82,
       "ev": 0.417,
       "gid": "2026-10-31-CLE-at-MIL",
-      "game": "CLE @ MIL"
+      "game": "CLE @ MIL",
+      "result": "lost"
      },
      {
       "kind": "prop",
@@ -653,7 +672,8 @@
       "dec": 1.952,
       "ev": 0.505,
       "gid": "2026-10-31-MIN-at-SAS",
-      "game": "MIN @ SAS"
+      "game": "MIN @ SAS",
+      "result": "won"
      },
      {
       "kind": "prop",
@@ -671,7 +691,8 @@
       "flag": {
        "t": "rookie",
        "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
-      }
+      },
+      "result": "lost"
      },
      {
       "kind": "ml",
@@ -685,7 +706,8 @@
       "dec": 1.198,
       "ev": 0.031,
       "gid": "2026-10-31-SAC-at-MEM",
-      "game": "SAC @ MEM"
+      "game": "SAC @ MEM",
+      "result": "won"
      }
     ],
     "n": 4,
@@ -696,7 +718,7 @@
     "fair": 2.43,
     "ev": 2.181,
     "type": "cross",
-    "result": null
+    "result": "lost"
    }
   ]
  },
@@ -33868,7 +33890,8 @@
      "ev": 0.466,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -33887,6 +33910,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -33908,7 +33932,8 @@
      "ev": 0.37,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -33928,7 +33953,8 @@
      "ev": 0.466,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -33947,6 +33973,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -33968,7 +33995,8 @@
      "ev": 0.37,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -33986,7 +34014,8 @@
      "ev": 0.264,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34004,7 +34033,8 @@
      "ev": 0.217,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34022,7 +34052,8 @@
      "ev": 0.18,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -34121,7 +34152,8 @@
        "p": 0.607,
        "ev": 0.134
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34139,7 +34171,8 @@
      "ev": 0.095,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34157,7 +34190,8 @@
      "ev": 0.041,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -34176,6 +34210,7 @@
        "ev": 0.446,
        "gid": "2026-10-31-POR-at-UTA",
        "game": "POR @ UTA",
+       "result": "lost",
        "flag": {
         "t": "rookie",
         "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -34193,7 +34228,8 @@
        "dec": 1.855,
        "ev": 0.466,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -34203,7 +34239,8 @@
      "dec": 3.36,
      "fair": 1.56,
      "ev": 1.158,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -34220,6 +34257,7 @@
        "ev": 0.446,
        "gid": "2026-10-31-POR-at-UTA",
        "game": "POR @ UTA",
+       "result": "lost",
        "flag": {
         "t": "rookie",
         "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -34237,7 +34275,8 @@
        "dec": 1.855,
        "ev": 0.466,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -34251,7 +34290,8 @@
        "dec": 1.8,
        "ev": 0.37,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -34261,7 +34301,8 @@
      "dec": 6.05,
      "fair": 2.08,
      "ev": 1.917,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -34278,6 +34319,7 @@
        "ev": 0.446,
        "gid": "2026-10-31-POR-at-UTA",
        "game": "POR @ UTA",
+       "result": "lost",
        "flag": {
         "t": "rookie",
         "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -34295,7 +34337,8 @@
        "dec": 1.855,
        "ev": 0.466,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -34309,7 +34352,8 @@
        "dec": 1.8,
        "ev": 0.37,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -34323,7 +34367,8 @@
        "dec": 1.909,
        "ev": 0.217,
        "gid": "2026-10-31-POR-at-UTA",
-       "game": "POR @ UTA"
+       "game": "POR @ UTA",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -34333,7 +34378,8 @@
      "dec": 11.56,
      "fair": 3.2,
      "ev": 2.608,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -34349,7 +34395,8 @@
      "fair": 1.29,
      "min_dec": 1.33,
      "ref": 4.8,
-     "label": "Jrue Holiday Over 4.5 Tiros de campo anotados"
+     "label": "Jrue Holiday Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34363,7 +34410,8 @@
      "fair": 1.47,
      "min_dec": 1.51,
      "ref": 2.9,
-     "label": "Donovan Clingan Over 2.5 Dobles anotados"
+     "label": "Donovan Clingan Over 2.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34377,7 +34425,8 @@
      "fair": 1.49,
      "min_dec": 1.53,
      "ref": 10.6,
-     "label": "Jrue Holiday Over 10.5 Tiros de campo intentados"
+     "label": "Jrue Holiday Over 10.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34391,7 +34440,8 @@
      "fair": 1.51,
      "min_dec": 1.56,
      "ref": 5.0,
-     "label": "Donovan Clingan Over 4.5 Dobles intentados"
+     "label": "Donovan Clingan Over 4.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34405,7 +34455,8 @@
      "fair": 1.6,
      "min_dec": 1.65,
      "ref": 2.7,
-     "label": "Jrue Holiday Over 2.5 Dobles anotados"
+     "label": "Jrue Holiday Over 2.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34419,7 +34470,8 @@
      "fair": 1.6,
      "min_dec": 1.65,
      "ref": 5.1,
-     "label": "Ace Bailey Under 4.5 Triples intentados"
+     "label": "Ace Bailey Under 4.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34433,7 +34485,8 @@
      "fair": 1.61,
      "min_dec": 1.66,
      "ref": 5.9,
-     "label": "Jrue Holiday Over 5.5 Triples intentados"
+     "label": "Jrue Holiday Over 5.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34447,7 +34500,8 @@
      "fair": 1.62,
      "min_dec": 1.67,
      "ref": 4.7,
-     "label": "Jrue Holiday Over 4.5 Dobles intentados"
+     "label": "Jrue Holiday Over 4.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34461,7 +34515,8 @@
      "fair": 1.66,
      "min_dec": 1.71,
      "ref": 7.6,
-     "label": "Donovan Clingan Over 7.5 Tiros de campo intentados"
+     "label": "Donovan Clingan Over 7.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34475,7 +34530,8 @@
      "fair": 1.7,
      "min_dec": 1.76,
      "ref": 2.3,
-     "label": "Jrue Holiday Over 2.5 Tiros libres anotados"
+     "label": "Jrue Holiday Over 2.5 Tiros libres anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34489,7 +34545,8 @@
      "fair": 1.77,
      "min_dec": 1.83,
      "ref": 7.8,
-     "label": "Toumani Camara Over 7.5 Tiros de campo intentados"
+     "label": "Toumani Camara Over 7.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34503,7 +34560,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 4.9,
-     "label": "Keyonte George Over 4.5 Dobles anotados"
+     "label": "Keyonte George Over 4.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34517,7 +34575,8 @@
      "fair": 1.81,
      "min_dec": 1.87,
      "ref": 3.6,
-     "label": "Jaxson Hayes Over 3.5 Tiros de campo anotados"
+     "label": "Jaxson Hayes Over 3.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34531,7 +34590,8 @@
      "fair": 1.81,
      "min_dec": 1.87,
      "ref": 3.6,
-     "label": "Jaxson Hayes Over 3.5 Dobles anotados"
+     "label": "Jaxson Hayes Over 3.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34545,7 +34605,8 @@
      "fair": 1.81,
      "min_dec": 1.87,
      "ref": 3.1,
-     "label": "Jrue Holiday Over 3.5 Tiros libres intentados"
+     "label": "Jrue Holiday Over 3.5 Tiros libres intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34559,7 +34620,8 @@
      "fair": 2.32,
      "min_dec": 2.39,
      "ref": null,
-     "label": "Donovan Clingan Doble-doble: Sí"
+     "label": "Donovan Clingan Doble-doble: Sí",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34573,7 +34635,8 @@
      "fair": 2.85,
      "min_dec": 2.94,
      "ref": null,
-     "label": "Deni Avdija Doble-doble: Sí"
+     "label": "Deni Avdija Doble-doble: Sí",
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -34592,7 +34655,8 @@
      "ev": 0.466,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34610,6 +34674,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -34630,7 +34695,8 @@
      "ev": 0.37,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34647,7 +34713,8 @@
      "ev": 0.264,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34664,7 +34731,8 @@
      "ev": 0.217,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34681,7 +34749,8 @@
      "ev": 0.18,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -34705,7 +34774,8 @@
       "dec": 1.909,
       "p": 0.625,
       "ev": 0.193
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34722,7 +34792,8 @@
      "ev": 0.095,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34739,7 +34810,8 @@
      "ev": 0.041,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34756,7 +34828,8 @@
      "ev": -0.021,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -34780,7 +34853,8 @@
       "dec": 3.75,
       "p": 0.266,
       "ev": -0.001
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -34804,7 +34878,8 @@
       "dec": 1.901,
       "p": 0.531,
       "ev": 0.009
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -34828,7 +34903,8 @@
       "dec": 1.345,
       "p": 0.734,
       "ev": -0.013
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -34852,7 +34928,8 @@
       "dec": 1.926,
       "p": 0.497,
       "ev": -0.042
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34869,7 +34946,8 @@
      "ev": -0.049,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34886,7 +34964,8 @@
      "ev": -0.061,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34903,7 +34982,8 @@
      "ev": -0.183,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34920,7 +35000,8 @@
      "ev": -0.228,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34937,7 +35018,8 @@
      "ev": -0.228,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -34961,7 +35043,8 @@
       "dec": 1.952,
       "p": 0.393,
       "ev": -0.232
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -34978,7 +35061,8 @@
      "ev": -0.308,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -34995,7 +35079,8 @@
      "ev": -0.464,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35012,7 +35097,8 @@
      "ev": -0.522,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35030,12 +35116,25 @@
      "value": false,
      "stat": "pts",
      "side": "over",
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
      }
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "POR": 112,
+     "UTA": 90
+    },
+    "ot": 0,
+    "winner": "POR",
+    "winner_ok": true,
+    "picks_won": 4,
+    "picks_lost": 5,
+    "units": -1.48
+   }
   },
   {
    "id": "2026-10-31-PHI-at-CHA",
@@ -35159,7 +35258,8 @@
        "p": 0.556,
        "ev": 0.118
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -35258,7 +35358,8 @@
        "p": 0.444,
        "ev": -0.227
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -35359,7 +35460,8 @@
        "p": 0.556,
        "ev": 0.118
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [],
@@ -35376,7 +35478,8 @@
      "fair": 1.61,
      "min_dec": 1.65,
      "ref": 11.8,
-     "label": "Anfernee Simons Over 11.5 Tiros de campo intentados"
+     "label": "Anfernee Simons Over 11.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35390,7 +35493,8 @@
      "fair": 1.66,
      "min_dec": 1.71,
      "ref": 10.9,
-     "label": "Grayson Allen Over 10.5 Tiros de campo intentados"
+     "label": "Grayson Allen Over 10.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35404,7 +35508,8 @@
      "fair": 1.67,
      "min_dec": 1.72,
      "ref": 3.4,
-     "label": "Kentavious Caldwell-Pope Over 3.5 Tiros de campo anotados"
+     "label": "Kentavious Caldwell-Pope Over 3.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35418,7 +35523,8 @@
      "fair": 1.7,
      "min_dec": 1.75,
      "ref": 21.2,
-     "label": "Tyrese Maxey Under 20.5 Tiros de campo intentados"
+     "label": "Tyrese Maxey Under 20.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35432,7 +35538,8 @@
      "fair": 1.77,
      "min_dec": 1.82,
      "ref": 8.2,
-     "label": "Kentavious Caldwell-Pope Over 8.5 Tiros de campo intentados"
+     "label": "Kentavious Caldwell-Pope Over 8.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35446,7 +35553,8 @@
      "fair": 1.77,
      "min_dec": 1.83,
      "ref": 13.1,
-     "label": "Tyrese Maxey Under 12.5 Dobles intentados"
+     "label": "Tyrese Maxey Under 12.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35460,7 +35568,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 4.4,
-     "label": "Grayson Allen Over 4.5 Tiros de campo anotados"
+     "label": "Grayson Allen Over 4.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35474,7 +35583,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 8.1,
-     "label": "Tyrese Maxey Under 7.5 Triples intentados"
+     "label": "Tyrese Maxey Under 7.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35488,7 +35598,8 @@
      "fair": 1.81,
      "min_dec": 1.87,
      "ref": 7.1,
-     "label": "Tyrese Maxey Under 6.5 Dobles anotados"
+     "label": "Tyrese Maxey Under 6.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35502,7 +35613,8 @@
      "fair": 1.82,
      "min_dec": 1.87,
      "ref": 5.1,
-     "label": "Anfernee Simons Over 5.5 Tiros de campo anotados"
+     "label": "Anfernee Simons Over 5.5 Tiros de campo anotados",
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -35528,7 +35640,8 @@
       "dec": 2.15,
       "p": 0.556,
       "ev": 0.196
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -35552,9 +35665,22 @@
       "dec": 1.826,
       "p": 0.444,
       "ev": -0.189
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "PHI": 109,
+     "CHA": 104
+    },
+    "ot": 0,
+    "winner": "PHI",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 1,
+    "units": -1
+   }
   },
   {
    "id": "2026-10-31-ATL-at-NOP",
@@ -35678,7 +35804,8 @@
        "p": 0.63,
        "ev": -0.048
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -35777,7 +35904,8 @@
        "p": 0.37,
        "ev": -0.081
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "value_bets": [],
@@ -35795,7 +35923,8 @@
      "fair": 1.62,
      "min_dec": 1.66,
      "ref": 3.9,
-     "label": "Saddiq Bey Over 3.5 Tiros de campo anotados"
+     "label": "Saddiq Bey Over 3.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35809,7 +35938,8 @@
      "fair": 1.62,
      "min_dec": 1.67,
      "ref": 7.0,
-     "label": "Nickeil Alexander-Walker Under 6.5 Tiros de campo anotados"
+     "label": "Nickeil Alexander-Walker Under 6.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35823,7 +35953,8 @@
      "fair": 1.68,
      "min_dec": 1.73,
      "ref": 6.0,
-     "label": "CJ McCollum Over 5.5 Tiros de campo anotados"
+     "label": "CJ McCollum Over 5.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35837,7 +35968,8 @@
      "fair": 1.71,
      "min_dec": 1.76,
      "ref": 2.9,
-     "label": "Aaron Wiggins Over 2.5 Dobles anotados"
+     "label": "Aaron Wiggins Over 2.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35851,7 +35983,8 @@
      "fair": 1.75,
      "min_dec": 1.8,
      "ref": 14.3,
-     "label": "Dejounte Murray Under 13.5 Tiros de campo intentados"
+     "label": "Dejounte Murray Under 13.5 Tiros de campo intentados",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -35865,7 +35998,8 @@
      "fair": 1.75,
      "min_dec": 1.8,
      "ref": 3.6,
-     "label": "Onyeka Okongwu Over 3.5 Dobles anotados"
+     "label": "Onyeka Okongwu Over 3.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35879,7 +36013,8 @@
      "fair": 1.75,
      "min_dec": 1.81,
      "ref": 8.8,
-     "label": "Saddiq Bey Over 8.5 Tiros de campo intentados"
+     "label": "Saddiq Bey Over 8.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35893,7 +36028,8 @@
      "fair": 1.77,
      "min_dec": 1.82,
      "ref": 10.0,
-     "label": "Dejounte Murray Under 9.5 Dobles intentados"
+     "label": "Dejounte Murray Under 9.5 Dobles intentados",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -35907,7 +36043,8 @@
      "fair": 1.78,
      "min_dec": 1.84,
      "ref": 4.8,
-     "label": "Dyson Daniels Over 4.5 Tiros de campo anotados"
+     "label": "Dyson Daniels Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35921,7 +36058,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": null,
-     "label": "Jalen Johnson Doble-doble: Sí"
+     "label": "Jalen Johnson Doble-doble: Sí",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35935,7 +36073,8 @@
      "fair": 1.8,
      "min_dec": 1.86,
      "ref": 3.9,
-     "label": "Luguentz Dort Over 3.5 Triples intentados"
+     "label": "Luguentz Dort Over 3.5 Triples intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -35949,7 +36088,8 @@
      "fair": 1.81,
      "min_dec": 1.86,
      "ref": 3.9,
-     "label": "Derik Queen Over 3.5 Tiros libres intentados"
+     "label": "Derik Queen Over 3.5 Tiros libres intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -35963,7 +36103,8 @@
      "fair": 7.34,
      "min_dec": 7.56,
      "ref": null,
-     "label": "Jalen Johnson Triple-doble: Sí"
+     "label": "Jalen Johnson Triple-doble: Sí",
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -35989,7 +36130,8 @@
       "dec": 1.571,
       "p": 0.63,
       "ev": -0.011
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -36013,9 +36155,22 @@
       "dec": 2.6,
       "p": 0.37,
       "ev": -0.037
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "ATL": 99,
+     "NOP": 121
+    },
+    "ot": 0,
+    "winner": "NOP",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-10-31-CLE-at-MIL",
@@ -36058,7 +36213,8 @@
      "ev": 0.417,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36076,7 +36232,8 @@
      "ev": 0.338,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36094,7 +36251,8 @@
      "ev": 0.307,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -36114,7 +36272,8 @@
      "ev": 0.417,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36132,7 +36291,8 @@
      "ev": 0.338,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36150,7 +36310,8 @@
      "ev": 0.307,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36169,6 +36330,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
@@ -36190,7 +36352,8 @@
      "ev": 0.136,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36208,7 +36371,8 @@
      "ev": 0.112,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36226,7 +36390,8 @@
      "ev": 0.105,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36244,7 +36409,8 @@
      "ev": 0.086,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36262,7 +36428,8 @@
      "ev": 0.075,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -36280,7 +36447,8 @@
        "dec": 1.82,
        "ev": 0.417,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -36294,7 +36462,8 @@
        "dec": 1.769,
        "ev": 0.307,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -36304,7 +36473,8 @@
      "dec": 3.22,
      "fair": 1.73,
      "ev": 0.86,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -36320,7 +36490,8 @@
        "dec": 1.82,
        "ev": 0.417,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -36334,7 +36505,8 @@
        "dec": 1.769,
        "ev": 0.307,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -36348,7 +36520,8 @@
        "dec": 1.952,
        "ev": 0.338,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -36358,7 +36531,8 @@
      "dec": 6.28,
      "fair": 2.46,
      "ev": 1.553,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -36374,7 +36548,8 @@
        "dec": 1.82,
        "ev": 0.417,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -36388,7 +36563,8 @@
        "dec": 1.769,
        "ev": 0.307,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -36402,7 +36578,8 @@
        "dec": 1.952,
        "ev": 0.338,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -36416,7 +36593,8 @@
        "dec": 1.82,
        "ev": 0.136,
        "gid": "2026-10-31-CLE-at-MIL",
-       "game": "CLE @ MIL"
+       "game": "CLE @ MIL",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -36426,7 +36604,8 @@
      "dec": 11.44,
      "fair": 3.7,
      "ev": 2.095,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -36442,7 +36621,8 @@
      "fair": 1.37,
      "min_dec": 1.41,
      "ref": 3.4,
-     "label": "Sam Merrill Over 3.5 Tiros de campo anotados"
+     "label": "Sam Merrill Over 3.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36456,7 +36636,8 @@
      "fair": 1.37,
      "min_dec": 1.41,
      "ref": 7.9,
-     "label": "Sam Merrill Over 7.5 Tiros de campo intentados"
+     "label": "Sam Merrill Over 7.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36470,7 +36651,8 @@
      "fair": 1.51,
      "min_dec": 1.56,
      "ref": 5.9,
-     "label": "Sam Merrill Over 5.5 Triples intentados"
+     "label": "Sam Merrill Over 5.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36484,7 +36666,8 @@
      "fair": 1.52,
      "min_dec": 1.57,
      "ref": 6.4,
-     "label": "Kyle Kuzma Under 5.5 Dobles intentados"
+     "label": "Kyle Kuzma Under 5.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36498,7 +36681,8 @@
      "fair": 1.57,
      "min_dec": 1.62,
      "ref": 5.0,
-     "label": "Kyle Kuzma Under 4.5 Tiros de campo anotados"
+     "label": "Kyle Kuzma Under 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36512,7 +36696,8 @@
      "fair": 1.62,
      "min_dec": 1.66,
      "ref": 3.2,
-     "label": "Myles Turner Over 3.5 Tiros de campo anotados"
+     "label": "Myles Turner Over 3.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36526,7 +36711,8 @@
      "fair": 1.63,
      "min_dec": 1.68,
      "ref": 4.7,
-     "label": "Ryan Rollins Over 4.5 Tiros de campo anotados"
+     "label": "Ryan Rollins Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36540,7 +36726,8 @@
      "fair": 1.68,
      "min_dec": 1.73,
      "ref": 12.3,
-     "label": "Jaime Jaquez Jr. Under 11.5 Tiros de campo intentados"
+     "label": "Jaime Jaquez Jr. Under 11.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36554,7 +36741,8 @@
      "fair": 1.7,
      "min_dec": 1.75,
      "ref": 10.9,
-     "label": "Kyle Kuzma Under 9.5 Tiros de campo intentados"
+     "label": "Kyle Kuzma Under 9.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36568,7 +36756,8 @@
      "fair": 1.72,
      "min_dec": 1.78,
      "ref": 9.3,
-     "label": "Jaime Jaquez Jr. Under 8.5 Dobles intentados"
+     "label": "Jaime Jaquez Jr. Under 8.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36582,7 +36771,8 @@
      "fair": 1.74,
      "min_dec": 1.79,
      "ref": 3.7,
-     "label": "Kyle Kuzma Under 2.5 Dobles anotados"
+     "label": "Kyle Kuzma Under 2.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36596,7 +36786,8 @@
      "fair": 1.75,
      "min_dec": 1.8,
      "ref": 2.9,
-     "label": "Ryan Rollins Over 2.5 Dobles anotados"
+     "label": "Ryan Rollins Over 2.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36610,7 +36801,8 @@
      "fair": 1.75,
      "min_dec": 1.81,
      "ref": 8.0,
-     "label": "Ryan Rollins Over 7.5 Dobles intentados"
+     "label": "Ryan Rollins Over 7.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36624,7 +36816,8 @@
      "fair": 1.78,
      "min_dec": 1.84,
      "ref": 6.4,
-     "label": "Jaime Jaquez Jr. Under 5.5 Tiros de campo anotados"
+     "label": "Jaime Jaquez Jr. Under 5.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36638,7 +36831,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 4.1,
-     "label": "Jaime Jaquez Jr. Under 3.5 Tiros libres intentados"
+     "label": "Jaime Jaquez Jr. Under 3.5 Tiros libres intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36652,7 +36846,8 @@
      "fair": 1.8,
      "min_dec": 1.86,
      "ref": 5.2,
-     "label": "Jaime Jaquez Jr. Under 4.5 Dobles anotados"
+     "label": "Jaime Jaquez Jr. Under 4.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36666,7 +36861,8 @@
      "fair": 1.81,
      "min_dec": 1.86,
      "ref": 9.4,
-     "label": "Donovan Mitchell Under 8.5 Tiros de campo anotados"
+     "label": "Donovan Mitchell Under 8.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36680,7 +36876,8 @@
      "fair": 2.29,
      "min_dec": 2.36,
      "ref": null,
-     "label": "Evan Mobley Doble-doble: Sí"
+     "label": "Evan Mobley Doble-doble: Sí",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36694,7 +36891,8 @@
      "fair": 2.61,
      "min_dec": 2.68,
      "ref": null,
-     "label": "Jarrett Allen Doble-doble: Sí"
+     "label": "Jarrett Allen Doble-doble: Sí",
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -36713,7 +36911,8 @@
      "ev": 0.417,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36730,7 +36929,8 @@
      "ev": 0.338,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36747,7 +36947,8 @@
      "ev": 0.307,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36765,6 +36966,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
@@ -36785,7 +36987,8 @@
      "ev": 0.136,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36802,7 +37005,8 @@
      "ev": 0.112,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36819,7 +37023,8 @@
      "ev": 0.105,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36836,7 +37041,8 @@
      "ev": 0.086,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36853,7 +37059,8 @@
      "ev": 0.075,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -36877,7 +37084,8 @@
       "dec": 3.9,
       "p": 0.271,
       "ev": 0.056
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -36901,7 +37109,8 @@
       "dec": 2.0,
       "p": 0.503,
       "ev": 0.005
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -36925,7 +37134,8 @@
       "dec": 1.952,
       "p": 0.52,
       "ev": 0.014
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -36942,7 +37152,8 @@
      "ev": -0.066,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -36966,7 +37177,8 @@
       "dec": 1.299,
       "p": 0.729,
       "ev": -0.053
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -36983,7 +37195,8 @@
      "ev": -0.081,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -37007,7 +37220,8 @@
       "dec": 1.971,
       "p": 0.48,
       "ev": -0.053
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -37031,7 +37245,8 @@
       "dec": 1.952,
       "p": 0.483,
       "ev": -0.057
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37048,7 +37263,8 @@
      "ev": -0.095,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37065,7 +37281,8 @@
      "ev": -0.102,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37082,7 +37299,8 @@
      "ev": -0.121,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37100,6 +37318,7 @@
      "value": false,
      "stat": "pts",
      "side": "over",
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 5 partidos esta temporada"
@@ -37120,7 +37339,8 @@
      "ev": -0.383,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37137,7 +37357,8 @@
      "ev": -0.409,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37154,9 +37375,22 @@
      "ev": -0.447,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CLE": 136,
+     "MIL": 111
+    },
+    "ot": 0,
+    "winner": "CLE",
+    "winner_ok": true,
+    "picks_won": 5,
+    "picks_lost": 4,
+    "units": 0.46
+   }
   },
   {
    "id": "2026-10-31-MIN-at-SAS",
@@ -37280,7 +37514,8 @@
        "p": 0.294,
        "ev": 0.469
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37298,7 +37533,8 @@
      "ev": 0.505,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37316,7 +37552,8 @@
      "ev": 0.292,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -37417,7 +37654,8 @@
        "p": 0.294,
        "ev": 0.469
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37435,7 +37673,8 @@
      "ev": 0.505,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37453,7 +37692,8 @@
      "ev": 0.292,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -37552,7 +37792,8 @@
        "p": 0.641,
        "ev": 0.193
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37570,7 +37811,8 @@
      "ev": 0.183,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37588,7 +37830,8 @@
      "ev": 0.165,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37606,7 +37849,8 @@
      "ev": 0.113,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37624,7 +37868,8 @@
      "ev": 0.09,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37642,7 +37887,8 @@
      "ev": 0.061,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37660,7 +37906,8 @@
      "ev": 0.048,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -37678,7 +37925,8 @@
        "dec": 1.952,
        "ev": 0.505,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -37692,7 +37940,8 @@
        "dec": 1.826,
        "ev": 0.292,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -37702,7 +37951,8 @@
      "dec": 3.56,
      "fair": 1.82,
      "ev": 0.96,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -37718,7 +37968,8 @@
        "dec": 1.952,
        "ev": 0.505,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -37732,7 +37983,8 @@
        "dec": 1.826,
        "ev": 0.292,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "lost"
       },
       {
        "kind": "spread",
@@ -37746,7 +37998,8 @@
        "dec": 1.877,
        "ev": 0.202,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -37756,7 +38009,8 @@
      "dec": 6.69,
      "fair": 2.82,
      "ev": 1.37,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -37772,7 +38026,8 @@
        "dec": 1.952,
        "ev": 0.505,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -37786,7 +38041,8 @@
        "dec": 1.826,
        "ev": 0.292,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "lost"
       },
       {
        "kind": "spread",
@@ -37800,7 +38056,8 @@
        "dec": 1.877,
        "ev": 0.202,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -37814,7 +38071,8 @@
        "dec": 1.833,
        "ev": 0.061,
        "gid": "2026-10-31-MIN-at-SAS",
-       "game": "MIN @ SAS"
+       "game": "MIN @ SAS",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -37824,7 +38082,8 @@
      "dec": 12.26,
      "fair": 4.52,
      "ev": 1.714,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -37840,7 +38099,8 @@
      "fair": 1.49,
      "min_dec": 1.54,
      "ref": 14.2,
-     "label": "Dylan Harper Under 13.5 Tiros de campo intentados"
+     "label": "Dylan Harper Under 13.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37854,7 +38114,8 @@
      "fair": 1.54,
      "min_dec": 1.59,
      "ref": 16.4,
-     "label": "Stephon Castle Under 15.5 Tiros de campo intentados"
+     "label": "Stephon Castle Under 15.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37868,7 +38129,8 @@
      "fair": 1.62,
      "min_dec": 1.67,
      "ref": 4.4,
-     "label": "Keldon Johnson Over 4.5 Tiros de campo anotados"
+     "label": "Keldon Johnson Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37882,7 +38144,8 @@
      "fair": 1.62,
      "min_dec": 1.67,
      "ref": 8.3,
-     "label": "Keldon Johnson Over 8.5 Tiros de campo intentados"
+     "label": "Keldon Johnson Over 8.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37896,7 +38159,8 @@
      "fair": 1.66,
      "min_dec": 1.71,
      "ref": 7.0,
-     "label": "Stephon Castle Under 5.5 Tiros de campo anotados"
+     "label": "Stephon Castle Under 5.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37910,7 +38174,8 @@
      "fair": 1.67,
      "min_dec": 1.72,
      "ref": 6.1,
-     "label": "Devin Vassell Under 5.5 Triples intentados"
+     "label": "Devin Vassell Under 5.5 Triples intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -37924,7 +38189,8 @@
      "fair": 1.69,
      "min_dec": 1.74,
      "ref": 10.5,
-     "label": "Dylan Harper Under 9.5 Dobles intentados"
+     "label": "Dylan Harper Under 9.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37938,7 +38204,8 @@
      "fair": 1.72,
      "min_dec": 1.77,
      "ref": 2.6,
-     "label": "Devin Vassell Over 2.5 Dobles anotados"
+     "label": "Devin Vassell Over 2.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37952,7 +38219,8 @@
      "fair": 1.73,
      "min_dec": 1.78,
      "ref": 6.8,
-     "label": "LaMelo Ball Over 6.5 Tiros de campo anotados"
+     "label": "LaMelo Ball Over 6.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37966,7 +38234,8 @@
      "fair": 1.75,
      "min_dec": 1.81,
      "ref": 6.5,
-     "label": "Rudy Gobert Under 5.5 Dobles intentados"
+     "label": "Rudy Gobert Under 5.5 Dobles intentados",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -37980,7 +38249,8 @@
      "fair": 1.81,
      "min_dec": 1.86,
      "ref": 6.8,
-     "label": "Dylan Harper Under 5.5 Tiros de campo anotados"
+     "label": "Dylan Harper Under 5.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -37994,7 +38264,8 @@
      "fair": 1.82,
      "min_dec": 1.87,
      "ref": 7.8,
-     "label": "Stephon Castle Under 6.5 Dobles intentados"
+     "label": "Stephon Castle Under 6.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38008,7 +38279,8 @@
      "fair": 2.28,
      "min_dec": 2.35,
      "ref": null,
-     "label": "Victor Wembanyama Doble-doble: Sí"
+     "label": "Victor Wembanyama Doble-doble: Sí",
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -38034,7 +38306,8 @@
       "dec": 5.5,
       "p": 0.294,
       "ev": 0.616
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38051,7 +38324,8 @@
      "ev": 0.505,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38068,7 +38342,8 @@
      "ev": 0.292,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -38092,7 +38367,8 @@
       "dec": 1.917,
       "p": 0.641,
       "ev": 0.228
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38109,7 +38385,8 @@
      "ev": 0.183,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38126,7 +38403,8 @@
      "ev": 0.165,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38143,7 +38421,8 @@
      "ev": 0.113,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38160,7 +38439,8 @@
      "ev": 0.09,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38177,7 +38457,8 @@
      "ev": 0.061,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38194,7 +38475,8 @@
      "ev": 0.048,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38211,7 +38493,8 @@
      "ev": 0.021,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38228,7 +38511,8 @@
      "ev": -0.01,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38245,7 +38529,8 @@
      "ev": -0.026,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -38269,7 +38554,8 @@
       "dec": 1.862,
       "p": 0.528,
       "ev": -0.018
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38286,7 +38572,8 @@
      "ev": -0.052,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -38310,7 +38597,8 @@
       "dec": 1.935,
       "p": 0.492,
       "ev": -0.047
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38327,7 +38615,8 @@
      "ev": -0.081,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38344,7 +38633,8 @@
      "ev": -0.09,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38361,7 +38651,8 @@
      "ev": -0.115,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -38385,7 +38676,8 @@
       "dec": 1.182,
       "p": 0.706,
       "ev": -0.165
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38402,7 +38694,8 @@
      "ev": -0.245,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -38426,7 +38719,8 @@
       "dec": 1.87,
       "p": 0.386,
       "ev": -0.279
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38443,7 +38737,8 @@
      "ev": -0.37,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38460,9 +38755,22 @@
      "ev": -0.563,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIN": 111,
+     "SAS": 121
+    },
+    "ot": 0,
+    "winner": "SAS",
+    "winner_ok": true,
+    "picks_won": 5,
+    "picks_lost": 5,
+    "units": -0.49
+   }
   },
   {
    "id": "2026-10-31-SAC-at-MEM",
@@ -38505,7 +38813,8 @@
      "ev": 0.494,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38523,7 +38832,8 @@
      "ev": 0.38,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38541,7 +38851,8 @@
      "ev": 0.233,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -38561,7 +38872,8 @@
      "ev": 0.494,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38579,7 +38891,8 @@
      "ev": 0.38,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38597,7 +38910,8 @@
      "ev": 0.233,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38615,7 +38929,8 @@
      "ev": 0.182,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -38714,7 +39029,8 @@
        "p": 0.623,
        "ev": 0.143
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38732,7 +39048,8 @@
      "ev": 0.167,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -38750,7 +39067,8 @@
      "ev": 0.123,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -38849,7 +39167,8 @@
        "p": 0.563,
        "ev": 0.074
       }
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -38867,7 +39186,8 @@
      "ev": 0.051,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -38886,6 +39206,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -38988,7 +39309,8 @@
        "p": 0.86,
        "ev": 0.017
       }
-     ]
+     ],
+     "result": "won"
     }
    ],
    "parlays": [
@@ -39006,7 +39328,8 @@
        "dec": 1.198,
        "ev": 0.031,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -39020,7 +39343,8 @@
        "dec": 1.952,
        "ev": 0.494,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -39030,7 +39354,8 @@
      "dec": 2.34,
      "fair": 1.51,
      "ev": 0.55,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -39046,7 +39371,8 @@
        "dec": 1.198,
        "ev": 0.031,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -39060,7 +39386,8 @@
        "dec": 1.952,
        "ev": 0.494,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -39074,7 +39401,8 @@
        "dec": 1.952,
        "ev": 0.38,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       }
      ],
      "n": 3,
@@ -39084,7 +39412,8 @@
      "dec": 4.56,
      "fair": 2.16,
      "ev": 1.113,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -39100,7 +39429,8 @@
        "dec": 1.198,
        "ev": 0.031,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -39114,7 +39444,8 @@
        "dec": 1.952,
        "ev": 0.494,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -39128,7 +39459,8 @@
        "dec": 1.952,
        "ev": 0.38,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -39142,7 +39474,8 @@
        "dec": 1.952,
        "ev": 0.233,
        "gid": "2026-10-31-SAC-at-MEM",
-       "game": "SAC @ MEM"
+       "game": "SAC @ MEM",
+       "result": "won"
       }
      ],
      "n": 4,
@@ -39152,7 +39485,8 @@
      "dec": 8.91,
      "fair": 3.3,
      "ev": 1.699,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -39168,7 +39502,8 @@
      "fair": 1.29,
      "min_dec": 1.33,
      "ref": 3.8,
-     "label": "Zach Edey Over 3.5 Dobles anotados"
+     "label": "Zach Edey Over 3.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39182,7 +39517,8 @@
      "fair": 1.4,
      "min_dec": 1.44,
      "ref": null,
-     "label": "Domantas Sabonis Doble-doble: Sí"
+     "label": "Domantas Sabonis Doble-doble: Sí",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39196,7 +39532,8 @@
      "fair": 1.41,
      "min_dec": 1.45,
      "ref": 16.1,
-     "label": "Zach LaVine Under 15.5 Tiros de campo intentados"
+     "label": "Zach LaVine Under 15.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39210,7 +39547,8 @@
      "fair": 1.46,
      "min_dec": 1.5,
      "ref": 4.0,
-     "label": "Zach Edey Over 4.5 Tiros de campo anotados"
+     "label": "Zach Edey Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39224,7 +39562,8 @@
      "fair": 1.49,
      "min_dec": 1.54,
      "ref": 8.0,
-     "label": "Zach LaVine Under 7.5 Tiros de campo anotados"
+     "label": "Zach LaVine Under 7.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39238,7 +39577,8 @@
      "fair": 1.5,
      "min_dec": 1.54,
      "ref": 6.1,
-     "label": "Zach Edey Over 6.5 Dobles intentados"
+     "label": "Zach Edey Over 6.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39252,7 +39592,8 @@
      "fair": 1.58,
      "min_dec": 1.63,
      "ref": 5.0,
-     "label": "Jerami Grant Over 4.5 Triples intentados"
+     "label": "Jerami Grant Over 4.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39266,7 +39607,8 @@
      "fair": 1.62,
      "min_dec": 1.67,
      "ref": 6.1,
-     "label": "Precious Achiuwa Under 5.5 Tiros de campo anotados"
+     "label": "Precious Achiuwa Under 5.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39280,7 +39622,8 @@
      "fair": 1.66,
      "min_dec": 1.71,
      "ref": 8.4,
-     "label": "Zach LaVine Under 7.5 Dobles intentados"
+     "label": "Zach LaVine Under 7.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39294,7 +39637,8 @@
      "fair": 1.67,
      "min_dec": 1.72,
      "ref": 10.1,
-     "label": "Jerami Grant Over 10.5 Tiros de campo intentados"
+     "label": "Jerami Grant Over 10.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39308,7 +39652,8 @@
      "fair": 1.67,
      "min_dec": 1.72,
      "ref": 3.2,
-     "label": "De'Andre Hunter Under 2.5 Tiros libres intentados"
+     "label": "De'Andre Hunter Under 2.5 Tiros libres intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39322,7 +39667,8 @@
      "fair": 1.68,
      "min_dec": 1.73,
      "ref": 24.1,
-     "label": "Darius Acuff Jr. Under 23.5 Tiros de campo intentados"
+     "label": "Darius Acuff Jr. Under 23.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39336,7 +39682,8 @@
      "fair": 1.69,
      "min_dec": 1.74,
      "ref": 10.4,
-     "label": "Precious Achiuwa Under 9.5 Tiros de campo intentados"
+     "label": "Precious Achiuwa Under 9.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39350,7 +39697,8 @@
      "fair": 1.7,
      "min_dec": 1.75,
      "ref": 4.7,
-     "label": "Jaylen Wells Over 4.5 Tiros de campo anotados"
+     "label": "Jaylen Wells Over 4.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39364,7 +39712,8 @@
      "fair": 1.7,
      "min_dec": 1.75,
      "ref": 5.1,
-     "label": "Zach LaVine Under 4.5 Dobles anotados"
+     "label": "Zach LaVine Under 4.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39378,7 +39727,8 @@
      "fair": 1.73,
      "min_dec": 1.78,
      "ref": 9.5,
-     "label": "Precious Achiuwa Under 8.5 Dobles intentados"
+     "label": "Precious Achiuwa Under 8.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39392,7 +39742,8 @@
      "fair": 1.74,
      "min_dec": 1.79,
      "ref": 2.0,
-     "label": "De'Andre Hunter Under 1.5 Tiros libres anotados"
+     "label": "De'Andre Hunter Under 1.5 Tiros libres anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39406,7 +39757,8 @@
      "fair": 1.75,
      "min_dec": 1.8,
      "ref": 7.7,
-     "label": "Zach LaVine Under 6.5 Triples intentados"
+     "label": "Zach LaVine Under 6.5 Triples intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39420,7 +39772,8 @@
      "fair": 1.77,
      "min_dec": 1.83,
      "ref": 9.1,
-     "label": "Darius Acuff Jr. Under 8.5 Tiros de campo anotados"
+     "label": "Darius Acuff Jr. Under 8.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39434,7 +39787,8 @@
      "fair": 1.78,
      "min_dec": 1.83,
      "ref": 6.1,
-     "label": "Cedric Coward Under 5.5 Tiros de campo anotados"
+     "label": "Cedric Coward Under 5.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39448,7 +39802,8 @@
      "fair": 1.97,
      "min_dec": 2.03,
      "ref": null,
-     "label": "Cameron Boozer Doble-doble: Sí"
+     "label": "Cameron Boozer Doble-doble: Sí",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39462,7 +39817,8 @@
      "fair": 2.71,
      "min_dec": 2.79,
      "ref": null,
-     "label": "Zach Edey Doble-doble: Sí"
+     "label": "Zach Edey Doble-doble: Sí",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39476,7 +39832,8 @@
      "fair": 11.41,
      "min_dec": 11.75,
      "ref": null,
-     "label": "Cameron Boozer Triple-doble: Sí"
+     "label": "Cameron Boozer Triple-doble: Sí",
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -39495,7 +39852,8 @@
      "ev": 0.494,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39512,7 +39870,8 @@
      "ev": 0.38,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39529,7 +39888,8 @@
      "ev": 0.233,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39546,7 +39906,8 @@
      "ev": 0.182,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -39570,7 +39931,8 @@
       "dec": 1.909,
       "p": 0.623,
       "ev": 0.19
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39587,7 +39949,8 @@
      "ev": 0.167,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39604,7 +39967,8 @@
      "ev": 0.123,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -39628,7 +39992,8 @@
       "dec": 1.885,
       "p": 0.583,
       "ev": 0.1
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39645,7 +40010,8 @@
      "ev": 0.051,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -39663,6 +40029,7 @@
      "value": true,
      "stat": "pts",
      "side": "under",
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -39690,7 +40057,8 @@
       "dec": 1.208,
       "p": 0.86,
       "ev": 0.039
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39707,7 +40075,8 @@
      "ev": 0.023,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39725,6 +40094,7 @@
      "value": false,
      "stat": "pts",
      "side": "over",
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -39745,7 +40115,8 @@
      "ev": -0.095,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -39762,7 +40133,8 @@
      "ev": -0.124,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -39779,7 +40151,8 @@
      "ev": -0.168,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -39803,7 +40176,8 @@
       "dec": 1.909,
       "p": 0.437,
       "ev": -0.165
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39820,7 +40194,8 @@
      "ev": -0.235,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -39844,7 +40219,8 @@
       "dec": 2.0,
       "p": 0.377,
       "ev": -0.247
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39861,7 +40237,8 @@
      "ev": -0.27,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39878,7 +40255,8 @@
      "ev": -0.27,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -39902,7 +40280,8 @@
       "dec": 5.0,
       "p": 0.14,
       "ev": -0.301
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39919,7 +40298,8 @@
      "ev": -0.427,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39936,9 +40316,22 @@
      "ev": -0.519,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "SAC": 105,
+     "MEM": 136
+    },
+    "ot": 0,
+    "winner": "MEM",
+    "winner_ok": true,
+    "picks_won": 6,
+    "picks_lost": 4,
+    "units": 0.81
+   }
   },
   {
    "id": "2026-10-31-OKC-at-HOU",
@@ -39981,7 +40374,8 @@
      "ev": 0.368,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -39999,7 +40393,8 @@
      "ev": 0.2,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40017,7 +40412,8 @@
      "ev": 0.164,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -40037,7 +40433,8 @@
      "ev": 0.368,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40055,7 +40452,8 @@
      "ev": 0.2,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40073,7 +40471,8 @@
      "ev": 0.164,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40091,7 +40490,8 @@
      "ev": 0.149,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40109,7 +40509,8 @@
      "ev": 0.122,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -40208,7 +40609,8 @@
        "p": 0.585,
        "ev": 0.117
       }
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40226,7 +40628,8 @@
      "ev": 0.101,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -40325,7 +40728,8 @@
        "p": 0.469,
        "ev": 0.009
       }
-     ]
+     ],
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -40343,7 +40747,8 @@
        "dec": 1.909,
        "ev": 0.368,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -40357,7 +40762,8 @@
        "dec": 1.8,
        "ev": 0.149,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -40367,7 +40773,8 @@
      "dec": 3.44,
      "fair": 2.17,
      "ev": 0.58,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -40383,7 +40790,8 @@
        "dec": 1.909,
        "ev": 0.368,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -40397,7 +40805,8 @@
        "dec": 1.8,
        "ev": 0.149,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       },
       {
        "kind": "total",
@@ -40411,7 +40820,8 @@
        "dec": 1.909,
        "ev": 0.117,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -40421,7 +40831,8 @@
      "dec": 6.56,
      "fair": 3.17,
      "ev": 1.071,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -40437,7 +40848,8 @@
        "dec": 1.909,
        "ev": 0.368,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -40451,7 +40863,8 @@
        "dec": 1.8,
        "ev": 0.149,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -40465,7 +40878,8 @@
        "dec": 1.833,
        "ev": 0.101,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "won"
       },
       {
        "kind": "total",
@@ -40479,7 +40893,8 @@
        "dec": 1.909,
        "ev": 0.117,
        "gid": "2026-10-31-OKC-at-HOU",
-       "game": "OKC @ HOU"
+       "game": "OKC @ HOU",
+       "result": "lost"
       }
      ],
      "n": 4,
@@ -40489,7 +40904,8 @@
      "dec": 12.02,
      "fair": 4.79,
      "ev": 1.51,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -40505,7 +40921,8 @@
      "fair": 1.42,
      "min_dec": 1.47,
      "ref": 4.9,
-     "label": "Jabari Smith Jr. Over 4.5 Tiros de campo anotados"
+     "label": "Jabari Smith Jr. Over 4.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40519,7 +40936,8 @@
      "fair": 1.51,
      "min_dec": 1.56,
      "ref": 10.6,
-     "label": "Jabari Smith Jr. Over 10.5 Tiros de campo intentados"
+     "label": "Jabari Smith Jr. Over 10.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40533,7 +40951,8 @@
      "fair": 1.56,
      "min_dec": 1.6,
      "ref": 8.9,
-     "label": "Kevin Durant Over 8.5 Dobles intentados"
+     "label": "Kevin Durant Over 8.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40547,7 +40966,8 @@
      "fair": 1.58,
      "min_dec": 1.62,
      "ref": 7.7,
-     "label": "Tari Eason Over 7.5 Tiros de campo intentados"
+     "label": "Tari Eason Over 7.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40561,7 +40981,8 @@
      "fair": 1.58,
      "min_dec": 1.63,
      "ref": 3.9,
-     "label": "Ajay Mitchell Over 3.5 Triples intentados"
+     "label": "Ajay Mitchell Over 3.5 Triples intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40575,7 +40996,8 @@
      "fair": 1.59,
      "min_dec": 1.64,
      "ref": 7.8,
-     "label": "Ajay Mitchell Over 7.5 Tiros de campo anotados"
+     "label": "Ajay Mitchell Over 7.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40589,7 +41011,8 @@
      "fair": 1.6,
      "min_dec": 1.64,
      "ref": 4.6,
-     "label": "Jared McCain Over 4.5 Tiros de campo anotados"
+     "label": "Jared McCain Over 4.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40603,7 +41026,8 @@
      "fair": 1.64,
      "min_dec": 1.68,
      "ref": 3.3,
-     "label": "Tari Eason Over 3.5 Tiros de campo anotados"
+     "label": "Tari Eason Over 3.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40617,7 +41041,8 @@
      "fair": 1.64,
      "min_dec": 1.68,
      "ref": 5.1,
-     "label": "Isaiah Hartenstein Under 4.5 Tiros de campo anotados"
+     "label": "Isaiah Hartenstein Under 4.5 Tiros de campo anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40631,7 +41056,8 @@
      "fair": 1.64,
      "min_dec": 1.68,
      "ref": 5.1,
-     "label": "Isaiah Hartenstein Under 4.5 Dobles anotados"
+     "label": "Isaiah Hartenstein Under 4.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40645,7 +41071,8 @@
      "fair": 1.64,
      "min_dec": 1.69,
      "ref": 2.8,
-     "label": "Aday Mara Over 2.5 Dobles anotados"
+     "label": "Aday Mara Over 2.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40659,7 +41086,8 @@
      "fair": 1.65,
      "min_dec": 1.7,
      "ref": 2.9,
-     "label": "Jabari Smith Jr. Over 2.5 Dobles anotados"
+     "label": "Jabari Smith Jr. Over 2.5 Dobles anotados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40673,7 +41101,8 @@
      "fair": 1.67,
      "min_dec": 1.72,
      "ref": 10.9,
-     "label": "Amen Thompson Over 10.5 Tiros de campo intentados"
+     "label": "Amen Thompson Over 10.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40687,7 +41116,8 @@
      "fair": 1.68,
      "min_dec": 1.73,
      "ref": 9.8,
-     "label": "Amen Thompson Over 9.5 Dobles intentados"
+     "label": "Amen Thompson Over 9.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40701,7 +41131,8 @@
      "fair": 1.7,
      "min_dec": 1.75,
      "ref": 2.9,
-     "label": "Amen Thompson Over 2.5 Tiros libres anotados"
+     "label": "Amen Thompson Over 2.5 Tiros libres anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40715,7 +41146,8 @@
      "fair": 1.71,
      "min_dec": 1.76,
      "ref": 5.8,
-     "label": "Amen Thompson Over 5.5 Tiros de campo anotados"
+     "label": "Amen Thompson Over 5.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40729,7 +41161,8 @@
      "fair": 1.73,
      "min_dec": 1.78,
      "ref": 5.4,
-     "label": "Jabari Smith Jr. Over 5.5 Dobles intentados"
+     "label": "Jabari Smith Jr. Over 5.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40743,7 +41176,8 @@
      "fair": 1.73,
      "min_dec": 1.78,
      "ref": 6.1,
-     "label": "Jaylin Williams Under 5.5 Triples intentados"
+     "label": "Jaylin Williams Under 5.5 Triples intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40757,7 +41191,8 @@
      "fair": 1.74,
      "min_dec": 1.79,
      "ref": 6.9,
-     "label": "Kevin Durant Over 6.5 Tiros de campo anotados"
+     "label": "Kevin Durant Over 6.5 Tiros de campo anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40771,7 +41206,8 @@
      "fair": 1.74,
      "min_dec": 1.79,
      "ref": 13.2,
-     "label": "Kevin Durant Over 13.5 Tiros de campo intentados"
+     "label": "Kevin Durant Over 13.5 Tiros de campo intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40785,7 +41221,8 @@
      "fair": 1.76,
      "min_dec": 1.81,
      "ref": 9.2,
-     "label": "Isaiah Hartenstein Under 8.5 Tiros de campo intentados"
+     "label": "Isaiah Hartenstein Under 8.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40799,7 +41236,8 @@
      "fair": 1.76,
      "min_dec": 1.81,
      "ref": 9.2,
-     "label": "Isaiah Hartenstein Under 8.5 Dobles intentados"
+     "label": "Isaiah Hartenstein Under 8.5 Dobles intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40813,7 +41251,8 @@
      "fair": 1.76,
      "min_dec": 1.82,
      "ref": 4.9,
-     "label": "Tari Eason Over 4.5 Dobles intentados"
+     "label": "Tari Eason Over 4.5 Dobles intentados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40827,7 +41266,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 5.6,
-     "label": "Amen Thompson Over 5.5 Dobles anotados"
+     "label": "Amen Thompson Over 5.5 Dobles anotados",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40841,7 +41281,8 @@
      "fair": 1.8,
      "min_dec": 1.85,
      "ref": 12.8,
-     "label": "Jared McCain Over 12.5 Tiros de campo intentados"
+     "label": "Jared McCain Over 12.5 Tiros de campo intentados",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40855,7 +41296,8 @@
      "fair": 1.81,
      "min_dec": 1.87,
      "ref": 5.4,
-     "label": "Jared McCain Over 5.5 Dobles intentados"
+     "label": "Jared McCain Over 5.5 Dobles intentados",
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -40874,7 +41316,8 @@
      "ev": 0.368,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40891,7 +41334,8 @@
      "ev": 0.2,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40908,7 +41352,8 @@
      "ev": 0.164,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -40925,7 +41370,8 @@
      "ev": 0.149,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40942,7 +41388,8 @@
      "ev": 0.122,
      "value": true,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -40966,7 +41413,8 @@
       "dec": 2.04,
       "p": 0.564,
       "ev": 0.152
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -40983,7 +41431,8 @@
      "ev": 0.101,
      "value": true,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -41007,7 +41456,8 @@
       "dec": 2.46,
       "p": 0.469,
       "ev": 0.154
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41024,7 +41474,8 @@
      "ev": 0.027,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -41048,7 +41499,8 @@
       "dec": 1.917,
       "p": 0.562,
       "ev": 0.078
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41065,7 +41517,8 @@
      "ev": 0.009,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41082,7 +41535,8 @@
      "ev": 0.004,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41099,7 +41553,8 @@
      "ev": -0.043,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41116,7 +41571,8 @@
      "ev": -0.075,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -41133,7 +41589,8 @@
      "ev": -0.083,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -41157,7 +41614,8 @@
       "dec": 1.952,
       "p": 0.47,
       "ev": -0.083
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -41181,7 +41639,8 @@
       "dec": 1.741,
       "p": 0.531,
       "ev": -0.076
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -41198,7 +41657,8 @@
      "ev": -0.106,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41215,7 +41675,8 @@
      "ev": -0.148,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -41232,7 +41693,8 @@
      "ev": -0.17,
      "value": false,
      "stat": "pts",
-     "side": "over"
+     "side": "over",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41249,7 +41711,8 @@
      "ev": -0.178,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -41266,7 +41729,8 @@
      "ev": -0.184,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     },
     {
      "kind": "total",
@@ -41290,7 +41754,8 @@
       "dec": 1.909,
       "p": 0.415,
       "ev": -0.208
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -41307,9 +41772,22 @@
      "ev": -0.456,
      "value": false,
      "stat": "pts",
-     "side": "under"
+     "side": "under",
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "OKC": 98,
+     "HOU": 119
+    },
+    "ot": 0,
+    "winner": "HOU",
+    "winner_ok": true,
+    "picks_won": 3,
+    "picks_lost": 5,
+    "units": -2.37
+   }
   }
  ]
 }
