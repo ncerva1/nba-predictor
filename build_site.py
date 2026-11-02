@@ -345,33 +345,79 @@ HR_N = 10
 _LOGS = {}
 
 
+PLAYOFFS = ("04-14", "10-15")  # entre estas fechas (mes-día) solo hay play-in / playoffs: no cuentan
+
+
+def _derive(line):
+    if "fga" in line and "fg3a" in line:
+        line.update(fg2m=line["fgm"] - line["fg3m"], fg2a=line["fga"] - line["fg3a"])
+    if "stl" in line and "blk" in line:
+        line["stocks"] = line["stl"] + line["blk"]
+    line.update(pra=line["pts"] + line["reb"] + line["ast"], pr=line["pts"] + line["reb"], pa=line["pts"] + line["ast"],
+                ra=line["reb"] + line["ast"])
+    ten = sum(line.get(k, 0) >= 10 for k in ("pts", "reb", "ast", "stl", "blk"))
+    line.update(dd=int(ten >= 2), td=int(ten >= 3))
+    return line
+
+
 def player_logs(date):
-    """{nombre normalizado: [(fecha, rival o None, línea real)]} de esta temporada antes de `date`, más los H2H
-    de la temporada pasada (marcados con fecha de esa temporada)."""
+    """{nombre normalizado: {fecha: partido}} antes de `date`, temporada regular, juntando (por orden de preferencia):
+    gamelogs/nba/ (game logs oficiales de nba.com, con tiros), results/ (box scores que cargamos cada madrugada:
+    cubren los días posteriores al último CSV) y h2h/<temporada anterior>.json (cruces, sin tiros).
+    Cada partido: dict(date, pair={equipos}, team, cur=temporada actual, line={estadísticas})."""
     if date in _LOGS:
         return _LOGS[date]
     from evaluate import actual_line, norm
     logs = {}
+
+    def put(n, d, row):
+        if d >= date or PLAYOFFS[0] <= d[5:] <= PLAYOFFS[1] or season_of(d) not in (season_of(date), prior_season(date)):
+            return  # solo temporada regular de esta temporada y la anterior
+        have = logs.setdefault(norm(n), {})
+        from datetime import date as _d, timedelta
+        for k in (1, -1):  # las fuentes pueden fechar distinto el mismo partido (hora de EE. UU. vs Europa)
+            dd = (_d.fromisoformat(d) + timedelta(days=k)).isoformat()
+            if dd in have and have[dd]["pair"] == row["pair"] and d not in have:
+                d = dd
+        if d in have:  # mismo partido de otra fuente: solo completa lo que falta (p. ej. tiros)
+            for k, v in row["line"].items():
+                have[d]["line"].setdefault(k, v)
+            have[d]["team"] = have[d]["team"] or row["team"]
+            return
+        row.update(date=d, cur=season_of(d) == season_of(date))
+        have[d] = row
+    import csv  # gamelogs/nba/: game logs oficiales de nba.com (leaguegamelog), bajados desde el PC de Nicolas
+    for fp in sorted(glob.glob(os.path.join(HERE, "gamelogs", "nba", "leaguegamelog_P_*.csv"))):
+        for r in csv.DictReader(open(fp, encoding="utf-8")):
+            try:
+                mi = float(r["MIN"] or 0)
+            except ValueError:
+                mi = 0
+            if mi <= 0:
+                continue
+            opp = re.split(r" @ | vs\. ", r["MATCHUP"])[-1].strip()
+            line = dict(min=round(mi), **{k: int(float(r[c] or 0)) for k, c in (
+                ("pts", "PTS"), ("reb", "REB"), ("ast", "AST"), ("stl", "STL"), ("blk", "BLK"), ("fgm", "FGM"),
+                ("fga", "FGA"), ("fg3m", "FG3M"), ("fg3a", "FG3A"), ("ftm", "FTM"), ("fta", "FTA"), ("tov", "TOV"),
+                ("pf", "PF"))})
+            put(r["PLAYER_NAME"], r["GAME_DATE"][:10], dict(pair={r["TEAM_ABBREVIATION"], opp},
+                                                            team=r["TEAM_ABBREVIATION"], line=_derive(line)))
     for rp in sorted(glob.glob(os.path.join(HERE, "results", "20??-??-??.json"))):
         R = json.load(open(rp))
-        if R["date"] >= date or season_of(R["date"]) != season_of(date):
-            continue
         for key, x in R["games"].items():
             a, h = key.split("@")
             for n in x["players"]:
                 al = actual_line(x["players"], n)
                 if al and al["min"] > 0:
-                    logs.setdefault(norm(n), []).append(dict(date=R["date"], pair={a, h}, line=al, cur=True))
+                    put(n, R["date"], dict(pair={a, h}, team=None, line=al))
     hp = os.path.join(HERE, "h2h", f"{prior_season(date)}.json")
     if os.path.exists(hp):
         for x in json.load(open(hp))["games"]:
             for team, ps in x["players"].items():
                 for n, mi, pts, reb, ast, f3, *_ in ps:
                     if mi > 0:
-                        line = dict(min=mi, pts=pts, reb=reb, ast=ast, fg3m=f3, pra=pts + reb + ast, pr=pts + reb,
-                                    pa=pts + ast, ra=reb + ast)
-                        logs.setdefault(norm(n), []).append(dict(date=x["date"], pair={x["away"], x["home"]},
-                                                                 team=team, line=line, cur=False))
+                        put(n, x["date"], dict(pair={x["away"], x["home"]}, team=team,
+                                               line=_derive(dict(min=mi, pts=pts, reb=reb, ast=ast, fg3m=f3))))
     _LOGS[date] = logs
     return logs
 
@@ -395,10 +441,12 @@ def add_hit_rates(cfg, bets):
         st, L, over = b["stat"], b["line"], is_over(b)
         team = team_of.get(b["player"], b.get("team"))
         rival = g["home"] if team == g["away"] else g["away"]
-        rows = sorted(logs.get(norm(b["player"]), []), key=lambda r: r["date"], reverse=True)
+        rows = sorted(logs.get(norm(b["player"]), {}).values(), key=lambda r: r["date"], reverse=True)
         hit = lambda r: (r["line"][st] > L) if over else (r["line"][st] < L)
-        cur = [r for r in rows if r["cur"] and st in r["line"]][:HR_N]
-        hh = [r for r in rows if st in r["line"] and rival in r["pair"] and r.get("team", team) != rival]
+        # últimos 10 (regla de Nicolas, 2-nov): los de esta temporada y, si no llegan a 10, los últimos de la pasada
+        # (rookies o quien no jugó la pasada solo tienen los de esta)
+        cur = [r for r in rows if st in r["line"]][:HR_N]
+        hh = [r for r in rows if st in r["line"] and rival in r["pair"] and (r["team"] or team) != rival]
         b["hr"] = dict(l10=[sum(map(hit, cur)), len(cur)], h2h=[sum(map(hit, hh)), len(hh)])
         pos, col = pos_of.get(b["player"]), DVP_OF.get(st)
         row = (((R or {}).get("teams", {}).get(rival) or {}).get("dvp") or {}).get(pos, {}).get(col) if pos and col else None
@@ -959,6 +1007,11 @@ def main():
                 if "without" not in r:  # partidos publicados antes de "Sin un jugador": misma simulación, sin cada uno
                     cfg = load_game(p, r["used_db"])
                     r["without"] = without_view(cfg, simulate(cfg, r["sims"]), r["sims"])
+            elif "--hr-only" in argv and os.path.exists(out_path):
+                # solo recalcula los % de cumplimiento (últ. 10, H2H, DvP) de un partido ya publicado sin jugar,
+                # p. ej. tras bajar historiales nuevos a gamelogs/: no re-simula ni cambia ningún pick
+                r = json.load(open(out_path))
+                add_hit_rates(load_game(p, r["used_db"]), r["bets"] + r.get("model_picks", []))
             else:
                 r = run_game(p, n)
                 if res:
@@ -974,7 +1027,7 @@ def main():
             legs_by_date.setdefault(date, []).append(r.pop("_legs"))
         json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
         keep[r["id"]] = index_entry(r)
-        if "result" not in r:
+        if "result" not in r and "--hr-only" not in argv:
             sim_dates.add(date)
         g, sm = r["game"], r["summary"]
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "

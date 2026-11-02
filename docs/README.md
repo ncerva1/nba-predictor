@@ -30,6 +30,13 @@ mañana y la revisión de bajas tienen que subir los `.bin` nuevos, y la de resu
 Si una jornada ya publicada quedó sin esos archivos, `python build_site.py <fecha> --samples-only` los regenera sin
 cambiar los picks.
 
+**Historial de jugadores (% Últ. 10 / H2H):** `gamelogs/nba/leaguegamelog_P_<temporada>.csv` son los game logs
+oficiales de nba.com (todas las filas de jugador de temporada regular, con FGM/FGA, 3PM/3PA, FTM/FTA). Desde la nube
+stats.nba.com no responde: se bajan desde el PC de Nicolas con Claude in Chrome (fetch a `stats.nba.com/stats/leaguegamelog`
+desde una página de nba.com/stats) y se suben a GitHub. Los días posteriores al CSV salen de `results/`, así que no hace
+falta bajarlos cada día. Para refrescar los % de una jornada ya publicada sin re-simular ni cambiar picks:
+`python build_site.py <fecha> --hr-only`.
+
 ## Publicar gratis en GitHub Pages
 1. Crear un repositorio en GitHub (por ejemplo `nba-predictor`) y subir esta carpeta `nba_predictor/` como raíz.
 2. En el repo: Settings → Pages → Source: "Deploy from a branch" → Branch `main`, carpeta `/docs`.
