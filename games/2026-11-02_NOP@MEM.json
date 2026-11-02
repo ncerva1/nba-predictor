@@ -8,12 +8,14 @@
   "notes": [
    "H2H 2025-26: NOP 2-2 MEM; 2025-10-22 NOP 122-128 MEM; 2025-11-26 MEM 133-128 NOP; 2026-01-23 NOP 133-127 MEM; 2026-01-30 MEM 106-114 NOP",
    "Récord: NOP 2-4, MEM 6-0",
-   "En duda (prob. de jugar): Trey Murphy III 90%, Quinten Post 50%"
+   "En duda (prob. de jugar): Trey Murphy III 90%, Quinten Post 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Jordan Poole",
    "Yves Missi",
-   "Scotty Pippen Jr."
+   "Scotty Pippen Jr.",
+   "Dejounte Murray"
   ],
   "gtd": {
    "Trey Murphy III": 0.9,
@@ -115,13 +117,13 @@
     "pace": 101.65
    },
    "adj": {
-    "o": 0.0,
-    "d": 0.0,
+    "o": -1.0,
+    "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Dejounte Murray y Jordan Poole OUT"
    }
   }
  },
@@ -629,52 +631,10 @@
   },
   {
    "team": "NOP",
-   "name": "Dejounte Murray",
-   "pos": "PG",
-   "starter": true,
-   "min": 29.0,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 32.2,
-    "pts": 17.75,
-    "reb": 5.75,
-    "ast": 6.0,
-    "fg3m": 0.75,
-    "fgm": 7.25,
-    "fga": 15.5,
-    "fg3a": 3.75,
-    "stl": 2.0,
-    "blk": 1.0,
-    "tov": 2.75,
-    "pf": 1.75,
-    "ftm": 2.5,
-    "fta": 2.75
-   },
-   "prior": {
-    "min": 27.9,
-    "pts": 16.71,
-    "reb": 5.36,
-    "ast": 6.36,
-    "fg3m": 1.36,
-    "fgm": 6.29,
-    "fga": 13.0,
-    "fg3a": 4.43,
-    "stl": 1.64,
-    "blk": 0.21,
-    "tov": 3.36,
-    "pf": 2.36,
-    "ftm": 2.79,
-    "fta": 3.21
-   },
-   "slot": "PG"
-  },
-  {
-   "team": "NOP",
    "name": "Zion Williamson",
    "pos": "PF",
    "starter": true,
-   "min": 28.7,
+   "min": 32.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -716,7 +676,7 @@
    "name": "Trey Murphy III",
    "pos": "SF",
    "starter": true,
-   "min": 28.7,
+   "min": 32.6,
    "g_cur": 6,
    "p_play": 0.9,
    "cur": {
@@ -751,14 +711,14 @@
     "ftm": 3.3,
     "fta": 3.73
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "NOP",
    "name": "Jeremiah Fears",
    "pos": "PG",
    "starter": true,
-   "min": 22.8,
+   "min": 25.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -793,14 +753,14 @@
     "ftm": 2.37,
     "fta": 3.0
    },
-   "slot": "SG"
+   "slot": "PG"
   },
   {
    "team": "NOP",
    "name": "Saddiq Bey",
    "pos": "SF",
    "starter": false,
-   "min": 22.1,
+   "min": 25.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -841,7 +801,7 @@
    "name": "Derik Queen",
    "pos": "C",
    "starter": false,
-   "min": 21.4,
+   "min": 24.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -881,8 +841,8 @@
    "team": "NOP",
    "name": "Herbert Jones",
    "pos": "SF",
-   "starter": false,
-   "min": 19.1,
+   "starter": true,
+   "min": 21.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -916,14 +876,15 @@
     "pf": 3.16,
     "ftm": 0.89,
     "fta": 1.11
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "NOP",
    "name": "Bennedict Mathurin",
    "pos": "SF",
    "starter": false,
-   "min": 15.8,
+   "min": 17.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -964,7 +925,7 @@
    "name": "Trendon Watford",
    "pos": "PF",
    "starter": false,
-   "min": 15.8,
+   "min": 17.9,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -1005,7 +966,7 @@
    "name": "DeAndre Jordan",
    "pos": "C",
    "starter": true,
-   "min": 14.9,
+   "min": 16.9,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -1047,7 +1008,7 @@
    "name": "Karlo Matković",
    "pos": "PF",
    "starter": false,
-   "min": 14.6,
+   "min": 16.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1088,7 +1049,7 @@
    "name": "Bryce McGowens",
    "pos": "SG",
    "starter": false,
-   "min": 7.2,
+   "min": 8.2,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -1126,7 +1087,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -4.5,
   "total": 233.5,
   "ml_home": -195,
@@ -1138,6 +1099,17 @@
     22.5,
     null,
     -115
+   ],
+   "ast": [
+    5.5,
+    -145,
+    -140,
+    6.5
+   ],
+   "fg3m": [
+    2.5,
+    110,
+    -122
    ]
   },
   "Zion Williamson": {
@@ -1148,20 +1120,28 @@
     21.5
    ]
   },
-  "Dejounte Murray": {
-   "pts": [
-    16.5,
-    -105,
-    -112,
-    17.5
-   ]
-  },
   "Cameron Boozer": {
    "pts": [
     16.5,
     -104,
     -105,
     17.5
+   ],
+   "reb": [
+    8.5,
+    -150,
+    -138,
+    9.5
+   ],
+   "ast": [
+    5.5,
+    115,
+    -132
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    140
    ]
   },
   "Trey Murphy III": {
@@ -1170,6 +1150,104 @@
     -110,
     -130,
     16.5
+   ],
+   "fg3m": [
+    2.5,
+    110,
+    -120
+   ]
+  },
+  "Zach Edey": {
+   "reb": [
+    7.5,
+    100,
+    105
+   ]
+  },
+  "Cedric Coward": {
+   "reb": [
+    6.5,
+    105,
+    -115
+   ],
+   "fg3m": [
+    1.5,
+    -105,
+    102
+   ]
+  },
+  "Derik Queen": {
+   "reb": [
+    6.5,
+    104,
+    100
+   ]
+  },
+  "Jeremiah Fears": {
+   "ast": [
+    4.5,
+    -105,
+    -105
+   ],
+   "fg3m": [
+    1.5,
+    110,
+    -120
+   ]
+  },
+  "Cam Spencer": {
+   "ast": [
+    4.5,
+    100,
+    -125
+   ],
+   "fg3m": [
+    1.5,
+    105,
+    -135
+   ]
+  },
+  "Bennedict Mathurin": {
+   "fg3m": [
+    0.5,
+    -145,
+    115
+   ]
+  },
+  "Jaylen Wells": {
+   "fg3m": [
+    1.5,
+    -145,
+    135
+   ]
+  },
+  "Jerami Grant": {
+   "fg3m": [
+    1.5,
+    100,
+    -113
+   ]
+  },
+  "Saddiq Bey": {
+   "fg3m": [
+    1.5,
+    102,
+    -112
+   ]
+  },
+  "GG Jackson": {
+   "fg3m": [
+    0.5,
+    -210,
+    -190,
+    1.5
+   ]
+  },
+  "Karlo Matković": {
+   "fg3m": [
+    0.5,
+    -145,
+    125
    ]
   }
  }

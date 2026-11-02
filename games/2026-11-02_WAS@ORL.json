@@ -9,17 +9,17 @@
    "H2H 2025-26: WAS 1-3 ORL; 2025-11-01 ORL 125-94 WAS (blowout); 2026-01-06 ORL 112-120 WAS; 2026-03-03 WAS 109-126 ORL; 2026-03-12 WAS 131-136 ORL",
    "Back-to-back: ORL jugaron el 1-nov",
    "Récord: WAS 3-3, ORL 2-4",
-   "En duda (prob. de jugar): Alex Sarr 50%, Anthony Gill 50%"
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Justin Champagnie",
    "Jalen Suggs",
-   "Paolo Banchero"
+   "Paolo Banchero",
+   "Alex Sarr",
+   "Anthony Gill",
+   "Anthony Black"
   ],
-  "gtd": {
-   "Alex Sarr": 0.5,
-   "Anthony Gill": 0.5
-  },
+  "gtd": {},
   "reserves": {
    "WAS": [
     {
@@ -31,12 +31,6 @@
     {
      "name": "Felix Okpara",
      "pos": "C",
-     "min": 1.0,
-     "g": 1
-    },
-    {
-     "name": "Anthony Gill",
-     "pos": "PF",
      "min": 1.0,
      "g": 1
     },
@@ -94,13 +88,13 @@
     "pace": 100.84
    },
    "adj": {
-    "o": -2.0,
+    "o": -2.5,
     "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": "Banchero y Suggs OUT"
+    "roster_note": "Banchero y Suggs OUT; Anthony Black descansa"
    }
   },
   "WAS": {
@@ -117,12 +111,12 @@
    },
    "adj": {
     "o": 0.0,
-    "d": 0.0,
+    "d": 1.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Alex Sarr OUT (rodilla)"
    }
   }
  },
@@ -136,7 +130,7 @@
    "name": "Franz Wagner",
    "pos": "SF",
    "starter": true,
-   "min": 37.0,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -171,14 +165,14 @@
     "ftm": 4.79,
     "fta": 5.82
    },
-   "slot": "PF"
+   "slot": "SF"
   },
   {
    "team": "ORL",
    "name": "Desmond Bane",
    "pos": "SG",
    "starter": true,
-   "min": 36.4,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -220,7 +214,7 @@
    "name": "Wendell Carter Jr.",
    "pos": "C",
    "starter": true,
-   "min": 33.7,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -261,8 +255,8 @@
    "team": "ORL",
    "name": "Tristan da Silva",
    "pos": "SF",
-   "starter": false,
-   "min": 30.2,
+   "starter": true,
+   "min": 34.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -296,56 +290,15 @@
     "pf": 1.52,
     "ftm": 1.09,
     "fta": 1.23
-   }
-  },
-  {
-   "team": "ORL",
-   "name": "Anthony Black",
-   "pos": "PG",
-   "starter": true,
-   "min": 29.3,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 28.0,
-    "pts": 16.5,
-    "reb": 4.75,
-    "ast": 4.75,
-    "fg3m": 2.25,
-    "fgm": 5.25,
-    "fga": 10.0,
-    "fg3a": 4.75,
-    "stl": 1.25,
-    "blk": 0.5,
-    "tov": 2.25,
-    "pf": 3.5,
-    "ftm": 3.75,
-    "fta": 4.75
    },
-   "prior": {
-    "min": 29.9,
-    "pts": 14.98,
-    "reb": 3.81,
-    "ast": 3.69,
-    "fg3m": 1.56,
-    "fgm": 5.39,
-    "fga": 12.06,
-    "fg3a": 4.69,
-    "stl": 1.42,
-    "blk": 0.7,
-    "tov": 2.06,
-    "pf": 2.66,
-    "ftm": 2.64,
-    "fta": 3.61
-   },
-   "slot": "PG"
+   "slot": "PF"
   },
   {
    "team": "ORL",
    "name": "Jase Richardson",
    "pos": "SG",
    "starter": true,
-   "min": 20.6,
+   "min": 23.5,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -380,14 +333,14 @@
     "ftm": 0.61,
     "fta": 0.85
    },
-   "slot": "SF"
+   "slot": "PG"
   },
   {
    "team": "ORL",
    "name": "Jevon Carter",
    "pos": "PG",
    "starter": false,
-   "min": 18.3,
+   "min": 20.9,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -428,7 +381,7 @@
    "name": "Jamal Cain",
    "pos": "SF",
    "starter": false,
-   "min": 15.5,
+   "min": 17.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -469,7 +422,7 @@
    "name": "Goga Bitadze",
    "pos": "C",
    "starter": false,
-   "min": 9.6,
+   "min": 11.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -510,7 +463,7 @@
    "name": "Nikola Vučević",
    "pos": "C",
    "starter": false,
-   "min": 9.2,
+   "min": 10.5,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -551,7 +504,7 @@
    "name": "Trae Young",
    "pos": "PG",
    "starter": true,
-   "min": 34.8,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -593,7 +546,7 @@
    "name": "Anthony Davis",
    "pos": "PF",
    "starter": true,
-   "min": 32.1,
+   "min": 35.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -628,14 +581,14 @@
     "ftm": 2.95,
     "fta": 4.05
    },
-   "slot": "PF"
+   "slot": "C"
   },
   {
    "team": "WAS",
    "name": "Kyshawn George",
    "pos": "SG",
    "starter": true,
-   "min": 30.4,
+   "min": 33.8,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -677,7 +630,7 @@
    "name": "AJ Dybantsa",
    "pos": "SF",
    "starter": true,
-   "min": 27.3,
+   "min": 30.4,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -718,8 +671,8 @@
    "team": "WAS",
    "name": "Bilal Coulibaly",
    "pos": "SF",
-   "starter": false,
-   "min": 25.2,
+   "starter": true,
+   "min": 28.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -753,56 +706,15 @@
     "pf": 2.32,
     "ftm": 2.36,
     "fta": 3.16
-   }
-  },
-  {
-   "team": "WAS",
-   "name": "Alex Sarr",
-   "pos": "C",
-   "starter": true,
-   "min": 24.4,
-   "g_cur": 6,
-   "p_play": 0.5,
-   "cur": {
-    "min": 25.5,
-    "pts": 9.33,
-    "reb": 5.5,
-    "ast": 2.17,
-    "fg3m": 0.67,
-    "fgm": 3.67,
-    "fga": 7.0,
-    "fg3a": 2.67,
-    "stl": 1.0,
-    "blk": 1.0,
-    "tov": 1.33,
-    "pf": 2.33,
-    "ftm": 1.33,
-    "fta": 1.83
    },
-   "prior": {
-    "min": 27.2,
-    "pts": 16.31,
-    "reb": 7.4,
-    "ast": 2.71,
-    "fg3m": 1.04,
-    "fgm": 6.58,
-    "fga": 13.67,
-    "fg3a": 3.12,
-    "stl": 0.81,
-    "blk": 1.98,
-    "tov": 1.71,
-    "pf": 2.19,
-    "ftm": 2.1,
-    "fta": 3.04
-   },
-   "slot": "C"
+   "slot": "PF"
   },
   {
    "team": "WAS",
    "name": "Tre Johnson",
    "pos": "SG",
    "starter": false,
-   "min": 19.9,
+   "min": 22.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -843,7 +755,7 @@
    "name": "Bub Carrington",
    "pos": "PG",
    "starter": false,
-   "min": 19.0,
+   "min": 21.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -884,7 +796,7 @@
    "name": "Deandre Ayton",
    "pos": "C",
    "starter": false,
-   "min": 13.7,
+   "min": 15.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -925,7 +837,7 @@
    "name": "Khris Middleton",
    "pos": "SF",
    "starter": false,
-   "min": 13.2,
+   "min": 14.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -963,7 +875,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -2.5,
   "total": 225.5,
   "ml_home": -150,
@@ -975,6 +887,16 @@
     23.5,
     null,
     -106
+   ],
+   "reb": [
+    6.5,
+    110,
+    -120
+   ],
+   "ast": [
+    6.5,
+    106,
+    -115
    ]
   },
   "Desmond Bane": {
@@ -983,6 +905,12 @@
     -115,
     -120,
     21.5
+   ],
+   "ast": [
+    3.5,
+    -152,
+    -155,
+    4.5
    ]
   },
   "Anthony Davis": {
@@ -990,6 +918,12 @@
     21.5,
     null,
     -110
+   ],
+   "reb": [
+    10.5,
+    -130,
+    -112,
+    11.5
    ]
   },
   "Trae Young": {
@@ -998,6 +932,12 @@
     -125,
     -110,
     19.5
+   ],
+   "ast": [
+    9.5,
+    -135,
+    -135,
+    10.5
    ]
   },
   "AJ Dybantsa": {
@@ -1008,12 +948,19 @@
     16.5
    ]
   },
-  "Anthony Black": {
-   "pts": [
-    14.5,
-    -115,
+  "Wendell Carter Jr.": {
+   "reb": [
+    8.5,
+    -104,
     -125,
-    15.5
+    9.5
+   ]
+  },
+  "Kyshawn George": {
+   "ast": [
+    3.5,
+    101,
+    -111
    ]
   }
  }

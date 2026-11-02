@@ -8,7 +8,8 @@
   "notes": [
    "H2H 2025-26: CHI 2-1 PHI; 2025-11-04 PHI 111-113 CHI; 2025-12-26 PHI 102-109 CHI; 2026-03-25 CHI 137-157 PHI (blowout)",
    "Récord: CHI 1-5, PHI 6-1",
-   "En duda (prob. de jugar): Jalen Smith 90%, Tobe Awaka 90%, Joel Embiid 50%"
+   "En duda (prob. de jugar): Jalen Smith 90%, Tobe Awaka 90%, Joel Embiid 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [],
   "gtd": {
@@ -1099,7 +1100,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -10.5,
   "total": 238.5,
   "ml_home": -549,
@@ -1112,6 +1113,12 @@
     -114,
     -121,
     26.5
+   ],
+   "ast": [
+    4.5,
+    -150,
+    -155,
+    5.5
    ]
   },
   "Jaylen Brown": {
@@ -1120,6 +1127,17 @@
     -120,
     -112,
     22.5
+   ],
+   "reb": [
+    6.5,
+    116,
+    -125
+   ],
+   "ast": [
+    3.5,
+    -130,
+    -150,
+    4.5
    ]
   },
   "Joel Embiid": {
@@ -1127,6 +1145,18 @@
     22.5,
     null,
     -128
+   ],
+   "reb": [
+    7.5,
+    -145,
+    -139,
+    8.5
+   ],
+   "ast": [
+    3.5,
+    -140,
+    -145,
+    4.5
    ]
   },
   "Norman Powell": {
@@ -1143,6 +1173,16 @@
     -125,
     -100,
     17.5
+   ],
+   "reb": [
+    6.5,
+    -115,
+    102
+   ],
+   "ast": [
+    6.5,
+    -115,
+    105
    ]
   },
   "Matas Buzelis": {
@@ -1150,6 +1190,49 @@
     14.5,
     -112,
     100
+   ]
+  },
+  "Jalen Smith": {
+   "reb": [
+    7.5,
+    -142,
+    -133,
+    8.5
+   ]
+  },
+  "Caleb Wilson": {
+   "reb": [
+    5.5,
+    -150,
+    -145,
+    6.5
+   ]
+  },
+  "VJ Edgecombe": {
+   "reb": [
+    6.5,
+    114,
+    -135
+   ]
+  },
+  "Josh Giddey": {
+   "reb": [
+    5.5,
+    -140,
+    -139,
+    6.5
+   ],
+   "ast": [
+    7.5,
+    122,
+    -130
+   ]
+  },
+  "Tre Jones": {
+   "ast": [
+    3.5,
+    106,
+    -110
    ]
   }
  }

@@ -7,12 +7,17 @@
   "tip_et": "20:00",
   "notes": [
    "H2H 2025-26: MIL 0-2 MIN; 2025-12-21 MIL 100-103 MIN; 2026-01-13 MIN 139-106 MIL (blowout)",
-   "Récord: MIL 1-5, MIN 4-3"
+   "Récord: MIL 1-5, MIN 4-3",
+   "En duda (prob. de jugar): Terrence Shannon Jr. 50%, LaMelo Ball 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Anthony Edwards"
   ],
-  "gtd": {},
+  "gtd": {
+   "Terrence Shannon Jr.": 0.5,
+   "LaMelo Ball": 0.5
+  },
   "reserves": {
    "MIL": [
     {
@@ -293,7 +298,7 @@
    "starter": true,
    "min": 26.9,
    "g_cur": 7,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 25.3,
     "pts": 14.43,
@@ -991,7 +996,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -10.5,
   "total": 233.5,
   "ml_home": -481,
@@ -1004,6 +1009,12 @@
     -112,
     -121,
     21.5
+   ],
+   "ast": [
+    6.5,
+    -142,
+    -140,
+    7.5
    ]
   },
   "Tyler Herro": {
@@ -1011,6 +1022,11 @@
     20.5,
     -110,
     -103
+   ],
+   "ast": [
+    4.5,
+    124,
+    -112
    ]
   },
   "Jaden McDaniels": {
@@ -1018,6 +1034,11 @@
     17.5,
     100,
     -104
+   ],
+   "reb": [
+    5.5,
+    105,
+    -113
    ]
   },
   "Ayo Dosunmu": {
@@ -1026,6 +1047,16 @@
     -105,
     -120,
     17.5
+   ],
+   "ast": [
+    4.5,
+    -110,
+    -105
+   ],
+   "fg3m": [
+    1.5,
+    -130,
+    122
    ]
   },
   "Jonathan Kuminga": {
@@ -1034,6 +1065,16 @@
     -120,
     -112,
     15.5
+   ],
+   "reb": [
+    5.5,
+    -125,
+    106
+   ],
+   "fg3m": [
+    1.5,
+    125,
+    -138
    ]
   },
   "Jaime Jaquez Jr.": {
@@ -1042,6 +1083,11 @@
     -115,
     -111,
     14.5
+   ],
+   "fg3m": [
+    0.5,
+    -210,
+    164
    ]
   },
   "Ryan Rollins": {
@@ -1050,6 +1096,57 @@
     -112,
     -121,
     14.5
+   ],
+   "ast": [
+    4.5,
+    100,
+    -122
+   ],
+   "fg3m": [
+    1.5,
+    -140,
+    120
+   ]
+  },
+  "Rudy Gobert": {
+   "reb": [
+    10.5,
+    -120,
+    105
+   ]
+  },
+  "Kel'el Ware": {
+   "reb": [
+    7.5,
+    -105,
+    -112
+   ],
+   "fg3m": [
+    0.5,
+    -210,
+    160
+   ]
+  },
+  "Joan Beringer": {
+   "reb": [
+    5.5,
+    -128,
+    115
+   ]
+  },
+  "Kyle Kuzma": {
+   "fg3m": [
+    0.5,
+    -250,
+    -200,
+    1.5
+   ]
+  },
+  "Kasparas Jakučionis": {
+   "fg3m": [
+    0.5,
+    -190,
+    150
    ]
   }
  }

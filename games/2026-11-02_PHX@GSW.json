@@ -9,14 +9,15 @@
    "H2H 2025-26: PHX 1-3 GSW; 2025-11-04 PHX 107-118 GSW; 2025-12-18 GSW 98-99 PHX; 2025-12-20 PHX 116-119 GSW; 2026-02-05 GSW 101-97 PHX",
    "Back-to-back: GSW jugaron el 1-nov",
    "Récord: PHX 1-3, GSW 4-3",
-   "En duda (prob. de jugar): Draymond Green 60%, Stephen Curry 90%"
+   "En duda (prob. de jugar): Brandon Williams 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
-   "Gui Santos"
+   "Gui Santos",
+   "Al Horford"
   ],
   "gtd": {
-   "Draymond Green": 0.6,
-   "Stephen Curry": 0.9
+   "Brandon Williams": 0.5
   },
   "reserves": {
    "PHX": [
@@ -134,7 +135,7 @@
    "name": "Brandin Podziemski",
    "pos": "SG",
    "starter": true,
-   "min": 32.1,
+   "min": 34.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -176,7 +177,7 @@
    "name": "Yaxel Lendeborg",
    "pos": "SF",
    "starter": true,
-   "min": 30.9,
+   "min": 33.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -218,9 +219,9 @@
    "name": "Draymond Green",
    "pos": "PF",
    "starter": true,
-   "min": 27.3,
+   "min": 29.5,
    "g_cur": 5,
-   "p_play": 0.6,
+   "p_play": 1.0,
    "cur": {
     "min": 28.6,
     "pts": 3.0,
@@ -260,9 +261,9 @@
    "name": "Stephen Curry",
    "pos": "PG",
    "starter": true,
-   "min": 27.0,
+   "min": 29.1,
    "g_cur": 5,
-   "p_play": 0.9,
+   "p_play": 1.0,
    "cur": {
     "min": 28.2,
     "pts": 29.2,
@@ -302,7 +303,7 @@
    "name": "De'Anthony Melton",
    "pos": "PG",
    "starter": false,
-   "min": 21.3,
+   "min": 23.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -343,7 +344,7 @@
    "name": "Georges Niang",
    "pos": "PF",
    "starter": false,
-   "min": 18.7,
+   "min": 20.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -381,53 +382,12 @@
   },
   {
    "team": "GSW",
-   "name": "Al Horford",
-   "pos": "C",
-   "starter": false,
-   "min": 17.9,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 18.7,
-    "pts": 5.0,
-    "reb": 4.0,
-    "ast": 1.0,
-    "fg3m": 1.33,
-    "fgm": 1.83,
-    "fga": 4.5,
-    "fg3a": 3.33,
-    "stl": 0.33,
-    "blk": 0.67,
-    "tov": 1.0,
-    "pf": 0.83,
-    "ftm": 0.0,
-    "fta": 0.17
-   },
-   "prior": {
-    "min": 21.6,
-    "pts": 8.27,
-    "reb": 4.87,
-    "ast": 2.58,
-    "fg3m": 1.64,
-    "fgm": 3.07,
-    "fga": 7.2,
-    "fg3a": 4.56,
-    "stl": 0.67,
-    "blk": 1.13,
-    "tov": 0.93,
-    "pf": 1.13,
-    "ftm": 0.49,
-    "fta": 0.58
-   }
-  },
-  {
-   "team": "GSW",
    "name": "Brandon Williams",
    "pos": "PG",
    "starter": false,
-   "min": 16.6,
+   "min": 18.0,
    "g_cur": 7,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 17.4,
     "pts": 11.57,
@@ -466,7 +426,7 @@
    "name": "Will Richard",
    "pos": "SG",
    "starter": false,
-   "min": 15.7,
+   "min": 16.9,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -507,7 +467,7 @@
    "name": "Gary Payton II",
    "pos": "SG",
    "starter": false,
-   "min": 12.4,
+   "min": 13.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -548,7 +508,7 @@
    "name": "Graham Ike",
    "pos": "C",
    "starter": true,
-   "min": 11.3,
+   "min": 12.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -590,7 +550,7 @@
    "name": "Charles Bassey",
    "pos": "C",
    "starter": false,
-   "min": 8.8,
+   "min": 9.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1043,7 +1003,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -2.5,
   "total": 227.5,
   "ml_home": -150,
@@ -1056,6 +1016,17 @@
     -115,
     -112,
     26.5
+   ],
+   "ast": [
+    4.5,
+    -102,
+    -109
+   ],
+   "fg3m": [
+    3.5,
+    -130,
+    -160,
+    4.5
    ]
   },
   "Devin Booker": {
@@ -1064,6 +1035,16 @@
     -115,
     -122,
     24.5
+   ],
+   "ast": [
+    5.5,
+    122,
+    -130
+   ],
+   "fg3m": [
+    1.5,
+    100,
+    -112
    ]
   },
   "Yaxel Lendeborg": {
@@ -1071,6 +1052,22 @@
     18.5,
     null,
     100
+   ],
+   "reb": [
+    7.5,
+    105,
+    -120
+   ],
+   "ast": [
+    3.5,
+    -120,
+    109
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    -185,
+    2.5
    ]
   },
   "Miles Bridges": {
@@ -1079,6 +1076,17 @@
     -115,
     -113,
     16.5
+   ],
+   "reb": [
+    5.5,
+    -158,
+    -132,
+    6.5
+   ],
+   "fg3m": [
+    1.5,
+    -135,
+    128
    ]
   },
   "Jalen Green": {
@@ -1087,6 +1095,11 @@
     -112,
     -110,
     15.5
+   ],
+   "fg3m": [
+    1.5,
+    -135,
+    116
    ]
   },
   "Dillon Brooks": {
@@ -1094,6 +1107,11 @@
     15.5,
     -106,
     -114
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    130
    ]
   },
   "Brandin Podziemski": {
@@ -1102,6 +1120,71 @@
     -105,
     -125,
     16.5
+   ],
+   "ast": [
+    4.5,
+    130,
+    -155
+   ],
+   "fg3m": [
+    1.5,
+    -210,
+    -175,
+    2.5
+   ]
+  },
+  "Khaman Maluach": {
+   "reb": [
+    6.5,
+    -135,
+    -138,
+    7.5
+   ]
+  },
+  "Draymond Green": {
+   "ast": [
+    6.5,
+    122,
+    -130
+   ],
+   "fg3m": [
+    0.5,
+    -180,
+    140
+   ]
+  },
+  "Collin Gillespie": {
+   "ast": [
+    3.5,
+    -160,
+    -140,
+    4.5
+   ],
+   "fg3m": [
+    2.5,
+    120,
+    -148
+   ]
+  },
+  "De'Anthony Melton": {
+   "fg3m": [
+    1.5,
+    -136,
+    122
+   ]
+  },
+  "Georges Niang": {
+   "fg3m": [
+    1.5,
+    -105,
+    105
+   ]
+  },
+  "Jordan Goodwin": {
+   "fg3m": [
+    1.5,
+    120,
+    -125
    ]
   }
  }

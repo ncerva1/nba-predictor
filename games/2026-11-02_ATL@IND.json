@@ -9,17 +9,22 @@
    "H2H 2025-26: ATL 2-1 IND; 2025-10-31 ATL 128-108 IND (blowout); 2026-01-26 IND 116-132 ATL; 2026-01-31 ATL 124-129 IND",
    "Back-to-back: IND jugaron el 1-nov",
    "Récord: ATL 3-4, IND 2-5",
-   "En duda (prob. de jugar): Jalen Johnson 50%, Obi Toppin 50%"
+   "En duda (prob. de jugar): Obi Toppin 50%, Larry Nance Jr. 20%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Jock Landale",
    "Ivica Zubac",
    "Ben Sheppard",
-   "Tyrese Haliburton"
+   "Tyrese Haliburton",
+   "Jalen Johnson",
+   "Pascal Siakam",
+   "Andrew Nembhard",
+   "Aaron Nesmith"
   ],
   "gtd": {
-   "Jalen Johnson": 0.5,
-   "Obi Toppin": 0.5
+   "Obi Toppin": 0.5,
+   "Larry Nance Jr.": 0.2
   },
   "reserves": {
    "ATL": [
@@ -77,13 +82,13 @@
     "pace": 102.06
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -3.0,
+    "d": 2.0,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Haliburton, Zubac, Nembhard y McConnell OUT; Siakam y Nesmith descansan"
    }
   },
   "ATL": {
@@ -99,13 +104,13 @@
     "pace": 102.78
    },
    "adj": {
-    "o": 0.0,
-    "d": 0.0,
+    "o": -1.0,
+    "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Jalen Johnson OUT (tobillo)"
    }
   }
  },
@@ -116,94 +121,10 @@
  "players": [
   {
    "team": "IND",
-   "name": "Andrew Nembhard",
-   "pos": "SG",
-   "starter": true,
-   "min": 33.6,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 32.7,
-    "pts": 18.5,
-    "reb": 2.17,
-    "ast": 7.33,
-    "fg3m": 2.5,
-    "fgm": 6.0,
-    "fga": 13.33,
-    "fg3a": 6.0,
-    "stl": 0.67,
-    "blk": 0.0,
-    "tov": 2.5,
-    "pf": 2.33,
-    "ftm": 4.0,
-    "fta": 4.5
-   },
-   "prior": {
-    "min": 31.3,
-    "pts": 16.95,
-    "reb": 2.81,
-    "ast": 7.67,
-    "fg3m": 1.88,
-    "fgm": 5.84,
-    "fga": 13.21,
-    "fg3a": 5.19,
-    "stl": 0.89,
-    "blk": 0.14,
-    "tov": 2.4,
-    "pf": 2.21,
-    "ftm": 3.39,
-    "fta": 4.11
-   },
-   "slot": "PG"
-  },
-  {
-   "team": "IND",
-   "name": "Pascal Siakam",
-   "pos": "PF",
-   "starter": true,
-   "min": 33.0,
-   "g_cur": 7,
-   "p_play": 1.0,
-   "cur": {
-    "min": 32.1,
-    "pts": 21.43,
-    "reb": 7.43,
-    "ast": 4.0,
-    "fg3m": 1.14,
-    "fgm": 8.29,
-    "fga": 16.57,
-    "fg3a": 4.0,
-    "stl": 0.86,
-    "blk": 0.0,
-    "tov": 3.0,
-    "pf": 2.86,
-    "ftm": 3.71,
-    "fta": 5.71
-   },
-   "prior": {
-    "min": 33.2,
-    "pts": 23.95,
-    "reb": 6.63,
-    "ast": 3.81,
-    "fg3m": 1.69,
-    "fgm": 9.02,
-    "fga": 18.63,
-    "fg3a": 4.73,
-    "stl": 1.11,
-    "blk": 0.4,
-    "tov": 2.23,
-    "pf": 2.37,
-    "ftm": 4.23,
-    "fta": 6.1
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "IND",
    "name": "Kelly Oubre Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 23.9,
+   "min": 38.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -242,52 +163,10 @@
   },
   {
    "team": "IND",
-   "name": "Aaron Nesmith",
-   "pos": "SF",
-   "starter": true,
-   "min": 23.6,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 23.0,
-    "pts": 12.17,
-    "reb": 2.17,
-    "ast": 1.83,
-    "fg3m": 1.67,
-    "fgm": 3.67,
-    "fga": 9.33,
-    "fg3a": 5.5,
-    "stl": 0.67,
-    "blk": 0.17,
-    "tov": 1.67,
-    "pf": 2.5,
-    "ftm": 3.17,
-    "fta": 3.67
-   },
-   "prior": {
-    "min": 29.6,
-    "pts": 13.8,
-    "reb": 4.16,
-    "ast": 1.91,
-    "fg3m": 2.33,
-    "fgm": 4.71,
-    "fga": 11.38,
-    "fg3a": 6.16,
-    "stl": 0.58,
-    "blk": 0.51,
-    "tov": 1.4,
-    "pf": 2.76,
-    "ftm": 2.04,
-    "fta": 2.47
-   },
-   "slot": "SF"
-  },
-  {
-   "team": "IND",
    "name": "Obi Toppin",
    "pos": "PF",
    "starter": false,
-   "min": 23.6,
+   "min": 37.8,
    "g_cur": 5,
    "p_play": 0.5,
    "cur": {
@@ -327,8 +206,8 @@
    "team": "IND",
    "name": "Jarace Walker",
    "pos": "PF",
-   "starter": false,
-   "min": 22.6,
+   "starter": true,
+   "min": 36.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -362,14 +241,15 @@
     "pf": 1.63,
     "ftm": 1.8,
     "fta": 2.41
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "IND",
    "name": "Quenton Jackson",
    "pos": "PG",
-   "starter": false,
-   "min": 20.5,
+   "starter": true,
+   "min": 32.9,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -403,14 +283,15 @@
     "pf": 1.67,
     "ftm": 2.0,
     "fta": 2.43
-   }
+   },
+   "slot": "PG"
   },
   {
    "team": "IND",
    "name": "Jay Huff",
    "pos": "C",
    "starter": true,
-   "min": 17.3,
+   "min": 27.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -451,10 +332,10 @@
    "team": "IND",
    "name": "Larry Nance Jr.",
    "pos": "PF",
-   "starter": false,
-   "min": 16.7,
+   "starter": true,
+   "min": 26.8,
    "g_cur": 7,
-   "p_play": 1.0,
+   "p_play": 0.2,
    "cur": {
     "min": 16.3,
     "pts": 3.29,
@@ -486,14 +367,15 @@
     "pf": 1.57,
     "ftm": 0.17,
     "fta": 0.37
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "IND",
    "name": "Jalen Slawson",
    "pos": "SF",
    "starter": false,
-   "min": 12.8,
+   "min": 20.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -534,7 +416,7 @@
    "name": "Kobe Brown",
    "pos": "PF",
    "starter": false,
-   "min": 12.3,
+   "min": 19.7,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -572,52 +454,10 @@
   },
   {
    "team": "ATL",
-   "name": "Jalen Johnson",
-   "pos": "SF",
-   "starter": true,
-   "min": 34.9,
-   "g_cur": 7,
-   "p_play": 0.5,
-   "cur": {
-    "min": 32.7,
-    "pts": 18.29,
-    "reb": 9.0,
-    "ast": 7.86,
-    "fg3m": 1.14,
-    "fgm": 6.43,
-    "fga": 15.29,
-    "fg3a": 4.43,
-    "stl": 0.86,
-    "blk": 0.71,
-    "tov": 3.14,
-    "pf": 3.29,
-    "ftm": 4.29,
-    "fta": 5.14
-   },
-   "prior": {
-    "min": 35.2,
-    "pts": 22.51,
-    "reb": 10.28,
-    "ast": 7.86,
-    "fg3m": 1.67,
-    "fgm": 8.33,
-    "fga": 17.06,
-    "fg3a": 4.74,
-    "stl": 1.24,
-    "blk": 0.43,
-    "tov": 3.39,
-    "pf": 2.1,
-    "ftm": 4.18,
-    "fta": 5.31
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "ATL",
    "name": "Nickeil Alexander-Walker",
    "pos": "SG",
    "starter": true,
-   "min": 32.0,
+   "min": 37.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -659,7 +499,7 @@
    "name": "Dyson Daniels",
    "pos": "SG",
    "starter": true,
-   "min": 30.8,
+   "min": 36.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -701,7 +541,7 @@
    "name": "Onyeka Okongwu",
    "pos": "C",
    "starter": true,
-   "min": 30.2,
+   "min": 35.3,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -743,7 +583,7 @@
    "name": "CJ McCollum",
    "pos": "PG",
    "starter": true,
-   "min": 27.7,
+   "min": 32.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -785,7 +625,7 @@
    "name": "Aaron Wiggins",
    "pos": "SG",
    "starter": false,
-   "min": 27.6,
+   "min": 32.3,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -825,8 +665,8 @@
    "team": "ATL",
    "name": "Luguentz Dort",
    "pos": "SF",
-   "starter": false,
-   "min": 25.3,
+   "starter": true,
+   "min": 29.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -860,14 +700,15 @@
     "pf": 2.59,
     "ftm": 0.64,
     "fta": 0.84
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "ATL",
    "name": "Kingston Flemings",
    "pos": "PG",
    "starter": false,
-   "min": 21.6,
+   "min": 25.3,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -908,7 +749,7 @@
    "name": "Asa Newell",
    "pos": "PF",
    "starter": false,
-   "min": 9.9,
+   "min": 11.6,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -946,27 +787,13 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": 4.5,
   "total": 231.5,
   "ml_home": 165,
   "ml_away": -200
  },
  "prop_lines": {
-  "Pascal Siakam": {
-   "pts": [
-    22.5,
-    -110,
-    -106
-   ]
-  },
-  "Jalen Johnson": {
-   "pts": [
-    21.5,
-    -105,
-    -111
-   ]
-  },
   "Nickeil Alexander-Walker": {
    "pts": [
     21.5,
@@ -979,13 +806,12 @@
     16.5,
     null,
     -107
-   ]
-  },
-  "Andrew Nembhard": {
-   "pts": [
-    16.5,
-    -108,
-    -111
+   ],
+   "ast": [
+    3.5,
+    -120,
+    -160,
+    4.5
    ]
   },
   "Onyeka Okongwu": {
@@ -993,6 +819,46 @@
     13.5,
     100,
     100
+   ],
+   "reb": [
+    7.5,
+    -145,
+    -127,
+    8.5
+   ]
+  },
+  "Jarace Walker": {
+   "reb": [
+    6.5,
+    -125,
+    110
+   ]
+  },
+  "Obi Toppin": {
+   "reb": [
+    6.5,
+    103,
+    -105
+   ]
+  },
+  "Dyson Daniels": {
+   "reb": [
+    5.5,
+    -130,
+    111
+   ],
+   "ast": [
+    4.5,
+    -145,
+    -130,
+    5.5
+   ]
+  },
+  "Quenton Jackson": {
+   "ast": [
+    6.5,
+    -110,
+    -115
    ]
   }
  }

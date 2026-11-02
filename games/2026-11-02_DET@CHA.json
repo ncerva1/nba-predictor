@@ -8,14 +8,13 @@
   "notes": [
    "H2H 2025-26: DET 3-0 CHA; 2025-12-21 CHA 86-112 DET (blowout); 2026-02-10 DET 110-104 CHA; 2026-04-11 DET 118-100 CHA (blowout)",
    "Récord: DET 5-1, CHA 3-4",
-   "En duda (prob. de jugar): Isaiah Joe 50%"
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
-   "Jalen Duren"
+   "Jalen Duren",
+   "Isaiah Joe"
   ],
-  "gtd": {
-   "Isaiah Joe": 0.5
-  },
+  "gtd": {},
   "reserves": {
    "DET": [
     {
@@ -559,7 +558,7 @@
    "name": "Cade Cunningham",
    "pos": "PG",
    "starter": true,
-   "min": 34.0,
+   "min": 36.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -601,7 +600,7 @@
    "name": "Duncan Robinson",
    "pos": "SF",
    "starter": true,
-   "min": 30.3,
+   "min": 32.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -643,7 +642,7 @@
    "name": "Paul Reed",
    "pos": "C",
    "starter": true,
-   "min": 27.2,
+   "min": 28.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -685,7 +684,7 @@
    "name": "John Collins",
    "pos": "PF",
    "starter": true,
-   "min": 26.9,
+   "min": 28.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -727,7 +726,7 @@
    "name": "Ausar Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 26.8,
+   "min": 28.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -769,7 +768,7 @@
    "name": "Daniss Jenkins",
    "pos": "PG",
    "starter": false,
-   "min": 24.9,
+   "min": 26.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -810,7 +809,7 @@
    "name": "Kevin Huerter",
    "pos": "SG",
    "starter": false,
-   "min": 20.8,
+   "min": 22.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -851,7 +850,7 @@
    "name": "Javonte Green",
    "pos": "SG",
    "starter": false,
-   "min": 19.1,
+   "min": 20.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -892,7 +891,7 @@
    "name": "Ronald Holland II",
    "pos": "F",
    "starter": false,
-   "min": 16.0,
+   "min": 16.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -927,51 +926,10 @@
     "ftm": 1.54,
     "fta": 1.91
    }
-  },
-  {
-   "team": "DET",
-   "name": "Isaiah Joe",
-   "pos": "SG",
-   "starter": false,
-   "min": 13.9,
-   "g_cur": 3,
-   "p_play": 0.5,
-   "cur": {
-    "min": 13.7,
-    "pts": 7.33,
-    "reb": 1.67,
-    "ast": 1.0,
-    "fg3m": 1.0,
-    "fgm": 2.33,
-    "fga": 6.33,
-    "fg3a": 4.33,
-    "stl": 0.33,
-    "blk": 0.33,
-    "tov": 0.67,
-    "pf": 0.33,
-    "ftm": 1.67,
-    "fta": 2.67
-   },
-   "prior": {
-    "min": 21.2,
-    "pts": 11.06,
-    "reb": 2.55,
-    "ast": 1.32,
-    "fg3m": 2.55,
-    "fgm": 3.48,
-    "fga": 7.65,
-    "fg3a": 6.03,
-    "stl": 0.7,
-    "blk": 0.15,
-    "tov": 0.63,
-    "pf": 1.7,
-    "ftm": 1.55,
-    "fta": 1.73
-   }
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": 4.5,
   "total": 210.5,
   "ml_home": 164,
@@ -984,6 +942,16 @@
     -112,
     -115,
     24.5
+   ],
+   "reb": [
+    5.5,
+    112,
+    -115
+   ],
+   "ast": [
+    8.5,
+    -113,
+    -110
    ]
   },
   "Brandon Miller": {
@@ -998,6 +966,62 @@
    "pts": [
     15.5,
     -109,
+    -108
+   ],
+   "reb": [
+    7.5,
+    -115,
+    -154,
+    8.5
+   ]
+  },
+  "Moussa Diabaté": {
+   "reb": [
+    9.5,
+    102,
+    -110
+   ]
+  },
+  "Paul Reed": {
+   "reb": [
+    7.5,
+    -126,
+    -150,
+    8.5
+   ]
+  },
+  "Ausar Thompson": {
+   "reb": [
+    6.5,
+    -104,
+    -105
+   ],
+   "ast": [
+    4.5,
+    110,
+    -120
+   ]
+  },
+  "John Collins": {
+   "reb": [
+    5.5,
+    -147,
+    -145,
+    6.5
+   ]
+  },
+  "Dennis Schröder": {
+   "ast": [
+    4.5,
+    -134,
+    -150,
+    5.5
+   ]
+  },
+  "Daniss Jenkins": {
+   "ast": [
+    3.5,
+    -111,
     -108
    ]
   }

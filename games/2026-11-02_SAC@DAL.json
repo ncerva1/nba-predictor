@@ -8,7 +8,8 @@
   "notes": [
    "H2H 2025-26: SAC 2-1 DAL; 2025-12-27 DAL 107-113 SAC; 2026-01-06 DAL 100-98 SAC; 2026-02-26 SAC 130-121 DAL",
    "Récord: SAC 0-6, DAL 4-2",
-   "En duda (prob. de jugar): Zach LaVine 50%, Kyrie Irving 50%"
+   "En duda (prob. de jugar): Zach LaVine 50%, Kyrie Irving 20%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Keegan Murray",
@@ -16,7 +17,7 @@
   ],
   "gtd": {
    "Zach LaVine": 0.5,
-   "Kyrie Irving": 0.5
+   "Kyrie Irving": 0.2
   },
   "reserves": {
    "SAC": [
@@ -243,7 +244,7 @@
    "starter": true,
    "min": 25.8,
    "g_cur": 5,
-   "p_play": 0.5,
+   "p_play": 0.2,
    "cur": {
     "min": 28.8,
     "pts": 21.4,
@@ -1025,7 +1026,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -10.5,
   "total": 232.5,
   "ml_home": -441,
@@ -1037,6 +1038,16 @@
     25.5,
     -107,
     -110
+   ],
+   "reb": [
+    6.5,
+    -118,
+    106
+   ],
+   "ast": [
+    6.5,
+    102,
+    -111
    ]
   },
   "Darius Acuff Jr.": {
@@ -1045,6 +1056,11 @@
     -115,
     -110,
     24.5
+   ],
+   "ast": [
+    5.5,
+    -125,
+    111
    ]
   },
   "Zach LaVine": {
@@ -1060,6 +1076,11 @@
     -120,
     -112,
     21.5
+   ],
+   "ast": [
+    5.5,
+    105,
+    -130
    ]
   },
   "Domantas Sabonis": {
@@ -1068,6 +1089,16 @@
     -125,
     -125,
     15.5
+   ],
+   "reb": [
+    13.5,
+    102,
+    -105
+   ],
+   "ast": [
+    6.5,
+    100,
+    -118
    ]
   },
   "P.J. Washington": {
@@ -1076,6 +1107,12 @@
     -135,
     -115,
     14.5
+   ],
+   "reb": [
+    6.5,
+    -143,
+    -125,
+    7.5
    ]
   },
   "De'Andre Hunter": {
@@ -1084,6 +1121,27 @@
     -120,
     -125,
     14.5
+   ]
+  },
+  "Precious Achiuwa": {
+   "reb": [
+    7.5,
+    -115,
+    102
+   ]
+  },
+  "Daniel Gafford": {
+   "reb": [
+    7.5,
+    107,
+    -105
+   ]
+  },
+  "Zaccharie Risacher": {
+   "reb": [
+    5.5,
+    -112,
+    100
    ]
   }
  }

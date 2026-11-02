@@ -9,14 +9,16 @@
    "H2H 2025-26: BOS 1-1 HOU; 2025-11-01 HOU 128-101 BOS (blowout); 2026-02-04 BOS 114-93 HOU (blowout)",
    "Back-to-back: BOS jugaron el 1-nov",
    "Récord: BOS 5-1, HOU 6-1",
-   "En duda (prob. de jugar): Mitchell Robinson 85%, Clint Capela 50%, Reed Sheppard 50%"
+   "En duda (prob. de jugar): Mitchell Robinson 85%, Reed Sheppard 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
-   "Steven Adams"
+   "Steven Adams",
+   "Paul George",
+   "Clint Capela"
   ],
   "gtd": {
    "Mitchell Robinson": 0.85,
-   "Clint Capela": 0.5,
    "Reed Sheppard": 0.5
   },
   "reserves": {
@@ -109,13 +111,13 @@
     "pace": 95.86
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -2.0,
+    "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Paul George descansa"
    }
   }
  },
@@ -129,7 +131,7 @@
    "name": "Jabari Smith Jr.",
    "pos": "PF",
    "starter": true,
-   "min": 29.7,
+   "min": 31.3,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -171,7 +173,7 @@
    "name": "Alperen Sengun",
    "pos": "C",
    "starter": true,
-   "min": 29.3,
+   "min": 30.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -213,7 +215,7 @@
    "name": "Kevin Durant",
    "pos": "PF",
    "starter": true,
-   "min": 29.2,
+   "min": 30.8,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -255,7 +257,7 @@
    "name": "Amen Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 29.2,
+   "min": 30.8,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -297,7 +299,7 @@
    "name": "Fred VanVleet",
    "pos": "PG",
    "starter": true,
-   "min": 26.5,
+   "min": 28.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -339,7 +341,7 @@
    "name": "Marcus Smart",
    "pos": "PG",
    "starter": false,
-   "min": 21.7,
+   "min": 22.8,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -380,7 +382,7 @@
    "name": "Tari Eason",
    "pos": "PF",
    "starter": false,
-   "min": 21.1,
+   "min": 22.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -421,7 +423,7 @@
    "name": "Reed Sheppard",
    "pos": "PG",
    "starter": false,
-   "min": 20.1,
+   "min": 21.2,
    "g_cur": 4,
    "p_play": 0.5,
    "cur": {
@@ -462,7 +464,7 @@
    "name": "Bogdan Bogdanović",
    "pos": "SG",
    "starter": false,
-   "min": 12.4,
+   "min": 13.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -500,51 +502,10 @@
   },
   {
    "team": "HOU",
-   "name": "Clint Capela",
-   "pos": "C",
-   "starter": false,
-   "min": 12.3,
-   "g_cur": 6,
-   "p_play": 0.5,
-   "cur": {
-    "min": 14.2,
-    "pts": 3.17,
-    "reb": 5.17,
-    "ast": 1.67,
-    "fg3m": 0.0,
-    "fgm": 1.5,
-    "fga": 2.33,
-    "fg3a": 0.0,
-    "stl": 0.83,
-    "blk": 0.67,
-    "tov": 0.83,
-    "pf": 1.67,
-    "ftm": 0.17,
-    "fta": 0.33
-   },
-   "prior": {
-    "min": 12.3,
-    "pts": 3.76,
-    "reb": 4.6,
-    "ast": 0.67,
-    "fg3m": 0.01,
-    "fgm": 1.57,
-    "fga": 3.03,
-    "fg3a": 0.03,
-    "stl": 0.48,
-    "blk": 0.84,
-    "tov": 0.55,
-    "pf": 0.99,
-    "ftm": 0.6,
-    "fta": 1.04
-   }
-  },
-  {
-   "team": "HOU",
    "name": "Oscar Tshiebwe",
    "pos": "C",
    "starter": false,
-   "min": 8.4,
+   "min": 8.9,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -585,7 +546,7 @@
    "name": "Jayson Tatum",
    "pos": "PF",
    "starter": true,
-   "min": 35.2,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -620,48 +581,6 @@
     "ftm": 4.06,
     "fta": 4.94
    },
-   "slot": "SG"
-  },
-  {
-   "team": "BOS",
-   "name": "Paul George",
-   "pos": "PF",
-   "starter": true,
-   "min": 30.5,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 31.0,
-    "pts": 20.67,
-    "reb": 6.0,
-    "ast": 5.0,
-    "fg3m": 3.17,
-    "fgm": 7.33,
-    "fga": 15.83,
-    "fg3a": 8.17,
-    "stl": 2.33,
-    "blk": 0.33,
-    "tov": 2.83,
-    "pf": 3.33,
-    "ftm": 2.83,
-    "fta": 3.17
-   },
-   "prior": {
-    "min": 30.6,
-    "pts": 17.32,
-    "reb": 5.3,
-    "ast": 3.59,
-    "fg3m": 2.7,
-    "fgm": 6.08,
-    "fga": 13.86,
-    "fg3a": 6.89,
-    "stl": 1.68,
-    "blk": 0.43,
-    "tov": 1.73,
-    "pf": 2.27,
-    "ftm": 2.46,
-    "fta": 3.0
-   },
    "slot": "SF"
   },
   {
@@ -669,7 +588,7 @@
    "name": "Derrick White",
    "pos": "SG",
    "starter": true,
-   "min": 29.6,
+   "min": 33.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -704,14 +623,14 @@
     "ftm": 2.39,
     "fta": 2.65
    },
-   "slot": "PG"
+   "slot": "SG"
   },
   {
    "team": "BOS",
    "name": "Payton Pritchard",
    "pos": "PG",
-   "starter": false,
-   "min": 27.3,
+   "starter": true,
+   "min": 31.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -745,14 +664,15 @@
     "pf": 1.49,
     "ftm": 1.53,
     "fta": 1.72
-   }
+   },
+   "slot": "PG"
   },
   {
    "team": "BOS",
    "name": "Neemias Queta",
    "pos": "C",
    "starter": false,
-   "min": 20.5,
+   "min": 23.5,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -793,7 +713,7 @@
    "name": "Sam Hauser",
    "pos": "PF",
    "starter": false,
-   "min": 19.9,
+   "min": 22.8,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -834,7 +754,7 @@
    "name": "Mitchell Robinson",
    "pos": "C",
    "starter": true,
-   "min": 19.7,
+   "min": 22.6,
    "g_cur": 5,
    "p_play": 0.85,
    "cur": {
@@ -876,7 +796,7 @@
    "name": "Baylor Scheierman",
    "pos": "SG",
    "starter": false,
-   "min": 18.2,
+   "min": 20.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -917,7 +837,7 @@
    "name": "Jordan Walsh",
    "pos": "PF",
    "starter": true,
-   "min": 16.3,
+   "min": 18.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -959,7 +879,7 @@
    "name": "Hugo González",
    "pos": "SG",
    "starter": false,
-   "min": 12.0,
+   "min": 13.8,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -1000,7 +920,7 @@
    "name": "Luka Garza",
    "pos": "C",
    "starter": false,
-   "min": 10.8,
+   "min": 12.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -1038,7 +958,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -4.5,
   "total": 218.5,
   "ml_home": -195,
@@ -1051,6 +971,21 @@
     -110,
     -110,
     26.5
+   ],
+   "reb": [
+    7.5,
+    116,
+    -135
+   ],
+   "ast": [
+    6.5,
+    -105,
+    -111
+   ],
+   "fg3m": [
+    2.5,
+    100,
+    -105
    ]
   },
   "Kevin Durant": {
@@ -1059,6 +994,17 @@
     -111,
     -120,
     22.5
+   ],
+   "ast": [
+    3.5,
+    115,
+    -125
+   ],
+   "fg3m": [
+    1.5,
+    -152,
+    -225,
+    2.5
    ]
   },
   "Alperen Sengun": {
@@ -1067,14 +1013,16 @@
     -112,
     -120,
     18.5
-   ]
-  },
-  "Paul George": {
-   "pts": [
-    16.5,
-    -114,
-    -105,
-    17.5
+   ],
+   "reb": [
+    8.5,
+    110,
+    -112
+   ],
+   "ast": [
+    5.5,
+    100,
+    100
    ]
   },
   "Amen Thompson": {
@@ -1082,6 +1030,17 @@
     15.5,
     -106,
     -105
+   ],
+   "reb": [
+    6.5,
+    100,
+    -118
+   ],
+   "ast": [
+    3.5,
+    -162,
+    -140,
+    4.5
    ]
   },
   "Jabari Smith Jr.": {
@@ -1089,6 +1048,17 @@
     15.5,
     null,
     -120
+   ],
+   "reb": [
+    5.5,
+    -145,
+    -140,
+    6.5
+   ],
+   "fg3m": [
+    2.5,
+    133,
+    -160
    ]
   },
   "Payton Pritchard": {
@@ -1096,6 +1066,88 @@
     14.5,
     102,
     -105
+   ],
+   "ast": [
+    3.5,
+    -135,
+    120
+   ],
+   "fg3m": [
+    2.5,
+    115,
+    -133
+   ]
+  },
+  "Reed Sheppard": {
+   "reb": [
+    1.5,
+    -110,
+    -115
+   ],
+   "fg3m": [
+    2.5,
+    122,
+    -155
+   ]
+  },
+  "Mitchell Robinson": {
+   "reb": [
+    6.5,
+    101,
+    -106
+   ]
+  },
+  "Tari Eason": {
+   "reb": [
+    5.5,
+    -105,
+    115
+   ],
+   "fg3m": [
+    0.5,
+    -218,
+    -200,
+    1.5
+   ]
+  },
+  "Neemias Queta": {
+   "reb": [
+    5.5,
+    105,
+    -130
+   ]
+  },
+  "Fred VanVleet": {
+   "ast": [
+    5.5,
+    118,
+    -135
+   ],
+   "fg3m": [
+    2.5,
+    115,
+    -132
+   ]
+  },
+  "Derrick White": {
+   "ast": [
+    4.5,
+    -115,
+    112
+   ],
+   "fg3m": [
+    1.5,
+    -175,
+    -140,
+    2.5
+   ]
+  },
+  "Marcus Smart": {
+   "fg3m": [
+    0.5,
+    -238,
+    -210,
+    1.5
    ]
   }
  }

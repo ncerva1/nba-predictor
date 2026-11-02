@@ -9,14 +9,17 @@
    "H2H 2025-26: TOR 0-2 LAC; 2026-01-16 LAC 121-117 TOR; 2026-03-25 TOR 94-119 LAC (blowout)",
    "Back-to-back: TOR, LAC jugaron el 1-nov",
    "Récord: TOR 3-3, LAC 1-5",
-   "En duda (prob. de jugar): Jakob Poeltl 60%, Derrick Jones Jr. 40%"
+   "En duda (prob. de jugar): Jakob Poeltl 50%, Scottie Barnes 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
-   "Kawhi Leonard"
+   "Kawhi Leonard",
+   "Rui Hachimura",
+   "Derrick Jones Jr."
   ],
   "gtd": {
-   "Jakob Poeltl": 0.6,
-   "Derrick Jones Jr.": 0.4
+   "Jakob Poeltl": 0.5,
+   "Scottie Barnes": 0.5
   },
   "reserves": {
    "TOR": [
@@ -104,13 +107,13 @@
     "pace": 97.57
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -1.5,
+    "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Hachimura y Derrick Jones Jr. OUT"
    }
   },
   "TOR": {
@@ -146,7 +149,7 @@
    "name": "Darius Garland",
    "pos": "PG",
    "starter": true,
-   "min": 34.4,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -185,52 +188,10 @@
   },
   {
    "team": "LAC",
-   "name": "Rui Hachimura",
-   "pos": "PF",
-   "starter": true,
-   "min": 31.7,
-   "g_cur": 5,
-   "p_play": 1.0,
-   "cur": {
-    "min": 30.0,
-    "pts": 13.4,
-    "reb": 6.0,
-    "ast": 0.6,
-    "fg3m": 2.4,
-    "fgm": 4.8,
-    "fga": 13.0,
-    "fg3a": 6.2,
-    "stl": 1.0,
-    "blk": 0.2,
-    "tov": 2.4,
-    "pf": 1.4,
-    "ftm": 1.4,
-    "fta": 2.4
-   },
-   "prior": {
-    "min": 28.3,
-    "pts": 11.47,
-    "reb": 3.32,
-    "ast": 0.84,
-    "fg3m": 1.71,
-    "fgm": 4.51,
-    "fga": 8.78,
-    "fg3a": 3.85,
-    "stl": 0.57,
-    "blk": 0.31,
-    "tov": 0.62,
-    "pf": 1.62,
-    "ftm": 0.74,
-    "fta": 1.06
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "LAC",
    "name": "Kris Dunn",
    "pos": "PG",
    "starter": true,
-   "min": 31.5,
+   "min": 38.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -269,52 +230,10 @@
   },
   {
    "team": "LAC",
-   "name": "Derrick Jones Jr.",
-   "pos": "SF",
-   "starter": true,
-   "min": 30.4,
-   "g_cur": 6,
-   "p_play": 0.4,
-   "cur": {
-    "min": 28.8,
-    "pts": 11.5,
-    "reb": 4.83,
-    "ast": 1.5,
-    "fg3m": 2.17,
-    "fgm": 4.33,
-    "fga": 8.17,
-    "fg3a": 4.17,
-    "stl": 1.17,
-    "blk": 0.5,
-    "tov": 1.17,
-    "pf": 1.67,
-    "ftm": 0.67,
-    "fta": 1.0
-   },
-   "prior": {
-    "min": 26.9,
-    "pts": 10.08,
-    "reb": 3.46,
-    "ast": 1.38,
-    "fg3m": 1.1,
-    "fgm": 3.78,
-    "fga": 7.58,
-    "fg3a": 3.06,
-    "stl": 0.9,
-    "blk": 1.0,
-    "tov": 0.8,
-    "pf": 2.08,
-    "ftm": 1.42,
-    "fta": 1.86
-   },
-   "slot": "SF"
-  },
-  {
-   "team": "LAC",
    "name": "Keaton Wagler",
    "pos": "SG",
-   "starter": false,
-   "min": 26.6,
+   "starter": true,
+   "min": 36.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -348,14 +267,15 @@
     "pf": 2.22,
     "ftm": 6.17,
     "fta": 7.0
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "LAC",
    "name": "Kobe Sanders",
    "pos": "SG",
-   "starter": false,
-   "min": 24.5,
+   "starter": true,
+   "min": 33.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -389,14 +309,15 @@
     "pf": 2.15,
     "ftm": 0.84,
     "fta": 1.01
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "LAC",
    "name": "Brook Lopez",
    "pos": "C",
    "starter": false,
-   "min": 23.3,
+   "min": 31.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -437,7 +358,7 @@
    "name": "Isaiah Jackson",
    "pos": "C",
    "starter": true,
-   "min": 22.9,
+   "min": 31.0,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -479,7 +400,7 @@
    "name": "Gradey Dick",
    "pos": "SG",
    "starter": false,
-   "min": 14.6,
+   "min": 19.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -522,7 +443,7 @@
    "starter": true,
    "min": 36.8,
    "g_cur": 6,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 32.8,
     "pts": 24.83,
@@ -731,7 +652,7 @@
    "starter": true,
    "min": 22.6,
    "g_cur": 5,
-   "p_play": 0.6,
+   "p_play": 0.5,
    "cur": {
     "min": 20.2,
     "pts": 4.6,
@@ -891,7 +812,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": 4.5,
   "total": 221.0,
   "ml_home": 165,
@@ -903,6 +824,21 @@
     24.5,
     -110,
     -115
+   ],
+   "reb": [
+    2.5,
+    -120,
+    -105
+   ],
+   "ast": [
+    7.5,
+    -105,
+    -125
+   ],
+   "fg3m": [
+    2.5,
+    -150,
+    115
    ]
   },
   "Scottie Barnes": {
@@ -911,6 +847,22 @@
     -112,
     -106,
     23.5
+   ],
+   "reb": [
+    7.5,
+    106,
+    -108
+   ],
+   "ast": [
+    5.5,
+    -114,
+    110
+   ],
+   "fg3m": [
+    0.5,
+    -240,
+    -210,
+    1.5
    ]
   },
   "RJ Barrett": {
@@ -919,6 +871,22 @@
     -120,
     -105,
     21.5
+   ],
+   "reb": [
+    5.5,
+    100,
+    -100
+   ],
+   "ast": [
+    3.5,
+    -150,
+    -178,
+    4.5
+   ],
+   "fg3m": [
+    1.5,
+    100,
+    106
    ]
   },
   "Immanuel Quickley": {
@@ -927,14 +895,16 @@
     -114,
     -120,
     18.5
-   ]
-  },
-  "Rui Hachimura": {
-   "pts": [
-    16.5,
-    -112,
-    -104,
-    17.5
+   ],
+   "ast": [
+    6.5,
+    112,
+    -140
+   ],
+   "fg3m": [
+    2.5,
+    -140,
+    124
    ]
   },
   "Keaton Wagler": {
@@ -942,6 +912,99 @@
     15.5,
     null,
     -125
+   ],
+   "ast": [
+    3.5,
+    -140,
+    109
+   ],
+   "fg3m": [
+    1.5,
+    -145,
+    123
+   ]
+  },
+  "Brook Lopez": {
+   "reb": [
+    4.5,
+    105,
+    -135
+   ],
+   "ast": [
+    1.5,
+    105,
+    -135
+   ],
+   "fg3m": [
+    1.5,
+    130,
+    -190
+   ]
+  },
+  "Isaiah Jackson": {
+   "reb": [
+    6.5,
+    -140,
+    -145,
+    7.5
+   ],
+   "ast": [
+    1.5,
+    -140,
+    110
+   ]
+  },
+  "Collin Murray-Boyles": {
+   "reb": [
+    5.5,
+    -130,
+    -105,
+    6.5
+   ],
+   "ast": [
+    1.5,
+    -145,
+    122
+   ]
+  },
+  "Jakob Poeltl": {
+   "reb": [
+    6.5,
+    100,
+    -115
+   ]
+  },
+  "Jamal Shead": {
+   "ast": [
+    4.5,
+    -144,
+    115
+   ],
+   "fg3m": [
+    0.5,
+    -162,
+    122
+   ]
+  },
+  "Kris Dunn": {
+   "ast": [
+    4.5,
+    -149,
+    -120,
+    5.5
+   ],
+   "fg3m": [
+    0.5,
+    -250,
+    -240,
+    1.5
+   ]
+  },
+  "Ja'Kobe Walter": {
+   "fg3m": [
+    2.5,
+    120,
+    -145
    ]
   }
  }
