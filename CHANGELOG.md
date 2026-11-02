@@ -1,5 +1,8 @@
 # Cambios del modelo
 
+## Web — 2026-11-02: título "Picks recomendados por el sistema"
+- La sección de portada "Picks con valor" pasa a llamarse "Picks recomendados por el sistema" (pedido de Nicolas).
+
 ## Web — 2026-11-02: historial de 10 partidos con tiros (nba.com)
 - `player_logs`: últimos partidos de temporada regular de esta temporada y la anterior (pedido de Nicolas: si van
   menos de 10 en esta, se completan con la pasada; rookies y quien no jugó la pasada solo tienen los de esta), de
