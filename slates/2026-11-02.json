@@ -1,0 +1,1129 @@
+{
+ "date": "2026-11-02",
+ "sources": {
+  "schedule_odds": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "players_cur": "Game logs oficiales de nba.com 2026-27 hasta el 1-nov (gamelogs/build_raw.py): medias por jugador de los 30 equipos; GS = B-Ref hasta su último dato y top-5 en minutos después",
+  "players_prior": "Game logs oficiales de nba.com 2025-26 (temporada regular completa, todos los jugadores)",
+  "injuries": "ESPN injuries, 2-nov ~17:05 UTC (MIL no aparecía en la página)",
+  "b2b": "BOS, ORL, BKN, IND, LAC, GSW, TOR y LAL jugaron el 1-nov",
+  "db": "BD de rankings: snapshot del 2-nov (equipos y rivales desde los game logs de nba.com hasta el 1-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 1-nov)",
+  "h2h": "h2h/2025-26.json: 13 cruces nuevos (39 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "prop_lines": {
+  "Luka Dončić": {
+   "pts": [
+    33.5,
+    null,
+    -108
+   ]
+  },
+  "Giannis Antetokounmpo": {
+   "pts": [
+    30.5,
+    -115,
+    -112,
+    31.5
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "pts": [
+    29.5,
+    -104,
+    -105
+   ]
+  },
+  "Stephen Curry": {
+   "pts": [
+    25.5,
+    -115,
+    -112,
+    26.5
+   ]
+  },
+  "Jayson Tatum": {
+   "pts": [
+    25.5,
+    -110,
+    -110,
+    26.5
+   ]
+  },
+  "Tyrese Maxey": {
+   "pts": [
+    25.5,
+    -114,
+    -121,
+    26.5
+   ]
+  },
+  "Victor Wembanyama": {
+   "pts": [
+    25.5,
+    -120,
+    -124,
+    26.5
+   ]
+  },
+  "Nikola Jokić": {
+   "pts": [
+    26.5,
+    null,
+    -122
+   ]
+  },
+  "Cooper Flagg": {
+   "pts": [
+    25.5,
+    -107,
+    -110
+   ]
+  },
+  "Darius Garland": {
+   "pts": [
+    24.5,
+    -110,
+    -115
+   ]
+  },
+  "Jalen Brunson": {
+   "pts": [
+    24.5,
+    -106,
+    -112
+   ]
+  },
+  "Devin Booker": {
+   "pts": [
+    22.5,
+    -115,
+    -122,
+    24.5
+   ]
+  },
+  "Cade Cunningham": {
+   "pts": [
+    23.5,
+    -112,
+    -115,
+    24.5
+   ]
+  },
+  "Darius Acuff Jr.": {
+   "pts": [
+    23.5,
+    -115,
+    -110,
+    24.5
+   ]
+  },
+  "Franz Wagner": {
+   "pts": [
+    23.5,
+    null,
+    -106
+   ]
+  },
+  "Scottie Barnes": {
+   "pts": [
+    22.5,
+    -112,
+    -106,
+    23.5
+   ]
+  },
+  "Austin Reaves": {
+   "pts": [
+    23.5,
+    -104,
+    -114
+   ]
+  },
+  "Brandon Miller": {
+   "pts": [
+    22.5,
+    -122,
+    -110,
+    23.5
+   ]
+  },
+  "Jamal Murray": {
+   "pts": [
+    22.5,
+    null,
+    -106
+   ]
+  },
+  "Donovan Mitchell": {
+   "pts": [
+    22.5,
+    -118,
+    -120,
+    25.5
+   ]
+  },
+  "Pascal Siakam": {
+   "pts": [
+    22.5,
+    -110,
+    -106
+   ]
+  },
+  "Deni Avdija": {
+   "pts": [
+    22.5,
+    -114,
+    -120,
+    24.5
+   ]
+  },
+  "Ty Jerome": {
+   "pts": [
+    22.5,
+    null,
+    -115
+   ]
+  },
+  "Jaylen Brown": {
+   "pts": [
+    21.5,
+    -120,
+    -112,
+    22.5
+   ]
+  },
+  "Joel Embiid": {
+   "pts": [
+    22.5,
+    null,
+    -128
+   ]
+  },
+  "Jalen Johnson": {
+   "pts": [
+    21.5,
+    -105,
+    -111
+   ]
+  },
+  "Kevin Durant": {
+   "pts": [
+    21.5,
+    -111,
+    -120,
+    22.5
+   ]
+  },
+  "Karl-Anthony Towns": {
+   "pts": [
+    21.5,
+    null,
+    -112
+   ]
+  },
+  "Zach LaVine": {
+   "pts": [
+    21.5,
+    -105,
+    -115
+   ]
+  },
+  "LaMelo Ball": {
+   "pts": [
+    20.5,
+    -112,
+    -121,
+    21.5
+   ]
+  },
+  "Desmond Bane": {
+   "pts": [
+    20.5,
+    -115,
+    -120,
+    21.5
+   ]
+  },
+  "RJ Barrett": {
+   "pts": [
+    20.5,
+    -120,
+    -105,
+    21.5
+   ]
+  },
+  "Anthony Davis": {
+   "pts": [
+    21.5,
+    null,
+    -110
+   ]
+  },
+  "Tyler Herro": {
+   "pts": [
+    20.5,
+    -110,
+    -103
+   ]
+  },
+  "Keyonte George": {
+   "pts": [
+    19.5,
+    -115,
+    -110,
+    21.5
+   ]
+  },
+  "Kyrie Irving": {
+   "pts": [
+    20.5,
+    -120,
+    -112,
+    21.5
+   ]
+  },
+  "Damian Lillard": {
+   "pts": [
+    20.5,
+    null,
+    -105
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    20.5,
+    null,
+    -110
+   ]
+  },
+  "Nickeil Alexander-Walker": {
+   "pts": [
+    21.5,
+    null,
+    -105
+   ]
+  },
+  "Lauri Markkanen": {
+   "pts": [
+    20.5,
+    null,
+    -122
+   ]
+  },
+  "Trae Young": {
+   "pts": [
+    18.5,
+    -125,
+    -110,
+    19.5
+   ]
+  },
+  "Norman Powell": {
+   "pts": [
+    18.5,
+    -120,
+    -112,
+    19.5
+   ]
+  },
+  "Zion Williamson": {
+   "pts": [
+    19.5,
+    -110,
+    -125,
+    21.5
+   ]
+  },
+  "Bam Adebayo": {
+   "pts": [
+    18.5,
+    -105,
+    -123,
+    19.5
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    18.5,
+    -105,
+    -105
+   ]
+  },
+  "Yaxel Lendeborg": {
+   "pts": [
+    18.5,
+    null,
+    100
+   ]
+  },
+  "Ajay Mitchell": {
+   "pts": [
+    17.5,
+    -110,
+    -122,
+    18.5
+   ]
+  },
+  "Immanuel Quickley": {
+   "pts": [
+    17.5,
+    -114,
+    -120,
+    18.5
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    17.5,
+    -123,
+    -112,
+    18.5
+   ]
+  },
+  "Jaden McDaniels": {
+   "pts": [
+    17.5,
+    100,
+    -104
+   ]
+  },
+  "Rui Hachimura": {
+   "pts": [
+    16.5,
+    -112,
+    -104,
+    17.5
+   ]
+  },
+  "Alperen Sengun": {
+   "pts": [
+    17.5,
+    -112,
+    -120,
+    18.5
+   ]
+  },
+  "LeBron James": {
+   "pts": [
+    16.5,
+    -125,
+    -100,
+    17.5
+   ]
+  },
+  "OG Anunoby": {
+   "pts": [
+    17.5,
+    -105,
+    -113
+   ]
+  },
+  "Dejounte Murray": {
+   "pts": [
+    16.5,
+    -105,
+    -112,
+    17.5
+   ]
+  },
+  "Dylan Harper": {
+   "pts": [
+    17.5,
+    null,
+    -122
+   ]
+  },
+  "CJ McCollum": {
+   "pts": [
+    16.5,
+    null,
+    -107
+   ]
+  },
+  "Andrew Nembhard": {
+   "pts": [
+    16.5,
+    -108,
+    -111
+   ]
+  },
+  "Paul George": {
+   "pts": [
+    16.5,
+    -114,
+    -105,
+    17.5
+   ]
+  },
+  "Miles Bridges": {
+   "pts": [
+    15.5,
+    -115,
+    -113,
+    16.5
+   ]
+  },
+  "Ayo Dosunmu": {
+   "pts": [
+    16.5,
+    -105,
+    -120,
+    17.5
+   ]
+  },
+  "Cameron Boozer": {
+   "pts": [
+    16.5,
+    -104,
+    -105,
+    17.5
+   ]
+  },
+  "Stephon Castle": {
+   "pts": [
+    15.5,
+    -126,
+    -120,
+    16.5
+   ]
+  },
+  "Evan Mobley": {
+   "pts": [
+    15.5,
+    -123,
+    -105,
+    16.5
+   ]
+  },
+  "Jalen Green": {
+   "pts": [
+    14.5,
+    -112,
+    -110,
+    15.5
+   ]
+  },
+  "Trey Murphy III": {
+   "pts": [
+    15.5,
+    -110,
+    -130,
+    16.5
+   ]
+  },
+  "AJ Dybantsa": {
+   "pts": [
+    15.5,
+    -111,
+    -112,
+    16.5
+   ]
+  },
+  "Naz Reid": {
+   "pts": [
+    15.5,
+    -109,
+    -108
+   ]
+  },
+  "Dillon Brooks": {
+   "pts": [
+    15.5,
+    -106,
+    -114
+   ]
+  },
+  "Amen Thompson": {
+   "pts": [
+    15.5,
+    -106,
+    -105
+   ]
+  },
+  "Domantas Sabonis": {
+   "pts": [
+    14.5,
+    -125,
+    -125,
+    15.5
+   ]
+  },
+  "Brandin Podziemski": {
+   "pts": [
+    14.5,
+    -105,
+    -125,
+    16.5
+   ]
+  },
+  "Keaton Wagler": {
+   "pts": [
+    15.5,
+    null,
+    -125
+   ]
+  },
+  "Jonathan Kuminga": {
+   "pts": [
+    14.5,
+    -120,
+    -112,
+    15.5
+   ]
+  },
+  "Anthony Black": {
+   "pts": [
+    14.5,
+    -115,
+    -125,
+    15.5
+   ]
+  },
+  "Jabari Smith Jr.": {
+   "pts": [
+    15.5,
+    null,
+    -120
+   ]
+  },
+  "De'Aaron Fox": {
+   "pts": [
+    14.5,
+    -122,
+    100,
+    15.5
+   ]
+  },
+  "Jaime Jaquez Jr.": {
+   "pts": [
+    13.5,
+    -115,
+    -111,
+    14.5
+   ]
+  },
+  "Matas Buzelis": {
+   "pts": [
+    14.5,
+    -112,
+    100
+   ]
+  },
+  "Payton Pritchard": {
+   "pts": [
+    14.5,
+    102,
+    -105
+   ]
+  },
+  "P.J. Washington": {
+   "pts": [
+    13.5,
+    -135,
+    -115,
+    14.5
+   ]
+  },
+  "Ryan Rollins": {
+   "pts": [
+    12.5,
+    -112,
+    -121,
+    14.5
+   ]
+  },
+  "De'Andre Hunter": {
+   "pts": [
+    13.5,
+    -120,
+    -125,
+    14.5
+   ]
+  },
+  "Aaron Gordon": {
+   "pts": [
+    14.5,
+    null,
+    -120
+   ]
+  },
+  "Scoot Henderson": {
+   "pts": [
+    14.5,
+    null,
+    -125
+   ]
+  },
+  "Jared McCain": {
+   "pts": [
+    15.5,
+    null,
+    -120
+   ]
+  },
+  "Onyeka Okongwu": {
+   "pts": [
+    13.5,
+    100,
+    100
+   ]
+  }
+ },
+ "games": [
+  {
+   "away": "OKC",
+   "home": "CLE",
+   "tip_et": "19:00",
+   "venue": "Rocket Arena, Cleveland",
+   "market": {
+    "spread_home": -3.5,
+    "total": 229.5,
+    "ml_home": -175,
+    "ml_away": 145
+   },
+   "b2b": [],
+   "adj": {
+    "OKC": {
+     "o": -1.5,
+     "d": 1.0,
+     "why": "Holmgren, Jalen Williams, Caruso y Wallace OUT"
+    }
+   },
+   "out": [
+    "Cason Wallace",
+    "Chet Holmgren",
+    "Jalen Williams",
+    "Alex Caruso",
+    "Jaylon Tyson"
+   ],
+   "gtd": {
+    "Peyton Watson": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: OKC 2-0 CLE; 2026-01-19 OKC 136-104 CLE (blowout); 2026-02-22 CLE 113-121 OKC",
+    "Récord: OKC 4-2, CLE 4-2",
+    "En duda (prob. de jugar): Peyton Watson 50%"
+   ]
+  },
+  {
+   "away": "CHI",
+   "home": "PHI",
+   "tip_et": "19:30",
+   "venue": "Xfinity Mobile Arena, Filadelfia",
+   "market": {
+    "spread_home": -10.5,
+    "total": 238.5,
+    "ml_home": -549,
+    "ml_away": 400
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [],
+   "gtd": {
+    "Jalen Smith": 0.9,
+    "Tobe Awaka": 0.9,
+    "Joel Embiid": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: CHI 2-1 PHI; 2025-11-04 PHI 111-113 CHI; 2025-12-26 PHI 102-109 CHI; 2026-03-25 CHI 137-157 PHI (blowout)",
+    "Récord: CHI 1-5, PHI 6-1",
+    "En duda (prob. de jugar): Jalen Smith 90%, Tobe Awaka 90%, Joel Embiid 50%"
+   ]
+  },
+  {
+   "away": "ATL",
+   "home": "IND",
+   "tip_et": "19:30",
+   "venue": "Gainbridge Fieldhouse, Indianápolis",
+   "market": {
+    "spread_home": 4.5,
+    "total": 231.5,
+    "ml_home": 165,
+    "ml_away": -200
+   },
+   "b2b": [
+    "IND"
+   ],
+   "adj": {},
+   "out": [
+    "Jock Landale",
+    "Ivica Zubac",
+    "Ben Sheppard",
+    "Tyrese Haliburton"
+   ],
+   "gtd": {
+    "Jalen Johnson": 0.5,
+    "Obi Toppin": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: ATL 2-1 IND; 2025-10-31 ATL 128-108 IND (blowout); 2026-01-26 IND 116-132 ATL; 2026-01-31 ATL 124-129 IND",
+    "Back-to-back: IND jugaron el 1-nov",
+    "Récord: ATL 3-4, IND 2-5",
+    "En duda (prob. de jugar): Jalen Johnson 50%, Obi Toppin 50%"
+   ]
+  },
+  {
+   "away": "BKN",
+   "home": "NYK",
+   "tip_et": "19:30",
+   "venue": "Madison Square Garden, Nueva York",
+   "market": {
+    "spread_home": -14.5,
+    "total": 219.5,
+    "ml_home": -1000,
+    "ml_away": 650
+   },
+   "b2b": [
+    "BKN"
+   ],
+   "adj": {},
+   "out": [
+    "Egor Dëmin"
+   ],
+   "gtd": {
+    "Mikel Brown Jr.": 0.85,
+    "Jose Alvarado": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: BKN 0-4 NYK; 2025-11-09 BKN 98-134 NYK (blowout); 2025-11-24 NYK 113-100 BKN; 2026-01-21 BKN 66-120 NYK (blowout); 2026-03-20 NYK 93-92 BKN",
+    "Back-to-back: BKN jugaron el 1-nov",
+    "Récord: BKN 1-5, NYK 2-4",
+    "En duda (prob. de jugar): Mikel Brown Jr. 85%, Jose Alvarado 50%"
+   ]
+  },
+  {
+   "away": "WAS",
+   "home": "ORL",
+   "tip_et": "19:30",
+   "venue": "Kia Center, Orlando",
+   "market": {
+    "spread_home": -2.5,
+    "total": 225.5,
+    "ml_home": -150,
+    "ml_away": 125
+   },
+   "b2b": [
+    "ORL"
+   ],
+   "adj": {
+    "ORL": {
+     "o": -1.0,
+     "d": 0.5,
+     "why": "Banchero y Suggs OUT"
+    }
+   },
+   "out": [
+    "Justin Champagnie",
+    "Jalen Suggs",
+    "Paolo Banchero"
+   ],
+   "gtd": {
+    "Alex Sarr": 0.5,
+    "Anthony Gill": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: WAS 1-3 ORL; 2025-11-01 ORL 125-94 WAS (blowout); 2026-01-06 ORL 112-120 WAS; 2026-03-03 WAS 109-126 ORL; 2026-03-12 WAS 131-136 ORL",
+    "Back-to-back: ORL jugaron el 1-nov",
+    "Récord: WAS 3-3, ORL 2-4",
+    "En duda (prob. de jugar): Alex Sarr 50%, Anthony Gill 50%"
+   ]
+  },
+  {
+   "away": "DET",
+   "home": "CHA",
+   "tip_et": "19:30",
+   "venue": "Spectrum Center, Charlotte",
+   "market": {
+    "spread_home": 4.5,
+    "total": 210.5,
+    "ml_home": 164,
+    "ml_away": -195
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Jalen Duren"
+   ],
+   "gtd": {
+    "Isaiah Joe": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: DET 3-0 CHA; 2025-12-21 CHA 86-112 DET (blowout); 2026-02-10 DET 110-104 CHA; 2026-04-11 DET 118-100 CHA (blowout)",
+    "Récord: DET 5-1, CHA 3-4",
+    "En duda (prob. de jugar): Isaiah Joe 50%"
+   ]
+  },
+  {
+   "away": "SAC",
+   "home": "DAL",
+   "tip_et": "20:00",
+   "venue": "American Airlines Center, Dallas",
+   "market": {
+    "spread_home": -10.5,
+    "total": 232.5,
+    "ml_home": -441,
+    "ml_away": 335
+   },
+   "b2b": [],
+   "adj": {
+    "DAL": {
+     "o": 0.0,
+     "d": 0.5,
+     "why": "Lively y Aldama OUT"
+    }
+   },
+   "out": [
+    "Keegan Murray",
+    "Sergio de Larrea"
+   ],
+   "gtd": {
+    "Zach LaVine": 0.5,
+    "Kyrie Irving": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: SAC 2-1 DAL; 2025-12-27 DAL 107-113 SAC; 2026-01-06 DAL 100-98 SAC; 2026-02-26 SAC 130-121 DAL",
+    "Récord: SAC 0-6, DAL 4-2",
+    "En duda (prob. de jugar): Zach LaVine 50%, Kyrie Irving 50%"
+   ]
+  },
+  {
+   "away": "MIL",
+   "home": "MIN",
+   "tip_et": "20:00",
+   "venue": "Target Center, Minneapolis",
+   "market": {
+    "spread_home": -10.5,
+    "total": 233.5,
+    "ml_home": -481,
+    "ml_away": 360
+   },
+   "b2b": [],
+   "adj": {
+    "MIN": {
+     "o": -1.5,
+     "d": 0.5,
+     "why": "Anthony Edwards OUT (rodilla, hasta ~21-dic)"
+    }
+   },
+   "out": [
+    "Anthony Edwards"
+   ],
+   "gtd": {},
+   "notes": [
+    "H2H 2025-26: MIL 0-2 MIN; 2025-12-21 MIL 100-103 MIN; 2026-01-13 MIN 139-106 MIL (blowout)",
+    "Récord: MIL 1-5, MIN 4-3"
+   ]
+  },
+  {
+   "away": "NOP",
+   "home": "MEM",
+   "tip_et": "20:00",
+   "venue": "FedExForum, Memphis",
+   "market": {
+    "spread_home": -4.5,
+    "total": 233.5,
+    "ml_home": -195,
+    "ml_away": 161
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Jordan Poole",
+    "Yves Missi",
+    "Scotty Pippen Jr."
+   ],
+   "gtd": {
+    "Trey Murphy III": 0.9,
+    "Quinten Post": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: NOP 2-2 MEM; 2025-10-22 NOP 122-128 MEM; 2025-11-26 MEM 133-128 NOP; 2026-01-23 NOP 133-127 MEM; 2026-01-30 MEM 106-114 NOP",
+    "Récord: NOP 2-4, MEM 6-0",
+    "En duda (prob. de jugar): Trey Murphy III 90%, Quinten Post 50%"
+   ]
+  },
+  {
+   "away": "BOS",
+   "home": "HOU",
+   "tip_et": "20:30",
+   "venue": "Toyota Center, Houston",
+   "market": {
+    "spread_home": -4.5,
+    "total": 218.5,
+    "ml_home": -195,
+    "ml_away": 162
+   },
+   "b2b": [
+    "BOS"
+   ],
+   "adj": {},
+   "out": [
+    "Steven Adams"
+   ],
+   "gtd": {
+    "Mitchell Robinson": 0.85,
+    "Clint Capela": 0.5,
+    "Reed Sheppard": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: BOS 1-1 HOU; 2025-11-01 HOU 128-101 BOS (blowout); 2026-02-04 BOS 114-93 HOU (blowout)",
+    "Back-to-back: BOS jugaron el 1-nov",
+    "Récord: BOS 5-1, HOU 6-1",
+    "En duda (prob. de jugar): Mitchell Robinson 85%, Clint Capela 50%, Reed Sheppard 50%"
+   ]
+  },
+  {
+   "away": "UTA",
+   "home": "SAS",
+   "tip_et": "20:30",
+   "venue": "Frost Bank Center, San Antonio",
+   "market": {
+    "spread_home": -16.5,
+    "total": 229.5,
+    "ml_home": -1200,
+    "ml_away": 725
+   },
+   "b2b": [],
+   "adj": {
+    "UTA": {
+     "o": 0.0,
+     "d": 1.0,
+     "why": "Jaren Jackson Jr. OUT (MCL, 6-8 semanas)"
+    }
+   },
+   "out": [
+    "Jaren Jackson Jr."
+   ],
+   "gtd": {},
+   "notes": [
+    "H2H 2025-26: UTA 1-2 SAS; 2025-12-28 UTA 127-114 SAS; 2026-01-19 UTA 110-123 SAS (blowout); 2026-01-23 SAS 126-109 UTA",
+    "Récord: UTA 1-5, SAS 4-2"
+   ]
+  },
+  {
+   "away": "POR",
+   "home": "DEN",
+   "tip_et": "21:00",
+   "venue": "Ball Arena, Denver",
+   "market": {
+    "spread_home": -4.5,
+    "total": 231.0,
+    "ml_home": -175,
+    "ml_away": 145
+   },
+   "b2b": [],
+   "adj": {
+    "POR": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Ja Morant OUT (isquiotibial, ~4 semanas)"
+    }
+   },
+   "out": [
+    "Ja Morant"
+   ],
+   "gtd": {
+    "Alpha Diallo": 0.5
+   },
+   "notes": [
+    "H2H 2025-26: POR 1-3 DEN; 2025-10-31 DEN 107-109 POR; 2026-02-20 DEN 157-103 POR (blowout); 2026-03-22 POR 112-128 DEN; 2026-04-06 POR 132-137 DEN",
+    "Récord: POR 4-1, DEN 3-2",
+    "En duda (prob. de jugar): Alpha Diallo 50%"
+   ]
+  },
+  {
+   "away": "TOR",
+   "home": "LAC",
+   "tip_et": "22:00",
+   "venue": "Intuit Dome, Inglewood",
+   "market": {
+    "spread_home": 4.5,
+    "total": 221.0,
+    "ml_home": 165,
+    "ml_away": -200
+   },
+   "b2b": [
+    "TOR",
+    "LAC"
+   ],
+   "adj": {
+    "TOR": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Kawhi Leonard OUT (rodilla, 3-4 semanas)"
+    }
+   },
+   "out": [
+    "Kawhi Leonard"
+   ],
+   "gtd": {
+    "Jakob Poeltl": 0.6,
+    "Derrick Jones Jr.": 0.4
+   },
+   "notes": [
+    "H2H 2025-26: TOR 0-2 LAC; 2026-01-16 LAC 121-117 TOR; 2026-03-25 TOR 94-119 LAC (blowout)",
+    "Back-to-back: TOR, LAC jugaron el 1-nov",
+    "Récord: TOR 3-3, LAC 1-5",
+    "En duda (prob. de jugar): Jakob Poeltl 60%, Derrick Jones Jr. 40%"
+   ]
+  },
+  {
+   "away": "PHX",
+   "home": "GSW",
+   "tip_et": "22:00",
+   "venue": "Chase Center, San Francisco",
+   "market": {
+    "spread_home": -2.5,
+    "total": 227.5,
+    "ml_home": -150,
+    "ml_away": 125
+   },
+   "b2b": [
+    "GSW"
+   ],
+   "adj": {},
+   "out": [
+    "Gui Santos"
+   ],
+   "gtd": {
+    "Draymond Green": 0.6,
+    "Stephen Curry": 0.9
+   },
+   "notes": [
+    "H2H 2025-26: PHX 1-3 GSW; 2025-11-04 PHX 107-118 GSW; 2025-12-18 GSW 98-99 PHX; 2025-12-20 PHX 116-119 GSW; 2026-02-05 GSW 101-97 PHX",
+    "Back-to-back: GSW jugaron el 1-nov",
+    "Récord: PHX 1-3, GSW 4-3",
+    "En duda (prob. de jugar): Draymond Green 60%, Stephen Curry 90%"
+   ]
+  },
+  {
+   "away": "MIA",
+   "home": "LAL",
+   "tip_et": "22:00",
+   "venue": "Crypto.com Arena, Los Ángeles",
+   "market": {
+    "spread_home": -1.5,
+    "total": 236.5,
+    "ml_home": -128,
+    "ml_away": 105
+   },
+   "b2b": [
+    "LAL"
+   ],
+   "adj": {},
+   "out": [
+    "Ziaire Williams"
+   ],
+   "gtd": {},
+   "notes": [
+    "H2H 2025-26: MIA 0-2 LAL; 2025-11-02 MIA 120-130 LAL; 2026-03-19 LAL 134-126 MIA",
+    "Back-to-back: LAL jugaron el 1-nov",
+    "Récord: MIA 2-4, LAL 5-2"
+   ]
+  }
+ ]
+}
