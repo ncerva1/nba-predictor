@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Web — 2026-11-02: historial de 10 partidos con tiros (nba.com)
+- `player_logs`: últimos partidos de temporada regular de esta temporada y la anterior (pedido de Nicolas: si van
+  menos de 10 en esta, se completan con la pasada; rookies y quien no jugó la pasada solo tienen los de esta), de
+  `gamelogs/nba/` (oficial nba.com, con tiros) + `results/` + `h2h/`. Playoffs y play-in fuera; mismo partido con
+  fecha ±1 día entre fuentes se cuenta una vez. Dobles = FGA − 3PA.
+- Últ. 10 y H2H ahora cubren tiros de campo, dobles, triples intentados y libres; H2H usa todos los cruces de las dos
+  temporadas. `--hr-only` recalcula los % de una jornada publicada sin re-simular.
+
 ## Web — 2026-11-02: picks con valor primero y % de cumplimiento
 - Portada: primero "Picks con valor" (los verdes, los recomendados); luego "Los 20 de mayor EV" como información
   adicional (por categoría) y "Picks sin cuota de casa" (tiros, doble-doble) siempre visibles.
