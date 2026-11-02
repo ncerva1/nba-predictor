@@ -1045,7 +1045,7 @@ function renderIndex(scope = "reg") {
   </section>` : ""}
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
-    <h2>Picks con valor ${qh("ev", "picks con valor y EV")}</h2>
+    <h2>Picks recomendados por el sistema ${qh("ev", "picks con valor y EV")}</h2>
     <p class="lede">${picks.length ? `${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos: son los que el modelo recomienda.` : `Hoy ningún pick de los ${todays.length} partidos llega al valor mínimo.`} Para ser verde un pick necesita EV ≥ +${(thr * 100).toFixed(0)}% con la probabilidad del modelo (25%) mezclada con la de la casa sin su margen (75%); solo player props (no Unders de rookies ni de quien no jugó la temporada pasada), como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador. <b>Últ. 10</b>, <b>H2H</b> y <b>DvP</b> dicen cuántas veces se habría cumplido esa línea en sus últimos partidos y contra este rival, y en qué puesto está el rival en lo que concede a su posición. Toca un pick para ver el análisis del partido.</p>
     ${legend(thr)}
     ${picks.length ? betSortBar("bs-idx", true) : ""}
