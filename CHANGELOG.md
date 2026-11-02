@@ -1,5 +1,12 @@
 # Cambios del modelo
 
+## Web — 2026-11-02: picks con valor primero y % de cumplimiento
+- Portada: primero "Picks con valor" (los verdes, los recomendados); luego "Los 20 de mayor EV" como información
+  adicional (por categoría) y "Picks sin cuota de casa" (tiros, doble-doble) siempre visibles.
+- `add_hit_rates`: cada prop y pick sin cuota lleva `hr` = {l10: [aciertos, partidos] en sus últimos 10 de esta
+  temporada (de results/), h2h: lo mismo contra el rival (h2h/ temporada pasada + esta), dvp: puesto del rival en lo
+  que concede a su posición (statpick: PTS, REB, AST, 3PM, PRA, STL, BLK, TOV)}. Columnas Últ. 10, H2H y DvP.
+
 ## 1.5 — 2026-11-01: probabilidades mezcladas con la casa y menos picks
 Diagnóstico de Nicolas (por qué el modelo pierde unidades): en los 955 picks con valor del 26 al 31-oct el modelo
 decía 64%, la casa pedía 54% y se acertó 49% (−91 u). Backtest con esas jornadas (`backtest_market.py`): con los

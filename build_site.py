@@ -336,6 +336,79 @@ def model_picks(cfg, s):
     return sorted(out, key=lambda b: -b["p"])
 
 
+# % de cumplimiento (pedido de Nicolas 2-nov, estilo ludocomparador/Linemate): para cada prop, en cuántos de sus
+# últimos partidos de esta temporada (hasta HR_N, de results/) y de sus H2H contra el rival de hoy (temporada pasada
+# en h2h/ + esta temporada) habría ganado el pick con la misma línea. Solo partidos que jugó (min > 0) y que traen
+# esa estadística (los H2H de la temporada pasada solo tienen MIN, PTS, REB, AST y triples). hr = {l10: [aciertos,
+# partidos], h2h: [aciertos, partidos]}.
+HR_N = 10
+_LOGS = {}
+
+
+def player_logs(date):
+    """{nombre normalizado: [(fecha, rival o None, línea real)]} de esta temporada antes de `date`, más los H2H
+    de la temporada pasada (marcados con fecha de esa temporada)."""
+    if date in _LOGS:
+        return _LOGS[date]
+    from evaluate import actual_line, norm
+    logs = {}
+    for rp in sorted(glob.glob(os.path.join(HERE, "results", "20??-??-??.json"))):
+        R = json.load(open(rp))
+        if R["date"] >= date or season_of(R["date"]) != season_of(date):
+            continue
+        for key, x in R["games"].items():
+            a, h = key.split("@")
+            for n in x["players"]:
+                al = actual_line(x["players"], n)
+                if al and al["min"] > 0:
+                    logs.setdefault(norm(n), []).append(dict(date=R["date"], pair={a, h}, line=al, cur=True))
+    hp = os.path.join(HERE, "h2h", f"{prior_season(date)}.json")
+    if os.path.exists(hp):
+        for x in json.load(open(hp))["games"]:
+            for team, ps in x["players"].items():
+                for n, mi, pts, reb, ast, f3, *_ in ps:
+                    if mi > 0:
+                        line = dict(min=mi, pts=pts, reb=reb, ast=ast, fg3m=f3, pra=pts + reb + ast, pr=pts + reb,
+                                    pa=pts + ast, ra=reb + ast)
+                        logs.setdefault(norm(n), []).append(dict(date=x["date"], pair={x["away"], x["home"]},
+                                                                 team=team, line=line, cur=False))
+    _LOGS[date] = logs
+    return logs
+
+
+DVP_OF = {"pts": "PTS", "reb": "REB", "ast": "AST", "fg3m": "3PM", "pra": "PRA", "stl": "STL", "blk": "BLK", "tov": "TOV"}
+
+
+def add_hit_rates(cfg, bets):
+    """También el DvP (pedido de Nicolas 2-nov): puesto del rival en lo que concede de esa estadística a la posición
+    del jugador (1 = el que menos concede, 30 = el que más), con su valor y la media de la liga."""
+    from evaluate import norm
+    g = cfg["game"]
+    team_of = {p["name"]: p["team"] for p in cfg["players"]}
+    pos_of = {p["name"]: (_positions(p.get("slot") or p["pos"]) or [None])[0] for p in cfg["players"]}
+    R = load_rankings()
+    lg = {}
+    logs = player_logs(g["date"])
+    for b in bets:
+        if b.get("kind") != "prop" or not b.get("stat") or b.get("line") is None:
+            continue
+        st, L, over = b["stat"], b["line"], is_over(b)
+        team = team_of.get(b["player"], b.get("team"))
+        rival = g["home"] if team == g["away"] else g["away"]
+        rows = sorted(logs.get(norm(b["player"]), []), key=lambda r: r["date"], reverse=True)
+        hit = lambda r: (r["line"][st] > L) if over else (r["line"][st] < L)
+        cur = [r for r in rows if r["cur"] and st in r["line"]][:HR_N]
+        hh = [r for r in rows if st in r["line"] and rival in r["pair"] and r.get("team", team) != rival]
+        b["hr"] = dict(l10=[sum(map(hit, cur)), len(cur)], h2h=[sum(map(hit, hh)), len(hh)])
+        pos, col = pos_of.get(b["player"]), DVP_OF.get(st)
+        row = (((R or {}).get("teams", {}).get(rival) or {}).get("dvp") or {}).get(pos, {}).get(col) if pos and col else None
+        if row:
+            if (pos, col) not in lg:
+                vals = [T["dvp"][pos][col]["value"] for T in R["teams"].values() if (T.get("dvp") or {}).get(pos, {}).get(col)]
+                lg[(pos, col)] = round(float(np.mean(vals)), 1)
+            b["hr"]["dvp"] = dict(pos=pos, rank=row["rank"], value=row["value"], lg=lg[(pos, col)], n=len(R["teams"]))
+
+
 # Parlays recomendados (estilo SGP de Linemate). Mismo partido: la prob. conjunta sale de contar en
 # cuántas simulaciones aciertan TODAS las patas a la vez, así entra la correlación (si un equipo anota
 # mucho, suben el over y los puntos de sus jugadores). Entre partidos: los partidos son independientes y
@@ -773,6 +846,7 @@ def run_game(path, n):
                 records={t: cfg["teams"][t].get("record") for t in (g["away"], g["home"])},
                 context={t: cfg["teams"][t].get("context", {}) for t in (g["away"], g["home"])})
     r["model_picks"] = model_picks(cfg, s)
+    add_hit_rates(cfg, r["bets"] + r["model_picks"])
     r["rotation"] = rotation_view(cfg, summ)
     r["without"] = without_view(cfg, s, n)  # "Sin un jugador": compañeros con / sin cada titular
     r["parlays"], r["_legs"] = sgp(r, g, s)
