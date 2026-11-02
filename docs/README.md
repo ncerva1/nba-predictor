@@ -37,6 +37,11 @@ desde una página de nba.com/stats) y se suben a GitHub. Los días posteriores a
 falta bajarlos cada día. Para refrescar los % de una jornada ya publicada sin re-simular ni cambiar picks:
 `python build_site.py <fecha> --hr-only`.
 
+**Insumos de la jornada desde los game logs (2-nov):** si el CSV de la temporada actual llega hasta AYER,
+`python gamelogs/build_raw.py HOY --h2h AWAY@HOME ...` escribe `raw/HOY/cur.csv`, `raw/HOY/prior.csv`,
+`db/raw/HOY/team_pergame.csv` y `opp_pergame.csv` (formato B-Ref) y añade a `h2h/<temporada anterior>.json` los
+cruces que falten, sin WebFetch a basketball-reference. Si el CSV va atrasado, avisa: entonces se sigue con B-Ref.
+
 ## Publicar gratis en GitHub Pages
 1. Crear un repositorio en GitHub (por ejemplo `nba-predictor`) y subir esta carpeta `nba_predictor/` como raíz.
 2. En el repo: Settings → Pages → Source: "Deploy from a branch" → Branch `main`, carpeta `/docs`.
