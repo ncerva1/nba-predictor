@@ -9,7 +9,8 @@
    "H2H 2025-26: BKN 0-4 NYK; 2025-11-09 BKN 98-134 NYK (blowout); 2025-11-24 NYK 113-100 BKN; 2026-01-21 BKN 66-120 NYK (blowout); 2026-03-20 NYK 93-92 BKN",
    "Back-to-back: BKN jugaron el 1-nov",
    "Récord: BKN 1-5, NYK 2-4",
-   "En duda (prob. de jugar): Mikel Brown Jr. 85%, Jose Alvarado 50%"
+   "En duda (prob. de jugar): Mikel Brown Jr. 85%, Jose Alvarado 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Egor Dëmin"
@@ -1119,7 +1120,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -14.5,
   "total": 219.5,
   "ml_home": -1000,
@@ -1131,6 +1132,11 @@
     24.5,
     -106,
     -112
+   ],
+   "ast": [
+    6.5,
+    -108,
+    -110
    ]
   },
   "Karl-Anthony Towns": {
@@ -1138,12 +1144,27 @@
     21.5,
     null,
     -112
+   ],
+   "reb": [
+    11.5,
+    -120,
+    100
+   ],
+   "ast": [
+    3.5,
+    -102,
+    -105
    ]
   },
   "Michael Porter Jr.": {
    "pts": [
     20.5,
     null,
+    -110
+   ],
+   "reb": [
+    6.5,
+    104,
     -110
    ]
   },
@@ -1152,6 +1173,16 @@
     18.5,
     -105,
     -105
+   ],
+   "reb": [
+    6.5,
+    110,
+    -125
+   ],
+   "ast": [
+    4.5,
+    -102,
+    -105
    ]
   },
   "OG Anunoby": {
@@ -1159,6 +1190,41 @@
     17.5,
     -105,
     -113
+   ]
+  },
+  "Josh Hart": {
+   "reb": [
+    7.5,
+    110,
+    -120
+   ],
+   "ast": [
+    3.5,
+    -138,
+    -145,
+    4.5
+   ]
+  },
+  "Day'Ron Sharpe": {
+   "reb": [
+    7.5,
+    116,
+    -140
+   ]
+  },
+  "Nolan Traore": {
+   "ast": [
+    3.5,
+    -135,
+    -165,
+    4.5
+   ]
+  },
+  "Mikel Brown Jr.": {
+   "ast": [
+    3.5,
+    -122,
+    120
    ]
   }
  }

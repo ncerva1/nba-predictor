@@ -8,7 +8,8 @@
   "notes": [
    "H2H 2025-26: OKC 2-0 CLE; 2026-01-19 OKC 136-104 CLE (blowout); 2026-02-22 CLE 113-121 OKC",
    "Récord: OKC 4-2, CLE 4-2",
-   "En duda (prob. de jugar): Peyton Watson 50%"
+   "En duda (prob. de jugar): Peyton Watson 50%",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Cason Wallace",
@@ -980,7 +981,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -3.5,
   "total": 229.5,
   "ml_home": -175,
@@ -992,6 +993,11 @@
     29.5,
     -104,
     -105
+   ],
+   "ast": [
+    5.5,
+    100,
+    -120
    ]
   },
   "Donovan Mitchell": {
@@ -1000,6 +1006,11 @@
     -118,
     -120,
     25.5
+   ],
+   "ast": [
+    4.5,
+    -130,
+    115
    ]
   },
   "Ajay Mitchell": {
@@ -1008,6 +1019,12 @@
     -110,
     -122,
     18.5
+   ],
+   "ast": [
+    3.5,
+    -145,
+    -150,
+    4.5
    ]
   },
   "James Harden": {
@@ -1016,6 +1033,11 @@
     -123,
     -112,
     18.5
+   ],
+   "ast": [
+    6.5,
+    100,
+    -108
    ]
   },
   "Evan Mobley": {
@@ -1024,6 +1046,16 @@
     -123,
     -105,
     16.5
+   ],
+   "reb": [
+    8.5,
+    -100,
+    -105
+   ],
+   "ast": [
+    3.5,
+    -113,
+    104
    ]
   },
   "Jared McCain": {
@@ -1031,6 +1063,37 @@
     15.5,
     null,
     -120
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "reb": [
+    9.5,
+    -120,
+    -125,
+    10.5
+   ]
+  },
+  "Jarrett Allen": {
+   "reb": [
+    7.5,
+    -156,
+    -112,
+    8.5
+   ]
+  },
+  "Jaylin Williams": {
+   "reb": [
+    6.5,
+    115,
+    -145
+   ]
+  },
+  "Aday Mara": {
+   "reb": [
+    5.5,
+    -125,
+    -125,
+    6.5
    ]
   }
  }

@@ -7,7 +7,8 @@
   "tip_et": "20:30",
   "notes": [
    "H2H 2025-26: UTA 1-2 SAS; 2025-12-28 UTA 127-114 SAS; 2026-01-19 UTA 110-123 SAS (blowout); 2026-01-23 SAS 126-109 UTA",
-   "Récord: UTA 1-5, SAS 4-2"
+   "Récord: UTA 1-5, SAS 4-2",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Jaren Jackson Jr."
@@ -997,7 +998,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -16.5,
   "total": 229.5,
   "ml_home": -1200,
@@ -1010,6 +1011,16 @@
     -120,
     -124,
     26.5
+   ],
+   "reb": [
+    11.5,
+    100,
+    -115
+   ],
+   "fg3m": [
+    1.5,
+    -160,
+    143
    ]
   },
   "Keyonte George": {
@@ -1018,6 +1029,17 @@
     -115,
     -110,
     21.5
+   ],
+   "ast": [
+    5.5,
+    -125,
+    -153,
+    6.5
+   ],
+   "fg3m": [
+    2.5,
+    140,
+    -152
    ]
   },
   "Lauri Markkanen": {
@@ -1025,6 +1047,17 @@
     20.5,
     null,
     -122
+   ],
+   "reb": [
+    5.5,
+    -128,
+    -141,
+    6.5
+   ],
+   "fg3m": [
+    2.5,
+    115,
+    -130
    ]
   },
   "Dylan Harper": {
@@ -1032,6 +1065,22 @@
     17.5,
     null,
     -122
+   ],
+   "reb": [
+    4.5,
+    -135,
+    -139,
+    5.5
+   ],
+   "ast": [
+    4.5,
+    -112,
+    100
+   ],
+   "fg3m": [
+    1.5,
+    166,
+    -165
    ]
   },
   "Stephon Castle": {
@@ -1040,6 +1089,16 @@
     -126,
     -120,
     16.5
+   ],
+   "ast": [
+    5.5,
+    -136,
+    122
+   ],
+   "fg3m": [
+    1.5,
+    100,
+    -110
    ]
   },
   "De'Aaron Fox": {
@@ -1048,6 +1107,87 @@
     -122,
     100,
     15.5
+   ],
+   "ast": [
+    5.5,
+    -139,
+    120
+   ],
+   "fg3m": [
+    1.5,
+    120,
+    -125
+   ]
+  },
+  "Jaxson Hayes": {
+   "reb": [
+    5.5,
+    -130,
+    -150,
+    6.5
+   ]
+  },
+  "Luke Kornet": {
+   "reb": [
+    5.5,
+    100,
+    -125
+   ]
+  },
+  "Ace Bailey": {
+   "reb": [
+    4.5,
+    -145,
+    -140,
+    5.5
+   ],
+   "fg3m": [
+    1.5,
+    -135,
+    115
+   ]
+  },
+  "Isaiah Collier": {
+   "ast": [
+    4.5,
+    -150,
+    -120,
+    5.5
+   ]
+  },
+  "Julian Champagnie": {
+   "fg3m": [
+    2.5,
+    120,
+    -150
+   ]
+  },
+  "Devin Vassell": {
+   "fg3m": [
+    1.5,
+    -145,
+    140
+   ]
+  },
+  "Brice Sensabaugh": {
+   "fg3m": [
+    1.5,
+    -110,
+    -115
+   ]
+  },
+  "Darryn Peterson": {
+   "fg3m": [
+    1.5,
+    115,
+    -135
+   ]
+  },
+  "Svi Mykhailiuk": {
+   "fg3m": [
+    0.5,
+    -210,
+    160
    ]
   }
  }

@@ -8,14 +8,13 @@
   "notes": [
    "H2H 2025-26: POR 1-3 DEN; 2025-10-31 DEN 107-109 POR; 2026-02-20 DEN 157-103 POR (blowout); 2026-03-22 POR 112-128 DEN; 2026-04-06 POR 132-137 DEN",
    "Récord: POR 4-1, DEN 3-2",
-   "En duda (prob. de jugar): Alpha Diallo 50%"
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
-   "Ja Morant"
+   "Ja Morant",
+   "Alpha Diallo"
   ],
-  "gtd": {
-   "Alpha Diallo": 0.5
-  },
+  "gtd": {},
   "reserves": {
    "POR": [
     {
@@ -132,7 +131,7 @@
    "name": "Jamal Murray",
    "pos": "PG",
    "starter": true,
-   "min": 33.5,
+   "min": 36.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -174,7 +173,7 @@
    "name": "Nikola Jokić",
    "pos": "C",
    "starter": true,
-   "min": 32.4,
+   "min": 35.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -216,7 +215,7 @@
    "name": "Christian Braun",
    "pos": "SG",
    "starter": true,
-   "min": 31.6,
+   "min": 34.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -258,7 +257,7 @@
    "name": "Aaron Gordon",
    "pos": "PF",
    "starter": true,
-   "min": 26.5,
+   "min": 28.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -300,7 +299,7 @@
    "name": "DeMar DeRozan",
    "pos": "SF",
    "starter": false,
-   "min": 23.0,
+   "min": 25.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -341,7 +340,7 @@
    "name": "Trevon Brazile",
    "pos": "PF",
    "starter": false,
-   "min": 20.0,
+   "min": 21.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -382,7 +381,7 @@
    "name": "Cameron Johnson",
    "pos": "PF",
    "starter": true,
-   "min": 19.7,
+   "min": 21.4,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -421,51 +420,10 @@
   },
   {
    "team": "DEN",
-   "name": "Alpha Diallo",
-   "pos": "SF",
-   "starter": false,
-   "min": 19.3,
-   "g_cur": 1,
-   "p_play": 0.5,
-   "cur": {
-    "min": 22.0,
-    "pts": 4.0,
-    "reb": 2.0,
-    "ast": 2.0,
-    "fg3m": 0.0,
-    "fgm": 2.0,
-    "fga": 4.0,
-    "fg3a": 2.0,
-    "stl": 1.0,
-    "blk": 0.0,
-    "tov": 2.0,
-    "pf": 2.0,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 22.0,
-    "pts": 4.0,
-    "reb": 2.0,
-    "ast": 2.0,
-    "fg3m": 0.0,
-    "fgm": 2.0,
-    "fga": 4.0,
-    "fg3a": 2.0,
-    "stl": 0.78,
-    "blk": 0.42,
-    "tov": 1.31,
-    "pf": 2.1,
-    "ftm": 0.0,
-    "fta": 0.0
-   }
-  },
-  {
-   "team": "DEN",
    "name": "Bryce Hopkins",
    "pos": "SF",
    "starter": false,
-   "min": 14.5,
+   "min": 15.7,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -506,7 +464,7 @@
    "name": "Marvin Bagley III",
    "pos": "PF",
    "starter": false,
-   "min": 10.7,
+   "min": 11.6,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -547,7 +505,7 @@
    "name": "Tyus Jones",
    "pos": "PG",
    "starter": false,
-   "min": 8.9,
+   "min": 9.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1082,7 +1040,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -4.5,
   "total": 231.0,
   "ml_home": -175,
@@ -1094,6 +1052,22 @@
     26.5,
     null,
     -122
+   ],
+   "reb": [
+    11.5,
+    -140,
+    -134,
+    12.5
+   ],
+   "ast": [
+    9.5,
+    -104,
+    100
+   ],
+   "fg3m": [
+    1.5,
+    -110,
+    -105
    ]
   },
   "Jamal Murray": {
@@ -1101,6 +1075,16 @@
     22.5,
     null,
     -106
+   ],
+   "ast": [
+    5.5,
+    -140,
+    115
+   ],
+   "fg3m": [
+    2.5,
+    -140,
+    120
    ]
   },
   "Deni Avdija": {
@@ -1109,6 +1093,22 @@
     -114,
     -120,
     24.5
+   ],
+   "reb": [
+    6.5,
+    -150,
+    -125,
+    7.5
+   ],
+   "ast": [
+    6.5,
+    120,
+    -140
+   ],
+   "fg3m": [
+    1.5,
+    -125,
+    120
    ]
   },
   "Damian Lillard": {
@@ -1116,6 +1116,17 @@
     20.5,
     null,
     -105
+   ],
+   "ast": [
+    4.5,
+    -122,
+    100
+   ],
+   "fg3m": [
+    2.5,
+    -190,
+    -160,
+    3.5
    ]
   },
   "Aaron Gordon": {
@@ -1123,6 +1134,16 @@
     14.5,
     null,
     -120
+   ],
+   "reb": [
+    5.5,
+    110,
+    -120
+   ],
+   "fg3m": [
+    1.5,
+    102,
+    -116
    ]
   },
   "Scoot Henderson": {
@@ -1130,6 +1151,66 @@
     14.5,
     null,
     -125
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    140
+   ]
+  },
+  "Donovan Clingan": {
+   "reb": [
+    9.5,
+    -140,
+    -112,
+    10.5
+   ],
+   "fg3m": [
+    0.5,
+    -186,
+    155
+   ]
+  },
+  "Robert Williams III": {
+   "reb": [
+    6.5,
+    -115,
+    115
+   ]
+  },
+  "Jrue Holiday": {
+   "ast": [
+    3.5,
+    -155,
+    -140,
+    4.5
+   ],
+   "fg3m": [
+    1.5,
+    -175,
+    -165,
+    2.5
+   ]
+  },
+  "Toumani Camara": {
+   "fg3m": [
+    2.5,
+    -105,
+    -120
+   ]
+  },
+  "Cameron Johnson": {
+   "fg3m": [
+    1.5,
+    -150,
+    125
+   ]
+  },
+  "Christian Braun": {
+   "fg3m": [
+    1.5,
+    120,
+    -130
    ]
   }
  }

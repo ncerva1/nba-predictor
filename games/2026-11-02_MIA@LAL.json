@@ -8,7 +8,8 @@
   "notes": [
    "H2H 2025-26: MIA 0-2 LAL; 2025-11-02 MIA 120-130 LAL; 2026-03-19 LAL 134-126 MIA",
    "Back-to-back: LAL jugaron el 1-nov",
-   "Récord: MIA 2-4, LAL 5-2"
+   "Récord: MIA 2-4, LAL 5-2",
+   "Bajas revisadas en ESPN 2-nov ~17:15 COT"
   ],
   "out": [
    "Ziaire Williams"
@@ -928,7 +929,7 @@
   }
  ],
  "market": {
-  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds aún mostraban la jornada del 1-nov.",
+  "source": "NBA.com/games 2-nov (15 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~17:10 UTC); props de puntos de scoresandodds.com/nba/props/points (mejor over y mejor under). Rebotes, asistencias y triples de scoresandodds añadidos en la revisión de bajas (~17:15 COT; listas parciales).",
   "spread_home": -1.5,
   "total": 236.5,
   "ml_home": -128,
@@ -940,6 +941,21 @@
     33.5,
     null,
     -108
+   ],
+   "reb": [
+    7.5,
+    116,
+    -135
+   ],
+   "ast": [
+    7.5,
+    -108,
+    -105
+   ],
+   "fg3m": [
+    4.5,
+    105,
+    -111
    ]
   },
   "Giannis Antetokounmpo": {
@@ -948,6 +964,17 @@
     -115,
     -112,
     31.5
+   ],
+   "reb": [
+    11.5,
+    100,
+    102
+   ],
+   "ast": [
+    5.5,
+    -135,
+    -145,
+    6.5
    ]
   },
   "Austin Reaves": {
@@ -955,6 +982,16 @@
     23.5,
     -104,
     -114
+   ],
+   "ast": [
+    5.5,
+    120,
+    -115
+   ],
+   "fg3m": [
+    2.5,
+    130,
+    -140
    ]
   },
   "Bam Adebayo": {
@@ -963,6 +1000,98 @@
     -105,
     -123,
     19.5
+   ],
+   "reb": [
+    8.5,
+    -115,
+    102
+   ],
+   "ast": [
+    3.5,
+    115,
+    -123
+   ],
+   "fg3m": [
+    1.5,
+    174,
+    -180
+   ]
+  },
+  "Sandro Mamukelashvili": {
+   "reb": [
+    5.5,
+    -115,
+    -110
+   ],
+   "ast": [
+    1.5,
+    125,
+    -160
+   ]
+  },
+  "Walker Kessler": {
+   "reb": [
+    10.5,
+    105,
+    -115
+   ]
+  },
+  "Bobby Portis Jr.": {
+   "reb": [
+    6.5,
+    108,
+    -130
+   ],
+   "fg3m": [
+    1.5,
+    -102,
+    100
+   ]
+  },
+  "Davion Mitchell": {
+   "ast": [
+    6.5,
+    -125,
+    -145,
+    7.5
+   ],
+   "fg3m": [
+    1.5,
+    102,
+    -120
+   ]
+  },
+  "Pelle Larsson": {
+   "ast": [
+    3.5,
+    -112,
+    101
+   ],
+   "fg3m": [
+    0.5,
+    -175,
+    152
+   ]
+  },
+  "Klay Thompson": {
+   "fg3m": [
+    2.5,
+    135,
+    -140
+   ]
+  },
+  "Matisse Thybulle": {
+   "fg3m": [
+    1.5,
+    -120,
+    100
+   ]
+  },
+  "Andrew Wiggins": {
+   "fg3m": [
+    1.5,
+    -119,
+    105
    ]
   }
  }
