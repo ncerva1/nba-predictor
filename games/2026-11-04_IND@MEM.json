@@ -8,21 +8,21 @@
   "notes": [
    "H2H 2025-26: IND 0-2 MEM; 2025-10-25 IND 103-128 MEM (blowout); 2026-03-01 MEM 125-106 IND",
    "Récord: IND 2-6, MEM 6-1",
-   "En duda (prob. de jugar): Andrew Nembhard 60%, Kelly Oubre Jr. 60%, Larry Nance Jr. 70%, Obi Toppin 30%",
-   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+   "En duda (prob. de jugar): Andrew Nembhard 60%, Kelly Oubre Jr. 60%, Larry Nance Jr. 70%, Obi Toppin 30%, Quinten Post 50%",
+   "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
   ],
   "out": [
    "Ivica Zubac",
    "Ben Sheppard",
    "Tyrese Haliburton",
-   "Scotty Pippen Jr.",
-   "Quinten Post"
+   "Scotty Pippen Jr."
   ],
   "gtd": {
    "Andrew Nembhard": 0.6,
    "Kelly Oubre Jr.": 0.6,
    "Larry Nance Jr.": 0.7,
-   "Obi Toppin": 0.3
+   "Obi Toppin": 0.3,
+   "Quinten Post": 0.5
   },
   "reserves": {
    "IND": [],
@@ -127,7 +127,7 @@
    "name": "Cameron Boozer",
    "pos": "PF",
    "starter": true,
-   "min": 30.2,
+   "min": 28.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -169,7 +169,7 @@
    "name": "Ty Jerome",
    "pos": "SG",
    "starter": true,
-   "min": 29.5,
+   "min": 27.8,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -211,7 +211,7 @@
    "name": "Cedric Coward",
    "pos": "SG",
    "starter": true,
-   "min": 27.1,
+   "min": 25.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -253,7 +253,7 @@
    "name": "Jaylen Wells",
    "pos": "SG",
    "starter": true,
-   "min": 26.6,
+   "min": 25.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -295,7 +295,7 @@
    "name": "Jerami Grant",
    "pos": "PF",
    "starter": false,
-   "min": 23.0,
+   "min": 21.7,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -336,7 +336,7 @@
    "name": "Zach Edey",
    "pos": "C",
    "starter": true,
-   "min": 18.9,
+   "min": 17.8,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -378,7 +378,7 @@
    "name": "Javon Small",
    "pos": "PG",
    "starter": false,
-   "min": 18.9,
+   "min": 17.8,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -419,7 +419,7 @@
    "name": "Isaiah Stewart",
    "pos": "C",
    "starter": false,
-   "min": 18.6,
+   "min": 17.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -460,7 +460,7 @@
    "name": "Cam Spencer",
    "pos": "SG",
    "starter": false,
-   "min": 18.0,
+   "min": 17.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -501,7 +501,7 @@
    "name": "GG Jackson",
    "pos": "PF",
    "starter": false,
-   "min": 16.0,
+   "min": 15.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -539,10 +539,51 @@
   },
   {
    "team": "MEM",
+   "name": "Quinten Post",
+   "pos": "C",
+   "starter": false,
+   "min": 13.4,
+   "g_cur": 5,
+   "p_play": 0.5,
+   "cur": {
+    "min": 15.0,
+    "pts": 7.6,
+    "reb": 2.6,
+    "ast": 0.6,
+    "fg3m": 1.0,
+    "fgm": 3.0,
+    "fga": 4.8,
+    "fg3a": 2.4,
+    "stl": 0.0,
+    "blk": 0.4,
+    "tov": 0.8,
+    "pf": 2.2,
+    "ftm": 0.6,
+    "fta": 0.8
+   },
+   "prior": {
+    "min": 17.3,
+    "pts": 7.66,
+    "reb": 4.01,
+    "ast": 1.4,
+    "fg3m": 1.39,
+    "fgm": 2.88,
+    "fga": 6.55,
+    "fg3a": 4.13,
+    "stl": 0.39,
+    "blk": 0.52,
+    "tov": 0.84,
+    "pf": 1.87,
+    "ftm": 0.51,
+    "fta": 0.64
+   }
+  },
+  {
+   "team": "MEM",
    "name": "Kris Murray",
    "pos": "SF",
    "starter": false,
-   "min": 13.2,
+   "min": 12.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {

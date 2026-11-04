@@ -8,13 +8,14 @@
   "notes": [
    "H2H 2025-26: MIL 1-3 BOS; 2025-12-11 BOS 101-116 MIL; 2026-02-01 MIL 79-107 BOS (blowout); 2026-03-02 BOS 108-81 MIL (blowout); 2026-04-03 BOS 133-101 MIL (blowout)",
    "Récord: MIL 1-6, BOS 5-2",
-   "En duda (prob. de jugar): Payton Pritchard 50%, Jayson Tatum 50%",
-   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+   "En duda (prob. de jugar): Payton Pritchard 50%",
+   "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
   ],
-  "out": [],
+  "out": [
+   "Jayson Tatum"
+  ],
   "gtd": {
-   "Payton Pritchard": 0.5,
-   "Jayson Tatum": 0.5
+   "Payton Pritchard": 0.5
   },
   "reserves": {
    "MIL": [
@@ -123,52 +124,10 @@
  "players": [
   {
    "team": "BOS",
-   "name": "Jayson Tatum",
-   "pos": "PF",
-   "starter": true,
-   "min": 34.4,
-   "g_cur": 7,
-   "p_play": 0.5,
-   "cur": {
-    "min": 35.1,
-    "pts": 27.0,
-    "reb": 6.0,
-    "ast": 7.86,
-    "fg3m": 1.57,
-    "fgm": 8.43,
-    "fga": 20.14,
-    "fg3a": 6.86,
-    "stl": 0.71,
-    "blk": 0.43,
-    "tov": 3.0,
-    "pf": 3.0,
-    "ftm": 8.57,
-    "fta": 9.86
-   },
-   "prior": {
-    "min": 32.6,
-    "pts": 21.75,
-    "reb": 10.0,
-    "ast": 5.31,
-    "fg3m": 2.94,
-    "fgm": 7.38,
-    "fga": 17.94,
-    "fg3a": 8.94,
-    "stl": 1.38,
-    "blk": 0.19,
-    "tov": 2.44,
-    "pf": 1.62,
-    "ftm": 4.06,
-    "fta": 4.94
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "BOS",
    "name": "Paul George",
    "pos": "PF",
    "starter": true,
-   "min": 30.3,
+   "min": 35.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -210,7 +169,7 @@
    "name": "Derrick White",
    "pos": "SG",
    "starter": true,
-   "min": 29.4,
+   "min": 34.3,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -245,14 +204,14 @@
     "ftm": 2.39,
     "fta": 2.65
    },
-   "slot": "PG"
+   "slot": "SG"
   },
   {
    "team": "BOS",
    "name": "Payton Pritchard",
    "pos": "PG",
-   "starter": false,
-   "min": 27.4,
+   "starter": true,
+   "min": 32.0,
    "g_cur": 7,
    "p_play": 0.5,
    "cur": {
@@ -286,14 +245,15 @@
     "pf": 1.49,
     "ftm": 1.53,
     "fta": 1.72
-   }
+   },
+   "slot": "PG"
   },
   {
    "team": "BOS",
    "name": "Neemias Queta",
    "pos": "C",
    "starter": false,
-   "min": 21.1,
+   "min": 24.7,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -334,7 +294,7 @@
    "name": "Sam Hauser",
    "pos": "PF",
    "starter": false,
-   "min": 19.6,
+   "min": 22.8,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -375,7 +335,7 @@
    "name": "Baylor Scheierman",
    "pos": "SG",
    "starter": false,
-   "min": 19.3,
+   "min": 22.5,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -416,7 +376,7 @@
    "name": "Mitchell Robinson",
    "pos": "C",
    "starter": true,
-   "min": 18.8,
+   "min": 21.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -458,7 +418,7 @@
    "name": "Jordan Walsh",
    "pos": "PF",
    "starter": true,
-   "min": 15.6,
+   "min": 18.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -500,7 +460,7 @@
    "name": "Hugo González",
    "pos": "SG",
    "starter": false,
-   "min": 12.4,
+   "min": 14.5,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -541,7 +501,7 @@
    "name": "Luka Garza",
    "pos": "C",
    "starter": false,
-   "min": 11.7,
+   "min": 13.7,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -1083,30 +1043,6 @@
   "ml_away": 400
  },
  "prop_lines": {
-  "Jayson Tatum": {
-   "pts": [
-    26.5,
-    -125,
-    -112,
-    27.5
-   ],
-   "reb": [
-    7.5,
-    104,
-    -120
-   ],
-   "ast": [
-    6.5,
-    -135,
-    -145,
-    7.5
-   ],
-   "fg3m": [
-    2.5,
-    105,
-    -120
-   ]
-  },
   "Tyler Herro": {
    "pts": [
     19.5,

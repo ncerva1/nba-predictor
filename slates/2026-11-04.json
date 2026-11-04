@@ -4,7 +4,7 @@
   "schedule_odds": "NBA.com/games 4-nov (14 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~16:40 UTC); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-04 (mejor over y mejor under; listas cortadas en ~85 jugadores)",
   "players_cur": "Game logs oficiales de nba.com 2026-27 hasta el 1-nov + box scores ESPN del 2-nov (results/2026-11-02.json) vía gamelogs/build_raw.py; el 3-nov no hubo partidos",
   "players_prior": "Game logs oficiales de nba.com 2025-26 (temporada regular completa)",
-  "injuries": "ESPN injuries, 4-nov ~16:35 UTC (MIA y MIL sin bajas en la página)",
+  "injuries": "ESPN injuries, 4-nov ~16:35 UTC (MIA y MIL sin bajas en la página); revisión pregame ESPN injuries 4-nov ~23:15 UTC (Tatum descansa, Hart, Capela y Shannon Jr. OUT)",
   "b2b": "Ninguno: el 3-nov (elecciones) no hubo partidos",
   "db": "BD de rankings: snapshot del 4-nov (B-Ref 2026-27 con 5-8 PJ; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 2-nov)",
   "h2h": "h2h/2025-26.json: 12 cruces nuevos (38 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)"
@@ -2217,13 +2217,14 @@
    "gtd": {
     "Jalen Johnson": 0.5,
     "Anthony Gill": 0.5,
-    "Alex Sarr": 0.5
+    "Alex Sarr": 0.5,
+    "Bilal Coulibaly": 0.5
    },
    "notes": [
     "H2H 2025-26: ATL 3-1 WAS; 2025-11-25 ATL 113-132 WAS; 2025-12-06 ATL 131-116 WAS; 2026-02-24 WAS 98-119 ATL (blowout); 2026-02-26 WAS 96-126 ATL (blowout)",
     "Récord: ATL 4-4, WAS 4-3",
-    "En duda (prob. de jugar): Jalen Johnson 50%, Anthony Gill 50%, Alex Sarr 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Jalen Johnson 50%, Anthony Gill 50%, Alex Sarr 50%, Bilal Coulibaly 50%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2247,7 +2248,7 @@
    "notes": [
     "H2H 2025-26: PHI 0-4 DET; 2025-11-09 DET 111-108 PHI; 2025-11-14 PHI 105-114 DET; 2026-03-12 PHI 109-131 DET (blowout); 2026-04-04 DET 116-93 PHI (blowout)",
     "Récord: PHI 7-1, DET 6-1",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2263,16 +2264,17 @@
    },
    "b2b": [],
    "adj": {},
-   "out": [],
+   "out": [
+    "Jayson Tatum"
+   ],
    "gtd": {
-    "Payton Pritchard": 0.5,
-    "Jayson Tatum": 0.5
+    "Payton Pritchard": 0.5
    },
    "notes": [
     "H2H 2025-26: MIL 1-3 BOS; 2025-12-11 BOS 101-116 MIL; 2026-02-01 MIL 79-107 BOS (blowout); 2026-03-02 BOS 108-81 MIL (blowout); 2026-04-03 BOS 133-101 MIL (blowout)",
     "Récord: MIL 1-6, BOS 5-2",
-    "En duda (prob. de jugar): Payton Pritchard 50%, Jayson Tatum 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Payton Pritchard 50%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2298,7 +2300,7 @@
     "H2H 2025-26: CHA 2-1 BKN; 2025-10-22 BKN 117-136 CHA; 2025-12-01 CHA 103-116 BKN; 2026-03-31 CHA 117-86 BKN (blowout)",
     "Récord: CHA 3-5, BKN 1-6",
     "En duda (prob. de jugar): Coby White 85%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2314,16 +2316,17 @@
    },
    "b2b": [],
    "adj": {},
-   "out": [],
+   "out": [
+    "Josh Hart"
+   ],
    "gtd": {
-    "Jalen Smith": 0.9,
-    "Josh Hart": 0.5
+    "Jalen Smith": 0.9
    },
    "notes": [
     "H2H 2025-26: CHI 1-3 NYK; 2025-11-01 NYK 125-135 CHI (blowout); 2025-11-03 CHI 116-128 NYK (blowout); 2026-02-23 NYK 105-99 CHI; 2026-04-04 CHI 96-136 NYK (blowout)",
     "Récord: CHI 1-6, NYK 3-4",
-    "En duda (prob. de jugar): Jalen Smith 90%, Josh Hart 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Jalen Smith 90%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2359,7 +2362,7 @@
     "H2H 2025-26: CLE 0-2 OKC; 2026-01-19 OKC 136-104 CLE (blowout); 2026-02-22 CLE 113-121 OKC",
     "Récord: CLE 4-3, OKC 5-2",
     "En duda (prob. de jugar): Jaylin Williams 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2387,14 +2390,14 @@
    ],
    "gtd": {
     "Jordan Poole": 0.8,
-    "Trey Murphy III": 0.9,
-    "Mo Bamba": 0.5
+    "Trey Murphy III": 0.5,
+    "Mo Bamba": 0.7
    },
    "notes": [
     "H2H 2025-26: UTA 0-3 NOP; 2026-02-26 NOP 129-118 UTA; 2026-02-28 NOP 115-105 UTA; 2026-04-07 UTA 137-156 NOP",
     "Récord: UTA 1-6, NOP 3-4",
-    "En duda (prob. de jugar): Jordan Poole 80%, Trey Murphy III 90%, Mo Bamba 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Jordan Poole 80%, Trey Murphy III 50%, Mo Bamba 70%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2420,20 +2423,20 @@
     "Ivica Zubac",
     "Ben Sheppard",
     "Tyrese Haliburton",
-    "Scotty Pippen Jr.",
-    "Quinten Post"
+    "Scotty Pippen Jr."
    ],
    "gtd": {
     "Andrew Nembhard": 0.6,
     "Kelly Oubre Jr.": 0.6,
     "Larry Nance Jr.": 0.7,
-    "Obi Toppin": 0.3
+    "Obi Toppin": 0.3,
+    "Quinten Post": 0.5
    },
    "notes": [
     "H2H 2025-26: IND 0-2 MEM; 2025-10-25 IND 103-128 MEM (blowout); 2026-03-01 MEM 125-106 IND",
     "Récord: IND 2-6, MEM 6-1",
-    "En duda (prob. de jugar): Andrew Nembhard 60%, Kelly Oubre Jr. 60%, Larry Nance Jr. 70%, Obi Toppin 30%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Andrew Nembhard 60%, Kelly Oubre Jr. 60%, Larry Nance Jr. 70%, Obi Toppin 30%, Quinten Post 50%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2457,17 +2460,15 @@
    },
    "out": [
     "Anthony Edwards",
-    "Steven Adams"
+    "Steven Adams",
+    "Clint Capela",
+    "Terrence Shannon Jr"
    ],
-   "gtd": {
-    "Clint Capela": 0.5,
-    "Terrence Shannon Jr": 0.5
-   },
+   "gtd": {},
    "notes": [
     "H2H 2025-26: MIN 2-1 HOU; 2026-01-16 MIN 105-110 HOU; 2026-03-25 HOU 108-110 MIN; 2026-04-10 MIN 136-132 HOU",
     "Récord: MIN 5-3, HOU 7-1",
-    "En duda (prob. de jugar): Clint Capela 50%, Terrence Shannon Jr 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2493,13 +2494,15 @@
     "Kawhi Leonard"
    ],
    "gtd": {
-    "Jakob Poeltl": 0.6
+    "Jakob Poeltl": 0.6,
+    "Cameron Johnson": 0.9,
+    "Alpha Diallo": 0.9
    },
    "notes": [
     "H2H 2025-26: TOR 0-2 DEN; 2025-12-31 DEN 106-103 TOR; 2026-03-20 TOR 115-121 DEN",
     "Récord: TOR 4-3, DEN 3-3",
-    "En duda (prob. de jugar): Jakob Poeltl 60%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Jakob Poeltl 60%, Cameron Johnson 90%, Alpha Diallo 90%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2522,7 +2525,8 @@
     }
    },
    "out": [
-    "Ja Morant"
+    "Ja Morant",
+    "Rasheer Fleming"
    ],
    "gtd": {
     "Jordan Goodwin": 0.5
@@ -2531,7 +2535,7 @@
     "H2H 2025-26: POR 1-2 PHX; 2025-11-18 PHX 127-110 POR; 2026-02-03 PHX 130-125 POR; 2026-02-22 POR 92-77 PHX",
     "Récord: POR 5-1, PHX 1-4",
     "En duda (prob. de jugar): Jordan Goodwin 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2561,7 +2565,7 @@
    "notes": [
     "H2H 2025-26: DAL 0-4 SAS; 2025-10-22 SAS 125-92 DAL (blowout); 2026-02-05 SAS 135-123 DAL; 2026-02-07 DAL 125-138 SAS; 2026-04-10 DAL 120-139 SAS",
     "Récord: DAL 4-3, SAS 5-2",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2578,13 +2582,14 @@
    "b2b": [],
    "adj": {},
    "out": [
-    "Keegan Murray"
+    "Keegan Murray",
+    "Daeqwon Plowden"
    ],
    "gtd": {},
    "notes": [
     "H2H 2025-26: LAL 3-1 SAC; 2025-10-26 LAL 127-120 SAC; 2025-12-28 SAC 101-125 LAL (blowout); 2026-01-12 LAL 112-124 SAC; 2026-03-01 SAC 104-128 LAL (blowout)",
     "Récord: LAL 6-2, SAC 1-6",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   },
   {
@@ -2602,14 +2607,14 @@
    "adj": {},
    "out": [],
    "gtd": {
-    "Derrick Jones Jr.": 0.5,
-    "Rui Hachimura": 0.5
+    "Giannis Antetokounmpo": 0.9,
+    "Isaiah Jackson": 0.5
    },
    "notes": [
     "H2H 2025-26: MIA 2-0 LAC; 2025-11-03 MIA 120-119 LAC; 2025-12-01 LAC 123-140 MIA",
     "Récord: MIA 2-5, LAC 1-6",
-    "En duda (prob. de jugar): Derrick Jones Jr. 50%, Rui Hachimura 50%",
-    "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+    "En duda (prob. de jugar): Giannis Antetokounmpo 90%, Isaiah Jackson 50%",
+    "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
    ]
   }
  ]
