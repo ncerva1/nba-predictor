@@ -162,7 +162,7 @@ def current_h2h_games(date, pair):
             for n, line in x["players"].items():
                 t = team.get(name_key(n))
                 if t in players and line[0] > 0:
-                    players[t].append([n, *line])
+                    players[t].append([n, *line[:5]])  # [min, pts, reb, ast, 3pm] (results/ trae 14 columnas desde 1-nov)
             for t in players:
                 players[t].sort(key=lambda r: name_key(r[0]) not in start)
             out.append(dict(date=d, away=away, home=home, score={away: x["away"], home: x["home"]},

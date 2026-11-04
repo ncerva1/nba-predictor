@@ -1,0 +1,1205 @@
+{
+ "game": {
+  "date": "2026-11-04",
+  "away": "ATL",
+  "home": "WAS",
+  "venue": "Capital One Arena, Washington",
+  "tip_et": "19:00",
+  "notes": [
+   "H2H 2025-26: ATL 3-1 WAS; 2025-11-25 ATL 113-132 WAS; 2025-12-06 ATL 131-116 WAS; 2026-02-24 WAS 98-119 ATL (blowout); 2026-02-26 WAS 96-126 ATL (blowout)",
+   "Récord: ATL 4-4, WAS 4-3",
+   "En duda (prob. de jugar): Jalen Johnson 50%, Anthony Gill 50%, Alex Sarr 50%",
+   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+  ],
+  "out": [
+   "Jock Landale",
+   "Reece Beekman",
+   "Justin Champagnie"
+  ],
+  "gtd": {
+   "Jalen Johnson": 0.5,
+   "Anthony Gill": 0.5,
+   "Alex Sarr": 0.5
+  },
+  "reserves": {
+   "ATL": [
+    {
+     "name": "Dorian Finney-Smith",
+     "pos": "PF",
+     "min": 4.0,
+     "g": 3
+    }
+   ],
+   "WAS": [
+    {
+     "name": "Will Riley",
+     "pos": "SF",
+     "min": 3.0,
+     "g": 5
+    },
+    {
+     "name": "Felix Okpara",
+     "pos": "C",
+     "min": 1.0,
+     "g": 1
+    },
+    {
+     "name": "Anthony Gill",
+     "pos": "PF",
+     "min": 1.0,
+     "g": 1
+    },
+    {
+     "name": "Tre Mann",
+     "pos": "PG",
+     "min": 1.0,
+     "g": 2
+    }
+   ]
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "WAS": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 109.91,
+    "drtg": 121.77,
+    "pace": 102.77
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  },
+  "ATL": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 115.21,
+    "drtg": 113.17,
+    "pace": 102.78
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "WAS": {},
+  "ATL": {}
+ },
+ "players": [
+  {
+   "team": "WAS",
+   "name": "Trae Young",
+   "pos": "PG",
+   "starter": true,
+   "min": 33.9,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 36.0,
+    "pts": 19.86,
+    "reb": 3.57,
+    "ast": 10.0,
+    "fg3m": 1.86,
+    "fgm": 5.29,
+    "fga": 13.43,
+    "fg3a": 6.86,
+    "stl": 1.0,
+    "blk": 0.14,
+    "tov": 2.86,
+    "pf": 1.86,
+    "ftm": 7.43,
+    "fta": 8.86
+   },
+   "prior": {
+    "min": 25.5,
+    "pts": 17.93,
+    "reb": 2.0,
+    "ast": 8.0,
+    "fg3m": 1.8,
+    "fgm": 5.4,
+    "fga": 11.8,
+    "fg3a": 5.33,
+    "stl": 0.87,
+    "blk": 0.13,
+    "tov": 2.6,
+    "pf": 2.2,
+    "ftm": 5.33,
+    "fta": 6.47
+   },
+   "slot": "PG"
+  },
+  {
+   "team": "WAS",
+   "name": "Anthony Davis",
+   "pos": "PF",
+   "starter": true,
+   "min": 31.6,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.6,
+    "pts": 23.0,
+    "reb": 9.14,
+    "ast": 2.0,
+    "fg3m": 1.0,
+    "fgm": 8.71,
+    "fga": 18.14,
+    "fg3a": 2.71,
+    "stl": 1.57,
+    "blk": 0.86,
+    "tov": 2.29,
+    "pf": 2.0,
+    "ftm": 4.57,
+    "fta": 5.57
+   },
+   "prior": {
+    "min": 31.2,
+    "pts": 20.35,
+    "reb": 11.05,
+    "ast": 2.8,
+    "fg3m": 0.5,
+    "fgm": 8.45,
+    "fga": 16.7,
+    "fg3a": 1.85,
+    "stl": 1.1,
+    "blk": 1.65,
+    "tov": 2.05,
+    "pf": 2.1,
+    "ftm": 2.95,
+    "fta": 4.05
+   },
+   "slot": "PF"
+  },
+  {
+   "team": "WAS",
+   "name": "Kyshawn George",
+   "pos": "SG",
+   "starter": true,
+   "min": 30.5,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.4,
+    "pts": 16.14,
+    "reb": 4.29,
+    "ast": 4.43,
+    "fg3m": 1.71,
+    "fgm": 6.14,
+    "fga": 12.71,
+    "fg3a": 5.29,
+    "stl": 0.57,
+    "blk": 1.29,
+    "tov": 3.14,
+    "pf": 3.43,
+    "ftm": 2.14,
+    "fta": 2.71
+   },
+   "prior": {
+    "min": 28.9,
+    "pts": 14.79,
+    "reb": 5.1,
+    "ast": 4.46,
+    "fg3m": 2.06,
+    "fgm": 5.27,
+    "fga": 12.02,
+    "fg3a": 5.42,
+    "stl": 1.0,
+    "blk": 0.9,
+    "tov": 2.6,
+    "pf": 3.52,
+    "ftm": 2.19,
+    "fta": 2.73
+   },
+   "slot": "SG"
+  },
+  {
+   "team": "WAS",
+   "name": "AJ Dybantsa",
+   "pos": "SF",
+   "starter": true,
+   "min": 28.2,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.0,
+    "pts": 19.0,
+    "reb": 4.67,
+    "ast": 1.67,
+    "fg3m": 1.0,
+    "fgm": 6.67,
+    "fga": 13.33,
+    "fg3a": 3.67,
+    "stl": 1.33,
+    "blk": 0.0,
+    "tov": 1.67,
+    "pf": 2.67,
+    "ftm": 4.67,
+    "fta": 5.0
+   },
+   "prior": {
+    "min": 30.0,
+    "pts": 19.0,
+    "reb": 4.67,
+    "ast": 1.67,
+    "fg3m": 1.0,
+    "fgm": 6.67,
+    "fga": 13.33,
+    "fg3a": 3.67,
+    "stl": 1.06,
+    "blk": 0.58,
+    "tov": 1.8,
+    "pf": 2.83,
+    "ftm": 4.67,
+    "fta": 5.0
+   },
+   "slot": "SF"
+  },
+  {
+   "team": "WAS",
+   "name": "Bilal Coulibaly",
+   "pos": "SF",
+   "starter": false,
+   "min": 25.7,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.3,
+    "pts": 8.14,
+    "reb": 3.57,
+    "ast": 0.71,
+    "fg3m": 0.43,
+    "fgm": 3.14,
+    "fga": 5.86,
+    "fg3a": 2.29,
+    "stl": 1.43,
+    "blk": 1.29,
+    "tov": 0.43,
+    "pf": 3.71,
+    "ftm": 1.43,
+    "fta": 2.0
+   },
+   "prior": {
+    "min": 26.2,
+    "pts": 11.73,
+    "reb": 4.34,
+    "ast": 2.59,
+    "fg3m": 1.16,
+    "fgm": 4.11,
+    "fga": 9.66,
+    "fg3a": 3.64,
+    "stl": 1.34,
+    "blk": 0.96,
+    "tov": 1.45,
+    "pf": 2.32,
+    "ftm": 2.36,
+    "fta": 3.16
+   }
+  },
+  {
+   "team": "WAS",
+   "name": "Alex Sarr",
+   "pos": "C",
+   "starter": true,
+   "min": 24.0,
+   "g_cur": 6,
+   "p_play": 0.5,
+   "cur": {
+    "min": 25.5,
+    "pts": 9.33,
+    "reb": 5.5,
+    "ast": 2.17,
+    "fg3m": 0.67,
+    "fgm": 3.67,
+    "fga": 7.0,
+    "fg3a": 2.67,
+    "stl": 1.0,
+    "blk": 1.0,
+    "tov": 1.33,
+    "pf": 2.33,
+    "ftm": 1.33,
+    "fta": 1.83
+   },
+   "prior": {
+    "min": 27.2,
+    "pts": 16.31,
+    "reb": 7.4,
+    "ast": 2.71,
+    "fg3m": 1.04,
+    "fgm": 6.58,
+    "fga": 13.67,
+    "fg3a": 3.12,
+    "stl": 0.81,
+    "blk": 1.98,
+    "tov": 1.71,
+    "pf": 2.19,
+    "ftm": 2.1,
+    "fta": 3.04
+   },
+   "slot": "C"
+  },
+  {
+   "team": "WAS",
+   "name": "Tre Johnson",
+   "pos": "SG",
+   "starter": false,
+   "min": 19.8,
+   "g_cur": 6,
+   "p_play": 1.0,
+   "cur": {
+    "min": 21.0,
+    "pts": 9.33,
+    "reb": 2.17,
+    "ast": 0.67,
+    "fg3m": 1.17,
+    "fgm": 3.5,
+    "fga": 8.17,
+    "fg3a": 4.33,
+    "stl": 0.33,
+    "blk": 0.17,
+    "tov": 1.0,
+    "pf": 2.17,
+    "ftm": 1.17,
+    "fta": 1.17
+   },
+   "prior": {
+    "min": 24.0,
+    "pts": 12.22,
+    "reb": 2.83,
+    "ast": 2.03,
+    "fg3m": 1.92,
+    "fgm": 4.52,
+    "fga": 10.78,
+    "fg3a": 5.35,
+    "stl": 0.55,
+    "blk": 0.3,
+    "tov": 1.55,
+    "pf": 2.03,
+    "ftm": 1.27,
+    "fta": 1.45
+   }
+  },
+  {
+   "team": "WAS",
+   "name": "Bub Carrington",
+   "pos": "PG",
+   "starter": false,
+   "min": 18.5,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.7,
+    "pts": 6.14,
+    "reb": 1.86,
+    "ast": 2.43,
+    "fg3m": 1.71,
+    "fgm": 1.86,
+    "fga": 4.57,
+    "fg3a": 3.57,
+    "stl": 0.57,
+    "blk": 0.14,
+    "tov": 0.71,
+    "pf": 1.86,
+    "ftm": 0.71,
+    "fta": 0.71
+   },
+   "prior": {
+    "min": 27.7,
+    "pts": 10.71,
+    "reb": 3.37,
+    "ast": 4.65,
+    "fg3m": 2.06,
+    "fgm": 3.83,
+    "fga": 9.04,
+    "fg3a": 5.05,
+    "stl": 0.63,
+    "blk": 0.21,
+    "tov": 2.33,
+    "pf": 2.24,
+    "ftm": 0.99,
+    "fta": 1.35
+   }
+  },
+  {
+   "team": "WAS",
+   "name": "Deandre Ayton",
+   "pos": "C",
+   "starter": false,
+   "min": 14.8,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.7,
+    "pts": 5.43,
+    "reb": 4.57,
+    "ast": 0.86,
+    "fg3m": 0.0,
+    "fgm": 2.57,
+    "fga": 3.86,
+    "fg3a": 0.0,
+    "stl": 0.14,
+    "blk": 0.29,
+    "tov": 0.43,
+    "pf": 1.14,
+    "ftm": 0.29,
+    "fta": 0.57
+   },
+   "prior": {
+    "min": 27.3,
+    "pts": 12.46,
+    "reb": 7.99,
+    "ast": 0.82,
+    "fg3m": 0.0,
+    "fgm": 5.6,
+    "fga": 8.35,
+    "fg3a": 0.0,
+    "stl": 0.57,
+    "blk": 0.97,
+    "tov": 1.15,
+    "pf": 2.18,
+    "ftm": 1.26,
+    "fta": 1.96
+   }
+  },
+  {
+   "team": "WAS",
+   "name": "Khris Middleton",
+   "pos": "SF",
+   "starter": false,
+   "min": 13.0,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.8,
+    "pts": 2.4,
+    "reb": 1.6,
+    "ast": 0.4,
+    "fg3m": 0.2,
+    "fgm": 0.6,
+    "fga": 1.8,
+    "fg3a": 1.0,
+    "stl": 0.4,
+    "blk": 0.0,
+    "tov": 1.2,
+    "pf": 1.4,
+    "ftm": 1.0,
+    "fta": 1.2
+   },
+   "prior": {
+    "min": 22.8,
+    "pts": 10.16,
+    "reb": 3.67,
+    "ast": 2.79,
+    "fg3m": 1.06,
+    "fgm": 3.6,
+    "fga": 8.57,
+    "fg3a": 2.95,
+    "stl": 0.65,
+    "blk": 0.14,
+    "tov": 1.71,
+    "pf": 2.29,
+    "ftm": 1.89,
+    "fta": 2.16
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Jalen Johnson",
+   "pos": "SF",
+   "starter": true,
+   "min": 30.9,
+   "g_cur": 7,
+   "p_play": 0.5,
+   "cur": {
+    "min": 32.7,
+    "pts": 18.29,
+    "reb": 9.0,
+    "ast": 7.86,
+    "fg3m": 1.14,
+    "fgm": 6.43,
+    "fga": 15.29,
+    "fg3a": 4.43,
+    "stl": 0.86,
+    "blk": 0.71,
+    "tov": 3.14,
+    "pf": 3.29,
+    "ftm": 4.29,
+    "fta": 5.14
+   },
+   "prior": {
+    "min": 35.2,
+    "pts": 22.51,
+    "reb": 10.28,
+    "ast": 7.86,
+    "fg3m": 1.67,
+    "fgm": 8.33,
+    "fga": 17.06,
+    "fg3a": 4.74,
+    "stl": 1.24,
+    "blk": 0.43,
+    "tov": 3.39,
+    "pf": 2.1,
+    "ftm": 4.18,
+    "fta": 5.31
+   },
+   "slot": "PF"
+  },
+  {
+   "team": "ATL",
+   "name": "Nickeil Alexander-Walker",
+   "pos": "SG",
+   "starter": true,
+   "min": 28.5,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 30.1,
+    "pts": 21.12,
+    "reb": 3.25,
+    "ast": 2.75,
+    "fg3m": 3.88,
+    "fgm": 7.0,
+    "fga": 16.0,
+    "fg3a": 9.62,
+    "stl": 1.62,
+    "blk": 0.25,
+    "tov": 2.12,
+    "pf": 2.5,
+    "ftm": 3.25,
+    "fta": 4.0
+   },
+   "prior": {
+    "min": 33.4,
+    "pts": 20.82,
+    "reb": 3.44,
+    "ast": 3.67,
+    "fg3m": 3.22,
+    "fgm": 7.03,
+    "fga": 15.32,
+    "fg3a": 8.06,
+    "stl": 1.31,
+    "blk": 0.54,
+    "tov": 2.08,
+    "pf": 2.22,
+    "ftm": 3.55,
+    "fta": 3.94
+   },
+   "slot": "SG"
+  },
+  {
+   "team": "ATL",
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "starter": true,
+   "min": 27.5,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 29.1,
+    "pts": 9.75,
+    "reb": 5.5,
+    "ast": 4.25,
+    "fg3m": 0.12,
+    "fgm": 4.25,
+    "fga": 9.12,
+    "fg3a": 1.25,
+    "stl": 3.0,
+    "blk": 0.38,
+    "tov": 1.0,
+    "pf": 2.38,
+    "ftm": 1.12,
+    "fta": 2.0
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 11.86,
+    "reb": 6.84,
+    "ast": 5.91,
+    "fg3m": 0.29,
+    "fgm": 5.29,
+    "fga": 10.22,
+    "fg3a": 1.54,
+    "stl": 1.96,
+    "blk": 0.41,
+    "tov": 1.78,
+    "pf": 2.18,
+    "ftm": 0.99,
+    "fta": 1.61
+   },
+   "slot": "SF"
+  },
+  {
+   "team": "ATL",
+   "name": "Onyeka Okongwu",
+   "pos": "C",
+   "starter": true,
+   "min": 27.3,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 28.9,
+    "pts": 12.0,
+    "reb": 7.5,
+    "ast": 2.62,
+    "fg3m": 1.25,
+    "fgm": 4.75,
+    "fga": 10.5,
+    "fg3a": 4.5,
+    "stl": 0.5,
+    "blk": 0.62,
+    "tov": 0.88,
+    "pf": 3.12,
+    "ftm": 1.25,
+    "fta": 1.75
+   },
+   "prior": {
+    "min": 31.1,
+    "pts": 15.18,
+    "reb": 7.59,
+    "ast": 3.12,
+    "fg3m": 1.95,
+    "fgm": 5.58,
+    "fga": 11.62,
+    "fg3a": 5.18,
+    "stl": 1.11,
+    "blk": 1.07,
+    "tov": 1.72,
+    "pf": 3.28,
+    "ftm": 2.07,
+    "fta": 2.73
+   },
+   "slot": "C"
+  },
+  {
+   "team": "ATL",
+   "name": "CJ McCollum",
+   "pos": "PG",
+   "starter": true,
+   "min": 25.3,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.8,
+    "pts": 14.25,
+    "reb": 2.75,
+    "ast": 3.88,
+    "fg3m": 2.0,
+    "fgm": 5.25,
+    "fga": 11.5,
+    "fg3a": 5.38,
+    "stl": 1.0,
+    "blk": 0.25,
+    "tov": 2.0,
+    "pf": 2.25,
+    "ftm": 1.75,
+    "fta": 2.12
+   },
+   "prior": {
+    "min": 29.8,
+    "pts": 18.74,
+    "reb": 3.32,
+    "ast": 3.86,
+    "fg3m": 2.51,
+    "fgm": 6.91,
+    "fga": 15.18,
+    "fg3a": 6.71,
+    "stl": 0.84,
+    "blk": 0.46,
+    "tov": 1.78,
+    "pf": 1.89,
+    "ftm": 2.41,
+    "fta": 3.12
+   },
+   "slot": "PG"
+  },
+  {
+   "team": "ATL",
+   "name": "Aaron Wiggins",
+   "pos": "SG",
+   "starter": false,
+   "min": 24.2,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.6,
+    "pts": 13.75,
+    "reb": 3.62,
+    "ast": 1.88,
+    "fg3m": 2.62,
+    "fgm": 5.25,
+    "fga": 11.38,
+    "fg3a": 6.5,
+    "stl": 1.0,
+    "blk": 0.38,
+    "tov": 1.12,
+    "pf": 2.12,
+    "ftm": 0.62,
+    "fta": 1.0
+   },
+   "prior": {
+    "min": 21.8,
+    "pts": 9.4,
+    "reb": 3.06,
+    "ast": 1.68,
+    "fg3m": 1.48,
+    "fgm": 3.55,
+    "fga": 8.25,
+    "fg3a": 4.15,
+    "stl": 0.92,
+    "blk": 0.43,
+    "tov": 1.25,
+    "pf": 1.28,
+    "ftm": 0.82,
+    "fta": 1.11
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Luguentz Dort",
+   "pos": "SF",
+   "starter": false,
+   "min": 23.3,
+   "g_cur": 8,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.6,
+    "pts": 9.25,
+    "reb": 3.0,
+    "ast": 1.38,
+    "fg3m": 1.5,
+    "fgm": 3.0,
+    "fga": 8.0,
+    "fg3a": 4.75,
+    "stl": 0.75,
+    "blk": 0.25,
+    "tov": 0.62,
+    "pf": 3.0,
+    "ftm": 1.75,
+    "fta": 2.12
+   },
+   "prior": {
+    "min": 26.8,
+    "pts": 8.35,
+    "reb": 3.55,
+    "ast": 1.23,
+    "fg3m": 1.86,
+    "fgm": 2.93,
+    "fga": 7.59,
+    "fg3a": 5.39,
+    "stl": 0.9,
+    "blk": 0.39,
+    "tov": 0.78,
+    "pf": 2.59,
+    "ftm": 0.64,
+    "fta": 0.84
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Kingston Flemings",
+   "pos": "PG",
+   "starter": false,
+   "min": 19.2,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 20.3,
+    "pts": 7.14,
+    "reb": 2.86,
+    "ast": 4.71,
+    "fg3m": 0.71,
+    "fgm": 2.86,
+    "fga": 6.0,
+    "fg3a": 1.86,
+    "stl": 0.86,
+    "blk": 0.29,
+    "tov": 2.29,
+    "pf": 2.43,
+    "ftm": 0.71,
+    "fta": 1.0
+   },
+   "prior": {
+    "min": 20.3,
+    "pts": 7.14,
+    "reb": 2.86,
+    "ast": 4.71,
+    "fg3m": 0.71,
+    "fgm": 2.86,
+    "fga": 6.0,
+    "fg3a": 1.86,
+    "stl": 0.82,
+    "blk": 0.25,
+    "tov": 1.33,
+    "pf": 1.79,
+    "ftm": 0.71,
+    "fta": 1.0
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Asa Newell",
+   "pos": "PF",
+   "starter": false,
+   "min": 10.6,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.2,
+    "pts": 4.0,
+    "reb": 2.5,
+    "ast": 0.5,
+    "fg3m": 0.5,
+    "fgm": 1.5,
+    "fga": 3.5,
+    "fg3a": 2.0,
+    "stl": 0.25,
+    "blk": 0.25,
+    "tov": 0.75,
+    "pf": 0.75,
+    "ftm": 0.5,
+    "fta": 1.0
+   },
+   "prior": {
+    "min": 11.7,
+    "pts": 5.28,
+    "reb": 2.23,
+    "ast": 0.6,
+    "fg3m": 0.67,
+    "fgm": 2.12,
+    "fga": 3.93,
+    "fg3a": 1.74,
+    "stl": 0.37,
+    "blk": 0.35,
+    "tov": 0.53,
+    "pf": 1.51,
+    "ftm": 0.37,
+    "fta": 0.67
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Corey Kispert",
+   "pos": "SF",
+   "starter": false,
+   "min": 8.0,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.5,
+    "pts": 7.5,
+    "reb": 0.5,
+    "ast": 0.5,
+    "fg3m": 2.0,
+    "fgm": 2.75,
+    "fga": 4.25,
+    "fg3a": 3.25,
+    "stl": 0.25,
+    "blk": 0.0,
+    "tov": 0.5,
+    "pf": 0.25,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 18.7,
+    "pts": 9.17,
+    "reb": 2.28,
+    "ast": 1.59,
+    "fg3m": 1.5,
+    "fgm": 3.17,
+    "fga": 6.79,
+    "fg3a": 4.09,
+    "stl": 0.28,
+    "blk": 0.16,
+    "tov": 0.78,
+    "pf": 1.03,
+    "ftm": 1.33,
+    "fta": 1.67
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "Zuby Ejiofor",
+   "pos": "PF",
+   "starter": false,
+   "min": 7.6,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 2.0,
+    "reb": 2.33,
+    "ast": 0.67,
+    "fg3m": 0.67,
+    "fgm": 0.67,
+    "fga": 2.33,
+    "fg3a": 1.33,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.67,
+    "pf": 1.33,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 8.0,
+    "pts": 2.0,
+    "reb": 2.33,
+    "ast": 0.67,
+    "fg3m": 0.67,
+    "fgm": 0.67,
+    "fga": 2.33,
+    "fg3a": 1.33,
+    "stl": 0.28,
+    "blk": 0.15,
+    "tov": 0.48,
+    "pf": 0.75,
+    "ftm": 0.0,
+    "fta": 0.0
+   }
+  },
+  {
+   "team": "ATL",
+   "name": "RayJ Dennis",
+   "pos": "F",
+   "starter": false,
+   "min": 7.6,
+   "g_cur": 1,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 4.0,
+    "reb": 2.0,
+    "ast": 2.0,
+    "fg3m": 0.0,
+    "fgm": 2.0,
+    "fga": 4.0,
+    "fg3a": 2.0,
+    "stl": 0.0,
+    "blk": 1.0,
+    "tov": 0.0,
+    "pf": 0.0,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 12.1,
+    "pts": 4.35,
+    "reb": 1.53,
+    "ast": 1.94,
+    "fg3m": 0.82,
+    "fgm": 1.53,
+    "fga": 4.88,
+    "fg3a": 2.65,
+    "stl": 0.24,
+    "blk": 0.24,
+    "tov": 1.0,
+    "pf": 1.24,
+    "ftm": 0.47,
+    "fta": 0.53
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 4-nov (14 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~16:40 UTC); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-04 (mejor over y mejor under; listas cortadas en ~85 jugadores)",
+  "spread_home": 2.5,
+  "total": 232.0,
+  "ml_home": 130,
+  "ml_away": -153
+ },
+ "prop_lines": {
+  "Anthony Davis": {
+   "pts": [
+    23.5,
+    -105,
+    -108
+   ],
+   "reb": [
+    10.5,
+    -115,
+    105
+   ]
+  },
+  "Nickeil Alexander-Walker": {
+   "pts": [
+    21.5,
+    null,
+    -109
+   ],
+   "ast": [
+    3.5,
+    119,
+    -140
+   ],
+   "fg3m": [
+    2.5,
+    -174,
+    -155,
+    3.5
+   ]
+  },
+  "Jalen Johnson": {
+   "pts": [
+    20.5,
+    -119,
+    -120,
+    21.5
+   ],
+   "reb": [
+    9.5,
+    116,
+    -140
+   ],
+   "ast": [
+    7.5,
+    100,
+    -110
+   ]
+  },
+  "Trae Young": {
+   "pts": [
+    19.5,
+    -111,
+    -110
+   ],
+   "ast": [
+    9.5,
+    -132,
+    -140,
+    10.5
+   ],
+   "fg3m": [
+    2.5,
+    140,
+    -155
+   ]
+  },
+  "CJ McCollum": {
+   "pts": [
+    16.5,
+    null,
+    -104
+   ],
+   "ast": [
+    3.5,
+    -130,
+    121
+   ],
+   "fg3m": [
+    2.5,
+    142,
+    -180
+   ]
+  },
+  "Kyshawn George": {
+   "pts": [
+    14.5,
+    -114,
+    -108
+   ],
+   "reb": [
+    4.5,
+    -125,
+    109
+   ],
+   "ast": [
+    3.5,
+    -144,
+    -120,
+    4.5
+   ],
+   "fg3m": [
+    1.5,
+    -140,
+    125
+   ]
+  },
+  "Onyeka Okongwu": {
+   "pts": [
+    14.5,
+    null,
+    -112
+   ],
+   "reb": [
+    8.5,
+    110,
+    -130
+   ]
+  },
+  "Alex Sarr": {
+   "reb": [
+    6.5,
+    116,
+    -141
+   ]
+  },
+  "Dyson Daniels": {
+   "reb": [
+    5.5,
+    -138,
+    -155,
+    6.5
+   ],
+   "ast": [
+    4.5,
+    -160,
+    -140,
+    5.5
+   ]
+  },
+  "AJ Dybantsa": {
+   "reb": [
+    5.5,
+    100,
+    100
+   ]
+  },
+  "Aaron Wiggins": {
+   "fg3m": [
+    2.5,
+    132,
+    -155
+   ]
+  },
+  "Luguentz Dort": {
+   "fg3m": [
+    1.5,
+    -105,
+    -112
+   ]
+  }
+ }
+}
