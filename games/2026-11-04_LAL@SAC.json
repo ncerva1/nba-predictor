@@ -8,10 +8,11 @@
   "notes": [
    "H2H 2025-26: LAL 3-1 SAC; 2025-10-26 LAL 127-120 SAC; 2025-12-28 SAC 101-125 LAL (blowout); 2026-01-12 LAL 112-124 SAC; 2026-03-01 SAC 104-128 LAL (blowout)",
    "Récord: LAL 6-2, SAC 1-6",
-   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+   "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
   ],
   "out": [
-   "Keegan Murray"
+   "Keegan Murray",
+   "Daeqwon Plowden"
   ],
   "gtd": {},
   "reserves": {
@@ -130,7 +131,7 @@
    "name": "Darius Acuff Jr.",
    "pos": "PG",
    "starter": true,
-   "min": 34.7,
+   "min": 36.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -172,7 +173,7 @@
    "name": "Domantas Sabonis",
    "pos": "C",
    "starter": true,
-   "min": 34.4,
+   "min": 36.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -214,7 +215,7 @@
    "name": "Zach LaVine",
    "pos": "SG",
    "starter": true,
-   "min": 31.4,
+   "min": 32.9,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -256,7 +257,7 @@
    "name": "De'Andre Hunter",
    "pos": "SF",
    "starter": true,
-   "min": 28.7,
+   "min": 30.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -298,7 +299,7 @@
    "name": "Precious Achiuwa",
    "pos": "C",
    "starter": true,
-   "min": 27.2,
+   "min": 28.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -340,7 +341,7 @@
    "name": "Emanuel Sharp",
    "pos": "SG",
    "starter": false,
-   "min": 17.1,
+   "min": 18.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -381,7 +382,7 @@
    "name": "Jonathan Mogbo",
    "pos": "PF",
    "starter": false,
-   "min": 16.3,
+   "min": 17.1,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -422,7 +423,7 @@
    "name": "Leaky Black",
    "pos": "SF",
    "starter": false,
-   "min": 15.6,
+   "min": 16.4,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -463,7 +464,7 @@
    "name": "Malik Monk",
    "pos": "SG",
    "starter": false,
-   "min": 14.0,
+   "min": 14.7,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -501,51 +502,10 @@
   },
   {
    "team": "SAC",
-   "name": "Daeqwon Plowden",
-   "pos": "SG",
-   "starter": false,
-   "min": 11.6,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 12.2,
-    "pts": 2.5,
-    "reb": 1.33,
-    "ast": 0.33,
-    "fg3m": 0.33,
-    "fgm": 1.0,
-    "fga": 2.33,
-    "fg3a": 1.5,
-    "stl": 0.33,
-    "blk": 0.17,
-    "tov": 0.17,
-    "pf": 1.17,
-    "ftm": 0.17,
-    "fta": 0.33
-   },
-   "prior": {
-    "min": 26.3,
-    "pts": 10.75,
-    "reb": 3.03,
-    "ast": 1.28,
-    "fg3m": 1.94,
-    "fgm": 3.75,
-    "fga": 8.72,
-    "fg3a": 5.81,
-    "stl": 0.72,
-    "blk": 0.22,
-    "tov": 0.81,
-    "pf": 2.44,
-    "ftm": 1.31,
-    "fta": 1.53
-   }
-  },
-  {
-   "team": "SAC",
    "name": "Alex Karaban",
    "pos": "SF",
    "starter": false,
-   "min": 9.0,
+   "min": 9.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {

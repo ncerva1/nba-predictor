@@ -8,17 +8,15 @@
   "notes": [
    "H2H 2025-26: MIN 2-1 HOU; 2026-01-16 MIN 105-110 HOU; 2026-03-25 HOU 108-110 MIN; 2026-04-10 MIN 136-132 HOU",
    "Récord: MIN 5-3, HOU 7-1",
-   "En duda (prob. de jugar): Clint Capela 50%, Terrence Shannon Jr 50%",
-   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+   "Bajas revisadas en ESPN 4-nov ~23:15 UTC (revisión pregame)"
   ],
   "out": [
    "Anthony Edwards",
-   "Steven Adams"
+   "Steven Adams",
+   "Clint Capela",
+   "Terrence Shannon Jr"
   ],
-  "gtd": {
-   "Clint Capela": 0.5,
-   "Terrence Shannon Jr": 0.5
-  },
+  "gtd": {},
   "reserves": {
    "MIN": [
     {
@@ -129,7 +127,7 @@
    "name": "Alperen Sengun",
    "pos": "C",
    "starter": true,
-   "min": 30.4,
+   "min": 32.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -171,7 +169,7 @@
    "name": "Jabari Smith Jr.",
    "pos": "PF",
    "starter": true,
-   "min": 30.4,
+   "min": 32.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -213,7 +211,7 @@
    "name": "Kevin Durant",
    "pos": "PF",
    "starter": true,
-   "min": 29.6,
+   "min": 31.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -255,7 +253,7 @@
    "name": "Amen Thompson",
    "pos": "SF",
    "starter": true,
-   "min": 28.8,
+   "min": 30.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -297,7 +295,7 @@
    "name": "Fred VanVleet",
    "pos": "PG",
    "starter": true,
-   "min": 26.5,
+   "min": 27.9,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -339,7 +337,7 @@
    "name": "Tari Eason",
    "pos": "PF",
    "starter": false,
-   "min": 21.7,
+   "min": 22.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -380,7 +378,7 @@
    "name": "Marcus Smart",
    "pos": "PG",
    "starter": false,
-   "min": 21.2,
+   "min": 22.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -421,7 +419,7 @@
    "name": "Reed Sheppard",
    "pos": "PG",
    "starter": false,
-   "min": 19.4,
+   "min": 20.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -459,51 +457,10 @@
   },
   {
    "team": "HOU",
-   "name": "Clint Capela",
-   "pos": "C",
-   "starter": false,
-   "min": 12.5,
-   "g_cur": 6,
-   "p_play": 0.5,
-   "cur": {
-    "min": 14.2,
-    "pts": 3.17,
-    "reb": 5.17,
-    "ast": 1.67,
-    "fg3m": 0.0,
-    "fgm": 1.5,
-    "fga": 2.33,
-    "fg3a": 0.0,
-    "stl": 0.83,
-    "blk": 0.67,
-    "tov": 0.83,
-    "pf": 1.67,
-    "ftm": 0.17,
-    "fta": 0.33
-   },
-   "prior": {
-    "min": 12.3,
-    "pts": 3.76,
-    "reb": 4.6,
-    "ast": 0.67,
-    "fg3m": 0.01,
-    "fgm": 1.57,
-    "fga": 3.03,
-    "fg3a": 0.03,
-    "stl": 0.48,
-    "blk": 0.84,
-    "tov": 0.55,
-    "pf": 0.99,
-    "ftm": 0.6,
-    "fta": 1.04
-   }
-  },
-  {
-   "team": "HOU",
    "name": "Bogdan Bogdanović",
    "pos": "SG",
    "starter": false,
-   "min": 11.6,
+   "min": 12.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -544,7 +501,7 @@
    "name": "Oscar Tshiebwe",
    "pos": "C",
    "starter": false,
-   "min": 7.9,
+   "min": 8.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -585,7 +542,7 @@
    "name": "Jaden McDaniels",
    "pos": "PF",
    "starter": true,
-   "min": 34.4,
+   "min": 38.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -627,7 +584,7 @@
    "name": "Jonathan Kuminga",
    "pos": "PF",
    "starter": true,
-   "min": 32.2,
+   "min": 35.6,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -669,7 +626,7 @@
    "name": "Ayo Dosunmu",
    "pos": "SG",
    "starter": true,
-   "min": 31.5,
+   "min": 34.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -711,7 +668,7 @@
    "name": "Rudy Gobert",
    "pos": "C",
    "starter": true,
-   "min": 31.4,
+   "min": 34.8,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -753,7 +710,7 @@
    "name": "LaMelo Ball",
    "pos": "PG",
    "starter": true,
-   "min": 27.4,
+   "min": 30.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -792,51 +749,10 @@
   },
   {
    "team": "MIN",
-   "name": "Terrence Shannon Jr",
-   "pos": "SG",
-   "starter": false,
-   "min": 23.0,
-   "g_cur": 7,
-   "p_play": 0.5,
-   "cur": {
-    "min": 22.0,
-    "pts": 12.0,
-    "reb": 3.57,
-    "ast": 2.57,
-    "fg3m": 1.86,
-    "fgm": 3.57,
-    "fga": 8.43,
-    "fg3a": 4.71,
-    "stl": 0.43,
-    "blk": 0.14,
-    "tov": 1.43,
-    "pf": 1.43,
-    "ftm": 3.0,
-    "fta": 4.14
-   },
-   "prior": {
-    "min": 12.4,
-    "pts": 5.6,
-    "reb": 1.14,
-    "ast": 0.88,
-    "fg3m": 0.72,
-    "fgm": 1.79,
-    "fga": 3.98,
-    "fg3a": 1.77,
-    "stl": 0.33,
-    "blk": 0.02,
-    "tov": 0.56,
-    "pf": 1.16,
-    "ftm": 1.3,
-    "fta": 1.63
-   }
-  },
-  {
-   "team": "MIN",
    "name": "Joan Beringer",
    "pos": "PF",
    "starter": false,
-   "min": 18.9,
+   "min": 20.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -877,7 +793,7 @@
    "name": "Trey Lyles",
    "pos": "PF",
    "starter": false,
-   "min": 17.3,
+   "min": 19.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -918,7 +834,7 @@
    "name": "Bones Hyland",
    "pos": "PG",
    "starter": false,
-   "min": 12.5,
+   "min": 13.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -959,7 +875,7 @@
    "name": "Jaylen Clark",
    "pos": "SG",
    "starter": false,
-   "min": 11.4,
+   "min": 12.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
