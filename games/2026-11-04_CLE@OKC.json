@@ -1,0 +1,1158 @@
+{
+ "game": {
+  "date": "2026-11-04",
+  "away": "CLE",
+  "home": "OKC",
+  "venue": "Paycom Center, Oklahoma City",
+  "tip_et": "20:00",
+  "notes": [
+   "H2H 2025-26: CLE 0-2 OKC; 2026-01-19 OKC 136-104 CLE (blowout); 2026-02-22 CLE 113-121 OKC",
+   "Récord: CLE 4-3, OKC 5-2",
+   "En duda (prob. de jugar): Jaylin Williams 50%",
+   "Bajas revisadas en ESPN 4-nov ~16:35 UTC"
+  ],
+  "out": [
+   "Jaylon Tyson",
+   "Peyton Watson",
+   "Cason Wallace",
+   "Chet Holmgren",
+   "Jalen Williams"
+  ],
+  "gtd": {
+   "Jaylin Williams": 0.5
+  },
+  "reserves": {
+   "CLE": [
+    {
+     "name": "Tristan Enaruna",
+     "pos": "F",
+     "min": 6.0,
+     "g": 1
+    },
+    {
+     "name": "Riley Minix",
+     "pos": "F",
+     "min": 6.0,
+     "g": 1
+    }
+   ],
+   "OKC": [
+    {
+     "name": "Brooks Barnhizer",
+     "pos": "SG",
+     "min": 5.2,
+     "g": 5
+    }
+   ]
+  }
+ },
+ "db": {
+  "use": true,
+  "k_team": 0.6,
+  "k_dvp": 0.3
+ },
+ "league": {
+  "ortg": 115.0,
+  "pace": 100.5,
+  "home_adv_per100": 1.0
+ },
+ "shrink_games": 10,
+ "teams": {
+  "OKC": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 117.81,
+    "drtg": 106.77,
+    "pace": 100.65
+   },
+   "adj": {
+    "o": -1.5,
+    "d": 1.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": "Holmgren, Jalen Williams y Wallace OUT"
+   }
+  },
+  "CLE": {
+   "cur": {
+    "gp": 0,
+    "ortg": 115.0,
+    "drtg": 115.0,
+    "pace": 100.5
+   },
+   "prior": {
+    "ortg": 118.51,
+    "drtg": 114.37,
+    "pace": 100.98
+   },
+   "adj": {
+    "o": 0.0,
+    "d": 0.0,
+    "pace": 0.0
+   },
+   "context": {
+    "b2b": false,
+    "roster_note": ""
+   }
+  }
+ },
+ "matchup": {
+  "OKC": {},
+  "CLE": {}
+ },
+ "players": [
+  {
+   "team": "OKC",
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "PG",
+   "starter": true,
+   "min": 35.8,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.6,
+    "pts": 28.43,
+    "reb": 4.29,
+    "ast": 4.0,
+    "fg3m": 2.29,
+    "fgm": 10.57,
+    "fga": 23.43,
+    "fg3a": 6.86,
+    "stl": 1.29,
+    "blk": 1.14,
+    "tov": 1.71,
+    "pf": 2.14,
+    "ftm": 5.0,
+    "fta": 5.71
+   },
+   "prior": {
+    "min": 33.2,
+    "pts": 31.13,
+    "reb": 4.29,
+    "ast": 6.59,
+    "fg3m": 1.69,
+    "fgm": 10.75,
+    "fga": 19.43,
+    "fg3a": 4.38,
+    "stl": 1.4,
+    "blk": 0.76,
+    "tov": 2.22,
+    "pf": 2.04,
+    "ftm": 7.94,
+    "fta": 9.03
+   },
+   "slot": "PG"
+  },
+  {
+   "team": "OKC",
+   "name": "Ajay Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 28.6,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 26.9,
+    "pts": 17.0,
+    "reb": 3.57,
+    "ast": 3.43,
+    "fg3m": 0.57,
+    "fgm": 6.71,
+    "fga": 13.43,
+    "fg3a": 3.0,
+    "stl": 1.43,
+    "blk": 0.57,
+    "tov": 1.43,
+    "pf": 2.43,
+    "ftm": 3.0,
+    "fta": 3.14
+   },
+   "prior": {
+    "min": 25.8,
+    "pts": 13.58,
+    "reb": 3.33,
+    "ast": 3.61,
+    "fg3m": 1.07,
+    "fgm": 5.02,
+    "fga": 10.35,
+    "fg3a": 3.09,
+    "stl": 1.25,
+    "blk": 0.32,
+    "tov": 1.42,
+    "pf": 2.09,
+    "ftm": 2.47,
+    "fta": 2.84
+   },
+   "slot": "SG"
+  },
+  {
+   "team": "OKC",
+   "name": "Jared McCain",
+   "pos": "SG",
+   "starter": true,
+   "min": 26.6,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 25.0,
+    "pts": 10.29,
+    "reb": 3.29,
+    "ast": 2.14,
+    "fg3m": 1.57,
+    "fgm": 3.71,
+    "fga": 10.71,
+    "fg3a": 5.57,
+    "stl": 0.57,
+    "blk": 0.14,
+    "tov": 1.86,
+    "pf": 1.71,
+    "ftm": 1.29,
+    "fta": 1.57
+   },
+   "prior": {
+    "min": 17.4,
+    "pts": 8.33,
+    "reb": 2.04,
+    "ast": 1.34,
+    "fg3m": 1.48,
+    "fgm": 3.04,
+    "fga": 7.16,
+    "fg3a": 3.84,
+    "stl": 0.52,
+    "blk": 0.07,
+    "tov": 0.84,
+    "pf": 1.21,
+    "ftm": 0.76,
+    "fta": 0.88
+   },
+   "slot": "SF"
+  },
+  {
+   "team": "OKC",
+   "name": "Isaiah Hartenstein",
+   "pos": "C",
+   "starter": true,
+   "min": 26.2,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.6,
+    "pts": 8.86,
+    "reb": 9.86,
+    "ast": 2.29,
+    "fg3m": 0.0,
+    "fgm": 3.57,
+    "fga": 7.43,
+    "fg3a": 0.29,
+    "stl": 1.0,
+    "blk": 0.29,
+    "tov": 1.71,
+    "pf": 2.71,
+    "ftm": 1.71,
+    "fta": 1.86
+   },
+   "prior": {
+    "min": 24.3,
+    "pts": 9.19,
+    "reb": 9.43,
+    "ast": 3.53,
+    "fg3m": 0.0,
+    "fgm": 3.91,
+    "fga": 6.3,
+    "fg3a": 0.15,
+    "stl": 1.02,
+    "blk": 0.77,
+    "tov": 1.74,
+    "pf": 2.51,
+    "ftm": 1.36,
+    "fta": 2.23
+   },
+   "slot": "C"
+  },
+  {
+   "team": "OKC",
+   "name": "Alex Caruso",
+   "pos": "SG",
+   "starter": false,
+   "min": 20.2,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.0,
+    "pts": 9.25,
+    "reb": 4.75,
+    "ast": 3.75,
+    "fg3m": 2.0,
+    "fgm": 3.25,
+    "fga": 5.75,
+    "fg3a": 4.0,
+    "stl": 1.0,
+    "blk": 0.5,
+    "tov": 0.25,
+    "pf": 1.0,
+    "ftm": 0.75,
+    "fta": 1.0
+   },
+   "prior": {
+    "min": 18.2,
+    "pts": 6.21,
+    "reb": 2.77,
+    "ast": 1.96,
+    "fg3m": 0.95,
+    "fgm": 2.27,
+    "fga": 5.36,
+    "fg3a": 3.23,
+    "stl": 1.29,
+    "blk": 0.3,
+    "tov": 0.86,
+    "pf": 1.21,
+    "ftm": 0.73,
+    "fta": 0.91
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Jaylin Williams",
+   "pos": "PF",
+   "starter": false,
+   "min": 19.6,
+   "g_cur": 7,
+   "p_play": 0.5,
+   "cur": {
+    "min": 18.4,
+    "pts": 2.86,
+    "reb": 4.0,
+    "ast": 1.57,
+    "fg3m": 0.71,
+    "fgm": 0.86,
+    "fga": 4.29,
+    "fg3a": 3.43,
+    "stl": 0.43,
+    "blk": 0.0,
+    "tov": 0.57,
+    "pf": 0.71,
+    "ftm": 0.43,
+    "fta": 0.43
+   },
+   "prior": {
+    "min": 19.7,
+    "pts": 7.22,
+    "reb": 5.51,
+    "ast": 2.43,
+    "fg3m": 1.51,
+    "fgm": 2.29,
+    "fga": 5.42,
+    "fg3a": 3.94,
+    "stl": 0.48,
+    "blk": 0.65,
+    "tov": 1.03,
+    "pf": 1.95,
+    "ftm": 1.12,
+    "fta": 1.42
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Aday Mara",
+   "pos": "C",
+   "starter": false,
+   "min": 19.5,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 18.3,
+    "pts": 6.43,
+    "reb": 5.57,
+    "ast": 1.14,
+    "fg3m": 0.0,
+    "fgm": 2.71,
+    "fga": 4.86,
+    "fg3a": 0.0,
+    "stl": 0.14,
+    "blk": 1.71,
+    "tov": 2.14,
+    "pf": 2.57,
+    "ftm": 1.0,
+    "fta": 1.29
+   },
+   "prior": {
+    "min": 18.3,
+    "pts": 6.43,
+    "reb": 5.57,
+    "ast": 1.14,
+    "fg3m": 0.0,
+    "fgm": 2.71,
+    "fga": 4.86,
+    "fg3a": 0.0,
+    "stl": 0.51,
+    "blk": 0.83,
+    "tov": 1.2,
+    "pf": 2.01,
+    "ftm": 1.0,
+    "fta": 1.29
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Josh Dix",
+   "pos": "SG",
+   "starter": false,
+   "min": 17.9,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.8,
+    "pts": 2.25,
+    "reb": 1.0,
+    "ast": 0.0,
+    "fg3m": 0.25,
+    "fgm": 1.0,
+    "fga": 3.5,
+    "fg3a": 2.25,
+    "stl": 0.25,
+    "blk": 0.25,
+    "tov": 0.5,
+    "pf": 1.0,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 16.8,
+    "pts": 2.25,
+    "reb": 1.0,
+    "ast": 0.0,
+    "fg3m": 0.25,
+    "fgm": 1.0,
+    "fga": 3.5,
+    "fg3a": 2.25,
+    "stl": 0.68,
+    "blk": 0.2,
+    "tov": 1.1,
+    "pf": 1.48,
+    "ftm": 0.0,
+    "fta": 0.0
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Kenrich Williams",
+   "pos": "PF",
+   "starter": true,
+   "min": 17.1,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 16.1,
+    "pts": 6.0,
+    "reb": 3.43,
+    "ast": 0.71,
+    "fg3m": 1.29,
+    "fgm": 2.14,
+    "fga": 4.43,
+    "fg3a": 2.71,
+    "stl": 0.14,
+    "blk": 0.14,
+    "tov": 0.43,
+    "pf": 1.43,
+    "ftm": 0.43,
+    "fta": 0.43
+   },
+   "prior": {
+    "min": 15.2,
+    "pts": 6.48,
+    "reb": 3.34,
+    "ast": 1.41,
+    "fg3m": 0.89,
+    "fgm": 2.5,
+    "fga": 5.29,
+    "fg3a": 2.3,
+    "stl": 0.55,
+    "blk": 0.09,
+    "tov": 0.77,
+    "pf": 1.05,
+    "ftm": 0.59,
+    "fta": 0.93
+   },
+   "slot": "PF"
+  },
+  {
+   "team": "OKC",
+   "name": "Bennett Stirtz",
+   "pos": "PG",
+   "starter": false,
+   "min": 16.0,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 15.0,
+    "pts": 5.29,
+    "reb": 0.71,
+    "ast": 1.0,
+    "fg3m": 1.14,
+    "fgm": 1.71,
+    "fga": 3.86,
+    "fg3a": 2.71,
+    "stl": 0.14,
+    "blk": 0.0,
+    "tov": 0.57,
+    "pf": 1.0,
+    "ftm": 0.71,
+    "fta": 0.86
+   },
+   "prior": {
+    "min": 15.0,
+    "pts": 5.29,
+    "reb": 0.71,
+    "ast": 1.0,
+    "fg3m": 1.14,
+    "fgm": 1.71,
+    "fga": 3.86,
+    "fg3a": 2.71,
+    "stl": 0.61,
+    "blk": 0.18,
+    "tov": 0.99,
+    "pf": 1.32,
+    "ftm": 0.71,
+    "fta": 0.86
+   }
+  },
+  {
+   "team": "OKC",
+   "name": "Micah Peavy",
+   "pos": "SG",
+   "starter": false,
+   "min": 12.5,
+   "g_cur": 3,
+   "p_play": 1.0,
+   "cur": {
+    "min": 11.7,
+    "pts": 3.33,
+    "reb": 2.0,
+    "ast": 0.0,
+    "fg3m": 0.67,
+    "fgm": 1.0,
+    "fga": 2.0,
+    "fg3a": 0.67,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.33,
+    "pf": 1.0,
+    "ftm": 0.67,
+    "fta": 0.67
+   },
+   "prior": {
+    "min": 15.0,
+    "pts": 4.3,
+    "reb": 1.92,
+    "ast": 1.0,
+    "fg3m": 0.46,
+    "fgm": 1.74,
+    "fga": 4.51,
+    "fg3a": 1.77,
+    "stl": 0.7,
+    "blk": 0.15,
+    "tov": 0.33,
+    "pf": 1.57,
+    "ftm": 0.36,
+    "fta": 0.48
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "James Harden",
+   "pos": "PG",
+   "starter": true,
+   "min": 36.1,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.4,
+    "pts": 16.29,
+    "reb": 4.71,
+    "ast": 6.29,
+    "fg3m": 2.57,
+    "fgm": 4.86,
+    "fga": 12.43,
+    "fg3a": 7.14,
+    "stl": 0.86,
+    "blk": 0.29,
+    "tov": 3.0,
+    "pf": 2.57,
+    "ftm": 4.0,
+    "fta": 5.0
+   },
+   "prior": {
+    "min": 34.9,
+    "pts": 23.6,
+    "reb": 4.8,
+    "ast": 7.96,
+    "fg3m": 3.07,
+    "fgm": 6.96,
+    "fga": 16.04,
+    "fg3a": 8.19,
+    "stl": 1.13,
+    "blk": 0.4,
+    "tov": 3.5,
+    "pf": 1.96,
+    "ftm": 6.61,
+    "fta": 7.49
+   },
+   "slot": "PG"
+  },
+  {
+   "team": "CLE",
+   "name": "Donovan Mitchell",
+   "pos": "SG",
+   "starter": true,
+   "min": 35.8,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 33.1,
+    "pts": 21.86,
+    "reb": 5.29,
+    "ast": 5.43,
+    "fg3m": 2.57,
+    "fgm": 7.43,
+    "fga": 15.86,
+    "fg3a": 6.57,
+    "stl": 1.14,
+    "blk": 0.43,
+    "tov": 3.14,
+    "pf": 3.0,
+    "ftm": 4.43,
+    "fta": 5.43
+   },
+   "prior": {
+    "min": 33.4,
+    "pts": 27.89,
+    "reb": 4.51,
+    "ast": 5.69,
+    "fg3m": 3.2,
+    "fgm": 9.69,
+    "fga": 20.04,
+    "fg3a": 8.8,
+    "stl": 1.49,
+    "blk": 0.29,
+    "tov": 2.83,
+    "pf": 2.33,
+    "ftm": 5.31,
+    "fta": 6.14
+   },
+   "slot": "SG"
+  },
+  {
+   "team": "CLE",
+   "name": "Evan Mobley",
+   "pos": "PF",
+   "starter": true,
+   "min": 35.6,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 32.9,
+    "pts": 19.14,
+    "reb": 8.0,
+    "ast": 3.57,
+    "fg3m": 2.29,
+    "fgm": 7.0,
+    "fga": 12.14,
+    "fg3a": 4.29,
+    "stl": 0.57,
+    "blk": 1.14,
+    "tov": 1.29,
+    "pf": 1.71,
+    "ftm": 2.86,
+    "fta": 4.43
+   },
+   "prior": {
+    "min": 32.0,
+    "pts": 18.15,
+    "reb": 9.02,
+    "ast": 3.6,
+    "fg3m": 0.95,
+    "fgm": 7.22,
+    "fga": 13.22,
+    "fg3a": 3.22,
+    "stl": 0.74,
+    "blk": 1.74,
+    "tov": 1.88,
+    "pf": 2.45,
+    "ftm": 2.77,
+    "fta": 4.57
+   },
+   "slot": "PF"
+  },
+  {
+   "team": "CLE",
+   "name": "Jarrett Allen",
+   "pos": "C",
+   "starter": true,
+   "min": 30.0,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 27.7,
+    "pts": 15.14,
+    "reb": 8.71,
+    "ast": 1.43,
+    "fg3m": 0.29,
+    "fgm": 5.86,
+    "fga": 9.29,
+    "fg3a": 0.43,
+    "stl": 0.71,
+    "blk": 1.71,
+    "tov": 1.0,
+    "pf": 1.57,
+    "ftm": 3.14,
+    "fta": 4.57
+   },
+   "prior": {
+    "min": 27.2,
+    "pts": 15.36,
+    "reb": 8.5,
+    "ast": 1.79,
+    "fg3m": 0.02,
+    "fgm": 6.02,
+    "fga": 9.43,
+    "fg3a": 0.18,
+    "stl": 0.98,
+    "blk": 0.84,
+    "tov": 1.34,
+    "pf": 1.7,
+    "ftm": 3.3,
+    "fta": 4.66
+   },
+   "slot": "C"
+  },
+  {
+   "team": "CLE",
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "starter": false,
+   "min": 26.0,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 24.0,
+    "pts": 8.43,
+    "reb": 3.0,
+    "ast": 2.29,
+    "fg3m": 1.71,
+    "fgm": 2.71,
+    "fga": 6.71,
+    "fg3a": 5.29,
+    "stl": 0.86,
+    "blk": 0.0,
+    "tov": 0.29,
+    "pf": 2.86,
+    "ftm": 1.29,
+    "fta": 1.43
+   },
+   "prior": {
+    "min": 26.5,
+    "pts": 12.75,
+    "reb": 2.56,
+    "ast": 2.4,
+    "fg3m": 3.04,
+    "fgm": 4.29,
+    "fga": 9.31,
+    "fg3a": 7.21,
+    "stl": 0.63,
+    "blk": 0.13,
+    "tov": 0.81,
+    "pf": 2.44,
+    "ftm": 1.13,
+    "fta": 1.33
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Meleek Thomas",
+   "pos": "SG",
+   "starter": true,
+   "min": 23.8,
+   "g_cur": 4,
+   "p_play": 1.0,
+   "cur": {
+    "min": 22.0,
+    "pts": 14.0,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 2.5,
+    "fgm": 5.5,
+    "fga": 11.25,
+    "fg3a": 5.25,
+    "stl": 1.0,
+    "blk": 0.25,
+    "tov": 0.75,
+    "pf": 2.25,
+    "ftm": 0.5,
+    "fta": 0.5
+   },
+   "prior": {
+    "min": 22.0,
+    "pts": 14.0,
+    "reb": 3.0,
+    "ast": 1.0,
+    "fg3m": 2.5,
+    "fgm": 5.5,
+    "fga": 11.25,
+    "fg3a": 5.25,
+    "stl": 0.89,
+    "blk": 0.27,
+    "tov": 1.44,
+    "pf": 1.94,
+    "ftm": 0.5,
+    "fta": 0.5
+   },
+   "slot": "SF"
+  },
+  {
+   "team": "CLE",
+   "name": "Mario Hezonja",
+   "pos": "PF",
+   "starter": false,
+   "min": 20.9,
+   "g_cur": 7,
+   "p_play": 1.0,
+   "cur": {
+    "min": 19.3,
+    "pts": 8.14,
+    "reb": 5.57,
+    "ast": 2.14,
+    "fg3m": 1.43,
+    "fgm": 3.14,
+    "fga": 7.0,
+    "fg3a": 3.86,
+    "stl": 0.86,
+    "blk": 0.14,
+    "tov": 0.86,
+    "pf": 1.29,
+    "ftm": 0.43,
+    "fta": 0.86
+   },
+   "prior": {
+    "min": 19.3,
+    "pts": 8.14,
+    "reb": 5.57,
+    "ast": 2.14,
+    "fg3m": 1.43,
+    "fgm": 3.14,
+    "fga": 7.0,
+    "fg3a": 3.86,
+    "stl": 0.68,
+    "blk": 0.37,
+    "tov": 1.16,
+    "pf": 1.82,
+    "ftm": 0.43,
+    "fta": 0.86
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Tyrese Proctor",
+   "pos": "PG",
+   "starter": false,
+   "min": 14.3,
+   "g_cur": 6,
+   "p_play": 1.0,
+   "cur": {
+    "min": 13.2,
+    "pts": 5.5,
+    "reb": 2.83,
+    "ast": 2.17,
+    "fg3m": 1.17,
+    "fgm": 2.0,
+    "fga": 3.83,
+    "fg3a": 2.0,
+    "stl": 0.33,
+    "blk": 0.0,
+    "tov": 0.33,
+    "pf": 1.33,
+    "ftm": 0.33,
+    "fta": 0.33
+   },
+   "prior": {
+    "min": 11.0,
+    "pts": 5.44,
+    "reb": 1.28,
+    "ast": 1.48,
+    "fg3m": 0.92,
+    "fgm": 1.86,
+    "fga": 4.5,
+    "fg3a": 2.62,
+    "stl": 0.5,
+    "blk": 0.0,
+    "tov": 0.8,
+    "pf": 1.18,
+    "ftm": 0.8,
+    "fta": 0.9
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Craig Porter Jr.",
+   "pos": "PG",
+   "starter": false,
+   "min": 8.9,
+   "g_cur": 5,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.2,
+    "pts": 1.0,
+    "reb": 2.2,
+    "ast": 1.2,
+    "fg3m": 0.2,
+    "fgm": 0.4,
+    "fga": 1.0,
+    "fg3a": 0.6,
+    "stl": 0.2,
+    "blk": 0.2,
+    "tov": 0.8,
+    "pf": 1.0,
+    "ftm": 0.0,
+    "fta": 0.0
+   },
+   "prior": {
+    "min": 17.9,
+    "pts": 4.52,
+    "reb": 3.44,
+    "ast": 3.2,
+    "fg3m": 0.52,
+    "fgm": 1.81,
+    "fga": 4.03,
+    "fg3a": 1.45,
+    "stl": 0.89,
+    "blk": 0.59,
+    "tov": 0.92,
+    "pf": 1.09,
+    "ftm": 0.38,
+    "fta": 0.62
+   }
+  },
+  {
+   "team": "CLE",
+   "name": "Thomas Bryant",
+   "pos": "C",
+   "starter": false,
+   "min": 8.7,
+   "g_cur": 2,
+   "p_play": 1.0,
+   "cur": {
+    "min": 8.0,
+    "pts": 7.5,
+    "reb": 1.0,
+    "ast": 0.0,
+    "fg3m": 1.5,
+    "fgm": 2.5,
+    "fga": 6.0,
+    "fg3a": 4.0,
+    "stl": 0.0,
+    "blk": 0.5,
+    "tov": 0.0,
+    "pf": 0.5,
+    "ftm": 1.0,
+    "fta": 1.5
+   },
+   "prior": {
+    "min": 12.2,
+    "pts": 6.17,
+    "reb": 3.42,
+    "ast": 0.55,
+    "fg3m": 0.78,
+    "fgm": 2.25,
+    "fga": 4.45,
+    "fg3a": 2.18,
+    "stl": 0.3,
+    "blk": 0.43,
+    "tov": 0.47,
+    "pf": 1.25,
+    "ftm": 0.88,
+    "fta": 1.1
+   }
+  }
+ ],
+ "market": {
+  "source": "NBA.com/games 4-nov (14 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML, spread y total de 9 casas sin nombre, ~16:40 UTC); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-04 (mejor over y mejor under; listas cortadas en ~85 jugadores)",
+  "spread_home": -3.5,
+  "total": 227.5,
+  "ml_home": -155,
+  "ml_away": 130
+ },
+ "prop_lines": {
+  "Shai Gilgeous-Alexander": {
+   "pts": [
+    31.5,
+    -118,
+    -115,
+    32.5
+   ],
+   "ast": [
+    5.5,
+    -150,
+    -150,
+    6.5
+   ],
+   "fg3m": [
+    1.5,
+    -190,
+    -170,
+    2.5
+   ]
+  },
+  "Donovan Mitchell": {
+   "pts": [
+    22.5,
+    -110,
+    -115,
+    23.5
+   ],
+   "ast": [
+    5.5,
+    114,
+    -120
+   ],
+   "fg3m": [
+    2.5,
+    106,
+    -129
+   ]
+  },
+  "Ajay Mitchell": {
+   "pts": [
+    18.5,
+    -111,
+    -104
+   ],
+   "ast": [
+    3.5,
+    -150,
+    -170,
+    4.5
+   ]
+  },
+  "Evan Mobley": {
+   "pts": [
+    16.5,
+    -125,
+    -120,
+    17.5
+   ],
+   "reb": [
+    8.5,
+    -115,
+    -105
+   ],
+   "ast": [
+    3.5,
+    105,
+    -122
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    16.5,
+    -126,
+    -120,
+    17.5
+   ],
+   "ast": [
+    6.5,
+    -110,
+    102
+   ],
+   "fg3m": [
+    2.5,
+    100,
+    -120
+   ]
+  },
+  "Jared McCain": {
+   "pts": [
+    12.5,
+    -125,
+    -112,
+    13.5
+   ],
+   "fg3m": [
+    2.5,
+    122,
+    -145
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "reb": [
+    10.5,
+    -115,
+    100
+   ],
+   "ast": [
+    3.5,
+    120,
+    -140
+   ]
+  },
+  "Jarrett Allen": {
+   "reb": [
+    8.5,
+    120,
+    -128
+   ]
+  },
+  "Aday Mara": {
+   "reb": [
+    6.5,
+    -102,
+    105
+   ]
+  },
+  "Jaylin Williams": {
+   "reb": [
+    5.5,
+    -140,
+    -140,
+    6.5
+   ],
+   "fg3m": [
+    1.5,
+    -102,
+    -110
+   ]
+  },
+  "Kenrich Williams": {
+   "reb": [
+    4.5,
+    -115,
+    -135,
+    5.5
+   ]
+  },
+  "Sam Merrill": {
+   "ast": [
+    1.5,
+    -110,
+    -115
+   ],
+   "fg3m": [
+    2.5,
+    130,
+    -132
+   ]
+  },
+  "Meleek Thomas": {
+   "fg3m": [
+    2.5,
+    140,
+    -170
+   ]
+  }
+ }
+}
