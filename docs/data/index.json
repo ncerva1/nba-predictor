@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-04T23:21+00:00",
+ "generated": "2026-11-05T08:19+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
  "max_daily": 15,
- "last_stage": "pregame",
+ "last_stage": "results",
  "updates": {
   "2026-10-30": {
    "morning": "2026-10-30T16:48+00:00",
@@ -28,7 +28,8 @@
   },
   "2026-11-04": {
    "morning": "2026-11-04T16:36+00:00",
-   "pregame": "2026-11-04T23:21+00:00"
+   "pregame": "2026-11-04T23:21+00:00",
+   "results": "2026-11-05T08:19+00:00"
   }
  },
  "history": [
@@ -125,6 +126,18 @@
    "units": 4.06,
    "sgp_won": 6,
    "sgp_lost": 5,
+   "cross_won": 1,
+   "cross_lost": 0
+  },
+  {
+   "date": "2026-11-04",
+   "games": 14,
+   "winners_ok": 9,
+   "picks_won": 8,
+   "picks_lost": 7,
+   "units": 1.73,
+   "sgp_won": 5,
+   "sgp_lost": 4,
    "cross_won": 1,
    "cross_lost": 0
   }
@@ -823,7 +836,8 @@
       "dec": 1.645,
       "ev": 0.042,
       "gid": "2026-11-04-ATL-at-WAS",
-      "game": "ATL @ WAS"
+      "game": "ATL @ WAS",
+      "result": "won"
      },
      {
       "kind": "prop",
@@ -837,7 +851,8 @@
       "dec": 1.69,
       "ev": 0.077,
       "gid": "2026-11-04-PHI-at-DET",
-      "game": "PHI @ DET"
+      "game": "PHI @ DET",
+      "result": "won"
      }
     ],
     "n": 2,
@@ -848,7 +863,7 @@
     "fair": 2.48,
     "ev": 0.121,
     "type": "cross",
-    "result": null
+    "result": "won"
    }
   ]
  },
@@ -50650,7 +50665,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -50689,7 +50705,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -50728,7 +50745,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [],
@@ -50747,7 +50765,8 @@
        "dec": 1.556,
        "ev": 0.02,
        "gid": "2026-11-04-ATL-at-WAS",
-       "game": "ATL @ WAS"
+       "game": "ATL @ WAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -50761,7 +50780,8 @@
        "dec": 1.645,
        "ev": 0.042,
        "gid": "2026-11-04-ATL-at-WAS",
-       "game": "ATL @ WAS"
+       "game": "ATL @ WAS",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -50771,7 +50791,8 @@
      "dec": 2.56,
      "fair": 2.41,
      "ev": 0.064,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
    ],
    "model_picks": [
@@ -50797,7 +50818,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -50821,7 +50843,8 @@
        0,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -50845,7 +50868,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -50869,7 +50893,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -50893,7 +50918,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -50917,7 +50943,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -50941,7 +50968,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -50965,7 +50993,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -50989,7 +51018,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51013,7 +51043,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -51053,7 +51084,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51091,7 +51123,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -51129,7 +51162,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51167,7 +51201,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51205,7 +51240,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51244,6 +51280,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
@@ -51284,7 +51321,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51322,7 +51360,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51359,7 +51398,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51396,7 +51436,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51433,7 +51474,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51470,7 +51512,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51507,7 +51550,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51544,7 +51588,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51581,7 +51626,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "spread",
@@ -51608,7 +51654,8 @@
      },
      "p_model": 0.6,
      "p_mkt": 0.513,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51645,7 +51692,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51682,7 +51730,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -51709,7 +51758,8 @@
      },
      "p_model": 0.658,
      "p_mkt": 0.579,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51746,7 +51796,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51783,7 +51834,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -51820,7 +51872,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51857,7 +51910,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51894,7 +51948,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51931,7 +51986,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -51968,7 +52024,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52005,7 +52062,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52042,7 +52100,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -52079,7 +52138,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -52106,7 +52166,8 @@
      },
      "p_model": 0.5,
      "p_mkt": 0.495,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52143,7 +52204,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52180,7 +52242,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -52217,7 +52280,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -52244,7 +52308,8 @@
      },
      "p_model": 0.5,
      "p_mkt": 0.505,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52281,7 +52346,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52318,7 +52384,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -52355,7 +52422,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52392,7 +52460,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52429,7 +52498,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52466,7 +52536,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52504,6 +52575,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 3 partidos esta temporada"
@@ -52544,7 +52616,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52581,7 +52654,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52618,7 +52692,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52655,7 +52730,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -52682,7 +52758,8 @@
      },
      "p_model": 0.342,
      "p_mkt": 0.421,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52719,7 +52796,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -52746,7 +52824,8 @@
      },
      "p_model": 0.4,
      "p_mkt": 0.487,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52783,7 +52862,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -52820,7 +52900,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52857,7 +52938,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52894,7 +52976,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52931,7 +53014,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -52968,7 +53052,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53005,9 +53090,22 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "ATL": 120,
+     "WAS": 105
+    },
+    "ot": 0,
+    "winner": "ATL",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-11-04-PHI-at-DET",
@@ -53071,7 +53169,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53110,7 +53209,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53149,7 +53249,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -53189,7 +53290,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53227,7 +53329,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [
@@ -53245,7 +53348,8 @@
        "dec": 1.69,
        "ev": 0.077,
        "gid": "2026-11-04-PHI-at-DET",
-       "game": "PHI @ DET"
+       "game": "PHI @ DET",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -53259,7 +53363,8 @@
        "dec": 1.741,
        "ev": 0.024,
        "gid": "2026-11-04-PHI-at-DET",
-       "game": "PHI @ DET"
+       "game": "PHI @ DET",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -53269,7 +53374,8 @@
      "dec": 2.94,
      "fair": 2.66,
      "ev": 0.107,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -53285,7 +53391,8 @@
        "dec": 1.769,
        "ev": 0.04,
        "gid": "2026-11-04-PHI-at-DET",
-       "game": "PHI @ DET"
+       "game": "PHI @ DET",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -53299,7 +53406,8 @@
        "dec": 1.763,
        "ev": 0.008,
        "gid": "2026-11-04-PHI-at-DET",
-       "game": "PHI @ DET"
+       "game": "PHI @ DET",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -53313,7 +53421,8 @@
        "dec": 1.952,
        "ev": 0.098,
        "gid": "2026-11-04-PHI-at-DET",
-       "game": "PHI @ DET"
+       "game": "PHI @ DET",
+       "result": "lost"
       }
      ],
      "n": 3,
@@ -53323,7 +53432,8 @@
      "dec": 6.09,
      "fair": 5.19,
      "ev": 0.172,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -53349,7 +53459,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53373,7 +53484,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53397,7 +53509,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53421,7 +53534,8 @@
        1,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53445,7 +53559,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53469,7 +53584,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53493,7 +53609,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53517,7 +53634,8 @@
        0,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53541,7 +53659,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53565,7 +53684,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53589,7 +53709,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53613,7 +53734,8 @@
        1,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53637,7 +53759,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53661,7 +53784,8 @@
        0,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53685,7 +53809,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53709,7 +53834,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53733,7 +53859,8 @@
        5,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53757,7 +53884,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53781,7 +53909,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53805,7 +53934,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53829,7 +53959,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53853,7 +53984,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53877,7 +54009,8 @@
        2,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53901,7 +54034,8 @@
        0,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53925,7 +54059,8 @@
        0,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53949,7 +54084,8 @@
        0,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -53973,7 +54109,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -53997,7 +54134,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54021,7 +54159,8 @@
        0,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54045,7 +54184,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54069,7 +54209,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54093,7 +54234,8 @@
        0,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54117,7 +54259,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -54157,7 +54300,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54195,7 +54339,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54233,7 +54378,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54271,7 +54417,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54309,7 +54456,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54347,7 +54495,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54384,7 +54533,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54421,7 +54571,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54458,7 +54609,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -54486,7 +54638,8 @@
      "p_model": 0.703,
      "p_mkt": 0.502,
      "cand": false,
-     "no_value_why": "picks de equipo en pausa"
+     "no_value_why": "picks de equipo en pausa",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54523,7 +54676,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -54551,7 +54705,8 @@
      "p_model": 0.756,
      "p_mkt": 0.559,
      "cand": false,
-     "no_value_why": "picks de equipo en pausa"
+     "no_value_why": "picks de equipo en pausa",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54588,7 +54743,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54625,7 +54781,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54663,7 +54820,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54700,7 +54858,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54737,7 +54896,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54774,7 +54934,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54811,7 +54972,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -54848,7 +55010,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54885,7 +55048,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54922,7 +55086,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54959,7 +55124,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -54996,7 +55162,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55033,7 +55200,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55070,7 +55238,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55107,7 +55276,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55144,7 +55314,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55181,7 +55352,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55218,7 +55390,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55255,7 +55428,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -55282,7 +55456,8 @@
      },
      "p_model": 0.502,
      "p_mkt": 0.497,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55319,7 +55494,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -55346,7 +55522,8 @@
      },
      "p_model": 0.498,
      "p_mkt": 0.503,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55383,7 +55560,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55420,7 +55598,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55457,7 +55636,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55494,7 +55674,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55531,7 +55712,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55568,7 +55750,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55605,7 +55788,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55642,7 +55826,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55679,7 +55864,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55716,7 +55902,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55753,7 +55940,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55790,7 +55978,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -55817,7 +56006,8 @@
      },
      "p_model": 0.297,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55854,7 +56044,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -55881,7 +56072,8 @@
      },
      "p_model": 0.244,
      "p_mkt": 0.441,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55918,7 +56110,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -55955,7 +56148,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -55992,7 +56186,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56029,7 +56224,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56066,7 +56262,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56103,7 +56300,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56140,9 +56338,22 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "PHI": 112,
+     "DET": 106
+    },
+    "ot": 0,
+    "winner": "PHI",
+    "winner_ok": false,
+    "picks_won": 1,
+    "picks_lost": 1,
+    "units": -0.31
+   }
   },
   {
    "id": "2026-11-04-CHA-at-BKN",
@@ -56206,7 +56417,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56245,7 +56457,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56284,7 +56497,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "value_bets": [],
@@ -56303,7 +56517,8 @@
        "dec": 1.87,
        "ev": 0.056,
        "gid": "2026-11-04-CHA-at-BKN",
-       "game": "CHA @ BKN"
+       "game": "CHA @ BKN",
+       "result": "lost"
       },
       {
        "kind": "prop",
@@ -56317,7 +56532,8 @@
        "dec": 1.87,
        "ev": 0.047,
        "gid": "2026-11-04-CHA-at-BKN",
-       "game": "CHA @ BKN"
+       "game": "CHA @ BKN",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -56327,7 +56543,8 @@
      "dec": 3.5,
      "fair": 3.16,
      "ev": 0.106,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -56353,7 +56570,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56377,7 +56595,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56401,7 +56620,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56425,7 +56645,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56449,7 +56670,8 @@
        0,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56473,7 +56695,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56497,7 +56720,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -56537,7 +56761,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56575,7 +56800,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56613,7 +56839,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56651,7 +56878,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56689,7 +56917,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56726,7 +56955,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56763,7 +56993,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56800,7 +57031,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56837,7 +57069,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56876,6 +57109,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -56916,7 +57150,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -56953,7 +57188,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -56990,7 +57226,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57028,6 +57265,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -57068,7 +57306,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57105,7 +57344,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57142,7 +57382,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -57169,7 +57410,8 @@
      },
      "p_model": 0.568,
      "p_mkt": 0.491,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57206,7 +57448,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57243,7 +57486,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57280,7 +57524,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57317,7 +57562,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -57344,7 +57590,8 @@
      },
      "p_model": 0.55,
      "p_mkt": 0.504,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -57371,7 +57618,8 @@
      },
      "p_model": 0.641,
      "p_mkt": 0.599,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57408,7 +57656,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57445,7 +57694,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57482,7 +57732,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57519,7 +57770,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57556,7 +57808,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -57583,7 +57836,8 @@
      },
      "p_model": 0.359,
      "p_mkt": 0.401,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -57610,7 +57864,8 @@
      },
      "p_model": 0.45,
      "p_mkt": 0.496,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57647,7 +57902,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -57684,7 +57940,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57721,7 +57978,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -57748,7 +58006,8 @@
      },
      "p_model": 0.432,
      "p_mkt": 0.509,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57785,7 +58044,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57823,6 +58083,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -57863,7 +58124,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57901,6 +58163,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 5 partidos esta temporada"
@@ -57941,7 +58204,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -57978,7 +58242,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58015,7 +58280,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58052,7 +58318,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58089,7 +58356,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58126,7 +58394,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58163,7 +58432,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58200,9 +58470,22 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CHA": 104,
+     "BKN": 114
+    },
+    "ot": 0,
+    "winner": "BKN",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-11-04-CHI-at-NYK",
@@ -58266,7 +58549,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58305,7 +58589,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58344,7 +58629,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [],
@@ -58372,7 +58658,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58396,7 +58683,8 @@
        1,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58420,7 +58708,8 @@
        3,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58444,7 +58733,8 @@
        2,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58468,7 +58758,8 @@
        4,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58492,7 +58783,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58516,7 +58808,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58540,7 +58833,8 @@
        3,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58564,7 +58858,8 @@
        2,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58588,7 +58883,8 @@
        2,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58612,7 +58908,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58636,7 +58933,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58660,7 +58958,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58684,7 +58983,8 @@
        4,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58708,7 +59008,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -58732,7 +59033,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58756,7 +59058,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58780,7 +59083,8 @@
        5,
        5
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -58820,7 +59124,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58858,7 +59163,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58896,7 +59202,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -58935,6 +59242,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -58976,7 +59284,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59014,7 +59323,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59052,7 +59362,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59089,7 +59400,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59126,7 +59438,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59163,7 +59476,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59200,7 +59514,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59237,7 +59552,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59274,7 +59590,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59311,7 +59628,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59348,7 +59666,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -59375,7 +59694,8 @@
      },
      "p_model": 0.574,
      "p_mkt": 0.493,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59412,7 +59732,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59449,7 +59770,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59486,7 +59808,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59523,7 +59846,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59561,6 +59885,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -59601,7 +59926,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59638,7 +59964,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -59665,7 +59992,8 @@
      },
      "p_model": 0.864,
      "p_mkt": 0.823,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59702,7 +60030,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -59729,7 +60058,8 @@
      },
      "p_model": 0.521,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59766,7 +60096,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59804,6 +60135,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -59844,7 +60176,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59881,7 +60214,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -59908,7 +60242,8 @@
      },
      "p_model": 0.479,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -59945,7 +60280,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -59982,7 +60318,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -60009,7 +60346,8 @@
      },
      "p_model": 0.426,
      "p_mkt": 0.507,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60046,7 +60384,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60083,7 +60422,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60120,7 +60460,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60157,7 +60498,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -60184,7 +60526,8 @@
      },
      "p_model": 0.136,
      "p_mkt": 0.177,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60221,7 +60564,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60258,7 +60602,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60295,7 +60640,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60332,7 +60678,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60369,7 +60716,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60406,7 +60754,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60444,6 +60793,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -60484,9 +60834,22 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CHI": 105,
+     "NYK": 135
+    },
+    "ot": 0,
+    "winner": "NYK",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-11-04-MIL-at-BOS",
@@ -60550,7 +60913,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60589,7 +60953,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60628,7 +60993,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [],
@@ -60656,7 +61022,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60680,7 +61047,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60704,7 +61072,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60728,7 +61097,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60752,7 +61122,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60776,7 +61147,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60800,7 +61172,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60824,7 +61197,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60848,7 +61222,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60872,7 +61247,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60896,7 +61272,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60920,7 +61297,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60944,7 +61322,8 @@
        0,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -60968,7 +61347,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -60992,7 +61372,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61016,7 +61397,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61040,7 +61422,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61064,7 +61447,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61088,7 +61472,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61112,7 +61497,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61136,7 +61522,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61160,7 +61547,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -61200,7 +61588,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61238,7 +61627,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61276,7 +61666,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61314,7 +61705,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61352,7 +61744,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61390,7 +61783,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61427,7 +61821,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61464,7 +61859,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61502,7 +61898,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -61530,7 +61927,8 @@
      "p_model": 0.683,
      "p_mkt": 0.5,
      "cand": false,
-     "no_value_why": "picks de equipo en pausa"
+     "no_value_why": "picks de equipo en pausa",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61567,7 +61965,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61605,7 +62004,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -61632,7 +62032,8 @@
      },
      "p_model": 0.63,
      "p_mkt": 0.496,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61669,7 +62070,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61706,7 +62108,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61743,7 +62146,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61780,7 +62184,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61817,7 +62222,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -61844,7 +62250,8 @@
      },
      "p_model": 0.906,
      "p_mkt": 0.81,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61881,7 +62288,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61918,7 +62326,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -61955,7 +62364,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -61992,7 +62402,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62029,7 +62440,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62066,7 +62478,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62103,7 +62516,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62140,7 +62554,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62177,7 +62592,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62214,7 +62630,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62251,7 +62668,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62288,7 +62706,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62325,7 +62744,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62362,7 +62782,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62399,7 +62820,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62436,7 +62858,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62473,7 +62896,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -62500,7 +62924,8 @@
      },
      "p_model": 0.37,
      "p_mkt": 0.504,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -62527,7 +62952,8 @@
      },
      "p_model": 0.317,
      "p_mkt": 0.5,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62564,7 +62990,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62601,7 +63028,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62638,7 +63066,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -62665,7 +63094,8 @@
      },
      "p_model": 0.094,
      "p_mkt": 0.19,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62702,7 +63132,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62739,7 +63170,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62776,7 +63208,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62813,7 +63246,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -62850,9 +63284,22 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIL": 102,
+     "BOS": 109
+    },
+    "ot": 0,
+    "winner": "BOS",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-11-04-CLE-at-OKC",
@@ -62916,7 +63363,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -62955,7 +63403,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -62994,7 +63443,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -63034,7 +63484,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "parlays": [],
@@ -63061,7 +63512,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63085,7 +63537,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63109,7 +63562,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63133,7 +63587,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63157,7 +63612,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63181,7 +63637,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63205,7 +63662,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63229,7 +63687,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63253,7 +63712,8 @@
        0,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63277,7 +63737,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63301,7 +63762,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63325,7 +63787,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63349,7 +63812,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63373,7 +63837,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63397,7 +63862,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63421,7 +63887,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63445,7 +63912,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63469,7 +63937,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63493,7 +63962,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63517,7 +63987,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63541,7 +64012,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63565,7 +64037,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63589,7 +64062,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63613,7 +64087,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63637,7 +64112,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63661,7 +64137,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63685,7 +64162,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63709,7 +64187,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63733,7 +64212,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -63773,7 +64253,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63811,7 +64292,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -63849,7 +64331,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -63887,7 +64370,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63925,7 +64409,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -63963,7 +64448,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64001,7 +64487,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64038,7 +64525,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64076,7 +64564,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64113,7 +64602,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64150,7 +64640,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64187,7 +64678,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64225,6 +64717,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -64266,6 +64759,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
@@ -64306,7 +64800,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64343,7 +64838,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64380,7 +64876,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -64417,7 +64914,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64454,7 +64952,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64492,6 +64991,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -64532,7 +65032,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64569,7 +65070,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64606,7 +65108,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64643,7 +65146,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64680,7 +65184,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64717,7 +65222,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -64744,7 +65250,8 @@
      },
      "p_model": 0.436,
      "p_mkt": 0.414,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64781,7 +65288,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64818,7 +65326,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -64845,7 +65354,8 @@
      },
      "p_model": 0.526,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -64882,7 +65392,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -64909,7 +65420,8 @@
      },
      "p_model": 0.526,
      "p_mkt": 0.501,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64946,7 +65458,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -64983,7 +65496,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -65010,7 +65524,8 @@
      },
      "p_model": 0.564,
      "p_mkt": 0.586,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65047,7 +65562,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65084,7 +65600,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65121,7 +65638,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "spread",
@@ -65148,7 +65666,8 @@
      },
      "p_model": 0.474,
      "p_mkt": 0.499,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -65175,7 +65694,8 @@
      },
      "p_model": 0.474,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65212,7 +65732,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65249,7 +65770,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65286,7 +65808,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65323,7 +65846,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65360,7 +65884,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65398,6 +65923,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
@@ -65438,7 +65964,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65475,7 +66002,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65512,7 +66040,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65549,7 +66078,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65586,7 +66116,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65623,7 +66154,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65660,7 +66192,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65697,7 +66230,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65734,7 +66268,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65771,7 +66306,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65808,7 +66344,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -65845,9 +66382,22 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "CLE": 116,
+     "OKC": 124
+    },
+    "ot": 0,
+    "winner": "OKC",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 1,
+    "units": -1
+   }
   },
   {
    "id": "2026-11-04-IND-at-MEM",
@@ -65911,7 +66461,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -65950,7 +66501,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -65988,7 +66540,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -66028,7 +66581,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [],
@@ -66055,7 +66609,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66079,7 +66634,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66103,7 +66659,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66127,7 +66684,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66151,7 +66709,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66175,7 +66734,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66199,7 +66759,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66223,7 +66784,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66247,7 +66809,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66271,7 +66834,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -66311,7 +66875,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66349,7 +66914,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66386,7 +66952,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66424,7 +66991,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66462,7 +67030,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66501,6 +67070,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -66541,7 +67111,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -66579,7 +67150,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66617,7 +67189,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66654,7 +67227,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -66682,7 +67256,8 @@
      "p_model": 0.671,
      "p_mkt": 0.509,
      "cand": false,
-     "no_value_why": "picks de equipo en pausa"
+     "no_value_why": "picks de equipo en pausa",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66719,7 +67294,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66757,6 +67333,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -66797,7 +67374,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -66824,7 +67402,8 @@
      },
      "p_model": 0.818,
      "p_mkt": 0.683,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -66851,7 +67430,8 @@
      },
      "p_model": 0.623,
      "p_mkt": 0.508,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66889,6 +67469,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -66929,7 +67510,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -66967,6 +67549,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -67007,7 +67590,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67044,7 +67628,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67081,7 +67666,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67118,7 +67704,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67155,7 +67742,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67192,7 +67780,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67229,7 +67818,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67266,7 +67856,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67303,7 +67894,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67340,7 +67932,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67377,7 +67970,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67414,7 +68008,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67451,7 +68046,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67489,6 +68085,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -67529,7 +68126,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67566,7 +68164,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67604,6 +68203,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -67634,7 +68234,8 @@
      },
      "p_model": 0.377,
      "p_mkt": 0.492,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67671,7 +68272,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67708,7 +68310,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -67745,7 +68348,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67782,7 +68386,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67820,6 +68425,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -67850,7 +68456,8 @@
      },
      "p_model": 0.329,
      "p_mkt": 0.491,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -67877,7 +68484,8 @@
      },
      "p_model": 0.182,
      "p_mkt": 0.317,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67915,6 +68523,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -67955,7 +68564,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -67992,7 +68602,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68029,9 +68640,22 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "IND": 107,
+     "MEM": 103
+    },
+    "ot": 0,
+    "winner": "IND",
+    "winner_ok": false,
+    "picks_won": 1,
+    "picks_lost": 0,
+    "units": 1.35
+   }
   },
   {
    "id": "2026-11-04-UTA-at-NOP",
@@ -68095,7 +68719,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68134,7 +68759,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -68173,7 +68799,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -68213,7 +68840,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [
@@ -68231,7 +68859,8 @@
        "dec": 1.69,
        "ev": 0.023,
        "gid": "2026-11-04-UTA-at-NOP",
-       "game": "UTA @ NOP"
+       "game": "UTA @ NOP",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -68245,7 +68874,8 @@
        "dec": 1.775,
        "ev": 0.029,
        "gid": "2026-11-04-UTA-at-NOP",
-       "game": "UTA @ NOP"
+       "game": "UTA @ NOP",
+       "result": "lost"
       }
      ],
      "n": 2,
@@ -68255,7 +68885,8 @@
      "dec": 3.0,
      "fair": 2.83,
      "ev": 0.061,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -68281,7 +68912,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68305,7 +68937,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68329,7 +68962,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68353,7 +68987,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68377,7 +69012,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68401,7 +69037,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68425,7 +69062,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68449,7 +69087,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68473,7 +69112,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68497,7 +69137,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68521,7 +69162,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -68561,7 +69203,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68599,7 +69242,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -68637,7 +69281,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68675,7 +69320,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68713,7 +69359,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68751,7 +69398,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68789,7 +69437,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -68827,7 +69476,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68865,7 +69515,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -68903,7 +69554,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68940,7 +69592,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -68977,7 +69630,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69014,7 +69668,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -69051,7 +69706,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -69089,7 +69745,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69126,7 +69783,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69165,6 +69823,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -69205,7 +69864,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -69232,7 +69892,8 @@
      },
      "p_model": 0.66,
      "p_mkt": 0.51,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -69259,7 +69920,8 @@
      },
      "p_model": 0.638,
      "p_mkt": 0.497,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69296,7 +69958,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69334,6 +69997,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -69375,6 +70039,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -69415,7 +70080,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -69442,7 +70108,8 @@
      },
      "p_model": 0.79,
      "p_mkt": 0.661,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69479,7 +70146,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69516,7 +70184,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69553,7 +70222,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69590,7 +70260,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69627,7 +70298,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69664,7 +70336,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69701,7 +70374,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69738,7 +70412,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -69776,6 +70451,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -69816,7 +70492,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69853,7 +70530,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -69891,6 +70569,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -69931,7 +70610,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -69968,7 +70648,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70005,7 +70686,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70042,7 +70724,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70080,6 +70763,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -70120,7 +70804,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70157,7 +70842,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -70184,7 +70870,8 @@
      },
      "p_model": 0.362,
      "p_mkt": 0.503,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70221,7 +70908,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -70258,7 +70946,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -70285,7 +70974,8 @@
      },
      "p_model": 0.34,
      "p_mkt": 0.49,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70322,7 +71012,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70359,7 +71050,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -70386,7 +71078,8 @@
      },
      "p_model": 0.21,
      "p_mkt": 0.339,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70423,7 +71116,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70460,7 +71154,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70497,7 +71192,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -70534,7 +71230,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70571,7 +71268,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70608,7 +71306,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70645,7 +71344,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70682,7 +71382,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70719,7 +71420,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -70756,7 +71458,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70793,9 +71496,22 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "push"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "UTA": 113,
+     "NOP": 120
+    },
+    "ot": 1,
+    "winner": "NOP",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 0,
+    "units": 1.02
+   }
   },
   {
    "id": "2026-11-04-MIN-at-HOU",
@@ -70859,7 +71575,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70898,7 +71615,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -70937,7 +71655,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [],
@@ -70956,7 +71675,8 @@
        "dec": 1.645,
        "ev": 0.034,
        "gid": "2026-11-04-MIN-at-HOU",
-       "game": "MIN @ HOU"
+       "game": "MIN @ HOU",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -70970,7 +71690,8 @@
        "dec": 1.769,
        "ev": 0.041,
        "gid": "2026-11-04-MIN-at-HOU",
-       "game": "MIN @ HOU"
+       "game": "MIN @ HOU",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -70980,7 +71701,8 @@
      "dec": 2.91,
      "fair": 2.7,
      "ev": 0.076,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
    ],
    "model_picks": [
@@ -71006,7 +71728,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71030,7 +71753,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71054,7 +71778,8 @@
        0,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71078,7 +71803,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71102,7 +71828,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71126,7 +71853,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71150,7 +71878,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71174,7 +71903,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71198,7 +71928,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71222,7 +71953,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71246,7 +71978,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71270,7 +72003,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71294,7 +72028,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -71334,7 +72069,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71372,7 +72108,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71410,7 +72147,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71448,7 +72186,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71485,7 +72224,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71522,7 +72262,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71559,7 +72300,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71596,7 +72338,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71633,7 +72376,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -71660,7 +72404,8 @@
      },
      "p_model": 0.659,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71698,6 +72443,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 6 partidos esta temporada"
@@ -71738,7 +72484,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71775,7 +72522,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71812,7 +72560,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71849,7 +72598,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71886,7 +72636,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71923,7 +72674,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -71960,7 +72712,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -71997,7 +72750,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72034,7 +72788,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72071,7 +72826,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72108,7 +72864,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72145,7 +72902,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72182,7 +72940,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -72209,7 +72968,8 @@
      },
      "p_model": 0.338,
      "p_mkt": 0.298,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72246,7 +73006,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -72273,7 +73034,8 @@
      },
      "p_model": 0.548,
      "p_mkt": 0.5,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72311,6 +73073,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 6 partidos esta temporada"
@@ -72351,7 +73114,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72388,7 +73152,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72425,7 +73190,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72462,7 +73228,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72499,7 +73266,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72536,7 +73304,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72573,7 +73342,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72610,7 +73380,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72647,7 +73418,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72684,7 +73456,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72721,7 +73494,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -72758,7 +73532,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72796,6 +73571,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 6 partidos esta temporada"
@@ -72836,7 +73612,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -72863,7 +73640,8 @@
      },
      "p_model": 0.662,
      "p_mkt": 0.702,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72900,7 +73678,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72937,7 +73716,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -72974,7 +73754,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73011,7 +73792,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73048,7 +73830,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -73075,7 +73858,8 @@
      },
      "p_model": 0.452,
      "p_mkt": 0.5,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73112,7 +73896,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73149,7 +73934,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73186,7 +73972,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73223,7 +74010,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73260,7 +74048,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73297,7 +74086,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -73324,7 +74114,8 @@
      },
      "p_model": 0.341,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73362,6 +74153,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 6 partidos esta temporada"
@@ -73402,7 +74194,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73439,7 +74232,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73476,7 +74270,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73513,9 +74308,22 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIN": 117,
+     "HOU": 107
+    },
+    "ot": 0,
+    "winner": "MIN",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
+   }
   },
   {
    "id": "2026-11-04-POR-at-PHX",
@@ -73579,7 +74387,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73618,7 +74427,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73658,6 +74468,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -73701,7 +74512,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73740,6 +74552,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -73781,7 +74594,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [],
@@ -73808,7 +74622,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73832,7 +74647,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73856,7 +74672,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73880,7 +74697,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73904,7 +74722,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73928,7 +74747,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -73952,7 +74772,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -73976,7 +74797,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74000,7 +74822,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74024,7 +74847,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74048,7 +74872,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74072,7 +74897,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74096,7 +74922,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74120,7 +74947,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74144,7 +74972,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -74184,7 +75013,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74222,7 +75052,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74261,6 +75092,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -74302,7 +75134,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74340,7 +75173,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74378,7 +75212,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74416,7 +75251,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74454,7 +75290,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74492,7 +75329,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74529,7 +75367,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74567,6 +75406,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -74607,7 +75447,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74645,7 +75486,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74682,7 +75524,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74721,6 +75564,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -74761,7 +75605,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74798,7 +75643,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74836,7 +75682,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74873,7 +75720,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74910,7 +75758,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -74947,7 +75796,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -74984,7 +75834,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75021,7 +75872,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75058,7 +75910,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75095,7 +75948,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -75122,7 +75976,8 @@
      },
      "p_model": 0.564,
      "p_mkt": 0.501,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75159,7 +76014,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75196,7 +76052,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75233,7 +76090,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75270,7 +76128,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75307,7 +76166,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75344,7 +76204,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -75371,7 +76232,8 @@
      },
      "p_model": 0.591,
      "p_mkt": 0.578,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75408,7 +76270,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -75435,7 +76298,8 @@
      },
      "p_model": 0.528,
      "p_mkt": 0.513,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -75462,7 +76326,8 @@
      },
      "p_model": 0.409,
      "p_mkt": 0.422,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75499,7 +76364,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75536,7 +76402,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -75563,7 +76430,8 @@
      },
      "p_model": 0.471,
      "p_mkt": 0.487,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75600,7 +76468,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75637,7 +76506,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75674,7 +76544,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75711,7 +76582,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75748,7 +76620,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -75775,7 +76648,8 @@
      },
      "p_model": 0.436,
      "p_mkt": 0.499,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75812,7 +76686,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75849,7 +76724,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75886,7 +76762,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -75923,7 +76800,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75960,7 +76838,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -75998,6 +76877,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -76038,7 +76918,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76076,6 +76957,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 6 partidos esta temporada"
@@ -76116,7 +76998,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76153,7 +77036,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76190,7 +77074,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76227,7 +77112,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76264,7 +77150,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76301,9 +77188,22 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "POR": 132,
+     "PHX": 119
+    },
+    "ot": 0,
+    "winner": "POR",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 2,
+    "units": -0.6
+   }
   },
   {
    "id": "2026-11-04-TOR-at-DEN",
@@ -76367,7 +77267,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76406,7 +77307,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76445,7 +77347,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -76485,7 +77388,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76523,7 +77427,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76561,7 +77466,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -76579,7 +77485,8 @@
        "dec": 1.787,
        "ev": 0.023,
        "gid": "2026-11-04-TOR-at-DEN",
-       "game": "TOR @ DEN"
+       "game": "TOR @ DEN",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -76593,7 +77500,8 @@
        "dec": 1.87,
        "ev": 0.04,
        "gid": "2026-11-04-TOR-at-DEN",
-       "game": "TOR @ DEN"
+       "game": "TOR @ DEN",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -76603,7 +77511,8 @@
      "dec": 3.34,
      "fair": 3.17,
      "ev": 0.056,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
    ],
    "model_picks": [
@@ -76629,7 +77538,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -76653,7 +77563,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76677,7 +77588,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76701,7 +77613,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76725,7 +77638,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76749,7 +77663,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76773,7 +77688,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -76797,7 +77713,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76821,7 +77738,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -76845,7 +77763,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -76869,7 +77788,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76893,7 +77813,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "push"
     },
     {
      "kind": "prop",
@@ -76917,7 +77838,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -76941,7 +77863,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -76981,7 +77904,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77019,7 +77943,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77057,7 +77982,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77094,7 +78020,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77131,7 +78058,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77170,6 +78098,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 6 partidos esta temporada"
@@ -77211,7 +78140,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77248,7 +78178,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77285,7 +78216,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77322,7 +78254,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77359,7 +78292,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77396,7 +78330,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -77423,7 +78358,8 @@
      },
      "p_model": 0.482,
      "p_mkt": 0.373,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77460,7 +78396,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77497,7 +78434,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77534,7 +78472,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77571,7 +78510,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77608,7 +78548,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77645,7 +78586,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -77672,7 +78614,8 @@
      },
      "p_model": 0.603,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77709,7 +78652,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -77736,7 +78680,8 @@
      },
      "p_model": 0.605,
      "p_mkt": 0.507,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77773,7 +78718,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77810,7 +78756,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77847,7 +78794,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77884,7 +78832,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -77921,7 +78870,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77958,7 +78908,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -77995,7 +78946,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78032,7 +78984,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78069,7 +79022,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78106,7 +79060,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78143,7 +79098,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78180,7 +79136,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -78207,7 +79164,8 @@
      },
      "p_model": 0.518,
      "p_mkt": 0.627,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78244,7 +79202,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78281,7 +79240,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -78308,7 +79268,8 @@
      },
      "p_model": 0.396,
      "p_mkt": 0.493,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -78335,7 +79296,8 @@
      },
      "p_model": 0.397,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78372,7 +79334,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78409,7 +79372,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78446,7 +79410,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78483,7 +79448,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78520,7 +79486,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78557,7 +79524,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78594,7 +79562,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78631,7 +79600,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78668,7 +79638,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78706,6 +79677,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 6 partidos esta temporada"
@@ -78746,7 +79718,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78783,9 +79756,22 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "TOR": 109,
+     "DEN": 128
+    },
+    "ot": 0,
+    "winner": "DEN",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 2,
+    "units": -0.95
+   }
   },
   {
    "id": "2026-11-04-DAL-at-SAS",
@@ -78849,7 +79835,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -78888,7 +79875,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -78928,6 +79916,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -78971,7 +79960,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79009,7 +79999,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [
@@ -79027,7 +80018,8 @@
        "dec": 1.746,
        "ev": 0.064,
        "gid": "2026-11-04-DAL-at-SAS",
-       "game": "DAL @ SAS"
+       "game": "DAL @ SAS",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -79041,7 +80033,8 @@
        "dec": 1.952,
        "ev": 0.119,
        "gid": "2026-11-04-DAL-at-SAS",
-       "game": "DAL @ SAS"
+       "game": "DAL @ SAS",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -79051,7 +80044,8 @@
      "dec": 3.41,
      "fair": 2.88,
      "ev": 0.184,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
    ],
    "model_picks": [
@@ -79077,7 +80071,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79101,7 +80096,8 @@
        3,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79125,7 +80121,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79149,7 +80146,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79173,7 +80171,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79197,7 +80196,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79221,7 +80221,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79245,7 +80246,8 @@
        4,
        5
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79269,7 +80271,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79293,7 +80296,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79317,7 +80321,8 @@
        5,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79341,7 +80346,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79365,7 +80371,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79389,7 +80396,8 @@
        3,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79413,7 +80421,8 @@
        4,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79437,7 +80446,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79461,7 +80471,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79485,7 +80496,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79509,7 +80521,8 @@
        0,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79533,7 +80546,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79557,7 +80571,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79581,7 +80596,8 @@
        3,
        5
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79605,7 +80621,8 @@
        3,
        4
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -79645,7 +80662,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79683,7 +80701,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79722,6 +80741,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -79763,7 +80783,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79801,7 +80822,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79839,7 +80861,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79877,7 +80900,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79915,7 +80939,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -79952,7 +80977,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -79989,7 +81015,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80027,7 +81054,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80065,7 +81093,8 @@
        "lg": 1.2,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80102,7 +81131,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80139,7 +81169,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80176,7 +81207,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80213,7 +81245,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80250,7 +81283,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80288,6 +81322,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -80328,7 +81363,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80365,7 +81401,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80403,6 +81440,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -80433,7 +81471,8 @@
      },
      "p_model": 0.552,
      "p_mkt": 0.492,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -80460,7 +81499,8 @@
      },
      "p_model": 0.563,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80498,6 +81538,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -80538,7 +81579,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80576,6 +81618,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -80606,7 +81649,8 @@
      },
      "p_model": 0.851,
      "p_mkt": 0.819,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80643,7 +81687,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80680,7 +81725,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80717,7 +81763,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80754,7 +81801,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80791,7 +81839,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80828,7 +81877,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80865,7 +81915,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80902,7 +81953,8 @@
        "lg": 7.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -80939,7 +81991,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -80976,7 +82029,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81013,7 +82067,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81050,7 +82105,8 @@
        "lg": 4.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -81077,7 +82133,8 @@
      },
      "p_model": 0.448,
      "p_mkt": 0.508,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -81104,7 +82161,8 @@
      },
      "p_model": 0.437,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -81131,7 +82189,8 @@
      },
      "p_model": 0.149,
      "p_mkt": 0.181,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81168,7 +82227,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81205,7 +82265,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81242,7 +82303,8 @@
        "lg": 1.2,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81279,7 +82341,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81316,7 +82379,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81353,7 +82417,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81391,6 +82456,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 5 partidos esta temporada"
@@ -81431,7 +82497,8 @@
        "lg": 6.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81468,9 +82535,22 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "DAL": 111,
+     "SAS": 112
+    },
+    "ot": 0,
+    "winner": "SAS",
+    "winner_ok": true,
+    "picks_won": 2,
+    "picks_lost": 0,
+    "units": 2.33
+   }
   },
   {
    "id": "2026-11-04-LAL-at-SAC",
@@ -81534,7 +82614,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81573,7 +82654,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81611,7 +82693,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -81651,7 +82734,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "parlays": [
@@ -81669,7 +82753,8 @@
        "dec": 1.741,
        "ev": 0.026,
        "gid": "2026-11-04-LAL-at-SAC",
-       "game": "LAL @ SAC"
+       "game": "LAL @ SAC",
+       "result": "won"
       },
       {
        "kind": "prop",
@@ -81683,7 +82768,8 @@
        "dec": 1.893,
        "ev": 0.102,
        "gid": "2026-11-04-LAL-at-SAC",
-       "game": "LAL @ SAC"
+       "game": "LAL @ SAC",
+       "result": "won"
       }
      ],
      "n": 2,
@@ -81693,7 +82779,8 @@
      "dec": 3.3,
      "fair": 2.9,
      "ev": 0.135,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     }
    ],
    "model_picks": [
@@ -81719,7 +82806,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81743,7 +82831,8 @@
        3,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81767,7 +82856,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81791,7 +82881,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81815,7 +82906,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81839,7 +82931,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -81863,7 +82956,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81887,7 +82981,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81911,7 +83006,8 @@
        2,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81935,7 +83031,8 @@
        1,
        3
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -81959,7 +83056,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -81999,7 +83097,8 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82037,7 +83136,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82074,7 +83174,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82112,7 +83213,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82151,6 +83253,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -82192,7 +83295,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82230,7 +83334,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82269,6 +83374,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -82309,7 +83415,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82346,7 +83453,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82383,7 +83491,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82420,7 +83529,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82457,7 +83567,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82494,7 +83605,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -82521,7 +83633,8 @@
      },
      "p_model": 0.62,
      "p_mkt": 0.503,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82558,7 +83671,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82595,7 +83709,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82632,7 +83747,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82670,6 +83786,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -82710,7 +83827,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -82748,6 +83866,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -82778,7 +83897,8 @@
      },
      "p_model": 0.512,
      "p_mkt": 0.492,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82815,7 +83935,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -82842,7 +83963,8 @@
      },
      "p_model": 0.826,
      "p_mkt": 0.823,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82879,7 +84001,8 @@
        "lg": 23.5,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82916,7 +84039,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -82953,7 +84077,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -82980,7 +84105,8 @@
      },
      "p_model": 0.174,
      "p_mkt": 0.177,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83017,7 +84143,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83054,7 +84181,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -83081,7 +84209,8 @@
      },
      "p_model": 0.488,
      "p_mkt": 0.508,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83118,7 +84247,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83155,7 +84285,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83192,7 +84323,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83229,7 +84361,8 @@
        "lg": 20.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "total",
@@ -83256,7 +84389,8 @@
      },
      "p_model": 0.38,
      "p_mkt": 0.497,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83293,7 +84427,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83330,7 +84465,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83367,7 +84503,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83405,6 +84542,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -83446,6 +84584,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -83486,7 +84625,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83523,7 +84663,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83560,9 +84701,22 @@
        "lg": 6.0,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "LAL": 116,
+     "SAC": 103
+    },
+    "ot": 0,
+    "winner": "LAL",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 0,
+    "units": 0.89
+   }
   },
   {
    "id": "2026-11-04-MIA-at-LAC",
@@ -83626,7 +84780,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83665,7 +84820,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83704,7 +84860,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -83744,7 +84901,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     }
    ],
    "parlays": [],
@@ -83771,7 +84929,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83795,7 +84954,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83819,7 +84979,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -83843,7 +85004,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83867,7 +85029,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83891,7 +85054,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83915,7 +85079,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83939,7 +85104,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83963,7 +85129,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -83987,7 +85154,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84011,7 +85179,8 @@
        1,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84035,7 +85204,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84059,7 +85229,8 @@
        1,
        1
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84083,7 +85254,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84107,7 +85279,8 @@
        0,
        1
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84131,7 +85304,8 @@
        0,
        0
       ]
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84155,7 +85329,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -84195,7 +85370,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84233,7 +85409,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84271,7 +85448,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84309,7 +85487,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84347,7 +85526,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84385,7 +85565,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84423,7 +85604,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84460,7 +85642,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -84488,7 +85671,8 @@
      "p_model": 0.504,
      "p_mkt": 0.36,
      "cand": false,
-     "no_value_why": "picks de equipo en pausa"
+     "no_value_why": "picks de equipo en pausa",
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84526,7 +85710,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84563,7 +85748,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84600,7 +85786,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -84627,7 +85814,8 @@
      },
      "p_model": 0.625,
      "p_mkt": 0.489,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84664,7 +85852,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84701,7 +85890,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -84728,7 +85918,8 @@
      },
      "p_model": 0.603,
      "p_mkt": 0.502,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84765,7 +85956,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84802,7 +85994,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84839,7 +86032,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84876,7 +86070,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84913,7 +86108,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -84950,7 +86146,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -84987,7 +86184,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85024,7 +86222,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85061,7 +86260,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85098,7 +86298,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85135,7 +86336,8 @@
        "lg": 3.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85172,7 +86374,8 @@
        "lg": 3.3,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85209,7 +86412,8 @@
        "lg": 5.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85246,7 +86450,8 @@
        "lg": 27.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85284,6 +86489,7 @@
        "n": 30
       }
      },
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -85324,7 +86530,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85362,6 +86569,7 @@
        "n": 30
       }
      },
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 7 partidos esta temporada"
@@ -85402,7 +86610,8 @@
        "lg": 4.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85439,7 +86648,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85476,7 +86686,8 @@
        "lg": 2.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85513,7 +86724,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85550,7 +86762,8 @@
        "lg": 2.7,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -85577,7 +86790,8 @@
      },
      "p_model": 0.397,
      "p_mkt": 0.498,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -85604,7 +86818,8 @@
      },
      "p_model": 0.496,
      "p_mkt": 0.64,
-     "cand": false
+     "cand": false,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85641,7 +86856,8 @@
        "lg": 21.9,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -85668,7 +86884,8 @@
      },
      "p_model": 0.375,
      "p_mkt": 0.511,
-     "cand": false
+     "cand": false,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85705,7 +86922,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85742,7 +86960,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85779,7 +86998,8 @@
        "lg": 8.1,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85816,7 +87036,8 @@
        "lg": 14.8,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85853,7 +87074,8 @@
        "lg": 10.7,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85890,7 +87112,8 @@
        "lg": 4.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -85927,7 +87150,8 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -85964,9 +87188,22 @@
        "lg": 23.6,
        "n": 30
       }
-     }
+     },
+     "result": "won"
     }
-   ]
+   ],
+   "result": {
+    "score": {
+     "MIA": 117,
+     "LAC": 116
+    },
+    "ot": 1,
+    "winner": "MIA",
+    "winner_ok": false,
+    "picks_won": 0,
+    "picks_lost": 1,
+    "units": -1
+   }
   }
  ]
 }
