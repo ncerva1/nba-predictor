@@ -9,20 +9,19 @@
    "H2H 2025-26: WAS 1-3 ATL; 2025-11-25 ATL 113-132 WAS; 2025-12-06 ATL 131-116 WAS; 2026-02-24 WAS 98-119 ATL; 2026-02-26 WAS 96-126 ATL",
    "Récord: WAS 4-4, ATL 5-4",
    "NBA Cup, Grupo Este C. Ninguno en back-to-back",
-   "En duda (prob. de jugar): Jalen Johnson 45% (tobillo; no jugó el 4-nov); Anthony Davis 65% (tobillo; jugó 30 min el 4-nov)",
    "Fuera y sin partidos esta temporada: Tristan Vukcevic, Jamir Watkins, Mouhamed Gueye, Henri Veesaar, Keshon Gilbert",
+   "Revisión pregame: Anthony Davis (tobillo) y Jalen Johnson (tobillo) OUT",
    "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
   ],
   "out": [
    "Reece Beekman",
    "Justin Champagnie",
    "Asa Newell",
-   "Jock Landale"
+   "Jock Landale",
+   "Anthony Davis",
+   "Jalen Johnson"
   ],
-  "gtd": {
-   "Jalen Johnson": 0.45,
-   "Anthony Davis": 0.65
-  },
+  "gtd": {},
   "reserves": {
    "WAS": [
     {
@@ -85,13 +84,13 @@
     "pace": 102.78
    },
    "adj": {
-    "o": -1.0,
+    "o": -1.5,
     "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Jalen Johnson en duda (tobillo, 2 partidos fuera); Landale y Newell OUT"
+    "roster_note": "Jalen Johnson OUT (tobillo); Landale y Newell OUT"
    }
   },
   "WAS": {
@@ -107,13 +106,13 @@
     "pace": 102.77
    },
    "adj": {
-    "o": -0.5,
-    "d": 0.5,
+    "o": -2.0,
+    "d": 1.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Anthony Davis en duda (tobillo); Champagnie y Beekman OUT"
+    "roster_note": "Anthony Davis OUT (tobillo); Champagnie y Beekman OUT"
    }
   }
  },
@@ -124,52 +123,10 @@
  "players": [
   {
    "team": "ATL",
-   "name": "Jalen Johnson",
-   "pos": "SF",
-   "starter": true,
-   "min": 31.8,
-   "g_cur": 7,
-   "p_play": 0.45,
-   "cur": {
-    "min": 32.7,
-    "pts": 18.29,
-    "reb": 9.0,
-    "ast": 7.86,
-    "fg3m": 1.14,
-    "fgm": 6.43,
-    "fga": 15.29,
-    "fg3a": 4.43,
-    "stl": 0.86,
-    "blk": 0.71,
-    "tov": 3.14,
-    "pf": 3.29,
-    "ftm": 4.29,
-    "fta": 5.14
-   },
-   "prior": {
-    "min": 35.2,
-    "pts": 22.51,
-    "reb": 10.28,
-    "ast": 7.86,
-    "fg3m": 1.67,
-    "fgm": 8.33,
-    "fga": 17.06,
-    "fg3a": 4.74,
-    "stl": 1.24,
-    "blk": 0.43,
-    "tov": 3.39,
-    "pf": 2.1,
-    "ftm": 4.18,
-    "fta": 5.31
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "ATL",
    "name": "Nickeil Alexander-Walker",
    "pos": "SG",
    "starter": true,
-   "min": 29.5,
+   "min": 33.9,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -211,7 +168,7 @@
    "name": "Dyson Daniels",
    "pos": "SG",
    "starter": true,
-   "min": 28.9,
+   "min": 33.3,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -253,7 +210,7 @@
    "name": "Onyeka Okongwu",
    "pos": "C",
    "starter": true,
-   "min": 28.3,
+   "min": 32.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -295,7 +252,7 @@
    "name": "CJ McCollum",
    "pos": "PG",
    "starter": true,
-   "min": 25.9,
+   "min": 29.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -337,7 +294,7 @@
    "name": "Aaron Wiggins",
    "pos": "SG",
    "starter": false,
-   "min": 25.3,
+   "min": 29.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -377,8 +334,8 @@
    "team": "ATL",
    "name": "Luguentz Dort",
    "pos": "SF",
-   "starter": false,
-   "min": 24.6,
+   "starter": true,
+   "min": 28.3,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -412,14 +369,15 @@
     "pf": 2.59,
     "ftm": 0.64,
     "fta": 0.84
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "ATL",
    "name": "Kingston Flemings",
    "pos": "PG",
    "starter": false,
-   "min": 20.0,
+   "min": 23.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -460,7 +418,7 @@
    "name": "Zuby Ejiofor",
    "pos": "PF",
    "starter": false,
-   "min": 9.9,
+   "min": 11.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -501,7 +459,7 @@
    "name": "Corey Kispert",
    "pos": "SF",
    "starter": false,
-   "min": 8.2,
+   "min": 9.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -542,7 +500,7 @@
    "name": "RayJ Dennis",
    "pos": "F",
    "starter": false,
-   "min": 7.8,
+   "min": 9.0,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -583,7 +541,7 @@
    "name": "Trae Young",
    "pos": "PG",
    "starter": true,
-   "min": 34.0,
+   "min": 38.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -622,52 +580,10 @@
   },
   {
    "team": "WAS",
-   "name": "Anthony Davis",
-   "pos": "PF",
-   "starter": true,
-   "min": 31.4,
-   "g_cur": 8,
-   "p_play": 0.65,
-   "cur": {
-    "min": 33.1,
-    "pts": 23.38,
-    "reb": 9.25,
-    "ast": 2.12,
-    "fg3m": 0.88,
-    "fgm": 9.12,
-    "fga": 18.25,
-    "fg3a": 2.5,
-    "stl": 1.38,
-    "blk": 1.12,
-    "tov": 2.0,
-    "pf": 1.75,
-    "ftm": 4.25,
-    "fta": 5.12
-   },
-   "prior": {
-    "min": 31.2,
-    "pts": 20.35,
-    "reb": 11.05,
-    "ast": 2.8,
-    "fg3m": 0.5,
-    "fgm": 8.45,
-    "fga": 16.7,
-    "fg3a": 1.85,
-    "stl": 1.1,
-    "blk": 1.65,
-    "tov": 2.05,
-    "pf": 2.1,
-    "ftm": 2.95,
-    "fta": 4.05
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "WAS",
    "name": "Kyshawn George",
    "pos": "SG",
    "starter": true,
-   "min": 31.2,
+   "min": 35.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -709,7 +625,7 @@
    "name": "AJ Dybantsa",
    "pos": "SF",
    "starter": true,
-   "min": 29.0,
+   "min": 33.3,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -750,8 +666,8 @@
    "team": "WAS",
    "name": "Bilal Coulibaly",
    "pos": "SF",
-   "starter": false,
-   "min": 25.5,
+   "starter": true,
+   "min": 29.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -785,14 +701,15 @@
     "pf": 2.32,
     "ftm": 2.36,
     "fta": 3.16
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "WAS",
    "name": "Alex Sarr",
    "pos": "C",
    "starter": true,
-   "min": 23.8,
+   "min": 27.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -834,7 +751,7 @@
    "name": "Tre Johnson",
    "pos": "SG",
    "starter": false,
-   "min": 19.0,
+   "min": 21.9,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -875,7 +792,7 @@
    "name": "Bub Carrington",
    "pos": "PG",
    "starter": false,
-   "min": 18.6,
+   "min": 21.4,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -916,7 +833,7 @@
    "name": "Deandre Ayton",
    "pos": "C",
    "starter": false,
-   "min": 14.3,
+   "min": 16.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -957,7 +874,7 @@
    "name": "Khris Middleton",
    "pos": "SF",
    "starter": false,
-   "min": 13.1,
+   "min": 15.1,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1050,13 +967,6 @@
     1.5,
     110,
     -112
-   ]
-  },
-  "Jalen Johnson": {
-   "fg3m": [
-    1.5,
-    117,
-    -120
    ]
   },
   "AJ Dybantsa": {

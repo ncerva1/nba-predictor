@@ -4,7 +4,7 @@
   "schedule_odds": "NBA.com/games 6-nov (9 partidos, todos de la NBA Cup, fase de grupos); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET) + comparador de ML; props de puntos de Covers matchup (línea principal, ambos lados) y triples de scoresandodds.com/nba/props/3-pointers?date=2026-11-06 (puntos, rebotes y asistencias de scoresandodds aún mostraban la jornada del 5-nov)",
   "players_cur": "Game logs oficiales de nba.com 2026-27 hasta el 1-nov + box scores ESPN del 2, 4 y 5-nov (results/) vía gamelogs/build_raw.py",
   "players_prior": "Game logs oficiales de nba.com 2025-26 (temporada regular completa)",
-  "injuries": "ESPN injuries y CBS injuries, 6-nov ~16:30 UTC",
+  "injuries": "ESPN injuries y CBS injuries, 6-nov ~16:30 UTC; revisión pregame 6-nov ~23:00 UTC: posts de @UnderdogNBA que pasó Nicolas (Davis, Jalen Johnson, Diabaté, Schröder y Shannon Jr. OUT; Trey Murphy III disponible; Poeltl probable) + ESPN injuries",
   "b2b": "Ninguno: ninguno de los 18 equipos jugó el 5-nov",
   "db": "BD de rankings: snapshot del 6-nov (B-Ref 2026-27 hasta el 5-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 5-nov)",
   "h2h": "h2h/2025-26.json: 6 cruces nuevos (22 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)"
@@ -952,32 +952,30 @@
    "b2b": [],
    "adj": {
     "WAS": {
-     "o": -0.5,
-     "d": 0.5,
-     "why": "Anthony Davis en duda (tobillo); Champagnie y Beekman OUT"
+     "o": -2.0,
+     "d": 1.0,
+     "why": "Anthony Davis OUT (tobillo); Champagnie y Beekman OUT"
     },
     "ATL": {
-     "o": -1.0,
+     "o": -1.5,
      "d": 0.5,
-     "why": "Jalen Johnson en duda (tobillo, 2 partidos fuera); Landale y Newell OUT"
+     "why": "Jalen Johnson OUT (tobillo); Landale y Newell OUT"
     }
    },
    "out": [
     "Reece Beekman",
     "Justin Champagnie",
     "Asa Newell",
-    "Jock Landale"
+    "Jock Landale",
+    "Anthony Davis",
+    "Jalen Johnson"
    ],
-   "gtd": {
-    "Jalen Johnson": 0.45,
-    "Anthony Davis": 0.65
-   },
    "notes": [
     "H2H 2025-26: WAS 1-3 ATL; 2025-11-25 ATL 113-132 WAS; 2025-12-06 ATL 131-116 WAS; 2026-02-24 WAS 98-119 ATL; 2026-02-26 WAS 96-126 ATL",
     "Récord: WAS 4-4, ATL 5-4",
     "NBA Cup, Grupo Este C. Ninguno en back-to-back",
-    "En duda (prob. de jugar): Jalen Johnson 45% (tobillo; no jugó el 4-nov); Anthony Davis 65% (tobillo; jugó 30 min el 4-nov)",
     "Fuera y sin partidos esta temporada: Tristan Vukcevic, Jamir Watkins, Mouhamed Gueye, Henri Veesaar, Keshon Gilbert",
+    "Revisión pregame: Anthony Davis (tobillo) y Jalen Johnson (tobillo) OUT",
     "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
    ]
   },
@@ -995,25 +993,26 @@
    "b2b": [],
    "adj": {
     "CHA": {
-     "o": -1.0,
-     "d": 0.0,
-     "why": "Kon Knueppel OUT (isquiotibial, hasta ~9-nov); Schröder y Diabaté en duda"
+     "o": -1.5,
+     "d": 0.5,
+     "why": "Knueppel, Schröder y Diabaté OUT"
     }
    },
    "out": [
-    "Kon Knueppel"
+    "Kon Knueppel",
+    "Moussa Diabaté",
+    "Dennis Schröder"
    ],
    "gtd": {
-    "Payton Pritchard": 0.7,
-    "Moussa Diabaté": 0.6,
-    "Dennis Schröder": 0.65
+    "Payton Pritchard": 0.7
    },
    "notes": [
     "H2H 2025-26: BOS 2-1 CHA; 2026-03-04 CHA 118-89 BOS; 2026-03-29 BOS 114-99 CHA; 2026-04-07 CHA 102-113 BOS",
     "Récord: BOS 6-2, CHA 3-6",
     "NBA Cup, Grupo Este C. Ninguno en back-to-back",
-    "En duda (prob. de jugar): Payton Pritchard 70% (abrasión en el ojo; salió pronto el 4-nov); Moussa Diabaté 60% (cuádriceps); Dennis Schröder 65% (muslo)",
+    "En duda (prob. de jugar): Payton Pritchard 70% (abrasión en el ojo; salió pronto el 4-nov)",
     "Fuera y sin partidos esta temporada: Devin Carter, Grant Williams",
+    "Revisión pregame: Dennis Schröder (muslo) y Moussa Diabaté (cuádriceps) OUT",
     "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
    ]
   },
@@ -1091,6 +1090,7 @@
     "NBA Cup, Grupo Oeste A. Ninguno en back-to-back",
     "En duda (prob. de jugar): Max Christie 50% (cadera; no jugó el 4-nov)",
     "Fuera y sin partidos esta temporada: Jusuf Nurkic, Trey Alexander, Dereck Lively II, Tarik Biberovic",
+    "Revisión pregame: Jusuf Nurkic (dedo del pie) fuera al menos 2 semanas más",
     "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
    ]
   },
@@ -1165,6 +1165,7 @@
     "NBA Cup, Grupo Este A. Ninguno en back-to-back",
     "En duda (prob. de jugar): Scottie Barnes 65% (ingle; jugó 32 min el 4-nov)",
     "Fuera y sin partidos esta temporada: Nate Bittle, Kam Jones",
+    "Revisión pregame: Jakob Poeltl (hombro) probable",
     "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
    ]
   },
@@ -1182,25 +1183,22 @@
    "b2b": [],
    "adj": {
     "MIN": {
-     "o": -1.5,
+     "o": -2.0,
      "d": 0.5,
-     "why": "Anthony Edwards OUT (rodilla, hasta ~21-dic)"
+     "why": "Anthony Edwards OUT (rodilla, hasta ~21-dic) y Terrence Shannon Jr. OUT (cadera)"
     }
    },
    "out": [
     "Anthony Edwards",
-    "Yves Missi"
+    "Yves Missi",
+    "Terrence Shannon Jr"
    ],
-   "gtd": {
-    "Terrence Shannon Jr": 0.45,
-    "Trey Murphy III": 0.8
-   },
    "notes": [
     "H2H 2025-26: MIN 3-1 NOP; 2025-12-02 MIN 149-142 NOP; 2025-12-04 MIN 125-116 NOP; 2026-02-06 NOP 119-115 MIN; 2026-04-12 NOP 126-132 MIN",
     "Récord: MIN 6-3, NOP 4-4",
     "NBA Cup, Grupo Oeste B. Ninguno en back-to-back",
-    "En duda (prob. de jugar): Terrence Shannon Jr 45% (cadera; no jugó el 4-nov); Trey Murphy III 80% (rodilla; ESPN: probable para el viernes vs MIN)",
     "Fuera y sin partidos esta temporada: Donte DiVincenzo",
+    "Revisión pregame: Terrence Shannon Jr. (cadera) OUT; Trey Murphy III disponible",
     "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
    ]
   },
