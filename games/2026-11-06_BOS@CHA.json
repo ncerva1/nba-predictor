@@ -9,17 +9,18 @@
    "H2H 2025-26: BOS 2-1 CHA; 2026-03-04 CHA 118-89 BOS; 2026-03-29 BOS 114-99 CHA; 2026-04-07 CHA 102-113 BOS",
    "Récord: BOS 6-2, CHA 3-6",
    "NBA Cup, Grupo Este C. Ninguno en back-to-back",
-   "En duda (prob. de jugar): Payton Pritchard 70% (abrasión en el ojo; salió pronto el 4-nov); Moussa Diabaté 60% (cuádriceps); Dennis Schröder 65% (muslo)",
+   "En duda (prob. de jugar): Payton Pritchard 70% (abrasión en el ojo; salió pronto el 4-nov)",
    "Fuera y sin partidos esta temporada: Devin Carter, Grant Williams",
+   "Revisión pregame: Dennis Schröder (muslo) y Moussa Diabaté (cuádriceps) OUT",
    "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
   ],
   "out": [
-   "Kon Knueppel"
+   "Kon Knueppel",
+   "Moussa Diabaté",
+   "Dennis Schröder"
   ],
   "gtd": {
-   "Payton Pritchard": 0.7,
-   "Moussa Diabaté": 0.6,
-   "Dennis Schröder": 0.65
+   "Payton Pritchard": 0.7
   },
   "reserves": {
    "BOS": [
@@ -95,13 +96,13 @@
     "pace": 97.87
    },
    "adj": {
-    "o": -1.0,
-    "d": 0.0,
+    "o": -1.5,
+    "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Kon Knueppel OUT (isquiotibial, hasta ~9-nov); Schröder y Diabaté en duda"
+    "roster_note": "Knueppel, Schröder y Diabaté OUT"
    }
   },
   "BOS": {
@@ -137,7 +138,7 @@
    "name": "Brandon Miller",
    "pos": "SF",
    "starter": true,
-   "min": 31.7,
+   "min": 38.0,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -176,52 +177,10 @@
   },
   {
    "team": "CHA",
-   "name": "Dennis Schröder",
-   "pos": "PG",
-   "starter": true,
-   "min": 28.9,
-   "g_cur": 9,
-   "p_play": 0.65,
-   "cur": {
-    "min": 30.0,
-    "pts": 10.22,
-    "reb": 3.56,
-    "ast": 4.89,
-    "fg3m": 0.78,
-    "fgm": 3.56,
-    "fga": 9.78,
-    "fg3a": 3.89,
-    "stl": 0.78,
-    "blk": 0.11,
-    "tov": 3.22,
-    "pf": 2.89,
-    "ftm": 2.33,
-    "fta": 2.67
-   },
-   "prior": {
-    "min": 24.2,
-    "pts": 10.8,
-    "reb": 2.71,
-    "ast": 4.87,
-    "fg3m": 1.07,
-    "fgm": 3.64,
-    "fga": 8.99,
-    "fg3a": 3.26,
-    "stl": 0.79,
-    "blk": 0.16,
-    "tov": 1.77,
-    "pf": 1.56,
-    "ftm": 2.44,
-    "fta": 2.93
-   },
-   "slot": "PG"
-  },
-  {
-   "team": "CHA",
    "name": "Naz Reid",
    "pos": "C",
    "starter": true,
-   "min": 28.6,
+   "min": 37.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -256,56 +215,14 @@
     "ftm": 1.17,
     "fta": 1.6
    },
-   "slot": "PF"
-  },
-  {
-   "team": "CHA",
-   "name": "Moussa Diabaté",
-   "pos": "C",
-   "starter": true,
-   "min": 27.7,
-   "g_cur": 9,
-   "p_play": 0.6,
-   "cur": {
-    "min": 28.8,
-    "pts": 8.89,
-    "reb": 9.11,
-    "ast": 2.0,
-    "fg3m": 0.0,
-    "fgm": 3.67,
-    "fga": 5.78,
-    "fg3a": 0.0,
-    "stl": 1.56,
-    "blk": 0.89,
-    "tov": 1.78,
-    "pf": 2.78,
-    "ftm": 1.56,
-    "fta": 2.11
-   },
-   "prior": {
-    "min": 26.0,
-    "pts": 7.88,
-    "reb": 8.7,
-    "ast": 1.93,
-    "fg3m": 0.01,
-    "fgm": 3.14,
-    "fga": 4.97,
-    "fg3a": 0.03,
-    "stl": 0.77,
-    "blk": 0.99,
-    "tov": 1.0,
-    "pf": 2.41,
-    "ftm": 1.59,
-    "fta": 2.41
-   },
    "slot": "C"
   },
   {
    "team": "CHA",
    "name": "Grayson Allen",
    "pos": "SG",
-   "starter": false,
-   "min": 25.4,
+   "starter": true,
+   "min": 33.3,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -339,14 +256,15 @@
     "pf": 2.29,
     "ftm": 2.82,
     "fta": 3.29
-   }
+   },
+   "slot": "SG"
   },
   {
    "team": "CHA",
    "name": "Sion James",
    "pos": "SG",
    "starter": true,
-   "min": 24.4,
+   "min": 31.9,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -381,14 +299,14 @@
     "ftm": 1.0,
     "fta": 1.2
    },
-   "slot": "SG"
+   "slot": "PG"
   },
   {
    "team": "CHA",
    "name": "Royce O'Neale",
    "pos": "SF",
-   "starter": false,
-   "min": 17.3,
+   "starter": true,
+   "min": 22.7,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -422,14 +340,15 @@
     "pf": 2.27,
     "ftm": 0.35,
     "fta": 0.49
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "CHA",
    "name": "Coby White",
    "pos": "F",
    "starter": false,
-   "min": 16.4,
+   "min": 21.4,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -470,7 +389,7 @@
    "name": "Ryan Kalkbrenner",
    "pos": "C",
    "starter": false,
-   "min": 16.2,
+   "min": 21.2,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -511,7 +430,7 @@
    "name": "Tidjane Salaün",
    "pos": "PF",
    "starter": false,
-   "min": 13.4,
+   "min": 17.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -552,7 +471,7 @@
    "name": "Christian Anderson",
    "pos": "PG",
    "starter": false,
-   "min": 10.0,
+   "min": 13.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -1095,13 +1014,6 @@
     10.5,
     102,
     -130
-   ]
-  },
-  "Moussa Diabaté": {
-   "pts": [
-    7.5,
-    -120,
-    -105
    ]
   },
   "Hugo González": {

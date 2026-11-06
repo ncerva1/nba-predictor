@@ -9,18 +9,16 @@
    "H2H 2025-26: MIN 3-1 NOP; 2025-12-02 MIN 149-142 NOP; 2025-12-04 MIN 125-116 NOP; 2026-02-06 NOP 119-115 MIN; 2026-04-12 NOP 126-132 MIN",
    "Récord: MIN 6-3, NOP 4-4",
    "NBA Cup, Grupo Oeste B. Ninguno en back-to-back",
-   "En duda (prob. de jugar): Terrence Shannon Jr 45% (cadera; no jugó el 4-nov); Trey Murphy III 80% (rodilla; ESPN: probable para el viernes vs MIN)",
    "Fuera y sin partidos esta temporada: Donte DiVincenzo",
+   "Revisión pregame: Terrence Shannon Jr. (cadera) OUT; Trey Murphy III disponible",
    "Bajas revisadas en ESPN y CBS 6-nov ~16:30 UTC"
   ],
   "out": [
    "Anthony Edwards",
-   "Yves Missi"
+   "Yves Missi",
+   "Terrence Shannon Jr"
   ],
-  "gtd": {
-   "Terrence Shannon Jr": 0.45,
-   "Trey Murphy III": 0.8
-  },
+  "gtd": {},
   "reserves": {
    "MIN": [
     {
@@ -111,13 +109,13 @@
     "pace": 101.78
    },
    "adj": {
-    "o": -1.5,
+    "o": -2.0,
     "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": "Anthony Edwards OUT (rodilla, hasta ~21-dic)"
+    "roster_note": "Anthony Edwards OUT (rodilla, hasta ~21-dic) y Terrence Shannon Jr. OUT (cadera)"
    }
   }
  },
@@ -217,7 +215,7 @@
    "starter": true,
    "min": 27.4,
    "g_cur": 7,
-   "p_play": 0.8,
+   "p_play": 1.0,
    "cur": {
     "min": 33.0,
     "pts": 14.86,
@@ -628,7 +626,7 @@
    "name": "Jaden McDaniels",
    "pos": "PF",
    "starter": true,
-   "min": 34.2,
+   "min": 37.7,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -670,7 +668,7 @@
    "name": "Jonathan Kuminga",
    "pos": "PF",
    "starter": true,
-   "min": 31.7,
+   "min": 35.0,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -712,7 +710,7 @@
    "name": "Ayo Dosunmu",
    "pos": "SG",
    "starter": true,
-   "min": 31.5,
+   "min": 34.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -754,7 +752,7 @@
    "name": "Rudy Gobert",
    "pos": "C",
    "starter": true,
-   "min": 31.3,
+   "min": 34.6,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -796,7 +794,7 @@
    "name": "LaMelo Ball",
    "pos": "PG",
    "starter": true,
-   "min": 27.5,
+   "min": 30.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -835,51 +833,10 @@
   },
   {
    "team": "MIN",
-   "name": "Terrence Shannon Jr",
-   "pos": "SG",
-   "starter": false,
-   "min": 22.6,
-   "g_cur": 7,
-   "p_play": 0.45,
-   "cur": {
-    "min": 22.0,
-    "pts": 12.0,
-    "reb": 3.57,
-    "ast": 2.57,
-    "fg3m": 1.86,
-    "fgm": 3.57,
-    "fga": 8.43,
-    "fg3a": 4.71,
-    "stl": 0.43,
-    "blk": 0.14,
-    "tov": 1.43,
-    "pf": 1.43,
-    "ftm": 3.0,
-    "fta": 4.14
-   },
-   "prior": {
-    "min": 12.4,
-    "pts": 5.6,
-    "reb": 1.14,
-    "ast": 0.88,
-    "fg3m": 0.72,
-    "fgm": 1.79,
-    "fga": 3.98,
-    "fg3a": 1.77,
-    "stl": 0.33,
-    "blk": 0.02,
-    "tov": 0.56,
-    "pf": 1.16,
-    "ftm": 1.3,
-    "fta": 1.63
-   }
-  },
-  {
-   "team": "MIN",
    "name": "Joan Beringer",
    "pos": "PF",
    "starter": false,
-   "min": 18.1,
+   "min": 19.9,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -920,7 +877,7 @@
    "name": "Trey Lyles",
    "pos": "PF",
    "starter": false,
-   "min": 17.5,
+   "min": 19.3,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -961,7 +918,7 @@
    "name": "Jaylen Clark",
    "pos": "SG",
    "starter": false,
-   "min": 12.9,
+   "min": 14.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -1002,7 +959,7 @@
    "name": "Bones Hyland",
    "pos": "PG",
    "starter": false,
-   "min": 12.7,
+   "min": 14.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -1087,13 +1044,6 @@
     1.5,
     -105,
     -106
-   ]
-  },
-  "Terrence Shannon Jr": {
-   "fg3m": [
-    1.5,
-    120,
-    -112
    ]
   },
   "Jeremiah Fears": {

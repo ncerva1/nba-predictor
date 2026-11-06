@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-06T16:29+00:00",
+ "generated": "2026-11-06T22:57+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
  "max_daily": 15,
- "last_stage": "morning",
+ "last_stage": "pregame",
  "updates": {
   "2026-10-30": {
    "morning": "2026-10-30T16:48+00:00",
@@ -37,7 +37,8 @@
    "results": "2026-11-06T08:13+00:00"
   },
   "2026-11-06": {
-   "morning": "2026-11-06T16:29+00:00"
+   "morning": "2026-11-06T16:29+00:00",
+   "pregame": "2026-11-06T22:57+00:00"
   }
  },
  "history": [
@@ -898,9 +899,9 @@
       "line": 1.5,
       "stat": "fg3m",
       "side": "under",
-      "p": 0.648,
+      "p": 0.65,
       "dec": 1.625,
-      "ev": 0.053,
+      "ev": 0.057,
       "gid": "2026-11-06-MIN-at-NOP",
       "game": "MIN @ NOP"
      },
@@ -912,20 +913,20 @@
       "line": 2.5,
       "stat": "fg3m",
       "side": "under",
-      "p": 0.609,
+      "p": 0.603,
       "dec": 1.741,
-      "ev": 0.06,
+      "ev": 0.049,
       "gid": "2026-11-06-WAS-at-ATL",
       "game": "WAS @ ATL"
      }
     ],
     "n": 2,
-    "p": 0.395,
-    "p_indep": 0.395,
+    "p": 0.392,
+    "p_indep": 0.392,
     "corr": 1.0,
     "dec": 2.83,
-    "fair": 2.53,
-    "ev": 0.116,
+    "fair": 2.55,
+    "ev": 0.109,
     "type": "cross",
     "result": null
    }
@@ -61069,16 +61070,16 @@
     "CHA": null
    },
    "proj": {
-    "CHA": 106.1,
-    "BOS": 114.9
+    "CHA": 105.5,
+    "BOS": 115.3
    },
    "win_prob": {
-    "CHA": 0.258725,
-    "BOS": 0.741275
+    "CHA": 0.236825,
+    "BOS": 0.763175
    },
-   "proj_total": 221.0,
+   "proj_total": 220.9,
    "used_db": true,
-   "n_value": 0,
+   "n_value": 1,
    "top_bets": [
     {
      "kind": "prop",
@@ -61089,15 +61090,15 @@
      "odds": -170,
      "dec": 1.588,
      "odds_assumed": false,
-     "p": 0.715,
+     "p": 0.719,
      "implied": 0.63,
-     "fair": -251,
-     "edge": 0.085,
-     "ev": 0.135,
+     "fair": -256,
+     "edge": 0.089,
+     "ev": 0.142,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.715,
+     "p_model": 0.719,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -61120,6 +61121,44 @@
      }
     },
     {
+     "kind": "prop",
+     "label": "Grayson Allen Over 2.5 Triples",
+     "player": "Grayson Allen",
+     "team": "CHA",
+     "line": 2.5,
+     "odds": 102,
+     "dec": 2.02,
+     "odds_assumed": false,
+     "p": 0.528,
+     "implied": 0.495,
+     "fair": -112,
+     "edge": 0.033,
+     "ev": 0.067,
+     "value": true,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.709,
+     "p_mkt": 0.468,
+     "cand": true,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 21,
+       "value": 3.7,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
+    },
+    {
      "kind": "total",
      "label": "Over 210.5",
      "player": null,
@@ -61128,11 +61167,11 @@
      "odds": -110,
      "dec": 1.905,
      "odds_assumed": false,
-     "p": 0.551,
+     "p": 0.55,
      "implied": 0.525,
-     "fair": -123,
-     "edge": 0.026,
-     "ev": 0.049,
+     "fair": -122,
+     "edge": 0.025,
+     "ev": 0.048,
      "value": false,
      "n_books": 8,
      "best": {
@@ -61140,8 +61179,8 @@
       "line": 210.0,
       "odds": -110,
       "dec": 1.909,
-      "p": 0.563,
-      "ev": 0.075
+      "p": 0.562,
+      "ev": 0.073
      },
      "books": [
       {
@@ -61149,79 +61188,81 @@
        "line": 210.0,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.563,
-       "ev": 0.075
+       "p": 0.562,
+       "ev": 0.073
       },
       {
        "book": "bet365",
        "line": 210.5,
        "odds": -109,
        "dec": 1.917,
-       "p": 0.551,
-       "ev": 0.056
+       "p": 0.55,
+       "ev": 0.054
       },
       {
        "book": "BetMGM",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "DraftKings",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "FanDuel",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "Caesars",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "theScore Bet",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "Hard Rock Bet",
        "line": 210.5,
        "odds": -110,
        "dec": 1.909,
-       "p": 0.551,
-       "ev": 0.052
+       "p": 0.55,
+       "ev": 0.05
       },
       {
        "book": "BetRivers",
        "line": 210.5,
        "odds": -115,
        "dec": 1.87,
-       "p": 0.551,
-       "ev": 0.03
+       "p": 0.55,
+       "ev": 0.029
       }
      ],
-     "p_model": 0.7,
+     "p_model": 0.699,
      "p_mkt": 0.501,
      "cand": false,
      "no_value_why": "picks de equipo en pausa"
-    },
+    }
+   ],
+   "value_bets": [
     {
      "kind": "prop",
      "label": "Grayson Allen Over 2.5 Triples",
@@ -61231,15 +61272,15 @@
      "odds": 102,
      "dec": 2.02,
      "odds_assumed": false,
-     "p": 0.516,
+     "p": 0.528,
      "implied": 0.495,
-     "fair": -107,
-     "edge": 0.021,
-     "ev": 0.043,
-     "value": false,
+     "fair": -112,
+     "edge": 0.033,
+     "ev": 0.067,
+     "value": true,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.662,
+     "p_model": 0.709,
      "p_mkt": 0.468,
      "cand": true,
      "hr": {
@@ -61261,7 +61302,6 @@
      }
     }
    ],
-   "value_bets": [],
    "parlays": [],
    "model_picks": [
     {
@@ -61291,48 +61331,72 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Grayson Allen",
+     "player": "Brandon Miller",
      "team": "CHA",
-     "stat": "fgm",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.663,
-     "fair": 1.51,
-     "min_dec": 1.55,
-     "ref": 4.4,
-     "label": "Grayson Allen Over 4.5 Tiros de campo anotados",
+     "stat": "fga",
+     "side": "under",
+     "line": 22.5,
+     "p": 0.655,
+     "fair": 1.53,
+     "min_dec": 1.57,
+     "ref": 23.1,
+     "label": "Brandon Miller Under 22.5 Tiros de campo intentados",
      "hr": {
       "l10": [
-       4,
+       6,
        10
       ],
       "h2h": [
-       0,
-       2
+       3,
+       3
       ]
      }
     },
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Grayson Allen",
+     "player": "Brandon Miller",
+     "team": "CHA",
+     "stat": "fg2a",
+     "side": "under",
+     "line": 10.5,
+     "p": 0.61,
+     "fair": 1.64,
+     "min_dec": 1.69,
+     "ref": 11.2,
+     "label": "Brandon Miller Under 10.5 Dobles intentados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Coby White",
      "team": "CHA",
      "stat": "fga",
      "side": "over",
      "line": 10.5,
-     "p": 0.625,
-     "fair": 1.6,
-     "min_dec": 1.65,
-     "ref": 10.1,
-     "label": "Grayson Allen Over 10.5 Tiros de campo intentados",
+     "p": 0.603,
+     "fair": 1.66,
+     "min_dec": 1.71,
+     "ref": 10.8,
+     "label": "Coby White Over 10.5 Tiros de campo intentados",
      "hr": {
       "l10": [
-       3,
+       5,
        10
       ],
       "h2h": [
-       1,
-       2
+       2,
+       4
       ]
      }
     },
@@ -61344,9 +61408,9 @@
      "stat": "fg2m",
      "side": "over",
      "line": 2.5,
-     "p": 0.582,
-     "fair": 1.72,
-     "min_dec": 1.77,
+     "p": 0.585,
+     "fair": 1.71,
+     "min_dec": 1.76,
      "ref": 2.8,
      "label": "Derrick White Over 2.5 Dobles anotados",
      "hr": {
@@ -61365,21 +61429,21 @@
      "model_only": true,
      "player": "Grayson Allen",
      "team": "CHA",
-     "stat": "fg3a",
+     "stat": "fgm",
      "side": "over",
-     "line": 7.5,
-     "p": 0.581,
-     "fair": 1.72,
-     "min_dec": 1.77,
-     "ref": 7.3,
-     "label": "Grayson Allen Over 7.5 Triples intentados",
+     "line": 5.5,
+     "p": 0.584,
+     "fair": 1.71,
+     "min_dec": 1.76,
+     "ref": 5.8,
+     "label": "Grayson Allen Over 5.5 Tiros de campo anotados",
      "hr": {
       "l10": [
-       3,
+       4,
        10
       ],
       "h2h": [
-       1,
+       0,
        2
       ]
      }
@@ -61387,48 +61451,24 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Sion James",
+     "player": "Brandon Miller",
      "team": "CHA",
-     "stat": "fg3a",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.576,
-     "fair": 1.74,
-     "min_dec": 1.79,
-     "ref": 3.9,
-     "label": "Sion James Over 3.5 Triples intentados",
+     "stat": "fg2m",
+     "side": "under",
+     "line": 4.5,
+     "p": 0.567,
+     "fair": 1.76,
+     "min_dec": 1.82,
+     "ref": 5.2,
+     "label": "Brandon Miller Under 4.5 Dobles anotados",
      "hr": {
       "l10": [
        7,
        10
       ],
       "h2h": [
-       3,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Derrick White",
-     "team": "BOS",
-     "stat": "fg3a",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.563,
-     "fair": 1.78,
-     "min_dec": 1.83,
-     "ref": 5.9,
-     "label": "Derrick White Over 5.5 Triples intentados",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
        1,
-       2
+       3
       ]
      }
     },
@@ -61459,19 +61499,91 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Naz Reid",
+     "player": "Coby White",
      "team": "CHA",
-     "stat": "fgm",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.56,
+     "fair": 1.78,
+     "min_dec": 1.84,
+     "ref": 2.7,
+     "label": "Coby White Over 2.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Derrick White",
+     "team": "BOS",
+     "stat": "fg3a",
      "side": "over",
      "line": 5.5,
-     "p": 0.556,
+     "p": 0.557,
      "fair": 1.8,
      "min_dec": 1.85,
-     "ref": 6.0,
-     "label": "Naz Reid Over 5.5 Tiros de campo anotados",
+     "ref": 5.9,
+     "label": "Derrick White Over 5.5 Triples intentados",
      "hr": {
       "l10": [
        6,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Coby White",
+     "team": "CHA",
+     "stat": "fgm",
+     "side": "over",
+     "line": 4.5,
+     "p": 0.556,
+     "fair": 1.8,
+     "min_dec": 1.85,
+     "ref": 4.4,
+     "label": "Coby White Over 4.5 Tiros de campo anotados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Naz Reid",
+     "team": "CHA",
+     "stat": "dd",
+     "side": "over",
+     "line": 0.5,
+     "p": 0.388,
+     "fair": 2.57,
+     "min_dec": 2.65,
+     "ref": null,
+     "label": "Naz Reid Doble-doble: Sí",
+     "hr": {
+      "l10": [
+       3,
        10
       ],
       "h2h": [
@@ -61491,14 +61603,14 @@
      "odds": -170,
      "dec": 1.588,
      "odds_assumed": false,
-     "p": 0.715,
+     "p": 0.719,
      "implied": 0.63,
-     "edge": 0.085,
-     "ev": 0.135,
+     "edge": 0.089,
+     "ev": 0.142,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.715,
+     "p_model": 0.719,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -61521,34 +61633,6 @@
      }
     },
     {
-     "kind": "total",
-     "label": "Over 210.5",
-     "player": null,
-     "team": null,
-     "line": 210.5,
-     "odds": -110,
-     "dec": 1.905,
-     "odds_assumed": false,
-     "p": 0.551,
-     "implied": 0.525,
-     "edge": 0.026,
-     "ev": 0.049,
-     "value": false,
-     "n_books": 8,
-     "best": {
-      "book": "Fanatics",
-      "line": 210.0,
-      "odds": -110,
-      "dec": 1.909,
-      "p": 0.563,
-      "ev": 0.075
-     },
-     "p_model": 0.7,
-     "p_mkt": 0.501,
-     "cand": false,
-     "no_value_why": "picks de equipo en pausa"
-    },
-    {
      "kind": "prop",
      "label": "Grayson Allen Over 2.5 Triples",
      "player": "Grayson Allen",
@@ -61557,14 +61641,14 @@
      "odds": 102,
      "dec": 2.02,
      "odds_assumed": false,
-     "p": 0.516,
+     "p": 0.528,
      "implied": 0.495,
-     "edge": 0.021,
-     "ev": 0.043,
-     "value": false,
+     "edge": 0.033,
+     "ev": 0.067,
+     "value": true,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.662,
+     "p_model": 0.709,
      "p_mkt": 0.468,
      "cand": true,
      "hr": {
@@ -61586,6 +61670,34 @@
      }
     },
     {
+     "kind": "total",
+     "label": "Over 210.5",
+     "player": null,
+     "team": null,
+     "line": 210.5,
+     "odds": -110,
+     "dec": 1.905,
+     "odds_assumed": false,
+     "p": 0.55,
+     "implied": 0.525,
+     "edge": 0.025,
+     "ev": 0.048,
+     "value": false,
+     "n_books": 8,
+     "best": {
+      "book": "Fanatics",
+      "line": 210.0,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.562,
+      "ev": 0.073
+     },
+     "p_model": 0.699,
+     "p_mkt": 0.501,
+     "cand": false,
+     "no_value_why": "picks de equipo en pausa"
+    },
+    {
      "kind": "prop",
      "label": "Sam Hauser Under 1.5 Triples",
      "player": "Sam Hauser",
@@ -61594,14 +61706,14 @@
      "odds": 145,
      "dec": 2.45,
      "odds_assumed": false,
-     "p": 0.417,
+     "p": 0.416,
      "implied": 0.408,
-     "edge": 0.009,
-     "ev": 0.022,
+     "edge": 0.008,
+     "ev": 0.02,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.51,
+     "p_model": 0.507,
      "p_mkt": 0.386,
      "cand": false,
      "hr": {
@@ -61624,111 +61736,37 @@
     },
     {
      "kind": "prop",
-     "label": "Coby White Under 1.5 Triples",
-     "player": "Coby White",
+     "label": "Naz Reid Over 2.5 Triples",
+     "player": "Naz Reid",
      "team": "CHA",
-     "line": 1.5,
-     "odds": 110,
-     "dec": 2.1,
+     "line": 2.5,
+     "odds": 132,
+     "dec": 2.32,
      "odds_assumed": false,
-     "p": 0.485,
-     "implied": 0.476,
-     "edge": 0.009,
-     "ev": 0.018,
+     "p": 0.438,
+     "implied": 0.431,
+     "edge": 0.007,
+     "ev": 0.017,
      "value": false,
      "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.523,
-     "p_mkt": 0.472,
+     "side": "over",
+     "p_model": 0.508,
+     "p_mkt": 0.415,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       3,
        10
       ],
       "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 29,
-       "value": 3.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Moussa Diabaté Under 7.5 Puntos",
-     "player": "Moussa Diabaté",
-     "team": "CHA",
-     "line": 7.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.518,
-     "implied": 0.512,
-     "edge": 0.006,
-     "ev": 0.012,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.62,
-     "p_mkt": 0.484,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       3
+       0,
+       2
       ],
       "dvp": {
        "pos": "C",
-       "rank": 6,
-       "value": 18.4,
-       "lg": 22.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Brandon Miller Under 3.5 Triples",
-     "player": "Brandon Miller",
-     "team": "CHA",
-     "line": 3.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.552,
-     "implied": 0.545,
-     "edge": 0.007,
-     "ev": 0.012,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.622,
-     "p_mkt": 0.529,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 29,
-       "value": 3.9,
-       "lg": 2.6,
+       "rank": 17,
+       "value": 1.1,
+       "lg": 1.2,
        "n": 30
       }
      }
@@ -61749,7 +61787,7 @@
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.506,
+     "p_model": 0.507,
      "p_mkt": 0.471,
      "cand": false,
      "hr": {
@@ -61772,6 +61810,117 @@
     },
     {
      "kind": "prop",
+     "label": "Sion James Over 5.5 Puntos",
+     "player": "Sion James",
+     "team": "CHA",
+     "line": 5.5,
+     "odds": -135,
+     "dec": 1.741,
+     "odds_assumed": false,
+     "p": 0.578,
+     "implied": 0.574,
+     "edge": 0.004,
+     "ev": 0.007,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.691,
+     "p_mkt": 0.541,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 24.7,
+       "lg": 27.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Brandon Miller Under 3.5 Triples",
+     "player": "Brandon Miller",
+     "team": "CHA",
+     "line": 3.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.546,
+     "implied": 0.545,
+     "edge": 0.0,
+     "ev": 0.001,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.596,
+     "p_mkt": 0.529,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 29,
+       "value": 3.9,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Naz Reid Over 16.5 Puntos",
+     "player": "Naz Reid",
+     "team": "CHA",
+     "line": 16.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.526,
+     "implied": 0.528,
+     "edge": -0.002,
+     "ev": -0.003,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.606,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 6,
+       "value": 18.4,
+       "lg": 22.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Derrick White Over 1.5 Triples",
      "player": "Derrick White",
      "team": "BOS",
@@ -61779,14 +61928,14 @@
      "odds": -150,
      "dec": 1.667,
      "odds_assumed": false,
-     "p": 0.598,
+     "p": 0.597,
      "implied": 0.6,
-     "edge": -0.002,
-     "ev": -0.003,
+     "edge": -0.003,
+     "ev": -0.005,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.623,
+     "p_model": 0.616,
      "p_mkt": 0.59,
      "cand": false,
      "hr": {
@@ -61809,6 +61958,43 @@
     },
     {
      "kind": "prop",
+     "label": "Coby White Over 12.5 Puntos",
+     "player": "Coby White",
+     "team": "CHA",
+     "line": 12.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.525,
+     "implied": 0.528,
+     "edge": -0.003,
+     "ev": -0.006,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.6,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 20,
+       "value": 21.2,
+       "lg": 19.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Payton Pritchard Under 13.5 Puntos",
      "player": "Payton Pritchard",
      "team": "BOS",
@@ -61816,14 +62002,14 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.498,
+     "p": 0.497,
      "implied": 0.5,
-     "edge": -0.002,
-     "ev": -0.004,
+     "edge": -0.003,
+     "ev": -0.007,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.543,
+     "p_model": 0.537,
      "p_mkt": 0.483,
      "cand": false,
      "hr": {
@@ -61846,6 +62032,43 @@
     },
     {
      "kind": "prop",
+     "label": "Coby White Under 1.5 Triples",
+     "player": "Coby White",
+     "team": "CHA",
+     "line": 1.5,
+     "odds": 110,
+     "dec": 2.1,
+     "odds_assumed": false,
+     "p": 0.473,
+     "implied": 0.476,
+     "edge": -0.003,
+     "ev": -0.007,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.476,
+     "p_mkt": 0.472,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 29,
+       "value": 3.9,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Jayson Tatum Over 2.5 Triples",
      "player": "Jayson Tatum",
      "team": "BOS",
@@ -61855,12 +62078,12 @@
      "odds_assumed": false,
      "p": 0.462,
      "implied": 0.465,
-     "edge": -0.003,
-     "ev": -0.006,
+     "edge": -0.004,
+     "ev": -0.008,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.482,
+     "p_model": 0.479,
      "p_mkt": 0.456,
      "cand": false,
      "hr": {
@@ -61883,37 +62106,37 @@
     },
     {
      "kind": "prop",
-     "label": "Naz Reid Under 16.5 Puntos",
-     "player": "Naz Reid",
+     "label": "Coby White Over 1.5 Triples",
+     "player": "Coby White",
      "team": "CHA",
-     "line": 16.5,
-     "odds": -112,
-     "dec": 1.893,
+     "line": 1.5,
+     "odds": -114,
+     "dec": 1.877,
      "odds_assumed": false,
-     "p": 0.518,
-     "implied": 0.528,
-     "edge": -0.01,
-     "ev": -0.019,
+     "p": 0.527,
+     "implied": 0.533,
+     "edge": -0.006,
+     "ev": -0.011,
      "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.573,
-     "p_mkt": 0.5,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.524,
+     "p_mkt": 0.528,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       4,
        10
       ],
       "h2h": [
        2,
-       2
+       4
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 5,
-       "value": 20.8,
-       "lg": 23.4,
+       "pos": "SF",
+       "rank": 29,
+       "value": 3.9,
+       "lg": 2.6,
        "n": 30
       }
      }
@@ -61934,7 +62157,7 @@
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.54,
+     "p_model": 0.541,
      "p_mkt": 0.489,
      "cand": false,
      "hr": {
@@ -61971,7 +62194,7 @@
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.58,
+     "p_model": 0.581,
      "p_mkt": 0.505,
      "cand": false,
      "hr": {
@@ -61993,6 +62216,70 @@
      }
     },
     {
+     "kind": "spread",
+     "label": "BOS -8.5",
+     "player": null,
+     "team": "BOS",
+     "line": -8.5,
+     "odds": -109,
+     "dec": 1.914,
+     "odds_assumed": false,
+     "p": 0.508,
+     "implied": 0.523,
+     "edge": -0.014,
+     "ev": -0.027,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": -8.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.508,
+      "ev": -0.008
+     },
+     "p_model": 0.538,
+     "p_mkt": 0.499,
+     "cand": false
+    },
+    {
+     "kind": "prop",
+     "label": "Sion James Over 1.5 Triples",
+     "player": "Sion James",
+     "team": "CHA",
+     "line": 1.5,
+     "odds": 145,
+     "dec": 2.45,
+     "odds_assumed": false,
+     "p": 0.397,
+     "implied": 0.408,
+     "edge": -0.011,
+     "ev": -0.027,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.431,
+     "p_mkt": 0.386,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 3.2,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
      "kind": "prop",
      "label": "Paul George Over 2.5 Triples",
      "player": "Paul George",
@@ -62004,11 +62291,11 @@
      "p": 0.52,
      "implied": 0.535,
      "edge": -0.015,
-     "ev": -0.027,
+     "ev": -0.028,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.494,
+     "p_model": 0.493,
      "p_mkt": 0.529,
      "cand": false,
      "hr": {
@@ -62040,12 +62327,12 @@
      "odds_assumed": false,
      "p": 0.538,
      "implied": 0.556,
-     "edge": -0.018,
-     "ev": -0.032,
+     "edge": -0.017,
+     "ev": -0.031,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.518,
+     "p_model": 0.521,
      "p_mkt": 0.544,
      "cand": false,
      "hr": {
@@ -62068,80 +62355,6 @@
     },
     {
      "kind": "prop",
-     "label": "Coby White Over 1.5 Triples",
-     "player": "Coby White",
-     "team": "CHA",
-     "line": 1.5,
-     "odds": -114,
-     "dec": 1.877,
-     "odds_assumed": false,
-     "p": 0.515,
-     "implied": 0.533,
-     "edge": -0.017,
-     "ev": -0.033,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.477,
-     "p_mkt": 0.528,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 29,
-       "value": 3.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Naz Reid Over 2.5 Triples",
-     "player": "Naz Reid",
-     "team": "CHA",
-     "line": 2.5,
-     "odds": 132,
-     "dec": 2.32,
-     "odds_assumed": false,
-     "p": 0.416,
-     "implied": 0.431,
-     "edge": -0.015,
-     "ev": -0.034,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.421,
-     "p_mkt": 0.415,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 17,
-       "value": 2.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Derrick White Under 1.5 Triples",
      "player": "Derrick White",
      "team": "BOS",
@@ -62149,14 +62362,14 @@
      "odds": 140,
      "dec": 2.4,
      "odds_assumed": false,
-     "p": 0.402,
+     "p": 0.403,
      "implied": 0.417,
-     "edge": -0.015,
-     "ev": -0.036,
+     "edge": -0.013,
+     "ev": -0.032,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.377,
+     "p_model": 0.384,
      "p_mkt": 0.41,
      "cand": false,
      "hr": {
@@ -62178,41 +62391,31 @@
      }
     },
     {
-     "kind": "prop",
-     "label": "Sion James Over 5.5 Puntos",
-     "player": "Sion James",
-     "team": "CHA",
-     "line": 5.5,
-     "odds": -135,
-     "dec": 1.741,
+     "kind": "ml",
+     "label": "BOS gana",
+     "player": null,
+     "team": "BOS",
+     "line": null,
+     "odds": -337,
+     "dec": 1.297,
      "odds_assumed": false,
-     "p": 0.553,
-     "implied": 0.574,
-     "edge": -0.021,
-     "ev": -0.037,
+     "p": 0.744,
+     "implied": 0.771,
+     "edge": -0.027,
+     "ev": -0.035,
      "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.59,
-     "p_mkt": 0.541,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 22,
-       "value": 25.1,
-       "lg": 23.8,
-       "n": 30
-      }
-     }
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": null,
+      "odds": -325,
+      "dec": 1.308,
+      "p": 0.744,
+      "ev": -0.027
+     },
+     "p_model": 0.763,
+     "p_mkt": 0.738,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -62223,14 +62426,14 @@
      "odds": -112,
      "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.508,
+     "p": 0.51,
      "implied": 0.528,
-     "edge": -0.02,
-     "ev": -0.038,
+     "edge": -0.019,
+     "ev": -0.035,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.533,
+     "p_model": 0.539,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -62252,70 +62455,6 @@
      }
     },
     {
-     "kind": "spread",
-     "label": "BOS -8.5",
-     "player": null,
-     "team": "BOS",
-     "line": -8.5,
-     "odds": -109,
-     "dec": 1.914,
-     "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.523,
-     "edge": -0.021,
-     "ev": -0.04,
-     "value": false,
-     "n_books": 9,
-     "best": {
-      "book": "FanDuel",
-      "line": -8.5,
-      "odds": -105,
-      "dec": 1.952,
-      "p": 0.501,
-      "ev": -0.022
-     },
-     "p_model": 0.51,
-     "p_mkt": 0.499,
-     "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Naz Reid Under 2.5 Triples",
-     "player": "Naz Reid",
-     "team": "CHA",
-     "line": 2.5,
-     "odds": -155,
-     "dec": 1.645,
-     "odds_assumed": false,
-     "p": 0.584,
-     "implied": 0.608,
-     "edge": -0.024,
-     "ev": -0.04,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.579,
-     "p_mkt": 0.585,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 17,
-       "value": 2.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
      "kind": "prop",
      "label": "Neemias Queta Under 10.5 Puntos",
      "player": "Neemias Queta",
@@ -62324,14 +62463,14 @@
      "odds": -130,
      "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.543,
+     "p": 0.542,
      "implied": 0.565,
-     "edge": -0.023,
-     "ev": -0.04,
+     "edge": -0.024,
+     "ev": -0.042,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.571,
+     "p_model": 0.567,
      "p_mkt": 0.533,
      "cand": false,
      "hr": {
@@ -62351,33 +62490,6 @@
        "n": 30
       }
      }
-    },
-    {
-     "kind": "ml",
-     "label": "BOS gana",
-     "player": null,
-     "team": "BOS",
-     "line": null,
-     "odds": -337,
-     "dec": 1.297,
-     "odds_assumed": false,
-     "p": 0.739,
-     "implied": 0.771,
-     "edge": -0.032,
-     "ev": -0.042,
-     "value": false,
-     "n_books": 9,
-     "best": {
-      "book": "BetMGM",
-      "line": null,
-      "odds": -325,
-      "dec": 1.308,
-      "p": 0.739,
-      "ev": -0.033
-     },
-     "p_model": 0.741,
-     "p_mkt": 0.738,
-     "cand": false
     },
     {
      "kind": "prop",
@@ -62417,208 +62529,6 @@
      }
     },
     {
-     "kind": "ml",
-     "label": "CHA gana",
-     "player": null,
-     "team": "CHA",
-     "line": null,
-     "odds": 266,
-     "dec": 3.657,
-     "odds_assumed": false,
-     "p": 0.261,
-     "implied": 0.273,
-     "edge": -0.012,
-     "ev": -0.045,
-     "value": false,
-     "n_books": 9,
-     "best": {
-      "book": "theScore Bet",
-      "line": null,
-      "odds": 280,
-      "dec": 3.8,
-      "p": 0.261,
-      "ev": -0.008
-     },
-     "p_model": 0.259,
-     "p_mkt": 0.262,
-     "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Coby White Over 12.5 Puntos",
-     "player": "Coby White",
-     "team": "CHA",
-     "line": 12.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.503,
-     "implied": 0.528,
-     "edge": -0.025,
-     "ev": -0.047,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.513,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 20,
-       "value": 21.2,
-       "lg": 19.8,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "spread",
-     "label": "CHA +8.5",
-     "player": null,
-     "team": "CHA",
-     "line": 8.5,
-     "odds": -111,
-     "dec": 1.903,
-     "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.526,
-     "edge": -0.027,
-     "ev": -0.051,
-     "value": false,
-     "n_books": 9,
-     "best": {
-      "book": "BetMGM",
-      "line": 8.5,
-      "odds": -110,
-      "dec": 1.909,
-      "p": 0.499,
-      "ev": -0.047
-     },
-     "p_model": 0.49,
-     "p_mkt": 0.501,
-     "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Sion James Under 1.5 Triples",
-     "player": "Sion James",
-     "team": "CHA",
-     "line": 1.5,
-     "odds": -185,
-     "dec": 1.541,
-     "odds_assumed": false,
-     "p": 0.615,
-     "implied": 0.649,
-     "edge": -0.034,
-     "ev": -0.053,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.617,
-     "p_mkt": 0.614,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 21,
-       "value": 3.7,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Sion James Over 1.5 Triples",
-     "player": "Sion James",
-     "team": "CHA",
-     "line": 1.5,
-     "odds": 145,
-     "dec": 2.45,
-     "odds_assumed": false,
-     "p": 0.385,
-     "implied": 0.408,
-     "edge": -0.023,
-     "ev": -0.056,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.383,
-     "p_mkt": 0.386,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 21,
-       "value": 3.7,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Coby White Under 12.5 Puntos",
-     "player": "Coby White",
-     "team": "CHA",
-     "line": 12.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.497,
-     "implied": 0.528,
-     "edge": -0.032,
-     "ev": -0.06,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.487,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 20,
-       "value": 21.2,
-       "lg": 19.8,
-       "n": 30
-      }
-     }
-    },
-    {
      "kind": "prop",
      "label": "Payton Pritchard Over 13.5 Puntos",
      "player": "Payton Pritchard",
@@ -62627,14 +62537,14 @@
      "odds": -115,
      "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.502,
+     "p": 0.503,
      "implied": 0.535,
-     "edge": -0.033,
-     "ev": -0.062,
+     "edge": -0.031,
+     "ev": -0.059,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.457,
+     "p_model": 0.463,
      "p_mkt": 0.517,
      "cand": false,
      "hr": {
@@ -62654,6 +62564,97 @@
        "n": 30
       }
      }
+    },
+    {
+     "kind": "prop",
+     "label": "Brandon Miller Over 3.5 Triples",
+     "player": "Brandon Miller",
+     "team": "CHA",
+     "line": 3.5,
+     "odds": 106,
+     "dec": 2.06,
+     "odds_assumed": false,
+     "p": 0.454,
+     "implied": 0.485,
+     "edge": -0.031,
+     "ev": -0.064,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.404,
+     "p_mkt": 0.471,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 29,
+       "value": 3.9,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": 266,
+     "dec": 3.657,
+     "odds_assumed": false,
+     "p": 0.256,
+     "implied": 0.273,
+     "edge": -0.018,
+     "ev": -0.065,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "theScore Bet",
+      "line": null,
+      "odds": 280,
+      "dec": 3.8,
+      "p": 0.256,
+      "ev": -0.027
+     },
+     "p_model": 0.237,
+     "p_mkt": 0.262,
+     "cand": false
+    },
+    {
+     "kind": "spread",
+     "label": "CHA +8.5",
+     "player": null,
+     "team": "CHA",
+     "line": 8.5,
+     "odds": -111,
+     "dec": 1.903,
+     "odds_assumed": false,
+     "p": 0.492,
+     "implied": 0.526,
+     "edge": -0.034,
+     "ev": -0.065,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetMGM",
+      "line": 8.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.492,
+      "ev": -0.061
+     },
+     "p_model": 0.462,
+     "p_mkt": 0.501,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -62694,43 +62695,6 @@
     },
     {
      "kind": "prop",
-     "label": "Hugo González Under 3.5 Puntos",
-     "player": "Hugo González",
-     "team": "BOS",
-     "line": 3.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.492,
-     "implied": 0.528,
-     "edge": -0.037,
-     "ev": -0.069,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.467,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 17,
-       "value": 24.0,
-       "lg": 23.8,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Derrick White Under 14.5 Puntos",
      "player": "Derrick White",
      "team": "BOS",
@@ -62745,7 +62709,7 @@
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.46,
+     "p_model": 0.459,
      "p_mkt": 0.511,
      "cand": false,
      "hr": {
@@ -62768,6 +62732,80 @@
     },
     {
      "kind": "prop",
+     "label": "Sion James Under 1.5 Triples",
+     "player": "Sion James",
+     "team": "CHA",
+     "line": 1.5,
+     "odds": -185,
+     "dec": 1.541,
+     "odds_assumed": false,
+     "p": 0.603,
+     "implied": 0.649,
+     "edge": -0.046,
+     "ev": -0.071,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.569,
+     "p_mkt": 0.614,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 3.2,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Hugo González Under 3.5 Puntos",
+     "player": "Hugo González",
+     "team": "BOS",
+     "line": 3.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.49,
+     "implied": 0.528,
+     "edge": -0.038,
+     "ev": -0.072,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.461,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 17,
+       "value": 24.0,
+       "lg": 23.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Neemias Queta Over 10.5 Puntos",
      "player": "Neemias Queta",
      "team": "BOS",
@@ -62775,14 +62813,14 @@
      "odds": 102,
      "dec": 2.02,
      "odds_assumed": false,
-     "p": 0.457,
+     "p": 0.458,
      "implied": 0.495,
-     "edge": -0.038,
-     "ev": -0.076,
+     "edge": -0.037,
+     "ev": -0.074,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.429,
+     "p_model": 0.433,
      "p_mkt": 0.467,
      "cand": false,
      "hr": {
@@ -62805,111 +62843,37 @@
     },
     {
      "kind": "prop",
-     "label": "Brandon Miller Over 3.5 Triples",
-     "player": "Brandon Miller",
-     "team": "CHA",
-     "line": 3.5,
-     "odds": 106,
-     "dec": 2.06,
-     "odds_assumed": false,
-     "p": 0.448,
-     "implied": 0.485,
-     "edge": -0.038,
-     "ev": -0.078,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.378,
-     "p_mkt": 0.471,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 29,
-       "value": 3.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Sion James Under 5.5 Puntos",
-     "player": "Sion James",
-     "team": "CHA",
-     "line": 5.5,
-     "odds": 105,
-     "dec": 2.05,
-     "odds_assumed": false,
-     "p": 0.447,
-     "implied": 0.488,
-     "edge": -0.041,
-     "ev": -0.084,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.41,
-     "p_mkt": 0.459,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 22,
-       "value": 25.1,
-       "lg": 23.8,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Naz Reid Over 16.5 Puntos",
+     "label": "Naz Reid Under 2.5 Triples",
      "player": "Naz Reid",
      "team": "CHA",
-     "line": 16.5,
-     "odds": -112,
-     "dec": 1.893,
+     "line": 2.5,
+     "odds": -155,
+     "dec": 1.645,
      "odds_assumed": false,
-     "p": 0.482,
-     "implied": 0.528,
-     "edge": -0.047,
-     "ev": -0.088,
+     "p": 0.562,
+     "implied": 0.608,
+     "edge": -0.046,
+     "ev": -0.076,
      "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.427,
-     "p_mkt": 0.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.492,
+     "p_mkt": 0.585,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       7,
        10
       ],
       "h2h": [
-       0,
+       2,
        2
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 5,
-       "value": 20.8,
-       "lg": 23.4,
+       "pos": "C",
+       "rank": 17,
+       "value": 1.1,
+       "lg": 1.2,
        "n": 30
       }
      }
@@ -62926,11 +62890,11 @@
      "p": 0.476,
      "implied": 0.524,
      "edge": -0.048,
-     "ev": -0.091,
+     "ev": -0.092,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.42,
+     "p_model": 0.419,
      "p_mkt": 0.495,
      "cand": false,
      "hr": {
@@ -62953,6 +62917,43 @@
     },
     {
      "kind": "prop",
+     "label": "Coby White Under 12.5 Puntos",
+     "player": "Coby White",
+     "team": "CHA",
+     "line": 12.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.475,
+     "implied": 0.528,
+     "edge": -0.053,
+     "ev": -0.101,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.4,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 20,
+       "value": 21.2,
+       "lg": 19.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Sam Hauser Over 1.5 Triples",
      "player": "Sam Hauser",
      "team": "BOS",
@@ -62960,14 +62961,14 @@
      "odds": -185,
      "dec": 1.541,
      "odds_assumed": false,
-     "p": 0.583,
+     "p": 0.584,
      "implied": 0.649,
-     "edge": -0.066,
-     "ev": -0.102,
+     "edge": -0.065,
+     "ev": -0.101,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.49,
+     "p_model": 0.493,
      "p_mkt": 0.614,
      "cand": false,
      "hr": {
@@ -62990,22 +62991,22 @@
     },
     {
      "kind": "prop",
-     "label": "Moussa Diabaté Over 7.5 Puntos",
-     "player": "Moussa Diabaté",
+     "label": "Naz Reid Under 16.5 Puntos",
+     "player": "Naz Reid",
      "team": "CHA",
-     "line": 7.5,
-     "odds": -120,
-     "dec": 1.833,
+     "line": 16.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.482,
-     "implied": 0.545,
-     "edge": -0.064,
-     "ev": -0.117,
+     "p": 0.474,
+     "implied": 0.528,
+     "edge": -0.055,
+     "ev": -0.104,
      "value": false,
      "stat": "pts",
-     "side": "over",
-     "p_model": 0.38,
-     "p_mkt": 0.516,
+     "side": "under",
+     "p_model": 0.394,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
@@ -63013,14 +63014,51 @@
        10
       ],
       "h2h": [
-       1,
-       3
+       2,
+       2
       ],
       "dvp": {
        "pos": "C",
        "rank": 6,
        "value": 18.4,
        "lg": 22.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Sion James Under 5.5 Puntos",
+     "player": "Sion James",
+     "team": "CHA",
+     "line": 5.5,
+     "odds": 105,
+     "dec": 2.05,
+     "odds_assumed": false,
+     "p": 0.422,
+     "implied": 0.488,
+     "edge": -0.066,
+     "ev": -0.136,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.309,
+     "p_mkt": 0.459,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 24.7,
+       "lg": 27.3,
        "n": 30
       }
      }
@@ -63034,7 +63072,7 @@
      "odds": -110,
      "dec": 1.911,
      "odds_assumed": false,
-     "p": 0.449,
+     "p": 0.45,
      "implied": 0.523,
      "edge": -0.074,
      "ev": -0.141,
@@ -63045,10 +63083,10 @@
       "line": 210.5,
       "odds": -107,
       "dec": 1.935,
-      "p": 0.449,
-      "ev": -0.131
+      "p": 0.45,
+      "ev": -0.129
      },
-     "p_model": 0.3,
+     "p_model": 0.301,
      "p_mkt": 0.499,
      "cand": false
     },
@@ -63061,14 +63099,14 @@
      "odds": -129,
      "dec": 1.775,
      "odds_assumed": false,
-     "p": 0.484,
+     "p": 0.472,
      "implied": 0.563,
-     "edge": -0.08,
-     "ev": -0.141,
+     "edge": -0.091,
+     "ev": -0.162,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.338,
+     "p_model": 0.291,
      "p_mkt": 0.532,
      "cand": false,
      "hr": {
@@ -63098,14 +63136,14 @@
      "odds": -190,
      "dec": 1.526,
      "odds_assumed": false,
-     "p": 0.511,
+     "p": 0.505,
      "implied": 0.655,
-     "edge": -0.144,
-     "ev": -0.22,
+     "edge": -0.15,
+     "ev": -0.229,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.511,
+     "p_model": 0.505,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -63143,15 +63181,15 @@
    },
    "proj": {
     "ATL": 121.2,
-    "WAS": 110.8
+    "WAS": 109.2
    },
    "win_prob": {
-    "ATL": 0.776,
-    "WAS": 0.224
+    "ATL": 0.807425,
+    "WAS": 0.192575
    },
-   "proj_total": 232.0,
+   "proj_total": 230.4,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 0,
    "top_bets": [
     {
      "kind": "prop",
@@ -63162,15 +63200,15 @@
      "odds": -180,
      "dec": 1.556,
      "odds_assumed": false,
-     "p": 0.764,
+     "p": 0.742,
      "implied": 0.643,
-     "fair": -324,
-     "edge": 0.121,
-     "ev": 0.189,
+     "fair": -288,
+     "edge": 0.099,
+     "ev": 0.155,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.764,
+     "p_model": 0.742,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -63194,44 +63232,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jalen Johnson Under 1.5 Triples",
-     "player": "Jalen Johnson",
-     "team": "ATL",
-     "line": 1.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.581,
-     "implied": 0.545,
-     "fair": -139,
-     "edge": 0.036,
-     "ev": 0.066,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.699,
-     "p_mkt": 0.542,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 28,
-       "value": 3.1,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "AJ Dybantsa Under 1.5 Triples",
      "player": "AJ Dybantsa",
      "team": "WAS",
@@ -63239,15 +63239,15 @@
      "odds": -180,
      "dec": 1.556,
      "odds_assumed": false,
-     "p": 0.682,
+     "p": 0.677,
      "implied": 0.643,
-     "fair": -215,
-     "edge": 0.04,
-     "ev": 0.061,
+     "fair": -210,
+     "edge": 0.035,
+     "ev": 0.054,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.894,
+     "p_model": 0.875,
      "p_mkt": 0.612,
      "cand": false,
      "no_value_why": "sin Unders de rookies ni de quien no jugó la temporada pasada",
@@ -63272,48 +63272,47 @@
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 4 partidos esta temporada"
      }
-    }
-   ],
-   "value_bets": [
+    },
     {
      "kind": "prop",
-     "label": "Jalen Johnson Under 1.5 Triples",
-     "player": "Jalen Johnson",
+     "label": "Aaron Wiggins Over 1.5 Triples",
+     "player": "Aaron Wiggins",
      "team": "ATL",
      "line": 1.5,
-     "odds": -120,
-     "dec": 1.833,
+     "odds": -130,
+     "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.581,
-     "implied": 0.545,
-     "fair": -139,
-     "edge": 0.036,
-     "ev": 0.066,
-     "value": true,
+     "p": 0.593,
+     "implied": 0.565,
+     "fair": -146,
+     "edge": 0.028,
+     "ev": 0.05,
+     "value": false,
      "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.699,
-     "p_mkt": 0.542,
+     "side": "over",
+     "p_model": 0.728,
+     "p_mkt": 0.549,
      "cand": true,
      "hr": {
       "l10": [
-       5,
+       8,
        10
       ],
       "h2h": [
-       2,
+       1,
        3
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 28,
+       "pos": "SG",
+       "rank": 13,
        "value": 3.1,
-       "lg": 2.6,
+       "lg": 3.3,
        "n": 30
       }
      }
     }
    ],
+   "value_bets": [],
    "parlays": [
     {
      "legs": [
@@ -63325,9 +63324,9 @@
        "line": 2.5,
        "stat": "fg3m",
        "side": "under",
-       "p": 0.609,
+       "p": 0.603,
        "dec": 1.741,
-       "ev": 0.06,
+       "ev": 0.049,
        "gid": "2026-11-06-WAS-at-ATL",
        "game": "WAS @ ATL"
       },
@@ -63339,312 +63338,24 @@
        "line": 1.5,
        "stat": "fg3m",
        "side": "over",
-       "p": 0.583,
+       "p": 0.593,
        "dec": 1.769,
-       "ev": 0.031,
+       "ev": 0.05,
        "gid": "2026-11-06-WAS-at-ATL",
        "game": "WAS @ ATL"
       }
      ],
      "n": 2,
-     "p": 0.356,
-     "p_indep": 0.355,
+     "p": 0.358,
+     "p_indep": 0.358,
      "corr": 1.0,
      "dec": 3.08,
-     "fair": 2.81,
-     "ev": 0.096,
+     "fair": 2.79,
+     "ev": 0.102,
      "type": "sgp"
     }
    ],
    "model_picks": [
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Aaron Wiggins",
-     "team": "ATL",
-     "stat": "fgm",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.681,
-     "fair": 1.47,
-     "min_dec": 1.51,
-     "ref": 4.8,
-     "label": "Aaron Wiggins Over 4.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Alex Sarr",
-     "team": "WAS",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.676,
-     "fair": 1.48,
-     "min_dec": 1.52,
-     "ref": 3.8,
-     "label": "Alex Sarr Over 3.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Aaron Wiggins",
-     "team": "ATL",
-     "stat": "fga",
-     "side": "over",
-     "line": 10.5,
-     "p": 0.649,
-     "fair": 1.54,
-     "min_dec": 1.59,
-     "ref": 10.6,
-     "label": "Aaron Wiggins Over 10.5 Tiros de campo intentados",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Alex Sarr",
-     "team": "WAS",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 6.5,
-     "p": 0.61,
-     "fair": 1.64,
-     "min_dec": 1.69,
-     "ref": 6.5,
-     "label": "Alex Sarr Over 6.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Aaron Wiggins",
-     "team": "ATL",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.609,
-     "fair": 1.64,
-     "min_dec": 1.69,
-     "ref": 4.9,
-     "label": "Aaron Wiggins Over 4.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Alex Sarr",
-     "team": "WAS",
-     "stat": "fgm",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.609,
-     "fair": 1.64,
-     "min_dec": 1.69,
-     "ref": 4.5,
-     "label": "Alex Sarr Over 4.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Onyeka Okongwu",
-     "team": "ATL",
-     "stat": "fgm",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.602,
-     "fair": 1.66,
-     "min_dec": 1.71,
-     "ref": 4.8,
-     "label": "Onyeka Okongwu Over 4.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       5
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Luguentz Dort",
-     "team": "ATL",
-     "stat": "fga",
-     "side": "over",
-     "line": 7.5,
-     "p": 0.602,
-     "fair": 1.66,
-     "min_dec": 1.71,
-     "ref": 7.6,
-     "label": "Luguentz Dort Over 7.5 Tiros de campo intentados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Bilal Coulibaly",
-     "team": "WAS",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 2.5,
-     "p": 0.6,
-     "fair": 1.67,
-     "min_dec": 1.72,
-     "ref": 2.7,
-     "label": "Bilal Coulibaly Over 2.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Aaron Wiggins",
-     "team": "ATL",
-     "stat": "fg3a",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.599,
-     "fair": 1.67,
-     "min_dec": 1.72,
-     "ref": 5.8,
-     "label": "Aaron Wiggins Over 5.5 Triples intentados",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Trae Young",
-     "team": "WAS",
-     "stat": "fgm",
-     "side": "under",
-     "line": 5.5,
-     "p": 0.588,
-     "fair": 1.7,
-     "min_dec": 1.75,
-     "ref": 6.0,
-     "label": "Trae Young Under 5.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Luguentz Dort",
-     "team": "ATL",
-     "stat": "fg3a",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.582,
-     "fair": 1.72,
-     "min_dec": 1.77,
-     "ref": 4.8,
-     "label": "Luguentz Dort Over 4.5 Triples intentados",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
     {
      "kind": "prop",
      "model_only": true,
@@ -63653,10 +63364,10 @@
      "stat": "fgm",
      "side": "over",
      "line": 3.5,
-     "p": 0.579,
-     "fair": 1.73,
-     "min_dec": 1.78,
-     "ref": 3.2,
+     "p": 0.661,
+     "fair": 1.51,
+     "min_dec": 1.56,
+     "ref": 3.6,
      "label": "Kingston Flemings Over 3.5 Tiros de campo anotados",
      "hr": {
       "l10": [
@@ -63672,16 +63383,256 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Kingston Flemings",
+     "player": "Aaron Wiggins",
      "team": "ATL",
-     "stat": "fg2a",
+     "stat": "fgm",
+     "side": "over",
+     "line": 5.5,
+     "p": 0.627,
+     "fair": 1.59,
+     "min_dec": 1.64,
+     "ref": 5.5,
+     "label": "Aaron Wiggins Over 5.5 Tiros de campo anotados",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Alex Sarr",
+     "team": "WAS",
+     "stat": "fg2m",
      "side": "over",
      "line": 4.5,
-     "p": 0.562,
-     "fair": 1.78,
-     "min_dec": 1.83,
-     "ref": 4.4,
-     "label": "Kingston Flemings Over 4.5 Dobles intentados",
+     "p": 0.611,
+     "fair": 1.64,
+     "min_dec": 1.69,
+     "ref": 4.3,
+     "label": "Alex Sarr Over 4.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "stat": "fga",
+     "side": "over",
+     "line": 12.5,
+     "p": 0.606,
+     "fair": 1.65,
+     "min_dec": 1.7,
+     "ref": 12.2,
+     "label": "Aaron Wiggins Over 12.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "stat": "fga",
+     "side": "under",
+     "line": 16.5,
+     "p": 0.605,
+     "fair": 1.65,
+     "min_dec": 1.7,
+     "ref": 17.3,
+     "label": "Nickeil Alexander-Walker Under 16.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "CJ McCollum",
+     "team": "ATL",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 3.5,
+     "p": 0.592,
+     "fair": 1.69,
+     "min_dec": 1.74,
+     "ref": 3.9,
+     "label": "CJ McCollum Over 3.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Kingston Flemings",
+     "team": "ATL",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.591,
+     "fair": 1.69,
+     "min_dec": 1.74,
+     "ref": 2.7,
+     "label": "Kingston Flemings Over 2.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       4,
+       8
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Alex Sarr",
+     "team": "WAS",
+     "stat": "fta",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.591,
+     "fair": 1.69,
+     "min_dec": 1.74,
+     "ref": 2.8,
+     "label": "Alex Sarr Over 2.5 Tiros libres intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "stat": "fg3a",
+     "side": "under",
+     "line": 9.5,
+     "p": 0.59,
+     "fair": 1.7,
+     "min_dec": 1.75,
+     "ref": 10.1,
+     "label": "Nickeil Alexander-Walker Under 9.5 Triples intentados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Alex Sarr",
+     "team": "WAS",
+     "stat": "fg2a",
+     "side": "over",
+     "line": 7.5,
+     "p": 0.586,
+     "fair": 1.71,
+     "min_dec": 1.76,
+     "ref": 7.4,
+     "label": "Alex Sarr Over 7.5 Dobles intentados",
+     "hr": {
+      "l10": [
+       1,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.584,
+     "fair": 1.71,
+     "min_dec": 1.76,
+     "ref": 2.9,
+     "label": "Aaron Wiggins Over 2.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Kingston Flemings",
+     "team": "ATL",
+     "stat": "fga",
+     "side": "over",
+     "line": 7.5,
+     "p": 0.581,
+     "fair": 1.72,
+     "min_dec": 1.77,
+     "ref": 7.2,
+     "label": "Kingston Flemings Over 7.5 Tiros de campo intentados",
      "hr": {
       "l10": [
        3,
@@ -63698,14 +63649,38 @@
      "model_only": true,
      "player": "CJ McCollum",
      "team": "ATL",
-     "stat": "fg2m",
+     "stat": "fg3a",
+     "side": "under",
+     "line": 5.5,
+     "p": 0.578,
+     "fair": 1.73,
+     "min_dec": 1.78,
+     "ref": 6.4,
+     "label": "CJ McCollum Under 5.5 Triples intentados",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "stat": "fg2a",
      "side": "over",
-     "line": 3.5,
-     "p": 0.556,
-     "fair": 1.8,
-     "min_dec": 1.85,
-     "ref": 3.4,
-     "label": "CJ McCollum Over 3.5 Dobles anotados",
+     "line": 5.5,
+     "p": 0.574,
+     "fair": 1.74,
+     "min_dec": 1.8,
+     "ref": 5.6,
+     "label": "Aaron Wiggins Over 5.5 Dobles intentados",
      "hr": {
       "l10": [
        4,
@@ -63720,16 +63695,88 @@
     {
      "kind": "prop",
      "model_only": true,
+     "player": "Trae Young",
+     "team": "WAS",
+     "stat": "fga",
+     "side": "under",
+     "line": 14.5,
+     "p": 0.573,
+     "fair": 1.75,
+     "min_dec": 1.8,
+     "ref": 15.6,
+     "label": "Trae Young Under 14.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "AJ Dybantsa",
+     "team": "WAS",
+     "stat": "fga",
+     "side": "under",
+     "line": 13.5,
+     "p": 0.573,
+     "fair": 1.74,
+     "min_dec": 1.8,
+     "ref": 14.2,
+     "label": "AJ Dybantsa Under 13.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       3,
+       4
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
      "player": "Onyeka Okongwu",
      "team": "ATL",
-     "stat": "fg2a",
+     "stat": "fg2m",
      "side": "over",
-     "line": 5.5,
-     "p": 0.555,
-     "fair": 1.8,
-     "min_dec": 1.85,
-     "ref": 5.7,
-     "label": "Onyeka Okongwu Over 5.5 Dobles intentados",
+     "line": 3.5,
+     "p": 0.566,
+     "fair": 1.77,
+     "min_dec": 1.82,
+     "ref": 3.8,
+     "label": "Onyeka Okongwu Over 3.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       5
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Bilal Coulibaly",
+     "team": "WAS",
+     "stat": "fg3a",
+     "side": "under",
+     "line": 2.5,
+     "p": 0.566,
+     "fair": 1.77,
+     "min_dec": 1.82,
+     "ref": 3.1,
+     "label": "Bilal Coulibaly Under 2.5 Triples intentados",
      "hr": {
       "l10": [
        5,
@@ -63737,6 +63784,78 @@
       ],
       "h2h": [
        3,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "stat": "fg3a",
+     "side": "over",
+     "line": 6.5,
+     "p": 0.56,
+     "fair": 1.79,
+     "min_dec": 1.84,
+     "ref": 6.6,
+     "label": "Aaron Wiggins Over 6.5 Triples intentados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "stat": "fta",
+     "side": "under",
+     "line": 3.5,
+     "p": 0.555,
+     "fair": 1.8,
+     "min_dec": 1.85,
+     "ref": 4.1,
+     "label": "Nickeil Alexander-Walker Under 3.5 Tiros libres intentados",
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Onyeka Okongwu",
+     "team": "ATL",
+     "stat": "fg3a",
+     "side": "under",
+     "line": 4.5,
+     "p": 0.554,
+     "fair": 1.81,
+     "min_dec": 1.86,
+     "ref": 5.2,
+     "label": "Onyeka Okongwu Under 4.5 Triples intentados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
        5
       ]
      }
@@ -63748,12 +63867,12 @@
      "team": "WAS",
      "stat": "fta",
      "side": "under",
-     "line": 7.5,
-     "p": 0.555,
-     "fair": 1.8,
+     "line": 8.5,
+     "p": 0.552,
+     "fair": 1.81,
      "min_dec": 1.86,
-     "ref": 8.2,
-     "label": "Trae Young Under 7.5 Tiros libres intentados",
+     "ref": 9.1,
+     "label": "Trae Young Under 8.5 Tiros libres intentados",
      "hr": {
       "l10": [
        6,
@@ -63768,43 +63887,19 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Bilal Coulibaly",
-     "team": "WAS",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.553,
-     "fair": 1.81,
-     "min_dec": 1.86,
-     "ref": 4.5,
-     "label": "Bilal Coulibaly Over 4.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Alex Sarr",
      "team": "WAS",
-     "stat": "fga",
+     "stat": "fgm",
      "side": "over",
-     "line": 9.5,
-     "p": 0.551,
+     "line": 5.5,
+     "p": 0.552,
      "fair": 1.81,
      "min_dec": 1.87,
-     "ref": 9.0,
-     "label": "Alex Sarr Over 9.5 Tiros de campo intentados",
+     "ref": 5.2,
+     "label": "Alex Sarr Over 5.5 Tiros de campo anotados",
      "hr": {
       "l10": [
-       4,
+       1,
        10
       ],
       "h2h": [
@@ -63816,14 +63911,62 @@
     {
      "kind": "prop",
      "model_only": true,
+     "player": "Alex Sarr",
+     "team": "WAS",
+     "stat": "fga",
+     "side": "over",
+     "line": 10.5,
+     "p": 0.55,
+     "fair": 1.82,
+     "min_dec": 1.87,
+     "ref": 10.4,
+     "label": "Alex Sarr Over 10.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Trae Young",
+     "team": "WAS",
+     "stat": "dd",
+     "side": "over",
+     "line": 0.5,
+     "p": 0.405,
+     "fair": 2.47,
+     "min_dec": 2.54,
+     "ref": null,
+     "label": "Trae Young Doble-doble: Sí",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
      "player": "Onyeka Okongwu",
      "team": "ATL",
      "stat": "dd",
      "side": "over",
      "line": 0.5,
-     "p": 0.379,
-     "fair": 2.64,
-     "min_dec": 2.72,
+     "p": 0.403,
+     "fair": 2.48,
+     "min_dec": 2.56,
      "ref": null,
      "label": "Onyeka Okongwu Doble-doble: Sí",
      "hr": {
@@ -63848,14 +63991,14 @@
      "odds": -180,
      "dec": 1.556,
      "odds_assumed": false,
-     "p": 0.764,
+     "p": 0.742,
      "implied": 0.643,
-     "edge": 0.121,
-     "ev": 0.189,
+     "edge": 0.099,
+     "ev": 0.155,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.764,
+     "p_model": 0.742,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -63879,43 +64022,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jalen Johnson Under 1.5 Triples",
-     "player": "Jalen Johnson",
-     "team": "ATL",
-     "line": 1.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.581,
-     "implied": 0.545,
-     "edge": 0.036,
-     "ev": 0.066,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.699,
-     "p_mkt": 0.542,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 28,
-       "value": 3.1,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "AJ Dybantsa Under 1.5 Triples",
      "player": "AJ Dybantsa",
      "team": "WAS",
@@ -63923,14 +64029,14 @@
      "odds": -180,
      "dec": 1.556,
      "odds_assumed": false,
-     "p": 0.682,
+     "p": 0.677,
      "implied": 0.643,
-     "edge": 0.04,
-     "ev": 0.061,
+     "edge": 0.035,
+     "ev": 0.054,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.894,
+     "p_model": 0.875,
      "p_mkt": 0.612,
      "cand": false,
      "no_value_why": "sin Unders de rookies ni de quien no jugó la temporada pasada",
@@ -63958,43 +64064,6 @@
     },
     {
      "kind": "prop",
-     "label": "Trae Young Under 2.5 Triples",
-     "player": "Trae Young",
-     "team": "WAS",
-     "line": 2.5,
-     "odds": -135,
-     "dec": 1.741,
-     "odds_assumed": false,
-     "p": 0.609,
-     "implied": 0.574,
-     "edge": 0.034,
-     "ev": 0.06,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.76,
-     "p_mkt": 0.558,
-     "cand": true,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 2,
-       "value": 1.6,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Aaron Wiggins Over 1.5 Triples",
      "player": "Aaron Wiggins",
      "team": "ATL",
@@ -64002,14 +64071,14 @@
      "odds": -130,
      "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.583,
+     "p": 0.593,
      "implied": 0.565,
-     "edge": 0.017,
-     "ev": 0.031,
+     "edge": 0.028,
+     "ev": 0.05,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.685,
+     "p_model": 0.728,
      "p_mkt": 0.549,
      "cand": true,
      "hr": {
@@ -64032,6 +64101,80 @@
     },
     {
      "kind": "prop",
+     "label": "Trae Young Under 2.5 Triples",
+     "player": "Trae Young",
+     "team": "WAS",
+     "line": 2.5,
+     "odds": -135,
+     "dec": 1.741,
+     "odds_assumed": false,
+     "p": 0.603,
+     "implied": 0.574,
+     "edge": 0.028,
+     "ev": 0.049,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.736,
+     "p_mkt": 0.558,
+     "cand": true,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 2,
+       "value": 1.6,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Luguentz Dort Over 1.5 Triples",
+     "player": "Luguentz Dort",
+     "team": "ATL",
+     "line": 1.5,
+     "odds": 110,
+     "dec": 2.1,
+     "odds_assumed": false,
+     "p": 0.484,
+     "implied": 0.476,
+     "edge": 0.008,
+     "ev": 0.017,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.515,
+     "p_mkt": 0.474,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 28,
+       "value": 3.1,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Onyeka Okongwu Under 1.5 Triples",
      "player": "Onyeka Okongwu",
      "team": "ATL",
@@ -64039,14 +64182,14 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.51,
+     "p": 0.508,
      "implied": 0.5,
-     "edge": 0.01,
-     "ev": 0.02,
+     "edge": 0.008,
+     "ev": 0.015,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.605,
+     "p_model": 0.596,
      "p_mkt": 0.478,
      "cand": false,
      "hr": {
@@ -64069,117 +64212,6 @@
     },
     {
      "kind": "prop",
-     "label": "Luguentz Dort Over 1.5 Triples",
-     "player": "Luguentz Dort",
-     "team": "ATL",
-     "line": 1.5,
-     "odds": 110,
-     "dec": 2.1,
-     "odds_assumed": false,
-     "p": 0.48,
-     "implied": 0.476,
-     "edge": 0.004,
-     "ev": 0.008,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.497,
-     "p_mkt": 0.474,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 8,
-       "value": 2.2,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Kyshawn George Under 1.5 Triples",
-     "player": "Kyshawn George",
-     "team": "WAS",
-     "line": 1.5,
-     "odds": 130,
-     "dec": 2.3,
-     "odds_assumed": false,
-     "p": 0.435,
-     "implied": 0.435,
-     "edge": 0.0,
-     "ev": 0.001,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.459,
-     "p_mkt": 0.427,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 11,
-       "value": 3.1,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Luguentz Dort Under 1.5 Triples",
-     "player": "Luguentz Dort",
-     "team": "ATL",
-     "line": 1.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.52,
-     "implied": 0.528,
-     "edge": -0.008,
-     "ev": -0.015,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.503,
-     "p_mkt": 0.526,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 8,
-       "value": 2.2,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Nickeil Alexander-Walker Over 3.5 Triples",
      "player": "Nickeil Alexander-Walker",
      "team": "ATL",
@@ -64187,14 +64219,14 @@
      "odds": 130,
      "dec": 2.3,
      "odds_assumed": false,
-     "p": 0.428,
+     "p": 0.433,
      "implied": 0.435,
-     "edge": -0.007,
-     "ev": -0.016,
+     "edge": -0.002,
+     "ev": -0.004,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.431,
+     "p_model": 0.451,
      "p_mkt": 0.427,
      "cand": false,
      "hr": {
@@ -64224,10 +64256,10 @@
      "odds": -286,
      "dec": 1.35,
      "odds_assumed": false,
-     "p": 0.727,
+     "p": 0.735,
      "implied": 0.741,
-     "edge": -0.014,
-     "ev": -0.019,
+     "edge": -0.006,
+     "ev": -0.008,
      "value": false,
      "n_books": 9,
      "best": {
@@ -64235,31 +64267,31 @@
       "line": null,
       "odds": -275,
       "dec": 1.364,
-      "p": 0.727,
-      "ev": -0.008
+      "p": 0.735,
+      "ev": 0.003
      },
-     "p_model": 0.776,
+     "p_model": 0.807,
      "p_mkt": 0.711,
      "cand": false
     },
     {
      "kind": "prop",
-     "label": "Nickeil Alexander-Walker Under 3.5 Triples",
-     "player": "Nickeil Alexander-Walker",
-     "team": "ATL",
-     "line": 3.5,
-     "odds": -140,
-     "dec": 1.714,
+     "label": "Kyshawn George Under 1.5 Triples",
+     "player": "Kyshawn George",
+     "team": "WAS",
+     "line": 1.5,
+     "odds": 130,
+     "dec": 2.3,
      "odds_assumed": false,
-     "p": 0.572,
-     "implied": 0.583,
-     "edge": -0.011,
-     "ev": -0.02,
+     "p": 0.428,
+     "implied": 0.435,
+     "edge": -0.007,
+     "ev": -0.017,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.569,
-     "p_mkt": 0.573,
+     "p_model": 0.429,
+     "p_mkt": 0.427,
      "cand": false,
      "hr": {
       "l10": [
@@ -64267,12 +64299,12 @@
        10
       ],
       "h2h": [
-       3,
-       4
+       1,
+       3
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 13,
+       "rank": 11,
        "value": 3.1,
        "lg": 3.3,
        "n": 30
@@ -64288,14 +64320,14 @@
      "odds": -140,
      "dec": 1.714,
      "odds_assumed": false,
-     "p": 0.565,
+     "p": 0.572,
      "implied": 0.583,
-     "edge": -0.018,
-     "ev": -0.032,
+     "edge": -0.011,
+     "ev": -0.019,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.541,
+     "p_model": 0.571,
      "p_mkt": 0.573,
      "cand": false,
      "hr": {
@@ -64318,22 +64350,22 @@
     },
     {
      "kind": "prop",
-     "label": "Jalen Johnson Over 1.5 Triples",
-     "player": "Jalen Johnson",
+     "label": "Luguentz Dort Under 1.5 Triples",
+     "player": "Luguentz Dort",
      "team": "ATL",
      "line": 1.5,
-     "odds": 117,
-     "dec": 2.17,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.419,
-     "implied": 0.461,
-     "edge": -0.042,
-     "ev": -0.091,
+     "p": 0.516,
+     "implied": 0.528,
+     "edge": -0.013,
+     "ev": -0.024,
      "value": false,
      "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.301,
-     "p_mkt": 0.458,
+     "side": "under",
+     "p_model": 0.485,
+     "p_mkt": 0.526,
      "cand": false,
      "hr": {
       "l10": [
@@ -64342,7 +64374,7 @@
       ],
       "h2h": [
        1,
-       3
+       2
       ],
       "dvp": {
        "pos": "PF",
@@ -64354,31 +64386,41 @@
      }
     },
     {
-     "kind": "ml",
-     "label": "WAS gana",
-     "player": null,
-     "team": "WAS",
-     "line": null,
-     "odds": 232,
-     "dec": 3.316,
+     "kind": "prop",
+     "label": "Nickeil Alexander-Walker Under 3.5 Triples",
+     "player": "Nickeil Alexander-Walker",
+     "team": "ATL",
+     "line": 3.5,
+     "odds": -140,
+     "dec": 1.714,
      "odds_assumed": false,
-     "p": 0.273,
-     "implied": 0.302,
-     "edge": -0.029,
-     "ev": -0.095,
+     "p": 0.567,
+     "implied": 0.583,
+     "edge": -0.016,
+     "ev": -0.028,
      "value": false,
-     "n_books": 9,
-     "best": {
-      "book": "FanDuel",
-      "line": null,
-      "odds": 240,
-      "dec": 3.4,
-      "p": 0.273,
-      "ev": -0.072
-     },
-     "p_model": 0.224,
-     "p_mkt": 0.289,
-     "cand": false
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.549,
+     "p_mkt": 0.573,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 13,
+       "value": 3.1,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
     },
     {
      "kind": "prop",
@@ -64389,14 +64431,14 @@
      "odds": -120,
      "dec": 1.833,
      "odds_assumed": false,
-     "p": 0.49,
+     "p": 0.492,
      "implied": 0.545,
-     "edge": -0.055,
-     "ev": -0.102,
+     "edge": -0.053,
+     "ev": -0.098,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.395,
+     "p_model": 0.404,
      "p_mkt": 0.522,
      "cand": false,
      "hr": {
@@ -64418,41 +64460,31 @@
      }
     },
     {
-     "kind": "prop",
-     "label": "Aaron Wiggins Under 1.5 Triples",
-     "player": "Aaron Wiggins",
-     "team": "ATL",
-     "line": 1.5,
-     "odds": 115,
-     "dec": 2.15,
+     "kind": "ml",
+     "label": "WAS gana",
+     "player": null,
+     "team": "WAS",
+     "line": null,
+     "odds": 232,
+     "dec": 3.316,
      "odds_assumed": false,
-     "p": 0.417,
-     "implied": 0.465,
-     "edge": -0.048,
-     "ev": -0.103,
+     "p": 0.265,
+     "implied": 0.302,
+     "edge": -0.036,
+     "ev": -0.12,
      "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.315,
-     "p_mkt": 0.451,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 13,
-       "value": 3.1,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
+     "n_books": 9,
+     "best": {
+      "book": "FanDuel",
+      "line": null,
+      "odds": 240,
+      "dec": 3.4,
+      "p": 0.265,
+      "ev": -0.099
+     },
+     "p_model": 0.193,
+     "p_mkt": 0.289,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -64463,14 +64495,14 @@
      "odds": 120,
      "dec": 2.2,
      "odds_assumed": false,
-     "p": 0.391,
+     "p": 0.397,
      "implied": 0.455,
-     "edge": -0.063,
-     "ev": -0.139,
+     "edge": -0.057,
+     "ev": -0.126,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.24,
+     "p_model": 0.264,
      "p_mkt": 0.442,
      "cand": false,
      "hr": {
@@ -64493,6 +64525,43 @@
     },
     {
      "kind": "prop",
+     "label": "Aaron Wiggins Under 1.5 Triples",
+     "player": "Aaron Wiggins",
+     "team": "ATL",
+     "line": 1.5,
+     "odds": 115,
+     "dec": 2.15,
+     "odds_assumed": false,
+     "p": 0.407,
+     "implied": 0.465,
+     "edge": -0.059,
+     "ev": -0.126,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.272,
+     "p_mkt": 0.451,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 13,
+       "value": 3.1,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "AJ Dybantsa Over 1.5 Triples",
      "player": "AJ Dybantsa",
      "team": "WAS",
@@ -64500,14 +64569,14 @@
      "odds": 145,
      "dec": 2.45,
      "odds_assumed": false,
-     "p": 0.318,
+     "p": 0.322,
      "implied": 0.408,
-     "edge": -0.09,
-     "ev": -0.221,
+     "edge": -0.086,
+     "ev": -0.21,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.106,
+     "p_model": 0.124,
      "p_mkt": 0.388,
      "cand": false,
      "hr": {
@@ -64541,14 +64610,14 @@
      "odds": -162,
      "dec": 1.617,
      "odds_assumed": false,
-     "p": 0.458,
+     "p": 0.481,
      "implied": 0.618,
-     "edge": -0.16,
-     "ev": -0.259,
+     "edge": -0.137,
+     "ev": -0.222,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.458,
+     "p_model": 0.481,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -66364,13 +66433,13 @@
    },
    "proj": {
     "NOP": 114.5,
-    "MIN": 119.1
+    "MIN": 118.5
    },
    "win_prob": {
-    "NOP": 0.372225,
-    "MIN": 0.627775
+    "NOP": 0.38575,
+    "MIN": 0.61425
    },
-   "proj_total": 233.5,
+   "proj_total": 233.1,
    "used_db": true,
    "n_value": 3,
    "top_bets": [
@@ -66383,15 +66452,15 @@
      "odds": -106,
      "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.558,
+     "p": 0.561,
      "implied": 0.515,
-     "fair": -126,
-     "edge": 0.043,
-     "ev": 0.084,
+     "fair": -128,
+     "edge": 0.046,
+     "ev": 0.089,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.728,
+     "p_model": 0.739,
      "p_mkt": 0.501,
      "cand": true,
      "hr": {
@@ -66414,37 +66483,37 @@
     },
     {
      "kind": "prop",
-     "label": "Terrence Shannon Jr Under 1.5 Triples",
-     "player": "Terrence Shannon Jr",
-     "team": "MIN",
+     "label": "Jeremiah Fears Under 1.5 Triples",
+     "player": "Jeremiah Fears",
+     "team": "NOP",
      "line": 1.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -160,
+     "dec": 1.625,
      "odds_assumed": false,
-     "p": 0.571,
-     "implied": 0.528,
-     "fair": -133,
-     "edge": 0.043,
-     "ev": 0.081,
+     "p": 0.65,
+     "implied": 0.615,
+     "fair": -186,
+     "edge": 0.035,
+     "ev": 0.057,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.671,
-     "p_mkt": 0.538,
+     "p_model": 0.812,
+     "p_mkt": 0.596,
      "cand": true,
      "hr": {
       "l10": [
-       3,
+       8,
        10
       ],
       "h2h": [
        3,
-       3
+       4
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 1,
-       "value": 2.0,
+       "rank": 10,
+       "value": 3.0,
        "lg": 3.3,
        "n": 30
       }
@@ -66459,15 +66528,15 @@
      "odds": 127,
      "dec": 2.27,
      "odds_assumed": false,
-     "p": 0.471,
+     "p": 0.465,
      "implied": 0.441,
-     "fair": 112,
-     "edge": 0.031,
-     "ev": 0.07,
+     "fair": 115,
+     "edge": 0.024,
+     "ev": 0.055,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.571,
+     "p_model": 0.545,
      "p_mkt": 0.438,
      "cand": true,
      "hr": {
@@ -66499,15 +66568,15 @@
      "odds": -106,
      "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.558,
+     "p": 0.561,
      "implied": 0.515,
-     "fair": -126,
-     "edge": 0.043,
-     "ev": 0.084,
+     "fair": -128,
+     "edge": 0.046,
+     "ev": 0.089,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.728,
+     "p_model": 0.739,
      "p_mkt": 0.501,
      "cand": true,
      "hr": {
@@ -66530,37 +66599,37 @@
     },
     {
      "kind": "prop",
-     "label": "Terrence Shannon Jr Under 1.5 Triples",
-     "player": "Terrence Shannon Jr",
-     "team": "MIN",
+     "label": "Jeremiah Fears Under 1.5 Triples",
+     "player": "Jeremiah Fears",
+     "team": "NOP",
      "line": 1.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -160,
+     "dec": 1.625,
      "odds_assumed": false,
-     "p": 0.571,
-     "implied": 0.528,
-     "fair": -133,
-     "edge": 0.043,
-     "ev": 0.081,
+     "p": 0.65,
+     "implied": 0.615,
+     "fair": -186,
+     "edge": 0.035,
+     "ev": 0.057,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.671,
-     "p_mkt": 0.538,
+     "p_model": 0.812,
+     "p_mkt": 0.596,
      "cand": true,
      "hr": {
       "l10": [
-       3,
+       8,
        10
       ],
       "h2h": [
        3,
-       3
+       4
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 1,
-       "value": 2.0,
+       "rank": 10,
+       "value": 3.0,
        "lg": 3.3,
        "n": 30
       }
@@ -66575,15 +66644,15 @@
      "odds": 127,
      "dec": 2.27,
      "odds_assumed": false,
-     "p": 0.471,
+     "p": 0.465,
      "implied": 0.441,
-     "fair": 112,
-     "edge": 0.031,
-     "ev": 0.07,
+     "fair": 115,
+     "edge": 0.024,
+     "ev": 0.055,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.571,
+     "p_model": 0.545,
      "p_mkt": 0.438,
      "cand": true,
      "hr": {
@@ -66616,9 +66685,9 @@
        "line": 1.5,
        "stat": "fg3m",
        "side": "under",
-       "p": 0.648,
+       "p": 0.65,
        "dec": 1.625,
-       "ev": 0.053,
+       "ev": 0.057,
        "gid": "2026-11-06-MIN-at-NOP",
        "game": "MIN @ NOP"
       },
@@ -66630,20 +66699,74 @@
        "line": 1.5,
        "stat": "fg3m",
        "side": "under",
-       "p": 0.617,
+       "p": 0.62,
        "dec": 1.633,
-       "ev": 0.008,
+       "ev": 0.012,
        "gid": "2026-11-06-MIN-at-NOP",
        "game": "MIN @ NOP"
       }
      ],
      "n": 2,
-     "p": 0.401,
-     "p_indep": 0.4,
+     "p": 0.403,
+     "p_indep": 0.403,
      "corr": 1.0,
      "dec": 2.65,
-     "fair": 2.49,
-     "ev": 0.065,
+     "fair": 2.48,
+     "ev": 0.071,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Trey Murphy III Under 2.5 Triples",
+       "player": "Trey Murphy III",
+       "team": "NOP",
+       "line": 2.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.581,
+       "dec": 1.741,
+       "ev": 0.011,
+       "gid": "2026-11-06-MIN-at-NOP",
+       "game": "MIN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Saddiq Bey Under 1.5 Triples",
+       "player": "Saddiq Bey",
+       "team": "NOP",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.943,
+       "ev": 0.089,
+       "gid": "2026-11-06-MIN-at-NOP",
+       "game": "MIN @ NOP"
+      },
+      {
+       "kind": "prop",
+       "label": "Jaden McDaniels Under 1.5 Triples",
+       "player": "Jaden McDaniels",
+       "team": "MIN",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.552,
+       "dec": 1.855,
+       "ev": 0.024,
+       "gid": "2026-11-06-MIN-at-NOP",
+       "game": "MIN @ NOP"
+      }
+     ],
+     "n": 3,
+     "p": 0.179,
+     "p_indep": 0.18,
+     "corr": 1.0,
+     "dec": 6.28,
+     "fair": 5.58,
+     "ev": 0.126,
      "type": "sgp"
     }
    ],
@@ -66653,37 +66776,13 @@
      "model_only": true,
      "player": "Rudy Gobert",
      "team": "MIN",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.719,
-     "fair": 1.39,
-     "min_dec": 1.43,
-     "ref": 6.0,
-     "label": "Rudy Gobert Over 5.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Rudy Gobert",
-     "team": "MIN",
      "stat": "fgm",
      "side": "over",
      "line": 3.5,
-     "p": 0.706,
-     "fair": 1.42,
-     "min_dec": 1.46,
-     "ref": 3.4,
+     "p": 0.723,
+     "fair": 1.38,
+     "min_dec": 1.42,
+     "ref": 3.7,
      "label": "Rudy Gobert Over 3.5 Tiros de campo anotados",
      "hr": {
       "l10": [
@@ -66704,10 +66803,10 @@
      "stat": "fg2m",
      "side": "over",
      "line": 3.5,
-     "p": 0.706,
-     "fair": 1.42,
-     "min_dec": 1.46,
-     "ref": 3.4,
+     "p": 0.723,
+     "fair": 1.38,
+     "min_dec": 1.42,
+     "ref": 3.7,
      "label": "Rudy Gobert Over 3.5 Dobles anotados",
      "hr": {
       "l10": [
@@ -66723,15 +66822,63 @@
     {
      "kind": "prop",
      "model_only": true,
+     "player": "Trey Murphy III",
+     "team": "NOP",
+     "stat": "fgm",
+     "side": "over",
+     "line": 4.5,
+     "p": 0.642,
+     "fair": 1.56,
+     "min_dec": 1.6,
+     "ref": 4.9,
+     "label": "Trey Murphy III Over 4.5 Tiros de campo anotados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Jaden McDaniels",
+     "team": "MIN",
+     "stat": "fga",
+     "side": "under",
+     "line": 13.5,
+     "p": 0.642,
+     "fair": 1.56,
+     "min_dec": 1.6,
+     "ref": 14.5,
+     "label": "Jaden McDaniels Under 13.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
      "player": "Rudy Gobert",
      "team": "MIN",
      "stat": "ftm",
      "side": "over",
      "line": 2.5,
-     "p": 0.627,
-     "fair": 1.59,
-     "min_dec": 1.64,
-     "ref": 2.4,
+     "p": 0.634,
+     "fair": 1.58,
+     "min_dec": 1.62,
+     "ref": 2.6,
      "label": "Rudy Gobert Over 2.5 Tiros libres anotados",
      "hr": {
       "l10": [
@@ -66747,24 +66894,24 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Jeremiah Fears",
-     "team": "NOP",
+     "player": "Rudy Gobert",
+     "team": "MIN",
      "stat": "fg2a",
      "side": "over",
-     "line": 7.5,
-     "p": 0.619,
+     "line": 6.5,
+     "p": 0.617,
      "fair": 1.62,
-     "min_dec": 1.66,
-     "ref": 7.7,
-     "label": "Jeremiah Fears Over 7.5 Dobles intentados",
+     "min_dec": 1.67,
+     "ref": 6.6,
+     "label": "Rudy Gobert Over 6.5 Dobles intentados",
      "hr": {
       "l10": [
-       8,
+       5,
        10
       ],
       "h2h": [
        3,
-       4
+       3
       ]
      }
     },
@@ -66776,9 +66923,9 @@
      "stat": "fg2m",
      "side": "over",
      "line": 3.5,
-     "p": 0.615,
-     "fair": 1.63,
-     "min_dec": 1.68,
+     "p": 0.601,
+     "fair": 1.66,
+     "min_dec": 1.71,
      "ref": 3.7,
      "label": "Jeremiah Fears Over 3.5 Dobles anotados",
      "hr": {
@@ -66795,14 +66942,86 @@
     {
      "kind": "prop",
      "model_only": true,
+     "player": "Jeremiah Fears",
+     "team": "NOP",
+     "stat": "fg2a",
+     "side": "over",
+     "line": 7.5,
+     "p": 0.601,
+     "fair": 1.66,
+     "min_dec": 1.71,
+     "ref": 7.7,
+     "label": "Jeremiah Fears Over 7.5 Dobles intentados",
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Rudy Gobert",
+     "team": "MIN",
+     "stat": "fta",
+     "side": "over",
+     "line": 5.5,
+     "p": 0.598,
+     "fair": 1.67,
+     "min_dec": 1.72,
+     "ref": 5.7,
+     "label": "Rudy Gobert Over 5.5 Tiros libres intentados",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Trey Murphy III",
+     "team": "NOP",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.594,
+     "fair": 1.68,
+     "min_dec": 1.74,
+     "ref": 2.8,
+     "label": "Trey Murphy III Over 2.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
      "player": "Saddiq Bey",
      "team": "NOP",
      "stat": "fta",
      "side": "over",
      "line": 2.5,
-     "p": 0.601,
-     "fair": 1.66,
-     "min_dec": 1.71,
+     "p": 0.593,
+     "fair": 1.69,
+     "min_dec": 1.74,
      "ref": 3.0,
      "label": "Saddiq Bey Over 2.5 Tiros libres intentados",
      "hr": {
@@ -66819,143 +67038,23 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Rudy Gobert",
-     "team": "MIN",
-     "stat": "fta",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.591,
-     "fair": 1.69,
-     "min_dec": 1.74,
-     "ref": 5.1,
-     "label": "Rudy Gobert Over 5.5 Tiros libres intentados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Jaden McDaniels",
      "team": "MIN",
-     "stat": "fga",
+     "stat": "fgm",
      "side": "under",
-     "line": 12.5,
-     "p": 0.585,
-     "fair": 1.71,
-     "min_dec": 1.76,
-     "ref": 13.1,
-     "label": "Jaden McDaniels Under 12.5 Tiros de campo intentados",
+     "line": 6.5,
+     "p": 0.59,
+     "fair": 1.69,
+     "min_dec": 1.75,
+     "ref": 7.5,
+     "label": "Jaden McDaniels Under 6.5 Tiros de campo anotados",
      "hr": {
       "l10": [
-       3,
+       4,
        10
       ],
       "h2h": [
        2,
-       3
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Jeremiah Fears",
-     "team": "NOP",
-     "stat": "fgm",
-     "side": "over",
-     "line": 4.5,
-     "p": 0.58,
-     "fair": 1.72,
-     "min_dec": 1.78,
-     "ref": 4.6,
-     "label": "Jeremiah Fears Over 4.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Derik Queen",
-     "team": "NOP",
-     "stat": "fga",
-     "side": "over",
-     "line": 7.5,
-     "p": 0.577,
-     "fair": 1.73,
-     "min_dec": 1.78,
-     "ref": 7.7,
-     "label": "Derik Queen Over 7.5 Tiros de campo intentados",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Jeremiah Fears",
-     "team": "NOP",
-     "stat": "fga",
-     "side": "over",
-     "line": 11.5,
-     "p": 0.571,
-     "fair": 1.75,
-     "min_dec": 1.8,
-     "ref": 11.1,
-     "label": "Jeremiah Fears Over 11.5 Tiros de campo intentados",
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Saddiq Bey",
-     "team": "NOP",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.569,
-     "fair": 1.76,
-     "min_dec": 1.81,
-     "ref": 5.4,
-     "label": "Saddiq Bey Over 5.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       3,
        3
       ]
      }
@@ -66968,9 +67067,9 @@
      "stat": "fgm",
      "side": "under",
      "line": 5.5,
-     "p": 0.561,
-     "fair": 1.78,
-     "min_dec": 1.84,
+     "p": 0.584,
+     "fair": 1.71,
+     "min_dec": 1.76,
      "ref": 6.0,
      "label": "Dejounte Murray Under 5.5 Tiros de campo anotados",
      "hr": {
@@ -66992,9 +67091,9 @@
      "stat": "dd",
      "side": "over",
      "line": 0.5,
-     "p": 0.558,
-     "fair": 1.79,
-     "min_dec": 1.85,
+     "p": 0.58,
+     "fair": 1.72,
+     "min_dec": 1.78,
      "ref": null,
      "label": "Rudy Gobert Doble-doble: Sí",
      "hr": {
@@ -67011,16 +67110,64 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Saddiq Bey",
+     "player": "Zion Williamson",
      "team": "NOP",
-     "stat": "ftm",
+     "stat": "fga",
+     "side": "under",
+     "line": 10.5,
+     "p": 0.575,
+     "fair": 1.74,
+     "min_dec": 1.79,
+     "ref": 11.2,
+     "label": "Zion Williamson Under 10.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       1,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Dejounte Murray",
+     "team": "NOP",
+     "stat": "fga",
+     "side": "under",
+     "line": 11.5,
+     "p": 0.571,
+     "fair": 1.75,
+     "min_dec": 1.8,
+     "ref": 12.6,
+     "label": "Dejounte Murray Under 11.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Trey Murphy III",
+     "team": "NOP",
+     "stat": "fga",
      "side": "over",
-     "line": 2.5,
-     "p": 0.553,
-     "fair": 1.81,
-     "min_dec": 1.86,
-     "ref": 2.5,
-     "label": "Saddiq Bey Over 2.5 Tiros libres anotados",
+     "line": 10.5,
+     "p": 0.569,
+     "fair": 1.76,
+     "min_dec": 1.81,
+     "ref": 10.6,
+     "label": "Trey Murphy III Over 10.5 Tiros de campo intentados",
      "hr": {
       "l10": [
        6,
@@ -67035,23 +67182,23 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Derik Queen",
+     "player": "Jeremiah Fears",
      "team": "NOP",
      "stat": "fgm",
      "side": "over",
-     "line": 3.5,
-     "p": 0.553,
-     "fair": 1.81,
-     "min_dec": 1.86,
-     "ref": 3.7,
-     "label": "Derik Queen Over 3.5 Tiros de campo anotados",
+     "line": 4.5,
+     "p": 0.561,
+     "fair": 1.78,
+     "min_dec": 1.84,
+     "ref": 4.6,
+     "label": "Jeremiah Fears Over 4.5 Tiros de campo anotados",
      "hr": {
       "l10": [
        7,
        10
       ],
       "h2h": [
-       4,
+       3,
        4
       ]
      }
@@ -67059,24 +67206,48 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "LaMelo Ball",
-     "team": "MIN",
-     "stat": "fgm",
+     "player": "Trey Murphy III",
+     "team": "NOP",
+     "stat": "fta",
      "side": "over",
-     "line": 6.5,
-     "p": 0.551,
-     "fair": 1.82,
-     "min_dec": 1.87,
-     "ref": 6.4,
-     "label": "LaMelo Ball Over 6.5 Tiros de campo anotados",
+     "line": 2.5,
+     "p": 0.553,
+     "fair": 1.81,
+     "min_dec": 1.86,
+     "ref": 2.8,
+     "label": "Trey Murphy III Over 2.5 Tiros libres intentados",
      "hr": {
       "l10": [
        4,
        10
       ],
       "h2h": [
-       1,
-       1
+       2,
+       3
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Derik Queen",
+     "team": "NOP",
+     "stat": "fga",
+     "side": "over",
+     "line": 7.5,
+     "p": 0.553,
+     "fair": 1.81,
+     "min_dec": 1.86,
+     "ref": 7.7,
+     "label": "Derik Queen Over 7.5 Tiros de campo intentados",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       4,
+       4
       ]
      }
     }
@@ -67091,14 +67262,14 @@
      "odds": -106,
      "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.558,
+     "p": 0.561,
      "implied": 0.515,
-     "edge": 0.043,
-     "ev": 0.084,
+     "edge": 0.046,
+     "ev": 0.089,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.728,
+     "p_model": 0.739,
      "p_mkt": 0.501,
      "cand": true,
      "hr": {
@@ -67121,80 +67292,6 @@
     },
     {
      "kind": "prop",
-     "label": "Terrence Shannon Jr Under 1.5 Triples",
-     "player": "Terrence Shannon Jr",
-     "team": "MIN",
-     "line": 1.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.571,
-     "implied": 0.528,
-     "edge": 0.043,
-     "ev": 0.081,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.671,
-     "p_mkt": 0.538,
-     "cand": true,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 1,
-       "value": 2.0,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ayo Dosunmu Under 1.5 Triples",
-     "player": "Ayo Dosunmu",
-     "team": "MIN",
-     "line": 1.5,
-     "odds": 127,
-     "dec": 2.27,
-     "odds_assumed": false,
-     "p": 0.471,
-     "implied": 0.441,
-     "edge": 0.031,
-     "ev": 0.07,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.571,
-     "p_mkt": 0.438,
-     "cand": true,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 1,
-       "value": 2.0,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Jeremiah Fears Under 1.5 Triples",
      "player": "Jeremiah Fears",
      "team": "NOP",
@@ -67202,14 +67299,14 @@
      "odds": -160,
      "dec": 1.625,
      "odds_assumed": false,
-     "p": 0.648,
+     "p": 0.65,
      "implied": 0.615,
-     "edge": 0.033,
-     "ev": 0.053,
-     "value": false,
+     "edge": 0.035,
+     "ev": 0.057,
+     "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.804,
+     "p_model": 0.812,
      "p_mkt": 0.596,
      "cand": true,
      "hr": {
@@ -67232,6 +67329,43 @@
     },
     {
      "kind": "prop",
+     "label": "Ayo Dosunmu Under 1.5 Triples",
+     "player": "Ayo Dosunmu",
+     "team": "MIN",
+     "line": 1.5,
+     "odds": 127,
+     "dec": 2.27,
+     "odds_assumed": false,
+     "p": 0.465,
+     "implied": 0.441,
+     "edge": 0.024,
+     "ev": 0.055,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.545,
+     "p_mkt": 0.438,
+     "cand": true,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 1,
+       "value": 2.0,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "LaMelo Ball Under 3.5 Triples",
      "player": "LaMelo Ball",
      "team": "MIN",
@@ -67239,16 +67373,16 @@
      "odds": 120,
      "dec": 2.2,
      "odds_assumed": false,
-     "p": 0.474,
+     "p": 0.465,
      "implied": 0.455,
-     "edge": 0.02,
-     "ev": 0.044,
+     "edge": 0.011,
+     "ev": 0.024,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.519,
+     "p_model": 0.483,
      "p_mkt": 0.459,
-     "cand": true,
+     "cand": false,
      "hr": {
       "l10": [
        4,
@@ -67276,14 +67410,14 @@
      "odds": -117,
      "dec": 1.855,
      "odds_assumed": false,
-     "p": 0.555,
+     "p": 0.552,
      "implied": 0.539,
-     "edge": 0.016,
-     "ev": 0.029,
+     "edge": 0.013,
+     "ev": 0.024,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.662,
+     "p_model": 0.651,
      "p_mkt": 0.519,
      "cand": false,
      "hr": {
@@ -67306,22 +67440,22 @@
     },
     {
      "kind": "prop",
-     "label": "Trey Murphy III Under 2.5 Triples",
-     "player": "Trey Murphy III",
-     "team": "NOP",
-     "line": 2.5,
-     "odds": -135,
-     "dec": 1.741,
+     "label": "Jonathan Kuminga Over 1.5 Triples",
+     "player": "Jonathan Kuminga",
+     "team": "MIN",
+     "line": 1.5,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.58,
-     "implied": 0.574,
-     "edge": 0.005,
-     "ev": 0.009,
+     "p": 0.507,
+     "implied": 0.5,
+     "edge": 0.007,
+     "ev": 0.015,
      "value": false,
      "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.641,
-     "p_mkt": 0.559,
+     "side": "over",
+     "p_model": 0.564,
+     "p_mkt": 0.488,
      "cand": false,
      "hr": {
       "l10": [
@@ -67330,12 +67464,12 @@
       ],
       "h2h": [
        1,
-       3
+       1
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 2,
-       "value": 1.2,
+       "pos": "PF",
+       "rank": 18,
+       "value": 2.9,
        "lg": 2.6,
        "n": 30
       }
@@ -67350,14 +67484,14 @@
      "odds": -158,
      "dec": 1.633,
      "odds_assumed": false,
-     "p": 0.617,
+     "p": 0.62,
      "implied": 0.612,
-     "edge": 0.005,
-     "ev": 0.008,
+     "edge": 0.007,
+     "ev": 0.012,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.731,
+     "p_model": 0.741,
      "p_mkt": 0.579,
      "cand": false,
      "hr": {
@@ -67380,22 +67514,22 @@
     },
     {
      "kind": "prop",
-     "label": "Jonathan Kuminga Over 1.5 Triples",
-     "player": "Jonathan Kuminga",
-     "team": "MIN",
-     "line": 1.5,
-     "odds": 100,
-     "dec": 2.0,
+     "label": "Trey Murphy III Under 2.5 Triples",
+     "player": "Trey Murphy III",
+     "team": "NOP",
+     "line": 2.5,
+     "odds": -135,
+     "dec": 1.741,
      "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.5,
-     "edge": 0.001,
-     "ev": 0.001,
+     "p": 0.581,
+     "implied": 0.574,
+     "edge": 0.006,
+     "ev": 0.011,
      "value": false,
      "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.537,
-     "p_mkt": 0.488,
+     "side": "under",
+     "p_model": 0.645,
+     "p_mkt": 0.559,
      "cand": false,
      "hr": {
       "l10": [
@@ -67404,43 +67538,16 @@
       ],
       "h2h": [
        1,
-       1
+       3
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 18,
-       "value": 2.9,
+       "pos": "SF",
+       "rank": 2,
+       "value": 1.2,
        "lg": 2.6,
        "n": 30
       }
      }
-    },
-    {
-     "kind": "total",
-     "label": "Over 229.5",
-     "player": null,
-     "team": null,
-     "line": 229.5,
-     "odds": -109,
-     "dec": 1.918,
-     "odds_assumed": false,
-     "p": 0.517,
-     "implied": 0.521,
-     "edge": -0.004,
-     "ev": -0.008,
-     "value": false,
-     "n_books": 7,
-     "best": {
-      "book": "DraftKings",
-      "line": 229.5,
-      "odds": -105,
-      "dec": 1.952,
-      "p": 0.517,
-      "ev": 0.009
-     },
-     "p_model": 0.577,
-     "p_mkt": 0.498,
-     "cand": false
     },
     {
      "kind": "prop",
@@ -67451,14 +67558,14 @@
      "odds": -115,
      "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.526,
+     "p": 0.535,
      "implied": 0.535,
-     "edge": -0.009,
-     "ev": -0.017,
+     "edge": -0.0,
+     "ev": -0.0,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.481,
+     "p_model": 0.517,
      "p_mkt": 0.541,
      "cand": false,
      "hr": {
@@ -67480,6 +67587,33 @@
      }
     },
     {
+     "kind": "total",
+     "label": "Over 229.5",
+     "player": null,
+     "team": null,
+     "line": 229.5,
+     "odds": -109,
+     "dec": 1.918,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.521,
+     "edge": -0.006,
+     "ev": -0.012,
+     "value": false,
+     "n_books": 7,
+     "best": {
+      "book": "DraftKings",
+      "line": 229.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.515,
+      "ev": 0.005
+     },
+     "p_model": 0.567,
+     "p_mkt": 0.498,
+     "cand": false
+    },
+    {
      "kind": "ml",
      "label": "MIN gana",
      "player": null,
@@ -67488,10 +67622,10 @@
      "odds": -171,
      "dec": 1.585,
      "odds_assumed": false,
-     "p": 0.611,
+     "p": 0.607,
      "implied": 0.631,
-     "edge": -0.02,
-     "ev": -0.032,
+     "edge": -0.024,
+     "ev": -0.037,
      "value": false,
      "n_books": 9,
      "best": {
@@ -67499,76 +67633,12 @@
       "line": null,
       "odds": -162,
       "dec": 1.617,
-      "p": 0.611,
-      "ev": -0.012
+      "p": 0.607,
+      "ev": -0.018
      },
-     "p_model": 0.628,
+     "p_model": 0.614,
      "p_mkt": 0.605,
      "cand": false
-    },
-    {
-     "kind": "spread",
-     "label": "MIN -4.5",
-     "player": null,
-     "team": "MIN",
-     "line": -4.5,
-     "odds": -110,
-     "dec": 1.908,
-     "odds_assumed": false,
-     "p": 0.502,
-     "implied": 0.524,
-     "edge": -0.022,
-     "ev": -0.042,
-     "value": false,
-     "n_books": 8,
-     "best": {
-      "book": "BetRivers",
-      "line": -5.5,
-      "odds": 110,
-      "dec": 2.1,
-      "p": 0.473,
-      "ev": -0.007
-     },
-     "p_model": 0.507,
-     "p_mkt": 0.5,
-     "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Jonathan Kuminga Under 1.5 Triples",
-     "player": "Jonathan Kuminga",
-     "team": "MIN",
-     "line": 1.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.524,
-     "edge": -0.024,
-     "ev": -0.046,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.463,
-     "p_mkt": 0.512,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 18,
-       "value": 2.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
     },
     {
      "kind": "spread",
@@ -67579,10 +67649,10 @@
      "odds": -110,
      "dec": 1.91,
      "odds_assumed": false,
-     "p": 0.498,
+     "p": 0.502,
      "implied": 0.523,
-     "edge": -0.026,
-     "ev": -0.049,
+     "edge": -0.022,
+     "ev": -0.042,
      "value": false,
      "n_books": 8,
      "best": {
@@ -67590,10 +67660,10 @@
       "line": 4.5,
       "odds": -105,
       "dec": 1.952,
-      "p": 0.498,
-      "ev": -0.028
+      "p": 0.502,
+      "ev": -0.02
      },
-     "p_model": 0.493,
+     "p_model": 0.507,
      "p_mkt": 0.5,
      "cand": false
     },
@@ -67606,10 +67676,10 @@
      "odds": 143,
      "dec": 2.429,
      "odds_assumed": false,
-     "p": 0.389,
+     "p": 0.393,
      "implied": 0.412,
-     "edge": -0.023,
-     "ev": -0.055,
+     "edge": -0.019,
+     "ev": -0.046,
      "value": false,
      "n_books": 9,
      "best": {
@@ -67617,49 +67687,39 @@
       "line": null,
       "odds": 150,
       "dec": 2.5,
-      "p": 0.389,
-      "ev": -0.027
+      "p": 0.393,
+      "ev": -0.017
      },
-     "p_model": 0.372,
+     "p_model": 0.386,
      "p_mkt": 0.395,
      "cand": false
     },
     {
-     "kind": "prop",
-     "label": "Terrence Shannon Jr Over 1.5 Triples",
-     "player": "Terrence Shannon Jr",
+     "kind": "spread",
+     "label": "MIN -4.5",
+     "player": null,
      "team": "MIN",
-     "line": 1.5,
-     "odds": 120,
-     "dec": 2.2,
+     "line": -4.5,
+     "odds": -110,
+     "dec": 1.908,
      "odds_assumed": false,
-     "p": 0.429,
-     "implied": 0.455,
-     "edge": -0.025,
-     "ev": -0.056,
+     "p": 0.498,
+     "implied": 0.524,
+     "edge": -0.026,
+     "ev": -0.049,
      "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.329,
-     "p_mkt": 0.462,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 1,
-       "value": 2.0,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
+     "n_books": 8,
+     "best": {
+      "book": "BetRivers",
+      "line": -5.5,
+      "odds": 110,
+      "dec": 2.1,
+      "p": 0.469,
+      "ev": -0.015
+     },
+     "p_model": 0.493,
+     "p_mkt": 0.5,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -67670,14 +67730,14 @@
      "odds": -130,
      "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.529,
+     "p": 0.535,
      "implied": 0.565,
-     "edge": -0.037,
-     "ev": -0.065,
+     "edge": -0.03,
+     "ev": -0.053,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.429,
+     "p_model": 0.455,
      "p_mkt": 0.562,
      "cand": false,
      "hr": {
@@ -67700,6 +67760,43 @@
     },
     {
      "kind": "prop",
+     "label": "Jonathan Kuminga Under 1.5 Triples",
+     "player": "Jonathan Kuminga",
+     "team": "MIN",
+     "line": 1.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.493,
+     "implied": 0.524,
+     "edge": -0.031,
+     "ev": -0.059,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.436,
+     "p_mkt": 0.512,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 18,
+       "value": 2.9,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Trey Murphy III Over 2.5 Triples",
      "player": "Trey Murphy III",
      "team": "NOP",
@@ -67707,14 +67804,14 @@
      "odds": 121,
      "dec": 2.21,
      "odds_assumed": false,
-     "p": 0.42,
+     "p": 0.419,
      "implied": 0.452,
-     "edge": -0.032,
-     "ev": -0.071,
+     "edge": -0.033,
+     "ev": -0.073,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.359,
+     "p_model": 0.355,
      "p_mkt": 0.441,
      "cand": false,
      "hr": {
@@ -67744,10 +67841,10 @@
      "odds": -111,
      "dec": 1.899,
      "odds_assumed": false,
-     "p": 0.483,
+     "p": 0.485,
      "implied": 0.527,
-     "edge": -0.044,
-     "ev": -0.084,
+     "edge": -0.041,
+     "ev": -0.079,
      "value": false,
      "n_books": 7,
      "best": {
@@ -67755,10 +67852,10 @@
       "line": 229.5,
       "odds": -110,
       "dec": 1.909,
-      "p": 0.483,
-      "ev": -0.078
+      "p": 0.485,
+      "ev": -0.074
      },
-     "p_model": 0.423,
+     "p_model": 0.433,
      "p_mkt": 0.502,
      "cand": false
     },
@@ -67771,14 +67868,14 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.445,
+     "p": 0.448,
      "implied": 0.5,
-     "edge": -0.055,
-     "ev": -0.109,
+     "edge": -0.052,
+     "ev": -0.104,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.338,
+     "p_model": 0.349,
      "p_mkt": 0.481,
      "cand": false,
      "hr": {
@@ -67808,14 +67905,14 @@
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.442,
+     "p": 0.439,
      "implied": 0.512,
-     "edge": -0.07,
-     "ev": -0.137,
+     "edge": -0.073,
+     "ev": -0.142,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.272,
+     "p_model": 0.261,
      "p_mkt": 0.499,
      "cand": false,
      "hr": {
@@ -67845,14 +67942,14 @@
      "odds": 125,
      "dec": 2.25,
      "odds_assumed": false,
-     "p": 0.383,
+     "p": 0.38,
      "implied": 0.444,
-     "edge": -0.062,
-     "ev": -0.139,
+     "edge": -0.064,
+     "ev": -0.145,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.269,
+     "p_model": 0.259,
      "p_mkt": 0.421,
      "cand": false,
      "hr": {
@@ -67882,14 +67979,14 @@
      "odds": 140,
      "dec": 2.4,
      "odds_assumed": false,
-     "p": 0.352,
+     "p": 0.35,
      "implied": 0.417,
-     "edge": -0.065,
-     "ev": -0.156,
+     "edge": -0.067,
+     "ev": -0.16,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.196,
+     "p_model": 0.188,
      "p_mkt": 0.404,
      "cand": false,
      "hr": {
