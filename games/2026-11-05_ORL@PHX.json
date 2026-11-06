@@ -19,11 +19,10 @@
    "Noah Penda",
    "Izaiyah Nelson",
    "Rasheer Fleming",
-   "Mark Williams"
+   "Mark Williams",
+   "Jordan Goodwin"
   ],
-  "gtd": {
-   "Jordan Goodwin": 0.35
-  },
+  "gtd": {},
   "reserves": {
    "ORL": [
     {
@@ -128,7 +127,7 @@
    "name": "Devin Booker",
    "pos": "SG",
    "starter": true,
-   "min": 34.4,
+   "min": 37.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -170,7 +169,7 @@
    "name": "Miles Bridges",
    "pos": "SF",
    "starter": true,
-   "min": 32.7,
+   "min": 35.5,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -212,7 +211,7 @@
    "name": "Dillon Brooks",
    "pos": "SF",
    "starter": true,
-   "min": 30.6,
+   "min": 33.2,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -254,7 +253,7 @@
    "name": "Jalen Green",
    "pos": "SG",
    "starter": true,
-   "min": 29.1,
+   "min": 31.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -296,7 +295,7 @@
    "name": "Collin Gillespie",
    "pos": "PG",
    "starter": false,
-   "min": 25.2,
+   "min": 27.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -337,7 +336,7 @@
    "name": "Oso Ighodaro",
    "pos": "PF",
    "starter": true,
-   "min": 20.8,
+   "min": 22.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -379,7 +378,7 @@
    "name": "Khaman Maluach",
    "pos": "C",
    "starter": false,
-   "min": 19.5,
+   "min": 21.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -417,51 +416,10 @@
   },
   {
    "team": "PHX",
-   "name": "Jordan Goodwin",
-   "pos": "PG",
-   "starter": false,
-   "min": 18.8,
-   "g_cur": 5,
-   "p_play": 0.35,
-   "cur": {
-    "min": 18.8,
-    "pts": 7.8,
-    "reb": 3.4,
-    "ast": 2.6,
-    "fg3m": 1.8,
-    "fgm": 3.0,
-    "fga": 6.8,
-    "fg3a": 4.8,
-    "stl": 1.6,
-    "blk": 0.0,
-    "tov": 0.6,
-    "pf": 2.0,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 22.5,
-    "pts": 8.7,
-    "reb": 4.87,
-    "ast": 2.16,
-    "fg3m": 1.6,
-    "fgm": 3.27,
-    "fga": 7.93,
-    "fg3a": 4.31,
-    "stl": 1.51,
-    "blk": 0.2,
-    "tov": 0.97,
-    "pf": 1.9,
-    "ftm": 0.56,
-    "fta": 0.8
-   }
-  },
-  {
-   "team": "PHX",
    "name": "Luke Kennard",
    "pos": "SG",
    "starter": false,
-   "min": 15.6,
+   "min": 16.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -502,7 +460,7 @@
    "name": "Ryan Dunn",
    "pos": "SF",
    "starter": false,
-   "min": 13.3,
+   "min": 14.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {

@@ -4,7 +4,7 @@
   "schedule_odds": "NBA.com/games 5-nov (2 partidos, ninguno de Copa); Covers.com comparador de cuotas (ML y spread de 9 casas, 11:17 ET) + matchup/388674/odds (totales MIA@GSW); props de puntos y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-05; rebotes de GSW de covers matchup (las páginas de rebotes/asistencias de scoresandodds aún mostraban la jornada del 4-nov)",
   "players_cur": "Game logs oficiales de nba.com 2026-27 hasta el 1-nov + box scores ESPN del 2-nov y 4-nov (results/) vía gamelogs/build_raw.py",
   "players_prior": "Game logs oficiales de nba.com 2025-26 (temporada regular completa)",
-  "injuries": "ESPN injuries y CBS injuries, 5-nov ~17:20 UTC",
+  "injuries": "ESPN injuries y CBS injuries, 5-nov ~17:20 UTC; revisión pregame 6-nov ~01:20 UTC: ESPN injuries (Goodwin OUT), CBS/RotoWire y SI/Athlon (Giannis disponible, Horford y B. Williams fuera del reporte)",
   "b2b": "PHX (vs POR el 4-nov) y MIA (en LAC el 4-nov, prórroga, viaja a San Francisco)",
   "db": "BD de rankings: snapshot del 5-nov (B-Ref 2026-27 hasta el 3-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 4-nov)",
   "h2h": "h2h/2025-26.json: 2 cruces nuevos (4 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)"
@@ -415,11 +415,9 @@
     "Noah Penda",
     "Izaiyah Nelson",
     "Rasheer Fleming",
-    "Mark Williams"
+    "Mark Williams",
+    "Jordan Goodwin"
    ],
-   "gtd": {
-    "Jordan Goodwin": 0.35
-   },
    "notes": [
     "H2H 2025-26: ORL 1-1 PHX; 2026-02-21 PHX 113-110 ORL; 2026-03-31 ORL 115-111 PHX",
     "Récord: ORL 2-5, PHX 1-5",
@@ -449,11 +447,6 @@
     "Jimmy Butler III",
     "Gui Santos"
    ],
-   "gtd": {
-    "Brandon Williams": 0.5,
-    "Al Horford": 0.85,
-    "Giannis Antetokounmpo": 0.85
-   },
    "notes": [
     "H2H 2025-26: MIA 1-1 GSW; 2025-11-19 MIA 110-96 GSW; 2026-01-19 GSW 135-112 MIA (blowout)",
     "Récord: MIA 3-5, GSW 5-3",
