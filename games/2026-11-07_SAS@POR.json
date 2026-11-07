@@ -12,14 +12,16 @@
    "Back-to-back: SAS (jugó el 6-nov en SAC), POR (jugó el 6-nov en LAL)",
    "Krejčí, Morant y Sharpe OUT; Tobias Harris OUT",
    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
-   "Pregame: sin cambios en el parte"
+   "Pregame: sin cambios en el parte",
+   "X @UnderdogNBA: Robert Williams III (descanso) OUT"
   ],
   "out": [
    "Tobias Harris",
    "Jayden Quaintance",
    "Vít Krejčí",
    "Ja Morant",
-   "Shaedon Sharpe"
+   "Shaedon Sharpe",
+   "Robert Williams III"
   ],
   "gtd": {},
   "reserves": {
@@ -156,7 +158,7 @@
    "name": "Deni Avdija",
    "pos": "SF",
    "starter": true,
-   "min": 37.3,
+   "min": 38.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -198,7 +200,7 @@
    "name": "Damian Lillard",
    "pos": "PG",
    "starter": true,
-   "min": 34.5,
+   "min": 37.4,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -240,7 +242,7 @@
    "name": "Toumani Camara",
    "pos": "PF",
    "starter": true,
-   "min": 31.5,
+   "min": 34.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -282,7 +284,7 @@
    "name": "Jrue Holiday",
    "pos": "PG",
    "starter": true,
-   "min": 30.0,
+   "min": 32.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -324,7 +326,7 @@
    "name": "Donovan Clingan",
    "pos": "C",
    "starter": true,
-   "min": 28.3,
+   "min": 30.6,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -366,7 +368,7 @@
    "name": "Scoot Henderson",
    "pos": "PG",
    "starter": false,
-   "min": 25.0,
+   "min": 27.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -407,7 +409,7 @@
    "name": "Sidy Cissoko",
    "pos": "SF",
    "starter": false,
-   "min": 24.6,
+   "min": 26.6,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -445,51 +447,10 @@
   },
   {
    "team": "POR",
-   "name": "Robert Williams III",
-   "pos": "C",
-   "starter": false,
-   "min": 18.5,
-   "g_cur": 7,
-   "p_play": 1.0,
-   "cur": {
-    "min": 16.4,
-    "pts": 7.43,
-    "reb": 6.86,
-    "ast": 1.14,
-    "fg3m": 0.0,
-    "fgm": 3.29,
-    "fga": 5.14,
-    "fg3a": 0.0,
-    "stl": 1.0,
-    "blk": 1.29,
-    "tov": 0.86,
-    "pf": 1.29,
-    "ftm": 0.86,
-    "fta": 1.14
-   },
-   "prior": {
-    "min": 17.1,
-    "pts": 6.73,
-    "reb": 7.03,
-    "ast": 1.02,
-    "fg3m": 0.15,
-    "fgm": 3.0,
-    "fga": 4.24,
-    "fg3a": 0.39,
-    "stl": 0.59,
-    "blk": 1.47,
-    "tov": 0.83,
-    "pf": 1.25,
-    "ftm": 0.58,
-    "fta": 0.97
-   }
-  },
-  {
-   "team": "POR",
    "name": "Chris Youngblood",
    "pos": "F",
    "starter": false,
-   "min": 10.4,
+   "min": 11.2,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
