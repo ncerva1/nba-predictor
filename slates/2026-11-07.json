@@ -8,7 +8,7 @@
   "b2b": "ATL, WAS, CLE, OKC, SAS y POR jugaron el 6-nov",
   "db": "BD de rankings: snapshot del 7-nov (B-Ref 2026-27 hasta el 6-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 6-nov)",
   "h2h": "h2h/2025-26.json: 7 cruces nuevos (20 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)",
-  "injuries_pregame": "Revisión de bajas 7-nov ~21:20 UTC (ESPN, CBS, partes oficiales vía Athlon/ClutchPoints/Roundtable)"
+  "injuries_pregame": "Revisión de bajas 7-nov ~21:20 UTC (ESPN, CBS, partes oficiales vía Athlon/ClutchPoints/Roundtable); capturas de X @UnderdogNBA enviadas por Nicolas ~21:34 UTC"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -1683,11 +1683,7 @@
     "Ben Sheppard",
     "Johnny Furphy"
    ],
-   "gtd": {
-    "DeMar DeRozan": 0.9,
-    "Kelly Oubre Jr.": 0.5,
-    "T.J. McConnell": 0.35
-   },
+   "gtd": {},
    "notes": [
     "H2H 2025-26: DEN 2-0 IND; 2025-11-08 IND 100-117 DEN; 2025-12-03 DEN 135-120 IND",
     "Récord: DEN 4-3, IND 3-6",
@@ -1695,7 +1691,8 @@
     "DeRozan (espalda) probable; Oubre (gemelo) en duda; McConnell (isquio) OUT según ESPN (CBS: duda); Haliburton OUT hasta ~13-nov",
     "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
     "Pregame: Spencer Jones sale del parte (disponible); McConnell y Oubre en duda (questionable); DeRozan probable",
-    "Sede neutral (NBA Mexico City Game): sin ventaja de local"
+    "Sede neutral (NBA Mexico City Game): sin ventaja de local",
+    "X @UnderdogNBA (~21:00 UTC): DeRozan, Oubre y McConnell disponibles"
    ],
    "neutral": true
   },
@@ -1826,7 +1823,13 @@
     "ml_away": 210
    },
    "b2b": [],
-   "adj": {},
+   "adj": {
+    "ORL": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Desmond Bane OUT (enfermedad)"
+    }
+   },
    "out": [
     "Jonathan Isaac",
     "Jalen Suggs",
@@ -1835,7 +1838,8 @@
     "Izaiyah Nelson",
     "Kristaps Porziņģis",
     "Moses Moody",
-    "Jimmy Butler III"
+    "Jimmy Butler III",
+    "Desmond Bane"
    ],
    "gtd": {
     "Draymond Green": 0.7,
@@ -1848,7 +1852,8 @@
     "Ninguno en back-to-back",
     "Draymond (codo), Payton II (gemelo) y Santos (rodilla) en duda; Porziņģis se aparta del baloncesto; Banchero y Suggs OUT",
     "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
-    "Pregame: sin cambios en el parte"
+    "Pregame: sin cambios en el parte",
+    "X @UnderdogNBA: Desmond Bane (enfermedad) OUT"
    ]
   },
   {
@@ -1915,7 +1920,8 @@
     "Jayden Quaintance",
     "Vít Krejčí",
     "Ja Morant",
-    "Shaedon Sharpe"
+    "Shaedon Sharpe",
+    "Robert Williams III"
    ],
    "gtd": {},
    "notes": [
@@ -1924,7 +1930,8 @@
     "Back-to-back: SAS (jugó el 6-nov en SAC), POR (jugó el 6-nov en LAL)",
     "Krejčí, Morant y Sharpe OUT; Tobias Harris OUT",
     "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
-    "Pregame: sin cambios en el parte"
+    "Pregame: sin cambios en el parte",
+    "X @UnderdogNBA: Robert Williams III (descanso) OUT"
    ]
   }
  ]

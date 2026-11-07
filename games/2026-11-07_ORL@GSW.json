@@ -12,7 +12,8 @@
    "Ninguno en back-to-back",
    "Draymond (codo), Payton II (gemelo) y Santos (rodilla) en duda; Porziņģis se aparta del baloncesto; Banchero y Suggs OUT",
    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
-   "Pregame: sin cambios en el parte"
+   "Pregame: sin cambios en el parte",
+   "X @UnderdogNBA: Desmond Bane (enfermedad) OUT"
   ],
   "out": [
    "Jonathan Isaac",
@@ -22,7 +23,8 @@
    "Izaiyah Nelson",
    "Kristaps Porziņģis",
    "Moses Moody",
-   "Jimmy Butler III"
+   "Jimmy Butler III",
+   "Desmond Bane"
   ],
   "gtd": {
    "Draymond Green": 0.7,
@@ -101,13 +103,13 @@
     "pace": 100.84
    },
    "adj": {
-    "o": 0.0,
+    "o": -1.0,
     "d": 0.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Desmond Bane OUT (enfermedad)"
    }
   }
  },
@@ -659,7 +661,7 @@
    "name": "Franz Wagner",
    "pos": "SF",
    "starter": true,
-   "min": 36.0,
+   "min": 38.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -694,56 +696,14 @@
     "ftm": 4.79,
     "fta": 5.82
    },
-   "slot": "PF"
-  },
-  {
-   "team": "ORL",
-   "name": "Desmond Bane",
-   "pos": "SG",
-   "starter": true,
-   "min": 34.5,
-   "g_cur": 8,
-   "p_play": 1.0,
-   "cur": {
-    "min": 34.5,
-    "pts": 17.5,
-    "reb": 3.88,
-    "ast": 2.25,
-    "fg3m": 3.5,
-    "fgm": 5.5,
-    "fga": 14.12,
-    "fg3a": 9.5,
-    "stl": 0.88,
-    "blk": 0.75,
-    "tov": 2.62,
-    "pf": 3.75,
-    "ftm": 3.0,
-    "fta": 3.62
-   },
-   "prior": {
-    "min": 33.6,
-    "pts": 20.09,
-    "reb": 4.12,
-    "ast": 4.12,
-    "fg3m": 2.04,
-    "fgm": 7.11,
-    "fga": 14.7,
-    "fg3a": 5.21,
-    "stl": 1.05,
-    "blk": 0.45,
-    "tov": 2.0,
-    "pf": 3.07,
-    "ftm": 3.83,
-    "fta": 4.22
-   },
-   "slot": "SG"
+   "slot": "SF"
   },
   {
    "team": "ORL",
    "name": "Wendell Carter Jr.",
    "pos": "C",
    "starter": true,
-   "min": 32.6,
+   "min": 38.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -784,8 +744,8 @@
    "team": "ORL",
    "name": "Tristan da Silva",
    "pos": "SF",
-   "starter": false,
-   "min": 29.4,
+   "starter": true,
+   "min": 34.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -819,14 +779,15 @@
     "pf": 1.52,
     "ftm": 1.09,
     "fta": 1.23
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "ORL",
    "name": "Anthony Black",
    "pos": "PG",
    "starter": true,
-   "min": 28.6,
+   "min": 33.4,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -868,7 +829,7 @@
    "name": "Jase Richardson",
    "pos": "SG",
    "starter": true,
-   "min": 21.6,
+   "min": 25.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -903,14 +864,14 @@
     "ftm": 0.61,
     "fta": 0.85
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "ORL",
    "name": "Jamal Cain",
    "pos": "SF",
    "starter": false,
-   "min": 17.4,
+   "min": 20.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -951,7 +912,7 @@
    "name": "Jevon Carter",
    "pos": "PG",
    "starter": false,
-   "min": 14.0,
+   "min": 16.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -992,7 +953,7 @@
    "name": "Goga Bitadze",
    "pos": "C",
    "starter": false,
-   "min": 9.0,
+   "min": 10.5,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -1033,7 +994,7 @@
    "name": "Nikola Vučević",
    "pos": "C",
    "starter": false,
-   "min": 8.9,
+   "min": 10.4,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -1074,7 +1035,7 @@
    "name": "Alex Morales",
    "pos": "PG",
    "starter": false,
-   "min": 8.0,
+   "min": 9.3,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1185,30 +1146,6 @@
     0.5,
     -170,
     135
-   ]
-  },
-  "Desmond Bane": {
-   "pts": [
-    18.5,
-    -112,
-    -118,
-    19.5
-   ],
-   "fg3m": [
-    2.5,
-    -145,
-    132
-   ],
-   "reb": [
-    3.5,
-    -145,
-    -145,
-    4.5
-   ],
-   "ast": [
-    2.5,
-    -145,
-    126
    ]
   },
   "Wendell Carter Jr.": {
