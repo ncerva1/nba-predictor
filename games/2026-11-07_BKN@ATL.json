@@ -10,19 +10,21 @@
    "Récord: BKN 2-6, ATL 6-4",
    "Back-to-back: ATL (jugó el 6-nov vs WAS)",
    "Jalen Johnson (tobillo) en duda para el sábado (OUT el 6-nov; las casas sí le dan líneas); Landale y Newell en duda",
-   "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+   "Pregame: Jalen Johnson probable; Landale, Newell y Bilodeau OUT; Clowney en duda"
   ],
   "out": [
    "Egor Dëmin",
    "Keshon Gilbert",
    "Mouhamed Gueye",
-   "Henri Veesaar"
+   "Henri Veesaar",
+   "Jock Landale",
+   "Asa Newell",
+   "Tyler Bilodeau"
   ],
   "gtd": {
-   "Jalen Johnson": 0.65,
-   "Jock Landale": 0.5,
-   "Asa Newell": 0.5,
-   "Tyler Bilodeau": 0.5
+   "Jalen Johnson": 0.9,
+   "Noah Clowney": 0.5
   },
   "reserves": {
    "BKN": [
@@ -116,9 +118,9 @@
    "name": "Jalen Johnson",
    "pos": "SF",
    "starter": true,
-   "min": 28.3,
+   "min": 31.2,
    "g_cur": 7,
-   "p_play": 0.65,
+   "p_play": 0.9,
    "cur": {
     "min": 32.7,
     "pts": 18.29,
@@ -158,7 +160,7 @@
    "name": "Nickeil Alexander-Walker",
    "pos": "SG",
    "starter": true,
-   "min": 26.4,
+   "min": 29.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -200,7 +202,7 @@
    "name": "Dyson Daniels",
    "pos": "SG",
    "starter": true,
-   "min": 26.1,
+   "min": 28.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -242,7 +244,7 @@
    "name": "Onyeka Okongwu",
    "pos": "C",
    "starter": true,
-   "min": 25.5,
+   "min": 28.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -284,7 +286,7 @@
    "name": "Aaron Wiggins",
    "pos": "SG",
    "starter": false,
-   "min": 22.7,
+   "min": 25.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -325,7 +327,7 @@
    "name": "CJ McCollum",
    "pos": "PG",
    "starter": true,
-   "min": 22.6,
+   "min": 25.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -367,7 +369,7 @@
    "name": "Luguentz Dort",
    "pos": "SF",
    "starter": false,
-   "min": 22.5,
+   "min": 24.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -408,7 +410,7 @@
    "name": "Kingston Flemings",
    "pos": "PG",
    "starter": false,
-   "min": 18.2,
+   "min": 20.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -446,51 +448,10 @@
   },
   {
    "team": "ATL",
-   "name": "Jock Landale",
-   "pos": "C",
-   "starter": false,
-   "min": 13.2,
-   "g_cur": 7,
-   "p_play": 0.5,
-   "cur": {
-    "min": 15.3,
-    "pts": 6.29,
-    "reb": 4.86,
-    "ast": 2.0,
-    "fg3m": 0.43,
-    "fgm": 2.43,
-    "fga": 5.43,
-    "fg3a": 2.43,
-    "stl": 0.14,
-    "blk": 0.43,
-    "tov": 1.14,
-    "pf": 2.43,
-    "ftm": 1.0,
-    "fta": 1.71
-   },
-   "prior": {
-    "min": 22.2,
-    "pts": 10.56,
-    "reb": 5.69,
-    "ast": 1.69,
-    "fg3m": 1.09,
-    "fgm": 4.15,
-    "fga": 8.06,
-    "fg3a": 2.84,
-    "stl": 0.51,
-    "blk": 0.53,
-    "tov": 0.88,
-    "pf": 2.21,
-    "ftm": 1.18,
-    "fta": 1.85
-   }
-  },
-  {
-   "team": "ATL",
    "name": "Zuby Ejiofor",
    "pos": "PF",
    "starter": false,
-   "min": 9.7,
+   "min": 10.7,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -528,51 +489,10 @@
   },
   {
    "team": "ATL",
-   "name": "Asa Newell",
-   "pos": "PF",
-   "starter": false,
-   "min": 9.5,
-   "g_cur": 5,
-   "p_play": 0.5,
-   "cur": {
-    "min": 11.0,
-    "pts": 3.6,
-    "reb": 2.6,
-    "ast": 1.0,
-    "fg3m": 0.4,
-    "fgm": 1.4,
-    "fga": 3.0,
-    "fg3a": 1.6,
-    "stl": 0.2,
-    "blk": 0.2,
-    "tov": 0.8,
-    "pf": 1.0,
-    "ftm": 0.4,
-    "fta": 0.8
-   },
-   "prior": {
-    "min": 11.7,
-    "pts": 5.28,
-    "reb": 2.23,
-    "ast": 0.6,
-    "fg3m": 0.67,
-    "fgm": 2.12,
-    "fga": 3.93,
-    "fg3a": 1.74,
-    "stl": 0.37,
-    "blk": 0.35,
-    "tov": 0.53,
-    "pf": 1.51,
-    "ftm": 0.37,
-    "fta": 0.67
-   }
-  },
-  {
-   "team": "ATL",
    "name": "Corey Kispert",
    "pos": "SF",
    "starter": false,
-   "min": 8.4,
+   "min": 9.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -613,7 +533,7 @@
    "name": "RayJ Dennis",
    "pos": "F",
    "starter": false,
-   "min": 6.9,
+   "min": 7.6,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -948,7 +868,7 @@
    "starter": false,
    "min": 19.0,
    "g_cur": 8,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 21.1,
     "pts": 5.62,
