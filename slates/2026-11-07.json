@@ -7,7 +7,8 @@
   "injuries": "ESPN injuries y CBS injuries, 7-nov ~16:30 UTC; en duda con p_play (más alta si las casas le dan líneas)",
   "b2b": "ATL, WAS, CLE, OKC, SAS y POR jugaron el 6-nov",
   "db": "BD de rankings: snapshot del 7-nov (B-Ref 2026-27 hasta el 6-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 6-nov)",
-  "h2h": "h2h/2025-26.json: 7 cruces nuevos (20 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)"
+  "h2h": "h2h/2025-26.json: 7 cruces nuevos (20 partidos) desde los game logs de nba.com; sin 'largest_lead' (blowout = margen final >= 20)",
+  "injuries_pregame": "Revisión de bajas 7-nov ~21:20 UTC (ESPN, CBS, partes oficiales vía Athlon/ClutchPoints/Roundtable)"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -1677,23 +1678,23 @@
    "b2b": [],
    "adj": {},
    "out": [
-    "Spencer Jones",
     "Julian Strawther",
     "Tyrese Haliburton",
     "Ben Sheppard",
-    "Johnny Furphy",
-    "T.J. McConnell"
+    "Johnny Furphy"
    ],
    "gtd": {
     "DeMar DeRozan": 0.9,
-    "Kelly Oubre Jr.": 0.7
+    "Kelly Oubre Jr.": 0.5,
+    "T.J. McConnell": 0.35
    },
    "notes": [
     "H2H 2025-26: DEN 2-0 IND; 2025-11-08 IND 100-117 DEN; 2025-12-03 DEN 135-120 IND",
     "Récord: DEN 4-3, IND 3-6",
     "Ninguno en back-to-back",
     "DeRozan (espalda) probable; Oubre (gemelo) en duda; McConnell (isquio) OUT según ESPN (CBS: duda); Haliburton OUT hasta ~13-nov",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: Spencer Jones sale del parte (disponible); McConnell y Oubre en duda (questionable); DeRozan probable"
    ]
   },
   {
@@ -1715,20 +1716,22 @@
     "Egor Dëmin",
     "Keshon Gilbert",
     "Mouhamed Gueye",
-    "Henri Veesaar"
+    "Henri Veesaar",
+    "Jock Landale",
+    "Asa Newell",
+    "Tyler Bilodeau"
    ],
    "gtd": {
-    "Jalen Johnson": 0.65,
-    "Jock Landale": 0.5,
-    "Asa Newell": 0.5,
-    "Tyler Bilodeau": 0.5
+    "Jalen Johnson": 0.9,
+    "Noah Clowney": 0.5
    },
    "notes": [
     "H2H 2025-26: BKN 0-4 ATL; 2025-10-29 ATL 117-112 BKN; 2026-02-22 BKN 104-115 ATL; 2026-03-12 BKN 97-108 ATL; 2026-04-03 ATL 141-107 BKN",
     "Récord: BKN 2-6, ATL 6-4",
     "Back-to-back: ATL (jugó el 6-nov vs WAS)",
     "Jalen Johnson (tobillo) en duda para el sábado (OUT el 6-nov; las casas sí le dan líneas); Landale y Newell en duda",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: Jalen Johnson probable; Landale, Newell y Bilodeau OUT; Clowney en duda"
    ]
   },
   {
@@ -1754,18 +1757,19 @@
    },
    "out": [
     "Josh Hart",
-    "Nae'Qwan Tomlin"
+    "Nae'Qwan Tomlin",
+    "Jarrett Allen",
+    "Jaylon Tyson",
+    "Sam Merrill"
    ],
-   "gtd": {
-    "Jarrett Allen": 0.6,
-    "Jaylon Tyson": 0.4
-   },
+   "gtd": {},
    "notes": [
     "H2H 2025-26: NYK 2-1 CLE; 2025-10-22 CLE 111-119 NYK; 2025-12-25 CLE 124-126 NYK; 2026-02-24 NYK 94-109 CLE",
     "Récord: NYK 4-4, CLE 5-4",
     "Back-to-back: CLE (jugó el 6-nov vs PHI)",
     "Hart OUT; Allen (rodilla, no jugó el 6-nov) y Tyson (tobillo) en duda; Allen tiene líneas en las casas",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: Allen, Tyson y Sam Merrill (codo) OUT"
    ]
   },
   {
@@ -1793,18 +1797,19 @@
     "Thomas Sorber",
     "Cason Wallace",
     "Chet Holmgren",
-    "Jalen Williams"
+    "Jalen Williams",
+    "Jaylin Williams"
    ],
    "gtd": {
-    "Anthony Davis": 0.6,
-    "Jaylin Williams": 0.5
+    "Anthony Davis": 0.6
    },
    "notes": [
     "H2H 2025-26: WAS 0-2 OKC; 2025-10-30 WAS 108-127 OKC; 2026-03-21 OKC 132-111 WAS",
     "Récord: WAS 4-5, OKC 7-2",
     "Back-to-back: WAS (jugó el 6-nov en ATL), OKC (jugó el 6-nov en MEM)",
     "Anthony Davis (tobillo) en duda: OUT el 6-nov, pero las casas le dan líneas; Jaylin Williams (espalda) en duda; Holmgren, Jalen Williams, Wallace, Topić y Sorber OUT",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: Jaylin Williams OUT; Anthony Davis sigue en duda"
    ]
   },
   {
@@ -1840,7 +1845,8 @@
     "Récord: ORL 2-6, GSW 6-3",
     "Ninguno en back-to-back",
     "Draymond (codo), Payton II (gemelo) y Santos (rodilla) en duda; Porziņģis se aparta del baloncesto; Banchero y Suggs OUT",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: sin cambios en el parte"
    ]
   },
   {
@@ -1868,7 +1874,7 @@
     "Mark Williams"
    ],
    "gtd": {
-    "Jordan Goodwin": 0.5,
+    "Jordan Goodwin": 0.2,
     "Rasheer Fleming": 0.5
    },
    "notes": [
@@ -1876,7 +1882,8 @@
     "Récord: HOU 7-2, PHX 2-5",
     "Ninguno en back-to-back",
     "Capela y Adams OUT; Goodwin y Fleming en duda",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: Goodwin doubtful; Fleming questionable"
    ]
   },
   {
@@ -1914,7 +1921,8 @@
     "Récord: SAS 7-2, POR 6-2",
     "Back-to-back: SAS (jugó el 6-nov en SAC), POR (jugó el 6-nov en LAL)",
     "Krejčí, Morant y Sharpe OUT; Tobias Harris OUT",
-    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+    "Pregame: sin cambios en el parte"
    ]
   }
  ]
