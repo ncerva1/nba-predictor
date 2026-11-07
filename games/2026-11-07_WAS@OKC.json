@@ -10,7 +10,8 @@
    "Récord: WAS 4-5, OKC 7-2",
    "Back-to-back: WAS (jugó el 6-nov en ATL), OKC (jugó el 6-nov en MEM)",
    "Anthony Davis (tobillo) en duda: OUT el 6-nov, pero las casas le dan líneas; Jaylin Williams (espalda) en duda; Holmgren, Jalen Williams, Wallace, Topić y Sorber OUT",
-   "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
+   "Pregame: Jaylin Williams OUT; Anthony Davis sigue en duda"
   ],
   "out": [
    "Reece Beekman",
@@ -21,11 +22,11 @@
    "Thomas Sorber",
    "Cason Wallace",
    "Chet Holmgren",
-   "Jalen Williams"
+   "Jalen Williams",
+   "Jaylin Williams"
   ],
   "gtd": {
-   "Anthony Davis": 0.6,
-   "Jaylin Williams": 0.5
+   "Anthony Davis": 0.6
   },
   "reserves": {
    "WAS": [
@@ -137,7 +138,7 @@
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
    "starter": true,
-   "min": 34.0,
+   "min": 36.9,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -179,7 +180,7 @@
    "name": "Ajay Mitchell",
    "pos": "SG",
    "starter": true,
-   "min": 28.4,
+   "min": 30.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -221,7 +222,7 @@
    "name": "Jared McCain",
    "pos": "SG",
    "starter": true,
-   "min": 25.9,
+   "min": 28.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -263,7 +264,7 @@
    "name": "Isaiah Hartenstein",
    "pos": "C",
    "starter": true,
-   "min": 25.4,
+   "min": 27.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -305,7 +306,7 @@
    "name": "Alex Caruso",
    "pos": "SG",
    "starter": false,
-   "min": 19.7,
+   "min": 21.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -346,7 +347,7 @@
    "name": "Aday Mara",
    "pos": "C",
    "starter": false,
-   "min": 19.4,
+   "min": 21.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -384,51 +385,10 @@
   },
   {
    "team": "OKC",
-   "name": "Jaylin Williams",
-   "pos": "PF",
-   "starter": false,
-   "min": 18.8,
-   "g_cur": 7,
-   "p_play": 0.5,
-   "cur": {
-    "min": 18.4,
-    "pts": 2.86,
-    "reb": 4.0,
-    "ast": 1.57,
-    "fg3m": 0.71,
-    "fgm": 0.86,
-    "fga": 4.29,
-    "fg3a": 3.43,
-    "stl": 0.43,
-    "blk": 0.0,
-    "tov": 0.57,
-    "pf": 0.71,
-    "ftm": 0.43,
-    "fta": 0.43
-   },
-   "prior": {
-    "min": 19.7,
-    "pts": 7.22,
-    "reb": 5.51,
-    "ast": 2.43,
-    "fg3m": 1.51,
-    "fgm": 2.29,
-    "fga": 5.42,
-    "fg3a": 3.94,
-    "stl": 0.48,
-    "blk": 0.65,
-    "tov": 1.03,
-    "pf": 1.95,
-    "ftm": 1.12,
-    "fta": 1.42
-   }
-  },
-  {
-   "team": "OKC",
    "name": "Kenrich Williams",
    "pos": "PF",
    "starter": true,
-   "min": 18.3,
+   "min": 19.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -470,7 +430,7 @@
    "name": "Bennett Stirtz",
    "pos": "PG",
    "starter": false,
-   "min": 17.2,
+   "min": 18.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -511,7 +471,7 @@
    "name": "Josh Dix",
    "pos": "SG",
    "starter": false,
-   "min": 16.7,
+   "min": 18.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -552,7 +512,7 @@
    "name": "Micah Peavy",
    "pos": "SG",
    "starter": false,
-   "min": 16.1,
+   "min": 17.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
