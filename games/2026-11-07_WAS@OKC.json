@@ -12,7 +12,8 @@
    "Back-to-back: WAS (jugó el 6-nov en ATL), OKC (jugó el 6-nov en MEM)",
    "Anthony Davis (tobillo) en duda: OUT el 6-nov, pero las casas le dan líneas; Jaylin Williams (espalda) en duda; Holmgren, Jalen Williams, Wallace, Topić y Sorber OUT",
    "Bajas revisadas en ESPN y CBS 7-nov ~16:30 UTC",
-   "Pregame: Jaylin Williams OUT; Anthony Davis sigue en duda"
+   "Pregame: Jaylin Williams OUT; Anthony Davis sigue en duda",
+   "X @UnderdogNBA (~23:30 UTC): Anthony Davis OUT"
   ],
   "out": [
    "Reece Beekman",
@@ -24,11 +25,10 @@
    "Cason Wallace",
    "Chet Holmgren",
    "Jalen Williams",
-   "Jaylin Williams"
+   "Jaylin Williams",
+   "Anthony Davis"
   ],
-  "gtd": {
-   "Anthony Davis": 0.6
-  },
+  "gtd": {},
   "reserves": {
    "WAS": [
     {
@@ -119,13 +119,13 @@
     "pace": 102.77
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -2.0,
+    "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Anthony Davis OUT (tobillo)"
    }
   }
  },
@@ -554,7 +554,7 @@
    "name": "Trae Young",
    "pos": "PG",
    "starter": true,
-   "min": 33.7,
+   "min": 38.0,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -596,7 +596,7 @@
    "name": "Kyshawn George",
    "pos": "SG",
    "starter": true,
-   "min": 31.3,
+   "min": 36.0,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -635,52 +635,10 @@
   },
   {
    "team": "WAS",
-   "name": "Anthony Davis",
-   "pos": "PF",
-   "starter": true,
-   "min": 31.0,
-   "g_cur": 8,
-   "p_play": 0.6,
-   "cur": {
-    "min": 33.1,
-    "pts": 23.38,
-    "reb": 9.25,
-    "ast": 2.12,
-    "fg3m": 0.88,
-    "fgm": 9.12,
-    "fga": 18.25,
-    "fg3a": 2.5,
-    "stl": 1.38,
-    "blk": 1.12,
-    "tov": 2.0,
-    "pf": 1.75,
-    "ftm": 4.25,
-    "fta": 5.12
-   },
-   "prior": {
-    "min": 31.2,
-    "pts": 20.35,
-    "reb": 11.05,
-    "ast": 2.8,
-    "fg3m": 0.5,
-    "fgm": 8.45,
-    "fga": 16.7,
-    "fg3a": 1.85,
-    "stl": 1.1,
-    "blk": 1.65,
-    "tov": 2.05,
-    "pf": 2.1,
-    "ftm": 2.95,
-    "fta": 4.05
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "WAS",
    "name": "AJ Dybantsa",
    "pos": "SF",
    "starter": true,
-   "min": 29.6,
+   "min": 34.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -721,8 +679,8 @@
    "team": "WAS",
    "name": "Bilal Coulibaly",
    "pos": "SF",
-   "starter": false,
-   "min": 24.8,
+   "starter": true,
+   "min": 28.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -756,14 +714,15 @@
     "pf": 2.32,
     "ftm": 2.36,
     "fta": 3.16
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "WAS",
    "name": "Alex Sarr",
    "pos": "C",
    "starter": true,
-   "min": 24.2,
+   "min": 27.8,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -805,7 +764,7 @@
    "name": "Tre Johnson",
    "pos": "SG",
    "starter": false,
-   "min": 19.6,
+   "min": 22.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -846,7 +805,7 @@
    "name": "Bub Carrington",
    "pos": "PG",
    "starter": false,
-   "min": 17.9,
+   "min": 20.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -887,7 +846,7 @@
    "name": "Deandre Ayton",
    "pos": "C",
    "starter": false,
-   "min": 15.0,
+   "min": 17.2,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -928,7 +887,7 @@
    "name": "Khris Middleton",
    "pos": "SF",
    "starter": false,
-   "min": 12.9,
+   "min": 14.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -973,28 +932,6 @@
   "ml_away": 370
  },
  "prop_lines": {
-  "Anthony Davis": {
-   "pts": [
-    20.5,
-    -105,
-    -115
-   ],
-   "fg3m": [
-    0.5,
-    -135,
-    105
-   ],
-   "reb": [
-    10.5,
-    100,
-    -115
-   ],
-   "ast": [
-    1.5,
-    -170,
-    135
-   ]
-  },
   "Trae Young": {
    "pts": [
     17.5,
