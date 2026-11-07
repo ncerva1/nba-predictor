@@ -167,10 +167,11 @@ def build_game(slate, g, R, cur, prior):
     names = {p["name"] for p in players}
     return {
         "game": {"date": slate["date"], "away": a, "home": h, "venue": g.get("venue", ""), "tip_et": g["tip_et"],
+                 "neutral": bool(g.get("neutral")),
                  "notes": g.get("notes", []), "out": g.get("out", []), "gtd": g.get("gtd", {}),
                  "reserves": {t: reserves(t, cur, set(g.get("out", []))) for t in (a, h)}},
         "db": {"use": True, "k_team": 0.6, "k_dvp": 0.3},
-        "league": LG, "shrink_games": 10, "teams": teams,
+        "league": dict(LG, home_adv_per100=0.0) if g.get("neutral") else LG, "shrink_games": 10, "teams": teams,
         "matchup": {h: {}, a: {}}, "players": players,
         "market": {"source": slate["sources"]["schedule_odds"], **g["market"]},
         "prop_lines": {k: v for k, v in slate.get("prop_lines", {}).items() if k in names},
