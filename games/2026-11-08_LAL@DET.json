@@ -9,15 +9,15 @@
   "notes": [
    "Doncic (espalda) en duda; las casas le dan líneas de rebotes y triples",
    "Isaiah Joe OUT; Duren OUT (isquio, re-evaluación 'al menos hasta el 9-nov')",
-   "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+   "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Luka Doncic (espalda) OUT; Duren fuera al menos 2 semanas más"
   ],
   "out": [
    "Isaiah Joe",
-   "Jalen Duren"
+   "Jalen Duren",
+   "Luka Dončić"
   ],
-  "gtd": {
-   "Luka Dončić": 0.7
-  },
+  "gtd": {},
   "reserves": {
    "LAL": [
     {
@@ -150,13 +150,13 @@
     "pace": 99.5
    },
    "adj": {
-    "o": 0.0,
-    "d": 0.0,
+    "o": -3.0,
+    "d": 0.5,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Luka Dončić OUT (espalda), según @UnderdogNBA 8-nov"
    }
   }
  },
@@ -544,7 +544,7 @@
    "name": "Austin Reaves",
    "pos": "SG",
    "starter": true,
-   "min": 34.3,
+   "min": 38.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -579,48 +579,6 @@
     "ftm": 6.33,
     "fta": 7.27
    },
-   "slot": "SG"
-  },
-  {
-   "team": "LAL",
-   "name": "Luka Dončić",
-   "pos": "PG",
-   "starter": true,
-   "min": 34.1,
-   "g_cur": 9,
-   "p_play": 0.7,
-   "cur": {
-    "min": 35.9,
-    "pts": 40.11,
-    "reb": 7.78,
-    "ast": 7.67,
-    "fg3m": 5.78,
-    "fgm": 12.22,
-    "fga": 24.56,
-    "fg3a": 13.78,
-    "stl": 1.67,
-    "blk": 0.67,
-    "tov": 4.89,
-    "pf": 2.56,
-    "ftm": 9.89,
-    "fta": 11.33
-   },
-   "prior": {
-    "min": 35.8,
-    "pts": 33.48,
-    "reb": 7.73,
-    "ast": 8.28,
-    "fg3m": 3.97,
-    "fgm": 10.83,
-    "fga": 22.77,
-    "fg3a": 10.84,
-    "stl": 1.64,
-    "blk": 0.53,
-    "tov": 3.98,
-    "pf": 2.39,
-    "ftm": 7.86,
-    "fta": 10.08
-   },
    "slot": "PG"
   },
   {
@@ -628,7 +586,7 @@
    "name": "Walker Kessler",
    "pos": "C",
    "starter": true,
-   "min": 29.6,
+   "min": 34.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -670,7 +628,7 @@
    "name": "Quentin Grimes",
    "pos": "SG",
    "starter": false,
-   "min": 24.2,
+   "min": 28.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -711,7 +669,7 @@
    "name": "Ziaire Williams",
    "pos": "SF",
    "starter": true,
-   "min": 23.4,
+   "min": 27.2,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -746,14 +704,14 @@
     "ftm": 2.12,
     "fta": 2.5
    },
-   "slot": "PF"
+   "slot": "SF"
   },
   {
    "team": "LAL",
    "name": "Matisse Thybulle",
    "pos": "SG",
    "starter": true,
-   "min": 23.0,
+   "min": 26.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -788,14 +746,14 @@
     "ftm": 0.7,
     "fta": 0.83
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "LAL",
    "name": "Jake LaRavia",
    "pos": "PF",
-   "starter": false,
-   "min": 22.4,
+   "starter": true,
+   "min": 26.1,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -829,14 +787,15 @@
     "pf": 2.39,
     "ftm": 1.41,
     "fta": 1.85
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "LAL",
    "name": "Sandro Mamukelashvili",
    "pos": "PF",
    "starter": false,
-   "min": 22.0,
+   "min": 25.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -877,7 +836,7 @@
    "name": "Collin Sexton",
    "pos": "SG",
    "starter": false,
-   "min": 15.8,
+   "min": 18.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -918,7 +877,7 @@
    "name": "Jarred Vanderbilt",
    "pos": "PF",
    "starter": false,
-   "min": 11.2,
+   "min": 13.1,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1094,18 +1053,6 @@
    ],
    "fg3m": [
     1.5,
-    120,
-    -136
-   ]
-  },
-  "Luka Dončić": {
-   "reb": [
-    7.5,
-    102,
-    -122
-   ],
-   "fg3m": [
-    4.5,
     120,
     -136
    ]

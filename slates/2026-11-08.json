@@ -7,7 +7,8 @@
   "injuries": "ESPN injuries y CBS injuries, 8-nov ~16:30 UTC + capturas de @UnderdogNBA (Nicolas, 7-nov); en duda con p_play (más alta si las casas le dan líneas)",
   "b2b": "BKN jugó el 7-nov (en ATL)",
   "db": "BD de rankings: snapshot del 8-nov (B-Ref 2026-27 hasta el 7-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 7-nov)",
-  "h2h": "h2h/2025-26.json: 5 cruces nuevos (15 partidos) desde los game logs de nba.com; 2 ya estaban"
+  "h2h": "h2h/2025-26.json: 5 cruces nuevos (15 partidos) desde los game logs de nba.com; 2 ya estaban",
+  "injuries_pregame": "Capturas de X @UnderdogNBA enviadas por Nicolas ~19:35 UTC del 8-nov"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -1245,20 +1246,36 @@
     "total": 237.5
    },
    "b2b": [],
-   "adj": {},
+   "adj": {
+    "CHI": {
+     "o": -1.0,
+     "d": 0.0,
+     "why": "Norman Powell OUT (hombro), Okoro titular; Claxton debuta 16-20 min"
+    }
+   },
    "out": [
     "Adem Bona",
-    "Zach Collins"
+    "Zach Collins",
+    "Norman Powell"
    ],
    "gtd": {
     "Joel Embiid": 0.8,
-    "Jalen Smith": 0.85,
     "Tobe Awaka": 0.5
    },
    "notes": [
-    "Embiid: GTD (pie) en CBS; probable según @UnderdogNBA (7-nov). Claxton (isquio) en duda pero aún no ha jugado esta temporada con CHI: no está en el modelo. Collins OUT; Jalen Smith probable; Awaka en duda",
-    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
-   ]
+    "Embiid: GTD (pie) en CBS; probable según @UnderdogNBA (7-nov). Collins OUT; Awaka en duda",
+    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+    "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Norman Powell (hombro) OUT, Isaac Okoro titular; Jalen Smith disponible; Claxton debuta desde el banco con 16-20 min (fila añadida a raw/2026-11-08/cur.csv: 18 MP con sus tasas de 2025-26)"
+   ],
+   "starters": {
+    "CHI": [
+     "Josh Giddey",
+     "Isaac Okoro",
+     "Matas Buzelis",
+     "Caleb Wilson",
+     "Jalen Smith"
+    ]
+   }
   },
   {
    "away": "LAL",
@@ -1272,18 +1289,24 @@
     "total": 221.5
    },
    "b2b": [],
-   "adj": {},
+   "adj": {
+    "LAL": {
+     "o": -3.0,
+     "d": 0.5,
+     "why": "Luka Dončić OUT (espalda), según @UnderdogNBA 8-nov"
+    }
+   },
    "out": [
     "Isaiah Joe",
-    "Jalen Duren"
+    "Jalen Duren",
+    "Luka Dončić"
    ],
-   "gtd": {
-    "Luka Dončić": 0.7
-   },
+   "gtd": {},
    "notes": [
     "Doncic (espalda) en duda; las casas le dan líneas de rebotes y triples",
     "Isaiah Joe OUT; Duren OUT (isquio, re-evaluación 'al menos hasta el 9-nov')",
-    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+    "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Luka Doncic (espalda) OUT; Duren fuera al menos 2 semanas más"
    ]
   },
   {
@@ -1305,14 +1328,15 @@
    ],
    "gtd": {
     "Lauri Markkanen": 0.55,
-    "Joan Beringer": 0.5,
-    "Terrence Shannon Jr": 0.6
+    "Terrence Shannon Jr": 0.6,
+    "Keyonte George": 0.6
    },
    "notes": [
     "Markkanen (muñeca) en duda (@UnderdogNBA y CBS); las casas le dan líneas",
     "Edwards y DiVincenzo OUT; Shannon Jr. (cadera) fue baja el viernes pero tiene líneas hoy; Beringer (fractura nasal) en duda",
     "Covers sin spread/total por casa: consenso MIN -11.5 / 224 (covers matchups)",
-    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+    "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Beringer disponible; Keyonte George (enfermedad) pasa a en duda"
    ]
   },
   {
@@ -1356,10 +1380,13 @@
    "b2b": [],
    "adj": {},
    "out": [],
-   "gtd": {},
+   "gtd": {
+    "Mitchell Robinson": 0.6
+   },
    "notes": [
     "BOS favorito de 12.5 a domicilio",
-    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+    "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Mitchell Robinson (enfermedad) pasa a en duda"
    ]
   },
   {
@@ -1398,7 +1425,9 @@
    },
    "b2b": [],
    "adj": {},
-   "out": [],
+   "out": [
+    "Nique Clifford"
+   ],
    "gtd": {
     "Keegan Murray": 0.6,
     "De'Andre Hunter": 0.75
@@ -1406,7 +1435,8 @@
    "notes": [
     "Keegan Murray (tobillo) GTD y De'Andre Hunter (enfermedad) baja el viernes: ambos con líneas hoy",
     "Raynaud y Simmons OUT",
-    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC"
+    "Bajas revisadas en ESPN y CBS 8-nov ~16:30 UTC",
+    "Capturas de @UnderdogNBA (Nicolas, 8-nov ~19:30 UTC): Nique Clifford traspasado a OKC (SAC recibe 2 segundas rondas): fuera de SAC"
    ]
   }
  ]
