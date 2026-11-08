@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T19:39+00:00",
+ "generated": "2026-11-08T19:44+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -54,6 +54,7 @@
  "history": [
   {
    "date": "2026-10-26",
+   "model": "1.1",
    "games": 9,
    "winners_ok": 6,
    "picks_won": 6,
@@ -66,6 +67,7 @@
   },
   {
    "date": "2026-10-27",
+   "model": "1.2",
    "games": 4,
    "winners_ok": 2,
    "picks_won": 8,
@@ -78,6 +80,7 @@
   },
   {
    "date": "2026-10-28",
+   "model": "1.2",
    "games": 12,
    "winners_ok": 8,
    "picks_won": 32,
@@ -90,6 +93,7 @@
   },
   {
    "date": "2026-10-29",
+   "model": "1.3",
    "games": 3,
    "winners_ok": 2,
    "picks_won": 9,
@@ -102,6 +106,7 @@
   },
   {
    "date": "2026-10-30",
+   "model": "1.3",
    "games": 10,
    "winners_ok": 5,
    "picks_won": 387,
@@ -114,6 +119,7 @@
   },
   {
    "date": "2026-10-31",
+   "model": "1.3",
    "games": 7,
    "winners_ok": 5,
    "picks_won": 23,
@@ -126,6 +132,7 @@
   },
   {
    "date": "2026-11-01",
+   "model": "1.5",
    "games": 4,
    "winners_ok": 2,
    "picks_won": 3,
@@ -138,6 +145,7 @@
   },
   {
    "date": "2026-11-02",
+   "model": "1.5",
    "games": 15,
    "winners_ok": 10,
    "picks_won": 9,
@@ -150,6 +158,7 @@
   },
   {
    "date": "2026-11-04",
+   "model": "1.5",
    "games": 14,
    "winners_ok": 9,
    "picks_won": 8,
@@ -162,6 +171,7 @@
   },
   {
    "date": "2026-11-05",
+   "model": "1.5",
    "games": 2,
    "winners_ok": 2,
    "picks_won": 1,
@@ -174,6 +184,7 @@
   },
   {
    "date": "2026-11-06",
+   "model": "1.5",
    "games": 9,
    "winners_ok": 9,
    "picks_won": 6,
@@ -186,6 +197,7 @@
   },
   {
    "date": "2026-11-07",
+   "model": "1.5",
    "games": 7,
    "winners_ok": 6,
    "picks_won": 7,
@@ -195,6 +207,76 @@
    "sgp_lost": 10,
    "cross_won": 0,
    "cross_lost": 1
+  }
+ ],
+ "versions": [
+  {
+   "model": "1.1",
+   "desc": "primera versión",
+   "first": "2026-10-26",
+   "last": "2026-10-26",
+   "days": 1,
+   "games": 9,
+   "winners_ok": 6,
+   "picks_won": 6,
+   "picks_lost": 5,
+   "units": 0.4,
+   "roi": 0.0364,
+   "sgp_won": 0,
+   "sgp_lost": 0,
+   "cross_won": 0,
+   "cross_lost": 0
+  },
+  {
+   "model": "1.2",
+   "desc": "minutos más abiertos, calibrada con el 26-oct",
+   "first": "2026-10-27",
+   "last": "2026-10-28",
+   "days": 2,
+   "games": 16,
+   "winners_ok": 10,
+   "picks_won": 40,
+   "picks_lost": 51,
+   "units": -17.02,
+   "roi": -0.187,
+   "sgp_won": 7,
+   "sgp_lost": 19,
+   "cross_won": 1,
+   "cross_lost": 2
+  },
+  {
+   "model": "1.3",
+   "desc": "H2H con peso y más mercados de props",
+   "first": "2026-10-29",
+   "last": "2026-10-31",
+   "days": 3,
+   "games": 20,
+   "winners_ok": 12,
+   "picks_won": 419,
+   "picks_lost": 434,
+   "units": -74.35,
+   "roi": -0.0872,
+   "sgp_won": 13,
+   "sgp_lost": 38,
+   "cross_won": 0,
+   "cross_lost": 8
+  },
+  {
+   "model": "1.5",
+   "desc": "mezcla con la casa, solo props y tope de 15 picks",
+   "first": "2026-11-01",
+   "last": "2026-11-07",
+   "days": 6,
+   "games": 51,
+   "winners_ok": 38,
+   "picks_won": 34,
+   "picks_lost": 34,
+   "units": 1.32,
+   "roi": 0.0194,
+   "sgp_won": 17,
+   "sgp_lost": 26,
+   "cross_won": 2,
+   "cross_lost": 2
   }
  ],
  "parlays": {

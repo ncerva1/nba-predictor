@@ -1,5 +1,10 @@
 # Cambios del modelo
 
+## Web — 2026-11-08: unidades por versión del modelo
+- Pedido de Nicolas: "Cómo le ha ido al modelo" separa picks, % de acierto, unidades y ROI por versión (1.1, 1.2,
+  1.3, 1.5), además de la columna Modelo en la tabla por jornada. Las versiones y su primera jornada están en
+  `MODEL_VERSIONS` (build_site.py): al publicar una versión nueva se añade ahí.
+
 ## Web — 2026-11-02: título "Picks recomendados por el sistema"
 - La sección de portada "Picks con valor" pasa a llamarse "Picks recomendados por el sistema" (pedido de Nicolas).
 

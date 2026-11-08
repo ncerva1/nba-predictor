@@ -63,6 +63,20 @@ VALUE_EV = 0.03  # EV mínimo para marcar una apuesta como "con valor"
 MKT_W = 0.25
 MAX_PER_PLAYER = 2
 MAX_DAILY = 15
+# Versiones del modelo por jornada (pedido de Nicolas, 8-nov): el historial separa picks y unidades por versión para
+# ver qué cambió con cada reforma. Cada versión rige desde su fecha (la primera jornada simulada con ella) hasta la
+# siguiente. Al publicar una versión nueva, añadirla aquí con la fecha de su primera jornada.
+MODEL_VERSIONS = [
+    ("1.1", "2026-10-26", "primera versión"),
+    ("1.2", "2026-10-27", "minutos más abiertos, calibrada con el 26-oct"),
+    ("1.3", "2026-10-29", "H2H con peso y más mercados de props"),
+    ("1.5", "2026-11-01", "mezcla con la casa, solo props y tope de 15 picks"),
+]
+MODEL = MODEL_VERSIONS[-1][0]
+
+
+def model_for(date):
+    return [v for v, d, _ in MODEL_VERSIONS if d <= date][-1] if date >= MODEL_VERSIONS[0][1] else MODEL_VERSIONS[0][0]
 PICK_FAMILY = {"pts": "p", "pr": "p", "pa": "p", "pra": "p", "reb": "r", "ra": "r", "ast": "a",
                "stl": "d", "blk": "d", "stocks": "d"}
 NO_UNDER_FLAGS = ("rookie", "lesion")
@@ -1064,19 +1078,30 @@ def main():
         rs = [g["result"] for g in games if g["date"] == date and "result" in g]
         sg = [pl.get("result") for g in games if g["date"] == date for pl in g.get("parlays", [])]
         cr = [pl.get("result") for pl in cross.get(date, [])]
-        history.append(dict(date=date, games=len(rs), winners_ok=sum(x["winner_ok"] for x in rs),
+        history.append(dict(date=date, model=model_for(date), games=len(rs), winners_ok=sum(x["winner_ok"] for x in rs),
                             picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
                             units=round(sum(x["units"] for x in rs), 2),
                             sgp_won=sg.count("won"), sgp_lost=sg.count("lost"),
                             cross_won=cr.count("won"), cross_lost=cr.count("lost")))
+    versions = []  # récord por versión del modelo (mismas cuentas que el historial por jornada)
+    for v, start, desc in MODEL_VERSIONS:
+        hs = [x for x in history if x["model"] == v]
+        if hs:
+            w, l = sum(x["picks_won"] for x in hs), sum(x["picks_lost"] for x in hs)
+            u = round(sum(x["units"] for x in hs), 2)
+            versions.append(dict(model=v, desc=desc, first=hs[0]["date"], last=hs[-1]["date"], days=len(hs),
+                                 games=sum(x["games"] for x in hs), winners_ok=sum(x["winners_ok"] for x in hs),
+                                 picks_won=w, picks_lost=l, units=u, roi=round(u / (w + l), 4) if w + l else None,
+                                 sgp_won=sum(x["sgp_won"] for x in hs), sgp_lost=sum(x["sgp_lost"] for x in hs),
+                                 cross_won=sum(x["cross_won"] for x in hs), cross_lost=sum(x["cross_lost"] for x in hs)))
     now = datetime.now(timezone.utc).isoformat(timespec="minutes")
     updates = index.get("updates", {})  # las tres actualizaciones diarias: {jornada: {etapa: hora UTC}}
     if stage:
         day = stage_for or max((os.path.basename(p)[:10] for p in paths), default=last)
         updates.setdefault(day, {})[stage] = now
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
-    json.dump(dict(generated=now, value_ev=VALUE_EV, model="1.5", mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
-                   history=history, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+    json.dump(dict(generated=now, value_ev=VALUE_EV, model=MODEL, mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
+                   history=history, versions=versions, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":
