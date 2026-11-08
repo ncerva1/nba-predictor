@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T19:44+00:00",
+ "generated": "2026-11-08T19:47+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -48,7 +48,7 @@
   },
   "2026-11-08": {
    "morning": "2026-11-08T16:28+00:00",
-   "pregame": "2026-11-08T19:39+00:00"
+   "pregame": "2026-11-08T19:47+00:00"
   }
  },
  "history": [
@@ -85912,15 +85912,15 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.684,
+     "p": 0.701,
      "implied": 0.556,
-     "fair": -216,
-     "edge": 0.128,
-     "ev": 0.231,
+     "fair": -234,
+     "edge": 0.145,
+     "ev": 0.262,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.684,
+     "p_model": 0.701,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -85955,15 +85955,15 @@
      "odds": -165,
      "dec": 1.606,
      "odds_assumed": false,
-     "p": 0.75,
+     "p": 0.751,
      "implied": 0.623,
-     "fair": -300,
-     "edge": 0.127,
-     "ev": 0.205,
+     "fair": -302,
+     "edge": 0.128,
+     "ev": 0.206,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.75,
+     "p_model": 0.751,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -85994,15 +85994,15 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.665,
+     "p": 0.661,
      "implied": 0.556,
-     "fair": -199,
-     "edge": 0.109,
-     "ev": 0.197,
+     "fair": -195,
+     "edge": 0.105,
+     "ev": 0.19,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.665,
+     "p_model": 0.661,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86035,15 +86035,15 @@
      "odds": 110,
      "dec": 2.1,
      "odds_assumed": false,
-     "p": 0.531,
+     "p": 0.53,
      "implied": 0.476,
      "fair": -113,
-     "edge": 0.055,
-     "ev": 0.115,
+     "edge": 0.054,
+     "ev": 0.114,
      "value": true,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.707,
+     "p_model": 0.706,
      "p_mkt": 0.472,
      "cand": true,
      "hr": {
@@ -86073,15 +86073,15 @@
      "odds": 129,
      "dec": 2.29,
      "odds_assumed": false,
-     "p": 0.468,
+     "p": 0.466,
      "implied": 0.437,
      "fair": 114,
-     "edge": 0.032,
-     "ev": 0.072,
+     "edge": 0.03,
+     "ev": 0.068,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.599,
+     "p_model": 0.592,
      "p_mkt": 0.425,
      "cand": true,
      "hr": {
@@ -86113,9 +86113,9 @@
      "stat": "fgm",
      "side": "over",
      "line": 5.5,
-     "p": 0.779,
-     "fair": 1.28,
-     "min_dec": 1.32,
+     "p": 0.759,
+     "fair": 1.32,
+     "min_dec": 1.36,
      "ref": 5.7,
      "label": "Zach LaVine Over 5.5 Tiros de campo anotados",
      "hr": {
@@ -86137,9 +86137,9 @@
      "stat": "fga",
      "side": "over",
      "line": 11.5,
-     "p": 0.701,
-     "fair": 1.43,
-     "min_dec": 1.47,
+     "p": 0.68,
+     "fair": 1.47,
+     "min_dec": 1.52,
      "ref": 11.9,
      "label": "Zach LaVine Over 11.5 Tiros de campo intentados",
      "hr": {
@@ -86161,9 +86161,9 @@
      "stat": "fgm",
      "side": "over",
      "line": 3.5,
-     "p": 0.671,
+     "p": 0.67,
      "fair": 1.49,
-     "min_dec": 1.53,
+     "min_dec": 1.54,
      "ref": 3.9,
      "label": "Andrew Wiggins Over 3.5 Tiros de campo anotados",
      "hr": {
@@ -86185,9 +86185,9 @@
      "stat": "fg3a",
      "side": "over",
      "line": 5.5,
-     "p": 0.663,
-     "fair": 1.51,
-     "min_dec": 1.55,
+     "p": 0.645,
+     "fair": 1.55,
+     "min_dec": 1.6,
      "ref": 5.7,
      "label": "Zach LaVine Over 5.5 Triples intentados",
      "hr": {
@@ -86209,9 +86209,9 @@
      "stat": "fta",
      "side": "over",
      "line": 3.5,
-     "p": 0.639,
-     "fair": 1.56,
-     "min_dec": 1.61,
+     "p": 0.637,
+     "fair": 1.57,
+     "min_dec": 1.62,
      "ref": 3.9,
      "label": "Pelle Larsson Over 3.5 Tiros libres intentados",
      "hr": {
@@ -86233,7 +86233,7 @@
      "stat": "fg2a",
      "side": "over",
      "line": 4.5,
-     "p": 0.629,
+     "p": 0.628,
      "fair": 1.59,
      "min_dec": 1.64,
      "ref": 4.8,
@@ -86305,8 +86305,8 @@
      "stat": "fga",
      "side": "under",
      "line": 10.5,
-     "p": 0.585,
-     "fair": 1.71,
+     "p": 0.587,
+     "fair": 1.7,
      "min_dec": 1.76,
      "ref": 11.0,
      "label": "Davion Mitchell Under 10.5 Tiros de campo intentados",
@@ -86329,7 +86329,7 @@
      "stat": "dd",
      "side": "over",
      "line": 0.5,
-     "p": 0.585,
+     "p": 0.584,
      "fair": 1.71,
      "min_dec": 1.76,
      "ref": null,
@@ -86353,9 +86353,9 @@
      "stat": "ftm",
      "side": "over",
      "line": 3.5,
-     "p": 0.584,
+     "p": 0.583,
      "fair": 1.71,
-     "min_dec": 1.76,
+     "min_dec": 1.77,
      "ref": 3.4,
      "label": "Pelle Larsson Over 3.5 Tiros libres anotados",
      "hr": {
@@ -86377,9 +86377,9 @@
      "stat": "fga",
      "side": "over",
      "line": 8.5,
-     "p": 0.58,
+     "p": 0.583,
      "fair": 1.72,
-     "min_dec": 1.78,
+     "min_dec": 1.77,
      "ref": 8.9,
      "label": "Andrew Wiggins Over 8.5 Tiros de campo intentados",
      "hr": {
@@ -86401,9 +86401,9 @@
      "stat": "fg2a",
      "side": "over",
      "line": 4.5,
-     "p": 0.577,
+     "p": 0.578,
      "fair": 1.73,
-     "min_dec": 1.79,
+     "min_dec": 1.78,
      "ref": 4.9,
      "label": "Andrew Wiggins Over 4.5 Dobles intentados",
      "hr": {
@@ -86425,7 +86425,7 @@
      "stat": "fga",
      "side": "over",
      "line": 7.5,
-     "p": 0.575,
+     "p": 0.574,
      "fair": 1.74,
      "min_dec": 1.79,
      "ref": 7.6,
@@ -86444,38 +86444,14 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Zach LaVine",
-     "team": "SAC",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.565,
-     "fair": 1.77,
-     "min_dec": 1.82,
-     "ref": 3.6,
-     "label": "Zach LaVine Over 3.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Davion Mitchell",
      "team": "MIA",
      "stat": "fg2a",
      "side": "under",
      "line": 5.5,
-     "p": 0.563,
-     "fair": 1.77,
-     "min_dec": 1.83,
+     "p": 0.568,
+     "fair": 1.76,
+     "min_dec": 1.81,
      "ref": 6.3,
      "label": "Davion Mitchell Under 5.5 Dobles intentados",
      "hr": {
@@ -86492,62 +86468,14 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Andrew Wiggins",
-     "team": "MIA",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 2.5,
-     "p": 0.558,
-     "fair": 1.79,
-     "min_dec": 1.85,
-     "ref": 2.5,
-     "label": "Andrew Wiggins Over 2.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Darius Acuff Jr.",
-     "team": "SAC",
-     "stat": "fgm",
-     "side": "over",
-     "line": 7.5,
-     "p": 0.557,
-     "fair": 1.8,
-     "min_dec": 1.85,
-     "ref": 7.4,
-     "label": "Darius Acuff Jr. Over 7.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       8,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Klay Thompson",
      "team": "MIA",
      "stat": "fgm",
      "side": "over",
      "line": 4.5,
-     "p": 0.557,
-     "fair": 1.79,
-     "min_dec": 1.85,
+     "p": 0.56,
+     "fair": 1.78,
+     "min_dec": 1.84,
      "ref": 4.5,
      "label": "Klay Thompson Over 4.5 Tiros de campo anotados",
      "hr": {
@@ -86564,23 +86492,71 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Precious Achiuwa",
+     "player": "De'Andre Hunter",
      "team": "SAC",
      "stat": "fgm",
      "side": "over",
      "line": 3.5,
-     "p": 0.555,
-     "fair": 1.8,
-     "min_dec": 1.86,
-     "ref": 3.8,
-     "label": "Precious Achiuwa Over 3.5 Tiros de campo anotados",
+     "p": 0.559,
+     "fair": 1.79,
+     "min_dec": 1.84,
+     "ref": 3.9,
+     "label": "De'Andre Hunter Over 3.5 Tiros de campo anotados",
      "hr": {
       "l10": [
-       6,
+       4,
        10
       ],
       "h2h": [
-       0,
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Andrew Wiggins",
+     "team": "MIA",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.554,
+     "fair": 1.81,
+     "min_dec": 1.86,
+     "ref": 2.5,
+     "label": "Andrew Wiggins Over 2.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Zach LaVine",
+     "team": "SAC",
+     "stat": "fg2m",
+     "side": "over",
+     "line": 3.5,
+     "p": 0.551,
+     "fair": 1.82,
+     "min_dec": 1.87,
+     "ref": 3.6,
+     "label": "Zach LaVine Over 3.5 Dobles anotados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
        2
       ]
      }
@@ -86593,9 +86569,9 @@
      "stat": "dd",
      "side": "over",
      "line": 0.5,
-     "p": 0.505,
-     "fair": 1.98,
-     "min_dec": 2.04,
+     "p": 0.481,
+     "fair": 2.08,
+     "min_dec": 2.14,
      "ref": null,
      "label": "Domantas Sabonis Doble-doble: Sí",
      "hr": {
@@ -86620,14 +86596,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.684,
+     "p": 0.701,
      "implied": 0.556,
-     "edge": 0.128,
-     "ev": 0.231,
+     "edge": 0.145,
+     "ev": 0.262,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.684,
+     "p_model": 0.701,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86662,14 +86638,14 @@
      "odds": -165,
      "dec": 1.606,
      "odds_assumed": false,
-     "p": 0.75,
+     "p": 0.751,
      "implied": 0.623,
-     "edge": 0.127,
-     "ev": 0.205,
+     "edge": 0.128,
+     "ev": 0.206,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.75,
+     "p_model": 0.751,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86700,14 +86676,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.665,
+     "p": 0.661,
      "implied": 0.556,
-     "edge": 0.109,
-     "ev": 0.197,
+     "edge": 0.105,
+     "ev": 0.19,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.665,
+     "p_model": 0.661,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86738,14 +86714,14 @@
      "odds": 110,
      "dec": 2.1,
      "odds_assumed": false,
-     "p": 0.531,
+     "p": 0.53,
      "implied": 0.476,
-     "edge": 0.055,
-     "ev": 0.115,
+     "edge": 0.054,
+     "ev": 0.114,
      "value": true,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.707,
+     "p_model": 0.706,
      "p_mkt": 0.472,
      "cand": true,
      "hr": {
@@ -86775,14 +86751,14 @@
      "odds": -170,
      "dec": 1.588,
      "odds_assumed": false,
-     "p": 0.683,
+     "p": 0.7,
      "implied": 0.63,
-     "edge": 0.053,
-     "ev": 0.085,
+     "edge": 0.07,
+     "ev": 0.112,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.683,
+     "p_model": 0.7,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86806,43 +86782,6 @@
     },
     {
      "kind": "prop",
-     "label": "De'Andre Hunter Under 1.5 Triples",
-     "player": "De'Andre Hunter",
-     "team": "SAC",
-     "line": 1.5,
-     "odds": 129,
-     "dec": 2.29,
-     "odds_assumed": false,
-     "p": 0.468,
-     "implied": 0.437,
-     "edge": 0.032,
-     "ev": 0.072,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.599,
-     "p_mkt": 0.425,
-     "cand": true,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 5,
-       "value": 2.1,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Bobby Portis Jr. Over 0.5 Triples",
      "player": "Bobby Portis Jr.",
      "team": "MIA",
@@ -86850,14 +86789,14 @@
      "odds": -225,
      "dec": 1.444,
      "odds_assumed": false,
-     "p": 0.742,
+     "p": 0.741,
      "implied": 0.692,
-     "edge": 0.049,
-     "ev": 0.071,
+     "edge": 0.048,
+     "ev": 0.07,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.742,
+     "p_model": 0.741,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86881,6 +86820,43 @@
     },
     {
      "kind": "prop",
+     "label": "De'Andre Hunter Under 1.5 Triples",
+     "player": "De'Andre Hunter",
+     "team": "SAC",
+     "line": 1.5,
+     "odds": 129,
+     "dec": 2.29,
+     "odds_assumed": false,
+     "p": 0.466,
+     "implied": 0.437,
+     "edge": 0.03,
+     "ev": 0.068,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.592,
+     "p_mkt": 0.425,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 5,
+       "value": 2.1,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Keegan Murray Under 4.5 Rebotes",
      "player": "Keegan Murray",
      "team": "SAC",
@@ -86888,14 +86864,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.589,
+     "p": 0.591,
      "implied": 0.556,
-     "edge": 0.033,
-     "ev": 0.06,
+     "edge": 0.035,
+     "ev": 0.064,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.75,
+     "p_model": 0.759,
      "p_mkt": 0.535,
      "cand": true,
      "hr": {
@@ -86918,6 +86894,43 @@
     },
     {
      "kind": "prop",
+     "label": "Domantas Sabonis Under 12.5 Rebotes",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 12.5,
+     "odds": 102,
+     "dec": 2.02,
+     "odds_assumed": false,
+     "p": 0.525,
+     "implied": 0.495,
+     "edge": 0.03,
+     "ev": 0.061,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.601,
+     "p_mkt": 0.5,
+     "cand": true,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 23,
+       "value": 16.5,
+       "lg": 15.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Davion Mitchell Under 2.5 Rebotes",
      "player": "Davion Mitchell",
      "team": "MIA",
@@ -86925,14 +86938,14 @@
      "odds": -135,
      "dec": 1.741,
      "odds_assumed": false,
-     "p": 0.606,
+     "p": 0.604,
      "implied": 0.574,
-     "edge": 0.032,
-     "ev": 0.055,
+     "edge": 0.03,
+     "ev": 0.052,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.606,
+     "p_model": 0.604,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -86950,43 +86963,6 @@
        "rank": 6,
        "value": 4.5,
        "lg": 5.8,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Domantas Sabonis Under 12.5 Rebotes",
-     "player": "Domantas Sabonis",
-     "team": "SAC",
-     "line": 12.5,
-     "odds": 102,
-     "dec": 2.02,
-     "odds_assumed": false,
-     "p": 0.519,
-     "implied": 0.495,
-     "edge": 0.024,
-     "ev": 0.049,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.578,
-     "p_mkt": 0.5,
-     "cand": true,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 23,
-       "value": 16.5,
-       "lg": 15.0,
        "n": 30
       }
      }
@@ -87030,6 +87006,43 @@
     },
     {
      "kind": "prop",
+     "label": "Pelle Larsson Under 0.5 Triples",
+     "player": "Pelle Larsson",
+     "team": "MIA",
+     "line": 0.5,
+     "odds": 185,
+     "dec": 2.85,
+     "odds_assumed": false,
+     "p": 0.367,
+     "implied": 0.351,
+     "edge": 0.016,
+     "ev": 0.045,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.458,
+     "p_mkt": 0.336,
+     "cand": true,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 13,
+       "value": 3.2,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Andrew Wiggins Under 3.5 Rebotes",
      "player": "Andrew Wiggins",
      "team": "MIA",
@@ -87040,11 +87053,11 @@
      "p": 0.535,
      "implied": 0.512,
      "edge": 0.023,
-     "ev": 0.044,
+     "ev": 0.045,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.592,
+     "p_model": 0.593,
      "p_mkt": 0.516,
      "cand": true,
      "hr": {
@@ -87074,14 +87087,14 @@
      "odds": 108,
      "dec": 2.08,
      "odds_assumed": false,
-     "p": 0.502,
+     "p": 0.501,
      "implied": 0.481,
      "edge": 0.021,
      "ev": 0.043,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.536,
+     "p_model": 0.535,
      "p_mkt": 0.49,
      "cand": true,
      "hr": {
@@ -87104,81 +87117,6 @@
     },
     {
      "kind": "prop",
-     "label": "Pelle Larsson Under 0.5 Triples",
-     "player": "Pelle Larsson",
-     "team": "MIA",
-     "line": 0.5,
-     "odds": 185,
-     "dec": 2.85,
-     "odds_assumed": false,
-     "p": 0.366,
-     "implied": 0.351,
-     "edge": 0.015,
-     "ev": 0.042,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.454,
-     "p_mkt": 0.336,
-     "cand": true,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 13,
-       "value": 3.2,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Precious Achiuwa Over 5.5 Rebotes",
-     "player": "Precious Achiuwa",
-     "team": "SAC",
-     "line": 5.5,
-     "odds": -142,
-     "dec": 1.704,
-     "odds_assumed": false,
-     "p": 0.606,
-     "implied": 0.587,
-     "edge": 0.019,
-     "ev": 0.033,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.606,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 23,
-       "value": 16.5,
-       "lg": 15.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Pelle Larsson Over 3.5 Rebotes",
      "player": "Pelle Larsson",
      "team": "MIA",
@@ -87186,14 +87124,14 @@
      "odds": 115,
      "dec": 2.15,
      "odds_assumed": false,
-     "p": 0.479,
+     "p": 0.48,
      "implied": 0.465,
-     "edge": 0.014,
+     "edge": 0.015,
      "ev": 0.031,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.587,
+     "p_model": 0.588,
      "p_mkt": 0.444,
      "cand": true,
      "hr": {
@@ -87216,80 +87154,6 @@
     },
     {
      "kind": "prop",
-     "label": "Giannis Antetokounmpo Under 0.5 Triples",
-     "player": "Giannis Antetokounmpo",
-     "team": "MIA",
-     "line": 0.5,
-     "odds": 105,
-     "dec": 2.05,
-     "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.488,
-     "edge": 0.012,
-     "ev": 0.024,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.62,
-     "p_mkt": 0.459,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 21,
-       "value": 2.9,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Zach LaVine Over 2.5 Triples",
-     "player": "Zach LaVine",
-     "team": "SAC",
-     "line": 2.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.547,
-     "implied": 0.535,
-     "edge": 0.012,
-     "ev": 0.022,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.618,
-     "p_mkt": 0.523,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 29,
-       "value": 4.2,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Keegan Murray Under 1.5 Triples",
      "player": "Keegan Murray",
      "team": "SAC",
@@ -87297,14 +87161,14 @@
      "odds": -157,
      "dec": 1.637,
      "odds_assumed": false,
-     "p": 0.623,
+     "p": 0.626,
      "implied": 0.611,
-     "edge": 0.013,
-     "ev": 0.02,
+     "edge": 0.015,
+     "ev": 0.025,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.757,
+     "p_model": 0.767,
      "p_mkt": 0.579,
      "cand": false,
      "hr": {
@@ -87327,26 +87191,26 @@
     },
     {
      "kind": "prop",
-     "label": "Andrew Wiggins Under 1.5 Triples",
-     "player": "Andrew Wiggins",
+     "label": "Giannis Antetokounmpo Under 0.5 Triples",
+     "player": "Giannis Antetokounmpo",
      "team": "MIA",
-     "line": 1.5,
-     "odds": -112,
-     "dec": 1.893,
+     "line": 0.5,
+     "odds": 105,
+     "dec": 2.05,
      "odds_assumed": false,
-     "p": 0.537,
-     "implied": 0.528,
-     "edge": 0.008,
-     "ev": 0.016,
+     "p": 0.499,
+     "implied": 0.488,
+     "edge": 0.011,
+     "ev": 0.023,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.569,
-     "p_mkt": 0.526,
+     "p_model": 0.618,
+     "p_mkt": 0.459,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       6,
        10
       ],
       "h2h": [
@@ -87354,9 +87218,87 @@
        2
       ],
       "dvp": {
+       "pos": "PF",
+       "rank": 21,
+       "value": 2.9,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Acuff Jr. Under 2.5 Triples",
+     "player": "Darius Acuff Jr.",
+     "team": "SAC",
+     "line": 2.5,
+     "odds": 122,
+     "dec": 2.22,
+     "odds_assumed": false,
+     "p": 0.46,
+     "implied": 0.45,
+     "edge": 0.01,
+     "ev": 0.022,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.545,
+     "p_mkt": 0.432,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 29,
+       "value": 5.3,
+       "lg": 3.6,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Zach LaVine Over 2.5 Triples",
+     "player": "Zach LaVine",
+     "team": "SAC",
+     "line": 2.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.544,
+     "implied": 0.535,
+     "edge": 0.009,
+     "ev": 0.017,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.606,
+     "p_mkt": 0.523,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
        "pos": "SG",
-       "rank": 13,
-       "value": 3.2,
+       "rank": 29,
+       "value": 4.2,
        "lg": 3.3,
        "n": 30
       }
@@ -87391,43 +87333,39 @@
     },
     {
      "kind": "prop",
-     "label": "Darius Acuff Jr. Under 2.5 Triples",
-     "player": "Darius Acuff Jr.",
-     "team": "SAC",
-     "line": 2.5,
-     "odds": 122,
-     "dec": 2.22,
+     "label": "Andrew Wiggins Under 1.5 Triples",
+     "player": "Andrew Wiggins",
+     "team": "MIA",
+     "line": 1.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.456,
-     "implied": 0.45,
-     "edge": 0.005,
-     "ev": 0.012,
+     "p": 0.536,
+     "implied": 0.528,
+     "edge": 0.008,
+     "ev": 0.015,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.526,
-     "p_mkt": 0.432,
+     "p_model": 0.567,
+     "p_mkt": 0.526,
      "cand": false,
      "hr": {
       "l10": [
-       4,
-       9
+       7,
+       10
       ],
       "h2h": [
-       0,
-       0
+       1,
+       2
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 29,
-       "value": 5.3,
-       "lg": 3.6,
+       "pos": "SG",
+       "rank": 13,
+       "value": 3.2,
+       "lg": 3.3,
        "n": 30
       }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
      }
     },
     {
@@ -87439,14 +87377,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.561,
+     "p": 0.56,
      "implied": 0.556,
      "edge": 0.005,
-     "ev": 0.01,
+     "ev": 0.008,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.683,
+     "p_model": 0.68,
      "p_mkt": 0.52,
      "cand": false,
      "hr": {
@@ -87469,6 +87407,43 @@
     },
     {
      "kind": "prop",
+     "label": "Precious Achiuwa Over 5.5 Rebotes",
+     "player": "Precious Achiuwa",
+     "team": "SAC",
+     "line": 5.5,
+     "odds": -142,
+     "dec": 1.704,
+     "odds_assumed": false,
+     "p": 0.589,
+     "implied": 0.587,
+     "edge": 0.002,
+     "ev": 0.004,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.589,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 23,
+       "value": 16.5,
+       "lg": 15.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Bobby Portis Jr. Under 5.5 Rebotes",
      "player": "Bobby Portis Jr.",
      "team": "MIA",
@@ -87476,14 +87451,14 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.498,
+     "p": 0.499,
      "implied": 0.5,
-     "edge": -0.002,
+     "edge": -0.001,
      "ev": -0.003,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.464,
+     "p_model": 0.465,
      "p_mkt": 0.51,
      "cand": false,
      "hr": {
@@ -87502,6 +87477,47 @@
        "lg": 10.8,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Acuff Jr. Under 24.5 Puntos",
+     "player": "Darius Acuff Jr.",
+     "team": "SAC",
+     "line": 24.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.547,
+     "implied": 0.55,
+     "edge": -0.002,
+     "ev": -0.004,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.647,
+     "p_mkt": 0.514,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 29,
+       "value": 34.0,
+       "lg": 27.2,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
      }
     },
     {
@@ -87550,14 +87566,14 @@
      "odds": -120,
      "dec": 1.833,
      "odds_assumed": false,
-     "p": 0.542,
+     "p": 0.543,
      "implied": 0.545,
-     "edge": -0.003,
-     "ev": -0.006,
+     "edge": -0.002,
+     "ev": -0.004,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.568,
+     "p_model": 0.572,
      "p_mkt": 0.534,
      "cand": false,
      "hr": {
@@ -87587,14 +87603,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.547,
+     "p": 0.552,
      "implied": 0.556,
-     "edge": -0.009,
-     "ev": -0.016,
+     "edge": -0.003,
+     "ev": -0.006,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.626,
+     "p_model": 0.649,
      "p_mkt": 0.52,
      "cand": false,
      "hr": {
@@ -87624,14 +87640,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.547,
+     "p": 0.546,
      "implied": 0.556,
-     "edge": -0.009,
-     "ev": -0.016,
+     "edge": -0.01,
+     "ev": -0.017,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.626,
+     "p_model": 0.623,
      "p_mkt": 0.52,
      "cand": false,
      "hr": {
@@ -87654,43 +87670,39 @@
     },
     {
      "kind": "prop",
-     "label": "Darius Acuff Jr. Under 24.5 Puntos",
-     "player": "Darius Acuff Jr.",
+     "label": "Malik Monk Under 1.5 Triples",
+     "player": "Malik Monk",
      "team": "SAC",
-     "line": 24.5,
-     "odds": -122,
-     "dec": 1.82,
+     "line": 1.5,
+     "odds": -130,
+     "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.54,
-     "implied": 0.55,
+     "p": 0.556,
+     "implied": 0.565,
      "edge": -0.009,
      "ev": -0.017,
      "value": false,
-     "stat": "pts",
+     "stat": "fg3m",
      "side": "under",
-     "p_model": 0.619,
-     "p_mkt": 0.514,
+     "p_model": 0.595,
+     "p_mkt": 0.543,
      "cand": false,
      "hr": {
       "l10": [
-       5,
-       9
+       6,
+       10
       ],
       "h2h": [
-       0,
-       0
+       1,
+       2
       ],
       "dvp": {
-       "pos": "PG",
+       "pos": "SG",
        "rank": 29,
-       "value": 34.0,
-       "lg": 27.2,
+       "value": 4.2,
+       "lg": 3.3,
        "n": 30
       }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
      }
     },
     {
@@ -87729,14 +87741,14 @@
      "odds": -120,
      "dec": 1.833,
      "odds_assumed": false,
-     "p": 0.535,
+     "p": 0.534,
      "implied": 0.545,
-     "edge": -0.011,
-     "ev": -0.02,
+     "edge": -0.012,
+     "ev": -0.021,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.612,
+     "p_model": 0.608,
      "p_mkt": 0.509,
      "cand": false,
      "hr": {
@@ -87753,43 +87765,6 @@
        "rank": 15,
        "value": 23.7,
        "lg": 23.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Malik Monk Under 1.5 Triples",
-     "player": "Malik Monk",
-     "team": "SAC",
-     "line": 1.5,
-     "odds": -130,
-     "dec": 1.769,
-     "odds_assumed": false,
-     "p": 0.553,
-     "implied": 0.565,
-     "edge": -0.012,
-     "ev": -0.021,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.585,
-     "p_mkt": 0.543,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 29,
-       "value": 4.2,
-       "lg": 3.3,
        "n": 30
       }
      }
@@ -87823,43 +87798,6 @@
     },
     {
      "kind": "prop",
-     "label": "Zach LaVine Over 20.5 Puntos",
-     "player": "Zach LaVine",
-     "team": "SAC",
-     "line": 20.5,
-     "odds": -119,
-     "dec": 1.84,
-     "odds_assumed": false,
-     "p": 0.531,
-     "implied": 0.543,
-     "edge": -0.013,
-     "ev": -0.024,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.595,
-     "p_mkt": 0.509,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 28.4,
-       "lg": 23.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Andrew Wiggins Over 1.5 Triples",
      "player": "Andrew Wiggins",
      "team": "MIA",
@@ -87867,14 +87805,14 @@
      "odds": 110,
      "dec": 2.1,
      "odds_assumed": false,
-     "p": 0.463,
+     "p": 0.464,
      "implied": 0.476,
-     "edge": -0.013,
-     "ev": -0.027,
+     "edge": -0.012,
+     "ev": -0.026,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.431,
+     "p_model": 0.433,
      "p_mkt": 0.474,
      "cand": false,
      "hr": {
@@ -87897,43 +87835,6 @@
     },
     {
      "kind": "prop",
-     "label": "Domantas Sabonis Over 12.5 Rebotes",
-     "player": "Domantas Sabonis",
-     "team": "SAC",
-     "line": 12.5,
-     "odds": 102,
-     "dec": 2.02,
-     "odds_assumed": false,
-     "p": 0.48,
-     "implied": 0.495,
-     "edge": -0.015,
-     "ev": -0.029,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.422,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 23,
-       "value": 16.5,
-       "lg": 15.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Andrew Wiggins Over 10.5 Puntos",
      "player": "Andrew Wiggins",
      "team": "MIA",
@@ -87943,12 +87844,12 @@
      "odds_assumed": false,
      "p": 0.508,
      "implied": 0.524,
-     "edge": -0.015,
+     "edge": -0.016,
      "ev": -0.03,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.561,
+     "p_model": 0.56,
      "p_mkt": 0.491,
      "cand": false,
      "hr": {
@@ -87985,7 +87886,7 @@
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.408,
+     "p_model": 0.407,
      "p_mkt": 0.484,
      "cand": false,
      "hr": {
@@ -88008,37 +87909,37 @@
     },
     {
      "kind": "prop",
-     "label": "Davion Mitchell Under 1.5 Triples",
-     "player": "Davion Mitchell",
-     "team": "MIA",
-     "line": 1.5,
-     "odds": 110,
-     "dec": 2.1,
+     "label": "Zach LaVine Over 20.5 Puntos",
+     "player": "Zach LaVine",
+     "team": "SAC",
+     "line": 20.5,
+     "odds": -119,
+     "dec": 1.84,
      "odds_assumed": false,
-     "p": 0.458,
-     "implied": 0.476,
-     "edge": -0.019,
-     "ev": -0.039,
+     "p": 0.524,
+     "implied": 0.543,
+     "edge": -0.02,
+     "ev": -0.036,
      "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.432,
-     "p_mkt": 0.466,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.567,
+     "p_mkt": 0.509,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       7,
        10
       ],
       "h2h": [
-       0,
-       1
+       1,
+       2
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 28,
-       "value": 4.5,
-       "lg": 3.6,
+       "pos": "SG",
+       "rank": 30,
+       "value": 28.4,
+       "lg": 23.9,
        "n": 30
       }
      }
@@ -88052,14 +87953,14 @@
      "odds": -450,
      "dec": 1.222,
      "odds_assumed": false,
-     "p": 0.786,
+     "p": 0.787,
      "implied": 0.818,
-     "edge": -0.033,
-     "ev": -0.04,
+     "edge": -0.031,
+     "ev": -0.038,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.819,
+     "p_model": 0.824,
      "p_mkt": 0.775,
      "cand": false,
      "hr": {
@@ -88082,6 +87983,80 @@
     },
     {
      "kind": "prop",
+     "label": "Domantas Sabonis Over 12.5 Rebotes",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 12.5,
+     "odds": 102,
+     "dec": 2.02,
+     "odds_assumed": false,
+     "p": 0.475,
+     "implied": 0.495,
+     "edge": -0.02,
+     "ev": -0.041,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.399,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 23,
+       "value": 16.5,
+       "lg": 15.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Davion Mitchell Under 1.5 Triples",
+     "player": "Davion Mitchell",
+     "team": "MIA",
+     "line": 1.5,
+     "odds": 110,
+     "dec": 2.1,
+     "odds_assumed": false,
+     "p": 0.457,
+     "implied": 0.476,
+     "edge": -0.02,
+     "ev": -0.041,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.428,
+     "p_mkt": 0.466,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 28,
+       "value": 4.5,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Klay Thompson Under 12.5 Puntos",
      "player": "Klay Thompson",
      "team": "MIA",
@@ -88089,14 +88064,14 @@
      "odds": -124,
      "dec": 1.806,
      "odds_assumed": false,
-     "p": 0.523,
+     "p": 0.522,
      "implied": 0.554,
      "edge": -0.031,
      "ev": -0.056,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.54,
+     "p_model": 0.538,
      "p_mkt": 0.517,
      "cand": false,
      "hr": {
@@ -88146,30 +88121,30 @@
     },
     {
      "kind": "prop",
-     "label": "Malik Monk Over 1.5 Triples",
-     "player": "Malik Monk",
+     "label": "Zach LaVine Under 2.5 Triples",
+     "player": "Zach LaVine",
      "team": "SAC",
-     "line": 1.5,
-     "odds": 110,
-     "dec": 2.1,
+     "line": 2.5,
+     "odds": 105,
+     "dec": 2.05,
      "odds_assumed": false,
-     "p": 0.447,
-     "implied": 0.476,
-     "edge": -0.03,
-     "ev": -0.062,
+     "p": 0.456,
+     "implied": 0.488,
+     "edge": -0.032,
+     "ev": -0.065,
      "value": false,
      "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.415,
-     "p_mkt": 0.457,
+     "side": "under",
+     "p_model": 0.394,
+     "p_mkt": 0.477,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       3,
        10
       ],
       "h2h": [
-       1,
+       0,
        2
       ],
       "dvp": {
@@ -88183,30 +88158,30 @@
     },
     {
      "kind": "prop",
-     "label": "Zach LaVine Under 2.5 Triples",
-     "player": "Zach LaVine",
+     "label": "Malik Monk Over 1.5 Triples",
+     "player": "Malik Monk",
      "team": "SAC",
-     "line": 2.5,
-     "odds": 105,
-     "dec": 2.05,
+     "line": 1.5,
+     "odds": 110,
+     "dec": 2.1,
      "odds_assumed": false,
-     "p": 0.453,
-     "implied": 0.488,
-     "edge": -0.035,
-     "ev": -0.071,
+     "p": 0.444,
+     "implied": 0.476,
+     "edge": -0.032,
+     "ev": -0.067,
      "value": false,
      "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.382,
-     "p_mkt": 0.477,
+     "side": "over",
+     "p_model": 0.405,
+     "p_mkt": 0.457,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       4,
        10
       ],
       "h2h": [
-       0,
+       1,
        2
       ],
       "dvp": {
@@ -88246,6 +88221,80 @@
      "cand": false
     },
     {
+     "kind": "prop",
+     "label": "Klay Thompson Over 12.5 Puntos",
+     "player": "Klay Thompson",
+     "team": "MIA",
+     "line": 12.5,
+     "odds": -107,
+     "dec": 1.935,
+     "odds_assumed": false,
+     "p": 0.478,
+     "implied": 0.517,
+     "edge": -0.039,
+     "ev": -0.076,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.462,
+     "p_mkt": 0.483,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 20,
+       "value": 21.5,
+       "lg": 19.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Klay Thompson Over 2.5 Triples",
+     "player": "Klay Thompson",
+     "team": "MIA",
+     "line": 2.5,
+     "odds": -150,
+     "dec": 1.667,
+     "odds_assumed": false,
+     "p": 0.554,
+     "implied": 0.6,
+     "edge": -0.046,
+     "ev": -0.076,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.554,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 12,
+       "value": 2.6,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
      "kind": "total",
      "label": "Under 238.5",
      "player": null,
@@ -88271,158 +88320,6 @@
      "p_model": 0.45,
      "p_mkt": 0.509,
      "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Klay Thompson Over 12.5 Puntos",
-     "player": "Klay Thompson",
-     "team": "MIA",
-     "line": 12.5,
-     "odds": -107,
-     "dec": 1.935,
-     "odds_assumed": false,
-     "p": 0.477,
-     "implied": 0.517,
-     "edge": -0.04,
-     "ev": -0.077,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.46,
-     "p_mkt": 0.483,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 20,
-       "value": 21.5,
-       "lg": 19.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darius Acuff Jr. Over 2.5 Triples",
-     "player": "Darius Acuff Jr.",
-     "team": "SAC",
-     "line": 2.5,
-     "odds": -145,
-     "dec": 1.69,
-     "odds_assumed": false,
-     "p": 0.544,
-     "implied": 0.592,
-     "edge": -0.047,
-     "ev": -0.08,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.474,
-     "p_mkt": 0.568,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 29,
-       "value": 5.3,
-       "lg": 3.6,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Klay Thompson Over 2.5 Triples",
-     "player": "Klay Thompson",
-     "team": "MIA",
-     "line": 2.5,
-     "odds": -150,
-     "dec": 1.667,
-     "odds_assumed": false,
-     "p": 0.55,
-     "implied": 0.6,
-     "edge": -0.05,
-     "ev": -0.083,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.55,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 12,
-       "value": 2.6,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Pelle Larsson Over 0.5 Triples",
-     "player": "Pelle Larsson",
-     "team": "MIA",
-     "line": 0.5,
-     "odds": -225,
-     "dec": 1.444,
-     "odds_assumed": false,
-     "p": 0.634,
-     "implied": 0.692,
-     "edge": -0.058,
-     "ev": -0.084,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.546,
-     "p_mkt": 0.664,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 13,
-       "value": 3.2,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
     },
     {
      "kind": "prop",
@@ -88463,37 +88360,37 @@
     },
     {
      "kind": "prop",
-     "label": "Andrew Wiggins Under 10.5 Puntos",
-     "player": "Andrew Wiggins",
+     "label": "Pelle Larsson Over 0.5 Triples",
+     "player": "Pelle Larsson",
      "team": "MIA",
-     "line": 10.5,
-     "odds": -119,
-     "dec": 1.84,
+     "line": 0.5,
+     "odds": -225,
+     "dec": 1.444,
      "odds_assumed": false,
-     "p": 0.492,
-     "implied": 0.543,
-     "edge": -0.052,
-     "ev": -0.095,
+     "p": 0.633,
+     "implied": 0.692,
+     "edge": -0.059,
+     "ev": -0.086,
      "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.439,
-     "p_mkt": 0.509,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.542,
+     "p_mkt": 0.664,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       8,
        10
       ],
       "h2h": [
        0,
-       2
+       1
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 15,
-       "value": 23.7,
-       "lg": 23.9,
+       "rank": 13,
+       "value": 3.2,
+       "lg": 3.3,
        "n": 30
       }
      }
@@ -88507,14 +88404,14 @@
      "odds": -220,
      "dec": 1.455,
      "odds_assumed": false,
-     "p": 0.622,
+     "p": 0.628,
      "implied": 0.688,
-     "edge": -0.065,
-     "ev": -0.095,
+     "edge": -0.059,
+     "ev": -0.086,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.622,
+     "p_model": 0.628,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -88537,76 +88434,43 @@
     },
     {
      "kind": "prop",
-     "label": "Domantas Sabonis Over 0.5 Triples",
-     "player": "Domantas Sabonis",
+     "label": "Darius Acuff Jr. Over 2.5 Triples",
+     "player": "Darius Acuff Jr.",
      "team": "SAC",
-     "line": 0.5,
-     "odds": 320,
-     "dec": 4.2,
-     "odds_assumed": false,
-     "p": 0.214,
-     "implied": 0.238,
-     "edge": -0.024,
-     "ev": -0.1,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.181,
-     "p_mkt": 0.225,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 30,
-       "value": 2.2,
-       "lg": 1.2,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "De'Andre Hunter Over 1.5 Triples",
-     "player": "De'Andre Hunter",
-     "team": "SAC",
-     "line": 1.5,
+     "line": 2.5,
      "odds": -145,
      "dec": 1.69,
      "odds_assumed": false,
-     "p": 0.532,
+     "p": 0.54,
      "implied": 0.592,
-     "edge": -0.06,
-     "ev": -0.101,
+     "edge": -0.052,
+     "ev": -0.088,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.401,
-     "p_mkt": 0.575,
+     "p_model": 0.455,
+     "p_mkt": 0.568,
      "cand": false,
      "hr": {
       "l10": [
-       6,
-       10
+       5,
+       9
       ],
       "h2h": [
-       1,
-       2
+       0,
+       0
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 5,
-       "value": 2.1,
-       "lg": 2.6,
+       "pos": "PG",
+       "rank": 29,
+       "value": 5.3,
+       "lg": 3.6,
        "n": 30
       }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
      }
     },
     {
@@ -88618,14 +88482,14 @@
      "odds": -110,
      "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.469,
+     "p": 0.476,
      "implied": 0.524,
-     "edge": -0.054,
-     "ev": -0.104,
+     "edge": -0.047,
+     "ev": -0.091,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.405,
+     "p_model": 0.433,
      "p_mkt": 0.491,
      "cand": false,
      "hr": {
@@ -88648,6 +88512,117 @@
     },
     {
      "kind": "prop",
+     "label": "Andrew Wiggins Under 10.5 Puntos",
+     "player": "Andrew Wiggins",
+     "team": "MIA",
+     "line": 10.5,
+     "odds": -119,
+     "dec": 1.84,
+     "odds_assumed": false,
+     "p": 0.492,
+     "implied": 0.543,
+     "edge": -0.052,
+     "ev": -0.095,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.44,
+     "p_mkt": 0.509,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 15,
+       "value": 23.7,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "De'Andre Hunter Over 1.5 Triples",
+     "player": "De'Andre Hunter",
+     "team": "SAC",
+     "line": 1.5,
+     "odds": -145,
+     "dec": 1.69,
+     "odds_assumed": false,
+     "p": 0.534,
+     "implied": 0.592,
+     "edge": -0.058,
+     "ev": -0.098,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.408,
+     "p_mkt": 0.575,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 5,
+       "value": 2.1,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Domantas Sabonis Over 0.5 Triples",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 0.5,
+     "odds": 320,
+     "dec": 4.2,
+     "odds_assumed": false,
+     "p": 0.213,
+     "implied": 0.238,
+     "edge": -0.025,
+     "ev": -0.105,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.176,
+     "p_mkt": 0.225,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 30,
+       "value": 2.2,
+       "lg": 1.2,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Pelle Larsson Under 3.5 Rebotes",
      "player": "Pelle Larsson",
      "team": "MIA",
@@ -88655,14 +88630,14 @@
      "odds": -140,
      "dec": 1.714,
      "odds_assumed": false,
-     "p": 0.521,
+     "p": 0.52,
      "implied": 0.583,
      "edge": -0.063,
      "ev": -0.108,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.413,
+     "p_model": 0.412,
      "p_mkt": 0.556,
      "cand": false,
      "hr": {
@@ -88685,84 +88660,6 @@
     },
     {
      "kind": "prop",
-     "label": "Darius Acuff Jr. Over 24.5 Puntos",
-     "player": "Darius Acuff Jr.",
-     "team": "SAC",
-     "line": 24.5,
-     "odds": -108,
-     "dec": 1.926,
-     "odds_assumed": false,
-     "p": 0.46,
-     "implied": 0.519,
-     "edge": -0.06,
-     "ev": -0.115,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.381,
-     "p_mkt": 0.486,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 29,
-       "value": 34.0,
-       "lg": 27.2,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Domantas Sabonis Over 14.5 Puntos",
-     "player": "Domantas Sabonis",
-     "team": "SAC",
-     "line": 14.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.453,
-     "implied": 0.512,
-     "edge": -0.059,
-     "ev": -0.115,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.374,
-     "p_mkt": 0.48,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 21,
-       "value": 23.1,
-       "lg": 22.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Davion Mitchell Over 13.5 Puntos",
      "player": "Davion Mitchell",
      "team": "MIA",
@@ -88770,14 +88667,14 @@
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.453,
+     "p": 0.454,
      "implied": 0.512,
-     "edge": -0.059,
-     "ev": -0.115,
+     "edge": -0.058,
+     "ev": -0.114,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.374,
+     "p_model": 0.377,
      "p_mkt": 0.48,
      "cand": false,
      "hr": {
@@ -88807,14 +88704,14 @@
      "odds": -111,
      "dec": 1.901,
      "odds_assumed": false,
-     "p": 0.465,
+     "p": 0.466,
      "implied": 0.526,
-     "edge": -0.061,
-     "ev": -0.116,
+     "edge": -0.06,
+     "ev": -0.114,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.388,
+     "p_model": 0.392,
      "p_mkt": 0.491,
      "cand": false,
      "hr": {
@@ -88844,14 +88741,14 @@
      "odds": -114,
      "dec": 1.877,
      "odds_assumed": false,
-     "p": 0.469,
+     "p": 0.47,
      "implied": 0.533,
      "edge": -0.063,
      "ev": -0.119,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.293,
+     "p_model": 0.294,
      "p_mkt": 0.528,
      "cand": false,
      "hr": {
@@ -88874,6 +88771,121 @@
     },
     {
      "kind": "prop",
+     "label": "Domantas Sabonis Over 14.5 Puntos",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 14.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.448,
+     "implied": 0.512,
+     "edge": -0.065,
+     "ev": -0.126,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.351,
+     "p_mkt": 0.48,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 21,
+       "value": 23.1,
+       "lg": 22.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Precious Achiuwa Under 6.5 Rebotes",
+     "player": "Precious Achiuwa",
+     "team": "SAC",
+     "line": 6.5,
+     "odds": -143,
+     "dec": 1.699,
+     "odds_assumed": false,
+     "p": 0.514,
+     "implied": 0.588,
+     "edge": -0.075,
+     "ev": -0.127,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.514,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 23,
+       "value": 16.5,
+       "lg": 15.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Acuff Jr. Over 24.5 Puntos",
+     "player": "Darius Acuff Jr.",
+     "team": "SAC",
+     "line": 24.5,
+     "odds": -108,
+     "dec": 1.926,
+     "odds_assumed": false,
+     "p": 0.453,
+     "implied": 0.519,
+     "edge": -0.067,
+     "ev": -0.128,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.353,
+     "p_mkt": 0.486,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 29,
+       "value": 34.0,
+       "lg": 27.2,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Giannis Antetokounmpo Over 0.5 Triples",
      "player": "Giannis Antetokounmpo",
      "team": "MIA",
@@ -88883,12 +88895,12 @@
      "odds_assumed": false,
      "p": 0.501,
      "implied": 0.574,
-     "edge": -0.074,
-     "ev": -0.129,
+     "edge": -0.073,
+     "ev": -0.128,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.38,
+     "p_model": 0.382,
      "p_mkt": 0.541,
      "cand": false,
      "hr": {
@@ -88918,14 +88930,14 @@
      "odds": -180,
      "dec": 1.556,
      "odds_assumed": false,
-     "p": 0.554,
+     "p": 0.553,
      "implied": 0.643,
-     "edge": -0.089,
-     "ev": -0.138,
+     "edge": -0.09,
+     "ev": -0.14,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.554,
+     "p_model": 0.553,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -88955,14 +88967,14 @@
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.439,
+     "p": 0.44,
      "implied": 0.512,
-     "edge": -0.073,
-     "ev": -0.143,
+     "edge": -0.072,
+     "ev": -0.141,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.317,
+     "p_model": 0.32,
      "p_mkt": 0.48,
      "cand": false,
      "hr": {
@@ -88992,14 +89004,14 @@
      "odds": 107,
      "dec": 2.07,
      "odds_assumed": false,
-     "p": 0.411,
+     "p": 0.409,
      "implied": 0.483,
-     "edge": -0.072,
-     "ev": -0.149,
+     "edge": -0.074,
+     "ev": -0.153,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.25,
+     "p_model": 0.241,
      "p_mkt": 0.465,
      "cand": false,
      "hr": {
@@ -89029,14 +89041,14 @@
      "odds": 125,
      "dec": 2.25,
      "odds_assumed": false,
-     "p": 0.377,
+     "p": 0.374,
      "implied": 0.444,
-     "edge": -0.068,
-     "ev": -0.153,
+     "edge": -0.07,
+     "ev": -0.158,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.243,
+     "p_model": 0.233,
      "p_mkt": 0.421,
      "cand": false,
      "hr": {
@@ -89059,43 +89071,6 @@
     },
     {
      "kind": "prop",
-     "label": "Precious Achiuwa Under 6.5 Rebotes",
-     "player": "Precious Achiuwa",
-     "team": "SAC",
-     "line": 6.5,
-     "odds": -143,
-     "dec": 1.699,
-     "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.588,
-     "edge": -0.096,
-     "ev": -0.162,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.493,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 23,
-       "value": 16.5,
-       "lg": 15.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Darius Acuff Jr. Over 2.5 Rebotes",
      "player": "Darius Acuff Jr.",
      "team": "SAC",
@@ -89103,14 +89078,14 @@
      "odds": -169,
      "dec": 1.592,
      "odds_assumed": false,
-     "p": 0.497,
+     "p": 0.483,
      "implied": 0.628,
-     "edge": -0.131,
-     "ev": -0.209,
+     "edge": -0.145,
+     "ev": -0.231,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.497,
+     "p_model": 0.483,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -89144,14 +89119,14 @@
      "odds": -140,
      "dec": 1.714,
      "odds_assumed": false,
-     "p": 0.407,
+     "p": 0.409,
      "implied": 0.583,
-     "edge": -0.176,
-     "ev": -0.302,
+     "edge": -0.174,
+     "ev": -0.299,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.407,
+     "p_model": 0.409,
      "p_mkt": null,
      "cand": false,
      "hr": {
