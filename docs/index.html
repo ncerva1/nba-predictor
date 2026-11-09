@@ -1108,6 +1108,7 @@ function renderIndex(scope = "reg") {
   </section>` : ""}
   ${todays.some(g => !g.result) ? `<p class="mk-cta"><button type="button" class="btn ghost" data-mkpick>+ Crea tu propio pick</button><span class="muted">Cualquier jugador o mercado de equipo de los partidos de hoy, con la línea y la cuota de tu casa, para sumarlo a tu combinada.</span></p>` : ""}
   ${parlaySection(todays, thr)}
+  ${cup ? "" : dreamSection()}
   ${cup ? cupStudy() : ""}
   <section class="section">
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
@@ -1239,6 +1240,42 @@ function bindParlays(todays, thr) {
   };
   document.querySelectorAll("#pl-mode button").forEach(b => b.addEventListener("click", () => { PL_MODE = b.dataset.m; draw(); }));
   draw();
+}
+
+// Parlay soñador (build_site.py, 9-nov): una combinada larga por jornada, cuota total entre 50 y 200, con las patas
+// más probables del modelo; como mucho 2 patas por partido y solo si no se estorban. 1 unidad por jornada.
+function dreamCard(pl, thr) {
+  const games = new Set(pl.legs.map(l => l.gid)).size;
+  return `<article class="pl-card dream-card">
+    <header><h3>${pl.n} patas</h3><span class="kind">${games} partido${games > 1 ? "s" : ""}</span>${resPill(pl.result)}</header>
+    <ol class="pl-legs">${pl.legs.map(l => `<li><div><div class="lg">${esc(l.label)}${ftag(l.flag)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${l.gid}">${esc(l.game)}</a></div></div>
+      <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div></li>`).join("")}</ol>
+    <div class="pl-stats">
+      <div class="cell main"><span class="k">Cuota aprox.</span><span class="v">${pl.dec.toFixed(2)}</span></div>
+      <div class="cell"><span class="k">Prob. modelo</span><span class="v">${pct(pl.p)}</span></div>
+      <div class="cell"><span class="k">Cuota justa</span><span class="v">${pl.fair ? pl.fair.toFixed(2) : "—"}</span></div>
+      <div class="cell"><span class="k">${pl.units != null ? "Unidades" : "EV"}</span><span class="v">${pl.units != null ? `${pl.units >= 0 ? "+" : ""}${pl.units.toFixed(2)} u` : evPill(pl.ev, thr)}</span></div>
+    </div>
+    ${plAddBtn(pl)}
+  </article>`;
+}
+function dreamSection() {
+  const all = INDEX.dream || {}, pl = all[DAY], thr = INDEX.value_ev;
+  const done = Object.keys(all).sort().reverse().filter(d => all[d].units != null && all[d].result);
+  if (!pl && !done.length) return "";
+  const w = done.filter(d => all[d].result === "won").length, l = done.filter(d => all[d].result === "lost").length;
+  const u = done.reduce((s, d) => s + all[d].units, 0), uTxt = x => `${x >= 0 ? "+" : ""}${x.toFixed(2)} u`;
+  return `<section class="section" id="sonador">
+    <span class="eyebrow">Jornada ${esc(DAY)}</span>
+    <h2>Parlay soñador</h2>
+    <p class="lede">Una combinada larga por día, para soñar: las líneas que el modelo ve más probables de la jornada, juntas hasta una cuota total entre 50 y 200. Entre partidos las patas son independientes; del mismo partido van como mucho 2 y solo si en las simulaciones no se estorban. Es muy difícil de acertar: apuesta poco.</p>
+    ${pl ? `<div class="pl-list">${dreamCard(pl, thr)}</div>` : `<div class="panel"><div class="empty">Hoy ninguna combinación de patas con buena probabilidad llega a cuota 50.</div></div>`}
+    ${done.length ? `<h3>Seguimiento del soñador</h3>
+    <p class="muted">1 unidad por jornada. Acertados–fallados: ${w}–${l} · ${uTxt(u)}${w + l ? ` · ROI ${(100 * u / (w + l)) >= 0 ? "+" : ""}${(100 * u / (w + l)).toFixed(1)}%` : ""}</p>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th class="r">Patas acertadas</th><th class="r">Cuota</th><th class="r">Resultado</th><th class="r">Unidades</th></tr></thead><tbody>
+      ${done.map(d => { const x = all[d]; return `<tr><td class="head">${esc(d)}</td><td class="r num" data-label="Patas acertadas">${x.legs.filter(k => k.result === "won").length} de ${x.n}</td><td class="r num" data-label="Cuota">${x.dec.toFixed(2)}</td><td class="r" data-label="Resultado">${resPill(x.result)}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td></tr>`; }).join("")}
+    </tbody></table></div>` : ""}
+  </section>`;
 }
 
 function card(g) {
