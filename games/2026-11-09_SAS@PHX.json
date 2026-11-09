@@ -10,11 +10,11 @@
    "Vassell (ingle) en duda pero con líneas; Goodwin (gemelo) en duda",
    "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC"
   ],
-  "out": [],
-  "gtd": {
-   "Devin Vassell": 0.75,
-   "Jordan Goodwin": 0.4
-  },
+  "out": [
+   "Devin Vassell",
+   "Jordan Goodwin"
+  ],
+  "gtd": {},
   "reserves": {
    "SAS": [
     {
@@ -149,7 +149,7 @@
    "name": "Devin Booker",
    "pos": "SG",
    "starter": true,
-   "min": 34.4,
+   "min": 37.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -191,7 +191,7 @@
    "name": "Miles Bridges",
    "pos": "SF",
    "starter": true,
-   "min": 31.8,
+   "min": 34.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -233,7 +233,7 @@
    "name": "Dillon Brooks",
    "pos": "SF",
    "starter": true,
-   "min": 30.6,
+   "min": 33.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -275,7 +275,7 @@
    "name": "Jalen Green",
    "pos": "SG",
    "starter": true,
-   "min": 28.6,
+   "min": 31.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -317,7 +317,7 @@
    "name": "Collin Gillespie",
    "pos": "PG",
    "starter": false,
-   "min": 24.1,
+   "min": 26.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -358,7 +358,7 @@
    "name": "Oso Ighodaro",
    "pos": "PF",
    "starter": true,
-   "min": 21.3,
+   "min": 23.1,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -400,7 +400,7 @@
    "name": "Khaman Maluach",
    "pos": "C",
    "starter": false,
-   "min": 19.2,
+   "min": 20.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -438,51 +438,10 @@
   },
   {
    "team": "PHX",
-   "name": "Jordan Goodwin",
-   "pos": "PG",
-   "starter": false,
-   "min": 18.5,
-   "g_cur": 5,
-   "p_play": 0.4,
-   "cur": {
-    "min": 18.8,
-    "pts": 7.8,
-    "reb": 3.4,
-    "ast": 2.6,
-    "fg3m": 1.8,
-    "fgm": 3.0,
-    "fga": 6.8,
-    "fg3a": 4.8,
-    "stl": 1.6,
-    "blk": 0.0,
-    "tov": 0.6,
-    "pf": 2.0,
-    "ftm": 0.0,
-    "fta": 0.0
-   },
-   "prior": {
-    "min": 22.5,
-    "pts": 8.7,
-    "reb": 4.87,
-    "ast": 2.16,
-    "fg3m": 1.6,
-    "fgm": 3.27,
-    "fga": 7.93,
-    "fg3a": 4.31,
-    "stl": 1.51,
-    "blk": 0.2,
-    "tov": 0.97,
-    "pf": 1.9,
-    "ftm": 0.56,
-    "fta": 0.8
-   }
-  },
-  {
-   "team": "PHX",
    "name": "Luke Kennard",
    "pos": "SG",
    "starter": false,
-   "min": 15.8,
+   "min": 17.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -523,7 +482,7 @@
    "name": "Ryan Dunn",
    "pos": "SF",
    "starter": false,
-   "min": 15.7,
+   "min": 17.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -564,7 +523,7 @@
    "name": "Dylan Harper",
    "pos": "SG",
    "starter": true,
-   "min": 32.2,
+   "min": 36.9,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -606,7 +565,7 @@
    "name": "Victor Wembanyama",
    "pos": "C",
    "starter": true,
-   "min": 30.6,
+   "min": 35.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -645,52 +604,10 @@
   },
   {
    "team": "SAS",
-   "name": "Devin Vassell",
-   "pos": "SG",
-   "starter": true,
-   "min": 30.5,
-   "g_cur": 10,
-   "p_play": 0.75,
-   "cur": {
-    "min": 30.2,
-    "pts": 11.9,
-    "reb": 3.8,
-    "ast": 3.1,
-    "fg3m": 1.6,
-    "fgm": 3.9,
-    "fga": 9.6,
-    "fg3a": 4.5,
-    "stl": 1.7,
-    "blk": 0.3,
-    "tov": 1.0,
-    "pf": 1.9,
-    "ftm": 2.5,
-    "fta": 2.6
-   },
-   "prior": {
-    "min": 30.5,
-    "pts": 13.91,
-    "reb": 4.01,
-    "ast": 2.49,
-    "fg3m": 2.48,
-    "fgm": 4.93,
-    "fga": 11.27,
-    "fg3a": 6.45,
-    "stl": 0.85,
-    "blk": 0.37,
-    "tov": 0.9,
-    "pf": 1.58,
-    "ftm": 1.58,
-    "fta": 1.94
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "SAS",
    "name": "De'Aaron Fox",
    "pos": "PG",
    "starter": true,
-   "min": 29.8,
+   "min": 34.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -732,7 +649,7 @@
    "name": "Stephon Castle",
    "pos": "PG",
    "starter": true,
-   "min": 29.2,
+   "min": 33.4,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -774,7 +691,7 @@
    "name": "Julian Champagnie",
    "pos": "SF",
    "starter": false,
-   "min": 25.7,
+   "min": 29.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -814,8 +731,8 @@
    "team": "SAS",
    "name": "Keldon Johnson",
    "pos": "SF",
-   "starter": false,
-   "min": 23.6,
+   "starter": true,
+   "min": 27.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -849,14 +766,15 @@
     "pf": 1.98,
     "ftm": 1.88,
     "fta": 2.37
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "SAS",
    "name": "Luke Kornet",
    "pos": "C",
    "starter": false,
-   "min": 15.3,
+   "min": 17.6,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -897,7 +815,7 @@
    "name": "Harrison Barnes",
    "pos": "PF",
    "starter": false,
-   "min": 13.1,
+   "min": 15.0,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -938,7 +856,7 @@
    "name": "Carter Bryant",
    "pos": "PF",
    "starter": false,
-   "min": 10.0,
+   "min": 11.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -1101,23 +1019,6 @@
     1.5,
     -105,
     -112
-   ]
-  },
-  "Devin Vassell": {
-   "pts": [
-    11.5,
-    -102,
-    -130
-   ],
-   "reb": [
-    3.5,
-    -135,
-    116
-   ],
-   "fg3m": [
-    1.5,
-    -125,
-    110
    ]
   },
   "Victor Wembanyama": {

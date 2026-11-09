@@ -16,12 +16,10 @@
   ],
   "out": [
    "Asa Newell",
-   "Austin Reaves"
+   "Austin Reaves",
+   "Quentin Grimes"
   ],
-  "gtd": {
-   "Luka Dončić": 0.7,
-   "Quentin Grimes": 0.6
-  },
+  "gtd": {},
   "reserves": {
    "LAL": [
     {
@@ -643,7 +641,7 @@
    "starter": true,
    "min": 38.0,
    "g_cur": 9,
-   "p_play": 0.7,
+   "p_play": 1.0,
    "cur": {
     "min": 35.9,
     "pts": 40.11,
@@ -683,7 +681,7 @@
    "name": "Walker Kessler",
    "pos": "C",
    "starter": true,
-   "min": 34.1,
+   "min": 38.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -722,51 +720,10 @@
   },
   {
    "team": "LAL",
-   "name": "Quentin Grimes",
-   "pos": "SG",
-   "starter": false,
-   "min": 28.7,
-   "g_cur": 11,
-   "p_play": 0.6,
-   "cur": {
-    "min": 26.1,
-    "pts": 8.0,
-    "reb": 2.55,
-    "ast": 2.55,
-    "fg3m": 0.73,
-    "fgm": 2.55,
-    "fga": 5.91,
-    "fg3a": 3.0,
-    "stl": 0.91,
-    "blk": 0.18,
-    "tov": 1.36,
-    "pf": 1.64,
-    "ftm": 2.18,
-    "fta": 3.09
-   },
-   "prior": {
-    "min": 29.5,
-    "pts": 13.41,
-    "reb": 3.64,
-    "ast": 3.25,
-    "fg3m": 1.69,
-    "fgm": 4.53,
-    "fga": 10.07,
-    "fg3a": 5.07,
-    "stl": 0.85,
-    "blk": 0.37,
-    "tov": 1.77,
-    "pf": 2.07,
-    "ftm": 2.65,
-    "fta": 3.16
-   }
-  },
-  {
-   "team": "LAL",
    "name": "Matisse Thybulle",
    "pos": "SG",
    "starter": true,
-   "min": 27.0,
+   "min": 30.7,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -808,7 +765,7 @@
    "name": "Ziaire Williams",
    "pos": "SF",
    "starter": true,
-   "min": 26.5,
+   "min": 30.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -850,7 +807,7 @@
    "name": "Jake LaRavia",
    "pos": "PF",
    "starter": true,
-   "min": 26.5,
+   "min": 30.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -892,7 +849,7 @@
    "name": "Sandro Mamukelashvili",
    "pos": "PF",
    "starter": false,
-   "min": 25.0,
+   "min": 28.4,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -933,7 +890,7 @@
    "name": "Collin Sexton",
    "pos": "SG",
    "starter": false,
-   "min": 19.1,
+   "min": 21.6,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -974,7 +931,7 @@
    "name": "Jarred Vanderbilt",
    "pos": "PF",
    "starter": false,
-   "min": 13.4,
+   "min": 15.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
