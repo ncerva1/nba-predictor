@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T19:32+00:00",
+ "generated": "2026-11-09T20:29+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -1161,20 +1161,6 @@
     "legs": [
      {
       "kind": "prop",
-      "label": "Tari Eason Under 1.5 Triples",
-      "player": "Tari Eason",
-      "team": "HOU",
-      "line": 1.5,
-      "stat": "fg3m",
-      "side": "under",
-      "p": 0.662,
-      "dec": 1.562,
-      "ev": 0.034,
-      "gid": "2026-11-09-DEN-at-HOU",
-      "game": "DEN @ HOU"
-     },
-     {
-      "kind": "prop",
       "label": "Dyson Daniels Under 0.5 Triples",
       "player": "Dyson Daniels",
       "team": "ATL",
@@ -1186,15 +1172,29 @@
       "ev": 0.051,
       "gid": "2026-11-09-LAL-at-ATL",
       "game": "LAL @ ATL"
+     },
+     {
+      "kind": "prop",
+      "label": "Collin Gillespie 3+ Asistencias",
+      "player": "Collin Gillespie",
+      "team": "PHX",
+      "line": 2.5,
+      "stat": "ast",
+      "side": "over",
+      "p": 0.695,
+      "dec": 1.52,
+      "ev": 0.057,
+      "gid": "2026-11-09-SAS-at-PHX",
+      "game": "SAS @ PHX"
      }
     ],
     "n": 2,
-    "p": 0.463,
-    "p_indep": 0.463,
+    "p": 0.486,
+    "p_indep": 0.486,
     "corr": 1.0,
-    "dec": 2.34,
-    "fair": 2.16,
-    "ev": 0.086,
+    "dec": 2.28,
+    "fair": 2.06,
+    "ev": 0.109,
     "type": "cross",
     "result": null
    }
@@ -1219,47 +1219,31 @@
     },
     {
      "kind": "prop",
-     "label": "Ivica Zubac Under 9.5 Puntos",
-     "player": "Ivica Zubac",
-     "team": "IND",
-     "line": 9.5,
-     "stat": "pts",
-     "side": "under",
-     "p": 0.59,
-     "dec": 1.847,
-     "ev": 0.09,
-     "gid": "2026-11-09-IND-at-DAL",
-     "game": "IND @ DAL",
-     "corr": 1.01
+     "label": "Tari Eason 4+ Rebotes",
+     "player": "Tari Eason",
+     "team": "HOU",
+     "line": 3.5,
+     "stat": "reb",
+     "side": "over",
+     "p": 0.775,
+     "dec": 1.3,
+     "ev": 0.007,
+     "gid": "2026-11-09-DEN-at-HOU",
+     "game": "DEN @ HOU"
     },
     {
      "kind": "prop",
-     "label": "Aaron Nesmith Under 11.5 Puntos",
-     "player": "Aaron Nesmith",
-     "team": "IND",
-     "line": 11.5,
+     "label": "Cooper Flagg Under 25.5 Puntos",
+     "player": "Cooper Flagg",
+     "team": "DAL",
+     "line": 25.5,
      "stat": "pts",
      "side": "under",
-     "p": 0.558,
-     "dec": 1.98,
-     "ev": 0.105,
+     "p": 0.578,
+     "dec": 1.926,
+     "ev": 0.113,
      "gid": "2026-11-09-IND-at-DAL",
-     "game": "IND @ DAL",
-     "corr": 1.01
-    },
-    {
-     "kind": "prop",
-     "label": "Dyson Daniels Under 0.5 Triples",
-     "player": "Dyson Daniels",
-     "team": "ATL",
-     "line": 0.5,
-     "stat": "fg3m",
-     "side": "under",
-     "p": 0.7,
-     "dec": 1.5,
-     "ev": 0.051,
-     "gid": "2026-11-09-LAL-at-ATL",
-     "game": "LAL @ ATL"
+     "game": "IND @ DAL"
     },
     {
      "kind": "prop",
@@ -1293,28 +1277,58 @@
     },
     {
      "kind": "prop",
-     "label": "Kevin Huerter Under 1.5 Triples",
-     "player": "Kevin Huerter",
+     "label": "Collin Gillespie 3+ Asistencias",
+     "player": "Collin Gillespie",
+     "team": "PHX",
+     "line": 2.5,
+     "stat": "ast",
+     "side": "over",
+     "p": 0.695,
+     "dec": 1.52,
+     "ev": 0.057,
+     "gid": "2026-11-09-SAS-at-PHX",
+     "game": "SAS @ PHX",
+     "corr": 1.0
+    },
+    {
+     "kind": "prop",
+     "label": "Devin Booker Over 4.5 Asistencias",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 4.5,
+     "stat": "ast",
+     "side": "over",
+     "p": 0.577,
+     "dec": 1.87,
+     "ev": 0.079,
+     "gid": "2026-11-09-SAS-at-PHX",
+     "game": "SAS @ PHX",
+     "corr": 1.0
+    },
+    {
+     "kind": "prop",
+     "label": "Daniss Jenkins 1+ Triples",
+     "player": "Daniss Jenkins",
      "team": "DET",
-     "line": 1.5,
+     "line": 0.5,
      "stat": "fg3m",
-     "side": "under",
-     "p": 0.612,
-     "dec": 1.741,
-     "ev": 0.066,
+     "side": "over",
+     "p": 0.756,
+     "dec": 1.33,
+     "ev": 0.006,
      "gid": "2026-11-09-WAS-at-DET",
      "game": "WAS @ DET"
     }
    ],
-   "n": 7,
-   "p": 0.035,
-   "p_indep": 0.035,
-   "corr": 1.01,
-   "dec": 50.53,
-   "fair": 28.27,
-   "ev": 0.787,
+   "n": 8,
+   "p": 0.034,
+   "p_indep": 0.034,
+   "corr": 1.0,
+   "dec": 50.08,
+   "fair": 29.67,
+   "ev": 0.688,
    "type": "dream",
-   "games": 5,
+   "games": 6,
    "result": null,
    "units": null
   }
@@ -81135,6 +81149,20 @@
      "legs": [
       {
        "kind": "prop",
+       "label": "CJ McCollum 10+ Puntos",
+       "player": "CJ McCollum",
+       "team": "ATL",
+       "line": 9.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.719,
+       "dec": 1.41,
+       "ev": 0.014,
+       "gid": "2026-11-09-LAL-at-ATL",
+       "game": "LAL @ ATL"
+      },
+      {
+       "kind": "prop",
        "label": "Dyson Daniels Under 0.5 Triples",
        "player": "Dyson Daniels",
        "team": "ATL",
@@ -81144,6 +81172,46 @@
        "p": 0.7,
        "dec": 1.5,
        "ev": 0.051,
+       "gid": "2026-11-09-LAL-at-ATL",
+       "game": "LAL @ ATL"
+      }
+     ],
+     "n": 2,
+     "p": 0.503,
+     "p_indep": 0.503,
+     "corr": 1.0,
+     "dec": 2.11,
+     "fair": 1.99,
+     "ev": 0.064,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "CJ McCollum 8+ Puntos",
+       "player": "CJ McCollum",
+       "team": "ATL",
+       "line": 7.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.823,
+       "dec": 1.22,
+       "ev": 0.004,
+       "gid": "2026-11-09-LAL-at-ATL",
+       "game": "LAL @ ATL"
+      },
+      {
+       "kind": "prop",
+       "label": "Austin Reaves 20+ Puntos",
+       "player": "Austin Reaves",
+       "team": "LAL",
+       "line": 19.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.618,
+       "dec": 1.62,
+       "ev": 0.001,
        "gid": "2026-11-09-LAL-at-ATL",
        "game": "LAL @ ATL"
       },
@@ -81162,13 +81230,13 @@
        "game": "LAL @ ATL"
       }
      ],
-     "n": 2,
-     "p": 0.418,
-     "p_indep": 0.417,
+     "n": 3,
+     "p": 0.303,
+     "p_indep": 0.303,
      "corr": 1.0,
-     "dec": 2.54,
-     "fair": 2.39,
-     "ev": 0.059,
+     "dec": 3.34,
+     "fair": 3.3,
+     "ev": 0.011,
      "type": "sgp"
     }
    ],
@@ -84777,6 +84845,20 @@
      "legs": [
       {
        "kind": "prop",
+       "label": "Daniss Jenkins 1+ Triples",
+       "player": "Daniss Jenkins",
+       "team": "DET",
+       "line": 0.5,
+       "stat": "fg3m",
+       "side": "over",
+       "p": 0.756,
+       "dec": 1.33,
+       "ev": 0.006,
+       "gid": "2026-11-09-WAS-at-DET",
+       "game": "WAS @ DET"
+      },
+      {
+       "kind": "prop",
        "label": "Cade Cunningham Under 2.5 Triples",
        "player": "Cade Cunningham",
        "team": "DET",
@@ -84788,29 +84870,15 @@
        "ev": 0.049,
        "gid": "2026-11-09-WAS-at-DET",
        "game": "WAS @ DET"
-      },
-      {
-       "kind": "prop",
-       "label": "Kevin Huerter Over 2.5 Rebotes",
-       "player": "Kevin Huerter",
-       "team": "DET",
-       "line": 2.5,
-       "stat": "reb",
-       "side": "over",
-       "p": 0.611,
-       "dec": 1.645,
-       "ev": 0.005,
-       "gid": "2026-11-09-WAS-at-DET",
-       "game": "WAS @ DET"
       }
      ],
      "n": 2,
-     "p": 0.38,
-     "p_indep": 0.379,
+     "p": 0.469,
+     "p_indep": 0.469,
      "corr": 1.0,
-     "dec": 2.78,
-     "fair": 2.63,
-     "ev": 0.055,
+     "dec": 2.25,
+     "fair": 2.13,
+     "ev": 0.054,
      "type": "sgp"
     }
    ],
@@ -95522,40 +95590,40 @@
      "legs": [
       {
        "kind": "prop",
-       "label": "Tari Eason Under 1.5 Triples",
+       "label": "Tari Eason 4+ Rebotes",
        "player": "Tari Eason",
        "team": "HOU",
-       "line": 1.5,
-       "stat": "fg3m",
-       "side": "under",
-       "p": 0.662,
-       "dec": 1.562,
-       "ev": 0.034,
+       "line": 3.5,
+       "stat": "reb",
+       "side": "over",
+       "p": 0.775,
+       "dec": 1.3,
+       "ev": 0.007,
        "gid": "2026-11-09-DEN-at-HOU",
        "game": "DEN @ HOU"
       },
       {
        "kind": "prop",
-       "label": "Alperen Sengun Under 0.5 Triples",
-       "player": "Alperen Sengun",
+       "label": "Marcus Smart 6+ Puntos",
+       "player": "Marcus Smart",
        "team": "HOU",
-       "line": 0.5,
-       "stat": "fg3m",
-       "side": "under",
-       "p": 0.587,
-       "dec": 1.769,
-       "ev": 0.038,
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.617,
+       "dec": 1.63,
+       "ev": 0.006,
        "gid": "2026-11-09-DEN-at-HOU",
        "game": "DEN @ HOU"
       }
      ],
      "n": 2,
-     "p": 0.388,
-     "p_indep": 0.389,
+     "p": 0.479,
+     "p_indep": 0.478,
      "corr": 1.0,
-     "dec": 2.76,
-     "fair": 2.58,
-     "ev": 0.072,
+     "dec": 2.12,
+     "fair": 2.09,
+     "ev": 0.014,
      "type": "sgp"
     }
    ],
@@ -99634,6 +99702,74 @@
      "legs": [
       {
        "kind": "prop",
+       "label": "Devin Booker 4+ Asistencias",
+       "player": "Devin Booker",
+       "team": "PHX",
+       "line": 3.5,
+       "stat": "ast",
+       "side": "over",
+       "p": 0.8,
+       "dec": 1.26,
+       "ev": 0.008,
+       "gid": "2026-11-09-SAS-at-PHX",
+       "game": "SAS @ PHX"
+      },
+      {
+       "kind": "prop",
+       "label": "Collin Gillespie 8+ Puntos",
+       "player": "Collin Gillespie",
+       "team": "PHX",
+       "line": 7.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.604,
+       "dec": 1.68,
+       "ev": 0.015,
+       "gid": "2026-11-09-SAS-at-PHX",
+       "game": "SAS @ PHX"
+      }
+     ],
+     "n": 2,
+     "p": 0.48,
+     "p_indep": 0.483,
+     "corr": 0.99,
+     "dec": 2.12,
+     "fair": 2.08,
+     "ev": 0.017,
+     "type": "sgp"
+    },
+    {
+     "legs": [
+      {
+       "kind": "prop",
+       "label": "Julian Champagnie 4+ Rebotes",
+       "player": "Julian Champagnie",
+       "team": "SAS",
+       "line": 3.5,
+       "stat": "reb",
+       "side": "over",
+       "p": 0.78,
+       "dec": 1.29,
+       "ev": 0.006,
+       "gid": "2026-11-09-SAS-at-PHX",
+       "game": "SAS @ PHX"
+      },
+      {
+       "kind": "prop",
+       "label": "Collin Gillespie 3+ Asistencias",
+       "player": "Collin Gillespie",
+       "team": "PHX",
+       "line": 2.5,
+       "stat": "ast",
+       "side": "over",
+       "p": 0.695,
+       "dec": 1.52,
+       "ev": 0.057,
+       "gid": "2026-11-09-SAS-at-PHX",
+       "game": "SAS @ PHX"
+      },
+      {
+       "kind": "prop",
        "label": "Dylan Harper Under 5.5 Rebotes",
        "player": "Dylan Harper",
        "team": "SAS",
@@ -99645,29 +99781,15 @@
        "ev": 0.065,
        "gid": "2026-11-09-SAS-at-PHX",
        "game": "SAS @ PHX"
-      },
-      {
-       "kind": "prop",
-       "label": "Devin Booker Under 3.5 Rebotes",
-       "player": "Devin Booker",
-       "team": "PHX",
-       "line": 3.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.577,
-       "dec": 1.8,
-       "ev": 0.038,
-       "gid": "2026-11-09-SAS-at-PHX",
-       "game": "SAS @ PHX"
       }
      ],
-     "n": 2,
-     "p": 0.34,
-     "p_indep": 0.338,
+     "n": 3,
+     "p": 0.32,
+     "p_indep": 0.317,
      "corr": 1.01,
-     "dec": 3.28,
-     "fair": 2.94,
-     "ev": 0.114,
+     "dec": 3.57,
+     "fair": 3.12,
+     "ev": 0.143,
      "type": "sgp"
     }
    ],
@@ -103756,6 +103878,20 @@
      "legs": [
       {
        "kind": "prop",
+       "label": "De'Anthony Melton 8+ Puntos",
+       "player": "De'Anthony Melton",
+       "team": "GSW",
+       "line": 7.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.655,
+       "dec": 1.56,
+       "ev": 0.022,
+       "gid": "2026-11-09-NOP-at-GSW",
+       "game": "NOP @ GSW"
+      },
+      {
+       "kind": "prop",
        "label": "Dejounte Murray Under 1.5 Triples",
        "player": "Dejounte Murray",
        "team": "NOP",
@@ -103767,7 +103903,19 @@
        "ev": 0.031,
        "gid": "2026-11-09-NOP-at-GSW",
        "game": "NOP @ GSW"
-      },
+      }
+     ],
+     "n": 2,
+     "p": 0.413,
+     "p_indep": 0.413,
+     "corr": 1.0,
+     "dec": 2.55,
+     "fair": 2.42,
+     "ev": 0.055,
+     "type": "sgp"
+    },
+    {
+     "legs": [
       {
        "kind": "prop",
        "label": "Jeremiah Fears Under 1.5 Triples",
@@ -103781,19 +103929,7 @@
        "ev": 0.002,
        "gid": "2026-11-09-NOP-at-GSW",
        "game": "NOP @ GSW"
-      }
-     ],
-     "n": 2,
-     "p": 0.383,
-     "p_indep": 0.383,
-     "corr": 1.0,
-     "dec": 2.7,
-     "fair": 2.61,
-     "ev": 0.035,
-     "type": "sgp"
-    },
-    {
-     "legs": [
+      },
       {
        "kind": "prop",
        "label": "Dejounte Murray Under 5.5 Rebotes",
@@ -103821,7 +103957,19 @@
        "ev": 0.021,
        "gid": "2026-11-09-NOP-at-GSW",
        "game": "NOP @ GSW"
-      },
+      }
+     ],
+     "n": 3,
+     "p": 0.219,
+     "p_indep": 0.217,
+     "corr": 1.01,
+     "dec": 4.95,
+     "fair": 4.56,
+     "ev": 0.085,
+     "type": "sgp"
+    },
+    {
+     "legs": [
       {
        "kind": "prop",
        "label": "Trey Murphy III Under 2.5 Triples",
@@ -103835,19 +103983,7 @@
        "ev": 0.009,
        "gid": "2026-11-09-NOP-at-GSW",
        "game": "NOP @ GSW"
-      }
-     ],
-     "n": 3,
-     "p": 0.21,
-     "p_indep": 0.208,
-     "corr": 1.01,
-     "dec": 5.19,
-     "fair": 4.77,
-     "ev": 0.089,
-     "type": "sgp"
-    },
-    {
-     "legs": [
+      },
       {
        "kind": "prop",
        "label": "Stephen Curry Under 28.5 Puntos",
@@ -103889,29 +104025,15 @@
        "ev": 0.007,
        "gid": "2026-11-09-NOP-at-GSW",
        "game": "NOP @ GSW"
-      },
-      {
-       "kind": "prop",
-       "label": "Jeremiah Fears Under 14.5 Puntos",
-       "player": "Jeremiah Fears",
-       "team": "NOP",
-       "line": 14.5,
-       "stat": "pts",
-       "side": "under",
-       "p": 0.553,
-       "dec": 1.885,
-       "ev": 0.043,
-       "gid": "2026-11-09-NOP-at-GSW",
-       "game": "NOP @ GSW"
       }
      ],
      "n": 4,
-     "p": 0.114,
-     "p_indep": 0.107,
-     "corr": 1.06,
-     "dec": 10.93,
-     "fair": 8.81,
-     "ev": 0.241,
+     "p": 0.117,
+     "p_indep": 0.113,
+     "corr": 1.04,
+     "dec": 10.03,
+     "fair": 8.53,
+     "ev": 0.177,
      "type": "sgp"
     }
    ],

@@ -33,7 +33,7 @@ cambiar los picks.
 **Parlay soñador (9-nov):** una combinada larga por jornada con cuota total entre 50 y 200 (`index.json` →
 `dream` = `{jornada: parlay}`), armada por `build_site.py` con las patas más probables (player props con cuota a los
 dos lados, prob. ≥ 55%, EV ≥ 0, sin jugadores en duda ni rookies): como mucho 2 por partido y solo si en la muestra
-`sims/<id>.bin` no se estorban; se elige la de mayor prob. conjunta. Sale sola en la etapa `morning` (y se rehace en
+`sims/<id>.bin` no se estorban; como mucho la mitad de las patas al Under; se elige la de mayor prob. conjunta. Sale sola en la etapa `morning` (y se rehace en
 `pregame` si se re-simulan todos los partidos aún sin jugar); `results` la liquida con 1 unidad por jornada (si una
 pata se anula, cuenta la cuota de las demás). Para rehacerla sin re-simular nada:
 `python build_site.py ninguno --dream HOY`.
