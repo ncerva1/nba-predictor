@@ -9,18 +9,19 @@
   "notes": [
    "CHA sin Miller, Schröder, Knueppel ni G. Williams (CBS); Diabaté en duda con líneas",
    "CLE sin Tyson ni Merrill; Allen (rodilla) en duda con líneas",
-   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC",
+   "Capturas de @UnderdogNBA (Nicolas, 9-nov ~22:53 UTC): Moussa Diabaté (cuádriceps) OUT"
   ],
   "out": [
    "Jaylon Tyson",
    "Sam Merrill",
    "Brandon Miller",
    "Kon Knueppel",
-   "Dennis Schröder"
+   "Dennis Schröder",
+   "Moussa Diabaté"
   ],
   "gtd": {
-   "Jarrett Allen": 0.65,
-   "Moussa Diabaté": 0.65
+   "Jarrett Allen": 0.65
   },
   "reserves": {
    "CLE": [],
@@ -59,13 +60,13 @@
     "pace": 97.87
    },
    "adj": {
-    "o": 0.0,
-    "d": 0.0,
+    "o": -0.5,
+    "d": 1.0,
     "pace": 0.0
    },
    "context": {
     "b2b": false,
-    "roster_note": ""
+    "roster_note": "Moussa Diabaté OUT (cuádriceps)"
    }
   },
   "CLE": {
@@ -101,7 +102,7 @@
    "name": "Naz Reid",
    "pos": "C",
    "starter": true,
-   "min": 33.4,
+   "min": 38.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -136,48 +137,6 @@
     "ftm": 1.17,
     "fta": 1.6
    },
-   "slot": "PF"
-  },
-  {
-   "team": "CHA",
-   "name": "Moussa Diabaté",
-   "pos": "C",
-   "starter": true,
-   "min": 32.9,
-   "g_cur": 9,
-   "p_play": 0.65,
-   "cur": {
-    "min": 28.8,
-    "pts": 8.89,
-    "reb": 9.11,
-    "ast": 2.0,
-    "fg3m": 0.0,
-    "fgm": 3.67,
-    "fga": 5.78,
-    "fg3a": 0.0,
-    "stl": 1.56,
-    "blk": 0.89,
-    "tov": 1.78,
-    "pf": 2.78,
-    "ftm": 1.56,
-    "fta": 2.11
-   },
-   "prior": {
-    "min": 26.0,
-    "pts": 7.88,
-    "reb": 8.7,
-    "ast": 1.93,
-    "fg3m": 0.01,
-    "fgm": 3.14,
-    "fga": 4.97,
-    "fg3a": 0.03,
-    "stl": 0.77,
-    "blk": 0.99,
-    "tov": 1.0,
-    "pf": 2.41,
-    "ftm": 1.59,
-    "fta": 2.41
-   },
    "slot": "C"
   },
   {
@@ -185,7 +144,7 @@
    "name": "Grayson Allen",
    "pos": "SG",
    "starter": true,
-   "min": 29.7,
+   "min": 34.4,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -227,7 +186,7 @@
    "name": "Sion James",
    "pos": "SG",
    "starter": true,
-   "min": 28.4,
+   "min": 32.9,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -269,7 +228,7 @@
    "name": "Royce O'Neale",
    "pos": "SF",
    "starter": false,
-   "min": 21.5,
+   "min": 24.9,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -310,7 +269,7 @@
    "name": "Ryan Kalkbrenner",
    "pos": "C",
    "starter": false,
-   "min": 19.6,
+   "min": 22.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -351,7 +310,7 @@
    "name": "Coby White",
    "pos": "F",
    "starter": false,
-   "min": 19.1,
+   "min": 22.1,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -391,8 +350,8 @@
    "team": "CHA",
    "name": "Tidjane Salaün",
    "pos": "PF",
-   "starter": false,
-   "min": 17.0,
+   "starter": true,
+   "min": 19.7,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -426,14 +385,15 @@
     "pf": 1.46,
     "ftm": 0.7,
     "fta": 1.08
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "CHA",
    "name": "Hannes Steinbach",
    "pos": "PF",
    "starter": true,
-   "min": 14.3,
+   "min": 16.5,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -468,14 +428,14 @@
     "ftm": 0.0,
     "fta": 0.25
    },
-   "slot": "SF"
+   "slot": "PF"
   },
   {
    "team": "CHA",
    "name": "Christian Anderson",
    "pos": "PG",
    "starter": false,
-   "min": 13.7,
+   "min": 15.9,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -516,7 +476,7 @@
    "name": "Liam McNeeley",
    "pos": "SF",
    "starter": false,
-   "min": 10.5,
+   "min": 12.2,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1215,24 +1175,6 @@
     1.5,
     164,
     -150
-   ]
-  },
-  "Moussa Diabaté": {
-   "pts": [
-    8.5,
-    -122,
-    -134,
-    9.5
-   ],
-   "reb": [
-    9.5,
-    -115,
-    102
-   ],
-   "ast": [
-    2.5,
-    -125,
-    100
    ]
   },
   "Royce O'Neale": {

@@ -11,15 +11,16 @@
    "Dončić (espalda) fue baja el 8-nov; CBS 'no antes del 9-nov' y las casas le dan líneas de puntos, rebotes, asistencias y triples: en duda 0.7",
    "Grimes (dedo) y Landale (cadera) en duda (CBS)",
    "Covers sin cuotas por casa en spread/total: consenso ATL -1.5 / 237.5 (scoresandodds)",
-   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC",
+   "Capturas de @UnderdogNBA (Nicolas, 9-nov ~22:53 UTC): Austin Reaves (enfermedad) OUT; Jock Landale disponible"
   ],
   "out": [
-   "Asa Newell"
+   "Asa Newell",
+   "Austin Reaves"
   ],
   "gtd": {
    "Luka Dončić": 0.7,
-   "Quentin Grimes": 0.6,
-   "Jock Landale": 0.5
+   "Quentin Grimes": 0.6
   },
   "reserves": {
    "LAL": [
@@ -123,13 +124,13 @@
     "pace": 99.5
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -3.0,
+    "d": 1.5,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Austin Reaves OUT (enfermedad)"
    }
   }
  },
@@ -478,7 +479,7 @@
    "starter": false,
    "min": 13.7,
    "g_cur": 7,
-   "p_play": 0.5,
+   "p_play": 1.0,
    "cur": {
     "min": 15.3,
     "pts": 6.29,
@@ -637,52 +638,10 @@
   },
   {
    "team": "LAL",
-   "name": "Austin Reaves",
-   "pos": "SG",
-   "starter": true,
-   "min": 34.2,
-   "g_cur": 11,
-   "p_play": 1.0,
-   "cur": {
-    "min": 36.2,
-    "pts": 25.27,
-    "reb": 3.36,
-    "ast": 4.64,
-    "fg3m": 2.36,
-    "fgm": 8.27,
-    "fga": 16.27,
-    "fg3a": 5.73,
-    "stl": 1.0,
-    "blk": 0.36,
-    "tov": 3.64,
-    "pf": 3.0,
-    "ftm": 6.36,
-    "fta": 7.0
-   },
-   "prior": {
-    "min": 34.6,
-    "pts": 23.27,
-    "reb": 4.71,
-    "ast": 5.49,
-    "fg3m": 2.31,
-    "fgm": 7.31,
-    "fga": 14.94,
-    "fg3a": 6.43,
-    "stl": 1.1,
-    "blk": 0.39,
-    "tov": 2.96,
-    "pf": 2.16,
-    "ftm": 6.33,
-    "fta": 7.27
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "LAL",
    "name": "Luka Dončić",
    "pos": "PG",
    "starter": true,
-   "min": 33.9,
+   "min": 38.0,
    "g_cur": 9,
    "p_play": 0.7,
    "cur": {
@@ -724,7 +683,7 @@
    "name": "Walker Kessler",
    "pos": "C",
    "starter": true,
-   "min": 29.3,
+   "min": 34.1,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -766,7 +725,7 @@
    "name": "Quentin Grimes",
    "pos": "SG",
    "starter": false,
-   "min": 24.7,
+   "min": 28.7,
    "g_cur": 11,
    "p_play": 0.6,
    "cur": {
@@ -807,7 +766,7 @@
    "name": "Matisse Thybulle",
    "pos": "SG",
    "starter": true,
-   "min": 23.1,
+   "min": 27.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -842,14 +801,14 @@
     "ftm": 0.7,
     "fta": 0.83
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "LAL",
    "name": "Ziaire Williams",
    "pos": "SF",
    "starter": true,
-   "min": 22.8,
+   "min": 26.5,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -884,14 +843,14 @@
     "ftm": 2.12,
     "fta": 2.5
    },
-   "slot": "PF"
+   "slot": "SF"
   },
   {
    "team": "LAL",
    "name": "Jake LaRavia",
    "pos": "PF",
-   "starter": false,
-   "min": 22.8,
+   "starter": true,
+   "min": 26.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -925,14 +884,15 @@
     "pf": 2.39,
     "ftm": 1.41,
     "fta": 1.85
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "LAL",
    "name": "Sandro Mamukelashvili",
    "pos": "PF",
    "starter": false,
-   "min": 21.4,
+   "min": 25.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -973,7 +933,7 @@
    "name": "Collin Sexton",
    "pos": "SG",
    "starter": false,
-   "min": 16.3,
+   "min": 19.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -1014,7 +974,7 @@
    "name": "Jarred Vanderbilt",
    "pos": "PF",
    "starter": false,
-   "min": 11.5,
+   "min": 13.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -1080,29 +1040,6 @@
     4.5,
     102,
     -115
-   ]
-  },
-  "Austin Reaves": {
-   "pts": [
-    21.5,
-    -110,
-    -105
-   ],
-   "reb": [
-    3.5,
-    -115,
-    110
-   ],
-   "ast": [
-    4.5,
-    -130,
-    117
-   ],
-   "fg3m": [
-    1.5,
-    -180,
-    -190,
-    2.5
    ]
   },
   "Jalen Johnson": {
@@ -1461,190 +1398,6 @@
     [
      4.5,
      -185.2,
-     null
-    ]
-   ]
-  },
-  "Austin Reaves": {
-   "pts": [
-    [
-     13.5,
-     -769.2,
-     null
-    ],
-    [
-     15.5,
-     -416.7,
-     null
-    ],
-    [
-     17.5,
-     -250.0,
-     null
-    ],
-    [
-     19.5,
-     -161.3,
-     null
-    ],
-    [
-     21.5,
-     -105.3,
-     null
-    ],
-    [
-     23.5,
-     140.0,
-     null
-    ]
-   ],
-   "reb": [
-    [
-     1.5,
-     -909.1,
-     null
-    ],
-    [
-     2.5,
-     -294.1,
-     null
-    ],
-    [
-     3.5,
-     -123.5,
-     null
-    ],
-    [
-     4.5,
-     165.0,
-     null
-    ]
-   ],
-   "ast": [
-    [
-     2.5,
-     -833.3,
-     null
-    ],
-    [
-     3.5,
-     -312.5,
-     null
-    ],
-    [
-     4.5,
-     -142.9,
-     null
-    ],
-    [
-     5.5,
-     138.0,
-     null
-    ]
-   ],
-   "fg3m": [
-    [
-     0.5,
-     -833.3,
-     null
-    ],
-    [
-     1.5,
-     -178.6,
-     null
-    ],
-    [
-     2.5,
-     160.0,
-     null
-    ]
-   ],
-   "stl": [
-    [
-     0.5,
-     -222.2,
-     null
-    ],
-    [
-     1.5,
-     200.0,
-     null
-    ]
-   ],
-   "blk": [
-    [
-     0.5,
-     123.0,
-     null
-    ]
-   ],
-   "stocks": [
-    [
-     0.5,
-     -476.2,
-     null
-    ],
-    [
-     1.5,
-     -105.3,
-     null
-    ]
-   ],
-   "pra": [
-    [
-     24.5,
-     -333.3,
-     null
-    ],
-    [
-     29.5,
-     -125.0,
-     null
-    ],
-    [
-     34.5,
-     190.0,
-     null
-    ]
-   ],
-   "pr": [
-    [
-     19.5,
-     -370.4,
-     null
-    ],
-    [
-     24.5,
-     -125.0,
-     null
-    ],
-    [
-     29.5,
-     200.0,
-     null
-    ]
-   ],
-   "pa": [
-    [
-     19.5,
-     -500.0,
-     null
-    ],
-    [
-     24.5,
-     -158.7,
-     null
-    ],
-    [
-     29.5,
-     163.0,
-     null
-    ]
-   ],
-   "ra": [
-    [
-     9.5,
-     135.0,
      null
     ]
    ]
