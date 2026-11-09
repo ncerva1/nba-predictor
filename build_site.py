@@ -98,8 +98,8 @@ def bet(kind, label, p, odds, line=None, player=None, team=None, assumed=False, 
 
 def pair_key(b):
     """Selecciones opuestas de una misma línea (las dos caras de la apuesta)."""
-    if b["kind"] == "prop":
-        return ("prop", b["player"], b.get("stat"), b["line"])
+    if b["kind"] == "prop":  # las líneas alternativas solo se emparejan entre ellas (no cambian las de la línea principal)
+        return ("alt" if b.get("alt") else "prop", b["player"], b.get("stat"), b["line"])
     if b["kind"] == "total":
         return ("total", b["line"])
     if b["kind"] == "spread":
@@ -509,6 +509,7 @@ def add_hit_rates(cfg, bets):
 PARLAY_LEG_P = 0.55     # prob. mínima de cada pata
 PARLAY_MIN_DEC = 2.0    # cuota combinada mínima para que valga la pena como parlay
 PARLAY_POOL = 14        # patas candidatas por partido (las más probables)
+ALT_LEG_MIN_DEC = 1.2   # líneas alternativas / escalonadas con cuota menor no entran en parlays (casi no suman y la casa cobra mucho margen)
 PARLAY_P_PLAY = 0.9     # jugadores en duda (prob. de jugar menor) no entran en parlays
 LEG_KEYS = ("kind", "label", "player", "team", "line", "stat", "side", "p", "dec", "ev")
 
@@ -618,7 +619,7 @@ def best_parlays(cands, joint, distinct, exclusive=False, sizes=(2, 3, 4)):
 def sgp(r, g, s):
     """Parlays del mismo partido. Devuelve (parlays, patas candidatas para los parlays entre partidos)."""
     flags = player_flags(g["date"], os.path.join(HERE, "games", f"{g['date']}_{g['away']}@{g['home']}.json"))
-    pool = [b for b in r["bets"] + r.get("alt_bets", []) if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and b.get("p_mkt") is not None and
+    pool = [b for b in r["bets"] + r.get("alt_bets", []) if (not b.get("alt") or b["dec"] >= ALT_LEG_MIN_DEC) and b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and b.get("p_mkt") is not None and
             b["kind"] == "prop" and b.get("stat") and s["players"][b["player"]]["p_play"] >= PARLAY_P_PLAY
             and (flags.get(b["player"]) or {}).get("t") not in NO_UNDER_FLAGS]  # 1.5: solo props, sin rookies
     pool = sorted(pool, key=lambda b: -b["p"])[:PARLAY_POOL]
@@ -662,6 +663,7 @@ DREAM_LEG_P = 0.55       # prob. mínima de cada pata (mezclada con la casa)
 DREAM_POOL = 10          # patas candidatas por partido (las más probables)
 DREAM_PER_GAME = 2
 DREAM_MAX_LEGS = 10
+DREAM_MAX_UNDER = 0.5    # como mucho la mitad de las patas al Under (pedido de Nicolas, 9-nov: que no salga todo Under)
 DREAM_MIN_CORR = 0.97    # pares del mismo partido: conjunta / producto >= esto (no se estorban)
 DREAM_STATS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
                "stocks": ("stl", "blk")}
@@ -699,7 +701,7 @@ def dream_parlay(rs):
     for r in rs:
         g = r["game"]
         pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
-        pool = [b for b in r["bets"] + r.get("alt_bets", []) if b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
+        pool = [b for b in r["bets"] + r.get("alt_bets", []) if (not b.get("alt") or b["dec"] >= ALT_LEG_MIN_DEC) and b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
                 and b["p"] >= DREAM_LEG_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
                 and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
         pool = sorted(pool, key=lambda b: -b["p"])[:DREAM_POOL]
@@ -727,20 +729,21 @@ def dream_parlay(rs):
         opts.append(o)
     # programación dinámica: estado (n.º de patas, cuota en pasos de 1% en log) → mejor (log p, patas)
     top = math.log(DREAM_MAX)
-    best = {(0, 0): (0.0, ())}
+    best = {(0, 0, 0): (0.0, ())}  # (patas, Unders, cuota) → mejor (log p, patas)
     for o in opts:
         nxt = dict(best)
-        for (n, d), (lp, ls) in best.items():
+        for (n, u, d), (lp, ls) in best.items():
             for olp, old, ol in o:
-                n2 = n + len(ol)
+                n2, u2 = n + len(ol), u + sum(l.get("side") == "under" for l in ol)
                 ld = d / 100 + old
                 if n2 > DREAM_MAX_LEGS or ld > top + 1e-9:
                     continue
-                k = (n2, round(ld * 100))
+                k = (n2, u2, round(ld * 100))
                 if k not in nxt or nxt[k][0] < lp + olp:
                     nxt[k] = (lp + olp, ls + ol)
         best = nxt
-    ok = [(lp, ls) for (n, d), (lp, ls) in best.items() if ls and DREAM_MIN <= float(np.prod([l["dec"] for l in ls])) <= DREAM_MAX]
+    ok = [(lp, ls) for (n, u, d), (lp, ls) in best.items() if ls and u <= DREAM_MAX_UNDER * n
+          and DREAM_MIN <= float(np.prod([l["dec"] for l in ls])) <= DREAM_MAX]
     if not ok:
         return None
     lp, legs = max(ok, key=lambda x: x[0])
