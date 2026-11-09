@@ -38,6 +38,15 @@ dos lados, prob. ≥ 55%, EV ≥ 0, sin jugadores en duda ni rookies): como much
 pata se anula, cuenta la cuota de las demás). Para rehacerla sin re-simular nada:
 `python build_site.py ninguno --dream HOY`.
 
+**Líneas escalonadas "X+" (9-nov):** cada partido trae `ladders` = `{jugador: {team, stat: [[k, prob, cuota mínima,
+(cuota casa, EV)], ...]}}` (k+ = Over k−0.5; prob. corrida en logit igual que la mezcla con la casa movió la línea
+principal) y la web las muestra en "Líneas escalonadas (X+)". Sale sola en `morning`/`pregame`; para una jornada ya
+publicada sin cambiar picks: `python build_site.py <fecha> --ladder-only`. Las cuotas reales de esas líneas solo
+llegan de Rushbet/BetPlay (`odds/fetch_co.py` en el PC): `merge_props` escribe `alt_lines` en el slate
+(`{jugador: {stat: [[línea, over, under|null], ...]}}`), `build_slate.py` las pasa al partido y `build_site.py` las
+convierte en `alt_bets` (las de un solo lado se quitan el margen con el de la línea principal). Nunca son pick con
+valor: solo entran en los SGP y en el soñador.
+
 **Historial de jugadores (% Últ. 10 / H2H):** `gamelogs/nba/leaguegamelog_P_<temporada>.csv` son los game logs
 oficiales de nba.com (todas las filas de jugador de temporada regular, con FGM/FGA, 3PM/3PA, FTM/FTA). Desde la nube
 stats.nba.com no responde: se bajan desde el PC de Nicolas con Claude in Chrome (fetch a `stats.nba.com/stats/leaguegamelog`

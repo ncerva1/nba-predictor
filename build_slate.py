@@ -175,6 +175,7 @@ def build_game(slate, g, R, cur, prior):
         "matchup": {h: {}, a: {}}, "players": players,
         "market": {"source": slate["sources"]["schedule_odds"], **g["market"]},
         "prop_lines": {k: v for k, v in slate.get("prop_lines", {}).items() if k in names},
+        "alt_lines": {k: v for k, v in slate.get("alt_lines", {}).items() if k in names},
     }
 
 

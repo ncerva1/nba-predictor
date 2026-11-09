@@ -113,6 +113,10 @@ def market_blend(bets, flags=None, w=MKT_W):
     groups = {}
     for b in bets:
         groups.setdefault(pair_key(b), []).append(b)
+    ovr = {}  # margen de la casa en la línea principal de cada jugador y estadística (para líneas "X+" de un solo lado)
+    for k, g in groups.items():
+        if k[0] == "prop" and len(g) == 2 and not any(x.get("alt") or x.get("odds_assumed") for x in g):
+            ovr[(g[0]["player"], g[0].get("stat"))] = 1 / g[0]["dec"] + 1 / g[1]["dec"]
     for b in bets:
         pm = b.get("p_model", b["p"])
         g = groups[pair_key(b)]
@@ -120,6 +124,8 @@ def market_blend(bets, flags=None, w=MKT_W):
         if len(g) == 2 and not any(x.get("odds_assumed") for x in g):
             i0, i1 = 1 / g[0]["dec"], 1 / g[1]["dec"]
             mkt = (1 / b["dec"]) / (i0 + i1)
+        elif len(g) == 1 and b.get("alt") and (b["player"], b.get("stat")) in ovr:
+            mkt = min((1 / b["dec"]) / ovr[(b["player"], b.get("stat"))], 0.99)
         p = pm if mkt is None else mkt + w * (pm - mkt)
         ev = p * b["dec"] - 1
         shift = p - pm
@@ -135,6 +141,8 @@ def market_blend(bets, flags=None, w=MKT_W):
             why = "sin cuota de la casa para el otro lado"
         elif b["kind"] != "prop":
             why = "picks de equipo en pausa"
+        elif b.get("alt"):
+            why = "línea alternativa: solo para parlays y el soñador"
         elif b.get("side") == "under" and (flags.get(b["player"]) or {}).get("t") in NO_UNDER_FLAGS:
             why = "sin Unders de rookies ni de quien no jugó la temporada pasada"
         b["cand"] = bool(ev >= VALUE_EV and why is None)
@@ -291,6 +299,28 @@ def prop_bets(cfg, s):
                 pu, push = (x < lu).mean(), (x == lu).mean()
                 out.append(dict(bet("prop", f"{name} {lab}: No" if yn else f"{name} Under {lu:g} {lab}", pu / (1 - push),
                                     o_under, lu, name, d["team"]), stat=st, side="under"))
+    for name, stats in cfg.get("alt_lines", {}).items():  # líneas alternativas / escalonadas (Rushbet, BetPlay)
+        if name not in s["players"]:
+            continue
+        d = s["players"][name]
+        for st, lines in stats.items():
+            x = d["draws"].get(st)
+            main = (cfg.get("prop_lines", {}).get(name) or {}).get(st)
+            if x is None or st in BINARY:
+                continue
+            x = x[d["draws"]["min"] > 0]
+            lab = STAT_LABEL.get(st, st)
+            for ln, o_over, o_under in lines:
+                if main and ln == main[0]:
+                    continue
+                if o_over is not None:
+                    po, push = (x > ln).mean(), (x == ln).mean()
+                    txt = f"{name} Over {ln:g} {lab}" if o_under is not None else f"{name} {ln + 0.5:g}+ {lab}"
+                    out.append(dict(bet("prop", txt, po / (1 - push), o_over, ln, name, d["team"]), stat=st, side="over", alt=True))
+                if o_under is not None:
+                    pu, push = (x < ln).mean(), (x == ln).mean()
+                    out.append(dict(bet("prop", f"{name} Under {ln:g} {lab}", pu / (1 - push), o_under, ln, name, d["team"]),
+                                    stat=st, side="under", alt=True))
     return out
 
 
@@ -483,6 +513,55 @@ PARLAY_P_PLAY = 0.9     # jugadores en duda (prob. de jugar menor) no entran en 
 LEG_KEYS = ("kind", "label", "player", "team", "line", "stat", "side", "p", "dec", "ev")
 
 
+# Líneas escalonadas "X+" (pedido de Nicolas, 9-nov): por jugador y estadística, la probabilidad de llegar a cada
+# umbral entero (25+ = Over 24.5) con la cuota mínima para que tenga valor. Si la casa tiene la línea principal con
+# cuota a los dos lados, toda la escalera se corre en escala logit lo mismo que la mezcla con la casa movió esa línea
+# (así hereda el ajuste del 1.5). Si Rushbet / BetPlay publican ese umbral (alt_lines), va su cuota y su EV.
+LADDER_STATS = ("pts", "reb", "ast", "fg3m", "stl", "blk", "pra", "ra")
+LADDER_P = (0.5, 0.97)
+LADDER_MIN = 15  # minutos proyectados mínimos
+
+
+def ladders(cfg, s, bets):
+    lg = lambda p: np.log(p / (1 - p))
+    off, alt = {}, {}
+    for b in bets:
+        if b["kind"] != "prop" or b.get("side") != "over":
+            continue
+        if b.get("alt"):
+            alt[(b["player"], b["stat"], b["line"])] = b
+        elif b.get("p_mkt") is not None and 0 < b["p_model"] < 1 and 0 < b["p"] < 1:
+            off[(b["player"], b["stat"])] = lg(b["p"]) - lg(b["p_model"])
+    out = {}
+    for p in cfg["players"]:
+        d = s["players"].get(p["name"])
+        if not d or p["min"] < LADDER_MIN or d["p_play"] < PARLAY_P_PLAY:
+            continue
+        on = d["draws"]["min"] > 0
+        for st in LADDER_STATS:
+            x = d["draws"].get(st)
+            if x is None:
+                continue
+            x, o, rungs = np.asarray(x)[on], off.get((p["name"], st), 0.0), []
+            for k in range(1, int(x.max()) + 1):
+                pm = float((x >= k).mean())
+                if not 0 < pm < 1:
+                    continue
+                q = float(1 / (1 + np.exp(-(lg(pm) + o))))
+                if q < LADDER_P[0]:
+                    break
+                if q > LADDER_P[1]:
+                    continue
+                rung = [k, round(q, 3), round((1 + VALUE_EV) / q, 2)]
+                ab = alt.get((p["name"], st, k - 0.5))
+                if ab:
+                    rung += [ab["dec"], ab["ev"]]
+                rungs.append(rung)
+            if rungs:
+                out.setdefault(p["name"], {"team": d["team"]})[st] = rungs
+    return out
+
+
 def leg_hits(b, g, s):
     """(acierta, válida) por simulación. Push cuenta como acierto (no hace perder); una prop solo es
     válida en las simulaciones en que el jugador juega, igual que la prob. de la apuesta suelta."""
@@ -539,7 +618,7 @@ def best_parlays(cands, joint, distinct, exclusive=False, sizes=(2, 3, 4)):
 def sgp(r, g, s):
     """Parlays del mismo partido. Devuelve (parlays, patas candidatas para los parlays entre partidos)."""
     flags = player_flags(g["date"], os.path.join(HERE, "games", f"{g['date']}_{g['away']}@{g['home']}.json"))
-    pool = [b for b in r["bets"] if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and b.get("p_mkt") is not None and
+    pool = [b for b in r["bets"] + r.get("alt_bets", []) if b["p"] >= PARLAY_LEG_P and b["ev"] >= 0 and b.get("p_mkt") is not None and
             b["kind"] == "prop" and b.get("stat") and s["players"][b["player"]]["p_play"] >= PARLAY_P_PLAY
             and (flags.get(b["player"]) or {}).get("t") not in NO_UNDER_FLAGS]  # 1.5: solo props, sin rookies
     pool = sorted(pool, key=lambda b: -b["p"])[:PARLAY_POOL]
@@ -620,7 +699,7 @@ def dream_parlay(rs):
     for r in rs:
         g = r["game"]
         pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
-        pool = [b for b in r["bets"] if b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
+        pool = [b for b in r["bets"] + r.get("alt_bets", []) if b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
                 and b["p"] >= DREAM_LEG_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
                 and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
         pool = sorted(pool, key=lambda b: -b["p"])[:DREAM_POOL]
@@ -935,7 +1014,7 @@ def apply_flags(r, flags):
         p.pop("flag", None)
         if p["name"] in flags:
             p["flag"] = flags[p["name"]]
-    for b in r["bets"] + [l for pl in r.get("parlays", []) for l in pl["legs"]]:
+    for b in r["bets"] + r.get("alt_bets", []) + [l for pl in r.get("parlays", []) for l in pl["legs"]]:
         b.pop("flag", None)
         if b.get("player") in flags:
             b["flag"] = flags[b["player"]]
@@ -1017,6 +1096,9 @@ def run_game(path, n):
     add_hit_rates(cfg, r["bets"] + r["model_picks"])
     r["rotation"] = rotation_view(cfg, summ)
     r["without"] = without_view(cfg, s, n)  # "Sin un jugador": compañeros con / sin cada titular
+    r["alt_bets"] = [b for b in r["bets"] if b.get("alt")]
+    r["bets"] = [b for b in r["bets"] if not b.get("alt")]
+    r["ladders"] = ladders(cfg, s, r["bets"] + r["alt_bets"])
     r["parlays"], r["_legs"] = sgp(r, g, s)
     return r
 
@@ -1127,6 +1209,11 @@ def main():
                 if "without" not in r:  # partidos publicados antes de "Sin un jugador": misma simulación, sin cada uno
                     cfg = load_game(p, r["used_db"])
                     r["without"] = without_view(cfg, simulate(cfg, r["sims"]), r["sims"])
+            elif "--ladder-only" in argv and os.path.exists(out_path):
+                # solo la escalera X+ de un partido ya publicado sin jugar (misma semilla y simulaciones: no cambia picks)
+                r = json.load(open(out_path))
+                cfg = load_game(p, r["used_db"])
+                r["ladders"] = ladders(cfg, simulate(cfg, r["sims"]), r["bets"] + r.get("alt_bets", []))
             elif "--hr-only" in argv and os.path.exists(out_path):
                 # solo recalcula los % de cumplimiento (últ. 10, H2H, DvP) de un partido ya publicado sin jugar,
                 # p. ej. tras bajar historiales nuevos a gamelogs/: no re-simula ni cambia ningún pick
@@ -1147,7 +1234,7 @@ def main():
             legs_by_date.setdefault(date, []).append(r.pop("_legs"))
         json.dump(r, open(out_path, "w"), ensure_ascii=False, separators=(",", ":"))
         keep[r["id"]] = index_entry(r)
-        if "result" not in r and "--hr-only" not in argv:
+        if "result" not in r and "--hr-only" not in argv and "--ladder-only" not in argv:
             sim_dates.add(date)
         g, sm = r["game"], r["summary"]
         print(f"OK {r['id']}: {g['away']} {sm['proj'][g['away']]} - {g['home']} {sm['proj'][g['home']]}, "
