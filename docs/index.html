@@ -387,6 +387,13 @@ tr.detail td { background: var(--bg) }
 @media (max-width: 440px) {
   .tab { padding: 9px 9px 11px; gap: 5px; font-size: 13px; white-space: nowrap } .tab.cup-tab { font-size: 16px } .tab.cup-tab svg { width: 14px; height: 14px }
 }
+.take-w { margin: 6px 0 0 8px; font-size: 13px; padding: 5px 14px 5px 10px }
+.cb-take .take-w { margin: 0 0 8px }
+.mine-tag { display: inline-block; margin-top: 4px; font: 500 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 7px }
+.mine-tag.rec { color: var(--good); border-color: var(--good) }
+.mine-legs { margin: 4px 0 0; padding-left: 18px; font-size: 13px; display: grid; gap: 3px }
+.mine-list .mine-legs li { display: list-item; border: 0; padding: 0 }
+.mine-legs .kind { color: var(--muted); text-decoration: none }
 .mine-act { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
 .mine-act .btn { font-size: 13px; padding: 6px 16px }
 .mine-act label.btn { display: inline-block }
@@ -642,6 +649,7 @@ body:has(dialog.guide[open]) { overflow: hidden }
       <div class="pl-stats" id="cb-stats"></div>
       <label class="cb-stake">Apuesta <input id="cb-stake" type="number" min="0" step="1000" inputmode="decimal" placeholder="ej. 10000"></label>
       <p class="cb-pay muted" id="cb-pay"></p>
+      <div class="cb-take" id="cb-take"></div>
       <div class="cb-act"><button type="button" class="btn ghost" id="cb-clear">Vaciar</button><span class="muted">Cuota aprox. = producto de las cuotas de cada pata; compárala con la que te dé tu casa.</span></div>
     </div>
   </section>
@@ -777,7 +785,7 @@ function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
   return bets.map((b, i) => { const k = regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game); return `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${b.value ? takeBtn(k) : ""}</div>${addBtn(k)}</div></td>
+    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${takeBtn(k)}</div>${addBtn(k)}</div></td>
     <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
@@ -1861,7 +1869,7 @@ function bindPickForm(P, opts) {
       }
     }
     o.innerHTML = html;
-    add.innerHTML = legs.length ? legs.map(k => addBtn(k, true)).join("") : `<span class="muted">Escribe la cuota de tu casa para poder agregarlo a tu combinada.</span>`;
+    add.innerHTML = legs.length ? legs.map(k => addBtn(k, true) + takeBtn(k, true)).join("") : `<span class="muted">Escribe la cuota de tu casa para poder agregarlo a tu combinada.</span>`;
   };
   if (opts.d) draw(); else load(st.gid);
 }
@@ -2093,7 +2101,7 @@ document.addEventListener("click", e => {
 // navegador (localStorage "nbap-mine"), se liquidan con legResult a 1 unidad y la cuota publicada, y se pueden
 // exportar/importar en un archivo. Un pick solo se marca o desmarca antes del inicio de su partido.
 let MINE = (() => { try { const x = JSON.parse(ls("nbap-mine") || "[]"); return Array.isArray(x) ? x.filter(okMine) : []; } catch (e) { return []; } })();
-function okMine(l) { return !!(l && typeof l.k === "string" && typeof l.gid === "string" && typeof l.label === "string" && /^\d{4}-\d{2}-\d{2}$/.test(l.date || "") && +l.dec > 1); }
+function okMine(l) { return !!(l && typeof l.k === "string" && typeof l.gid === "string" && typeof l.label === "string" && /^\d{4}-\d{2}-\d{2}$/.test(l.date || "") && +l.dec > 1 && (!l.combo || (Array.isArray(l.legs) && l.legs.length > 1 && l.legs.every(x => x && x.k && x.gid && x.label && +x.dec > 1)))); }
 const isMine = k => MINE.some(l => l.k === k);
 function tipMs(g) {   // hora de inicio (tip_et, hora de Nueva York) en milisegundos UTC
   if (!g || !/^\d{1,2}:\d{2}$/.test(g.tip_et || "")) return null;
@@ -2105,17 +2113,43 @@ function tipMs(g) {   // hora de inicio (tip_et, hora de Nueva York) en milisegu
   } catch (e) { return guess + 5 * 3600e3; }
 }
 const gameLocked = g => !g || !!g.result || (tipMs(g) ?? Infinity) <= Date.now();
-function takeBtn(k) {
+const takeTxt = (on, tl) => `${on ? "Lo tomé" : "Lo tomo"}${tl ? ": " + tl : ""}`;
+function takeBtn(k, wide) {
   const l = LEGREG[k], g = l && INDEX.games.find(x => x.id === l.gid), on = isMine(k), lock = gameLocked(g);
   if (!l || (lock && !on)) return "";
-  return `<button type="button" class="take" data-take="${esc(k)}" aria-pressed="${on}"${lock ? ` disabled title="El partido ya empezó"` : ` title="${on ? "Quitar de mis picks" : "Agregar a mis picks"}"`}><span class="bx" aria-hidden="true"></span>${on ? "Lo tomé" : "Lo tomo"}</button>`;
+  const tl = wide ? (l.kind === "ml" || l.kind === "spread" ? l.label : /^Over | Over /.test(l.label) ? "Over" : "Under") : "";
+  return `<button type="button" class="take${wide ? " take-w" : ""}" data-take="${esc(k)}" data-tl="${esc(tl)}" aria-pressed="${on}"${lock ? ` disabled title="El partido ya empezó"` : ` title="${on ? "Quitar de mis picks" : "Agregar a mis picks"}"`}><span class="bx" aria-hidden="true"></span>${esc(takeTxt(on, tl))}</button>`;
 }
+// la combinada entera como una sola apuesta del historial (clave = sus patas)
+const comboKey = () => "combo|" + MYC.map(l => l.k).sort().join("||");
+const legGame = l => INDEX.games.find(x => x.id === l.gid);
+function toggleComboMine() {
+  const k = comboKey(), i = MINE.findIndex(l => l.k === k), legs = i >= 0 ? MINE[i].legs : MYC;
+  if (legs.some(l => gameLocked(legGame(l)))) { alert("Alguna pata ya empezó: la combinada solo se guarda o se quita antes del inicio de todos sus partidos."); return; }
+  if (i >= 0) MINE.splice(i, 1);
+  else {
+    const c = comboCalc(), ds = legs.map(l => legGame(l).date).sort();
+    MINE.push({ k, combo: true, gid: legs[0].gid, game: `Combinada de ${legs.length} patas`, label: legs.map(l => l.label).join(" + "), kind: "combo", p: c.p, dec: +c.dec.toFixed(2),
+      legs: legs.map(({ k, gid, game, label, kind, player, stat, line, team, side, p, dec }) => ({ k, gid, game, label, kind, player, stat, line, team, side, p, dec })),
+      src: "combo", date: ds[ds.length - 1], model: INDEX.model || "", at: Date.now() });
+  }
+  mineChanged(); drawCombo();
+}
+// resultado y cuota efectiva de una entrada (en una combinada las patas nulas no cuentan en la cuota)
+function mineRes(l) {
+  if (!l.combo) return { r: legResult(l), dec: l.dec };
+  const rs = l.legs.map(legResult), live = l.legs.filter((x, i) => rs[i] !== "push");
+  const r = rs.includes("lost") ? "lost" : rs.every(x => x === "push") ? "push" : rs.every(x => x === "won" || x === "push") ? "won" : null;
+  return { r, dec: live.reduce((t, x) => t * x.dec, 1), rs };
+}
+const mineSrc = l => l.src || "rec";
+const SRC_TXT = { rec: "Recomendados por el modelo", own: "Elegidos por ti", combo: "Tus combinadas" };
 function syncMineCount() { const n = MINE.filter(l => l.date === DAY).length; $("#n-mine").textContent = n || ""; }
 function mineChanged() {
   ls("nbap-mine", JSON.stringify(MINE)); syncMineCount();
   document.querySelectorAll("[data-take]").forEach(b => {
     const on = isMine(b.dataset.take);
-    b.setAttribute("aria-pressed", on); b.lastChild.textContent = on ? "Lo tomé" : "Lo tomo";
+    b.setAttribute("aria-pressed", on); if (b.dataset.tl !== undefined) b.lastChild.textContent = takeTxt(on, b.dataset.tl);
     if (!b.disabled) b.title = on ? "Quitar de mis picks" : "Agregar a mis picks";
   });
   if (location.hash === "#mis-picks") renderMine(true);
@@ -2123,10 +2157,12 @@ function mineChanged() {
 function toggleMine(k) {
   const i = MINE.findIndex(l => l.k === k), src = i >= 0 ? MINE[i] : LEGREG[k], g = src && INDEX.games.find(x => x.id === src.gid);
   if (!src) return;
+  if (src.combo) { const j = MINE.indexOf(src); if (src.legs.some(x => gameLocked(legGame(x)))) { alert("Alguna pata ya empezó: la combinada ya no se puede quitar."); return; } MINE.splice(j, 1); mineChanged(); drawCombo(); return; }
   if (gameLocked(g)) { alert("Ese partido ya empezó: los picks solo se marcan o quitan antes del inicio."); return; }
   if (i >= 0) MINE.splice(i, 1);
-  else { const { k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec } = src;
-    MINE.push({ k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec, date: g.date, model: INDEX.model || "", at: Date.now() }); }
+  else { const { k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec, custom } = src;
+    const rec = !custom && (g.value_bets || []).some(b => b.label === label);
+    MINE.push({ k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec, custom, src: rec ? "rec" : "own", date: g.date, model: INDEX.model || "", at: Date.now() }); }
   mineChanged();
 }
 addEventListener("storage", e => { if (e.key === "nbap-mine") { try { MINE = JSON.parse(e.newValue || "[]").filter(okMine); } catch (x) { MINE = []; } mineChanged(); } });
@@ -2134,13 +2170,13 @@ const mineU = (r, dec) => r === "won" ? dec - 1 : r === "lost" ? -1 : 0;
 const sgnU = u => `${u >= 0 ? "+" : "−"}${Math.abs(u).toFixed(2)} u`;
 function mineStats(list) {
   const t = { n: list.length, w: 0, l: 0, p: 0, pend: 0, u: 0 };
-  list.forEach(x => { if (x.r === "won") t.w++; else if (x.r === "lost") t.l++; else if (x.r === "push") t.p++; else t.pend++; t.u += mineU(x.r, x.l.dec); });
+  list.forEach(x => { if (x.r === "won") t.w++; else if (x.r === "lost") t.l++; else if (x.r === "push") t.p++; else t.pend++; t.u += mineU(x.r, x.dec); });
   t.roi = t.w + t.l ? t.u / (t.w + t.l) : null;
   return t;
 }
 function renderMine(keepScroll) {
   const y = scrollY;
-  const rows = MINE.map(l => ({ l, r: legResult(l), g: INDEX.games.find(x => x.id === l.gid) }));
+  const rows = MINE.map(l => ({ l, ...mineRes(l), g: INDEX.games.find(x => x.id === l.gid) }));
   const days = [...new Set(rows.map(x => x.l.date))].sort();
   const hist = Object.fromEntries((INDEX.history || []).map(h => [h.date, h]));
   const modelOf = d => (hist[d] && hist[d].model) || (rows.find(x => x.l.date === d) || {}).l.model || INDEX.model || "";
@@ -2151,13 +2187,16 @@ function renderMine(keepScroll) {
   const pctTxt = s => s.w + s.l ? (100 * s.w / (s.w + s.l)).toFixed(1) + "%" : "—";
   const roiTxt = r => r == null ? "—" : `${r >= 0 ? "+" : "−"}${Math.abs(100 * r).toFixed(1)}%`;
   const rec = s => `${s.w}–${s.l}${s.p ? `–${s.p}` : ""}`;
-  const resCell = x => x.r ? resPill(x.r) : `<span class="muted">${gameLocked(x.g) ? "En juego" : "Pendiente"}</span>`;
+  const lockedRow = x => x.l.combo ? x.l.legs.some(l => gameLocked(legGame(l))) : gameLocked(x.g);
+  const resCell = x => x.r ? resPill(x.r) : `<span class="muted">${lockedRow(x) ? "En juego" : "Pendiente"}</span>`;
+  const srcs = Object.keys(SRC_TXT).filter(k => rows.some(x => mineSrc(x.l) === k));
+  const TAG = { rec: "Recomendado", own: "Tuyo", combo: "Combinada" };
   $("#app").innerHTML = `
   <section class="section">
     <span class="eyebrow">Tu historial</span>
     <h2>Mis picks</h2>
-    <p class="lede">Los picks recomendados que marcaste con <b>Lo tomo</b>, liquidados con el resultado real a 1 unidad cada uno y la cuota publicada. Se guardan solo en este navegador: nadie más los ve, y si cambias de celular o borras los datos del navegador se pierden, así que guarda una copia con <b>Exportar</b> de vez en cuando. Un pick solo se marca o se quita antes de que empiece su partido.</p>
-    ${!MINE.length ? `<div class="panel empty">Aún no has marcado picks. En <a href="#">los picks recomendados de hoy</a> toca <span class="take demo"><span class="bx"></span>Lo tomo</span> en los que juegues.</div>` : `
+    <p class="lede">Todo lo que marcaste con <b>Lo tomo</b>: picks recomendados por el modelo, cualquier otro pick de la página, los que creas en <b>Crea tu pick</b> con la cuota de tu casa, y tus combinadas guardadas desde <b>Mi combinada</b>. Se liquidan con el resultado real a 1 unidad cada uno y su cuota (la publicada o la que escribiste). Se guardan solo en este navegador: nadie más los ve, y si cambias de celular o borras los datos del navegador se pierden, así que guarda una copia con <b>Exportar</b> de vez en cuando. Un pick solo se marca o se quita antes de que empiece su partido.</p>
+    ${!MINE.length ? `<div class="panel empty">Aún no has marcado picks. En <a href="#">los picks de hoy</a> toca <span class="take demo"><span class="bx"></span>Lo tomo</span> en los que juegues, recomendados o no.</div>` : `
     <div class="panel pl-stats mine-kpi">
       <div class="cell main"><span class="k">Unidades</span><span class="v ${T.u > 0 ? "pos" : T.u < 0 ? "neg" : ""}">${sgnU(T.u)}</span></div>
       <div class="cell"><span class="k">Ganados–perdidos</span><span class="v">${rec(T)}</span></div>
@@ -2167,6 +2206,10 @@ function renderMine(keepScroll) {
     <p class="muted mine-note">${T.n} pick${T.n === 1 ? "" : "s"} tomado${T.n === 1 ? "" : "s"} en ${days.length} jornada${days.length === 1 ? "" : "s"}${T.pend ? ` · ${T.pend} sin liquidar` : ""}${T.p ? ` · ${T.p} nulo${T.p === 1 ? "" : "s"} (push)` : ""}.${T.w + T.l < 100 ? " Con pocos picks el resultado es sobre todo suerte." : ""}</p>`}
   </section>
   ${per.length ? `<section class="section">
+    ${srcs.length > 1 ? `<h3>Por tipo de pick</h3>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Tipo</th><th class="r">Tomados</th><th class="r">Ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th></tr></thead><tbody>
+      ${srcs.map(k => { const s = mineStats(rows.filter(x => mineSrc(x.l) === k)); return `<tr><td class="head"><b>${SRC_TXT[k]}</b></td><td class="r num" data-label="Tomados">${s.n}</td><td class="r num" data-label="Ganados–perdidos">${rec(s)}</td><td class="r num" data-label="% acierto">${pctTxt(s)}</td><td class="r num" data-label="Unidades">${sgnU(s.u)}</td><td class="r num" data-label="ROI">${roiTxt(s.roi)}</td></tr>`; }).join("")}
+    </tbody></table></div>` : ""}
     ${vers.length > 1 ? `<h3>Por versión del modelo</h3>
     <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th class="r">Jornadas</th><th class="r">Ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th></tr></thead><tbody>
       ${vers.map(v => { const ds = per.filter(x => x.model === v), s = mineStats(rows.filter(x => ds.some(z => z.d === x.l.date))); return `<tr><td class="head"><b>${esc(v)}</b></td><td class="r num" data-label="Jornadas">${ds.length}</td><td class="r num" data-label="Ganados–perdidos">${rec(s)}</td><td class="r num" data-label="% acierto">${pctTxt(s)}</td><td class="r num" data-label="Unidades">${sgnU(s.u)}</td><td class="r num" data-label="ROI">${roiTxt(s.roi)}</td></tr>`; }).join("")}
@@ -2178,8 +2221,9 @@ function renderMine(keepScroll) {
     <h3>Detalle</h3>
     <div class="mine-days">${[...per].reverse().map((x, i) => `<details class="panel mine-day"${i === 0 ? " open" : ""}><summary><b>${esc(x.d)}</b><span class="num">${rec(x.s)} · ${x.s.w + x.s.l ? sgnU(x.s.u) : "sin liquidar"}</span></summary>
       <ul class="mine-list">${rows.filter(z => z.l.date === x.d).sort((a, b) => a.l.gid.localeCompare(b.l.gid) || a.l.label.localeCompare(b.l.label)).map(z => `<li>
-        <div><div class="lg">${esc(z.l.label)}</div><a class="kind" href="#${esc(z.l.gid)}">${esc(z.l.game)}</a></div>
-        <div class="lp"><span>Cuota ${(+z.l.dec).toFixed(2)}</span>${resCell(z)}${z.r && z.r !== "push" ? `<span>${sgnU(mineU(z.r, z.l.dec))}</span>` : ""}${!gameLocked(z.g) ? `<button type="button" class="more" data-take="${esc(z.l.k)}" aria-pressed="true"><span class="bx" hidden></span>Quitar</button>` : ""}</div>
+        <div>${z.l.combo ? `<div class="lg">${esc(z.l.game)}</div><ol class="mine-legs">${z.l.legs.map((l, j) => `<li>${esc(l.label)} <a class="kind" href="#${esc(l.gid)}">${esc(l.game)}</a> ${resPill(z.rs[j])}</li>`).join("")}</ol>`
+          : `<div class="lg">${esc(z.l.label)}</div><a class="kind" href="#${esc(z.l.gid)}">${esc(z.l.game)}</a>`}${srcs.length > 1 ? ` <span class="mine-tag ${mineSrc(z.l)}">${TAG[mineSrc(z.l)]}</span>` : ""}${z.l.custom ? ` <span class="mine-tag">tu cuota</span>` : ""}</div>
+        <div class="lp"><span>Cuota ${(+z.dec).toFixed(2)}</span>${resCell(z)}${z.r && z.r !== "push" ? `<span>${sgnU(mineU(z.r, z.dec))}</span>` : ""}${!lockedRow(z) ? `<button type="button" class="more" data-take="${esc(z.l.k)}" aria-pressed="true"><span class="bx" hidden></span>Quitar</button>` : ""}</div>
       </li>`).join("")}</ul></details>`).join("")}</div>
   </section>` : ""}
   <section class="section">
@@ -2358,6 +2402,10 @@ function drawCombo() {
     <div class="cell"><span class="k">EV</span><span class="v">${n > 1 ? evPill(c.ev, thr) : "—"}</span></div>`;
   const si = $("#cb-stake"); if (document.activeElement !== si) si.value = stake || "";
   $("#cb-pay").textContent = stake > 0 ? `Pago posible ${fmtMoney(stake * c.dec)} (ganancia ${fmtMoney(stake * (c.dec - 1))})` : "Escribe cuánto apostarías para ver el pago.";
+  const ck = comboKey(), cOn = isMine(ck), cLock = MYC.some(l => gameLocked(legGame(l)));
+  $("#cb-take").innerHTML = n > 1 && (cOn || !cLock) ? `<button type="button" class="take take-w" id="cb-take-b" aria-pressed="${cOn}"${cLock ? " disabled" : ""}><span class="bx" aria-hidden="true"></span>${cOn ? "Lo tomé: está en Mis picks" : "Lo tomo: guardar en Mis picks"}</button>`
+    : n > 1 ? `<span class="muted">Alguna pata ya empezó: esta combinada ya no se puede guardar en Mis picks.</span>` : "";
+  const ctb = $("#cb-take-b"); if (ctb) ctb.addEventListener("click", toggleComboMine);
   document.querySelectorAll("#cb-body [data-rm]").forEach(b => b.addEventListener("click", () => { MYC.splice(+b.dataset.rm, 1); comboChanged(); }));
   document.querySelectorAll("#cb-body a").forEach(a => a.addEventListener("click", () => { if (matchMedia("(max-width: 640px)").matches) openCombo(false); }));
 }
