@@ -10,11 +10,15 @@
    "Back-to-back: NOP (jugó el 8-nov en LAC)",
    "Porziņģis se aparta del baloncesto (6-nov); Butler, Moody y Will Richard OUT",
    "Santos (rodilla) en duda con líneas",
-   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC"
+   "Bajas revisadas en ESPN y CBS 9-nov ~16:30 UTC",
+   "Capturas de @UnderdogNBA (Nicolas, 9-nov ~22:53 UTC): Zion (descanso), Trey Murphy III (rodilla), Watford (tobillo) y Missi OUT"
   ],
   "out": [
    "Yves Missi",
-   "Will Richard"
+   "Will Richard",
+   "Zion Williamson",
+   "Trey Murphy III",
+   "Trendon Watford"
   ],
   "gtd": {
    "Gui Santos": 0.7
@@ -103,13 +107,13 @@
     "pace": 101.65
    },
    "adj": {
-    "o": -1.0,
-    "d": 1.0,
+    "o": -4.0,
+    "d": 2.0,
     "pace": -0.5
    },
    "context": {
     "b2b": true,
-    "roster_note": ""
+    "roster_note": "Zion Williamson (descanso), Trey Murphy III y Trendon Watford OUT"
    }
   }
  },
@@ -620,7 +624,7 @@
    "name": "Dejounte Murray",
    "pos": "PG",
    "starter": true,
-   "min": 28.6,
+   "min": 38.0,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -659,94 +663,10 @@
   },
   {
    "team": "NOP",
-   "name": "Zion Williamson",
-   "pos": "PF",
-   "starter": true,
-   "min": 27.9,
-   "g_cur": 10,
-   "p_play": 1.0,
-   "cur": {
-    "min": 33.1,
-    "pts": 21.0,
-    "reb": 5.3,
-    "ast": 2.7,
-    "fg3m": 0.3,
-    "fgm": 7.6,
-    "fga": 12.1,
-    "fg3a": 0.7,
-    "stl": 2.3,
-    "blk": 0.5,
-    "tov": 1.9,
-    "pf": 3.1,
-    "ftm": 5.5,
-    "fta": 7.2
-   },
-   "prior": {
-    "min": 29.7,
-    "pts": 21.0,
-    "reb": 5.69,
-    "ast": 3.21,
-    "fg3m": 0.02,
-    "fgm": 7.81,
-    "fga": 13.02,
-    "fg3a": 0.06,
-    "stl": 0.97,
-    "blk": 0.55,
-    "tov": 2.03,
-    "pf": 2.27,
-    "ftm": 5.37,
-    "fta": 7.5
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "NOP",
-   "name": "Trey Murphy III",
-   "pos": "SF",
-   "starter": true,
-   "min": 27.7,
-   "g_cur": 9,
-   "p_play": 1.0,
-   "cur": {
-    "min": 32.8,
-    "pts": 15.56,
-    "reb": 4.78,
-    "ast": 3.56,
-    "fg3m": 2.22,
-    "fgm": 5.22,
-    "fga": 11.22,
-    "fg3a": 5.89,
-    "stl": 1.0,
-    "blk": 0.22,
-    "tov": 1.67,
-    "pf": 2.56,
-    "ftm": 2.89,
-    "fta": 3.33
-   },
-   "prior": {
-    "min": 35.5,
-    "pts": 21.52,
-    "reb": 5.71,
-    "ast": 3.79,
-    "fg3m": 3.24,
-    "fgm": 7.48,
-    "fga": 15.91,
-    "fg3a": 8.56,
-    "stl": 1.5,
-    "blk": 0.36,
-    "tov": 1.82,
-    "pf": 2.09,
-    "ftm": 3.3,
-    "fta": 3.73
-   },
-   "slot": "SF"
-  },
-  {
-   "team": "NOP",
    "name": "Jeremiah Fears",
    "pos": "PG",
    "starter": true,
-   "min": 24.4,
+   "min": 34.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -787,8 +707,8 @@
    "team": "NOP",
    "name": "Saddiq Bey",
    "pos": "SF",
-   "starter": false,
-   "min": 22.7,
+   "starter": true,
+   "min": 32.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -822,14 +742,15 @@
     "pf": 1.32,
     "ftm": 3.44,
     "fta": 4.1
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "NOP",
    "name": "Herbert Jones",
    "pos": "SF",
-   "starter": false,
-   "min": 19.1,
+   "starter": true,
+   "min": 27.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -863,14 +784,15 @@
     "pf": 3.16,
     "ftm": 0.89,
     "fta": 1.11
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "NOP",
    "name": "Derik Queen",
    "pos": "C",
    "starter": false,
-   "min": 18.9,
+   "min": 26.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -911,7 +833,7 @@
    "name": "Karlo Matković",
    "pos": "PF",
    "starter": false,
-   "min": 15.8,
+   "min": 22.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -949,51 +871,10 @@
   },
   {
    "team": "NOP",
-   "name": "Trendon Watford",
-   "pos": "PF",
-   "starter": false,
-   "min": 15.0,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 17.8,
-    "pts": 7.17,
-    "reb": 3.5,
-    "ast": 1.0,
-    "fg3m": 0.33,
-    "fgm": 2.0,
-    "fga": 3.67,
-    "fg3a": 1.0,
-    "stl": 0.83,
-    "blk": 0.5,
-    "tov": 1.0,
-    "pf": 2.17,
-    "ftm": 2.83,
-    "fta": 3.5
-   },
-   "prior": {
-    "min": 16.3,
-    "pts": 6.53,
-    "reb": 3.3,
-    "ast": 2.49,
-    "fg3m": 0.19,
-    "fgm": 2.6,
-    "fga": 5.06,
-    "fg3a": 0.94,
-    "stl": 0.3,
-    "blk": 0.42,
-    "tov": 1.21,
-    "pf": 2.02,
-    "ftm": 1.13,
-    "fta": 1.45
-   }
-  },
-  {
-   "team": "NOP",
    "name": "DeAndre Jordan",
    "pos": "C",
    "starter": true,
-   "min": 13.9,
+   "min": 19.7,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -1035,7 +916,7 @@
    "name": "Jordan Poole",
    "pos": "SG",
    "starter": false,
-   "min": 13.5,
+   "min": 19.1,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -1076,7 +957,7 @@
    "name": "Bennedict Mathurin",
    "pos": "SF",
    "starter": false,
-   "min": 12.6,
+   "min": 17.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -1203,40 +1084,6 @@
     1.5,
     -130,
     114
-   ]
-  },
-  "Zion Williamson": {
-   "pts": [
-    20.5,
-    -103,
-    -127
-   ],
-   "reb": [
-    5.5,
-    -115,
-    -100
-   ]
-  },
-  "Trey Murphy III": {
-   "pts": [
-    15.5,
-    -115,
-    -115
-   ],
-   "reb": [
-    4.5,
-    -115,
-    -108
-   ],
-   "ast": [
-    2.5,
-    -140,
-    136
-   ],
-   "fg3m": [
-    2.5,
-    110,
-    -137
    ]
   },
   "De'Anthony Melton": {
@@ -2735,165 +2582,6 @@
     ]
    ]
   },
-  "Trey Murphy III": {
-   "pts": [
-    [
-     9.5,
-     -666.7,
-     null
-    ],
-    [
-     11.5,
-     -344.8,
-     null
-    ],
-    [
-     13.5,
-     -192.3,
-     null
-    ],
-    [
-     15.5,
-     -120.5,
-     null
-    ],
-    [
-     17.5,
-     130.0,
-     null
-    ]
-   ],
-   "reb": [
-    [
-     2.5,
-     -625.0,
-     null
-    ],
-    [
-     3.5,
-     -250.0,
-     null
-    ],
-    [
-     4.5,
-     -123.5,
-     null
-    ],
-    [
-     5.5,
-     150.0,
-     null
-    ]
-   ],
-   "ast": [
-    [
-     1.5,
-     -500.0,
-     null
-    ],
-    [
-     2.5,
-     -158.7,
-     null
-    ],
-    [
-     3.5,
-     148.0,
-     null
-    ]
-   ],
-   "fg3m": [
-    [
-     1.5,
-     -270.3,
-     null
-    ],
-    [
-     2.5,
-     105.0,
-     null
-    ]
-   ],
-   "stl": [
-    [
-     0.5,
-     -263.2,
-     null
-    ],
-    [
-     1.5,
-     170.0,
-     null
-    ]
-   ],
-   "blk": [
-    [
-     0.5,
-     188.0,
-     null
-    ]
-   ],
-   "stocks": [
-    [
-     0.5,
-     -434.8,
-     null
-    ],
-    [
-     1.5,
-     102.0,
-     null
-    ]
-   ],
-   "pra": [
-    [
-     19.5,
-     -277.8,
-     null
-    ],
-    [
-     24.5,
-     104.0,
-     null
-    ]
-   ],
-   "pr": [
-    [
-     14.5,
-     -500.0,
-     null
-    ],
-    [
-     19.5,
-     -147.1,
-     null
-    ],
-    [
-     24.5,
-     190.0,
-     null
-    ]
-   ],
-   "pa": [
-    [
-     14.5,
-     -333.3,
-     null
-    ],
-    [
-     19.5,
-     102.0,
-     null
-    ]
-   ],
-   "ra": [
-    [
-     4.5,
-     -833.3,
-     null
-    ]
-   ]
-  },
   "Yaxel Lendeborg": {
    "pts": [
     [
@@ -3064,173 +2752,6 @@
     [
      9.5,
      -294.1,
-     null
-    ]
-   ]
-  },
-  "Zion Williamson": {
-   "pts": [
-    [
-     11.5,
-     -1000.0,
-     null
-    ],
-    [
-     13.5,
-     -526.3,
-     null
-    ],
-    [
-     15.5,
-     -294.1,
-     null
-    ],
-    [
-     17.5,
-     -178.6,
-     null
-    ],
-    [
-     19.5,
-     -114.9,
-     null
-    ],
-    [
-     21.5,
-     130.0,
-     null
-    ],
-    [
-     23.5,
-     195.0,
-     null
-    ]
-   ],
-   "reb": [
-    [
-     2.5,
-     -1000.0,
-     null
-    ],
-    [
-     3.5,
-     -384.6,
-     null
-    ],
-    [
-     4.5,
-     -185.2,
-     null
-    ],
-    [
-     5.5,
-     100.0,
-     null
-    ],
-    [
-     6.5,
-     175.0,
-     null
-    ]
-   ],
-   "ast": [
-    [
-     1.5,
-     -384.6,
-     null
-    ],
-    [
-     2.5,
-     -129.9,
-     null
-    ],
-    [
-     3.5,
-     185.0,
-     null
-    ]
-   ],
-   "stl": [
-    [
-     0.5,
-     -333.3,
-     null
-    ],
-    [
-     1.5,
-     135.0,
-     null
-    ]
-   ],
-   "blk": [
-    [
-     0.5,
-     138.0,
-     null
-    ]
-   ],
-   "stocks": [
-    [
-     0.5,
-     -666.7,
-     null
-    ],
-    [
-     1.5,
-     -135.1,
-     null
-    ]
-   ],
-   "pra": [
-    [
-     24.5,
-     -217.4,
-     null
-    ],
-    [
-     29.5,
-     118.0,
-     null
-    ]
-   ],
-   "pr": [
-    [
-     19.5,
-     -370.4,
-     null
-    ],
-    [
-     24.5,
-     -125.0,
-     null
-    ],
-    [
-     29.5,
-     195.0,
-     null
-    ]
-   ],
-   "pa": [
-    [
-     19.5,
-     -212.8,
-     null
-    ],
-    [
-     24.5,
-     133.0,
-     null
-    ]
-   ],
-   "ra": [
-    [
-     4.5,
-     -1000.0,
-     null
-    ],
-    [
-     9.5,
-     170.0,
      null
     ]
    ]
