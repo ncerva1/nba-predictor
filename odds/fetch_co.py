@@ -189,12 +189,13 @@ def parse_event(data):
                 who = ov.get("participant") or bo.get("participant") or ""
                 alts.setdefault((who, stat), {})[ov["line"] / 1000] = [american(ov["odds"] / 1000),
                                                                       american(un["odds"] / 1000) if un else None]
-            if stat:  # líneas escalonadas "25+" (un outcome por umbral, solo se apuesta al sí)
+            m = re.match(r"^\s*(\d+)\s*\+", crit)
+            if stat and m:  # escalera "25+ Points Scored By The Player": un solo outcome OT_YES (sin "No") = Over 24.5
                 for o in outs:
-                    m = re.match(r"^\s*(\d+)\s*\+\s*$", o.get("englishLabel") or o.get("label") or "")
                     who = o.get("participant") or bo.get("participant") or ""
-                    if m and who:
+                    if who and (o.get("type") == "OT_YES" or yes_no(o) == "yes"):
                         alts.setdefault((who, stat), {}).setdefault(int(m.group(1)) - 0.5, [american(o["odds"] / 1000), None])
+                continue
             if stat and ov and un and ov.get("line") is not None:
                 key = (ov.get("participant") or bo.get("participant") or "", stat)
                 cur = props.get(key)
