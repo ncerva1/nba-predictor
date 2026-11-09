@@ -573,6 +573,112 @@ def cross_parlays(legs_by_game):
             for p, _, c in best_parlays(cands, joint, distinct, exclusive=True, sizes=(2,))]  # 1.5: solo de 2 patas
 
 
+# Parlay soñador (pedido de Nicolas, 9-nov): una combinada larga por jornada con cuota total entre DREAM_MIN y
+# DREAM_MAX, armada con las patas más probables del modelo. Entre partidos las patas son independientes; dentro de un
+# mismo partido van como mucho DREAM_PER_GAME patas y solo si no se estorban (correlación contada en la muestra de
+# simulaciones docs/data/sims/<id>.bin >= DREAM_MIN_CORR). Se elige la combinación con la mayor prob. conjunta.
+# Unidades: 1 por jornada; si una pata se anula (jugador que no juega) cuenta la cuota de las demás, como en la casa.
+DREAM_MIN, DREAM_MAX = 50.0, 200.0
+DREAM_LEG_P = 0.55       # prob. mínima de cada pata (mezclada con la casa)
+DREAM_POOL = 10          # patas candidatas por partido (las más probables)
+DREAM_PER_GAME = 2
+DREAM_MAX_LEGS = 10
+DREAM_MIN_CORR = 0.97    # pares del mismo partido: conjunta / producto >= esto (no se estorban)
+DREAM_STATS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
+               "stocks": ("stl", "blk")}
+
+
+def read_sample(gid):
+    """docs/data/sims/<id>.bin → {columna: array} (ver write_sample)."""
+    path = sample_path(gid)
+    if not os.path.exists(path):
+        return None
+    raw = open(path, "rb").read()
+    hl = int.from_bytes(raw[:4], "little")
+    head = json.loads(raw[4:4 + hl])
+    n, body = head["n"], np.frombuffer(raw[4 + hl:], np.uint8)
+    return {c: body[i * n:(i + 1) * n].astype(float) for i, c in enumerate(head["cols"])}
+
+
+def sample_hits(b, smp):
+    """(acierta, juega) de una prop en la muestra, o None si la muestra no trae esa estadística."""
+    on = smp.get(f"{b['player']}|on")
+    if on is None:
+        return None
+    parts = DREAM_STATS.get(b["stat"], (b["stat"],))
+    if any(f"{b['player']}|{p}" not in smp for p in parts):
+        return None
+    x = sum(smp[f"{b['player']}|{p}"] for p in parts)
+    return ((x >= b["line"]) if is_over(b) else (x <= b["line"])), on > 0
+
+
+def dream_parlay(rs):
+    """rs = partidos publicados (sin jugar) de una jornada. Devuelve el parlay soñador o None."""
+    from itertools import combinations
+    import math
+    opts = []  # por partido: [(log p, log cuota, patas)]
+    for r in rs:
+        g = r["game"]
+        pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
+        pool = [b for b in r["bets"] if b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
+                and b["p"] >= DREAM_LEG_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
+                and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
+        pool = sorted(pool, key=lambda b: -b["p"])[:DREAM_POOL]
+        if not pool:
+            continue
+        legs = [dict({k: b.get(k) for k in LEG_KEYS}, gid=r["id"], game=f"{g['away']} @ {g['home']}",
+                     **({"flag": b["flag"]} if b.get("flag") else {})) for b in pool]
+        o = [(math.log(l["p"]), math.log(l["dec"]), (l,)) for l in legs]
+        smp = read_sample(r["id"])
+        if smp and DREAM_PER_GAME >= 2:
+            hits = [sample_hits(l, smp) for l in legs]
+            for i, j in combinations(range(len(legs)), 2):
+                if legs[i]["player"] == legs[j]["player"] or not hits[i] or not hits[j]:
+                    continue
+                ok = hits[i][1] & hits[j][1]
+                if ok.sum() < 100:
+                    continue
+                pa, pb = hits[i][0][ok].mean(), hits[j][0][ok].mean()
+                c = (hits[i][0] & hits[j][0])[ok].mean() / (pa * pb) if pa * pb else 0
+                if c < DREAM_MIN_CORR:
+                    continue
+                p = min(c * legs[i]["p"] * legs[j]["p"], legs[i]["p"], legs[j]["p"])
+                o.append((math.log(p), math.log(legs[i]["dec"] * legs[j]["dec"]),
+                          (dict(legs[i], corr=round(c, 2)), dict(legs[j], corr=round(c, 2)))))
+        opts.append(o)
+    # programación dinámica: estado (n.º de patas, cuota en pasos de 1% en log) → mejor (log p, patas)
+    top = math.log(DREAM_MAX)
+    best = {(0, 0): (0.0, ())}
+    for o in opts:
+        nxt = dict(best)
+        for (n, d), (lp, ls) in best.items():
+            for olp, old, ol in o:
+                n2 = n + len(ol)
+                ld = d / 100 + old
+                if n2 > DREAM_MAX_LEGS or ld > top + 1e-9:
+                    continue
+                k = (n2, round(ld * 100))
+                if k not in nxt or nxt[k][0] < lp + olp:
+                    nxt[k] = (lp + olp, ls + ol)
+        best = nxt
+    ok = [(lp, ls) for (n, d), (lp, ls) in best.items() if ls and DREAM_MIN <= float(np.prod([l["dec"] for l in ls])) <= DREAM_MAX]
+    if not ok:
+        return None
+    lp, legs = max(ok, key=lambda x: x[0])
+    legs = sorted(legs, key=lambda l: (l["gid"], -l["p"]))
+    pl = parlay(list(legs), math.exp(lp))
+    pl["type"] = "dream"
+    pl["games"] = len({l["gid"] for l in legs})
+    return pl
+
+
+def dream_units(pl):
+    """Ganancia apostando 1 unidad: las patas anuladas no cuentan en la cuota."""
+    if pl.get("result") == "won":
+        return round(float(np.prod([l["dec"] for l in pl["legs"] if l.get("result") != "push"])) - 1, 2)
+    return -1.0 if pl.get("result") == "lost" else 0.0 if pl.get("result") == "push" else None
+
+
 def settle_parlay(pl, results):
     """won / lost / push (todas anuladas) / None si falta algún partido."""
     from evaluate import settle
@@ -975,7 +1081,7 @@ def main():
     stage, stage_for = opt("--stage"), opt("--for")
     if stage and stage not in STAGES:
         sys.exit(f"--stage debe ser uno de {', '.join(STAGES)}")
-    skip = {i + 1 for i, x in enumerate(argv) if x in ("--sims", "--stage", "--for")}
+    skip = {i + 1 for i, x in enumerate(argv) if x in ("--sims", "--stage", "--for", "--dream")}
     args = [x for i, x in enumerate(argv) if not x.startswith("--") and i not in skip]
     if not os.path.exists(os.path.join(HERE, "db", "rankings_latest.json")):
         subprocess.run([sys.executable, os.path.join(HERE, "db", "build_db.py")], check=False)
@@ -1067,6 +1173,27 @@ def main():
                 for l in pl["legs"]:
                     if l.get("player") in all_flags:
                         l["flag"] = all_flags[l["player"]]
+    dream = index.get("dream", {})  # parlay soñador por jornada
+    redo = {d for d, lbg in legs_by_date.items() if d in cross and len(lbg) == sum(g["date"] == d and "result" not in g for g in games)}
+    if opt("--dream"):  # --dream <fecha>: rehace el soñador con lo ya publicado (usar con un filtro "ninguno")
+        redo.add(opt("--dream"))
+    for date in sorted(redo):
+        ps = [os.path.join(OUT, f"{g['id']}.json") for g in games if g["date"] == date and "result" not in g]
+        if not ps:
+            continue
+        pl = dream_parlay([json.load(open(x)) for x in ps if os.path.exists(x)])
+        if pl:
+            dream[date] = pl
+            print(f"Soñador {date}: {pl['n']} patas, cuota {pl['dec']}, prob. {pl['p']:.1%}")
+        else:
+            dream.pop(date, None)
+            print(f"Soñador {date}: ninguna combinación llega a cuota {DREAM_MIN:g}-{DREAM_MAX:g}")
+    for date, pl in dream.items():
+        res = load_results(date)
+        rs = {g["id"]: dict(game=dict(home=g["home"], away=g["away"]), res=res[f"{g['away']}@{g['home']}"])
+              for g in games if g["date"] == date and f"{g['away']}@{g['home']}" in res}
+        pl["result"] = settle_parlay(pl, rs)
+        pl["units"] = dream_units(pl)
     for date, pls in cross.items():
         res = load_results(date)
         rs = {g["id"]: dict(game=dict(home=g["home"], away=g["away"]), res=res[f"{g['away']}@{g['home']}"])
@@ -1101,7 +1228,7 @@ def main():
         updates.setdefault(day, {})[stage] = now
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
     json.dump(dict(generated=now, value_ev=VALUE_EV, model=MODEL, mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
-                   history=history, versions=versions, parlays=cross, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+                   history=history, versions=versions, parlays=cross, dream=dream, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":

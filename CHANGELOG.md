@@ -1,5 +1,12 @@
 # Cambios del modelo
 
+## Web — 2026-11-09: parlay soñador
+- Pedido de Nicolas: una combinada por jornada con varias líneas de buena probabilidad y cuota total entre 50 y 200.
+  `dream_parlay` (build_site.py) toma hasta 10 props por partido (prob. mezclada ≥ 55%, EV ≥ 0, cuota a los dos lados,
+  sin jugadores en duda/rookies), permite 2 del mismo partido solo si su correlación en `sims/<id>.bin` es ≥ 0.97 y
+  elige por programación dinámica la de mayor prob. conjunta con cuota 50–200 (máx. 10 patas). Sección "Parlay
+  soñador" en la portada con su seguimiento propio (1 u por jornada; patas anuladas no cuentan en la cuota).
+
 ## Web — 2026-11-08: unidades por versión del modelo
 - Pedido de Nicolas: "Cómo le ha ido al modelo" separa picks, % de acierto, unidades y ROI por versión (1.1, 1.2,
   1.3, 1.5), además de la columna Modelo en la tabla por jornada. Las versiones y su primera jornada están en

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T16:30+00:00",
+ "generated": "2026-11-09T19:16+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -1199,6 +1199,125 @@
     "result": null
    }
   ]
+ },
+ "dream": {
+  "2026-11-09": {
+   "legs": [
+    {
+     "kind": "prop",
+     "label": "Peyton Watson Under 1.5 Triples",
+     "player": "Peyton Watson",
+     "team": "CLE",
+     "line": 1.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.649,
+     "dec": 1.667,
+     "ev": 0.081,
+     "gid": "2026-11-09-CLE-at-CHA",
+     "game": "CLE @ CHA"
+    },
+    {
+     "kind": "prop",
+     "label": "Ivica Zubac Under 9.5 Puntos",
+     "player": "Ivica Zubac",
+     "team": "IND",
+     "line": 9.5,
+     "stat": "pts",
+     "side": "under",
+     "p": 0.59,
+     "dec": 1.847,
+     "ev": 0.09,
+     "gid": "2026-11-09-IND-at-DAL",
+     "game": "IND @ DAL",
+     "corr": 1.01
+    },
+    {
+     "kind": "prop",
+     "label": "Aaron Nesmith Under 11.5 Puntos",
+     "player": "Aaron Nesmith",
+     "team": "IND",
+     "line": 11.5,
+     "stat": "pts",
+     "side": "under",
+     "p": 0.558,
+     "dec": 1.98,
+     "ev": 0.105,
+     "gid": "2026-11-09-IND-at-DAL",
+     "game": "IND @ DAL",
+     "corr": 1.01
+    },
+    {
+     "kind": "prop",
+     "label": "Dyson Daniels Under 0.5 Triples",
+     "player": "Dyson Daniels",
+     "team": "ATL",
+     "line": 0.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.7,
+     "dec": 1.5,
+     "ev": 0.051,
+     "gid": "2026-11-09-LAL-at-ATL",
+     "game": "LAL @ ATL"
+    },
+    {
+     "kind": "prop",
+     "label": "Collin Murray-Boyles Under 0.5 Triples",
+     "player": "Collin Murray-Boyles",
+     "team": "TOR",
+     "line": 0.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.619,
+     "dec": 1.769,
+     "ev": 0.095,
+     "gid": "2026-11-09-MEM-at-TOR",
+     "game": "MEM @ TOR",
+     "corr": 1.0
+    },
+    {
+     "kind": "prop",
+     "label": "Ja'Kobe Walter Under 2.5 Triples",
+     "player": "Ja'Kobe Walter",
+     "team": "TOR",
+     "line": 2.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.616,
+     "dec": 1.794,
+     "ev": 0.105,
+     "gid": "2026-11-09-MEM-at-TOR",
+     "game": "MEM @ TOR",
+     "corr": 1.0
+    },
+    {
+     "kind": "prop",
+     "label": "Kevin Huerter Under 1.5 Triples",
+     "player": "Kevin Huerter",
+     "team": "DET",
+     "line": 1.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.612,
+     "dec": 1.741,
+     "ev": 0.066,
+     "gid": "2026-11-09-WAS-at-DET",
+     "game": "WAS @ DET"
+    }
+   ],
+   "n": 7,
+   "p": 0.035,
+   "p_indep": 0.035,
+   "corr": 1.01,
+   "dec": 50.53,
+   "fair": 28.27,
+   "ev": 0.787,
+   "type": "dream",
+   "games": 5,
+   "result": null,
+   "units": null
+  }
  },
  "cup": {
   "seasons": {

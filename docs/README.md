@@ -30,6 +30,14 @@ mañana y la revisión de bajas tienen que subir los `.bin` nuevos, y la de resu
 Si una jornada ya publicada quedó sin esos archivos, `python build_site.py <fecha> --samples-only` los regenera sin
 cambiar los picks.
 
+**Parlay soñador (9-nov):** una combinada larga por jornada con cuota total entre 50 y 200 (`index.json` →
+`dream` = `{jornada: parlay}`), armada por `build_site.py` con las patas más probables (player props con cuota a los
+dos lados, prob. ≥ 55%, EV ≥ 0, sin jugadores en duda ni rookies): como mucho 2 por partido y solo si en la muestra
+`sims/<id>.bin` no se estorban; se elige la de mayor prob. conjunta. Sale sola en la etapa `morning` (y se rehace en
+`pregame` si se re-simulan todos los partidos aún sin jugar); `results` la liquida con 1 unidad por jornada (si una
+pata se anula, cuenta la cuota de las demás). Para rehacerla sin re-simular nada:
+`python build_site.py ninguno --dream HOY`.
+
 **Historial de jugadores (% Últ. 10 / H2H):** `gamelogs/nba/leaguegamelog_P_<temporada>.csv` son los game logs
 oficiales de nba.com (todas las filas de jugador de temporada regular, con FGM/FGA, 3PM/3PA, FTM/FTA). Desde la nube
 stats.nba.com no responde: se bajan desde el PC de Nicolas con Claude in Chrome (fetch a `stats.nba.com/stats/leaguegamelog`
