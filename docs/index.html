@@ -356,6 +356,41 @@ tr.detail td { background: var(--bg) }
   .pl-list { grid-template-columns: 1fr }
   .pl-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
+/* Mis picks: botón "Lo tomo" en los picks recomendados y página #mis-picks */
+.take { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font: 500 12px var(--body); color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px 3px 7px; cursor: pointer; white-space: nowrap }
+.take .bx { width: 12px; height: 12px; border: 1.5px solid currentColor; border-radius: 3px; display: inline-grid; place-items: center; font-size: 10px; line-height: 1 }
+.take[aria-pressed="true"] { background: var(--good-soft); color: var(--good); border-color: var(--good) }
+.take[aria-pressed="true"] .bx { background: var(--good); border-color: var(--good) }
+.take[aria-pressed="true"] .bx::after { content: "✓"; color: var(--surface); font-weight: 700 }
+.take:hover:not(:disabled) { border-color: var(--accent) }
+.take:disabled { cursor: default; opacity: .85 }
+.take:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.take.demo { cursor: default; vertical-align: middle; margin: 0 2px }
+.mine-kpi { padding: 12px }
+.mine-kpi .v.pos { color: var(--good) } .mine-kpi .v.neg { color: var(--bad) }
+.mine-note { margin: 0; font-size: 13px }
+.mine-days { display: grid; gap: 10px }
+.mine-day { padding: 0 }
+.mine-day summary { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; cursor: pointer }
+.mine-day summary .num { font: 13px var(--mono); color: var(--muted) }
+.mine-list { list-style: none; margin: 0; padding: 0 16px 8px }
+.mine-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line) }
+.mine-list li > div { min-width: 0 }
+.mine-list .lg { font-weight: 500 }
+.mine-list a.kind { color: var(--muted); text-decoration: none } .mine-list a.kind:hover { text-decoration: underline }
+.mine-list .lp { font: 12px var(--mono); text-align: right; white-space: nowrap; display: grid; justify-items: end; gap: 3px; align-content: start }
+.mine-list .lp .more { margin: 0; color: var(--bad) }
+@media (max-width: 640px) {
+  table.stack.mine-tbl tr { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) }
+  table.stack.mine-tbl td.full { grid-column: 1 / -1 }
+}
+@media (max-width: 440px) {
+  .tab { padding: 9px 9px 11px; gap: 5px; font-size: 13px; white-space: nowrap } .tab.cup-tab { font-size: 16px } .tab.cup-tab svg { width: 14px; height: 14px }
+}
+.mine-act { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
+.mine-act .btn { font-size: 13px; padding: 6px 16px }
+.mine-act label.btn { display: inline-block }
+.btn.ghost:disabled, .btn:disabled { opacity: .5; cursor: default }
 /* picks de inicio agrupados por partido (acordeones) */
 .pgroups { display: grid; gap: 10px }
 .pgroup { background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
@@ -576,6 +611,7 @@ body:has(dialog.guide[open]) { overflow: hidden }
     <nav class="tabs" aria-label="Competición">
       <a class="tab" href="#" id="tab-reg">Liga regular <span class="n" id="n-reg"></span></a>
       <a class="tab cup-tab" href="#cup" id="tab-cup"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12v2h3v3a4 4 0 0 1-4 4h-.4A5 5 0 0 1 13 15v3h3v3H8v-3h3v-3a5 5 0 0 1-3.6-3H7a4 4 0 0 1-4-4V5h3V3zm0 4H5v1a2 2 0 0 0 1 1.7V7zm12 0v2.7A2 2 0 0 0 19 8V7h-1z"/></svg>NBA Cup <span class="n" id="n-cup"></span></a>
+      <a class="tab" href="#mis-picks" id="tab-mine">Mis picks <span class="n" id="n-mine"></span></a>
     </nav>
   </div>
 </header>
@@ -730,16 +766,16 @@ const hrCells = b => `<td class="r num" data-label="Últ. 10">${b.hr ? hrPct(b.h
 function betRows(bets, thr, withGame) {
   const withHr = hasHr(bets);
   const withRes = bets.some(b => b.result);
-  return bets.map((b, i) => `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
+  return bets.map((b, i) => { const k = regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game); return `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div>${addBtn(regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game))}</div></td>
+    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${b.value ? takeBtn(k) : ""}</div>${addBtn(k)}</div></td>
     <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
     <td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
     <td class="r" data-label="EV">${evPill(b.ev, thr)}</td>${withHr ? hrCells(b) : ""}
     <td class="r-sm" data-label="Mejor casa">${bestCell(b, thr)}</td>${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>
-    ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="${(withRes ? 9 : 8) + (withHr ? 3 : 0)}">${bookList(b)}</td></tr>` : ""}`).join("");
+    ${!withGame && b.books ? `<tr class="detail" id="det-${i}" hidden><td colspan="${(withRes ? 9 : 8) + (withHr ? 3 : 0)}">${bookList(b)}</td></tr>` : ""}`; }).join("");
 }
 const bth = (k, t, c = "r") => `<th class="${c} sort" data-bs="${k}"${BS.k === k ? ` aria-sort="${BS.asc ? "ascending" : "descending"}"` : ""}>${t}</th>`;
 const betHead = (withGame, withRes, withHr) => `<thead><tr>${withGame ? bth("game", "Partido", "") : ""}${bth("pick", "Pick", "pk")}${bth("dec", "Cuota")}
@@ -1051,7 +1087,7 @@ function renderIndex(scope = "reg") {
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>Picks recomendados por el sistema ${qh("ev", "picks con valor y EV")}</h2>
-    <p class="lede">${picks.length ? `${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos: son los que el modelo recomienda.` : `Hoy ningún pick de los ${todays.length} partidos llega al valor mínimo.`} Para ser verde un pick necesita EV ≥ +${(thr * 100).toFixed(0)}% con la probabilidad del modelo (25%) mezclada con la de la casa sin su margen (75%); solo player props (no Unders de rookies ni de quien no jugó la temporada pasada), como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador. <b>Últ. 10</b>, <b>H2H</b> y <b>DvP</b> dicen cuántas veces se habría cumplido esa línea en sus últimos partidos y contra este rival, y en qué puesto está el rival en lo que concede a su posición. Toca un pick para ver el análisis del partido.</p>
+    <p class="lede">${picks.length ? `${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos: son los que el modelo recomienda.` : `Hoy ningún pick de los ${todays.length} partidos llega al valor mínimo.`} Para ser verde un pick necesita EV ≥ +${(thr * 100).toFixed(0)}% con la probabilidad del modelo (25%) mezclada con la de la casa sin su margen (75%); solo player props (no Unders de rookies ni de quien no jugó la temporada pasada), como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador. <b>Últ. 10</b>, <b>H2H</b> y <b>DvP</b> dicen cuántas veces se habría cumplido esa línea en sus últimos partidos y contra este rival, y en qué puesto está el rival en lo que concede a su posición. Toca un pick para ver el análisis del partido. Marca <b>Lo tomo</b> en los que juegues y sigue tus unidades en <a href="#mis-picks">Mis picks</a>${(() => { const n = MINE.filter(l => l.date === DAY).length; return n ? ` (hoy llevas ${n})` : ""; })()}.</p>
     ${legend(thr)}
     ${picks.length ? betSortBar("bs-idx", true) : ""}
     ${picks.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
@@ -1898,13 +1934,13 @@ function route() {
   const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" ? "cup" : "reg";
   // la pestaña NBA Cup (y sus partidos) cambia la paleta y la tipografía
   if (scope === "cup") document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
-  $("#tab-reg").toggleAttribute("aria-current", false); $("#tab-cup").toggleAttribute("aria-current", false);
-  $(scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
+  ["#tab-reg", "#tab-cup", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
+  $(id === "mis-picks" ? "#tab-mine" : scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
   markTicker(game ? id : null);
   $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
   SEG = game || id.startsWith("todos") ? "all" : "top";
   BS.k = "ev"; BS.asc = false;
-  if (game) renderGame(id); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
+  if (game) renderGame(id); else if (id === "mis-picks") renderMine(); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
 }
 
 // Mi combinada: el usuario junta picks de cualquier parte de la página (botón "+" de cada pick, "Agregar a mi combinada"
@@ -1966,11 +2002,126 @@ function addParlay(ks) {
 let comboMsgT;
 function comboMsg(t) { const m = $("#cb-msg"); m.textContent = t; m.hidden = false; clearTimeout(comboMsgT); comboMsgT = setTimeout(() => { m.hidden = true; }, 3500); openCombo(true); }
 document.addEventListener("click", e => {
-  const a = e.target.closest("[data-addc], [data-addpl]");
+  const a = e.target.closest("[data-addc], [data-addpl], [data-take]");
   if (!a) return;
   e.preventDefault(); e.stopPropagation();
-  if (a.dataset.addc) toggleLeg(a.dataset.addc); else addParlay(PLREG[a.dataset.addpl]);
+  if (a.dataset.take) toggleMine(a.dataset.take); else if (a.dataset.addc) toggleLeg(a.dataset.addc); else addParlay(PLREG[a.dataset.addpl]);
 }, true);
+
+// Mis picks: cada usuario marca "Lo tomo" en los picks recomendados (verdes) que juega. Se guardan solo en este
+// navegador (localStorage "nbap-mine"), se liquidan con legResult a 1 unidad y la cuota publicada, y se pueden
+// exportar/importar en un archivo. Un pick solo se marca o desmarca antes del inicio de su partido.
+let MINE = (() => { try { const x = JSON.parse(ls("nbap-mine") || "[]"); return Array.isArray(x) ? x.filter(okMine) : []; } catch (e) { return []; } })();
+function okMine(l) { return !!(l && typeof l.k === "string" && typeof l.gid === "string" && typeof l.label === "string" && /^\d{4}-\d{2}-\d{2}$/.test(l.date || "") && +l.dec > 1); }
+const isMine = k => MINE.some(l => l.k === k);
+function tipMs(g) {   // hora de inicio (tip_et, hora de Nueva York) en milisegundos UTC
+  if (!g || !/^\d{1,2}:\d{2}$/.test(g.tip_et || "")) return null;
+  const [y, mo, d] = g.date.split("-").map(Number), [h, mi] = g.tip_et.split(":").map(Number), guess = Date.UTC(y, mo - 1, d, h, mi);
+  try {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "2-digit",
+      day: "2-digit", hour: "2-digit", minute: "2-digit" }).formatToParts(new Date(guess)).map(x => [x.type, x.value]));
+    return 2 * guess - Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute);
+  } catch (e) { return guess + 5 * 3600e3; }
+}
+const gameLocked = g => !g || !!g.result || (tipMs(g) ?? Infinity) <= Date.now();
+function takeBtn(k) {
+  const l = LEGREG[k], g = l && INDEX.games.find(x => x.id === l.gid), on = isMine(k), lock = gameLocked(g);
+  if (!l || (lock && !on)) return "";
+  return `<button type="button" class="take" data-take="${esc(k)}" aria-pressed="${on}"${lock ? ` disabled title="El partido ya empezó"` : ` title="${on ? "Quitar de mis picks" : "Agregar a mis picks"}"`}><span class="bx" aria-hidden="true"></span>${on ? "Lo tomé" : "Lo tomo"}</button>`;
+}
+function syncMineCount() { const n = MINE.filter(l => l.date === DAY).length; $("#n-mine").textContent = n || ""; }
+function mineChanged() {
+  ls("nbap-mine", JSON.stringify(MINE)); syncMineCount();
+  document.querySelectorAll("[data-take]").forEach(b => {
+    const on = isMine(b.dataset.take);
+    b.setAttribute("aria-pressed", on); b.lastChild.textContent = on ? "Lo tomé" : "Lo tomo";
+    if (!b.disabled) b.title = on ? "Quitar de mis picks" : "Agregar a mis picks";
+  });
+  if (location.hash === "#mis-picks") renderMine(true);
+}
+function toggleMine(k) {
+  const i = MINE.findIndex(l => l.k === k), src = i >= 0 ? MINE[i] : LEGREG[k], g = src && INDEX.games.find(x => x.id === src.gid);
+  if (!src) return;
+  if (gameLocked(g)) { alert("Ese partido ya empezó: los picks solo se marcan o quitan antes del inicio."); return; }
+  if (i >= 0) MINE.splice(i, 1);
+  else { const { k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec } = src;
+    MINE.push({ k: kk, gid, game, label, kind, player, stat, line, team, side, p, dec, date: g.date, model: INDEX.model || "", at: Date.now() }); }
+  mineChanged();
+}
+addEventListener("storage", e => { if (e.key === "nbap-mine") { try { MINE = JSON.parse(e.newValue || "[]").filter(okMine); } catch (x) { MINE = []; } mineChanged(); } });
+const mineU = (r, dec) => r === "won" ? dec - 1 : r === "lost" ? -1 : 0;
+const sgnU = u => `${u >= 0 ? "+" : "−"}${Math.abs(u).toFixed(2)} u`;
+function mineStats(list) {
+  const t = { n: list.length, w: 0, l: 0, p: 0, pend: 0, u: 0 };
+  list.forEach(x => { if (x.r === "won") t.w++; else if (x.r === "lost") t.l++; else if (x.r === "push") t.p++; else t.pend++; t.u += mineU(x.r, x.l.dec); });
+  t.roi = t.w + t.l ? t.u / (t.w + t.l) : null;
+  return t;
+}
+function renderMine(keepScroll) {
+  const y = scrollY;
+  const rows = MINE.map(l => ({ l, r: legResult(l), g: INDEX.games.find(x => x.id === l.gid) }));
+  const days = [...new Set(rows.map(x => x.l.date))].sort();
+  const hist = Object.fromEntries((INDEX.history || []).map(h => [h.date, h]));
+  const modelOf = d => (hist[d] && hist[d].model) || (rows.find(x => x.l.date === d) || {}).l.model || INDEX.model || "";
+  let cum = 0;
+  const per = days.map(d => { const s = mineStats(rows.filter(x => x.l.date === d)); cum += s.u; return { d, s, cum, model: modelOf(d), h: hist[d] }; });
+  const T = mineStats(rows);
+  const vers = [...new Set(per.map(x => x.model))];
+  const pctTxt = s => s.w + s.l ? (100 * s.w / (s.w + s.l)).toFixed(1) + "%" : "—";
+  const roiTxt = r => r == null ? "—" : `${r >= 0 ? "+" : "−"}${Math.abs(100 * r).toFixed(1)}%`;
+  const rec = s => `${s.w}–${s.l}${s.p ? `–${s.p}` : ""}`;
+  const resCell = x => x.r ? resPill(x.r) : `<span class="muted">${gameLocked(x.g) ? "En juego" : "Pendiente"}</span>`;
+  $("#app").innerHTML = `
+  <section class="section">
+    <span class="eyebrow">Tu historial</span>
+    <h2>Mis picks</h2>
+    <p class="lede">Los picks recomendados que marcaste con <b>Lo tomo</b>, liquidados con el resultado real a 1 unidad cada uno y la cuota publicada. Se guardan solo en este navegador: nadie más los ve, y si cambias de celular o borras los datos del navegador se pierden, así que guarda una copia con <b>Exportar</b> de vez en cuando. Un pick solo se marca o se quita antes de que empiece su partido.</p>
+    ${!MINE.length ? `<div class="panel empty">Aún no has marcado picks. En <a href="#">los picks recomendados de hoy</a> toca <span class="take demo"><span class="bx"></span>Lo tomo</span> en los que juegues.</div>` : `
+    <div class="panel pl-stats mine-kpi">
+      <div class="cell main"><span class="k">Unidades</span><span class="v ${T.u > 0 ? "pos" : T.u < 0 ? "neg" : ""}">${sgnU(T.u)}</span></div>
+      <div class="cell"><span class="k">Ganados–perdidos</span><span class="v">${rec(T)}</span></div>
+      <div class="cell"><span class="k">% acierto</span><span class="v">${pctTxt(T)}</span></div>
+      <div class="cell"><span class="k">ROI</span><span class="v">${roiTxt(T.roi)}</span></div>
+    </div>
+    <p class="muted mine-note">${T.n} pick${T.n === 1 ? "" : "s"} tomado${T.n === 1 ? "" : "s"} en ${days.length} jornada${days.length === 1 ? "" : "s"}${T.pend ? ` · ${T.pend} sin liquidar` : ""}${T.p ? ` · ${T.p} nulo${T.p === 1 ? "" : "s"} (push)` : ""}.${T.w + T.l < 100 ? " Con pocos picks el resultado es sobre todo suerte." : ""}</p>`}
+  </section>
+  ${per.length ? `<section class="section">
+    ${vers.length > 1 ? `<h3>Por versión del modelo</h3>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th class="r">Jornadas</th><th class="r">Ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th></tr></thead><tbody>
+      ${vers.map(v => { const ds = per.filter(x => x.model === v), s = mineStats(rows.filter(x => ds.some(z => z.d === x.l.date))); return `<tr><td class="head"><b>${esc(v)}</b></td><td class="r num" data-label="Jornadas">${ds.length}</td><td class="r num" data-label="Ganados–perdidos">${rec(s)}</td><td class="r num" data-label="% acierto">${pctTxt(s)}</td><td class="r num" data-label="Unidades">${sgnU(s.u)}</td><td class="r num" data-label="ROI">${roiTxt(s.roi)}</td></tr>`; }).join("")}
+    </tbody></table></div>` : ""}
+    <h3>Por jornada</h3>
+    <div class="panel tbl-wrap"><table class="stack mine-tbl"><thead><tr><th>Jornada</th><th>Modelo</th><th class="r">Tomados</th><th class="r">Ganados–perdidos</th><th class="r">Unidades</th><th class="r">Acumulado</th><th class="r">Todos los picks del modelo</th></tr></thead><tbody>
+      ${[...per].reverse().map(x => `<tr><td class="head">${esc(x.d)}</td><td data-label="Modelo">${esc(x.model)}</td><td class="r num" data-label="Tomados">${x.s.n}${x.s.pend ? ` <span class="muted">(${x.s.pend} pend.)</span>` : ""}</td><td class="r num" data-label="Ganados–perdidos">${rec(x.s)}</td><td class="r num" data-label="Unidades">${x.s.w + x.s.l ? sgnU(x.s.u) : "—"}</td><td class="r num" data-label="Acumulado">${sgnU(x.cum)}</td><td class="r num full" data-label="Todos los picks del modelo">${x.h ? `${x.h.picks_won}–${x.h.picks_lost} · ${sgnU(x.h.units)}` : "—"}</td></tr>`).join("")}
+    </tbody></table></div>
+    <h3>Detalle</h3>
+    <div class="mine-days">${[...per].reverse().map((x, i) => `<details class="panel mine-day"${i === 0 ? " open" : ""}><summary><b>${esc(x.d)}</b><span class="num">${rec(x.s)} · ${x.s.w + x.s.l ? sgnU(x.s.u) : "sin liquidar"}</span></summary>
+      <ul class="mine-list">${rows.filter(z => z.l.date === x.d).sort((a, b) => a.l.gid.localeCompare(b.l.gid) || a.l.label.localeCompare(b.l.label)).map(z => `<li>
+        <div><div class="lg">${esc(z.l.label)}</div><a class="kind" href="#${esc(z.l.gid)}">${esc(z.l.game)}</a></div>
+        <div class="lp"><span>Cuota ${(+z.l.dec).toFixed(2)}</span>${resCell(z)}${z.r && z.r !== "push" ? `<span>${sgnU(mineU(z.r, z.l.dec))}</span>` : ""}${!gameLocked(z.g) ? `<button type="button" class="more" data-take="${esc(z.l.k)}" aria-pressed="true"><span class="bx" hidden></span>Quitar</button>` : ""}</div>
+      </li>`).join("")}</ul></details>`).join("")}</div>
+  </section>` : ""}
+  <section class="section">
+    <h3>Copia de seguridad</h3>
+    <p class="lede">Exporta tus picks a un archivo para no perderlos o para pasarlos a otro dispositivo, e impórtalo allá. Al importar se suman a los que ya tengas, sin duplicar.</p>
+    <div class="mine-act"><button type="button" class="btn" id="mine-exp"${MINE.length ? "" : " disabled"}>Exportar</button><label class="btn ghost" for="mine-imp">Importar</label><input type="file" id="mine-imp" accept=".json,application/json" hidden>${MINE.length ? `<button type="button" class="btn ghost" id="mine-clr">Borrar todo</button>` : ""}<span class="muted" id="mine-msg" role="status"></span></div>
+  </section>`;
+  $("#mine-exp").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ app: "nba-predictor", v: 1, exported: new Date().toISOString(), picks: MINE }, null, 1)], { type: "application/json" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `mis-picks-nba-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+  $("#mine-imp").addEventListener("change", e => {
+    const f = e.target.files[0]; if (!f) return;
+    f.text().then(t => {
+      const d = JSON.parse(t), list = (Array.isArray(d) ? d : d.picks || []).filter(okMine), add = list.filter(l => !isMine(l.k));
+      MINE.push(...add); mineChanged(); $("#mine-msg").textContent = `${add.length} pick${add.length === 1 ? "" : "s"} importado${add.length === 1 ? "" : "s"}${list.length > add.length ? ` (${list.length - add.length} ya estaban)` : ""}.`;
+    }).catch(() => { $("#mine-msg").textContent = "Ese archivo no es una copia de Mis picks."; });
+  });
+  const clr = $("#mine-clr");
+  if (clr) clr.addEventListener("click", () => { if (confirm("¿Borrar todos tus picks de este navegador? Exporta antes una copia si quieres conservarlos.")) { MINE = []; mineChanged(); } });
+  if (keepScroll) scrollTo(0, y);
+}
 
 // resultado de una pata: el de la apuesta publicada (index o datos del partido) o, si es una línea propia, el box score
 const fetching = new Set();
@@ -1987,7 +2138,7 @@ function legResult(l) {
     const y = l.kind === "spread" ? sc[T] - sc[O] + l.line : (l.kind === "total" ? sc[g.away] + sc[g.home] : sc[T]) - l.line;
     return y === 0 ? "push" : (l.kind === "spread" || over) === (y > 0) ? "won" : "lost";
   }
-  if (!d) { if (!fetching.has(l.gid)) { fetching.add(l.gid); getJSON(`data/${l.gid}.json`).then(x => { cache[l.gid] = x; drawCombo(); }).catch(() => {}); } return null; }
+  if (!d) { if (!fetching.has(l.gid)) { fetching.add(l.gid); getJSON(`data/${l.gid}.json`).then(x => { cache[l.gid] = x; drawCombo(); if (location.hash === "#mis-picks") renderMine(true); }).catch(() => {}); } return null; }
   const pl = l.player && d.summary.players.find(p => p.name === l.player), a = pl && pl.actual ? pl.actual[l.stat] : undefined;
   if (a === undefined || l.line == null) return null;
   return a === l.line ? "push" : (a > l.line) === l.label.includes(" Over ") ? "won" : "lost";
@@ -2170,7 +2321,7 @@ getJSON("data/index.json").then(d => {
   DAY = dates[0];
   const todays = d.games.filter(g => g.date === DAY);
   const nCup = todays.filter(isCup).length;
-  $("#n-reg").textContent = todays.length - nCup || ""; $("#n-cup").textContent = nCup || "";
+  $("#n-reg").textContent = todays.length - nCup || ""; $("#n-cup").textContent = nCup || ""; syncMineCount();
   const gen = toDate(d.generated);
   $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${gen ? esc(whenTxt(gen)) : ""}${d.last_stage ? ` · ${esc(STAGE[d.last_stage] || "")}` : ""}`;
   const prevDay = dates[1], prev = prevDay ? d.games.filter(g => g.date === prevDay) : [];
