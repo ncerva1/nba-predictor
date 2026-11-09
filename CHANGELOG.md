@@ -1,5 +1,12 @@
 # Cambios del modelo
 
+## Web — 2026-11-09: líneas escalonadas (X+)
+- Pedido de Nicolas: las líneas tipo "31+ puntos @1.30". `ladders` da por jugador (≥ 15 min, juega seguro) la prob.
+  de llegar a cada umbral de PTS, REB, AST, 3PM, PRA, R+A, robos y tapones (50–97%) con su cuota mínima con valor,
+  ajustada en logit con la mezcla de la casa de la línea principal. Sección "Líneas escalonadas (X+)" en cada partido.
+- `fetch_co.py` guarda todas las líneas de cada jugador (antes solo la principal) y las "N+" de un solo lado →
+  `alt_lines` → `alt_bets` en build_site: entran en SGP y soñador, nunca en los picks con valor.
+
 ## Web — 2026-11-09: parlay soñador
 - Pedido de Nicolas: una combinada por jornada con varias líneas de buena probabilidad y cuota total entre 50 y 200.
   `dream_parlay` (build_site.py) toma hasta 10 props por partido (prob. mezclada ≥ 55%, EV ≥ 0, cuota a los dos lados,

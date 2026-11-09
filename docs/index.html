@@ -391,6 +391,15 @@ tr.detail td { background: var(--bg) }
 .mine-act .btn { font-size: 13px; padding: 6px 16px }
 .mine-act label.btn { display: inline-block }
 .btn.ghost:disabled, .btn:disabled { opacity: .5; cursor: default }
+/* líneas escalonadas X+ */
+table.lad td { vertical-align: top; padding: 10px 8px }
+table.lad td.lad-n { width: 28%; min-width: 110px }
+.lad-r { display: flex; flex-wrap: wrap; gap: 6px }
+.lad-c { display: grid; justify-items: center; min-width: 64px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 8px; font: 13px var(--mono); font-variant-numeric: tabular-nums }
+.lad-c small { font-size: 11px; color: var(--muted) }
+.lad-c.casa { border-color: var(--accent) }
+.lad-c.val { border-color: var(--good); background: var(--good-soft) }
+@media (max-width: 640px) { table.lad tr { display: block; border-bottom: 1px solid var(--line) } table.lad td { display: block; border: 0; padding: 6px 4px } table.lad td.lad-n { width: auto; padding-top: 10px } }
 /* picks de inicio agrupados por partido (acordeones) */
 .pgroups { display: grid; gap: 10px }
 .pgroup { background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
@@ -1530,6 +1539,7 @@ async function renderGame(id) {
     <div class="panel tbl-wrap" id="props"></div>
     <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres; DD / TD probabilidad de doble-doble / triple-doble, contando puntos, rebotes, asistencias, robos y tapones); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV. Etiquetas: <b>Rookie</b> = novato, <b>Sin 2025-26</b> = no jugó la temporada pasada (lesión), <b>Sin datos previos</b> = el modelo no tiene su temporada pasada; con tan poca historia sus proyecciones varían mucho más (pasa el cursor o toca la etiqueta para ver el detalle).${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
+  ${ladderSection(d)}
   ${woSection(d)}
   <section class="section" id="crea-pick">
     <h2>Crea tu pick</h2>
@@ -1603,10 +1613,44 @@ async function renderGame(id) {
   addFolds();
   bindPickForm("c", { d });
   woBind(d);
+  ladderBind(d);
   if (d.matchup_view) {
     document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
     mvDraw(d, a);
   }
+}
+
+// Líneas escalonadas "X+" (d.ladders, build_site.ladders): prob. de llegar a cada umbral y cuota mínima con valor;
+// si Rushbet / BetPlay publican ese umbral, su cuota y EV.
+const LAD_STATS = ["pts", "reb", "ast", "fg3m", "pra", "ra", "stl", "blk"];
+let LAD_ST = "pts", LAD_T = null;
+function ladderSection(d) {
+  const L = d.ladders; if (!L || !Object.keys(L).length || d.result) return "";
+  const sts = LAD_STATS.filter(k => Object.values(L).some(p => p[k]));
+  if (!sts.includes(LAD_ST)) LAD_ST = sts[0];
+  return `<section class="section" id="ladder">
+    <h2>Líneas escalonadas (X+)</h2>
+    <p class="lede">Lo que en muchas casas sale como "25+ puntos", "8+ rebotes"…: la probabilidad de que cada jugador llegue al menos a ese número y la <b>cuota mínima</b> que hace falta para que tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). Si tu casa paga más, vale la pena. Cuando la casa tiene la línea principal, la probabilidad ya viene ajustada con su mercado. Solo jugadores que seguro juegan, entre ${pct(0.5, 0)} y ${pct(0.97, 0)}.</p>
+    <div class="filters" role="group" aria-label="Estadística" id="lad-st">${sts.map(k => `<button type="button" data-k="${k}" aria-pressed="${k === LAD_ST}">${STAT_BTN[k] || STAT_LABEL[k]}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Equipo" id="lad-t"><span class="lbl">Equipo</span>${[d.game.away, d.game.home, "all"].map(t => `<button type="button" data-t="${esc(t)}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
+    <div class="panel tbl-wrap" id="lad-body"></div>
+  </section>`;
+}
+function ladderBind(d) {
+  if (!$("#ladder")) return;
+  if (!LAD_T) LAD_T = matchMedia("(max-width: 640px)").matches ? d.game.away : "all";
+  const draw = () => {
+    document.querySelectorAll("#lad-st button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === LAD_ST));
+    document.querySelectorAll("#lad-t button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === LAD_T));
+    const rows = Object.entries(d.ladders).filter(([, p]) => p[LAD_ST] && (LAD_T === "all" || p.team === LAD_T))
+      .sort((x, y) => y[1][LAD_ST].at(-1)[0] - x[1][LAD_ST].at(-1)[0]);
+    $("#lad-body").innerHTML = rows.length ? `<table class="lad"><tbody>${rows.map(([n, p]) => `<tr><td class="lad-n"><b>${esc(n)}</b> <span class="muted">${esc(p.team)}</span></td>
+      <td><div class="lad-r">${p[LAD_ST].map(([k, q, mn, dc, ev]) => `<span class="lad-c${dc ? (ev >= INDEX.value_ev ? " val" : " casa") : ""}" title="${k}+ ${esc(STAT_LABEL[LAD_ST])}: ${pct(q)}; cuota mínima ${mn.toFixed(2)}${dc ? ` · casa ${dc.toFixed(2)}, EV ${(ev * 100).toFixed(1)}%` : ""}"><b>${k}+</b> ${pct(q, 0)}<small>${dc ? `casa @${dc.toFixed(2)}` : `mín @${mn.toFixed(2)}`}</small></span>`).join("")}</div></td></tr>`).join("")}</tbody></table>`
+      : `<div class="empty">Ningún jugador con esa estadística.</div>`;
+  };
+  document.querySelectorAll("#lad-st button").forEach(b => b.addEventListener("click", () => { LAD_ST = b.dataset.k; draw(); }));
+  document.querySelectorAll("#lad-t button").forEach(b => b.addEventListener("click", () => { LAD_T = b.dataset.t; draw(); }));
+  draw();
 }
 
 // "Sin un jugador" (d.without, de without.py): cómo cambian los compañeros si un jugador no juega.

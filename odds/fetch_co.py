@@ -11,7 +11,7 @@ Cada casa entra en odds/<fecha>.json con "region": "CO" y las cuotas en formato 
 para que la cuota decimal original se recupere exacta). build_site.py las usa como una casa más y además
 muestra la mejor casa colombiana de cada apuesta.
 """
-import json, os, sys, time, urllib.request
+import re, json, os, sys, time, urllib.request
 from datetime import datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -136,12 +136,27 @@ def to_prop_lines(co):
     return out
 
 
+def to_alt_lines(co):
+    """Líneas alternativas de las casas CO: {jugador: {stat: [[línea, over, under|None], ...]}} con la mejor cuota de
+    cada lado entre las dos casas. Incluye la principal (build_site la salta)."""
+    best = lambda a, b: a if b is None else b if a is None else max(a, b, key=lambda o: o if o > 0 else 10000 / -o)
+    out = {}
+    for g in co.values():
+        for b in g["books"]:
+            for p in b.get("alt_props", []):
+                d = out.setdefault(player_name(p["player"]), {}).setdefault(p["stat"], {})
+                for ln, o, u in p["lines"]:
+                    cur = d.get(ln, [None, None])
+                    d[ln] = [best(cur[0], o), best(cur[1], u)]
+    return {n: {st: [[ln] + v for ln, v in sorted(d.items())] for st, d in sts.items()} for n, sts in out.items()}
+
+
 def parse_event(data):
     ev = data["events"][0]
     home, away = team(ev.get("homeName")), team(ev.get("awayName"))
     if not home or not away:
         return None, None
-    rec, cand, props = {}, {"spread": [], "total": []}, {}
+    rec, cand, props, alts = {}, {"spread": [], "total": []}, {}, {}
     for bo in data.get("betOffers", []):
         crit = (bo.get("criterion", {}).get("englishLabel") or bo.get("criterion", {}).get("label") or "").lower()
         typ = (bo.get("betOfferType", {}).get("englishName") or "").lower()
@@ -170,6 +185,16 @@ def parse_event(data):
                 UNMAPPED.add(crit)
             ov = next((o for o in outs if o.get("type") == "OT_OVER"), None)
             un = next((o for o in outs if o.get("type") == "OT_UNDER"), None)
+            if stat and ov and ov.get("line") is not None:  # todas las líneas (alternativas), también las de un solo lado
+                who = ov.get("participant") or bo.get("participant") or ""
+                alts.setdefault((who, stat), {})[ov["line"] / 1000] = [american(ov["odds"] / 1000),
+                                                                      american(un["odds"] / 1000) if un else None]
+            if stat:  # líneas escalonadas "25+" (un outcome por umbral, solo se apuesta al sí)
+                for o in outs:
+                    m = re.match(r"^\s*(\d+)\s*\+\s*$", o.get("englishLabel") or o.get("label") or "")
+                    who = o.get("participant") or bo.get("participant") or ""
+                    if m and who:
+                        alts.setdefault((who, stat), {}).setdefault(int(m.group(1)) - 0.5, [american(o["odds"] / 1000), None])
             if stat and ov and un and ov.get("line") is not None:
                 key = (ov.get("participant") or bo.get("participant") or "", stat)
                 cur = props.get(key)
@@ -198,6 +223,9 @@ def parse_event(data):
         rec["total"] = [ov["line"] / 1000, american(ov["odds"] / 1000), american(un["odds"] / 1000)]
     if props:
         rec["props"] = [v[1] for v in props.values()]
+    if alts:  # líneas alternativas por jugador: [{player, stat, lines: [[línea, over, under|None], ...]}]
+        rec["alt_props"] = [dict(player=k[0], stat=k[1], lines=[[ln] + v for ln, v in sorted(d.items())])
+                            for k, d in alts.items() if len(d) > 1 or k not in props]
     return f"{away}@{home}", rec
 
 
@@ -247,8 +275,14 @@ def merge_props(date, co):
             if st not in pl.get(name, {}):
                 pl.setdefault(name, {})[st] = v
                 n += 1
+    al, na = sl.setdefault("alt_lines", {}), 0  # líneas alternativas / escalonadas (soñador y SGP)
+    for name, stats in to_alt_lines(co).items():
+        name = known.get(norm(name), name)
+        for st, v in stats.items():
+            al.setdefault(name, {})[st] = v
+            na += len(v)
     src = sl.setdefault("sources", {})
-    src["props_co"] = f"Rushbet / BetPlay (Kambi): {n} líneas añadidas"
+    src["props_co"] = f"Rushbet / BetPlay (Kambi): {n} líneas añadidas, {na} líneas alternativas"
     json.dump(sl, open(path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(f"{n} props CO añadidas a {path}")
 
