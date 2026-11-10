@@ -19,6 +19,9 @@ Cada jornada se publica tres veces (tareas programadas en la nube, hora de Colom
 | `results` | madrugada (~3:10) | box scores reales de AYER en `results/AYER.json`, `evaluate.py`; picks, SGP y parlays entre partidos quedan liquidados | `python build_site.py AYER --stage results --for AYER` |
 | `morning` | mañana (~11:20) | partidos de HOY con BD, bajas, H2H y cuotas; programa la revisión de bajas | `python build_site.py HOY --sims 40000 --stage morning --for HOY` |
 | `pregame` | 30-60 min antes del primer partido | bajas de última hora (ESPN injuries); re-simula solo si algo cambió | `python build_site.py HOY --sims 40000 --stage pregame --for HOY` |
+| `pregame` (horaria) | cada hora después, mientras queden partidos por empezar | bajas y cuotas de los partidos aún sin empezar; re-simula y publica solo si algo cambió; se detiene sola | `python build_site.py HOY_<AWAY>@<HOME> ... --sims 40000 --stage pregame --for HOY` |
+
+**Revisiones horarias (10-nov):** la tarea de la mañana programa la primera revisión 45 min antes del primer partido con el prompt de `tareas/revision_bajas_cuotas.txt` (cambia FECHA y DETALLE). Cada revisión mira bajas y cuotas solo de los partidos que aún no empiezan y, al terminar, se reprograma una vez (dentro de 60 min, o 30 min antes del siguiente partido si es antes) mientras quede algún partido que empiece más de 40 min después; si no queda ninguno, no programa nada y la cadena se acaba. Para cambiar lo que hacen las revisiones basta editar ese archivo.
 
 Para solo marcar una etapa sin re-simular nada: `python build_site.py ninguno --stage pregame --for HOY` (un filtro
 que no coincide con ningún partido reconstruye solo `index.json`). `index.json` guarda `updates` = `{jornada: {etapa:
