@@ -295,8 +295,8 @@
    ],
    "fg3m": [
     1.5,
-    -125,
-    114
+    -145,
+    116
    ]
   },
   "Karl-Anthony Towns": {
@@ -401,7 +401,7 @@
    "reb": [
     3.5,
     105,
-    104
+    -106
    ],
    "ast": [
     4.5,
@@ -691,9 +691,9 @@
     130
    ],
    "fg3m": [
-    1.5,
-    -160,
-    140
+    2.5,
+    154,
+    -155
    ]
   },
   "Rui Hachimura": {
@@ -781,8 +781,8 @@
    ],
    "ast": [
     5.5,
-    -105,
-    100
+    -115,
+    107
    ],
    "fg3m": [
     0.5,
@@ -842,7 +842,7 @@
    ],
    "reb": [
     4.5,
-    -105,
+    -115,
     100
    ],
    "ast": [
@@ -906,8 +906,8 @@
   "Payton Pritchard": {
    "pts": [
     12.5,
-    -105,
-    100
+    100,
+    -109
    ],
    "reb": [
     3.5,
@@ -1146,7 +1146,7 @@
    "reb": [
     4.5,
     -112,
-    -105
+    101
    ],
    "ast": [
     1.5,
@@ -1199,8 +1199,8 @@
    ],
    "fg3m": [
     1.5,
-    100,
-    100
+    107,
+    -120
    ]
   },
   "Andrew Wiggins": {
@@ -1401,8 +1401,8 @@
    ],
    "reb": [
     1.5,
-    -130,
-    102
+    -135,
+    105
    ],
    "ast": [
     3.5,
@@ -1670,8 +1670,8 @@
   "Kobe Sanders": {
    "pts": [
     7.5,
-    102,
-    -105
+    -104,
+    -110
    ],
    "reb": [
     2.5,
@@ -1693,7 +1693,7 @@
    "pts": [
     6.5,
     105,
-    -103
+    -107
    ],
    "reb": [
     5.5,
@@ -1889,8 +1889,8 @@
    ],
    "ast": [
     0.5,
-    -110,
-    -115
+    -105,
+    -120
    ],
    "fg3m": [
     0.5,
@@ -1957,10 +1957,14 @@
    "tip_et": "20:00",
    "venue": "Xfinity Mobile Arena, Philadelphia",
    "market": {
-    "ml_home": -101,
-    "ml_away": -117,
+    "ml_home": -106,
+    "ml_away": -111,
     "spread_home": 1.5,
-    "total": 218.5
+    "total": 217.5,
+    "spread_odds_home": -120,
+    "spread_odds_away": -101,
+    "over_odds": -112,
+    "under_odds": -108
    },
    "b2b": [],
    "adj": {},
@@ -1984,10 +1988,14 @@
    "tip_et": "21:00",
    "venue": "Mortgage Matchup Center, Phoenix",
    "market": {
-    "ml_home": -167,
-    "ml_away": 140,
+    "ml_home": -170,
+    "ml_away": 143,
     "spread_home": -3.5,
-    "total": 224.5
+    "total": 224.5,
+    "spread_odds_home": -108,
+    "spread_odds_away": -112,
+    "over_odds": -115,
+    "under_odds": -105
    },
    "b2b": [
     "PHX"
@@ -2020,9 +2028,13 @@
    "venue": "Delta Center, Salt Lake City",
    "market": {
     "ml_home": 312,
-    "ml_away": -395,
+    "ml_away": -396,
     "spread_home": 9.5,
-    "total": 227.5
+    "total": 227.5,
+    "spread_odds_home": -118,
+    "spread_odds_away": -103,
+    "over_odds": -110,
+    "under_odds": -110
    },
    "b2b": [],
    "adj": {
@@ -2056,10 +2068,14 @@
    "tip_et": "22:00",
    "venue": "Golden 1 Center, Sacramento",
    "market": {
-    "ml_home": 190,
-    "ml_away": -229,
-    "spread_home": 6.5,
-    "total": 222.5
+    "ml_home": 196,
+    "ml_away": -237,
+    "spread_home": 5.5,
+    "total": 222.5,
+    "spread_odds_home": -106,
+    "spread_odds_away": -115,
+    "over_odds": -110,
+    "under_odds": -110
    },
    "b2b": [],
    "adj": {},
@@ -2089,10 +2105,14 @@
    "tip_et": "23:00",
    "venue": "Moda Center, Portland",
    "market": {
-    "ml_home": 110,
-    "ml_away": -130,
-    "spread_home": 1.5,
-    "total": 225.5
+    "ml_home": 120,
+    "ml_away": -142,
+    "spread_home": 2.5,
+    "total": 226.5,
+    "spread_odds_home": -110,
+    "spread_odds_away": -110,
+    "over_odds": -105,
+    "under_odds": -115
    },
    "b2b": [],
    "adj": {},

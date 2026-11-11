@@ -1103,10 +1103,14 @@
  ],
  "market": {
   "source": "NBA.com/games 10-nov (6 partidos de liga); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET; LAC@PHX solo 5 casas); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-10 (mejor cuota por lado) y puntos de bet365 en Covers para MIL@NYK",
-  "ml_home": 190,
-  "ml_away": -229,
-  "spread_home": 6.5,
-  "total": 222.5
+  "ml_home": 196,
+  "ml_away": -237,
+  "spread_home": 5.5,
+  "total": 222.5,
+  "spread_odds_home": -106,
+  "spread_odds_away": -115,
+  "over_odds": -110,
+  "under_odds": -110
  },
  "prop_lines": {
   "Darius Acuff Jr.": {
@@ -1263,8 +1267,8 @@
    ],
    "ast": [
     5.5,
-    -105,
-    100
+    -115,
+    107
    ],
    "fg3m": [
     0.5,
@@ -1280,7 +1284,7 @@
    ],
    "reb": [
     4.5,
-    -105,
+    -115,
     100
    ],
    "ast": [
@@ -1367,8 +1371,8 @@
    ],
    "reb": [
     1.5,
-    -130,
-    102
+    -135,
+    105
    ],
    "ast": [
     3.5,

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T00:14+00:00",
+ "generated": "2026-11-11T00:35+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -58,7 +58,7 @@
   },
   "2026-11-10": {
    "morning": "2026-11-10T16:29+00:00",
-   "pregame": "2026-11-11T00:14+00:00"
+   "pregame": "2026-11-11T00:35+00:00"
   }
  },
  "history": [
@@ -87680,7 +87680,7 @@
    },
    "proj_total": 223.9,
    "used_db": true,
-   "n_value": 3,
+   "n_value": 2,
    "top_bets": [
     {
      "kind": "prop",
@@ -87841,61 +87841,23 @@
     },
     {
      "kind": "prop",
-     "label": "Payton Pritchard Under 12.5 Puntos",
-     "player": "Payton Pritchard",
-     "team": "BOS",
-     "line": 12.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.549,
-     "implied": 0.5,
-     "fair": -122,
-     "edge": 0.049,
-     "ev": 0.098,
-     "value": true,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.715,
-     "p_mkt": 0.494,
-     "cand": true,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 3,
-       "value": 22.2,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Kentavious Caldwell-Pope Over 0.5 Asistencias",
      "player": "Kentavious Caldwell-Pope",
      "team": "PHI",
      "line": 0.5,
-     "odds": -110,
-     "dec": 1.909,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.569,
-     "implied": 0.524,
-     "fair": -132,
-     "edge": 0.045,
-     "ev": 0.086,
+     "p": 0.561,
+     "implied": 0.512,
+     "fair": -128,
+     "edge": 0.048,
+     "ev": 0.095,
      "value": true,
      "stat": "ast",
      "side": "over",
      "p_model": 0.79,
-     "p_mkt": 0.495,
+     "p_mkt": 0.484,
      "cand": true,
      "hr": {
       "l10": [
@@ -88015,20 +87977,6 @@
      "legs": [
       {
        "kind": "prop",
-       "label": "Kentavious Caldwell-Pope Over 0.5 Asistencias",
-       "player": "Kentavious Caldwell-Pope",
-       "team": "PHI",
-       "line": 0.5,
-       "stat": "ast",
-       "side": "over",
-       "p": 0.569,
-       "dec": 1.909,
-       "ev": 0.086,
-       "gid": "2026-11-10-BOS-at-PHI",
-       "game": "BOS @ PHI"
-      },
-      {
-       "kind": "prop",
        "label": "Dean Wade Over 0.5 Asistencias",
        "player": "Dean Wade",
        "team": "PHI",
@@ -88057,6 +88005,20 @@
       },
       {
        "kind": "prop",
+       "label": "Paul George Under 3.5 Asistencias",
+       "player": "Paul George",
+       "team": "BOS",
+       "line": 3.5,
+       "stat": "ast",
+       "side": "under",
+       "p": 0.563,
+       "dec": 1.8,
+       "ev": 0.013,
+       "gid": "2026-11-10-BOS-at-PHI",
+       "game": "BOS @ PHI"
+      },
+      {
+       "kind": "prop",
        "label": "Anfernee Simons Over 6.5 Puntos",
        "player": "Anfernee Simons",
        "team": "PHI",
@@ -88071,12 +88033,12 @@
       }
      ],
      "n": 4,
-     "p": 0.105,
-     "p_indep": 0.102,
+     "p": 0.104,
+     "p_indep": 0.101,
      "corr": 1.03,
-     "dec": 12.48,
-     "fair": 9.52,
-     "ev": 0.311,
+     "dec": 11.77,
+     "fair": 9.61,
+     "ev": 0.224,
      "type": "sgp"
     }
    ],
@@ -89136,59 +89098,22 @@
     },
     {
      "kind": "prop",
-     "label": "Payton Pritchard Under 12.5 Puntos",
-     "player": "Payton Pritchard",
-     "team": "BOS",
-     "line": 12.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.549,
-     "implied": 0.5,
-     "edge": 0.049,
-     "ev": 0.098,
-     "value": true,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.715,
-     "p_mkt": 0.494,
-     "cand": true,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 3,
-       "value": 22.2,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Kentavious Caldwell-Pope Over 0.5 Asistencias",
      "player": "Kentavious Caldwell-Pope",
      "team": "PHI",
      "line": 0.5,
-     "odds": -110,
-     "dec": 1.909,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.569,
-     "implied": 0.524,
-     "edge": 0.045,
-     "ev": 0.086,
+     "p": 0.561,
+     "implied": 0.512,
+     "edge": 0.048,
+     "ev": 0.095,
      "value": true,
      "stat": "ast",
      "side": "over",
      "p_model": 0.79,
-     "p_mkt": 0.495,
+     "p_mkt": 0.484,
      "cand": true,
      "hr": {
       "l10": [
@@ -89204,6 +89129,43 @@
        "rank": 16,
        "value": 5.5,
        "lg": 5.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Payton Pritchard Under 12.5 Puntos",
+     "player": "Payton Pritchard",
+     "team": "BOS",
+     "line": 12.5,
+     "odds": -109,
+     "dec": 1.917,
+     "odds_assumed": false,
+     "p": 0.562,
+     "implied": 0.522,
+     "edge": 0.04,
+     "ev": 0.077,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.715,
+     "p_mkt": 0.511,
+     "cand": true,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 3,
+       "value": 22.2,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -90210,6 +90172,33 @@
      }
     },
     {
+     "kind": "ml",
+     "label": "BOS gana",
+     "player": null,
+     "team": "BOS",
+     "line": null,
+     "odds": -119,
+     "dec": 1.838,
+     "odds_assumed": false,
+     "p": 0.554,
+     "implied": 0.544,
+     "edge": 0.01,
+     "ev": 0.018,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "scoresandodds (consenso 19:35 ET)",
+      "line": null,
+      "odds": -111,
+      "dec": 1.901,
+      "p": 0.554,
+      "ev": 0.053
+     },
+     "p_model": 0.652,
+     "p_mkt": 0.521,
+     "cand": false
+    },
+    {
      "kind": "prop",
      "label": "Jaylen Brown Under 6.5 Rebotes",
      "player": "Jaylen Brown",
@@ -90321,57 +90310,30 @@
      }
     },
     {
-     "kind": "ml",
-     "label": "BOS gana",
-     "player": null,
-     "team": "BOS",
-     "line": null,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.555,
-     "implied": 0.545,
-     "edge": 0.009,
-     "ev": 0.017,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "Hard Rock Bet",
-      "line": null,
-      "odds": -115,
-      "dec": 1.87,
-      "p": 0.555,
-      "ev": 0.038
-     },
-     "p_model": 0.652,
-     "p_mkt": 0.522,
-     "cand": false
-    },
-    {
      "kind": "spread",
      "label": "BOS -1.5",
      "player": null,
      "team": "BOS",
      "line": -1.5,
-     "odds": -110,
-     "dec": 1.908,
+     "odds": -109,
+     "dec": 1.914,
      "odds_assumed": false,
-     "p": 0.531,
-     "implied": 0.524,
+     "p": 0.53,
+     "implied": 0.522,
      "edge": 0.007,
-     "ev": 0.013,
+     "ev": 0.014,
      "value": false,
      "n_books": 10,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": -1.5,
-      "odds": -107,
-      "dec": 1.935,
-      "p": 0.531,
-      "ev": 0.027
+      "odds": -101,
+      "dec": 1.99,
+      "p": 0.53,
+      "ev": 0.055
      },
      "p_model": 0.623,
-     "p_mkt": 0.5,
+     "p_mkt": 0.499,
      "cand": false
     },
     {
@@ -90425,7 +90387,7 @@
      "edge": 0.006,
      "ev": 0.011,
      "value": false,
-     "n_books": 8,
+     "n_books": 9,
      "best": {
       "book": "BetMGM",
       "line": 217.5,
@@ -92080,7 +92042,7 @@
      "edge": -0.053,
      "ev": -0.102,
      "value": false,
-     "n_books": 8,
+     "n_books": 9,
      "best": {
       "book": "BetRivers",
       "line": 218.5,
@@ -92136,11 +92098,11 @@
      "player": null,
      "team": "PHI",
      "line": 1.5,
-     "odds": -110,
-     "dec": 1.908,
+     "odds": -111,
+     "dec": 1.903,
      "odds_assumed": false,
-     "p": 0.469,
-     "implied": 0.524,
+     "p": 0.47,
+     "implied": 0.525,
      "edge": -0.055,
      "ev": -0.105,
      "value": false,
@@ -92150,11 +92112,11 @@
       "line": 1.5,
       "odds": -108,
       "dec": 1.926,
-      "p": 0.469,
-      "ev": -0.097
+      "p": 0.47,
+      "ev": -0.095
      },
      "p_model": 0.377,
-     "p_mkt": 0.5,
+     "p_mkt": 0.501,
      "cand": false
     },
     {
@@ -92163,13 +92125,13 @@
      "player": null,
      "team": "PHI",
      "line": null,
-     "odds": 101,
-     "dec": 2.005,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.445,
-     "implied": 0.499,
+     "p": 0.446,
+     "implied": 0.5,
      "edge": -0.054,
-     "ev": -0.107,
+     "ev": -0.108,
      "value": false,
      "n_books": 10,
      "best": {
@@ -92177,11 +92139,11 @@
       "line": null,
       "odds": 106,
       "dec": 2.06,
-      "p": 0.445,
-      "ev": -0.083
+      "p": 0.446,
+      "ev": -0.081
      },
      "p_model": 0.348,
-     "p_mkt": 0.478,
+     "p_mkt": 0.479,
      "cand": false
     },
     {
@@ -92264,18 +92226,18 @@
      "player": "Payton Pritchard",
      "team": "BOS",
      "line": 12.5,
-     "odds": -105,
-     "dec": 1.952,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.451,
-     "implied": 0.512,
-     "edge": -0.061,
-     "ev": -0.12,
+     "p": 0.438,
+     "implied": 0.5,
+     "edge": -0.062,
+     "ev": -0.123,
      "value": false,
      "stat": "pts",
      "side": "over",
      "p_model": 0.285,
-     "p_mkt": 0.506,
+     "p_mkt": 0.489,
      "cand": false,
      "hr": {
       "l10": [
@@ -92782,18 +92744,18 @@
      "player": "Kentavious Caldwell-Pope",
      "team": "PHI",
      "line": 0.5,
-     "odds": -115,
-     "dec": 1.87,
+     "odds": -120,
+     "dec": 1.833,
      "odds_assumed": false,
-     "p": 0.431,
-     "implied": 0.535,
-     "edge": -0.103,
-     "ev": -0.193,
+     "p": 0.439,
+     "implied": 0.545,
+     "edge": -0.106,
+     "ev": -0.195,
      "value": false,
      "stat": "ast",
      "side": "under",
      "p_model": 0.21,
-     "p_mkt": 0.505,
+     "p_mkt": 0.516,
      "cand": false,
      "hr": {
       "l10": [
@@ -93134,7 +93096,7 @@
    },
    "proj_total": 230.1,
    "used_db": true,
-   "n_value": 4,
+   "n_value": 5,
    "top_bets": [
     {
      "kind": "prop",
@@ -93261,6 +93223,44 @@
    "value_bets": [
     {
      "kind": "prop",
+     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 4.5,
+     "odds": 101,
+     "dec": 2.01,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.498,
+     "fair": -128,
+     "edge": 0.064,
+     "ev": 0.128,
+     "value": true,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.79,
+     "p_mkt": 0.485,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 25,
+       "value": 9.1,
+       "lg": 8.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Brook Lopez Under 5.5 Rebotes",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -93299,23 +93299,61 @@
     },
     {
      "kind": "prop",
-     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 4.5,
-     "odds": -105,
-     "dec": 1.952,
+     "label": "Devin Booker Over 3.5 Rebotes",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 3.5,
+     "odds": 120,
+     "dec": 2.2,
      "odds_assumed": false,
-     "p": 0.567,
-     "implied": 0.512,
+     "p": 0.493,
+     "implied": 0.455,
+     "fair": 103,
+     "edge": 0.038,
+     "ev": 0.084,
+     "value": true,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.577,
+     "p_mkt": 0.465,
+     "cand": true,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 4,
+       "value": 4.1,
+       "lg": 5.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Oso Ighodaro Under 5.5 Rebotes",
+     "player": "Oso Ighodaro",
+     "team": "PHX",
+     "line": 5.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.568,
+     "implied": 0.524,
      "fair": -131,
-     "edge": 0.054,
-     "ev": 0.106,
+     "edge": 0.044,
+     "ev": 0.084,
      "value": true,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.79,
-     "p_mkt": 0.492,
+     "p_model": 0.718,
+     "p_mkt": 0.518,
      "cand": true,
      "hr": {
       "l10": [
@@ -93324,13 +93362,13 @@
       ],
       "h2h": [
        3,
-       3
+       4
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 25,
-       "value": 9.1,
-       "lg": 8.1,
+       "pos": "C",
+       "rank": 18,
+       "value": 15.3,
+       "lg": 14.9,
        "n": 30
       }
      }
@@ -93341,19 +93379,19 @@
      "player": "Oso Ighodaro",
      "team": "PHX",
      "line": 6.5,
-     "odds": -103,
-     "dec": 1.971,
+     "odds": -107,
+     "dec": 1.935,
      "odds_assumed": false,
-     "p": 0.556,
-     "implied": 0.507,
-     "fair": -125,
-     "edge": 0.049,
-     "ev": 0.096,
+     "p": 0.56,
+     "implied": 0.517,
+     "fair": -127,
+     "edge": 0.043,
+     "ev": 0.083,
      "value": true,
      "stat": "pts",
      "side": "under",
      "p_model": 0.695,
-     "p_mkt": 0.51,
+     "p_mkt": 0.514,
      "cand": true,
      "hr": {
       "l10": [
@@ -93369,44 +93407,6 @@
        "rank": 18,
        "value": 22.1,
        "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Kobe Sanders Over 7.5 Puntos",
-     "player": "Kobe Sanders",
-     "team": "LAC",
-     "line": 7.5,
-     "odds": 102,
-     "dec": 2.02,
-     "odds_assumed": false,
-     "p": 0.541,
-     "implied": 0.495,
-     "fair": -118,
-     "edge": 0.046,
-     "ev": 0.093,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.69,
-     "p_mkt": 0.491,
-     "cand": true,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 28.1,
-       "lg": 24.0,
        "n": 30
       }
      }
@@ -93471,15 +93471,15 @@
       },
       {
        "kind": "prop",
-       "label": "Derrick Jones Jr. Under 4.5 Rebotes",
-       "player": "Derrick Jones Jr.",
-       "team": "LAC",
-       "line": 4.5,
+       "label": "Oso Ighodaro Under 5.5 Rebotes",
+       "player": "Oso Ighodaro",
+       "team": "PHX",
+       "line": 5.5,
        "stat": "reb",
        "side": "under",
-       "p": 0.567,
-       "dec": 1.952,
-       "ev": 0.106,
+       "p": 0.568,
+       "dec": 1.909,
+       "ev": 0.084,
        "gid": "2026-11-10-LAC-at-PHX",
        "game": "LAC @ PHX"
       },
@@ -93499,12 +93499,12 @@
       }
      ],
      "n": 3,
-     "p": 0.186,
+     "p": 0.185,
      "p_indep": 0.185,
      "corr": 1.0,
-     "dec": 6.86,
-     "fair": 5.39,
-     "ev": 0.273,
+     "dec": 6.71,
+     "fair": 5.4,
+     "ev": 0.241,
      "type": "sgp"
     }
    ],
@@ -94241,6 +94241,43 @@
     },
     {
      "kind": "prop",
+     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 4.5,
+     "odds": 101,
+     "dec": 2.01,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.498,
+     "edge": 0.064,
+     "ev": 0.128,
+     "value": true,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.79,
+     "p_mkt": 0.485,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 25,
+       "value": 9.1,
+       "lg": 8.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Brook Lopez Under 5.5 Rebotes",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -94316,43 +94353,6 @@
     },
     {
      "kind": "prop",
-     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 4.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.567,
-     "implied": 0.512,
-     "edge": 0.054,
-     "ev": 0.106,
-     "value": true,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.79,
-     "p_mkt": 0.492,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 25,
-       "value": 9.1,
-       "lg": 8.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Miles Bridges Under 7.5 Rebotes",
      "player": "Miles Bridges",
      "team": "PHX",
@@ -94391,80 +94391,6 @@
     },
     {
      "kind": "prop",
-     "label": "Oso Ighodaro Under 6.5 Puntos",
-     "player": "Oso Ighodaro",
-     "team": "PHX",
-     "line": 6.5,
-     "odds": -103,
-     "dec": 1.971,
-     "odds_assumed": false,
-     "p": 0.556,
-     "implied": 0.507,
-     "edge": 0.049,
-     "ev": 0.096,
-     "value": true,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.695,
-     "p_mkt": 0.51,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 18,
-       "value": 22.1,
-       "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Kobe Sanders Over 7.5 Puntos",
-     "player": "Kobe Sanders",
-     "team": "LAC",
-     "line": 7.5,
-     "odds": 102,
-     "dec": 2.02,
-     "odds_assumed": false,
-     "p": 0.541,
-     "implied": 0.495,
-     "edge": 0.046,
-     "ev": 0.093,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.69,
-     "p_mkt": 0.491,
-     "cand": true,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 28.1,
-       "lg": 24.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Devin Booker Over 3.5 Rebotes",
      "player": "Devin Booker",
      "team": "PHX",
@@ -94476,7 +94402,7 @@
      "implied": 0.455,
      "edge": 0.038,
      "ev": 0.084,
-     "value": false,
+     "value": true,
      "stat": "reb",
      "side": "over",
      "p_model": 0.577,
@@ -94513,7 +94439,7 @@
      "implied": 0.524,
      "edge": 0.044,
      "ev": 0.084,
-     "value": false,
+     "value": true,
      "stat": "reb",
      "side": "under",
      "p_model": 0.718,
@@ -94533,6 +94459,43 @@
        "rank": 18,
        "value": 15.3,
        "lg": 14.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Oso Ighodaro Under 6.5 Puntos",
+     "player": "Oso Ighodaro",
+     "team": "PHX",
+     "line": 6.5,
+     "odds": -107,
+     "dec": 1.935,
+     "odds_assumed": false,
+     "p": 0.56,
+     "implied": 0.517,
+     "edge": 0.043,
+     "ev": 0.083,
+     "value": true,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.695,
+     "p_mkt": 0.514,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 18,
+       "value": 22.1,
+       "lg": 21.9,
        "n": 30
       }
      }
@@ -94581,12 +94544,12 @@
      "team": "LAC",
      "line": null,
      "odds": 152,
-     "dec": 2.515,
+     "dec": 2.52,
      "odds_assumed": false,
      "p": 0.426,
-     "implied": 0.398,
+     "implied": 0.397,
      "edge": 0.029,
-     "ev": 0.072,
+     "ev": 0.073,
      "value": false,
      "n_books": 6,
      "best": {
@@ -94598,7 +94561,7 @@
       "ev": 0.091
      },
      "p_model": 0.563,
-     "p_mkt": 0.381,
+     "p_mkt": 0.38,
      "cand": false,
      "no_value_why": "picks de equipo en pausa"
     },
@@ -94672,6 +94635,43 @@
        "rank": 14,
        "value": 2.7,
        "lg": 2.7,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Kobe Sanders Over 7.5 Puntos",
+     "player": "Kobe Sanders",
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -104,
+     "dec": 1.962,
+     "odds_assumed": false,
+     "p": 0.542,
+     "implied": 0.51,
+     "edge": 0.033,
+     "ev": 0.064,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.69,
+     "p_mkt": 0.493,
+     "cand": true,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 28.1,
+       "lg": 24.0,
        "n": 30
       }
      }
@@ -95431,12 +95431,12 @@
      "value": false,
      "n_books": 5,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": 224.5,
-      "odds": -108,
-      "dec": 1.926,
+      "odds": -115,
+      "dec": 1.87,
       "p": 0.555,
-      "ev": 0.069
+      "ev": 0.038
      },
      "p_model": 0.568,
      "p_mkt": 0.498,
@@ -96729,43 +96729,6 @@
     },
     {
      "kind": "prop",
-     "label": "Oso Ighodaro Over 6.5 Puntos",
-     "player": "Oso Ighodaro",
-     "team": "PHX",
-     "line": 6.5,
-     "odds": 105,
-     "dec": 2.05,
-     "odds_assumed": false,
-     "p": 0.444,
-     "implied": 0.488,
-     "edge": -0.044,
-     "ev": -0.09,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.305,
-     "p_mkt": 0.49,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 18,
-       "value": 22.1,
-       "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Khaman Maluach Over 5.5 Rebotes",
      "player": "Khaman Maluach",
      "team": "PHX",
@@ -96834,6 +96797,43 @@
        "rank": 15,
        "value": 22.5,
        "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Oso Ighodaro Over 6.5 Puntos",
+     "player": "Oso Ighodaro",
+     "team": "PHX",
+     "line": 6.5,
+     "odds": 105,
+     "dec": 2.05,
+     "odds_assumed": false,
+     "p": 0.44,
+     "implied": 0.488,
+     "edge": -0.047,
+     "ev": -0.097,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.305,
+     "p_mkt": 0.486,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       4
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 18,
+       "value": 22.1,
+       "lg": 21.9,
        "n": 30
       }
      }
@@ -96945,43 +96945,6 @@
        "rank": 1,
        "value": 1.4,
        "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Kobe Sanders Under 7.5 Puntos",
-     "player": "Kobe Sanders",
-     "team": "LAC",
-     "line": 7.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.459,
-     "implied": 0.512,
-     "edge": -0.053,
-     "ev": -0.104,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.31,
-     "p_mkt": 0.509,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 28.1,
-       "lg": 24.0,
        "n": 30
       }
      }
@@ -97103,25 +97066,25 @@
      "player": null,
      "team": "PHX",
      "line": null,
-     "odds": -183,
-     "dec": 1.546,
+     "odds": -184,
+     "dec": 1.544,
      "odds_assumed": false,
      "p": 0.574,
-     "implied": 0.647,
+     "implied": 0.648,
      "edge": -0.073,
      "ev": -0.113,
      "value": false,
      "n_books": 6,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": null,
-      "odds": -167,
-      "dec": 1.599,
+      "odds": -170,
+      "dec": 1.588,
       "p": 0.574,
-      "ev": -0.082
+      "ev": -0.088
      },
      "p_model": 0.437,
-     "p_mkt": 0.619,
+     "p_mkt": 0.62,
      "cand": false
     },
     {
@@ -97277,6 +97240,43 @@
      }
     },
     {
+     "kind": "prop",
+     "label": "Kobe Sanders Under 7.5 Puntos",
+     "player": "Kobe Sanders",
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.458,
+     "implied": 0.524,
+     "edge": -0.066,
+     "ev": -0.126,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.31,
+     "p_mkt": 0.507,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 28.1,
+       "lg": 24.0,
+       "n": 30
+      }
+     }
+    },
+    {
      "kind": "spread",
      "label": "PHX -4.5",
      "player": null,
@@ -97292,7 +97292,7 @@
      "value": false,
      "n_books": 5,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": -3.5,
       "odds": -108,
       "dec": 1.926,
@@ -97349,15 +97349,15 @@
      "odds": -112,
      "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.433,
+     "p": 0.439,
      "implied": 0.528,
-     "edge": -0.095,
-     "ev": -0.18,
+     "edge": -0.09,
+     "ev": -0.169,
      "value": false,
      "stat": "reb",
      "side": "over",
      "p_model": 0.21,
-     "p_mkt": 0.508,
+     "p_mkt": 0.515,
      "cand": false,
      "hr": {
       "l10": [
@@ -97969,7 +97969,7 @@
    },
    "proj_total": 236.0,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 2,
    "top_bets": [
     {
      "kind": "prop",
@@ -98092,27 +98092,27 @@
    "value_bets": [
     {
      "kind": "prop",
-     "label": "Ace Bailey Under 1.5 Triples",
+     "label": "Ace Bailey Under 2.5 Triples",
      "player": "Ace Bailey",
      "team": "UTA",
-     "line": 1.5,
-     "odds": 140,
-     "dec": 2.4,
+     "line": 2.5,
+     "odds": -155,
+     "dec": 1.645,
      "odds_assumed": false,
-     "p": 0.481,
-     "implied": 0.417,
-     "fair": 108,
-     "edge": 0.064,
-     "ev": 0.153,
+     "p": 0.677,
+     "implied": 0.608,
+     "fair": -210,
+     "edge": 0.07,
+     "ev": 0.114,
      "value": true,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.711,
-     "p_mkt": 0.404,
+     "p_model": 0.889,
+     "p_mkt": 0.607,
      "cand": true,
      "hr": {
       "l10": [
-       8,
+       9,
        10
       ],
       "h2h": [
@@ -98127,11 +98127,63 @@
        "n": 30
       }
      }
+    },
+    {
+     "kind": "prop",
+     "label": "Jaxson Hayes Over 8.5 Puntos",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 8.5,
+     "odds": -119,
+     "dec": 1.84,
+     "odds_assumed": false,
+     "p": 0.589,
+     "implied": 0.543,
+     "fair": -143,
+     "edge": 0.045,
+     "ev": 0.083,
+     "value": true,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.807,
+     "p_mkt": 0.516,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 19,
+       "value": 22.1,
+       "lg": 21.9,
+       "n": 30
+      }
+     }
     }
    ],
    "parlays": [
     {
      "legs": [
+      {
+       "kind": "prop",
+       "label": "Ace Bailey Under 2.5 Triples",
+       "player": "Ace Bailey",
+       "team": "UTA",
+       "line": 2.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.677,
+       "dec": 1.645,
+       "ev": 0.114,
+       "gid": "2026-11-10-MIA-at-UTA",
+       "game": "MIA @ UTA"
+      },
       {
        "kind": "prop",
        "label": "Josh Green Under 1.5 Triples",
@@ -98145,29 +98197,15 @@
        "ev": 0.025,
        "gid": "2026-11-10-MIA-at-UTA",
        "game": "MIA @ UTA"
-      },
-      {
-       "kind": "prop",
-       "label": "Jaxson Hayes Over 8.5 Puntos",
-       "player": "Jaxson Hayes",
-       "team": "UTA",
-       "line": 8.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.589,
-       "dec": 1.84,
-       "ev": 0.083,
-       "gid": "2026-11-10-MIA-at-UTA",
-       "game": "MIA @ UTA"
       }
      ],
      "n": 2,
-     "p": 0.38,
-     "p_indep": 0.382,
-     "corr": 0.99,
-     "dec": 2.91,
-     "fair": 2.63,
-     "ev": 0.104,
+     "p": 0.44,
+     "p_indep": 0.439,
+     "corr": 1.0,
+     "dec": 2.6,
+     "fair": 2.28,
+     "ev": 0.143,
      "type": "sgp"
     }
    ],
@@ -99118,43 +99156,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Under 1.5 Triples",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 1.5,
-     "odds": 140,
-     "dec": 2.4,
-     "odds_assumed": false,
-     "p": 0.481,
-     "implied": 0.417,
-     "edge": 0.064,
-     "ev": 0.153,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.711,
-     "p_mkt": 0.404,
-     "cand": true,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 20,
-       "value": 2.8,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Davion Mitchell Under 2.5 Rebotes",
      "player": "Davion Mitchell",
      "team": "MIA",
@@ -99311,6 +99312,43 @@
     },
     {
      "kind": "prop",
+     "label": "Ace Bailey Under 2.5 Triples",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 2.5,
+     "odds": -155,
+     "dec": 1.645,
+     "odds_assumed": false,
+     "p": 0.677,
+     "implied": 0.608,
+     "edge": 0.07,
+     "ev": 0.114,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.889,
+     "p_mkt": 0.607,
+     "cand": true,
+     "hr": {
+      "l10": [
+       9,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 20,
+       "value": 2.8,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Jaxson Hayes Over 8.5 Puntos",
      "player": "Jaxson Hayes",
      "team": "UTA",
@@ -99322,7 +99360,7 @@
      "implied": 0.543,
      "edge": 0.045,
      "ev": 0.083,
-     "value": false,
+     "value": true,
      "stat": "pts",
      "side": "over",
      "p_model": 0.807,
@@ -99921,12 +99959,12 @@
      "value": false,
      "n_books": 7,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": 227.5,
-      "odds": -106,
-      "dec": 1.943,
+      "odds": -110,
+      "dec": 1.909,
       "p": 0.554,
-      "ev": 0.076
+      "ev": 0.058
      },
      "p_model": 0.645,
      "p_mkt": 0.5,
@@ -100634,6 +100672,33 @@
      }
     },
     {
+     "kind": "spread",
+     "label": "MIA -9.5",
+     "player": null,
+     "team": "MIA",
+     "line": -9.5,
+     "odds": -110,
+     "dec": 1.908,
+     "odds_assumed": false,
+     "p": 0.501,
+     "implied": 0.524,
+     "edge": -0.023,
+     "ev": -0.043,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "scoresandodds (consenso 19:35 ET)",
+      "line": -9.5,
+      "odds": -103,
+      "dec": 1.971,
+      "p": 0.501,
+      "ev": -0.013
+     },
+     "p_model": 0.505,
+     "p_mkt": 0.5,
+     "cand": false
+    },
+    {
      "kind": "prop",
      "label": "Davion Mitchell Over 13.5 Puntos",
      "player": "Davion Mitchell",
@@ -100671,33 +100736,6 @@
      }
     },
     {
-     "kind": "spread",
-     "label": "MIA -9.5",
-     "player": null,
-     "team": "MIA",
-     "line": -9.5,
-     "odds": -110,
-     "dec": 1.906,
-     "odds_assumed": false,
-     "p": 0.502,
-     "implied": 0.525,
-     "edge": -0.023,
-     "ev": -0.044,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
-      "line": -9.5,
-      "odds": -105,
-      "dec": 1.952,
-      "p": 0.502,
-      "ev": -0.02
-     },
-     "p_model": 0.505,
-     "p_mkt": 0.501,
-     "cand": false
-    },
-    {
      "kind": "ml",
      "label": "MIA gana",
      "player": null,
@@ -100713,42 +100751,15 @@
      "value": false,
      "n_books": 10,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
+      "book": "scoresandodds (consenso 19:35 ET)",
       "line": null,
-      "odds": -395,
+      "odds": -396,
       "dec": 1.253,
       "p": 0.773,
       "ev": -0.031
      },
      "p_model": 0.76,
      "p_mkt": 0.778,
-     "cand": false
-    },
-    {
-     "kind": "spread",
-     "label": "UTA +9.5",
-     "player": null,
-     "team": "UTA",
-     "line": 9.5,
-     "odds": -110,
-     "dec": 1.911,
-     "odds_assumed": false,
-     "p": 0.498,
-     "implied": 0.523,
-     "edge": -0.025,
-     "ev": -0.048,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "FanDuel",
-      "line": 9.5,
-      "odds": -105,
-      "dec": 1.952,
-      "p": 0.498,
-      "ev": -0.028
-     },
-     "p_model": 0.494,
-     "p_mkt": 0.499,
      "cand": false
     },
     {
@@ -100828,6 +100839,33 @@
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
      }
+    },
+    {
+     "kind": "spread",
+     "label": "UTA +9.5",
+     "player": null,
+     "team": "UTA",
+     "line": 9.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.498,
+     "implied": 0.524,
+     "edge": -0.025,
+     "ev": -0.049,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "FanDuel",
+      "line": 9.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.498,
+      "ev": -0.028
+     },
+     "p_model": 0.494,
+     "p_mkt": 0.5,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -101676,43 +101714,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Over 1.5 Triples",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 1.5,
-     "odds": -160,
-     "dec": 1.625,
-     "odds_assumed": false,
-     "p": 0.519,
-     "implied": 0.615,
-     "edge": -0.096,
-     "ev": -0.156,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.289,
-     "p_mkt": 0.596,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 20,
-       "value": 2.8,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Bobby Portis Jr. Under 7.5 Puntos",
      "player": "Bobby Portis Jr.",
      "team": "MIA",
@@ -101818,6 +101819,43 @@
        "rank": 4,
        "value": 9.4,
        "lg": 10.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Over 2.5 Triples",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 2.5,
+     "odds": 154,
+     "dec": 2.54,
+     "odds_assumed": false,
+     "p": 0.323,
+     "implied": 0.394,
+     "edge": -0.071,
+     "ev": -0.181,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.111,
+     "p_mkt": 0.393,
+     "cand": false,
+     "hr": {
+      "l10": [
+       1,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 20,
+       "value": 2.8,
+       "lg": 2.6,
        "n": 30
       }
      }
@@ -102322,16 +102360,16 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.559,
+     "p": 0.551,
      "implied": 0.5,
-     "fair": -127,
-     "edge": 0.059,
-     "ev": 0.118,
+     "fair": -123,
+     "edge": 0.051,
+     "ev": 0.102,
      "value": true,
      "stat": "reb",
      "side": "under",
      "p_model": 0.754,
-     "p_mkt": 0.494,
+     "p_mkt": 0.483,
      "cand": true,
      "hr": {
       "l10": [
@@ -102357,19 +102395,19 @@
      "player": "Domantas Sabonis",
      "team": "SAC",
      "line": 5.5,
-     "odds": 100,
-     "dec": 2.0,
+     "odds": 107,
+     "dec": 2.07,
      "odds_assumed": false,
-     "p": 0.544,
-     "implied": 0.5,
-     "fair": -119,
-     "edge": 0.044,
-     "ev": 0.087,
+     "p": 0.529,
+     "implied": 0.483,
+     "fair": -112,
+     "edge": 0.046,
+     "ev": 0.095,
      "value": true,
      "stat": "ast",
      "side": "under",
      "p_model": 0.693,
-     "p_mkt": 0.494,
+     "p_mkt": 0.475,
      "cand": true,
      "hr": {
       "l10": [
@@ -102395,19 +102433,19 @@
      "player": "Malik Monk",
      "team": "SAC",
      "line": 1.5,
-     "odds": 102,
-     "dec": 2.02,
+     "odds": 105,
+     "dec": 2.05,
      "odds_assumed": false,
-     "p": 0.538,
-     "implied": 0.495,
-     "fair": -117,
-     "edge": 0.043,
-     "ev": 0.087,
+     "p": 0.532,
+     "implied": 0.488,
+     "fair": -114,
+     "edge": 0.045,
+     "ev": 0.091,
      "value": true,
      "stat": "reb",
      "side": "under",
      "p_model": 0.752,
-     "p_mkt": 0.467,
+     "p_mkt": 0.459,
      "cand": true,
      "hr": {
       "l10": [
@@ -103371,43 +103409,6 @@
     },
     {
      "kind": "prop",
-     "label": "De'Andre Hunter Under 4.5 Rebotes",
-     "player": "De'Andre Hunter",
-     "team": "SAC",
-     "line": 4.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.559,
-     "implied": 0.5,
-     "edge": 0.059,
-     "ev": 0.118,
-     "value": true,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.754,
-     "p_mkt": 0.494,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 1,
-       "value": 5.7,
-       "lg": 8.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Jase Richardson Under 2.5 Rebotes",
      "player": "Jase Richardson",
      "team": "ORL",
@@ -103440,6 +103441,43 @@
        "rank": 22,
        "value": 7.0,
        "lg": 6.7,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "De'Andre Hunter Under 4.5 Rebotes",
+     "player": "De'Andre Hunter",
+     "team": "SAC",
+     "line": 4.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.551,
+     "implied": 0.5,
+     "edge": 0.051,
+     "ev": 0.102,
+     "value": true,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.754,
+     "p_mkt": 0.483,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 1,
+       "value": 5.7,
+       "lg": 8.1,
        "n": 30
       }
      }
@@ -103488,18 +103526,18 @@
      "player": "Domantas Sabonis",
      "team": "SAC",
      "line": 5.5,
-     "odds": 100,
-     "dec": 2.0,
+     "odds": 107,
+     "dec": 2.07,
      "odds_assumed": false,
-     "p": 0.544,
-     "implied": 0.5,
-     "edge": 0.044,
-     "ev": 0.087,
+     "p": 0.529,
+     "implied": 0.483,
+     "edge": 0.046,
+     "ev": 0.095,
      "value": true,
      "stat": "ast",
      "side": "under",
      "p_model": 0.693,
-     "p_mkt": 0.494,
+     "p_mkt": 0.475,
      "cand": true,
      "hr": {
       "l10": [
@@ -103525,18 +103563,18 @@
      "player": "Malik Monk",
      "team": "SAC",
      "line": 1.5,
-     "odds": 102,
-     "dec": 2.02,
+     "odds": 105,
+     "dec": 2.05,
      "odds_assumed": false,
-     "p": 0.538,
-     "implied": 0.495,
-     "edge": 0.043,
-     "ev": 0.087,
+     "p": 0.532,
+     "implied": 0.488,
+     "edge": 0.045,
+     "ev": 0.091,
      "value": true,
      "stat": "reb",
      "side": "under",
      "p_model": 0.752,
-     "p_mkt": 0.467,
+     "p_mkt": 0.459,
      "cand": true,
      "hr": {
       "l10": [
@@ -105007,11 +105045,11 @@
      "player": null,
      "team": "SAC",
      "line": null,
-     "odds": 188,
-     "dec": 2.884,
+     "odds": 189,
+     "dec": 2.89,
      "odds_assumed": false,
-     "p": 0.333,
-     "implied": 0.347,
+     "p": 0.332,
+     "implied": 0.346,
      "edge": -0.014,
      "ev": -0.041,
      "value": false,
@@ -105021,11 +105059,11 @@
       "line": null,
       "odds": 200,
       "dec": 3.0,
-      "p": 0.333,
-      "ev": -0.001
+      "p": 0.332,
+      "ev": -0.004
      },
      "p_model": 0.334,
-     "p_mkt": 0.332,
+     "p_mkt": 0.331,
      "cand": false
     },
     {
@@ -105108,11 +105146,11 @@
      "player": null,
      "team": "ORL",
      "line": null,
-     "odds": -230,
-     "dec": 1.434,
+     "odds": -231,
+     "dec": 1.432,
      "odds_assumed": false,
-     "p": 0.667,
-     "implied": 0.697,
+     "p": 0.668,
+     "implied": 0.698,
      "edge": -0.03,
      "ev": -0.043,
      "value": false,
@@ -105122,38 +105160,11 @@
       "line": null,
       "odds": -225,
       "dec": 1.444,
-      "p": 0.667,
-      "ev": -0.037
+      "p": 0.668,
+      "ev": -0.035
      },
      "p_model": 0.666,
-     "p_mkt": 0.668,
-     "cand": false
-    },
-    {
-     "kind": "spread",
-     "label": "ORL -5.5",
-     "player": null,
-     "team": "ORL",
-     "line": -5.5,
-     "odds": -115,
-     "dec": 1.868,
-     "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.535,
-     "edge": -0.023,
-     "ev": -0.043,
-     "value": false,
-     "n_books": 8,
-     "best": {
-      "book": "BetRivers",
-      "line": -5.5,
-      "odds": -112,
-      "dec": 1.893,
-      "p": 0.512,
-      "ev": -0.031
-     },
-     "p_model": 0.516,
-     "p_mkt": 0.511,
+     "p_mkt": 0.669,
      "cand": false
     },
     {
@@ -105192,6 +105203,33 @@
        "n": 30
       }
      }
+    },
+    {
+     "kind": "spread",
+     "label": "ORL -5.5",
+     "player": null,
+     "team": "ORL",
+     "line": -5.5,
+     "odds": -115,
+     "dec": 1.868,
+     "odds_assumed": false,
+     "p": 0.512,
+     "implied": 0.535,
+     "edge": -0.023,
+     "ev": -0.044,
+     "value": false,
+     "n_books": 9,
+     "best": {
+      "book": "BetRivers",
+      "line": -5.5,
+      "odds": -112,
+      "dec": 1.893,
+      "p": 0.512,
+      "ev": -0.031
+     },
+     "p_model": 0.516,
+     "p_mkt": 0.511,
+     "cand": false
     },
     {
      "kind": "prop",
@@ -105274,14 +105312,14 @@
      "team": "SAC",
      "line": 5.5,
      "odds": -105,
-     "dec": 1.95,
+     "dec": 1.949,
      "odds_assumed": false,
      "p": 0.488,
      "implied": 0.513,
      "edge": -0.025,
      "ev": -0.049,
      "value": false,
-     "n_books": 8,
+     "n_books": 9,
      "best": {
       "book": "Fanatics",
       "line": 5.5,
@@ -106081,43 +106119,6 @@
     },
     {
      "kind": "prop",
-     "label": "Domantas Sabonis Over 5.5 Asistencias",
-     "player": "Domantas Sabonis",
-     "team": "SAC",
-     "line": 5.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.456,
-     "implied": 0.512,
-     "edge": -0.056,
-     "ev": -0.109,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.307,
-     "p_mkt": 0.506,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 26,
-       "value": 5.5,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Anthony Black Under 16.5 Puntos",
      "player": "Anthony Black",
      "team": "ORL",
@@ -106266,6 +106267,43 @@
     },
     {
      "kind": "prop",
+     "label": "Domantas Sabonis Over 5.5 Asistencias",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 5.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.471,
+     "implied": 0.535,
+     "edge": -0.064,
+     "ev": -0.12,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.307,
+     "p_mkt": 0.525,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 26,
+       "value": 5.5,
+       "lg": 4.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Malik Monk Over 8.5 Puntos",
      "player": "Malik Monk",
      "team": "SAC",
@@ -106334,43 +106372,6 @@
        "rank": 13,
        "value": 19.7,
        "lg": 20.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "De'Andre Hunter Over 4.5 Rebotes",
-     "player": "De'Andre Hunter",
-     "team": "SAC",
-     "line": 4.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.441,
-     "implied": 0.512,
-     "edge": -0.071,
-     "ev": -0.139,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.246,
-     "p_mkt": 0.506,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 1,
-       "value": 5.7,
-       "lg": 8.1,
        "n": 30
       }
      }
@@ -106478,6 +106479,43 @@
     },
     {
      "kind": "prop",
+     "label": "De'Andre Hunter Over 4.5 Rebotes",
+     "player": "De'Andre Hunter",
+     "team": "SAC",
+     "line": 4.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.449,
+     "implied": 0.535,
+     "edge": -0.086,
+     "ev": -0.16,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.246,
+     "p_mkt": 0.517,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 1,
+       "value": 5.7,
+       "lg": 8.1,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Precious Achiuwa Over 0.5 Triples",
      "player": "Precious Achiuwa",
      "team": "SAC",
@@ -106519,18 +106557,18 @@
      "player": "Malik Monk",
      "team": "SAC",
      "line": 1.5,
-     "odds": -130,
-     "dec": 1.769,
+     "odds": -135,
+     "dec": 1.741,
      "odds_assumed": false,
-     "p": 0.462,
-     "implied": 0.565,
-     "edge": -0.103,
-     "ev": -0.183,
+     "p": 0.468,
+     "implied": 0.574,
+     "edge": -0.107,
+     "ev": -0.186,
      "value": false,
      "stat": "reb",
      "side": "over",
      "p_model": 0.248,
-     "p_mkt": 0.533,
+     "p_mkt": 0.541,
      "cand": false,
      "hr": {
       "l10": [
@@ -106916,7 +106954,7 @@
    },
    "proj_total": 227.9,
    "used_db": true,
-   "n_value": 3,
+   "n_value": 1,
    "top_bets": [
     {
      "kind": "prop",
@@ -107039,120 +107077,40 @@
    "value_bets": [
     {
      "kind": "prop",
-     "label": "Deni Avdija Under 1.5 Triples",
-     "player": "Deni Avdija",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 114,
-     "dec": 2.14,
-     "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.467,
-     "fair": -105,
-     "edge": 0.045,
-     "ev": 0.097,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.679,
-     "p_mkt": 0.457,
-     "cand": true,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 25,
-       "value": 3.1,
-       "lg": 2.7,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Scoot Henderson Under 1.5 Triples",
-     "player": "Scoot Henderson",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.548,
-     "implied": 0.5,
-     "fair": -121,
-     "edge": 0.048,
-     "ev": 0.097,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.693,
-     "p_mkt": 0.5,
-     "cand": true,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 13,
-       "value": 3.5,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Damian Lillard Under 3.5 Rebotes",
-     "player": "Damian Lillard",
-     "team": "POR",
+     "label": "Isaiah Hartenstein Under 3.5 Asistencias",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
      "line": 3.5,
-     "odds": 104,
-     "dec": 2.04,
+     "odds": 118,
+     "dec": 2.18,
      "odds_assumed": false,
-     "p": 0.533,
-     "implied": 0.49,
-     "fair": -114,
-     "edge": 0.043,
-     "ev": 0.088,
+     "p": 0.496,
+     "implied": 0.459,
+     "fair": 102,
+     "edge": 0.037,
+     "ev": 0.081,
      "value": true,
-     "stat": "reb",
+     "stat": "ast",
      "side": "under",
-     "p_model": 0.63,
-     "p_mkt": 0.501,
+     "p_model": 0.548,
+     "p_mkt": 0.478,
      "cand": true,
      "hr": {
       "l10": [
-       5,
-       9
+       6,
+       10
       ],
       "h2h": [
-       0,
-       0
+       2,
+       2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 17,
-       "value": 6.5,
-       "lg": 6.7,
+       "pos": "C",
+       "rank": 27,
+       "value": 5.6,
+       "lg": 4.3,
        "n": 30
       }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
      }
     }
    ],
@@ -108033,121 +107991,6 @@
     },
     {
      "kind": "prop",
-     "label": "Deni Avdija Under 1.5 Triples",
-     "player": "Deni Avdija",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 114,
-     "dec": 2.14,
-     "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.467,
-     "edge": 0.045,
-     "ev": 0.097,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.679,
-     "p_mkt": 0.457,
-     "cand": true,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 25,
-       "value": 3.1,
-       "lg": 2.7,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Scoot Henderson Under 1.5 Triples",
-     "player": "Scoot Henderson",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.548,
-     "implied": 0.5,
-     "edge": 0.048,
-     "ev": 0.097,
-     "value": true,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.693,
-     "p_mkt": 0.5,
-     "cand": true,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 13,
-       "value": 3.5,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Damian Lillard Under 3.5 Rebotes",
-     "player": "Damian Lillard",
-     "team": "POR",
-     "line": 3.5,
-     "odds": 104,
-     "dec": 2.04,
-     "odds_assumed": false,
-     "p": 0.533,
-     "implied": 0.49,
-     "edge": 0.043,
-     "ev": 0.088,
-     "value": true,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.63,
-     "p_mkt": 0.501,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 17,
-       "value": 6.5,
-       "lg": 6.7,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Isaiah Hartenstein Under 3.5 Asistencias",
      "player": "Isaiah Hartenstein",
      "team": "OKC",
@@ -108159,7 +108002,7 @@
      "implied": 0.459,
      "edge": 0.037,
      "ev": 0.081,
-     "value": false,
+     "value": true,
      "stat": "ast",
      "side": "under",
      "p_model": 0.548,
@@ -108179,6 +108022,43 @@
        "rank": 27,
        "value": 5.6,
        "lg": 4.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Under 1.5 Triples",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 1.5,
+     "odds": 116,
+     "dec": 2.16,
+     "odds_assumed": false,
+     "p": 0.499,
+     "implied": 0.463,
+     "edge": 0.036,
+     "ev": 0.078,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.679,
+     "p_mkt": 0.439,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       4,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 25,
+       "value": 3.1,
+       "lg": 2.7,
        "n": 30
       }
      }
@@ -108340,6 +108220,47 @@
     },
     {
      "kind": "prop",
+     "label": "Damian Lillard Under 3.5 Rebotes",
+     "player": "Damian Lillard",
+     "team": "POR",
+     "line": 3.5,
+     "odds": -106,
+     "dec": 1.943,
+     "odds_assumed": false,
+     "p": 0.543,
+     "implied": 0.515,
+     "edge": 0.028,
+     "ev": 0.054,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.63,
+     "p_mkt": 0.513,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 17,
+       "value": 6.5,
+       "lg": 6.7,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Kenrich Williams Under 4.5 Rebotes",
      "player": "Kenrich Williams",
      "team": "OKC",
@@ -108414,6 +108335,43 @@
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Scoot Henderson Under 1.5 Triples",
+     "player": "Scoot Henderson",
+     "team": "POR",
+     "line": 1.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.571,
+     "implied": 0.545,
+     "edge": 0.025,
+     "ev": 0.047,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.693,
+     "p_mkt": 0.53,
+     "cand": true,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 13,
+       "value": 3.5,
+       "lg": 3.6,
+       "n": 30
+      }
      }
     },
     {
@@ -109509,11 +109467,11 @@
      "player": null,
      "team": "OKC",
      "line": null,
-     "odds": -128,
-     "dec": 1.781,
+     "odds": -129,
+     "dec": 1.775,
      "odds_assumed": false,
-     "p": 0.559,
-     "implied": 0.561,
+     "p": 0.561,
+     "implied": 0.563,
      "edge": -0.002,
      "ev": -0.004,
      "value": false,
@@ -109523,11 +109481,11 @@
       "line": null,
       "odds": -122,
       "dec": 1.82,
-      "p": 0.559,
-      "ev": 0.017
+      "p": 0.561,
+      "ev": 0.021
      },
      "p_model": 0.623,
-     "p_mkt": 0.538,
+     "p_mkt": 0.54,
      "cand": false
     },
     {
@@ -109537,14 +109495,14 @@
      "team": "OKC",
      "line": -1.5,
      "odds": -113,
-     "dec": 1.884,
+     "dec": 1.886,
      "odds_assumed": false,
      "p": 0.528,
-     "implied": 0.531,
+     "implied": 0.53,
      "edge": -0.002,
      "ev": -0.004,
      "value": false,
-     "n_books": 6,
+     "n_books": 5,
      "best": {
       "book": "BetRivers",
       "line": -1.5,
@@ -109554,7 +109512,7 @@
       "ev": 0.017
      },
      "p_model": 0.594,
-     "p_mkt": 0.507,
+     "p_mkt": 0.506,
      "cand": false
     },
     {
@@ -109970,25 +109928,25 @@
      "player": null,
      "team": null,
      "line": 226.5,
-     "odds": -110,
-     "dec": 1.911,
+     "odds": -109,
+     "dec": 1.916,
      "odds_assumed": false,
-     "p": 0.506,
-     "implied": 0.523,
-     "edge": -0.018,
-     "ev": -0.034,
+     "p": 0.505,
+     "implied": 0.522,
+     "edge": -0.017,
+     "ev": -0.033,
      "value": false,
-     "n_books": 8,
+     "n_books": 9,
      "best": {
-      "book": "scoresandodds (consenso 18:55 ET)",
-      "line": 225.5,
-      "odds": -107,
-      "dec": 1.935,
-      "p": 0.525,
-      "ev": 0.016
+      "book": "scoresandodds (consenso 19:35 ET)",
+      "line": 226.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.505,
+      "ev": -0.014
      },
      "p_model": 0.525,
-     "p_mkt": 0.499,
+     "p_mkt": 0.498,
      "cand": false
     },
     {
@@ -110178,47 +110136,6 @@
        "lg": 21.9,
        "n": 30
       }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Damian Lillard Over 3.5 Rebotes",
-     "player": "Damian Lillard",
-     "team": "POR",
-     "line": 3.5,
-     "odds": 105,
-     "dec": 2.05,
-     "odds_assumed": false,
-     "p": 0.467,
-     "implied": 0.488,
-     "edge": -0.021,
-     "ev": -0.044,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.37,
-     "p_mkt": 0.499,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 17,
-       "value": 6.5,
-       "lg": 6.7,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
      }
     },
     {
@@ -110466,24 +110383,24 @@
      "team": null,
      "line": 226.5,
      "odds": -111,
-     "dec": 1.904,
+     "dec": 1.9,
      "odds_assumed": false,
-     "p": 0.494,
-     "implied": 0.525,
+     "p": 0.495,
+     "implied": 0.526,
      "edge": -0.031,
      "ev": -0.059,
      "value": false,
-     "n_books": 8,
+     "n_books": 9,
      "best": {
       "book": "BetMGM",
       "line": 226.5,
       "odds": -110,
       "dec": 1.909,
-      "p": 0.494,
-      "ev": -0.057
+      "p": 0.495,
+      "ev": -0.055
      },
      "p_model": 0.475,
-     "p_mkt": 0.501,
+     "p_mkt": 0.502,
      "cand": false
     },
     {
@@ -110558,6 +110475,47 @@
        "lg": 4.4,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Damian Lillard Over 3.5 Rebotes",
+     "player": "Damian Lillard",
+     "team": "POR",
+     "line": 3.5,
+     "odds": 105,
+     "dec": 2.05,
+     "odds_assumed": false,
+     "p": 0.457,
+     "implied": 0.488,
+     "edge": -0.03,
+     "ev": -0.062,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.37,
+     "p_mkt": 0.487,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 17,
+       "value": 6.5,
+       "lg": 6.7,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 9 partidos esta temporada"
      }
     },
     {
@@ -110980,6 +110938,33 @@
      }
     },
     {
+     "kind": "ml",
+     "label": "POR gana",
+     "player": null,
+     "team": "POR",
+     "line": null,
+     "odds": 109,
+     "dec": 2.086,
+     "odds_assumed": false,
+     "p": 0.439,
+     "implied": 0.479,
+     "edge": -0.04,
+     "ev": -0.084,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "scoresandodds (consenso 19:35 ET)",
+      "line": null,
+      "odds": 120,
+      "dec": 2.2,
+      "p": 0.439,
+      "ev": -0.034
+     },
+     "p_model": 0.377,
+     "p_mkt": 0.46,
+     "cand": false
+    },
+    {
      "kind": "prop",
      "label": "Jared McCain Under 3.5 Rebotes",
      "player": "Jared McCain",
@@ -111054,33 +111039,6 @@
      }
     },
     {
-     "kind": "ml",
-     "label": "POR gana",
-     "player": null,
-     "team": "POR",
-     "line": null,
-     "odds": 108,
-     "dec": 2.076,
-     "odds_assumed": false,
-     "p": 0.441,
-     "implied": 0.482,
-     "edge": -0.041,
-     "ev": -0.085,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "BetMGM",
-      "line": null,
-      "odds": 110,
-      "dec": 2.1,
-      "p": 0.441,
-      "ev": -0.074
-     },
-     "p_model": 0.377,
-     "p_mkt": 0.462,
-     "cand": false
-    },
-    {
      "kind": "prop",
      "label": "Aday Mara Over 6.5 Rebotes",
      "player": "Aday Mara",
@@ -111128,24 +111086,24 @@
      "team": "POR",
      "line": 1.5,
      "odds": -107,
-     "dec": 1.934,
+     "dec": 1.932,
      "odds_assumed": false,
      "p": 0.472,
-     "implied": 0.517,
-     "edge": -0.045,
+     "implied": 0.518,
+     "edge": -0.046,
      "ev": -0.088,
      "value": false,
-     "n_books": 6,
+     "n_books": 5,
      "best": {
-      "book": "Caesars",
-      "line": 2.0,
-      "odds": -105,
-      "dec": 1.952,
-      "p": 0.485,
-      "ev": -0.053
+      "book": "scoresandodds (consenso 19:35 ET)",
+      "line": 2.5,
+      "odds": -110,
+      "dec": 1.909,
+      "p": 0.503,
+      "ev": -0.04
      },
      "p_model": 0.406,
-     "p_mkt": 0.493,
+     "p_mkt": 0.494,
      "cand": false
     },
     {
@@ -111187,43 +111145,6 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Scoot Henderson Over 1.5 Triples",
-     "player": "Scoot Henderson",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.452,
-     "implied": 0.5,
-     "edge": -0.048,
-     "ev": -0.097,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.307,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 13,
-       "value": 3.5,
-       "lg": 3.6,
-       "n": 30
-      }
      }
     },
     {
@@ -111606,6 +111527,43 @@
     },
     {
      "kind": "prop",
+     "label": "Scoot Henderson Over 1.5 Triples",
+     "player": "Scoot Henderson",
+     "team": "POR",
+     "line": 1.5,
+     "odds": 107,
+     "dec": 2.07,
+     "odds_assumed": false,
+     "p": 0.429,
+     "implied": 0.483,
+     "edge": -0.054,
+     "ev": -0.112,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.307,
+     "p_mkt": 0.47,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 13,
+       "value": 3.5,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Sidy Cissoko Over 2.5 Rebotes",
      "player": "Sidy Cissoko",
      "team": "POR",
@@ -111637,43 +111595,6 @@
        "rank": 13,
        "value": 8.0,
        "lg": 8.1,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Deni Avdija Over 1.5 Triples",
-     "player": "Deni Avdija",
-     "team": "POR",
-     "line": 1.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.488,
-     "implied": 0.556,
-     "edge": -0.068,
-     "ev": -0.122,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.321,
-     "p_mkt": 0.543,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 25,
-       "value": 3.1,
-       "lg": 2.7,
        "n": 30
       }
      }
@@ -111859,6 +111780,43 @@
        "rank": 17,
        "value": 15.2,
        "lg": 14.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Over 1.5 Triples",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 1.5,
+     "odds": -145,
+     "dec": 1.69,
+     "odds_assumed": false,
+     "p": 0.501,
+     "implied": 0.592,
+     "edge": -0.091,
+     "ev": -0.153,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.321,
+     "p_mkt": 0.561,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 25,
+       "value": 3.1,
+       "lg": 2.7,
        "n": 30
       }
      }
