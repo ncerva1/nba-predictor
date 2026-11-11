@@ -763,7 +763,7 @@ def dream_units(pl):
 
 def settle_parlay(pl, results):
     """won / lost / push (todas anuladas) / None si falta algún partido."""
-    from evaluate import settle
+    from evaluate import actual_line, settle
     rs = []
     for l in pl["legs"]:
         res = results.get(l["gid"])
@@ -771,6 +771,9 @@ def settle_parlay(pl, results):
             return None
         x = settle(l, res["game"], res["res"])
         l["result"] = "push" if x is None else ("won" if x else "lost")
+        if l["kind"] == "prop" and l.get("stat"):  # lo que hizo de verdad (la web lo muestra en jornadas pasadas)
+            al = actual_line(res["res"]["players"], l["player"])
+            l["actual"] = al.get(l["stat"]) if al and al["min"] > 0 else None
         rs.append(l["result"])
     return "lost" if "lost" in rs else "push" if all(x == "push" for x in rs) else "won"
 
