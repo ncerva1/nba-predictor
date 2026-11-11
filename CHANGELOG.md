@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Web — 2026-11-11: reemplazos para las patas del soñador
+- Pedido de Nicolas: si la casa no ofrece una pata (p. ej. Reed Sheppard no sale en Betano), cada pata del soñador de
+  hoy tiene "No está en mi casa" con hasta 3 reemplazos y la cuota/prob. se recalculan. `dream_swaps` (build_site.py)
+  guarda por pata hasta 6 candidatas en `swaps` (con `pc`, su correlación con las patas y candidatas de su partido).
+  Reglas duras: sin repetir jugador, máx. 2 por partido con corr. ≥ 0.97, máx. mitad Unders. Si no salen 3, entran
+  marcadas en `soft` las de prob. 52–55% o cuota total 40–250 fuera de 50–200. La elección se guarda en el navegador;
+  el seguimiento del soñador cuenta la publicada.
+
 ## Web — 2026-11-09: líneas escalonadas (X+)
 - Pedido de Nicolas: las líneas tipo "31+ puntos @1.30". `ladders` da por jugador (≥ 15 min, juega seguro) la prob.
   de llegar a cada umbral de PTS, REB, AST, 3PM, PRA, R+A, robos y tapones (50–97%) con su cuota mínima con valor,

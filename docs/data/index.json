@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T17:38+00:00",
+ "generated": "2026-11-11T18:55+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -1618,7 +1618,133 @@
      "ev": 0.087,
      "gid": "2026-11-11-BOS-at-TOR",
      "game": "BOS @ TOR",
-     "corr": 1.0
+     "corr": 1.0,
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.55,
+       "dec": 1.952,
+       "ev": 0.074,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.553,
+       "dec": 1.847,
+       "ev": 0.022,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Sandro Mamukelashvili|pts|over|8.5": 1.01
+       },
+       "key": "Matisse Thybulle|pts|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
+       "player": "Sandro Mamukelashvili",
+       "team": "LAL",
+       "line": 8.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.54,
+       "dec": 1.909,
+       "ev": 0.031,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Matisse Thybulle|pts|over|5.5": 1.01
+       },
+       "key": "Sandro Mamukelashvili|pts|over|8.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 10.5 Puntos",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 10.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.535,
+       "dec": 1.909,
+       "ev": 0.022,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|pts|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 6.5 Rebotes",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 6.5,
+       "stat": "reb",
+       "side": "over",
+       "p": 0.534,
+       "dec": 1.909,
+       "ev": 0.02,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|reb|over|6.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jared McCain Over 12.5 Puntos",
+       "player": "Jared McCain",
+       "team": "OKC",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.529,
+       "dec": 1.952,
+       "ev": 0.032,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "soft": [
+        "p"
+       ],
+       "pc": {},
+       "key": "Jared McCain|pts|over|12.5"
+      }
+     ],
+     "key": "Payton Pritchard|ast|over|3.5"
     },
     {
      "kind": "prop",
@@ -1633,7 +1759,133 @@
      "ev": 0.082,
      "gid": "2026-11-11-BOS-at-TOR",
      "game": "BOS @ TOR",
-     "corr": 1.0
+     "corr": 1.0,
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.55,
+       "dec": 1.952,
+       "ev": 0.074,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.553,
+       "dec": 1.847,
+       "ev": 0.022,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Sandro Mamukelashvili|pts|over|8.5": 1.01
+       },
+       "key": "Matisse Thybulle|pts|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
+       "player": "Sandro Mamukelashvili",
+       "team": "LAL",
+       "line": 8.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.54,
+       "dec": 1.909,
+       "ev": 0.031,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Matisse Thybulle|pts|over|5.5": 1.01
+       },
+       "key": "Sandro Mamukelashvili|pts|over|8.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 10.5 Puntos",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 10.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.535,
+       "dec": 1.909,
+       "ev": 0.022,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|pts|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 6.5 Rebotes",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 6.5,
+       "stat": "reb",
+       "side": "over",
+       "p": 0.534,
+       "dec": 1.909,
+       "ev": 0.02,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|reb|over|6.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jared McCain Over 12.5 Puntos",
+       "player": "Jared McCain",
+       "team": "OKC",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.529,
+       "dec": 1.952,
+       "ev": 0.032,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "soft": [
+        "p"
+       ],
+       "pc": {},
+       "key": "Jared McCain|pts|over|12.5"
+      }
+     ],
+     "key": "Ja'Kobe Walter|pts|over|12.5"
     },
     {
      "kind": "prop",
@@ -1647,7 +1899,119 @@
      "dec": 1.855,
      "ev": 0.099,
      "gid": "2026-11-11-CLE-at-NYK",
-     "game": "CLE @ NYK"
+     "game": "CLE @ NYK",
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Evan Mobley Under 3.5 Asistencias",
+       "player": "Evan Mobley",
+       "team": "CLE",
+       "line": 3.5,
+       "stat": "ast",
+       "side": "under",
+       "p": 0.572,
+       "dec": 1.901,
+       "ev": 0.087,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|reb|under|4.5": 1.01,
+        "Jarrett Allen|reb|under|7.5": 1.0
+       },
+       "key": "Evan Mobley|ast|under|3.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.98,
+       "ev": 0.11,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 1.0,
+        "Alex Sarr|pts|over|10.5": 1.0,
+        "Alex Sarr|reb|over|6.5": 1.0
+       },
+       "key": "Kyshawn George|pts|under|14.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Karlo Matković Under 4.5 Rebotes",
+       "player": "Karlo Matković",
+       "team": "NOP",
+       "line": 4.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.909,
+       "ev": 0.072,
+       "gid": "2026-11-11-BKN-at-NOP",
+       "game": "BKN @ NOP",
+       "pc": {},
+       "key": "Karlo Matković|reb|under|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jarrett Allen Under 7.5 Rebotes",
+       "player": "Jarrett Allen",
+       "team": "CLE",
+       "line": 7.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.559,
+       "dec": 1.909,
+       "ev": 0.067,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|reb|under|4.5": 1.0,
+        "Evan Mobley|ast|under|3.5": 1.0
+       },
+       "key": "Jarrett Allen|reb|under|7.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matas Buzelis Under 13.5 Puntos",
+       "player": "Matas Buzelis",
+       "team": "CHI",
+       "line": 13.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.554,
+       "dec": 1.926,
+       "ev": 0.067,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Josh Giddey|reb|under|6.5": 1.02,
+        "Jalen Smith|pts|under|11.5": 1.01
+       },
+       "key": "Matas Buzelis|pts|under|13.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Aaron Gordon Under 12.5 Puntos",
+       "player": "Aaron Gordon",
+       "team": "DEN",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.553,
+       "dec": 1.952,
+       "ev": 0.08,
+       "gid": "2026-11-11-DEN-at-MEM",
+       "game": "DEN @ MEM",
+       "pc": {},
+       "key": "Aaron Gordon|pts|under|12.5"
+      }
+     ],
+     "key": "James Harden|reb|under|4.5"
     },
     {
      "kind": "prop",
@@ -1661,7 +2025,133 @@
      "dec": 1.952,
      "ev": 0.089,
      "gid": "2026-11-11-GSW-at-HOU",
-     "game": "GSW @ HOU"
+     "game": "GSW @ HOU",
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.55,
+       "dec": 1.952,
+       "ev": 0.074,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.553,
+       "dec": 1.847,
+       "ev": 0.022,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Sandro Mamukelashvili|pts|over|8.5": 1.01
+       },
+       "key": "Matisse Thybulle|pts|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
+       "player": "Sandro Mamukelashvili",
+       "team": "LAL",
+       "line": 8.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.54,
+       "dec": 1.909,
+       "ev": 0.031,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Matisse Thybulle|pts|over|5.5": 1.01
+       },
+       "key": "Sandro Mamukelashvili|pts|over|8.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 10.5 Puntos",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 10.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.535,
+       "dec": 1.909,
+       "ev": 0.022,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|pts|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Alex Sarr Over 6.5 Rebotes",
+       "player": "Alex Sarr",
+       "team": "WAS",
+       "line": 6.5,
+       "stat": "reb",
+       "side": "over",
+       "p": 0.534,
+       "dec": 1.909,
+       "ev": 0.02,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 0.99,
+        "Kyshawn George|pts|under|14.5": 1.0
+       },
+       "key": "Alex Sarr|reb|over|6.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jared McCain Over 12.5 Puntos",
+       "player": "Jared McCain",
+       "team": "OKC",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.529,
+       "dec": 1.952,
+       "ev": 0.032,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "soft": [
+        "p"
+       ],
+       "pc": {},
+       "key": "Jared McCain|pts|over|12.5"
+      }
+     ],
+     "key": "Reed Sheppard|pts|over|8.5"
     },
     {
      "kind": "prop",
@@ -1675,7 +2165,119 @@
      "dec": 1.952,
      "ev": 0.099,
      "gid": "2026-11-11-SAS-at-CHI",
-     "game": "SAS @ CHI"
+     "game": "SAS @ CHI",
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.98,
+       "ev": 0.11,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 1.0,
+        "Alex Sarr|pts|over|10.5": 1.0,
+        "Alex Sarr|reb|over|6.5": 1.0
+       },
+       "key": "Kyshawn George|pts|under|14.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Karlo Matković Under 4.5 Rebotes",
+       "player": "Karlo Matković",
+       "team": "NOP",
+       "line": 4.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.909,
+       "ev": 0.072,
+       "gid": "2026-11-11-BKN-at-NOP",
+       "game": "BKN @ NOP",
+       "pc": {},
+       "key": "Karlo Matković|reb|under|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jarrett Allen Under 7.5 Rebotes",
+       "player": "Jarrett Allen",
+       "team": "CLE",
+       "line": 7.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.559,
+       "dec": 1.909,
+       "ev": 0.067,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|reb|under|4.5": 1.0,
+        "Evan Mobley|ast|under|3.5": 1.0
+       },
+       "key": "Jarrett Allen|reb|under|7.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matas Buzelis Under 13.5 Puntos",
+       "player": "Matas Buzelis",
+       "team": "CHI",
+       "line": 13.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.554,
+       "dec": 1.926,
+       "ev": 0.067,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Josh Giddey|reb|under|6.5": 1.02,
+        "Jalen Smith|pts|under|11.5": 1.01
+       },
+       "key": "Matas Buzelis|pts|under|13.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Aaron Gordon Under 12.5 Puntos",
+       "player": "Aaron Gordon",
+       "team": "DEN",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.553,
+       "dec": 1.952,
+       "ev": 0.08,
+       "gid": "2026-11-11-DEN-at-MEM",
+       "game": "DEN @ MEM",
+       "pc": {},
+       "key": "Aaron Gordon|pts|under|12.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jalen Smith Under 11.5 Puntos",
+       "player": "Jalen Smith",
+       "team": "CHI",
+       "line": 11.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.553,
+       "dec": 1.952,
+       "ev": 0.079,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Josh Giddey|reb|under|6.5": 1.02,
+        "Matas Buzelis|pts|under|13.5": 1.01
+       },
+       "key": "Jalen Smith|pts|under|11.5"
+      }
+     ],
+     "key": "Josh Giddey|reb|under|6.5"
     },
     {
      "kind": "prop",
@@ -1689,7 +2291,119 @@
      "dec": 1.901,
      "ev": 0.128,
      "gid": "2026-11-11-WAS-at-IND",
-     "game": "WAS @ IND"
+     "game": "WAS @ IND",
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Evan Mobley Under 3.5 Asistencias",
+       "player": "Evan Mobley",
+       "team": "CLE",
+       "line": 3.5,
+       "stat": "ast",
+       "side": "under",
+       "p": 0.572,
+       "dec": 1.901,
+       "ev": 0.087,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|reb|under|4.5": 1.01,
+        "Jarrett Allen|reb|under|7.5": 1.0
+       },
+       "key": "Evan Mobley|ast|under|3.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.98,
+       "ev": 0.11,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
+       "pc": {
+        "Aaron Nesmith|pts|under|13.5": 1.0,
+        "Alex Sarr|pts|over|10.5": 1.0,
+        "Alex Sarr|reb|over|6.5": 1.0
+       },
+       "key": "Kyshawn George|pts|under|14.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Karlo Matković Under 4.5 Rebotes",
+       "player": "Karlo Matković",
+       "team": "NOP",
+       "line": 4.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.561,
+       "dec": 1.909,
+       "ev": 0.072,
+       "gid": "2026-11-11-BKN-at-NOP",
+       "game": "BKN @ NOP",
+       "pc": {},
+       "key": "Karlo Matković|reb|under|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jarrett Allen Under 7.5 Rebotes",
+       "player": "Jarrett Allen",
+       "team": "CLE",
+       "line": 7.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.559,
+       "dec": 1.909,
+       "ev": 0.067,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|reb|under|4.5": 1.0,
+        "Evan Mobley|ast|under|3.5": 1.0
+       },
+       "key": "Jarrett Allen|reb|under|7.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matas Buzelis Under 13.5 Puntos",
+       "player": "Matas Buzelis",
+       "team": "CHI",
+       "line": 13.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.554,
+       "dec": 1.926,
+       "ev": 0.067,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Josh Giddey|reb|under|6.5": 1.02,
+        "Jalen Smith|pts|under|11.5": 1.01
+       },
+       "key": "Matas Buzelis|pts|under|13.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Aaron Gordon Under 12.5 Puntos",
+       "player": "Aaron Gordon",
+       "team": "DEN",
+       "line": 12.5,
+       "stat": "pts",
+       "side": "under",
+       "p": 0.553,
+       "dec": 1.952,
+       "ev": 0.08,
+       "gid": "2026-11-11-DEN-at-MEM",
+       "game": "DEN @ MEM",
+       "pc": {},
+       "key": "Aaron Gordon|pts|under|12.5"
+      }
+     ],
+     "key": "Aaron Nesmith|pts|under|13.5"
     }
    ],
    "n": 6,

@@ -430,6 +430,14 @@ table.lad td.lad-n { width: 28%; min-width: 110px }
 .dream-day .pl-legs li.leg-won { box-shadow: inset 3px 0 0 var(--good) }
 .dream-day .pl-legs li.leg-lost { box-shadow: inset 3px 0 0 var(--bad); background: var(--bad-soft) }
 .dream-day .pl-legs li { padding-left: 8px }
+.dream-card .ds-btn { margin-top: 4px; padding: 2px 0; border: 0; background: none; color: var(--accent); font-size: 12px; font-weight: 500; font-family: inherit; text-decoration: underline; cursor: pointer }
+.dream-card .ds-was { color: var(--muted) }
+.dream-card li.ds-swapped { box-shadow: inset 3px 0 0 var(--accent, currentColor); padding-left: 8px }
+.dream-card .ds-opts { grid-column: 2 / -1; display: grid; gap: 6px; padding: 6px 0 2px }
+.dream-card .ds-opts p { margin: 0; font-size: 13px }
+.dream-card .ds-opt { display: grid; gap: 2px; text-align: left; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: inherit; font: inherit; cursor: pointer }
+.dream-card .ds-opt:hover { border-color: var(--accent, currentColor) }
+.dream-card .ds-soft { color: var(--hot) }
 .pgroup.day .pg-t { text-transform: capitalize }
 .to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 6px;
   border: 0; border-radius: 999px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); font: 600 14px var(--body, inherit);
@@ -1306,21 +1314,101 @@ function bindParlays(todays, thr) {
 
 // Parlay soñador (build_site.py, 9-nov): una combinada larga por jornada, cuota total entre 50 y 200, con las patas
 // más probables del modelo; como mucho 2 patas por partido y solo si no se estorban. 1 unidad por jornada.
+// Reemplazos (11-nov): si tu casa no ofrece una pata, "No está en mi casa" muestra hasta 3 patas muy probables que
+// cumplen las reglas del soñador (build_site.dream_swaps) y recalcula cuota y probabilidad. Lo elegido se guarda en
+// este navegador para la jornada; la combinada oficial (y su récord) sigue siendo la publicada.
+const DREAM_RULES = { min: 50, max: 200, under: 0.5, perGame: 2, corr: 0.97 };
+let DREAM_SW = {}, DREAM_SW_DAY = null, DREAM_OPEN = null;
+function dreamSwLoad(d) {
+  if (DREAM_SW_DAY === d) return;
+  DREAM_SW_DAY = d; DREAM_OPEN = null;
+  try { DREAM_SW = (JSON.parse(ls("nbap-dream-sw") || "{}") || {})[d] || {}; } catch (e) { DREAM_SW = {}; }
+}
+function dreamSwSave() { ls("nbap-dream-sw", JSON.stringify({ [DREAM_SW_DAY]: DREAM_SW })); }
+const dreamCur = pl => pl.legs.map((l, i) => (DREAM_SW[i] && (l.swaps || []).find(s => s.key === DREAM_SW[i])) || l);
+// correlación entre dos patas del mismo partido (null = no se pudo comprobar)
+function dreamPair(a, b, pl) {
+  if (pl.legs.includes(a) && pl.legs.includes(b)) return a.corr ?? 1;
+  const s = a.pc ? a : b, o = s === a ? b : a;
+  return s.pc ? (s.pc[o.key] ?? null) : null;
+}
+// ¿cumplen las patas las reglas duras? (jugador sin repetir, máx. 2 por partido y sin estorbarse, máx. mitad Unders)
+function dreamOk(legs, pl) {
+  if (new Set(legs.map(l => l.player)).size < legs.length) return false;
+  if (legs.filter(l => l.side === "under").length > DREAM_RULES.under * legs.length) return false;
+  const by = {};
+  legs.forEach(l => (by[l.gid] = by[l.gid] || []).push(l));
+  return Object.values(by).every(g => g.length <= DREAM_RULES.perGame && (g.length < 2 || (dreamPair(g[0], g[1], pl) ?? 0) >= DREAM_RULES.corr));
+}
+function dreamTot(legs, pl) {
+  const by = {};
+  legs.forEach(l => (by[l.gid] = by[l.gid] || []).push(l));
+  const p = Object.values(by).reduce((t, g) => t * (g.length === 2 ? Math.min(dreamPair(g[0], g[1], pl) * g[0].p * g[1].p, g[0].p, g[1].p) : g.reduce((x, l) => x * l.p, 1)), 1);
+  const d = legs.reduce((t, l) => t * l.dec, 1);
+  return { p, dec: d, fair: p ? 1 / p : null, ev: p * d - 1 };
+}
+// reemplazos que encajan para la pata i con lo demás ya elegido (las 3 mejores)
+function dreamOpts(pl, i) {
+  const cur = dreamCur(pl);
+  return (pl.legs[i].swaps || []).filter(s => { const t = cur.slice(); t[i] = s; return dreamOk(t, pl); }).slice(0, 3)
+    .map(s => { const t = cur.slice(); t[i] = s; return { s, tot: dreamTot(t, pl) }; });
+}
+const SOFT_TXT = { p: "algo menos probable que las demás", dec: "la cuota total sale de 50–200" };
+function dreamLegLi(pl, i, open) {
+  const o = pl.legs[i], l = dreamCur(pl)[i], sw = l !== o, live = pl.result == null && (o.swaps || []).length;
+  const main = `<div><div class="lg">${esc(l.label)}${ftag(l.flag)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${l.gid}">${esc(l.game)}</a>${sw ? ` · <span class="ds-was">en lugar de ${esc(o.label)}</span>` : ""}</div>
+      ${live ? (sw ? `<button type="button" class="ds-btn" data-dsw-undo="${i}">Deshacer cambio</button>`
+        : `<button type="button" class="ds-btn" data-dsw-open="${i}" aria-expanded="${open}">${open ? "Cerrar" : "No está en mi casa: ver reemplazos"}</button>`) : ""}</div>
+      <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div>`;
+  let opts = "";
+  if (open && !sw) {
+    const os = dreamOpts(pl, i);
+    opts = `<div class="ds-opts">${os.length ? `<p class="muted">Cámbiala por una de estas, que cumplen las reglas del soñador:</p>` + os.map(({ s, tot }) => `<button type="button" class="ds-opt" data-dsw-pick="${i}" data-key="${esc(s.key)}">
+        <span class="lg">${esc(s.label)}${ftag(s.flag)}</span>
+        <span class="kind">${esc(s.game)} · ${pct(s.p, 0)} · @ ${s.dec.toFixed(2)} · cuota total ${tot.dec.toFixed(2)}${(s.soft || []).length ? ` · <span class="ds-soft">${s.soft.map(k => SOFT_TXT[k]).join(", ")}</span>` : ""}</span>
+      </button>`).join("") : `<p class="muted">No hay otra pata que encaje con las reglas del soñador sin repetir jugador ni pasar de la mitad de Unders.</p>`}</div>`;
+  }
+  return `<li class="${sw ? "ds-swapped" : ""}">${main}${opts}</li>`;
+}
 function dreamCard(pl, thr) {
-  const games = new Set(pl.legs.map(l => l.gid)).size;
-  return `<article class="pl-card dream-card">
-    <header><h3>${pl.n} patas</h3><span class="kind">${games} partido${games > 1 ? "s" : ""}</span>${resPill(pl.result)}</header>
-    <ol class="pl-legs">${pl.legs.map(l => `<li><div><div class="lg">${esc(l.label)}${ftag(l.flag)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${l.gid}">${esc(l.game)}</a></div></div>
-      <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div></li>`).join("")}</ol>
+  dreamSwLoad(DAY);
+  const legs = dreamCur(pl), anySw = legs.some((l, i) => l !== pl.legs[i]);
+  const t = anySw ? dreamTot(legs, pl) : pl, games = new Set(legs.map(l => l.gid)).size;
+  const out = anySw && (t.dec < DREAM_RULES.min || t.dec > DREAM_RULES.max);
+  return `<article class="pl-card dream-card" id="dream-card">
+    <header><h3>${pl.n} patas</h3><span class="kind">${games} partido${games > 1 ? "s" : ""}${anySw ? " · con tus cambios" : ""}</span>${resPill(pl.result)}</header>
+    <ol class="pl-legs">${pl.legs.map((_, i) => dreamLegLi(pl, i, DREAM_OPEN === i)).join("")}</ol>
     <div class="pl-stats">
-      <div class="cell main"><span class="k">Cuota aprox.</span><span class="v">${pl.dec.toFixed(2)}</span></div>
-      <div class="cell"><span class="k">Prob. modelo</span><span class="v">${pct(pl.p)}</span></div>
-      <div class="cell"><span class="k">Cuota justa</span><span class="v">${pl.fair ? pl.fair.toFixed(2) : "—"}</span></div>
-      <div class="cell"><span class="k">${pl.units != null ? "Unidades" : "EV"}</span><span class="v">${pl.units != null ? `${pl.units >= 0 ? "+" : ""}${pl.units.toFixed(2)} u` : evPill(pl.ev, thr)}</span></div>
+      <div class="cell main"><span class="k">Cuota aprox.</span><span class="v">${t.dec.toFixed(2)}</span></div>
+      <div class="cell"><span class="k">Prob. modelo</span><span class="v">${pct(t.p)}</span></div>
+      <div class="cell"><span class="k">Cuota justa</span><span class="v">${t.fair ? t.fair.toFixed(2) : "—"}</span></div>
+      <div class="cell"><span class="k">${pl.units != null ? "Unidades" : "EV"}</span><span class="v">${pl.units != null ? `${pl.units >= 0 ? "+" : ""}${pl.units.toFixed(2)} u` : evPill(t.ev, thr)}</span></div>
     </div>
-    ${plAddBtn(pl)}
+    ${anySw ? `<p class="pl-corr">Con tus reemplazos: la publicada era cuota ${pl.dec.toFixed(2)} y ${pct(pl.p)}.${out ? " La cuota total queda fuera de 50–200." : ""} El seguimiento del soñador sigue contando la publicada. <button type="button" class="ds-btn" data-dsw-reset>Volver a la publicada</button></p>` : ""}
+    ${plAddBtn({ ...pl, legs })}
   </article>`;
 }
+function dreamRedraw() {
+  const pl = (INDEX.dream || {})[DAY], c = $("#dream-card");
+  if (!pl || !c) return;
+  c.outerHTML = dreamCard(pl, INDEX.value_ev);
+  syncAddBtns();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-dsw-open], [data-dsw-pick], [data-dsw-undo], [data-dsw-reset]");
+  if (!b) return;
+  const pl = (INDEX.dream || {})[DAY];
+  if (!pl) return;
+  if (b.dataset.dswOpen != null) { const i = +b.dataset.dswOpen; DREAM_OPEN = DREAM_OPEN === i ? null : i; }
+  else if (b.dataset.dswPick != null) { DREAM_SW[+b.dataset.dswPick] = b.dataset.key; DREAM_OPEN = null; dreamSwSave(); }
+  else if (b.dataset.dswUndo != null) {
+    delete DREAM_SW[+b.dataset.dswUndo];
+    // si al volver la pata original choca con otro reemplazo, se quita ese reemplazo
+    for (const k of Object.keys(DREAM_SW)) if (!dreamOk(dreamCur(pl), pl)) delete DREAM_SW[k];
+    dreamSwSave();
+  } else { DREAM_SW = {}; DREAM_OPEN = null; dreamSwSave(); }
+  dreamRedraw();
+});
 // Jornada pasada del soñador, desplegable: cada pata con su resultado y lo que hizo el jugador de verdad.
 function dreamPast(d, x, uTxt) {
   const won = x.legs.filter(k => k.result === "won").length, lost = x.legs.filter(k => k.result === "lost").length;
@@ -1344,7 +1432,7 @@ function dreamSection() {
   return `<section class="section" id="sonador">
     <span class="eyebrow">Jornada ${esc(DAY)}</span>
     <h2>Parlay soñador</h2>
-    <p class="lede">Una combinada larga por día, para soñar: las líneas que el modelo ve más probables de la jornada, juntas hasta una cuota total entre 50 y 200. Entre partidos las patas son independientes; del mismo partido van como mucho 2 y solo si en las simulaciones no se estorban. Es muy difícil de acertar: apuesta poco.</p>
+    <p class="lede">Una combinada larga por día, para soñar: las líneas que el modelo ve más probables de la jornada, juntas hasta una cuota total entre 50 y 200. Entre partidos las patas son independientes; del mismo partido van como mucho 2 y solo si en las simulaciones no se estorban. Es muy difícil de acertar: apuesta poco. Si tu casa no ofrece alguna pata, toca <b>No está en mi casa</b> y elige uno de los reemplazos: cumplen las mismas reglas y la cuota se recalcula.</p>
     ${pl ? `<div class="pl-list">${dreamCard(pl, thr)}</div>` : `<div class="panel"><div class="empty">Hoy ninguna combinación de patas con buena probabilidad llega a cuota 50.</div></div>`}
     ${done.length ? `<h3>Seguimiento del soñador</h3>
     <p class="muted">1 unidad por jornada. Acertados–fallados: ${w}–${l} · ${uTxt(u)}${w + l ? ` · ROI ${(100 * u / (w + l)) >= 0 ? "+" : ""}${(100 * u / (w + l)).toFixed(1)}%` : ""}</p>
