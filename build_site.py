@@ -1459,6 +1459,9 @@ def main():
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
     json.dump(dict(generated=now, value_ev=VALUE_EV, model=MODEL, mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
                    history=history, versions=versions, parlays=cross, dream=dream, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+    if sim_dates:  # bajas de última hora (bajas.py): las que ya entraron en la simulación quedan marcadas "sim"
+        import bajas
+        bajas.sync(sim_dates)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,17 @@ Cada jornada se publica tres veces (tareas programadas en la nube, hora de Colom
 
 **Revisiones horarias (10-nov):** la tarea de la mañana programa la primera revisión 45 min antes del primer partido con el prompt de `tareas/revision_bajas_cuotas.txt` (cambia FECHA y DETALLE). Cada revisión mira bajas y cuotas solo de los partidos que aún no empiezan y, al terminar, se reprograma una vez (dentro de 60 min, o 30 min antes del siguiente partido si es antes) mientras quede algún partido que empiece más de 40 min después; si no queda ninguno, no programa nada y la cadena se acaba. Para cambiar lo que hacen las revisiones basta editar ese archivo.
 
+**Bajas de última hora (11-nov):** `docs/data/bajas.json` es una lista rápida de jugadores confirmados fuera después de
+la última simulación. La web la lee al abrir y, en los partidos sin jugar, quita al momento a esos jugadores de los
+player props, picks, picks sin cuota, escalones X+, parlays (SGP y entre partidos) y del soñador (su pata se cambia
+sola por el mejor reemplazo que cumpla las reglas, o queda anulada), muestra "Bajas de última hora" en la portada y
+"Bajas del partido" en cada partido (nuevas, ya simuladas y dudas, con lo que dice "Si no juega…"), y marca con ⚠ las
+apuestas de equipo y de compañeros que aún cuentan con él. Comandos: `python bajas.py add FECHA "Jugador" [--duda]
+[--note ...] [--source ...]`, `python bajas.py rm FECHA "Jugador"`, `python bajas.py list`. Se publica con un commit
+solo de ese archivo (sin build_site.py). Al re-simular, `build_site.py` llama a `bajas.sync()`: la baja que ya no
+está en la simulación queda `"sim": true` (la web solo la muestra en el resumen); las jornadas de hace más de 3 días
+se borran solas.
+
 Para solo marcar una etapa sin re-simular nada: `python build_site.py ninguno --stage pregame --for HOY` (un filtro
 que no coincide con ningún partido reconstruye solo `index.json`). `index.json` guarda `updates` = `{jornada: {etapa:
 hora UTC}}` (últimas 14 jornadas) y `last_stage`.
