@@ -422,6 +422,14 @@ table.lad td.lad-n { width: 28%; min-width: 110px }
 .pgroup .pg-n { font: 600 12px var(--mono); color: var(--good) }
 .pgroup .pg-body { padding: 0 16px 12px; border-top: 1px solid var(--line) }
 .pgroup.day .pg-body { padding-top: 14px }
+.dream-past { display: grid; gap: 8px }
+.dream-day .pg-t { font-size: 18px }
+.dream-day .pg-x { white-space: normal }
+.dream-day .pg-u { font: 600 13px var(--mono) } .dream-day .pg-u.up { color: var(--good) } .dream-day .pg-u.down { color: var(--bad) }
+.dream-day .dp-sum { margin: 10px 0 2px }
+.dream-day .pl-legs li.leg-won { box-shadow: inset 3px 0 0 var(--good) }
+.dream-day .pl-legs li.leg-lost { box-shadow: inset 3px 0 0 var(--bad); background: var(--bad-soft) }
+.dream-day .pl-legs li { padding-left: 8px }
 .pgroup.day .pg-t { text-transform: capitalize }
 .to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 6px;
   border: 0; border-radius: 999px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); font: 600 14px var(--body, inherit);
@@ -1276,6 +1284,20 @@ function dreamCard(pl, thr) {
     ${plAddBtn(pl)}
   </article>`;
 }
+// Jornada pasada del soñador, desplegable: cada pata con su resultado y lo que hizo el jugador de verdad.
+function dreamPast(d, x, uTxt) {
+  const won = x.legs.filter(k => k.result === "won").length, lost = x.legs.filter(k => k.result === "lost").length;
+  const push = x.legs.filter(k => k.result === "push").length;
+  return `<details class="pgroup dream-day"><summary>
+      <span class="pg-t">${esc(d)}</span>
+      <span class="pg-x">${won} de ${x.n} patas acertadas${push ? ` · ${push} anulada${push > 1 ? "s" : ""}` : ""} · cuota ${x.dec.toFixed(2)}</span>
+      <span class="pg-r">${resPill(x.result)}<span class="pg-u ${x.units >= 0 ? "up" : "down"}">${uTxt(x.units)}</span></span>
+    </summary><div class="pg-body">
+      <p class="muted dp-sum">${x.result === "won" ? "Entraron todas las patas." : lost === 1 ? "Se cayó por una sola pata." : `Fallaron ${lost} patas.`}</p>
+      <ol class="pl-legs">${x.legs.map(l => `<li class="leg-${l.result || "na"}"><div><div class="lg">${esc(l.label)}</div><div class="kind">${KIND[l.kind] || l.kind} · <a href="#${l.gid}">${esc(l.game)}</a>${l.actual != null ? ` · <b>hizo ${l.actual}</b>` : l.result === "push" ? " · no jugó" : ""}</div></div>
+        <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div></li>`).join("")}</ol>
+    </div></details>`;
+}
 function dreamSection() {
   const all = INDEX.dream || {}, pl = all[DAY], thr = INDEX.value_ev;
   const done = Object.keys(all).sort().reverse().filter(d => all[d].units != null && all[d].result);
@@ -1289,9 +1311,8 @@ function dreamSection() {
     ${pl ? `<div class="pl-list">${dreamCard(pl, thr)}</div>` : `<div class="panel"><div class="empty">Hoy ninguna combinación de patas con buena probabilidad llega a cuota 50.</div></div>`}
     ${done.length ? `<h3>Seguimiento del soñador</h3>
     <p class="muted">1 unidad por jornada. Acertados–fallados: ${w}–${l} · ${uTxt(u)}${w + l ? ` · ROI ${(100 * u / (w + l)) >= 0 ? "+" : ""}${(100 * u / (w + l)).toFixed(1)}%` : ""}</p>
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th class="r">Patas acertadas</th><th class="r">Cuota</th><th class="r">Resultado</th><th class="r">Unidades</th></tr></thead><tbody>
-      ${done.map(d => { const x = all[d]; return `<tr><td class="head">${esc(d)}</td><td class="r num" data-label="Patas acertadas">${x.legs.filter(k => k.result === "won").length} de ${x.n}</td><td class="r num" data-label="Cuota">${x.dec.toFixed(2)}</td><td class="r" data-label="Resultado">${resPill(x.result)}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td></tr>`; }).join("")}
-    </tbody></table></div>` : ""}
+    <p class="muted">Toca una jornada para ver qué patas se acertaron y cuáles se fallaron.</p>
+    <div class="dream-past">${done.map(d => dreamPast(d, all[d], uTxt)).join("")}</div>` : ""}
   </section>`;
 }
 
