@@ -481,8 +481,45 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 .cb-mk { white-space: nowrap }
 .cb-head h2 { min-width: 0 }
 .cb-head button { flex: none }
-@media (max-width: 640px) { .cb-head .cbm-t { display: none } .cb-head h2 { font-size: 20px } }
+@media (max-width: 640px) { .cb-head .cbm-t { display: none } .cb-head h2 { font-size: 20px } .cb-head { gap: 8px } }
 .cb-head .cb-mk + .cb-min { margin-left: -4px }
+.cb-head .cb-img { display: inline-flex; align-items: center; padding: 6px 9px; margin-right: -4px }
+.cb-head h2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.cb-img svg { display: block }
+.im-drop { margin-top: 10px; border: 1.5px dashed var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 8px; justify-items: start; font-size: 14px }
+.im-drop p { margin: 0 } .im-drop .muted { font-size: 12.5px }
+.im-drop.over { border-color: var(--accent); background: var(--accent-soft) }
+.im-work, .im-sum { margin-top: 10px; display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: start; font-size: 14px }
+.im-work p, .im-sum p { margin: 0 0 8px } .im-work .muted { font-size: 12.5px }
+.im-thumb { width: 64px; max-height: 120px; object-fit: cover; object-position: top; border-radius: 6px; border: 1px solid var(--line) }
+.im-prog { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; margin-bottom: 8px }
+.im-prog i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s }
+.im-legs { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px }
+.im-leg { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px }
+.im-leg.chk { border-color: var(--hot); background: color-mix(in srgb, var(--hot) 7%, transparent) }
+.im-leg.off { opacity: .55 }
+.im-leg .calc { margin-top: 8px; gap: 8px 10px }
+.cb-form .im-leg .calc { grid-template-columns: repeat(6, minmax(0, 1fr)) }
+.cb-form .im-leg .calc > label { grid-column: span 3 }
+.cb-form .im-leg .calc > label.wide { grid-column: 1 / -1 }
+.cb-form .im-leg .calc > label.n3 { grid-column: span 2 }
+.im-top { display: flex; align-items: center; gap: 8px }
+.im-on { flex: 1; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; min-width: 0 }
+.im-on input { width: 18px; height: 18px; flex: none; accent-color: var(--accent) }
+.im-iss { margin: 6px 0 0; font-size: 12.5px; color: var(--ink) }
+.im-out { margin-top: 8px; font-size: 13.5px }
+.im-src { margin: 6px 0 0; font-size: 11.5px; color: var(--muted); overflow-wrap: anywhere }
+.im-cta { font-size: 13px; padding: 5px 14px; margin-top: 6px }
+.im-addl { margin-top: 10px; font-size: 13px; padding: 6px 14px }
+.im-foot { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); display: grid; gap: 8px }
+.im-foot p { margin: 0; font-size: 12.5px }
+.im-foot p.warn { color: var(--ink); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px }
+.im-foot .btn { font-size: 14px }
+.im-tot { display: flex; align-items: center; gap: 10px; font-size: 14px }
+.im-tot input { font: inherit; width: 110px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: inherit }
+.im-raw { margin-top: 12px; font-size: 12.5px; color: var(--muted) }
+.im-raw summary { cursor: pointer; color: var(--accent) }
+.im-raw pre { white-space: pre-wrap; font: 12px var(--mono); margin: 6px 0 0 }
 .mk-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 12px 0 0 }
 .mk-cta .btn { font-size: 13px; padding: 6px 14px }
 .combo { position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 70 }
@@ -649,7 +686,7 @@ body:has(dialog.guide[open]) { overflow: hidden }
 <div class="combo" id="combo" hidden>
   <button type="button" class="combo-pill" id="combo-pill" aria-expanded="false" aria-controls="combo-panel"><span class="t">Mi combinada</span> <span class="n" id="cp-n">0</span> <span class="d" id="cp-d"></span></button>
   <section class="combo-panel" id="combo-panel" hidden aria-labelledby="cb-title">
-    <div class="cb-head"><h2 id="cb-title">Mi combinada</h2><button type="button" class="cb-min cb-mk" id="cb-mk">+ Crear pick</button><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada"><span class="cbm-t">Minimizar </span>▾</button></div>
+    <div class="cb-head"><h2 id="cb-title"><span class="cbm-t">Mi </span>combinada</h2><button type="button" class="cb-min cb-img" id="cb-img" aria-label="Leer tu combinada desde una imagen" title="Leer tu combinada desde una imagen"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button type="button" class="cb-min cb-mk" id="cb-mk">+ Crear pick</button><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada"><span class="cbm-t">Minimizar </span>▾</button></div>
     <p class="cb-msg" id="cb-msg" role="status" hidden></p>
     <div class="cb-form" id="cb-form" hidden></div>
     <div class="cb-body" id="cb-body"></div>
@@ -1897,8 +1934,9 @@ function bindPickForm(P, opts) {
 // Mi combinada → "+ Crear pick": el formulario reemplaza la lista de patas hasta que vuelves a "Ver combinada"
 let MK_OPEN = false;
 function pickGames() { return INDEX ? INDEX.games.filter(g => !g.result).sort((x, y) => x.date.localeCompare(y.date) || (x.tip_et || "").localeCompare(y.tip_et || "")) : []; }
-function syncMkBtn() { const b = $("#cb-mk"); if (b) b.textContent = MK_OPEN ? `Ver combinada (${MYC.length})` : "+ Crear pick"; }
+function syncMkBtn() { const b = $("#cb-mk"); if (b) b.textContent = MK_OPEN || IMG_OPEN ? `← Combinada (${MYC.length})` : "+ Crear pick"; }
 function showPickForm(on, gid) {
+  if (on && IMG_OPEN) showImport(false);
   MK_OPEN = on;
   $("#combo-panel").classList.toggle("mk-open", on); $("#cb-form").hidden = !on;
   if (on) {
@@ -1910,6 +1948,465 @@ function showPickForm(on, gid) {
 }
 function openPickForm(gid) { openCombo(true); showPickForm(true, gid); }
 document.addEventListener("click", e => { const b = e.target.closest("[data-mkpick]"); if (b) { e.preventDefault(); openPickForm(b.dataset.mkpick || null); } });
+
+// <slip-parser> (función pura: también se prueba fuera del navegador)
+// Lee el texto de una captura de combinada (Rushbet / BetPlay, plataforma Kambi, u otra casa) ya agrupado en
+// renglones [{text, y, h, conf}] y lo cruza con los partidos por jugarse: cat = [{gid, away, home, players: [{name, team}]}].
+// Cada renglón con un jugador (o un equipo / un total del partido) abre una pata; los demás renglones van a la pata más
+// cercana en vertical, y de ellos salen la estadística, el lado (más de / menos de / 25+), la línea y la cuota.
+const NBA_TEAMS = { ATL: ["Atlanta", "Hawks"], BOS: ["Boston", "Celtics"], BKN: ["Brooklyn", "Nets"], CHA: ["Charlotte", "Hornets"], CHI: ["Chicago", "Bulls"],
+  CLE: ["Cleveland", "Cavaliers", "Cavs"], DAL: ["Dallas", "Mavericks", "Mavs"], DEN: ["Denver", "Nuggets"], DET: ["Detroit", "Pistons"], GSW: ["Golden State", "Warriors"],
+  HOU: ["Houston", "Rockets"], IND: ["Indiana", "Pacers"], LAC: ["", "Clippers"], LAL: ["", "Lakers"], MEM: ["Memphis", "Grizzlies"], MIA: ["Miami", "Heat"],
+  MIL: ["Milwaukee", "Bucks"], MIN: ["Minnesota", "Timberwolves", "Wolves"], NOP: ["New Orleans", "Pelicans"], NYK: ["New York", "Knicks"], OKC: ["Oklahoma City", "Thunder"],
+  ORL: ["Orlando", "Magic"], PHI: ["Philadelphia", "76ers", "Sixers"], PHX: ["Phoenix", "Suns"], POR: ["Portland", "Blazers"], SAC: ["Sacramento", "Kings"],
+  SAS: ["San Antonio", "Spurs"], TOR: ["Toronto", "Raptors"], UTA: ["Utah", "Jazz"], WAS: ["Washington", "Wizards"] };
+const slipNorm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const slipWords = s => slipNorm(s).replace(/[’'`´]/g, "").split(/[^a-z0-9]+/).filter(Boolean);
+function lev(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 9;
+  let p = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const c = [i];
+    for (let j = 1; j <= b.length; j++) c[j] = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    p = c;
+  }
+  return p[b.length];
+}
+// 0 = igual, 1 = parecido (error de lectura), null = no
+function wordHit(w, ws) {
+  if (ws.includes(w)) return 0;
+  const tol = w.length >= 9 ? 2 : w.length >= 5 ? 1 : 0;
+  return tol && ws.some(x => lev(x, w) <= tol) ? 1 : null;
+}
+const SUFFIX = new Set(["jr", "sr", "ii", "iii", "iv"]);
+function slipPlayerKeys(cat) {
+  const all = [];
+  cat.forEach(g => g.players.forEach(p => {
+    const ws = slipWords(p.name).filter(w => !SUFFIX.has(w));
+    all.push({ ...p, gid: g.gid, first: ws[0], last: ws.slice(1) });
+  }));
+  const cnt = {};
+  all.forEach(p => { const k = p.last.join(" "); cnt[k] = (cnt[k] || 0) + 1; });
+  all.forEach(p => { p.uniq = cnt[p.last.join(" ")] === 1; });
+  return all;
+}
+function slipFindPlayer(ws, keys) {
+  let best = null;
+  keys.forEach(p => {
+    if (!p.last.length) return;
+    const lh = p.last.map(w => wordHit(w, ws));
+    if (lh.some(h => h == null)) return;
+    const fh = wordHit(p.first, ws), ini = fh == null && ws.includes(p.first[0]);
+    if (fh == null && !ini && !p.uniq) return;
+    const fuzzy = lh.some(h => h) || fh === 1, sc = 10 * p.last.length + (fh === 0 ? 6 : fh === 1 ? 4 : ini ? 2 : 0) - (fuzzy ? 3 : 0);
+    if (!best || sc > best.sc) best = { p, sc, fuzzy, weak: fh == null && !ini };
+  });
+  return best;
+}
+function slipTeams(raw, ws, teams) {
+  const out = new Set(), nw = " " + ws.join(" ") + " ";
+  teams.forEach(t => {
+    const [city, ...nicks] = NBA_TEAMS[t] || [];
+    if (nicks.some(n => { const nn = slipWords(n); return nn.length > 1 ? nw.includes(" " + nn.join(" ") + " ") : wordHit(nn[0], ws) != null; })) out.add(t);
+    else if (city && nw.includes(" " + slipWords(city).join(" ") + " ")) out.add(t);
+    else if (new RegExp("(^|[^A-Z])" + t + "([^A-Z]|$)").test(raw)) out.add(t);
+  });
+  return [...out];
+}
+// estadística de un renglón (null si no nombra ninguna)
+function slipStat(t) {
+  t = " " + slipNorm(t).replace(/[^a-z0-9+]+/g, " ") + " ";
+  if (/doble ?doble|double ?double/.test(t)) return "dd";
+  if (/triple ?doble|triple ?double/.test(t)) return "td";
+  if (/ pra | p ?\+ ?r ?\+ ?a /.test(t)) return "pra";
+  if (/ p ?\+ ?r /.test(t)) return "pr";
+  if (/ p ?\+ ?a /.test(t)) return "pa";
+  if (/ r ?\+ ?a /.test(t)) return "ra";
+  const s = new Set();
+  const three = / triples? | tiros? de (3|tres) | de tres puntos | (3|tres) puntos | 3 ?pt | three| 3 ?pointers?/;
+  if (three.test(t)) { s.add(/intentad|attempt/.test(t) ? "fg3a" : "fg3m"); t = t.replace(three, " "); }
+  if (/ puntos? | points? | pts /.test(t)) s.add("pts");
+  if (/ rebotes? | rebounds? | reb /.test(t)) s.add("reb");
+  if (/ asistencias? | assists? | ast /.test(t)) s.add("ast");
+  if (/ robos? | steals? | recuperaciones /.test(t)) s.add("stl");
+  if (/ tapones? | tapas? | bloqueos? | blocks? /.test(t)) s.add("blk");
+  if (/ perdidas | turnovers? /.test(t)) s.add("tov");
+  const has = (...k) => k.every(x => s.has(x)) && s.size === k.length;
+  if (has("pts", "reb", "ast")) return "pra";
+  if (has("pts", "reb")) return "pr";
+  if (has("pts", "ast")) return "pa";
+  if (has("reb", "ast")) return "ra";
+  if (has("stl", "blk")) return "stocks";
+  return s.size === 1 ? [...s][0] : s.size ? [...s][0] : null;
+}
+const slipNum = s => parseFloat(String(s).replace(",", "."));
+// lado y línea: "Más de 24.5", "Menos de 8,5", "Over 24.5", "25+ puntos" / "25 o más" / "al menos 25" = Over 24.5
+function slipSide(raw) {
+  const t = slipNorm(raw);
+  let m = t.match(/\b(?:m\w?s de|over|mas|sobre|encima de)\s*(\d{1,4}(?:[.,]\d)?)(?![\d])/);
+  if (m) return { side: "over", line: slipNum(m[1]), dot: /[.,]/.test(m[1]) };
+  m = t.match(/\b(?:menos de|under|bajo|debajo de)\s*(\d{1,4}(?:[.,]\d)?)(?![\d])/);
+  if (m) return { side: "under", line: slipNum(m[1]), dot: /[.,]/.test(m[1]) };
+  m = t.match(/(?:^|[^\d.,+\-])(\d{1,3})\s*(?:\+|o m\w?s\b|or more\b)/) || t.match(/\bal menos\s*(\d{1,3})\b/);
+  if (m) return { side: "over", line: +m[1] - .5, dot: true, plus: true };
+  return null;
+}
+// cuotas decimales de un renglón (1.85 / 1,85); también americanas (+150 / -120) si no hay decimales
+function slipOdds(raw, max) {
+  const out = [];
+  String(raw).replace(/(^|[^\d.,:/+\-])(\d{1,3}[.,]\d{2})(?![\d.,:/])/g, (_, a, n) => { const v = slipNum(n); if (v > 1 && v <= max) out.push(v); });
+  if (!out.length) String(raw).replace(/(^|\s)([+\-−]\d{3,4})(?![\d.,])/g, (_, a, n) => { const v = +n.replace("−", "-"); if (Math.abs(v) >= 100) out.push(+(v > 0 ? 1 + v / 100 : 1 + 100 / -v).toFixed(2)); });
+  return out;
+}
+const slipSigned = raw => { const m = String(raw).match(/(?:^|\s)([+\-−]\s?\d{1,2}(?:[.,]\d)?)(?![\d])/); return m ? slipNum(m[1].replace(/\s/g, "").replace("−", "-")) : null; };
+const SLIP_SUM = /cuota|apuesta|ganancia|pago|potencial|stake|retorno|cash ?out|importe|saldo|total odds|payout|bono/;
+const SLIP_ML = /ganador|linea de dinero|moneyline|money line|para ganar|\bgana\b|1x2|victoria/;
+const SLIP_SPREAD = /handicap|spread|diferencia/;
+function parseSlip(rows, cat) {
+  const keys = slipPlayerKeys(cat), teams = [...new Set(cat.flatMap(g => [g.away, g.home]))];
+  let total = null;
+  const R = rows.map((r, i) => {
+    const ws = slipWords(r.text), t = slipNorm(r.text), x = { ...r, i, ws, t };
+    if (SLIP_SUM.test(t) && !slipFindPlayer(ws, keys)) {
+      x.sum = true;
+      if (/cuota|odds/.test(t)) { const o = slipOdds(r.text, 100000); if (o.length) total = o[o.length - 1]; }
+      return x;
+    }
+    x.pl = slipFindPlayer(ws, keys); x.teams = slipTeams(r.text, ws, teams); x.side = slipSide(r.text);
+    x.odds = slipOdds(r.text, 50); x.stat = slipStat(r.text); x.signed = slipSigned(r.text);
+    return x;
+  });
+  // anclas: jugador; o un renglón con un total (más/menos de 100+) sin jugador; o un equipo solo (no "A - B")
+  const anchors = [];
+  R.forEach(x => {
+    if (x.sum) return;
+    if (x.pl) anchors.push({ type: "p", row: x, p: x.pl.p });
+    else if (x.teams.length >= 2) x.event = true;
+    else if (x.side && x.side.line >= 100 && !x.side.plus) anchors.push({ type: "tot", row: x });
+    else if (x.teams.length === 1) anchors.push({ type: "t", row: x, team: x.teams[0] });
+  });
+  // el mismo jugador en dos renglones seguidos (mercado + selección) es una sola pata si uno de los dos no trae línea
+  for (let i = anchors.length - 1; i > 0; i--) {
+    const a = anchors[i - 1], b = anchors[i];
+    const same = a.type === "p" && b.type === "p" && a.p.name === b.p.name && b.row.i - a.row.i <= 2 && (!a.row.side || !b.row.side);
+    const teamTot = (a.type === "t" && b.type === "tot" || a.type === "tot" && b.type === "t") && b.row.i - a.row.i <= 1;
+    if (same || teamTot) { const keep = a.type === "tot" || (same && a.row.side) ? a : b, drop = keep === a ? b : a; (keep.extra ||= []).push(drop.row); if (drop.team) keep.team = drop.team; anchors.splice(anchors.indexOf(drop), 1); }
+  }
+  anchors.forEach(a => { a.rows = [a.row, ...(a.extra || [])]; });
+  // cada renglón suelto va a la pata de arriba o a la de abajo: si entre las dos hay un renglón de partido ("A - B"),
+  // ese renglón cierra la de arriba; si no, decide el orden de la casa (selección encima o debajo del jugador)
+  const first = anchors.length ? anchors[0].row.y : 0;
+  const dataAbove = R.some(x => !x.sum && x.y < first && (x.side || x.odds.length));
+  R.forEach(x => {
+    if (x.sum || anchors.some(a => a.rows.includes(x)) || !anchors.length) return;
+    const A = [...anchors].reverse().find(a => a.row.y <= x.y), B = anchors.find(a => a.row.y > x.y);
+    let to = !A ? B : !B ? A : null;
+    if (!to) {
+      const E = R.find(r => r.event && r.y > A.row.y && r.y < B.row.y && r !== x);
+      to = E ? (x.y <= E.y ? A : B) : x.event ? A : dataAbove ? B : A;
+    }
+    to.rows.push(x);
+  });
+  const legs = [];
+  anchors.forEach(a => {
+    const rs = a.rows.slice().sort((p, q) => (p === a.row ? -1 : q === a.row ? 1 : Math.abs(p.y - a.row.y) - Math.abs(q.y - a.row.y)));
+    const pick = f => { for (const r of rs) { const v = f(r); if (v != null && v !== false) return v; } return null; };
+    const side = pick(r => r.side), oddsAll = rs.flatMap(r => r.odds), issues = [];
+    const all = rs.map(r => r.t).join(" | "), src = a.rows.slice().sort((p, q) => p.y - q.y).map(r => r.text.trim()).filter(Boolean);
+    const lowConf = rs.some(r => r.conf != null && r.conf < 60 && (r === a.row || r.side || r.odds.length));
+    const leg = { src, issues, dec: oddsAll.length ? oddsAll[0] : null, y: a.row.y };
+    if (a.type === "p") {
+      Object.assign(leg, { type: "p", gid: a.p.gid, player: a.p.name, team: a.p.team, stat: pick(r => r.stat), side: side && side.side, line: side ? side.line : null });
+      if (side && !side.dot && leg.line >= 60 && leg.line % 10 === 5) leg.line /= 10;   // "245" = 24.5 (se perdió el punto)
+      if (a.row.pl.fuzzy || a.row.pl.weak) issues.push("nombre");
+    } else {
+      const ev = rs.find(r => r.event) || R.filter(r => r.event).sort((p, q) => Math.abs(p.y - a.row.y) - Math.abs(q.y - a.row.y))[0];
+      const team = a.team || pick(r => r.teams.length === 1 ? r.teams[0] : null), evT = ev ? ev.teams : [];
+      const g = cat.find(g => team ? (g.away === team || g.home === team) : evT.length >= 2 && [g.away, g.home].every(t => evT.includes(t)));
+      let mk, line = null;
+      if (a.type === "tot" || (side && side.line >= 100)) {
+        line = side.line; if (!side.dot && line >= 1000 && line % 10 === 5) line /= 10;
+        mk = team && line < 170 ? "tt" : "total";   // puntos de un equipo (~100-135) o total del partido
+      } else if (SLIP_SPREAD.test(all) || pick(r => r.signed) != null) { mk = "spread"; line = pick(r => r.signed); }
+      else if (SLIP_ML.test(all) || oddsAll.length) mk = "ml";
+      if (!mk || !g) return;   // un equipo suelto sin mercado ni partido no es una pata
+      Object.assign(leg, { type: "t", gid: g.gid, mk, team: mk === "total" ? null : team, side: mk === "total" || mk === "tt" ? side.side : null, line });
+      if (mk === "ml" && !SLIP_ML.test(all)) issues.push("mercado");
+    }
+    if (leg.type === "p" && !leg.stat) issues.push("estadística");
+    if ((leg.type === "p" || leg.mk === "total" || leg.mk === "tt") && (!leg.side || leg.line == null)) issues.push("línea");
+    if (leg.mk === "spread" && leg.line == null) issues.push("línea");
+    if (!leg.dec) issues.push("cuota");
+    if (lowConf) issues.push("lectura");
+    legs.push(leg);
+  });
+  return { legs, total, rows: R };
+}
+// </slip-parser>
+// Mi combinada → "Imagen": el usuario sube (o pega) una captura de su combinada de Rushbet, BetPlay u otra casa. El
+// texto se lee aquí mismo con Tesseract.js (OCR en el navegador: la imagen no sale del equipo; la librería, ~9 MB la
+// primera vez, se baja de jsDelivr y queda en caché), se agrupa en renglones y parseSlip lo cruza con los jugadores y
+// equipos de los partidos por jugarse. Cada pata leída se puede corregir antes de pasarla a Mi combinada y a Mis picks.
+const TESS_V = "5.1.1";
+let IMG_OPEN = false, TESS_W = null, IMP_LOG = () => {};
+const IMP = { st: "idle", pct: 0, msg: "", url: null, legs: [], total: null, text: "", err: "", mode: "replace" };
+const IMP_KINDS = { p: "Jugador", ml: "Ganador", spread: "Hándicap", total: "Total del partido", tt: "Puntos de un equipo" };
+const IMP_STAGE = { "loading tesseract core": "Cargando el lector", "initializing tesseract": "Cargando el lector", "loading language traineddata": "Cargando el idioma",
+  "initializing api": "Preparando", "recognizing text": "Leyendo la imagen" };
+function loadTess() {
+  return new Promise((ok, ko) => {
+    if (window.Tesseract) return ok();
+    const s = document.createElement("script");
+    s.src = `https://cdn.jsdelivr.net/npm/tesseract.js@${TESS_V}/dist/tesseract.min.js`;
+    s.onload = ok; s.onerror = () => { s.remove(); ko(new Error("No se pudo cargar el lector de imágenes (revisa tu conexión).")); };
+    document.head.appendChild(s);
+  });
+}
+function tessWorker() {
+  if (!TESS_W) TESS_W = loadTess().then(() => Tesseract.createWorker("spa+eng", 1, { logger: m => IMP_LOG(m) })).catch(e => { TESS_W = null; throw e; });
+  return TESS_W;
+}
+// gris, texto oscuro sobre fondo claro (las capturas en modo oscuro se invierten) y ancho de ~1300 px
+async function slipCanvas(file) {
+  const img = await new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ko(new Error("No se pudo abrir la imagen.")); i.src = IMP.url; });
+  let s = Math.min(3, Math.max(1, 1300 / img.naturalWidth));
+  if (img.naturalWidth * img.naturalHeight * s * s > 14e6) s = Math.sqrt(14e6 / (img.naturalWidth * img.naturalHeight));
+  const w = Math.round(img.naturalWidth * s), h = Math.round(img.naturalHeight * s), c = document.createElement("canvas");
+  c.width = w; c.height = h;
+  const x = c.getContext("2d", { willReadFrequently: true }); x.drawImage(img, 0, 0, w, h);
+  const im = x.getImageData(0, 0, w, h), d = im.data;
+  let sum = 0;
+  for (let i = 0; i < d.length; i += 4) { const g = .299 * d[i] + .587 * d[i + 1] + .114 * d[i + 2]; d[i] = d[i + 1] = d[i + 2] = g; sum += g; }
+  if (sum / (w * h) < 128) for (let i = 0; i < d.length; i += 4) d[i] = d[i + 1] = d[i + 2] = 255 - d[i];
+  x.putImageData(im, 0, 0);
+  return c;
+}
+// palabras del OCR → renglones visuales (misma altura), de izquierda a derecha: la cuota de la derecha queda en su renglón
+function slipRows(data) {
+  const ws = [];
+  (data.blocks || []).forEach(b => (b.paragraphs || []).forEach(p => (p.lines || []).forEach(l => (l.words || []).forEach(w => { if (w.text.trim()) ws.push(w); }))));
+  ws.sort((a, b) => (a.bbox.y0 + a.bbox.y1) - (b.bbox.y0 + b.bbox.y1));
+  const rows = [];
+  ws.forEach(w => {
+    const cy = (w.bbox.y0 + w.bbox.y1) / 2, h = w.bbox.y1 - w.bbox.y0;
+    const r = rows.slice(-4).find(r => Math.abs(r.cy - cy) < Math.max(r.h, h) * .5);
+    if (r) { r.ws.push(w); r.cy += (cy - r.cy) / r.ws.length; r.h = Math.max(r.h, h); } else rows.push({ cy, h, ws: [w] });
+  });
+  return rows.map(r => { r.ws.sort((a, b) => a.bbox.x0 - b.bbox.x0); return { text: r.ws.map(w => w.text).join(" "), y: r.cy, h: r.h, conf: r.ws.reduce((t, w) => t + w.confidence, 0) / r.ws.length }; })
+    .sort((a, b) => a.y - b.y);
+}
+const impPlayers = d => d.summary.players.filter(p => p.pts).sort((x, y) => x.team.localeCompare(y.team) || y.min - x.min);
+async function impGames() {
+  const games = pickGames();
+  await Promise.all(games.map(g => cache[g.id] ? null : getJSON(`data/${g.id}.json`).then(d => { cache[g.id] = d; }).catch(() => {})));
+  return games.filter(g => cache[g.id]);
+}
+async function readSlip(file) {
+  if (!file || !/^image\//.test(file.type || "image/")) { IMP.st = "error"; IMP.err = "Ese archivo no es una imagen."; return drawImport(); }
+  if (IMP.url) URL.revokeObjectURL(IMP.url);
+  Object.assign(IMP, { st: "work", pct: 0, msg: "Preparando la imagen", url: URL.createObjectURL(file), legs: [], total: null, text: "", err: "" });
+  drawImport();
+  try {
+    const [canvas, games] = await Promise.all([slipCanvas(file), impGames()]);
+    if (!games.length) throw new Error("No hay partidos por jugarse publicados: cuando salgan los picks de la jornada podrás leer tu combinada.");
+    IMP_LOG = m => { const t = IMP_STAGE[m.status]; if (t) { IMP.msg = t; IMP.pct = m.status === "recognizing text" ? .3 + .7 * (m.progress || 0) : .3 * (m.progress || 0); drawImpProgress(); } };
+    const w = await tessWorker();
+    IMP.msg = "Leyendo la imagen"; drawImpProgress();
+    const { data } = await w.recognize(canvas, {}, { blocks: true, text: true });
+    const rows = slipRows(data);
+    const cat = games.map(g => ({ gid: g.id, away: g.away, home: g.home, players: impPlayers(cache[g.id]).map(p => ({ name: p.name, team: p.team })) }));
+    const r = parseSlip(rows, cat);
+    IMP.text = rows.map(x => x.text).join("\n"); IMP.total = r.total;
+    IMP.legs = r.legs.map(l => ({ on: true, kind: l.type === "p" ? "p" : l.mk, gid: l.gid, player: l.player || null, stat: l.stat || "pts", team: l.team || null,
+      side: l.side || (l.type === "p" || l.mk === "total" || l.mk === "tt" ? "over" : null), line: l.line, dec: l.dec, issues: l.issues, src: l.src }));
+    // "crear apuesta" (todas las patas sin cuota propia y una cuota total): la total se reparte por igual entre las patas
+    if (IMP.legs.length > 1 && IMP.total > 1 && IMP.legs.every(l => !l.dec)) {
+      const q = +Math.pow(IMP.total, 1 / IMP.legs.length).toFixed(2);
+      IMP.legs.forEach(l => { l.dec = q; l.split = true; l.issues = l.issues.filter(x => x !== "cuota"); });
+    }
+    IMP.legs.forEach(l => { const g = INDEX.games.find(x => x.id === l.gid); if (l.kind !== "p" && g && !g.result) loadSims(l.gid); });
+    IMP.mode = MYC.length ? IMP.mode : "replace"; IMP.st = "done";
+  } catch (e) { IMP.st = "error"; IMP.err = e.message || "No se pudo leer la imagen."; }
+  drawImport();
+}
+// probabilidad del modelo y pata (formato de regLeg) de una línea leída
+function impCalc(l) {
+  const d = cache[l.gid];
+  if (!d) return { err: "Elige el partido." };
+  const g = d.game, game = `${g.away} @ ${g.home}`, L = l.line, ok = L != null && !isNaN(L);
+  if (l.kind === "p") {
+    const pl = d.summary.players.find(p => p.name === l.player), x = pl && pl[l.stat];
+    if (!pl) return { err: "Elige el jugador." };
+    if (!x) return { err: "El modelo no proyecta esa estadística para este jugador." };
+    if (!ok) return { err: "Escribe la línea." };
+    const r = propProb(x, L);
+    if (!r) return { err: "Sin datos para esa línea." };
+    const S = l.side === "under" ? "Under" : "Over";
+    return { game, p: l.side === "under" ? r.b : r.a, push: r.push, flag: pl.flag,
+      b: { kind: "prop", label: `${pl.name} ${S} ${L} ${STAT_LABEL[l.stat]}`, player: pl.name, stat: l.stat, line: L, side: S.toLowerCase(), flag: pl.flag } };
+  }
+  const mk = l.kind, T = mk === "total" ? null : ([g.away, g.home].includes(l.team) ? l.team : g.away);
+  if (mk !== "ml" && !ok) return { err: "Escribe la línea." };
+  const r = teamProb(d, mk, T || g.away, L), ou = mk === "total" || mk === "tt", S = l.side === "under" ? "Under" : "Over";
+  return { game, p: ou && l.side === "under" ? r.b : r.a, push: r.push || 0,
+    b: { kind: mk, label: teamLabel(mk, T, L, ou ? S : undefined), team: T, line: mk === "ml" ? null : L, side: ou ? S.toLowerCase() : null } };
+}
+const impNum = v => { const x = parseFloat(String(v ?? "").trim().replace(",", ".")); return isNaN(x) ? null : x; };
+const impValid = () => IMP.legs.filter(l => l.on).map(l => ({ l, c: impCalc(l) })).filter(x => x.c.p != null && x.l.dec > 1);
+const ISSUE_TXT = { nombre: "el jugador", "estadística": "la estadística", "línea": "la línea", cuota: "la cuota", mercado: "el mercado", lectura: "la lectura" };
+function impOut(i) {
+  const l = IMP.legs[i], o = $("#im" + i + "-out"), h = $("#im" + i + "-h"), thr = INDEX ? INDEX.value_ev : .03;
+  if (!o) return;
+  const c = impCalc(l);
+  h.textContent = c.b ? c.b.label : "Pata por completar";
+  if (c.err) o.innerHTML = `<span class="muted">${esc(c.err)}</span>`;
+  else {
+    const ev = l.dec > 1 ? c.p * l.dec + c.push - 1 : null;
+    o.innerHTML = `<b>${pct(c.p, 1)}</b> según el modelo · cuota justa ${fairDec(c.p)}${ev == null ? ` · <span class="muted">escribe la cuota</span>` : ` · EV ${evPill(ev, thr)}`}${c.flag ? ` <span class="muted">· ⚠ ${esc(FLAG_TXT[c.flag.t] || "")}</span>` : ""}`;
+  }
+  impFoot();
+}
+function impFoot() {
+  const f = $("#im-foot");
+  if (!f) return;
+  const v = impValid(), n = v.length, prod = v.reduce((t, x) => t * x.l.dec, 1);
+  const off = n > 1 && IMP.total > 1 && Math.abs(prod / IMP.total - 1) > .03;
+  $("#im-prod").textContent = n > 1 ? `Producto de las cuotas de las patas: ${prod.toFixed(2)}.${off ? " No coincide con la cuota total: puede haber una cuota mal leída o una pata que no se reconoció." : ""}` : "";
+  $("#im-prod").classList.toggle("warn", off);
+  f.querySelectorAll("[data-imgo]").forEach(b => {
+    b.disabled = !n;
+    b.textContent = b.dataset.imgo === "save" ? `Agregar ${n || ""} ${n === 1 ? "pata" : "patas"} y guardar en Mis picks` : `Solo agregar a Mi combinada`;
+  });
+}
+function drawImpProgress() {
+  const b = $("#im-bar"), m = $("#im-msg");
+  if (b) b.style.width = Math.round(IMP.pct * 100) + "%";
+  if (m) m.textContent = `${IMP.msg}… ${Math.round(IMP.pct * 100)}%`;
+}
+function drawImport(focus) {
+  const box = $("#cb-form");
+  if (!IMG_OPEN || !box) return;
+  const pick = `<input type="file" id="im-file" accept="image/*" hidden>`;
+  const thumb = IMP.url ? `<img class="im-thumb" src="${IMP.url}" alt="Tu captura">` : "";
+  if (IMP.st === "idle" || IMP.st === "error") {
+    box.innerHTML = `${pick}<div class="im-drop" id="im-drop">
+      <p><b>Sube una captura de tu combinada</b> (Rushbet, BetPlay u otra casa). Leemos cada pata, la cruzamos con el modelo y te mostramos su probabilidad; lo que no se lea bien lo corriges antes de agregarlo.</p>
+      <button type="button" class="btn" id="im-pick">Elegir imagen</button>
+      <p class="muted">También puedes pegarla (Ctrl+V) o arrastrarla aquí. La imagen se lee en tu navegador y no se sube a ningún lado.</p></div>
+      ${IMP.st === "error" ? `<p class="cb-note warn">${esc(IMP.err)}</p>` : ""}`;
+  } else if (IMP.st === "work") {
+    box.innerHTML = `${pick}<div class="im-work">${thumb}<div><p id="im-msg" aria-live="polite"></p><div class="im-prog"><i id="im-bar"></i></div>
+      <p class="muted">La primera vez se baja el lector (unos 9 MB); después queda guardado y es más rápido.</p></div></div>`;
+    drawImpProgress();
+  } else {
+    const games = pickGames().filter(g => cache[g.id]), n = IMP.legs.length, chk = IMP.legs.filter(l => l.on && l.issues.length).length;
+    box.innerHTML = `${pick}<div class="im-sum">${thumb}<div>
+        <p><b>${n ? `Leímos ${n} ${n === 1 ? "pata" : "patas"}` : "No encontramos patas"}</b>${n ? (chk ? `: revisa ${chk === 1 ? "la marcada" : `las ${chk} marcadas`} en amarillo.` : ". Revisa que todo coincida con tu boleto.") : `. Solo se reconocen jugadores y equipos de los partidos publicados que faltan por jugarse; puedes agregar las patas a mano.`}</p>
+        <button type="button" class="btn ghost" id="im-pick">Leer otra imagen</button></div></div>
+      <ol class="im-legs">${IMP.legs.map((l, i) => impLegHTML(l, i, games)).join("")}</ol>
+      <button type="button" class="btn ghost im-addl" id="im-add">+ Agregar pata a mano</button>
+      <div class="im-foot" id="im-foot">
+        <label class="im-tot">Cuota total de tu boleto <input id="im-total" type="text" inputmode="decimal" autocomplete="off" value="${IMP.total || ""}" placeholder="opcional"></label>
+        <p class="muted" id="im-prod"></p>
+        ${MYC.length ? `<div class="filters" role="group" aria-label="Qué hacer con tu combinada actual"><button type="button" data-immode="replace" aria-pressed="${IMP.mode === "replace"}">Reemplazar mi combinada (${MYC.length})</button><button type="button" data-immode="add" aria-pressed="${IMP.mode === "add"}">Sumarlas a la actual</button></div>` : ""}
+        <button type="button" class="btn" data-imgo="save"></button>
+        <button type="button" class="btn ghost" data-imgo="combo"></button>
+        <p class="muted">En Mis picks la combinada se guarda con la cuota total de tu boleto si la escribes (es la que te paga la casa); si no, con el producto de las cuotas.</p>
+      </div>
+      ${IMP.text ? `<details class="im-raw"><summary>Texto leído de la imagen</summary><pre>${esc(IMP.text)}</pre></details>` : ""}`;
+    IMP.legs.forEach((l, i) => bindImpLeg(i));
+    impFoot();
+    $("#im-add").addEventListener("click", () => {
+      const g = games[0];
+      if (!g) return;
+      IMP.legs.push({ on: true, kind: "p", gid: g.id, player: null, stat: "pts", team: null, side: "over", line: null, dec: null, issues: [], src: [], manual: true });
+      drawImport("im" + (IMP.legs.length - 1) + "-g");
+    });
+    $("#im-total").addEventListener("input", e => { IMP.total = impNum(e.target.value); impFoot(); });
+    box.querySelectorAll("[data-immode]").forEach(b => b.addEventListener("click", () => { IMP.mode = b.dataset.immode; drawImport("im-foot"); }));
+    box.querySelectorAll("[data-imgo]").forEach(b => b.addEventListener("click", () => impApply(b.dataset.imgo === "save")));
+  }
+  const file = $("#im-file");
+  file.addEventListener("change", () => { if (file.files[0]) readSlip(file.files[0]); });
+  $("#im-pick")?.addEventListener("click", () => file.click());
+  const drop = $("#im-drop");
+  if (drop) {
+    drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over"); });
+    drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+    drop.addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over"); const f = [...(e.dataTransfer?.files || [])].find(f => /^image\//.test(f.type)); if (f) readSlip(f); });
+  }
+  if (focus) { const f = $("#" + focus); if (f) (f.matches("select, input, button") ? f : f.querySelector("select, input, button"))?.focus({ preventScroll: false }); }
+}
+function impLegHTML(l, i, games) {
+  const d = cache[l.gid], g = d && d.game, P = "im" + i;
+  const opt = (v, t, on) => `<option value="${esc(v)}"${on ? " selected" : ""}>${esc(t)}</option>`;
+  let f = `<label class="wide">Partido<select id="${P}-g">${games.map(x => opt(x.id, `${x.away} @ ${x.home} · ${x.date === DAY ? "hoy" : dayName(x.date)}`, x.id === l.gid)).join("")}</select></label>
+    <label>Tipo<select id="${P}-k">${Object.entries(IMP_KINDS).map(([k, t]) => opt(k, t, k === l.kind)).join("")}</select></label>`;
+  if (d && l.kind === "p") {
+    const ps = impPlayers(d), pl = ps.find(p => p.name === l.player), stats = pl ? Object.keys(STAT_LABEL).filter(k => pl[k]) : Object.keys(STAT_LABEL).slice(0, 5);
+    f += `<label>Estadística<select id="${P}-s">${stats.map(k => opt(k, STAT_LABEL[k], k === l.stat)).join("")}</select></label>
+      <label class="wide">Jugador<select id="${P}-p">${pl ? "" : opt("", "Elige el jugador", true)}${ps.map(p => opt(p.name, `${p.team} · ${p.name}`, p.name === l.player)).join("")}</select></label>`;
+  } else if (d && l.kind !== "total") f += `<label>Equipo<select id="${P}-T">${[g.away, g.home].map(t => opt(t, t + (t === g.home ? " (local)" : " (visitante)"), t === l.team)).join("")}</select></label>`;
+  if (l.kind === "p" || l.kind === "total" || l.kind === "tt") f += `<label class="n3">Lado<select id="${P}-sd">${opt("over", "Más de", l.side !== "under")}${opt("under", "Menos de", l.side === "under")}</select></label>`;
+  if (l.kind !== "ml") f += `<label class="n3">Línea<input id="${P}-l" type="text" inputmode="decimal" autocomplete="off" value="${l.line ?? ""}"></label>`;
+  f += `<label class="n3">Cuota<input id="${P}-o" type="text" inputmode="decimal" autocomplete="off" value="${l.dec ?? ""}" placeholder="ej. 1.85"></label>`;
+  const iss = l.issues.filter(x => ISSUE_TXT[x]);
+  return `<li class="im-leg${l.on ? "" : " off"}${iss.length ? " chk" : ""}">
+    <div class="im-top"><label class="im-on"><input type="checkbox" id="${P}-on"${l.on ? " checked" : ""}><span id="${P}-h"></span></label><button type="button" class="cb-x" id="${P}-x" aria-label="Quitar esta pata">×</button></div>
+    ${iss.length ? `<p class="im-iss">Revisa ${iss.map(x => ISSUE_TXT[x]).join(", ")}: no se leyó con seguridad.</p>` : ""}
+    ${l.split ? `<p class="im-iss">Tu boleto no trae cuota por pata: repartimos la cuota total por igual. Si la casa te muestra la de cada pata, escríbela.</p>` : ""}
+    <div class="calc">${f}</div>
+    <div class="im-out" id="${P}-out" aria-live="polite"></div>
+    ${l.src && l.src.length ? `<p class="im-src">Leído: «${esc(l.src.join(" · "))}»</p>` : ""}</li>`;
+}
+function bindImpLeg(i) {
+  const l = IMP.legs[i], P = "im" + i, el = id => $("#" + P + "-" + id), redraw = id => drawImport(P + "-" + id);
+  el("g")?.addEventListener("change", e => { l.gid = e.target.value; l.player = null; const g = cache[l.gid].game; if (![g.away, g.home].includes(l.team)) l.team = g.away; redraw("g"); });
+  el("k")?.addEventListener("change", e => { l.kind = e.target.value; const g = cache[l.gid].game; if (!l.team) l.team = g.away; if (!l.side) l.side = "over"; if (l.kind !== "p") loadSims(l.gid); redraw("k"); });
+  el("p")?.addEventListener("change", e => { l.player = e.target.value; l.issues = l.issues.filter(x => x !== "nombre"); redraw("p"); });
+  el("s")?.addEventListener("change", e => { l.stat = e.target.value; impOut(i); });
+  el("T")?.addEventListener("change", e => { l.team = e.target.value; impOut(i); });
+  el("sd")?.addEventListener("change", e => { l.side = e.target.value; impOut(i); });
+  el("l")?.addEventListener("input", e => { l.line = impNum(e.target.value); impOut(i); });
+  el("o")?.addEventListener("input", e => { l.dec = impNum(e.target.value); l.split = false; impOut(i); });
+  el("on")?.addEventListener("change", e => { l.on = e.target.checked; e.target.closest(".im-leg").classList.toggle("off", !l.on); impFoot(); });
+  el("x")?.addEventListener("click", () => { IMP.legs.splice(i, 1); drawImport(); });
+  impOut(i);
+}
+function impApply(save) {
+  const v = impValid();
+  if (!v.length) return;
+  const ks = v.map(x => regLeg({ ...x.c.b, p: Math.round(x.c.p * 1000) / 1000, dec: x.l.dec, custom: true }, x.l.gid, x.c.game));
+  const base = MYC.length && IMP.mode === "add" ? MYC.filter(l => !ks.includes(l.k)) : [];
+  const add = [...new Set(ks)].slice(0, COMBO_MAX - base.length);
+  MYC = [...base, ...add.map(k => ({ ...LEGREG[k], added: Date.now() }))];
+  if (add.length < new Set(ks).size) comboMsg(`Máximo ${COMBO_MAX} patas: no cupieron todas.`);
+  comboChanged(true);
+  showImport(false);
+  if (save) {
+    const only = !base.length, tot = only && IMP.total > 1 ? IMP.total : null;
+    if (MYC.length > 1) { if (!isMine(comboKey())) toggleComboMine(tot); }
+    else if (MYC.length === 1 && !isMine(MYC[0].k)) toggleMine(MYC[0].k);
+  }
+}
+function showImport(on) {
+  if (on && MK_OPEN) showPickForm(false);
+  IMG_OPEN = on;
+  $("#combo-panel").classList.toggle("mk-open", on); $("#cb-form").hidden = !on;
+  if (on) drawImport(); else if (!MK_OPEN) $("#cb-form").innerHTML = "";
+  syncMkBtn();
+}
+document.addEventListener("sims", e => { if (IMG_OPEN && IMP.st === "done") IMP.legs.forEach((l, i) => { if (l.gid === e.detail) impOut(i); }); });
+document.addEventListener("paste", e => {
+  if (!IMG_OPEN || IMP.st === "work") return;
+  const f = [...(e.clipboardData?.items || [])].find(x => x.kind === "file" && /^image\//.test(x.type));
+  if (f) { e.preventDefault(); readSlip(f.getAsFile()); }
+});
+$("#cb-img").addEventListener("click", () => {
+  if (IMG_OPEN) { if (IMP.st !== "work") $("#im-file")?.click(); return; }
+  openCombo(true); showImport(true);
+  if (IMP.st === "idle") $("#im-file")?.click();
+});
 
 // Guía para quien entra por primera vez (dialog #guide). Cada tema tiene un id: los botones "?" (qh) de las secciones
 // abren la guía en ese tema. La bienvenida del inicio se oculta con "Entendido" (localStorage "nbap-intro").
@@ -1950,6 +2447,7 @@ const GUIDE = [
     <p>Se eligen las combinaciones con más probabilidad de acertar todas, con cuota de al menos 2.00 y EV positivo. Aun así, un parlay acierta menos veces que cada pata por separado.</p>`],
   ["combinada", "Mi combinada", "Arma tu combinada", () => `<p>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (en el inicio, en "Ver todos" o en la página de un partido), <b>Agregar a mi combinada</b> en un parlay recomendado, o crea tu propio pick.</p>
     <p><b>Crea tu pick</b>: en la página de cada partido (con ese partido) o con <b>+ Crear pick</b> dentro de Mi combinada (eliges cualquier partido que falte por jugarse, sin salir de donde estás). Puede ser de <b>jugador</b> (cualquier estadística que proyecta el modelo) o de <b>equipo</b> (ganador, hándicap, total del partido o puntos de un equipo). Escribe la línea y la cuota decimal de tu casa: ves la probabilidad del modelo, la cuota justa y el EV, y lo sumas con el botón. Para los mercados de equipo se usa la probabilidad publicada si la línea coincide con la de las casas; si no, se cuenta en las simulaciones del partido.</p>
+    <p><b>Desde una imagen</b>: en Mi combinada toca <b>Imagen</b> (el ícono de cámara) y sube o pega la captura de la combinada que armaste en tu casa (Rushbet, BetPlay u otra). La página lee cada pata (jugador, estadística, más o menos, línea y cuota, o ganador, hándicap y total), te muestra la probabilidad del modelo y el EV de cada una y marca en amarillo lo que no se leyó con seguridad para que lo corrijas. Después las agregas a tu combinada y, si quieres, a <b>Mis picks</b> con la cuota total de tu boleto. La imagen se lee en tu navegador: no se sube a ningún lado.</p>
     <p>Los picks se juntan en <b>Mi combinada</b>, abajo a la izquierda. Puedes minimizarla y seguir navegando; al abrirla ves cada pata, la probabilidad de acertar todas, la cuota aproximada (producto de las cuotas), la cuota justa, el EV y el pago según lo que apuestes. Cuando terminan los partidos, cada pata y la combinada se marcan como ganadas o perdidas.</p>
     <dl><dt>Patas de partidos distintos</dt><dd>La probabilidad es la multiplicación de la de cada pata.</dd>
     <dt>Patas del mismo partido</dt><dd>Se cuentan juntas en una muestra de las simulaciones del partido (también las líneas propias de la calculadora), porque unas dependen de otras: si un equipo anota mucho, suben sus jugadores y el over. Si no hay muestra (partido ya jugado o jugador sin simular), se multiplican y se marca con * porque es aproximada.</dd></dl>
@@ -2144,13 +2642,13 @@ function takeBtn(k, wide) {
 // la combinada entera como una sola apuesta del historial (clave = sus patas)
 const comboKey = () => "combo|" + MYC.map(l => l.k).sort().join("||");
 const legGame = l => INDEX.games.find(x => x.id === l.gid);
-function toggleComboMine() {
+function toggleComboMine(decOv) {   // decOv: cuota total del boleto (combinada leída de una imagen)
   const k = comboKey(), i = MINE.findIndex(l => l.k === k), legs = i >= 0 ? MINE[i].legs : MYC;
   if (legs.some(l => gameLocked(legGame(l)))) { alert("Alguna pata ya empezó: la combinada solo se guarda o se quita antes del inicio de todos sus partidos."); return; }
   if (i >= 0) MINE.splice(i, 1);
   else {
     const c = comboCalc(), ds = legs.map(l => legGame(l).date).sort();
-    MINE.push({ k, combo: true, gid: legs[0].gid, game: `Combinada de ${legs.length} patas`, label: legs.map(l => l.label).join(" + "), kind: "combo", p: c.p, dec: +c.dec.toFixed(2),
+    MINE.push({ k, combo: true, gid: legs[0].gid, game: `Combinada de ${legs.length} patas`, label: legs.map(l => l.label).join(" + "), kind: "combo", p: c.p, dec: +(typeof decOv === "number" && decOv > 1 ? decOv : c.dec).toFixed(2),
       legs: legs.map(({ k, gid, game, label, kind, player, stat, line, team, side, p, dec }) => ({ k, gid, game, label, kind, player, stat, line, team, side, p, dec })),
       src: "combo", date: ds[ds.length - 1], model: INDEX.model || "", at: Date.now() });
   }
@@ -2394,7 +2892,8 @@ function drawCombo() {
   syncMkBtn();
   if (!n) {
     $("#cp-d").textContent = "";
-    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí, o crea el tuyo con <b>+ Crear pick</b>.</div>`;
+    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí, o crea el tuyo con <b>+ Crear pick</b>.<br><br>¿Ya la armaste en tu casa? <button type="button" class="btn ghost im-cta" data-imgcta>Súbela desde una imagen</button></div>`;
+    $("#cb-body [data-imgcta]").addEventListener("click", () => $("#cb-img").click());
     $("#cb-foot").hidden = true;
     return;
   }
@@ -2434,11 +2933,11 @@ function openCombo(on) {
   const box = $("#combo");
   box.classList.toggle("open", on); $("#combo-panel").hidden = !on;
   $("#combo-pill").setAttribute("aria-expanded", on);
-  if (on) { box.hidden = false; drawCombo(); $("#cb-min").focus({ preventScroll: true }); } else { if (MK_OPEN) showPickForm(false); drawCombo(); if (!box.hidden) $("#combo-pill").focus({ preventScroll: true }); }
+  if (on) { box.hidden = false; drawCombo(); $("#cb-min").focus({ preventScroll: true }); } else { if (MK_OPEN) showPickForm(false); if (IMG_OPEN) showImport(false); drawCombo(); if (!box.hidden) $("#combo-pill").focus({ preventScroll: true }); }
 }
 $("#combo-pill").addEventListener("click", () => openCombo(true));
 $("#cb-min").addEventListener("click", () => openCombo(false));
-$("#cb-mk").addEventListener("click", () => showPickForm(!MK_OPEN));
+$("#cb-mk").addEventListener("click", () => IMG_OPEN ? showImport(false) : showPickForm(!MK_OPEN));
 $("#cb-clear").addEventListener("click", () => { if (!MYC.length || confirm("¿Vaciar tu combinada?")) { MYC = []; comboChanged(); openCombo(false); } });
 $("#cb-stake").addEventListener("input", e => { ls("nbap-combo-stake", e.target.value); drawCombo(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#combo").classList.contains("open") && !$("#guide").open) openCombo(false); });
