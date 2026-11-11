@@ -1,5 +1,15 @@
 # Cambios del modelo
 
+## Modelo 1.5.1 — 2026-11-12: cuotas de props al margen de Betano Colombia
+- Pedido de Nicolas (11-nov): en Betano las cuotas salen más bajas que en la web, así que el EV real es menor y el
+  soñador de cuota 50 queda en ~37. Causa: las props que leemos (scoresandodds / Covers) son la MEJOR cuota de cada
+  lado entre 6 casas de EE. UU. (margen conjunto ~3.5%); en Colombia el margen es ~7-8% (Kambi 29/30-oct: 7.3%).
+- `localize_odds` (build_site.py), desde las jornadas del 12-nov: quita el margen del par y aplica `CO_OVERROUND`
+  = 1.08; un lado sin pareja sube su prob. implícita en 1.08 / 1.035. La cuota leída queda en `odds_ref`/`dec_ref`
+  (la web la muestra como "≈ Betano · EE. UU. x.xx"). No toca juegos con `"prop_odds_region": "CO"`.
+- Soñador: con esas cuotas casi ninguna pata tiene EV ≥ 0, así que cada pata pide EV ≥ −3% (`DREAM_LEG_EV`).
+- Prueba con la jornada del 11-nov: 12 picks (EV de +3% a +10% en vez de +8% a +17%) y soñador de 7 patas a ~56.
+
 ## Web — 2026-11-11: reemplazos para las patas del soñador
 - Pedido de Nicolas: si la casa no ofrece una pata (p. ej. Reed Sheppard no sale en Betano), cada pata del soñador de
   hoy tiene "No está en mi casa" con hasta 3 reemplazos y la cuota/prob. se recalculan. `dream_swaps` (build_site.py)

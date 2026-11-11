@@ -71,6 +71,7 @@ MODEL_VERSIONS = [
     ("1.2", "2026-10-27", "minutos más abiertos, calibrada con el 26-oct"),
     ("1.3", "2026-10-29", "H2H con peso y más mercados de props"),
     ("1.5", "2026-11-01", "mezcla con la casa, solo props y tope de 15 picks"),
+    ("1.5.1", "2026-11-12", "cuotas de props al margen de Betano Colombia"),
 ]
 MODEL = MODEL_VERSIONS[-1][0]
 
@@ -105,6 +106,35 @@ def pair_key(b):
     if b["kind"] == "spread":
         return ("spread", abs(b["line"]))
     return (b["kind"],)
+
+
+# 1.5.1 (pedido de Nicolas, 11-nov): las cuotas de props que leemos (scoresandodds / Covers) son la MEJOR de cada
+# lado entre 6 casas de EE. UU., con un margen conjunto de ~3.5-4% (11-nov: 1.035), mientras que en Colombia la casa
+# cobra ~7-8% (Kambi 29/30-oct: 1.073; Betano algo más). Así el EV, los parlays y el soñador salían inflados (soñador
+# de cuota 50 en la web = ~37 en Betano). Desde CO_PRICE_FROM cada prop se lleva a la cuota que pondría una casa
+# colombiana: se quita el margen del par (prob. justa) y se aplica CO_OVERROUND; si la cuota leída ya es más baja,
+# se queda. Un lado sin pareja sube su prob. implícita en CO_OVERROUND / US_OVERROUND. La cuota leída queda en
+# odds_ref / dec_ref. No toca cuotas que ya son de una casa colombiana (games/*.json con "prop_odds_region": "CO").
+CO_OVERROUND = 1.08
+US_OVERROUND = 1.035
+CO_PRICE_FROM = "2026-11-12"
+
+
+def localize_odds(bets, over=CO_OVERROUND):
+    groups = {}
+    for b in bets:
+        if b["kind"] == "prop" and not b.get("alt") and not b.get("odds_assumed"):
+            groups.setdefault(pair_key(b), []).append(b)
+    for g in groups.values():
+        imps = [1 / b["dec"] for b in g]
+        tot = sum(imps)
+        for b, imp in zip(g, imps):
+            new = imp / tot * over if len(g) == 2 else imp * over / US_OVERROUND
+            dec = min(b["dec"], 1 / min(new, 0.995))
+            if dec < b["dec"] - 1e-9:
+                b.update(odds_ref=b["odds"], dec_ref=b["dec"], odds=prob_to_american(1 / dec), dec=round(dec, 3),
+                         implied=round(1 / dec, 3))
+    return bets
 
 
 def market_blend(bets, flags=None, w=MKT_W):
@@ -664,6 +694,8 @@ DREAM_POOL = 10          # patas candidatas por partido (las más probables)
 DREAM_PER_GAME = 2
 DREAM_MAX_LEGS = 10
 DREAM_MAX_UNDER = 0.5    # como mucho la mitad de las patas al Under (pedido de Nicolas, 9-nov: que no salga todo Under)
+DREAM_LEG_EV = -0.03     # 1.5.1: EV mínimo de cada pata a cuota colombiana (con el margen de Betano casi ninguna
+                         # pata llega a EV >= 0, y el soñador es una combinada de probabilidad, no de valor)
 DREAM_MIN_CORR = 0.97    # pares del mismo partido: conjunta / producto >= esto (no se estorban)
 DREAM_STATS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
                "stocks": ("stl", "blk")}
@@ -703,7 +735,7 @@ def dream_parlay(rs):
         g = r["game"]
         pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
         pool = [b for b in r["bets"] + r.get("alt_bets", []) if (not b.get("alt") or b["dec"] >= ALT_LEG_MIN_DEC) and b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
-                and b["p"] >= DREAM_SWAP_MIN_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
+                and b["p"] >= DREAM_SWAP_MIN_P and b["ev"] >= (DREAM_LEG_EV if g["date"] >= CO_PRICE_FROM else 0) and pp.get(b["player"], 0) >= PARLAY_P_PLAY
                 and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
         pool = sorted(pool, key=lambda b: -b["p"])
         if not pool:
@@ -1187,7 +1219,10 @@ def run_game(path, n):
     else:
         tb = team_bets(cfg, s)
     summ = summarize(cfg, s)
-    bets = market_blend(tb + prop_bets(cfg, s), player_flags(g["date"], path))
+    pb = prop_bets(cfg, s)
+    if g["date"] >= CO_PRICE_FROM and cfg_raw.get("prop_odds_region") != "CO":
+        localize_odds(pb)
+    bets = market_blend(tb + pb, player_flags(g["date"], path))
     R = load_rankings()
     mv = matchup_view(R, g, summ["players"], summ.get("db_report")) if R else None
     r = dict(id=game_id(path), game=g, market=cfg.get("market", {}), used_db=use_db, sims=n,

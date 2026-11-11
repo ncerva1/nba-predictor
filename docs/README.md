@@ -74,6 +74,7 @@ cd docs && python -m http.server 8000   # abrir http://localhost:8000
 
 ## Cuotas de varias casas
 Guarda las cuotas del día en `odds/<fecha>.json` (formato: `{"games": {"AWAY@HOME": {"books": [{"book": "FanDuel", "spread_away": [4.5, -110], "spread_home": [-4.5, -110], "total": [233.5, -108, -112], "ml_away": 154, "ml_home": -180}]}}}`).
+Desde el 12-nov (modelo 1.5.1) las cuotas de props se pasan al margen de una casa colombiana tipo Betano (`localize_odds`, `CO_OVERROUND` = 1.08): no hace falta hacer nada a mano. Si algún día un partido trae las props de una casa colombiana real, poner `"prop_odds_region": "CO"` en su games/*.json para que no se ajusten.
 `build_site.py` usa la línea más repetida entre las casas, promedia sus cuotas y muestra la mejor casa para cada apuesta. Si un partido no aparece en ese archivo, usa el `market` del JSON del partido (y -110 si falta la cuota).
 
 ### Casas de Colombia (Rushbet, BetPlay)
