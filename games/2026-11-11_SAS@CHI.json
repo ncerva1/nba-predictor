@@ -9,9 +9,12 @@
   "notes": [
    "Tobias Harris (gemelo) y Quaintance OUT en SAS; Vassell (ingle) GTD con líneas",
    "Powell (hombro) GTD con líneas; Collins (enfermedad) GTD",
-   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+   "Awaka (espalda) OUT (ESPN 11-nov); Caleb Wilson rebajado a duda (cadera)"
   ],
-  "out": [],
+  "out": [
+   "Tobe Awaka"
+  ],
   "gtd": {
    "Devin Vassell": 0.65,
    "Norman Powell": 0.65,
@@ -122,7 +125,7 @@
    "name": "Caleb Wilson",
    "pos": "PF",
    "starter": true,
-   "min": 26.2,
+   "min": 27.1,
    "g_cur": 9,
    "p_play": 0.5,
    "cur": {
@@ -164,7 +167,7 @@
    "name": "Norman Powell",
    "pos": "SG",
    "starter": true,
-   "min": 23.4,
+   "min": 24.2,
    "g_cur": 8,
    "p_play": 0.65,
    "cur": {
@@ -206,7 +209,7 @@
    "name": "Josh Giddey",
    "pos": "PG",
    "starter": true,
-   "min": 22.6,
+   "min": 23.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -248,7 +251,7 @@
    "name": "Matas Buzelis",
    "pos": "SF",
    "starter": true,
-   "min": 20.8,
+   "min": 21.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -290,7 +293,7 @@
    "name": "Jalen Smith",
    "pos": "C",
    "starter": true,
-   "min": 18.7,
+   "min": 19.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -332,7 +335,7 @@
    "name": "Patrick Williams",
    "pos": "F",
    "starter": false,
-   "min": 18.2,
+   "min": 18.8,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -373,7 +376,7 @@
    "name": "Isaac Okoro",
    "pos": "SG",
    "starter": false,
-   "min": 15.1,
+   "min": 15.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -414,7 +417,7 @@
    "name": "Nic Claxton",
    "pos": "C",
    "starter": false,
-   "min": 14.5,
+   "min": 15.1,
    "g_cur": 1,
    "p_play": 1.0,
    "cur": {
@@ -455,7 +458,7 @@
    "name": "Tre Jones",
    "pos": "PG",
    "starter": false,
-   "min": 14.3,
+   "min": 14.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -496,7 +499,7 @@
    "name": "Leonard Miller",
    "pos": "SF",
    "starter": false,
-   "min": 14.2,
+   "min": 14.7,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -537,7 +540,7 @@
    "name": "Noa Essengue",
    "pos": "PF",
    "starter": false,
-   "min": 11.3,
+   "min": 11.7,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -578,7 +581,7 @@
    "name": "Buddy Hield",
    "pos": "SG",
    "starter": false,
-   "min": 10.5,
+   "min": 10.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -616,51 +619,10 @@
   },
   {
    "team": "CHI",
-   "name": "Tobe Awaka",
-   "pos": "PF",
-   "starter": false,
-   "min": 8.1,
-   "g_cur": 4,
-   "p_play": 1.0,
-   "cur": {
-    "min": 10.0,
-    "pts": 2.0,
-    "reb": 5.25,
-    "ast": 0.75,
-    "fg3m": 0.0,
-    "fgm": 0.75,
-    "fga": 1.0,
-    "fg3a": 0.0,
-    "stl": 0.25,
-    "blk": 0.75,
-    "tov": 0.5,
-    "pf": 2.25,
-    "ftm": 0.5,
-    "fta": 1.5
-   },
-   "prior": {
-    "min": 10.0,
-    "pts": 2.0,
-    "reb": 5.25,
-    "ast": 0.75,
-    "fg3m": 0.0,
-    "fgm": 0.75,
-    "fga": 1.0,
-    "fg3a": 0.0,
-    "stl": 0.33,
-    "blk": 0.2,
-    "tov": 0.59,
-    "pf": 0.92,
-    "ftm": 0.5,
-    "fta": 1.5
-   }
-  },
-  {
-   "team": "CHI",
    "name": "Dailyn Swain",
    "pos": "SG",
    "starter": false,
-   "min": 7.7,
+   "min": 7.9,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -701,7 +663,7 @@
    "name": "Jaylin Sellers",
    "pos": "PG",
    "starter": false,
-   "min": 7.3,
+   "min": 7.5,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -742,7 +704,7 @@
    "name": "Zach Collins",
    "pos": "PF",
    "starter": false,
-   "min": 7.0,
+   "min": 7.3,
    "g_cur": 6,
    "p_play": 0.5,
    "cur": {

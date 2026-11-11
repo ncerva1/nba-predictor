@@ -8,7 +8,8 @@
   "b2b": "Jugaron el 10-nov: NYK, BOS, MIL, ORL, UTA, OKC y POR",
   "db": "BD de rankings: snapshot del 11-nov (B-Ref 2026-27 hasta el 10-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 9-nov)",
   "h2h": "h2h/2025-26.json: 8 cruces nuevos (23 partidos) desde los game logs de nba.com",
-  "props_combos": "scoresandodds.com/prop-bets/<id>/<jugador> (11-nov ~15:00 ET): línea con más casas y mejor cuota por lado entre casas reales: 387 líneas"
+  "props_combos": "scoresandodds.com/prop-bets/<id>/<jugador> (11-nov ~15:00 ET): línea con más casas y mejor cuota por lado entre casas reales: 387 líneas",
+  "revision_1815": "Revisión 18:15 ET: ESPN injuries + consenso scoresandodds.com/nba y props points/assists/3-pointers (~18:20 ET)"
  },
  "b2b_adj": {
   "o": -1.0,
@@ -1521,9 +1522,10 @@
   },
   "James Harden": {
    "pts": [
-    16.5,
-    100,
-    -119
+    15.5,
+    -112,
+    -130,
+    16.5
    ],
    "reb": [
     4.5,
@@ -1623,7 +1625,7 @@
    "fg3m": [
     1.5,
     -150,
-    140
+    135
    ],
    "pr": [
     18.5,
@@ -1777,8 +1779,9 @@
   "Kyshawn George": {
    "pts": [
     14.5,
-    -110,
-    -102
+    -112,
+    -125,
+    15.5
    ],
    "reb": [
     4.5,
@@ -2256,15 +2259,15 @@
   },
   "Payton Pritchard": {
    "pts": [
-    12.5,
-    -110,
-    100,
-    13.5
+    14.5,
+    -125,
+    -101,
+    15.5
    ],
    "ast": [
-    3.5,
-    -105,
-    122
+    4.5,
+    120,
+    -138
    ],
    "fg3m": [
     2.5,
@@ -2295,8 +2298,9 @@
   "Jared McCain": {
    "pts": [
     12.5,
-    -105,
-    -107
+    -140,
+    -110,
+    13.5
    ],
    "fg3m": [
     1.5,
@@ -3699,10 +3703,10 @@
    "tip_et": "19:00",
    "venue": "Gainbridge Fieldhouse, Indianapolis",
    "market": {
-    "ml_home": -165,
-    "ml_away": 138,
+    "ml_home": -155,
+    "ml_away": 131,
     "spread_home": -3.5,
-    "total": 225.5
+    "total": 226.5
    },
    "b2b": [],
    "adj": {},
@@ -3719,7 +3723,8 @@
    "notes": [
     "Haliburton (isquio) OUT hasta ~13-nov; Vukcevic, Beekman, Champagnie y Watkins OUT en WAS",
     "Coulibaly (mano) DTD con líneas en las casas: 0.7; McConnell (isquio) GTD: 0.65",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
    ]
   },
   {
@@ -3728,10 +3733,10 @@
    "tip_et": "20:00",
    "venue": "Fiserv Forum, Milwaukee",
    "market": {
-    "ml_home": 430,
-    "ml_away": -599,
-    "spread_home": 11.5,
-    "total": 232.5
+    "ml_home": 458,
+    "ml_away": -620,
+    "spread_home": 12.5,
+    "total": 231.5
    },
    "b2b": [
     "MIL"
@@ -3749,7 +3754,8 @@
     "Reaves (enfermedad) y Grimes (dedo) no jugaron el 9-nov; DTD/GTD con líneas en las casas",
     "Herro (rodilla) OUT el 10-nov; CBS 'out until at least Nov 11' pero tiene líneas: 0.55",
     "Back-to-back: MIL (jugó el 10-nov en NYK)",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
    ]
   },
   {
@@ -3789,10 +3795,10 @@
    "tip_et": "20:00",
    "venue": "FedExForum, Memphis",
    "market": {
-    "ml_home": 143,
-    "ml_away": -170,
+    "ml_home": 146,
+    "ml_away": -174,
     "spread_home": 3.5,
-    "total": 228.5
+    "total": 229.5
    },
    "b2b": [],
    "adj": {},
@@ -3806,7 +3812,8 @@
    "notes": [
     "Strawther (rodilla) OUT; Post (cabeza) y Pippen Jr. (espalda) OUT en MEM",
     "Stewart (rodilla) GTD con líneas: 0.6",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
    ]
   },
   {
@@ -3822,7 +3829,9 @@
    },
    "b2b": [],
    "adj": {},
-   "out": [],
+   "out": [
+    "Tobe Awaka"
+   ],
    "gtd": {
     "Devin Vassell": 0.65,
     "Norman Powell": 0.65,
@@ -3832,7 +3841,8 @@
    "notes": [
     "Tobias Harris (gemelo) y Quaintance OUT en SAS; Vassell (ingle) GTD con líneas",
     "Powell (hombro) GTD con líneas; Collins (enfermedad) GTD",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Awaka (espalda) OUT (ESPN 11-nov); Caleb Wilson rebajado a duda (cadera)"
    ]
   },
   {
@@ -3841,10 +3851,10 @@
    "tip_et": "21:00",
    "venue": "Delta Center, Salt Lake City",
    "market": {
-    "ml_home": 142,
-    "ml_away": -170,
-    "spread_home": 3.5,
-    "total": 214.5
+    "ml_home": 150,
+    "ml_away": -179,
+    "spread_home": 4.5,
+    "total": 217.5
    },
    "b2b": [
     "ORL",
@@ -3868,7 +3878,8 @@
     "Nurkic y Jaren Jackson Jr. OUT en UTA",
     "Back-to-back: ORL (jugó el 10-nov en SAC) y UTA (vs MIA el 10-nov)",
     "Covers sin líneas para este partido: consenso de scoresandodds",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
    ]
   },
   {
@@ -3877,9 +3888,9 @@
    "tip_et": "21:30",
    "venue": "Toyota Center, Houston",
    "market": {
-    "ml_home": -218,
-    "ml_away": 180,
-    "spread_home": -5.5,
+    "ml_home": -237,
+    "ml_away": 196,
+    "spread_home": -6.5,
     "total": 222.5
    },
    "b2b": [],
@@ -3897,7 +3908,8 @@
    "notes": [
     "Payton II, B. Williams, Porzingis, Butler y Moody OUT en GSW; Will Richard (pulgar) GTD",
     "Capela y Adams OUT hasta ~15-nov; Tshiebwe (enfermedad) DTD",
-    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+    "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
    ]
   },
   {
