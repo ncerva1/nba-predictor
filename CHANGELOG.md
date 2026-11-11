@@ -5,8 +5,8 @@
   JS en /nba/props). Ahora salen de la página de cada jugador en scoresandodds (6-8 casas): `odds/combos/<fecha>.json`
   + `python odds/merge_combos.py <fecha>` las añade a prop_lines del slate. Con eso entran en apuestas, props,
   portada, parlays, soñador y Armar apuesta como cualquier otra prop.
-- 11-nov: 79 jugadores y 387 líneas, re-simulado a las 15:00 ET. Los 15 picks y el soñador ya publicados de ese día se
-  dejaron como estaban (las combinadas desplazaban 10 de los 15 picks).
+- 11-nov: 79 jugadores y 387 líneas, re-simulado a las 15:00 ET. A pedido de Nicolas (15:26 ET) se republicaron los
+  15 picks y el soñador de ese día con las combinadas: entraron 10 picks nuevos y 5 patas nuevas en el soñador (cuota 50.86).
 
 ## Web — 2026-11-11: Armar apuesta en cada partido
 - Pedido de Nicolas (estilo ludoprops): sección **Armar apuesta** arriba de las apuestas de cada partido, con las 5
