@@ -696,6 +696,7 @@ DREAM_MAX_LEGS = 10
 DREAM_MAX_UNDER = 0.5    # como mucho la mitad de las patas al Under (pedido de Nicolas, 9-nov: que no salga todo Under)
 DREAM_LEG_EV = -0.03     # 1.5.1: EV mínimo de cada pata a cuota colombiana (con el margen de Betano casi ninguna
                          # pata llega a EV >= 0, y el soñador es una combinada de probabilidad, no de valor)
+DREAM_CO_FROM = "2026-11-11"  # el soñador del 11-nov (aún sin jugar) se rehizo a cuota colombiana (pedido de Nicolas)
 DREAM_MIN_CORR = 0.97    # pares del mismo partido: conjunta / producto >= esto (no se estorban)
 DREAM_STATS = {"pra": ("pts", "reb", "ast"), "pr": ("pts", "reb"), "pa": ("pts", "ast"), "ra": ("reb", "ast"),
                "stocks": ("stl", "blk")}
@@ -733,9 +734,14 @@ def dream_parlay(rs):
     wide = {}  # por partido: (patas candidatas, muestra de simulaciones), para los reemplazos
     for r in rs:
         g = r["game"]
+        if g["date"] >= DREAM_CO_FROM:  # jornadas publicadas antes de 1.5.1: el soñador ya va a cuota colombiana
+            old = [b for b in r["bets"] + r.get("alt_bets", []) if "dec_ref" not in b]
+            for b in localize_odds(old):
+                if "dec_ref" in b:
+                    b["ev"] = round(b["p"] * b["dec"] - 1, 3)
         pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
         pool = [b for b in r["bets"] + r.get("alt_bets", []) if (not b.get("alt") or b["dec"] >= ALT_LEG_MIN_DEC) and b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
-                and b["p"] >= DREAM_SWAP_MIN_P and b["ev"] >= (DREAM_LEG_EV if g["date"] >= CO_PRICE_FROM else 0) and pp.get(b["player"], 0) >= PARLAY_P_PLAY
+                and b["p"] >= DREAM_SWAP_MIN_P and b["ev"] >= (DREAM_LEG_EV if g["date"] >= DREAM_CO_FROM else 0) and pp.get(b["player"], 0) >= PARLAY_P_PLAY
                 and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
         pool = sorted(pool, key=lambda b: -b["p"])
         if not pool:

@@ -391,6 +391,10 @@ tr.detail td { background: var(--bg) }
 .cb-take .take-w { margin: 0 0 8px }
 .mine-tag { display: inline-block; margin-top: 4px; font: 500 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 7px }
 .mine-tag.rec { color: var(--good); border-color: var(--good) }
+.mine-warn { margin-top: 5px; font-size: 12.5px; color: var(--bad); background: var(--bad-soft); border-radius: 6px; padding: 4px 8px }
+.mine-alert { margin: 10px 0 0; color: var(--bad); background: var(--bad-soft); border-radius: 8px; padding: 8px 12px; font-size: 14px }
+.mine-dec { display: flex; align-items: center; gap: 5px; color: var(--muted) }
+.mine-dec input { width: 58px; font: 12px var(--mono); padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink); text-align: right }
 .mine-legs { margin: 4px 0 0; padding-left: 18px; font-size: 13px; display: grid; gap: 3px }
 .mine-list .mine-legs li { display: list-item; border: 0; padding: 0 }
 .mine-legs .kind { color: var(--muted); text-decoration: none }
@@ -1157,7 +1161,7 @@ function renderIndex(scope = "reg") {
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>Picks recomendados por el sistema ${qh("ev", "picks con valor y EV")}</h2>
-    <p class="lede">${picks.length ? `${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos: son los que el modelo recomienda.` : `Hoy ningún pick de los ${todays.length} partidos llega al valor mínimo.`} Para ser verde un pick necesita EV ≥ +${(thr * 100).toFixed(0)}% con la probabilidad del modelo (25%) mezclada con la de la casa sin su margen (75%); solo player props (no Unders de rookies ni de quien no jugó la temporada pasada), como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador. <b>Últ. 10</b>, <b>H2H</b> y <b>DvP</b> dicen cuántas veces se habría cumplido esa línea en sus últimos partidos y contra este rival, y en qué puesto está el rival en lo que concede a su posición. Toca un pick para ver el análisis del partido. Marca <b>Lo tomo</b> en los que juegues y sigue tus unidades en <a href="#mis-picks">Mis picks</a>${(() => { const n = MINE.filter(l => l.date === DAY).length; return n ? ` (hoy llevas ${n})` : ""; })()}.</p>
+    <p class="lede">${picks.length ? `${picks.length} pick${picks.length === 1 ? "" : "s"} con valor en ${todays.length} partidos: son los que el modelo recomienda.` : `Hoy ningún pick de los ${todays.length} partidos llega al valor mínimo.`} Para ser verde un pick necesita EV ≥ +${(thr * 100).toFixed(0)}% con la probabilidad del modelo (25%) mezclada con la de la casa sin su margen (75%); solo player props (no Unders de rookies ni de quien no jugó la temporada pasada), como mucho ${INDEX.max_daily || 15} por jornada y 2 por jugador. <b>Últ. 10</b>, <b>H2H</b> y <b>DvP</b> dicen cuántas veces se habría cumplido esa línea en sus últimos partidos y contra este rival, y en qué puesto está el rival en lo que concede a su posición. Toca un pick para ver el análisis del partido. Marca <b>Lo tomo</b> en los que juegues y sigue tus unidades en <a href="#mis-picks">Mis picks</a>${(() => { const n = MINE.filter(l => l.date === DAY).length, a = MINE.filter(l => l.date === DAY && mineAlert(l)).length; return n ? ` (hoy llevas ${n}${a ? `; <b style="color:var(--bad)">${a} perdi${a === 1 ? "ó" : "eron"} valor</b>` : ""})` : ""; })()}.</p>
     ${legend(thr)}
     ${picks.length ? betSortBar("bs-idx", true) : ""}
     ${picks.length ? `<div class="filters" role="group" aria-label="Cómo ver los picks" id="grp-idx"><span class="lbl">Ver</span>${Object.entries(GROUPS).map(([k, t]) =>
@@ -2770,12 +2774,35 @@ function toggleComboMine(decOv) {   // decOv: cuota total del boleto (combinada 
 }
 // resultado y cuota efectiva de una entrada (en una combinada las patas nulas no cuentan en la cuota)
 function mineRes(l) {
-  if (!l.combo) return { r: legResult(l), dec: l.dec };
+  if (!l.combo) return { r: legResult(l), dec: l.dec_taken || l.dec };
   const rs = l.legs.map(legResult), live = l.legs.filter((x, i) => rs[i] !== "push");
   const r = rs.includes("lost") ? "lost" : rs.every(x => x === "push") ? "push" : rs.every(x => x === "won" || x === "push") ? "won" : null;
-  return { r, dec: live.reduce((t, x) => t * x.dec, 1), rs };
+  return { r, dec: live.reduce((t, x) => t * x.dec, 1) * (l.dec_taken ? l.dec_taken / l.dec : 1), rs };
 }
 const mineSrc = l => l.src || "rec";
+// Tu cuota: la que de verdad te dio tu casa (l.dec_taken). Las unidades se liquidan con ella; l.dec sigue siendo la
+// de la web, para comparar el EV que prometía la web con el que tuviste.
+function setTaken(k, v) {
+  const l = MINE.find(x => x.k === k); if (!l) return;
+  const q = parseFloat(String(v).replace(",", "."));
+  if (q > 1 && q < 1000) l.dec_taken = +q.toFixed(3); else delete l.dec_taken;
+  ls("nbap-mine", JSON.stringify(MINE));
+}
+// Aviso de valor perdido: tras una revisión horaria la línea o la cuota de un pick que tomaste pudo moverse.
+function mineAlert(l) {
+  if (l.combo || l.custom) return null;
+  const g = INDEX.games.find(x => x.id === l.gid);
+  if (!g || g.result) return null;
+  const bs = g.all_bets || [], cur = bs.find(b => b.label === l.label);
+  if (!cur) {
+    const mv = l.player && bs.find(b => b.kind === "prop" && b.player === l.player && b.stat === l.stat && b.side === l.side && b.line !== l.line);
+    return mv ? `La línea se movió: ahora es ${mv.label} @ ${mv.dec.toFixed(2)} (EV ${evTxt(mv.ev)}).` : null;
+  }
+  const thr = INDEX.value_ev || 0.03, was = mineSrc(l) === "rec";
+  if (was && !cur.value && cur.ev < thr) return `Ya no tiene valor: con la última revisión su EV es ${evTxt(cur.ev)} @ ${cur.dec.toFixed(2)}.`;
+  if (cur.dec < l.dec - 0.04) return `La cuota bajó de ${l.dec.toFixed(2)} a ${cur.dec.toFixed(2)} (EV ahora ${evTxt(cur.ev)}).`;
+  return null;
+}
 const SRC_TXT = { rec: "Recomendados por el modelo", own: "Elegidos por ti", combo: "Tus combinadas" };
 function syncMineCount() { const n = MINE.filter(l => l.date === DAY).length; $("#n-mine").textContent = n || ""; }
 function mineChanged() {
@@ -2828,7 +2855,7 @@ function renderMine(keepScroll) {
   <section class="section">
     <span class="eyebrow">Tu historial</span>
     <h2>Mis picks</h2>
-    <p class="lede">Todo lo que marcaste con <b>Lo tomo</b>: picks recomendados por el modelo, cualquier otro pick de la página, los que creas en <b>Crea tu pick</b> con la cuota de tu casa, y tus combinadas guardadas desde <b>Mi combinada</b>. Se liquidan con el resultado real a 1 unidad cada uno y su cuota (la publicada o la que escribiste). Se guardan solo en este navegador: nadie más los ve, y si cambias de celular o borras los datos del navegador se pierden, así que guarda una copia con <b>Exportar</b> de vez en cuando. Un pick solo se marca o se quita antes de que empiece su partido.</p>
+    <p class="lede">Todo lo que marcaste con <b>Lo tomo</b>: picks recomendados por el modelo, cualquier otro pick de la página, los que creas en <b>Crea tu pick</b> con la cuota de tu casa, y tus combinadas guardadas desde <b>Mi combinada</b>. Se liquidan con el resultado real a 1 unidad cada uno con <b>Tu cuota</b> (la que te dio tu casa, si la escribes) o, si no, la de la web. Si una revisión horaria mueve la línea o la cuota de un pick pendiente, aquí sale un aviso. Se guardan solo en este navegador: nadie más los ve, y si cambias de celular o borras los datos del navegador se pierden, así que guarda una copia con <b>Exportar</b> de vez en cuando. Un pick solo se marca o se quita antes de que empiece su partido.</p>
     ${!MINE.length ? `<div class="panel empty">Aún no has marcado picks. En <a href="#">los picks de hoy</a> toca <span class="take demo"><span class="bx"></span>Lo tomo</span> en los que juegues, recomendados o no.</div>` : `
     <div class="panel pl-stats mine-kpi">
       <div class="cell main"><span class="k">Unidades</span><span class="v ${T.u > 0 ? "pos" : T.u < 0 ? "neg" : ""}">${sgnU(T.u)}</span></div>
@@ -2836,6 +2863,15 @@ function renderMine(keepScroll) {
       <div class="cell"><span class="k">% acierto</span><span class="v">${pctTxt(T)}</span></div>
       <div class="cell"><span class="k">ROI</span><span class="v">${roiTxt(T.roi)}</span></div>
     </div>
+    ${(() => { const a = MINE.filter(mineAlert).length; return a ? `<p class="mine-alert">⚠ ${a} pick${a === 1 ? "" : "s"} pendiente${a === 1 ? "" : "s"} cambi${a === 1 ? "ó" : "aron"} desde que lo${a === 1 ? "" : "s"} tomaste (línea o cuota movida en una revisión). Míralo${a === 1 ? "" : "s"} abajo en el detalle.</p>` : ""; })()}
+    ${(() => { const w = MINE.filter(l => l.dec_taken && l.p > 0); if (!w.length) return `<p class="muted mine-note">Escribe en cada pick <b>Tu cuota</b> (la que te dio tu casa) y aquí verás el EV que prometía la web frente al que tuviste de verdad.</p>`;
+      const m = a => a.reduce((s, x) => s + x, 0) / a.length, evW = m(w.map(l => l.p * l.dec - 1)), evT = m(w.map(l => l.p * l.dec_taken - 1)), dd = m(w.map(l => l.dec_taken / l.dec - 1));
+      return `<div class="panel pl-stats mine-kpi">
+      <div class="cell"><span class="k">Con tu cuota</span><span class="v">${w.length} pick${w.length === 1 ? "" : "s"}</span></div>
+      <div class="cell"><span class="k">Tu cuota vs la web</span><span class="v ${dd < 0 ? "neg" : "pos"}">${dd >= 0 ? "+" : "−"}${Math.abs(100 * dd).toFixed(1)}%</span></div>
+      <div class="cell"><span class="k">EV de la web</span><span class="v">${evTxt(evW)}</span></div>
+      <div class="cell main"><span class="k">EV con tu cuota</span><span class="v ${evT > 0 ? "pos" : evT < 0 ? "neg" : ""}">${evTxt(evT)}</span></div>
+    </div>`; })()}
     <p class="muted mine-note">${T.n} pick${T.n === 1 ? "" : "s"} tomado${T.n === 1 ? "" : "s"} en ${days.length} jornada${days.length === 1 ? "" : "s"}${T.pend ? ` · ${T.pend} sin liquidar` : ""}${T.p ? ` · ${T.p} nulo${T.p === 1 ? "" : "s"} (push)` : ""}.${T.w + T.l < 100 ? " Con pocos picks el resultado es sobre todo suerte." : ""}</p>`}
   </section>
   ${per.length ? `<section class="section">
@@ -2855,8 +2891,8 @@ function renderMine(keepScroll) {
     <div class="mine-days">${[...per].reverse().map((x, i) => `<details class="panel mine-day"${i === 0 ? " open" : ""}><summary><b>${esc(x.d)}</b><span class="num">${rec(x.s)} · ${x.s.w + x.s.l ? sgnU(x.s.u) : "sin liquidar"}</span></summary>
       <ul class="mine-list">${rows.filter(z => z.l.date === x.d).sort((a, b) => a.l.gid.localeCompare(b.l.gid) || a.l.label.localeCompare(b.l.label)).map(z => `<li>
         <div>${z.l.combo ? `<div class="lg">${esc(z.l.game)}</div><ol class="mine-legs">${z.l.legs.map((l, j) => `<li>${esc(l.label)} <a class="kind" href="#${esc(l.gid)}">${esc(l.game)}</a> ${resPill(z.rs[j])}</li>`).join("")}</ol>`
-          : `<div class="lg">${esc(z.l.label)}</div><a class="kind" href="#${esc(z.l.gid)}">${esc(z.l.game)}</a>`}${srcs.length > 1 ? ` <span class="mine-tag ${mineSrc(z.l)}">${TAG[mineSrc(z.l)]}</span>` : ""}${z.l.custom ? ` <span class="mine-tag">tu cuota</span>` : ""}</div>
-        <div class="lp"><span>Cuota ${(+z.dec).toFixed(2)}</span>${resCell(z)}${z.r && z.r !== "push" ? `<span>${sgnU(mineU(z.r, z.dec))}</span>` : ""}${!lockedRow(z) ? `<button type="button" class="more" data-take="${esc(z.l.k)}" aria-pressed="true"><span class="bx" hidden></span>Quitar</button>` : ""}</div>
+          : `<div class="lg">${esc(z.l.label)}</div><a class="kind" href="#${esc(z.l.gid)}">${esc(z.l.game)}</a>`}${srcs.length > 1 ? ` <span class="mine-tag ${mineSrc(z.l)}">${TAG[mineSrc(z.l)]}</span>` : ""}${z.l.custom ? ` <span class="mine-tag">tu cuota</span>` : ""}${(() => { const w = !z.r && mineAlert(z.l); return w ? `<div class="mine-warn">⚠ ${esc(w)}</div>` : ""; })()}</div>
+        <div class="lp"><span>${z.l.dec_taken ? `Web ${(+z.l.dec).toFixed(2)}` : `Cuota ${(+z.dec).toFixed(2)}`}</span>${!z.l.custom ? (z.r ? (z.l.dec_taken ? `<span>Tu cuota ${z.l.dec_taken.toFixed(2)}</span>` : "") : `<label class="mine-dec">Tu cuota<input type="text" inputmode="decimal" autocomplete="off" data-taken="${esc(z.l.k)}" value="${z.l.dec_taken ?? ""}" placeholder="${(+z.l.dec).toFixed(2)}"></label>`) : ""}${resCell(z)}${z.r && z.r !== "push" ? `<span>${sgnU(mineU(z.r, z.dec))}</span>` : ""}${!lockedRow(z) ? `<button type="button" class="more" data-take="${esc(z.l.k)}" aria-pressed="true"><span class="bx" hidden></span>Quitar</button>` : ""}</div>
       </li>`).join("")}</ul></details>`).join("")}</div>
   </section>` : ""}
   <section class="section">
@@ -2876,6 +2912,7 @@ function renderMine(keepScroll) {
       MINE.push(...add); mineChanged(); $("#mine-msg").textContent = `${add.length} pick${add.length === 1 ? "" : "s"} importado${add.length === 1 ? "" : "s"}${list.length > add.length ? ` (${list.length - add.length} ya estaban)` : ""}.`;
     }).catch(() => { $("#mine-msg").textContent = "Ese archivo no es una copia de Mis picks."; });
   });
+  document.querySelectorAll("[data-taken]").forEach(i => i.addEventListener("change", e => { setTaken(e.target.dataset.taken, e.target.value); renderMine(true); }));
   const clr = $("#mine-clr");
   if (clr) clr.addEventListener("click", () => { if (confirm("¿Borrar todos tus picks de este navegador? Exporta antes una copia si quieres conservarlos.")) { MINE = []; mineChanged(); } });
   if (keepScroll) scrollTo(0, y);
