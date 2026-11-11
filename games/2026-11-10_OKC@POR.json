@@ -1031,10 +1031,14 @@
  ],
  "market": {
   "source": "NBA.com/games 10-nov (6 partidos de liga); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET; LAC@PHX solo 5 casas); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-10 (mejor cuota por lado) y puntos de bet365 en Covers para MIL@NYK",
-  "ml_home": 110,
-  "ml_away": -130,
-  "spread_home": 1.5,
-  "total": 225.5
+  "ml_home": 120,
+  "ml_away": -142,
+  "spread_home": 2.5,
+  "total": 226.5,
+  "spread_odds_home": -110,
+  "spread_odds_away": -110,
+  "over_odds": -105,
+  "under_odds": -115
  },
  "prop_lines": {
   "Shai Gilgeous-Alexander": {
@@ -1082,8 +1086,8 @@
    ],
    "fg3m": [
     1.5,
-    -125,
-    114
+    -145,
+    116
    ]
   },
   "Damian Lillard": {
@@ -1095,7 +1099,7 @@
    "reb": [
     3.5,
     105,
-    104
+    -106
    ],
    "ast": [
     4.5,
@@ -1245,8 +1249,8 @@
    ],
    "fg3m": [
     1.5,
-    100,
-    100
+    107,
+    -120
    ]
   },
   "Isaiah Hartenstein": {

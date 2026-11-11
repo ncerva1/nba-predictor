@@ -962,9 +962,13 @@
  "market": {
   "source": "NBA.com/games 10-nov (6 partidos de liga); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET; LAC@PHX solo 5 casas); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-10 (mejor cuota por lado) y puntos de bet365 en Covers para MIL@NYK",
   "ml_home": 312,
-  "ml_away": -395,
+  "ml_away": -396,
   "spread_home": 9.5,
-  "total": 227.5
+  "total": 227.5,
+  "spread_odds_home": -118,
+  "spread_odds_away": -103,
+  "over_odds": -110,
+  "under_odds": -110
  },
  "prop_lines": {
   "Giannis Antetokounmpo": {
@@ -1060,9 +1064,9 @@
     130
    ],
    "fg3m": [
-    1.5,
-    -160,
-    140
+    2.5,
+    154,
+    -155
    ]
   },
   "Klay Thompson": {

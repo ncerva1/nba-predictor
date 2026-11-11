@@ -1057,10 +1057,14 @@
  ],
  "market": {
   "source": "NBA.com/games 10-nov (6 partidos de liga); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET; LAC@PHX solo 5 casas); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-10 (mejor cuota por lado) y puntos de bet365 en Covers para MIL@NYK",
-  "ml_home": -167,
-  "ml_away": 140,
+  "ml_home": -170,
+  "ml_away": 143,
   "spread_home": -3.5,
-  "total": 224.5
+  "total": 224.5,
+  "spread_odds_home": -108,
+  "spread_odds_away": -112,
+  "over_odds": -115,
+  "under_odds": -105
  },
  "prop_lines": {
   "Devin Booker": {
@@ -1239,7 +1243,7 @@
    "reb": [
     4.5,
     -112,
-    -105
+    101
    ],
    "ast": [
     1.5,
@@ -1346,8 +1350,8 @@
   "Kobe Sanders": {
    "pts": [
     7.5,
-    102,
-    -105
+    -104,
+    -110
    ],
    "reb": [
     2.5,
@@ -1369,7 +1373,7 @@
    "pts": [
     6.5,
     105,
-    -103
+    -107
    ],
    "reb": [
     5.5,

@@ -1004,10 +1004,14 @@
  ],
  "market": {
   "source": "NBA.com/games 10-nov (6 partidos de liga); Covers matchup/<id>/odds (ML, spread y total por casa, ~11:40 ET; LAC@PHX solo 5 casas); props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-10 (mejor cuota por lado) y puntos de bet365 en Covers para MIL@NYK",
-  "ml_home": -101,
-  "ml_away": -117,
+  "ml_home": -106,
+  "ml_away": -111,
   "spread_home": 1.5,
-  "total": 218.5
+  "total": 217.5,
+  "spread_odds_home": -120,
+  "spread_odds_away": -101,
+  "over_odds": -112,
+  "under_odds": -108
  },
  "prop_lines": {
   "Jayson Tatum": {
@@ -1175,8 +1179,8 @@
   "Payton Pritchard": {
    "pts": [
     12.5,
-    -105,
-    100
+    100,
+    -109
    ],
    "reb": [
     3.5,
@@ -1323,8 +1327,8 @@
    ],
    "ast": [
     0.5,
-    -110,
-    -115
+    -105,
+    -120
    ],
    "fg3m": [
     0.5,
