@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T20:01+00:00",
+ "generated": "2026-11-11T20:29+00:00",
  "value_ev": 0.03,
  "model": "1.5.1",
  "mkt_w": 0.25,
@@ -1321,40 +1321,40 @@
     "legs": [
      {
       "kind": "prop",
-      "label": "Jrue Holiday Under 4.5 Asistencias",
-      "player": "Jrue Holiday",
-      "team": "POR",
-      "line": 4.5,
-      "stat": "ast",
+      "label": "Aaron Gordon Under 1.5 Triples",
+      "player": "Aaron Gordon",
+      "team": "DEN",
+      "line": 1.5,
+      "stat": "fg3m",
       "side": "under",
-      "p": 0.609,
-      "dec": 1.69,
-      "ev": 0.03,
-      "gid": "2026-11-11-OKC-at-POR",
-      "game": "OKC @ POR"
+      "p": 0.643,
+      "dec": 1.625,
+      "ev": 0.045,
+      "gid": "2026-11-11-DEN-at-MEM",
+      "game": "DEN @ MEM"
      },
      {
       "kind": "prop",
-      "label": "Jamal Cain Under 5.5 Rebotes",
-      "player": "Jamal Cain",
-      "team": "ORL",
-      "line": 5.5,
-      "stat": "reb",
+      "label": "Kyshawn George Under 2.5 Triples",
+      "player": "Kyshawn George",
+      "team": "WAS",
+      "line": 2.5,
+      "stat": "fg3m",
       "side": "under",
-      "p": 0.629,
-      "dec": 1.667,
-      "ev": 0.048,
-      "gid": "2026-11-11-ORL-at-UTA",
-      "game": "ORL @ UTA"
+      "p": 0.667,
+      "dec": 1.546,
+      "ev": 0.031,
+      "gid": "2026-11-11-WAS-at-IND",
+      "game": "WAS @ IND"
      }
     ],
     "n": 2,
-    "p": 0.383,
-    "p_indep": 0.383,
+    "p": 0.429,
+    "p_indep": 0.429,
     "corr": 1.0,
-    "dec": 2.82,
-    "fair": 2.61,
-    "ev": 0.079,
+    "dec": 2.51,
+    "fair": 2.33,
+    "ev": 0.077,
     "type": "cross",
     "result": null
    }
@@ -1607,6 +1607,141 @@
    "legs": [
     {
      "kind": "prop",
+     "label": "Day'Ron Sharpe Under 0.5 Triples",
+     "player": "Day'Ron Sharpe",
+     "team": "BKN",
+     "line": 0.5,
+     "stat": "fg3m",
+     "side": "under",
+     "p": 0.765,
+     "dec": 1.281,
+     "ev": -0.02,
+     "gid": "2026-11-11-BKN-at-NOP",
+     "game": "BKN @ NOP",
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Ajay Mitchell Under 1.5 Triples",
+       "player": "Ajay Mitchell",
+       "team": "OKC",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.685,
+       "dec": 1.436,
+       "ev": -0.016,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "pc": {
+        "Jrue Holiday|ast|under|4.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 0.99,
+        "Jared McCain|pra|over|17.5": 0.99,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 1.0
+       },
+       "key": "Ajay Mitchell|fg3m|under|1.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jamal Cain Under 5.5 Rebotes",
+       "player": "Jamal Cain",
+       "team": "ORL",
+       "line": 5.5,
+       "stat": "reb",
+       "side": "under",
+       "p": 0.629,
+       "dec": 1.628,
+       "ev": 0.024,
+       "gid": "2026-11-11-ORL-at-UTA",
+       "game": "ORL @ UTA",
+       "pc": {},
+       "key": "Jamal Cain|reb|under|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jeremiah Fears Under 1.5 Triples",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.625,
+       "dec": 1.659,
+       "ev": 0.037,
+       "gid": "2026-11-11-BKN-at-NOP",
+       "game": "BKN @ NOP",
+       "pc": {
+        "Day'Ron Sharpe|fg3m|under|0.5": 1.0
+       },
+       "key": "Jeremiah Fears|fg3m|under|1.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Jrue Holiday Under 4.5 Asistencias",
+       "player": "Jrue Holiday",
+       "team": "POR",
+       "line": 4.5,
+       "stat": "ast",
+       "side": "under",
+       "p": 0.609,
+       "dec": 1.637,
+       "ev": -0.003,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "pc": {
+        "Ajay Mitchell|fg3m|under|1.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 0.97,
+        "Jared McCain|pra|over|17.5": 1.01,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 1.0
+       },
+       "key": "Jrue Holiday|ast|under|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Josh Giddey Under 1.5 Triples",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.607,
+       "dec": 1.612,
+       "ev": -0.022,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.01
+       },
+       "key": "Josh Giddey|fg3m|under|1.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Peyton Watson Under 1.5 Triples",
+       "player": "Peyton Watson",
+       "team": "CLE",
+       "line": 1.5,
+       "stat": "fg3m",
+       "side": "under",
+       "p": 0.6,
+       "dec": 1.686,
+       "ev": 0.012,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "James Harden|pra|under|27.5": 1.01,
+        "James Harden|pr|under|20.5": 1.0
+       },
+       "key": "Peyton Watson|fg3m|under|1.5"
+      }
+     ],
+     "key": "Day'Ron Sharpe|fg3m|under|0.5"
+    },
+    {
+     "kind": "prop",
      "label": "Ja'Kobe Walter Over 12.5 Puntos",
      "player": "Ja'Kobe Walter",
      "team": "TOR",
@@ -1621,96 +1756,441 @@
      "swaps": [
       {
        "kind": "prop",
-       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
-       "player": "Sandro Mamukelashvili",
-       "team": "LAL",
-       "line": 8.5,
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
        "stat": "pts",
        "side": "over",
-       "p": 0.54,
-       "dec": 1.868,
-       "ev": 0.009,
+       "p": 0.55,
+       "dec": 1.83,
+       "ev": 0.007,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Julian Champagnie Over 5.5 REB+AST",
+       "player": "Julian Champagnie",
+       "team": "SAS",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.584,
+       "dec": 1.675,
+       "ev": -0.022,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 1.0,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Julian Champagnie|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Stephon Castle Over 10.5 REB+AST",
+       "player": "Stephon Castle",
+       "team": "SAS",
+       "line": 10.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.555,
+       "dec": 1.795,
+       "ev": -0.004,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.01,
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 0.99,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Stephon Castle|ra|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.553,
+       "dec": 1.781,
+       "ev": -0.015,
        "gid": "2026-11-11-LAL-at-MIL",
        "game": "LAL @ MIL",
        "soft": [
-        "p"
+        "dec"
        ],
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 1.01,
-        "Kyle Kuzma|reb|under|4.5": 1.0
+        "Walker Kessler|pa|over|14.5": 1.01
        },
-       "key": "Sandro Mamukelashvili|pts|over|8.5"
+       "key": "Matisse Thybulle|pts|over|5.5"
       },
       {
        "kind": "prop",
-       "label": "Alex Sarr Over 10.5 Puntos",
-       "player": "Alex Sarr",
-       "team": "WAS",
-       "line": 10.5,
-       "stat": "pts",
+       "label": "Toumani Camara Over 5.5 REB+AST",
+       "player": "Toumani Camara",
+       "team": "POR",
+       "line": 5.5,
+       "stat": "ra",
        "side": "over",
-       "p": 0.535,
-       "dec": 1.86,
-       "ev": -0.005,
-       "gid": "2026-11-11-WAS-at-IND",
-       "game": "WAS @ IND",
+       "p": 0.551,
+       "dec": 1.773,
+       "ev": -0.023,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
        "soft": [
-        "p"
+        "dec"
        ],
        "pc": {
-        "Aaron Nesmith|pts|under|13.5": 0.99
+        "Ajay Mitchell|fg3m|under|1.5": 0.99,
+        "Jrue Holiday|ast|under|4.5": 0.97,
+        "Jared McCain|pra|over|17.5": 1.0,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 0.99
        },
-       "key": "Alex Sarr|pts|over|10.5"
+       "key": "Toumani Camara|ra|over|5.5"
       },
       {
        "kind": "prop",
-       "label": "Jared McCain Over 12.5 Puntos",
+       "label": "Jared McCain Over 17.5 PTS+REB+AST",
        "player": "Jared McCain",
        "team": "OKC",
-       "line": 12.5,
-       "stat": "pts",
+       "line": 17.5,
+       "stat": "pra",
        "side": "over",
-       "p": 0.529,
-       "dec": 1.86,
-       "ev": -0.016,
+       "p": 0.541,
+       "dec": 1.816,
+       "ev": -0.018,
        "gid": "2026-11-11-OKC-at-POR",
        "game": "OKC @ POR",
        "soft": [
         "p"
        ],
        "pc": {
-        "Jrue Holiday|ast|under|4.5": 1.0
+        "Ajay Mitchell|fg3m|under|1.5": 0.99,
+        "Jrue Holiday|ast|under|4.5": 1.01,
+        "Toumani Camara|ra|over|5.5": 1.0,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 0.99
        },
-       "key": "Jared McCain|pts|over|12.5"
+       "key": "Jared McCain|pra|over|17.5"
+      }
+     ],
+     "key": "Ja'Kobe Walter|pts|over|12.5"
+    },
+    {
+     "kind": "prop",
+     "label": "Jaylen Wells Over 10.5 PTS+AST",
+     "player": "Jaylen Wells",
+     "team": "MEM",
+     "line": 10.5,
+     "stat": "pa",
+     "side": "over",
+     "p": 0.57,
+     "dec": 1.759,
+     "ev": 0.003,
+     "gid": "2026-11-11-DEN-at-MEM",
+     "game": "DEN @ MEM",
+     "corr": 1.02,
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Stephon Castle Over 10.5 REB+AST",
+       "player": "Stephon Castle",
+       "team": "SAS",
+       "line": 10.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.555,
+       "dec": 1.795,
+       "ev": -0.004,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.01,
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 0.99,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Stephon Castle|ra|over|10.5"
       },
       {
        "kind": "prop",
-       "label": "Jaime Jaquez Jr. Over 13.5 Puntos",
-       "player": "Jaime Jaquez Jr.",
-       "team": "MIL",
-       "line": 13.5,
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
        "stat": "pts",
        "side": "over",
-       "p": 0.52,
-       "dec": 1.887,
-       "ev": -0.019,
+       "p": 0.553,
+       "dec": 1.781,
+       "ev": -0.015,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "pc": {
+        "Walker Kessler|pa|over|14.5": 1.01
+       },
+       "key": "Matisse Thybulle|pts|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Toumani Camara Over 5.5 REB+AST",
+       "player": "Toumani Camara",
+       "team": "POR",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.551,
+       "dec": 1.773,
+       "ev": -0.023,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "pc": {
+        "Ajay Mitchell|fg3m|under|1.5": 0.99,
+        "Jrue Holiday|ast|under|4.5": 0.97,
+        "Jared McCain|pra|over|17.5": 1.0,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 0.99
+       },
+       "key": "Toumani Camara|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.55,
+       "dec": 1.83,
+       "ev": 0.007,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Julian Champagnie Over 5.5 REB+AST",
+       "player": "Julian Champagnie",
+       "team": "SAS",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.584,
+       "dec": 1.675,
+       "ev": -0.022,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 1.0,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Julian Champagnie|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Walker Kessler Over 14.5 PTS+AST",
+       "player": "Walker Kessler",
+       "team": "LAL",
+       "line": 14.5,
+       "stat": "pa",
+       "side": "over",
+       "p": 0.544,
+       "dec": 1.795,
+       "ev": -0.024,
        "gid": "2026-11-11-LAL-at-MIL",
        "game": "LAL @ MIL",
        "soft": [
         "p"
        ],
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.99
+        "Matisse Thybulle|pts|over|5.5": 1.01
        },
-       "key": "Jaime Jaquez Jr.|pts|over|13.5"
+       "key": "Walker Kessler|pa|over|14.5"
       }
      ],
-     "key": "Ja'Kobe Walter|pts|over|12.5"
+     "key": "Jaylen Wells|pa|over|10.5"
+    },
+    {
+     "kind": "prop",
+     "label": "Christian Braun Over 12.5 PTS+AST",
+     "player": "Christian Braun",
+     "team": "DEN",
+     "line": 12.5,
+     "stat": "pa",
+     "side": "over",
+     "p": 0.558,
+     "dec": 1.852,
+     "ev": 0.033,
+     "gid": "2026-11-11-DEN-at-MEM",
+     "game": "DEN @ MEM",
+     "corr": 1.02,
+     "swaps": [
+      {
+       "kind": "prop",
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.55,
+       "dec": 1.83,
+       "ev": 0.007,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Julian Champagnie Over 5.5 REB+AST",
+       "player": "Julian Champagnie",
+       "team": "SAS",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.584,
+       "dec": 1.675,
+       "ev": -0.022,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 1.0,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Julian Champagnie|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Stephon Castle Over 10.5 REB+AST",
+       "player": "Stephon Castle",
+       "team": "SAS",
+       "line": 10.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.555,
+       "dec": 1.795,
+       "ev": -0.004,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.01,
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 0.99,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Stephon Castle|ra|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
+       "team": "LAL",
+       "line": 5.5,
+       "stat": "pts",
+       "side": "over",
+       "p": 0.553,
+       "dec": 1.781,
+       "ev": -0.015,
+       "gid": "2026-11-11-LAL-at-MIL",
+       "game": "LAL @ MIL",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Walker Kessler|pa|over|14.5": 1.01
+       },
+       "key": "Matisse Thybulle|pts|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Toumani Camara Over 5.5 REB+AST",
+       "player": "Toumani Camara",
+       "team": "POR",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.551,
+       "dec": 1.773,
+       "ev": -0.023,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Ajay Mitchell|fg3m|under|1.5": 0.99,
+        "Jrue Holiday|ast|under|4.5": 0.97,
+        "Jared McCain|pra|over|17.5": 1.0,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 0.99
+       },
+       "key": "Toumani Camara|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Ty Jerome Over 8.5 REB+AST",
+       "player": "Ty Jerome",
+       "team": "MEM",
+       "line": 8.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.54,
+       "dec": 1.861,
+       "ev": 0.005,
+       "gid": "2026-11-11-DEN-at-MEM",
+       "game": "DEN @ MEM",
+       "soft": [
+        "p"
+       ],
+       "pc": {
+        "Jaylen Wells|pa|over|10.5": 1.0,
+        "Christian Braun|pa|over|12.5": 1.01
+       },
+       "key": "Ty Jerome|ra|over|8.5"
+      }
+     ],
+     "key": "Christian Braun|pa|over|12.5"
     },
     {
      "kind": "prop",
@@ -1725,707 +2205,427 @@
      "ev": 0.067,
      "gid": "2026-11-11-GSW-at-HOU",
      "game": "GSW @ HOU",
-     "corr": 1.0,
      "swaps": [
       {
        "kind": "prop",
-       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
-       "player": "Sandro Mamukelashvili",
+       "label": "Julian Champagnie Over 5.5 REB+AST",
+       "player": "Julian Champagnie",
+       "team": "SAS",
+       "line": 5.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.584,
+       "dec": 1.675,
+       "ev": -0.022,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 1.0,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Julian Champagnie|ra|over|5.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Stephon Castle Over 10.5 REB+AST",
+       "player": "Stephon Castle",
+       "team": "SAS",
+       "line": 10.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.555,
+       "dec": 1.795,
+       "ev": -0.004,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Josh Giddey|fg3m|under|1.5": 1.01,
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Josh Giddey|pra|under|28.5": 0.99,
+        "Josh Giddey|pr|under|19.5": 1.0
+       },
+       "key": "Stephon Castle|ra|over|10.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Matisse Thybulle Over 5.5 Puntos",
+       "player": "Matisse Thybulle",
        "team": "LAL",
-       "line": 8.5,
+       "line": 5.5,
        "stat": "pts",
        "side": "over",
-       "p": 0.54,
-       "dec": 1.868,
-       "ev": 0.009,
+       "p": 0.553,
+       "dec": 1.781,
+       "ev": -0.015,
        "gid": "2026-11-11-LAL-at-MIL",
        "game": "LAL @ MIL",
        "soft": [
-        "p"
+        "dec"
        ],
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 1.01,
-        "Kyle Kuzma|reb|under|4.5": 1.0
+        "Walker Kessler|pa|over|14.5": 1.01
        },
-       "key": "Sandro Mamukelashvili|pts|over|8.5"
+       "key": "Matisse Thybulle|pts|over|5.5"
       },
       {
        "kind": "prop",
-       "label": "Alex Sarr Over 10.5 Puntos",
-       "player": "Alex Sarr",
-       "team": "WAS",
-       "line": 10.5,
-       "stat": "pts",
+       "label": "Toumani Camara Over 5.5 REB+AST",
+       "player": "Toumani Camara",
+       "team": "POR",
+       "line": 5.5,
+       "stat": "ra",
        "side": "over",
-       "p": 0.535,
-       "dec": 1.86,
-       "ev": -0.005,
-       "gid": "2026-11-11-WAS-at-IND",
-       "game": "WAS @ IND",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Aaron Nesmith|pts|under|13.5": 0.99
-       },
-       "key": "Alex Sarr|pts|over|10.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Jared McCain Over 12.5 Puntos",
-       "player": "Jared McCain",
-       "team": "OKC",
-       "line": 12.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.529,
-       "dec": 1.86,
-       "ev": -0.016,
+       "p": 0.551,
+       "dec": 1.773,
+       "ev": -0.023,
        "gid": "2026-11-11-OKC-at-POR",
        "game": "OKC @ POR",
        "soft": [
-        "p"
+        "dec"
        ],
        "pc": {
-        "Jrue Holiday|ast|under|4.5": 1.0
+        "Ajay Mitchell|fg3m|under|1.5": 0.99,
+        "Jrue Holiday|ast|under|4.5": 0.97,
+        "Jared McCain|pra|over|17.5": 1.0,
+        "Donovan Clingan|pr|under|22.5": 1.0,
+        "Donovan Clingan|pra|under|24.5": 1.0,
+        "Donovan Clingan|pa|under|13.5": 0.99
        },
-       "key": "Jared McCain|pts|over|12.5"
+       "key": "Toumani Camara|ra|over|5.5"
       },
       {
        "kind": "prop",
-       "label": "Jaime Jaquez Jr. Over 13.5 Puntos",
-       "player": "Jaime Jaquez Jr.",
-       "team": "MIL",
-       "line": 13.5,
+       "label": "Al Horford Over 4.5 Puntos",
+       "player": "Al Horford",
+       "team": "GSW",
+       "line": 4.5,
        "stat": "pts",
        "side": "over",
-       "p": 0.52,
-       "dec": 1.887,
-       "ev": -0.019,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
+       "p": 0.55,
+       "dec": 1.83,
+       "ev": 0.007,
+       "gid": "2026-11-11-GSW-at-HOU",
+       "game": "GSW @ HOU",
+       "soft": [
+        "dec"
+       ],
+       "pc": {
+        "Reed Sheppard|pts|over|8.5": 1.0
+       },
+       "key": "Al Horford|pts|over|4.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Payton Pritchard Over 15.5 PTS+REB",
+       "player": "Payton Pritchard",
+       "team": "BOS",
+       "line": 15.5,
+       "stat": "pr",
+       "side": "over",
+       "p": 0.538,
+       "dec": 1.889,
+       "ev": 0.016,
+       "gid": "2026-11-11-BOS-at-TOR",
+       "game": "BOS @ TOR",
        "soft": [
         "p"
        ],
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.99
+        "Ja'Kobe Walter|pts|over|12.5": 1.0
        },
-       "key": "Jaime Jaquez Jr.|pts|over|13.5"
+       "key": "Payton Pritchard|pr|over|15.5"
       }
      ],
      "key": "Reed Sheppard|pts|over|8.5"
     },
     {
      "kind": "prop",
-     "label": "Al Horford Over 4.5 Puntos",
-     "player": "Al Horford",
-     "team": "GSW",
-     "line": 4.5,
-     "stat": "pts",
-     "side": "over",
-     "p": 0.55,
-     "dec": 1.83,
-     "ev": 0.007,
-     "gid": "2026-11-11-GSW-at-HOU",
-     "game": "GSW @ HOU",
+     "label": "Ivica Zubac Under 25.5 PTS+REB+AST",
+     "player": "Ivica Zubac",
+     "team": "IND",
+     "line": 25.5,
+     "stat": "pra",
+     "side": "under",
+     "p": 0.606,
+     "dec": 1.844,
+     "ev": 0.117,
+     "gid": "2026-11-11-WAS-at-IND",
+     "game": "WAS @ IND",
      "corr": 1.0,
      "swaps": [
       {
        "kind": "prop",
-       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
-       "player": "Sandro Mamukelashvili",
-       "team": "LAL",
-       "line": 8.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.54,
-       "dec": 1.868,
-       "ev": 0.009,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Matisse Thybulle|pts|over|5.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 1.01,
-        "Kyle Kuzma|reb|under|4.5": 1.0
-       },
-       "key": "Sandro Mamukelashvili|pts|over|8.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Alex Sarr Over 10.5 Puntos",
-       "player": "Alex Sarr",
-       "team": "WAS",
-       "line": 10.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.535,
-       "dec": 1.86,
-       "ev": -0.005,
-       "gid": "2026-11-11-WAS-at-IND",
-       "game": "WAS @ IND",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Aaron Nesmith|pts|under|13.5": 0.99
-       },
-       "key": "Alex Sarr|pts|over|10.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Jared McCain Over 12.5 Puntos",
-       "player": "Jared McCain",
-       "team": "OKC",
-       "line": 12.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.529,
-       "dec": 1.86,
-       "ev": -0.016,
-       "gid": "2026-11-11-OKC-at-POR",
-       "game": "OKC @ POR",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Jrue Holiday|ast|under|4.5": 1.0
-       },
-       "key": "Jared McCain|pts|over|12.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Jaime Jaquez Jr. Over 13.5 Puntos",
-       "player": "Jaime Jaquez Jr.",
-       "team": "MIL",
+       "label": "Aaron Nesmith Under 13.5 Puntos",
+       "player": "Aaron Nesmith",
+       "team": "IND",
        "line": 13.5,
        "stat": "pts",
-       "side": "over",
-       "p": 0.52,
-       "dec": 1.887,
-       "ev": -0.019,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.99
-       },
-       "key": "Jaime Jaquez Jr.|pts|over|13.5"
-      }
-     ],
-     "key": "Al Horford|pts|over|4.5"
-    },
-    {
-     "kind": "prop",
-     "label": "Matisse Thybulle Over 5.5 Puntos",
-     "player": "Matisse Thybulle",
-     "team": "LAL",
-     "line": 5.5,
-     "stat": "pts",
-     "side": "over",
-     "p": 0.553,
-     "dec": 1.781,
-     "ev": -0.015,
-     "gid": "2026-11-11-LAL-at-MIL",
-     "game": "LAL @ MIL",
-     "swaps": [
-      {
-       "kind": "prop",
-       "label": "Sandro Mamukelashvili Over 8.5 Puntos",
-       "player": "Sandro Mamukelashvili",
-       "team": "LAL",
-       "line": 8.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.54,
-       "dec": 1.868,
-       "ev": 0.009,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Matisse Thybulle|pts|over|5.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 1.01,
-        "Kyle Kuzma|reb|under|4.5": 1.0
-       },
-       "key": "Sandro Mamukelashvili|pts|over|8.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Alex Sarr Over 10.5 Puntos",
-       "player": "Alex Sarr",
-       "team": "WAS",
-       "line": 10.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.535,
-       "dec": 1.86,
-       "ev": -0.005,
+       "side": "under",
+       "p": 0.594,
+       "dec": 1.848,
+       "ev": 0.098,
        "gid": "2026-11-11-WAS-at-IND",
        "game": "WAS @ IND",
-       "soft": [
-        "p"
-       ],
        "pc": {
-        "Aaron Nesmith|pts|under|13.5": 0.99
+        "Ivica Zubac|pra|under|25.5": 1.0,
+        "Andrew Nembhard|pr|under|18.5": 1.01,
+        "Kyshawn George|pts|under|14.5": 1.0
        },
-       "key": "Alex Sarr|pts|over|10.5"
+       "key": "Aaron Nesmith|pts|under|13.5"
       },
       {
        "kind": "prop",
-       "label": "Jared McCain Over 12.5 Puntos",
-       "player": "Jared McCain",
-       "team": "OKC",
-       "line": 12.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.529,
-       "dec": 1.86,
-       "ev": -0.016,
+       "label": "James Harden Under 27.5 PTS+REB+AST",
+       "player": "James Harden",
+       "team": "CLE",
+       "line": 27.5,
+       "stat": "pra",
+       "side": "under",
+       "p": 0.589,
+       "dec": 1.817,
+       "ev": 0.07,
+       "gid": "2026-11-11-CLE-at-NYK",
+       "game": "CLE @ NYK",
+       "pc": {
+        "Peyton Watson|fg3m|under|1.5": 1.01
+       },
+       "key": "James Harden|pra|under|27.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Donovan Clingan Under 22.5 PTS+REB",
+       "player": "Donovan Clingan",
+       "team": "POR",
+       "line": 22.5,
+       "stat": "pr",
+       "side": "under",
+       "p": 0.586,
+       "dec": 1.828,
+       "ev": 0.071,
        "gid": "2026-11-11-OKC-at-POR",
        "game": "OKC @ POR",
-       "soft": [
-        "p"
-       ],
        "pc": {
-        "Jrue Holiday|ast|under|4.5": 1.0
+        "Ajay Mitchell|fg3m|under|1.5": 1.0,
+        "Jrue Holiday|ast|under|4.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 1.0,
+        "Jared McCain|pra|over|17.5": 1.0
        },
-       "key": "Jared McCain|pts|over|12.5"
+       "key": "Donovan Clingan|pr|under|22.5"
       },
       {
        "kind": "prop",
-       "label": "Jaime Jaquez Jr. Over 13.5 Puntos",
-       "player": "Jaime Jaquez Jr.",
-       "team": "MIL",
+       "label": "Donovan Clingan Under 24.5 PTS+REB+AST",
+       "player": "Donovan Clingan",
+       "team": "POR",
+       "line": 24.5,
+       "stat": "pra",
+       "side": "under",
+       "p": 0.583,
+       "dec": 1.856,
+       "ev": 0.082,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
+       "pc": {
+        "Ajay Mitchell|fg3m|under|1.5": 1.0,
+        "Jrue Holiday|ast|under|4.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 1.0,
+        "Jared McCain|pra|over|17.5": 1.0
+       },
+       "key": "Donovan Clingan|pra|under|24.5"
+      },
+      {
+       "kind": "prop",
+       "label": "Donovan Clingan Under 13.5 PTS+AST",
+       "player": "Donovan Clingan",
+       "team": "POR",
        "line": 13.5,
-       "stat": "pts",
-       "side": "over",
-       "p": 0.52,
-       "dec": 1.887,
-       "ev": -0.019,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
-       "soft": [
-        "p"
-       ],
-       "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 0.98,
-        "Ryan Rollins|ast|under|4.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.99
-       },
-       "key": "Jaime Jaquez Jr.|pts|over|13.5"
-      }
-     ],
-     "key": "Matisse Thybulle|pts|over|5.5"
-    },
-    {
-     "kind": "prop",
-     "label": "Jrue Holiday Under 4.5 Asistencias",
-     "player": "Jrue Holiday",
-     "team": "POR",
-     "line": 4.5,
-     "stat": "ast",
-     "side": "under",
-     "p": 0.609,
-     "dec": 1.637,
-     "ev": -0.003,
-     "gid": "2026-11-11-OKC-at-POR",
-     "game": "OKC @ POR",
-     "swaps": [
-      {
-       "kind": "prop",
-       "label": "Ryan Rollins Under 4.5 Asistencias",
-       "player": "Ryan Rollins",
-       "team": "MIL",
-       "line": 4.5,
-       "stat": "ast",
+       "stat": "pa",
        "side": "under",
-       "p": 0.595,
-       "dec": 1.644,
-       "ev": -0.022,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
+       "p": 0.582,
+       "dec": 1.876,
+       "ev": 0.092,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.98
+        "Ajay Mitchell|fg3m|under|1.5": 1.0,
+        "Jrue Holiday|ast|under|4.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 0.99,
+        "Jared McCain|pra|over|17.5": 0.99
        },
-       "key": "Ryan Rollins|ast|under|4.5"
+       "key": "Donovan Clingan|pa|under|13.5"
       },
       {
        "kind": "prop",
-       "label": "James Harden Under 4.5 Rebotes",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 4.5,
-       "stat": "reb",
+       "label": "Jeremiah Fears Under 25.5 PTS+REB+AST",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 25.5,
+       "stat": "pra",
        "side": "under",
-       "p": 0.592,
-       "dec": 1.744,
-       "ev": 0.032,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
-       "pc": {
-        "Evan Mobley|ast|under|3.5": 1.01
-       },
-       "key": "James Harden|reb|under|4.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Ace Bailey Under 5.5 Rebotes",
-       "player": "Ace Bailey",
-       "team": "UTA",
-       "line": 5.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.584,
-       "dec": 1.688,
-       "ev": -0.014,
-       "gid": "2026-11-11-ORL-at-UTA",
-       "game": "ORL @ UTA",
-       "pc": {
-        "Jamal Cain|reb|under|5.5": 0.99
-       },
-       "key": "Ace Bailey|reb|under|5.5"
-      },
-      {
-       "kind": "prop",
-       "label": "James Harden Under 16.5 Puntos",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 16.5,
-       "stat": "pts",
-       "side": "under",
-       "p": 0.583,
-       "dec": 1.778,
-       "ev": 0.037,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
-       "pc": {
-        "Evan Mobley|ast|under|3.5": 1.04
-       },
-       "key": "James Harden|pts|under|16.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Julius Randle Under 6.5 Rebotes",
-       "player": "Julius Randle",
-       "team": "BKN",
-       "line": 6.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.579,
-       "dec": 1.68,
-       "ev": -0.027,
+       "p": 0.581,
+       "dec": 1.839,
+       "ev": 0.068,
        "gid": "2026-11-11-BKN-at-NOP",
        "game": "BKN @ NOP",
-       "pc": {},
-       "key": "Julius Randle|reb|under|6.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Evan Mobley Under 3.5 Asistencias",
-       "player": "Evan Mobley",
-       "team": "CLE",
-       "line": 3.5,
-       "stat": "ast",
-       "side": "under",
-       "p": 0.572,
-       "dec": 1.726,
-       "ev": -0.013,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
        "pc": {
-        "James Harden|reb|under|4.5": 1.01,
-        "James Harden|pts|under|16.5": 1.04
+        "Day'Ron Sharpe|fg3m|under|0.5": 1.0
        },
-       "key": "Evan Mobley|ast|under|3.5"
+       "key": "Jeremiah Fears|pra|under|25.5"
       }
      ],
-     "key": "Jrue Holiday|ast|under|4.5"
+     "key": "Ivica Zubac|pra|under|25.5"
     },
     {
      "kind": "prop",
-     "label": "Jamal Cain Under 5.5 Rebotes",
-     "player": "Jamal Cain",
-     "team": "ORL",
-     "line": 5.5,
-     "stat": "reb",
-     "side": "under",
-     "p": 0.629,
-     "dec": 1.628,
-     "ev": 0.024,
-     "gid": "2026-11-11-ORL-at-UTA",
-     "game": "ORL @ UTA",
-     "swaps": [
-      {
-       "kind": "prop",
-       "label": "Ryan Rollins Under 4.5 Asistencias",
-       "player": "Ryan Rollins",
-       "team": "MIL",
-       "line": 4.5,
-       "stat": "ast",
-       "side": "under",
-       "p": 0.595,
-       "dec": 1.644,
-       "ev": -0.022,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
-       "pc": {
-        "Matisse Thybulle|pts|over|5.5": 0.99,
-        "Sandro Mamukelashvili|pts|over|8.5": 1.01,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.99,
-        "Kyle Kuzma|reb|under|4.5": 0.98
-       },
-       "key": "Ryan Rollins|ast|under|4.5"
-      },
-      {
-       "kind": "prop",
-       "label": "James Harden Under 4.5 Rebotes",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 4.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.592,
-       "dec": 1.744,
-       "ev": 0.032,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
-       "pc": {
-        "Evan Mobley|ast|under|3.5": 1.01
-       },
-       "key": "James Harden|reb|under|4.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Ace Bailey Under 5.5 Rebotes",
-       "player": "Ace Bailey",
-       "team": "UTA",
-       "line": 5.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.584,
-       "dec": 1.688,
-       "ev": -0.014,
-       "gid": "2026-11-11-ORL-at-UTA",
-       "game": "ORL @ UTA",
-       "pc": {
-        "Jamal Cain|reb|under|5.5": 0.99
-       },
-       "key": "Ace Bailey|reb|under|5.5"
-      },
-      {
-       "kind": "prop",
-       "label": "James Harden Under 16.5 Puntos",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 16.5,
-       "stat": "pts",
-       "side": "under",
-       "p": 0.583,
-       "dec": 1.778,
-       "ev": 0.037,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
-       "pc": {
-        "Evan Mobley|ast|under|3.5": 1.04
-       },
-       "key": "James Harden|pts|under|16.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Julius Randle Under 6.5 Rebotes",
-       "player": "Julius Randle",
-       "team": "BKN",
-       "line": 6.5,
-       "stat": "reb",
-       "side": "under",
-       "p": 0.579,
-       "dec": 1.68,
-       "ev": -0.027,
-       "gid": "2026-11-11-BKN-at-NOP",
-       "game": "BKN @ NOP",
-       "pc": {},
-       "key": "Julius Randle|reb|under|6.5"
-      },
-      {
-       "kind": "prop",
-       "label": "Evan Mobley Under 3.5 Asistencias",
-       "player": "Evan Mobley",
-       "team": "CLE",
-       "line": 3.5,
-       "stat": "ast",
-       "side": "under",
-       "p": 0.572,
-       "dec": 1.726,
-       "ev": -0.013,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
-       "pc": {
-        "James Harden|reb|under|4.5": 1.01,
-        "James Harden|pts|under|16.5": 1.04
-       },
-       "key": "Evan Mobley|ast|under|3.5"
-      }
-     ],
-     "key": "Jamal Cain|reb|under|5.5"
-    },
-    {
-     "kind": "prop",
-     "label": "Aaron Nesmith Under 13.5 Puntos",
-     "player": "Aaron Nesmith",
+     "label": "Andrew Nembhard Under 18.5 PTS+REB",
+     "player": "Andrew Nembhard",
      "team": "IND",
-     "line": 13.5,
-     "stat": "pts",
+     "line": 18.5,
+     "stat": "pr",
      "side": "under",
-     "p": 0.594,
-     "dec": 1.848,
-     "ev": 0.098,
+     "p": 0.586,
+     "dec": 1.889,
+     "ev": 0.107,
      "gid": "2026-11-11-WAS-at-IND",
      "game": "WAS @ IND",
+     "corr": 1.0,
      "swaps": [
       {
        "kind": "prop",
-       "label": "James Harden Under 4.5 Rebotes",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 4.5,
-       "stat": "reb",
+       "label": "Donovan Clingan Under 13.5 PTS+AST",
+       "player": "Donovan Clingan",
+       "team": "POR",
+       "line": 13.5,
+       "stat": "pa",
        "side": "under",
-       "p": 0.592,
-       "dec": 1.744,
-       "ev": 0.032,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
+       "p": 0.582,
+       "dec": 1.876,
+       "ev": 0.092,
+       "gid": "2026-11-11-OKC-at-POR",
+       "game": "OKC @ POR",
        "pc": {
-        "Evan Mobley|ast|under|3.5": 1.01
+        "Ajay Mitchell|fg3m|under|1.5": 1.0,
+        "Jrue Holiday|ast|under|4.5": 1.0,
+        "Toumani Camara|ra|over|5.5": 0.99,
+        "Jared McCain|pra|over|17.5": 0.99
        },
-       "key": "James Harden|reb|under|4.5"
+       "key": "Donovan Clingan|pa|under|13.5"
       },
       {
        "kind": "prop",
-       "label": "Ace Bailey Under 5.5 Rebotes",
-       "player": "Ace Bailey",
-       "team": "UTA",
-       "line": 5.5,
-       "stat": "reb",
+       "label": "Josh Giddey Under 28.5 PTS+REB+AST",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 28.5,
+       "stat": "pra",
        "side": "under",
-       "p": 0.584,
-       "dec": 1.688,
-       "ev": -0.014,
-       "gid": "2026-11-11-ORL-at-UTA",
-       "game": "ORL @ UTA",
+       "p": 0.581,
+       "dec": 1.864,
+       "ev": 0.083,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
        "pc": {
-        "Jamal Cain|reb|under|5.5": 0.99
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 0.99
        },
-       "key": "Ace Bailey|reb|under|5.5"
+       "key": "Josh Giddey|pra|under|28.5"
       },
       {
        "kind": "prop",
-       "label": "James Harden Under 16.5 Puntos",
-       "player": "James Harden",
-       "team": "CLE",
-       "line": 16.5,
-       "stat": "pts",
+       "label": "Josh Giddey Under 19.5 PTS+REB",
+       "player": "Josh Giddey",
+       "team": "CHI",
+       "line": 19.5,
+       "stat": "pr",
        "side": "under",
-       "p": 0.583,
-       "dec": 1.778,
-       "ev": 0.037,
-       "gid": "2026-11-11-CLE-at-NYK",
-       "game": "CLE @ NYK",
+       "p": 0.573,
+       "dec": 1.882,
+       "ev": 0.078,
+       "gid": "2026-11-11-SAS-at-CHI",
+       "game": "SAS @ CHI",
        "pc": {
-        "Evan Mobley|ast|under|3.5": 1.04
+        "Julian Champagnie|ra|over|5.5": 1.0,
+        "Stephon Castle|ra|over|10.5": 1.0
        },
-       "key": "James Harden|pts|under|16.5"
+       "key": "Josh Giddey|pr|under|19.5"
       },
       {
        "kind": "prop",
-       "label": "Julius Randle Under 6.5 Rebotes",
-       "player": "Julius Randle",
-       "team": "BKN",
-       "line": 6.5,
-       "stat": "reb",
+       "label": "Jeremiah Fears Under 20.5 PTS+AST",
+       "player": "Jeremiah Fears",
+       "team": "NOP",
+       "line": 20.5,
+       "stat": "pa",
        "side": "under",
-       "p": 0.579,
-       "dec": 1.68,
-       "ev": -0.027,
+       "p": 0.568,
+       "dec": 1.891,
+       "ev": 0.074,
        "gid": "2026-11-11-BKN-at-NOP",
        "game": "BKN @ NOP",
-       "pc": {},
-       "key": "Julius Randle|reb|under|6.5"
+       "pc": {
+        "Day'Ron Sharpe|fg3m|under|0.5": 1.0
+       },
+       "key": "Jeremiah Fears|pa|under|20.5"
       },
       {
        "kind": "prop",
-       "label": "Evan Mobley Under 3.5 Asistencias",
-       "player": "Evan Mobley",
+       "label": "James Harden Under 20.5 PTS+REB",
+       "player": "James Harden",
        "team": "CLE",
-       "line": 3.5,
-       "stat": "ast",
+       "line": 20.5,
+       "stat": "pr",
        "side": "under",
-       "p": 0.572,
-       "dec": 1.726,
-       "ev": -0.013,
+       "p": 0.565,
+       "dec": 1.881,
+       "ev": 0.063,
        "gid": "2026-11-11-CLE-at-NYK",
        "game": "CLE @ NYK",
        "pc": {
-        "James Harden|reb|under|4.5": 1.01,
-        "James Harden|pts|under|16.5": 1.04
+        "Peyton Watson|fg3m|under|1.5": 1.0
        },
-       "key": "Evan Mobley|ast|under|3.5"
+       "key": "James Harden|pr|under|20.5"
       },
       {
        "kind": "prop",
-       "label": "Kyle Kuzma Under 4.5 Rebotes",
-       "player": "Kyle Kuzma",
-       "team": "MIL",
-       "line": 4.5,
-       "stat": "reb",
+       "label": "Kyshawn George Under 14.5 Puntos",
+       "player": "Kyshawn George",
+       "team": "WAS",
+       "line": 14.5,
+       "stat": "pts",
        "side": "under",
-       "p": 0.572,
-       "dec": 1.706,
-       "ev": -0.024,
-       "gid": "2026-11-11-LAL-at-MIL",
-       "game": "LAL @ MIL",
+       "p": 0.561,
+       "dec": 1.886,
+       "ev": 0.058,
+       "gid": "2026-11-11-WAS-at-IND",
+       "game": "WAS @ IND",
        "pc": {
-        "Matisse Thybulle|pts|over|5.5": 1.0,
-        "Sandro Mamukelashvili|pts|over|8.5": 1.0,
-        "Jaime Jaquez Jr.|pts|over|13.5": 0.99,
-        "Ryan Rollins|ast|under|4.5": 0.98
+        "Ivica Zubac|pra|under|25.5": 1.0,
+        "Andrew Nembhard|pr|under|18.5": 1.0,
+        "Aaron Nesmith|pts|under|13.5": 1.0
        },
-       "key": "Kyle Kuzma|reb|under|4.5"
+       "key": "Kyshawn George|pts|under|14.5"
       }
      ],
-     "key": "Aaron Nesmith|pts|under|13.5"
+     "key": "Andrew Nembhard|pr|under|18.5"
     }
    ],
    "n": 7,
-   "p": 0.022,
-   "p_indep": 0.021,
-   "corr": 1.0,
-   "dec": 56.16,
-   "fair": 46.47,
-   "ev": 0.209,
+   "p": 0.027,
+   "p_indep": 0.027,
+   "corr": 1.02,
+   "dec": 50.86,
+   "fair": 36.81,
+   "ev": 0.382,
    "type": "dream",
-   "games": 6,
+   "games": 5,
    "result": null,
    "units": null
   }
@@ -90081,7 +90281,7 @@
    },
    "proj_total": 226.9,
    "used_db": true,
-   "n_value": 2,
+   "n_value": 0,
    "top_bets": [
     {
      "kind": "prop",
@@ -90201,84 +90401,7 @@
      }
     }
    ],
-   "value_bets": [
-    {
-     "kind": "prop",
-     "label": "Payton Pritchard Over 3.5 Asistencias",
-     "player": "Payton Pritchard",
-     "team": "BOS",
-     "line": 3.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.557,
-     "implied": 0.512,
-     "fair": -126,
-     "edge": 0.045,
-     "ev": 0.087,
-     "value": true,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.631,
-     "p_mkt": 0.532,
-     "cand": true,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 27,
-       "value": 9.3,
-       "lg": 7.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ja'Kobe Walter Over 12.5 Puntos",
-     "player": "Ja'Kobe Walter",
-     "team": "TOR",
-     "line": 12.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.555,
-     "implied": 0.512,
-     "fair": -124,
-     "edge": 0.042,
-     "ev": 0.082,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.7,
-     "p_mkt": 0.506,
-     "cand": true,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 12,
-       "value": 23.0,
-       "lg": 23.9,
-       "n": 30
-      }
-     }
-    }
-   ],
+   "value_bets": [],
    "parlays": [
     {
      "legs": [
@@ -91133,7 +91256,7 @@
      "implied": 0.512,
      "edge": 0.045,
      "ev": 0.087,
-     "value": true,
+     "value": false,
      "stat": "ast",
      "side": "over",
      "p_model": 0.631,
@@ -91170,7 +91293,7 @@
      "implied": 0.512,
      "edge": 0.042,
      "ev": 0.082,
-     "value": true,
+     "value": false,
      "stat": "pts",
      "side": "over",
      "p_model": 0.7,
@@ -95237,7 +95360,7 @@
    },
    "proj_total": 229.2,
    "used_db": true,
-   "n_value": 3,
+   "n_value": 2,
    "top_bets": [
     {
      "kind": "prop",
@@ -95398,78 +95521,33 @@
     },
     {
      "kind": "prop",
-     "label": "James Harden Under 4.5 Rebotes",
+     "label": "James Harden Under 10.5 REB+AST",
      "player": "James Harden",
      "team": "CLE",
-     "line": 4.5,
-     "odds": -117,
-     "dec": 1.855,
+     "line": 10.5,
+     "odds": -113,
+     "dec": 1.885,
      "odds_assumed": false,
-     "p": 0.592,
-     "implied": 0.539,
-     "fair": -145,
-     "edge": 0.053,
-     "ev": 0.099,
+     "p": 0.585,
+     "implied": 0.531,
+     "fair": -141,
+     "edge": 0.055,
+     "ev": 0.104,
      "value": true,
-     "stat": "reb",
+     "stat": "ra",
      "side": "under",
-     "p_model": 0.776,
-     "p_mkt": 0.531,
+     "p_model": 0.79,
+     "p_mkt": 0.517,
      "cand": true,
      "hr": {
       "l10": [
-       4,
+       6,
        10
       ],
       "h2h": [
-       3,
+       2,
        3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 17,
-       "value": 6.1,
-       "lg": 5.8,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Evan Mobley Under 3.5 Asistencias",
-     "player": "Evan Mobley",
-     "team": "CLE",
-     "line": 3.5,
-     "odds": -111,
-     "dec": 1.901,
-     "odds_assumed": false,
-     "p": 0.572,
-     "implied": 0.526,
-     "fair": -134,
-     "edge": 0.046,
-     "ev": 0.087,
-     "value": true,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.678,
-     "p_mkt": 0.536,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 20,
-       "value": 5.2,
-       "lg": 4.7,
-       "n": 30
-      }
+      ]
      }
     }
    ],
@@ -96162,7 +96240,7 @@
      "implied": 0.531,
      "edge": 0.055,
      "ev": 0.104,
-     "value": false,
+     "value": true,
      "stat": "ra",
      "side": "under",
      "p_model": 0.79,
@@ -96259,7 +96337,7 @@
      "implied": 0.539,
      "edge": 0.053,
      "ev": 0.099,
-     "value": true,
+     "value": false,
      "stat": "reb",
      "side": "under",
      "p_model": 0.776,
@@ -96326,7 +96404,7 @@
      "implied": 0.526,
      "edge": 0.046,
      "ev": 0.087,
-     "value": true,
+     "value": false,
      "stat": "ast",
      "side": "under",
      "p_model": 0.678,
@@ -99748,7 +99826,7 @@
    },
    "proj_total": 231.6,
    "used_db": true,
-   "n_value": 2,
+   "n_value": 5,
    "top_bets": [
     {
      "kind": "prop",
@@ -99871,6 +99949,68 @@
    "value_bets": [
     {
      "kind": "prop",
+     "label": "Ivica Zubac Under 14.5 PTS+AST",
+     "player": "Ivica Zubac",
+     "team": "IND",
+     "line": 14.5,
+     "odds": -101,
+     "dec": 1.99,
+     "odds_assumed": false,
+     "p": 0.588,
+     "implied": 0.502,
+     "fair": -143,
+     "edge": 0.085,
+     "ev": 0.17,
+     "value": true,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.882,
+     "p_mkt": 0.49,
+     "cand": true,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Andrew Nembhard Under 18.5 PTS+REB",
+     "player": "Andrew Nembhard",
+     "team": "IND",
+     "line": 18.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.586,
+     "implied": 0.512,
+     "fair": -141,
+     "edge": 0.073,
+     "ev": 0.143,
+     "value": true,
+     "stat": "pr",
+     "side": "under",
+     "p_model": 0.872,
+     "p_mkt": 0.49,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Aaron Nesmith Under 13.5 Puntos",
      "player": "Aaron Nesmith",
      "team": "IND",
@@ -99903,6 +100043,44 @@
        "rank": 14,
        "value": 23.3,
        "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Andrew Nembhard Under 1.5 Triples",
+     "player": "Andrew Nembhard",
+     "team": "IND",
+     "line": 1.5,
+     "odds": 140,
+     "dec": 2.4,
+     "odds_assumed": false,
+     "p": 0.464,
+     "implied": 0.417,
+     "fair": 116,
+     "edge": 0.047,
+     "ev": 0.113,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.625,
+     "p_mkt": 0.41,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 10,
+       "value": 3.2,
+       "lg": 3.6,
        "n": 30
       }
      }
@@ -100880,7 +101058,7 @@
      "implied": 0.502,
      "edge": 0.085,
      "ev": 0.17,
-     "value": false,
+     "value": true,
      "stat": "pa",
      "side": "under",
      "p_model": 0.882,
@@ -100977,7 +101155,7 @@
      "implied": 0.512,
      "edge": 0.073,
      "ev": 0.143,
-     "value": false,
+     "value": true,
      "stat": "pr",
      "side": "under",
      "p_model": 0.872,
@@ -101081,7 +101259,7 @@
      "implied": 0.417,
      "edge": 0.047,
      "ev": 0.113,
-     "value": false,
+     "value": true,
      "stat": "fg3m",
      "side": "under",
      "p_model": 0.625,
@@ -105926,6 +106104,37 @@
    "value_bets": [
     {
      "kind": "prop",
+     "label": "Nolan Traore Under 5.5 REB+AST",
+     "player": "Nolan Traore",
+     "team": "BKN",
+     "line": 5.5,
+     "odds": 114,
+     "dec": 2.14,
+     "odds_assumed": false,
+     "p": 0.549,
+     "implied": 0.467,
+     "fair": -122,
+     "edge": 0.082,
+     "ev": 0.175,
+     "value": true,
+     "stat": "ra",
+     "side": "under",
+     "p_model": 0.789,
+     "p_mkt": 0.469,
+     "cand": true,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Nolan Traore Under 3.5 Asistencias",
      "player": "Nolan Traore",
      "team": "BKN",
@@ -105964,61 +106173,23 @@
     },
     {
      "kind": "prop",
-     "label": "Jeremiah Fears Under 4.5 Asistencias",
+     "label": "Jeremiah Fears Under 25.5 PTS+REB+AST",
      "player": "Jeremiah Fears",
      "team": "NOP",
-     "line": 4.5,
-     "odds": 120,
-     "dec": 2.2,
+     "line": 25.5,
+     "odds": -109,
+     "dec": 1.917,
      "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.455,
-     "fair": -100,
-     "edge": 0.046,
-     "ev": 0.102,
+     "p": 0.581,
+     "implied": 0.522,
+     "fair": -138,
+     "edge": 0.059,
+     "ev": 0.113,
      "value": true,
-     "stat": "ast",
+     "stat": "pra",
      "side": "under",
-     "p_model": 0.653,
-     "p_mkt": 0.45,
-     "cand": true,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 14,
-       "value": 7.7,
-       "lg": 7.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Julius Randle Under 4.5 Asistencias",
-     "player": "Julius Randle",
-     "team": "BKN",
-     "line": 4.5,
-     "odds": 120,
-     "dec": 2.2,
-     "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.455,
-     "fair": 103,
-     "edge": 0.039,
-     "ev": 0.085,
-     "value": true,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.636,
-     "p_mkt": 0.446,
+     "p_model": 0.812,
+     "p_mkt": 0.503,
      "cand": true,
      "hr": {
       "l10": [
@@ -106026,14 +106197,14 @@
        10
       ],
       "h2h": [
-       1,
-       3
+       2,
+       2
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 15,
-       "value": 4.6,
-       "lg": 4.7,
+       "pos": "PG",
+       "rank": 12,
+       "value": 39.3,
+       "lg": 40.7,
        "n": 30
       }
      }
@@ -106651,7 +106822,7 @@
      "implied": 0.467,
      "edge": 0.082,
      "ev": 0.175,
-     "value": false,
+     "value": true,
      "stat": "ra",
      "side": "under",
      "p_model": 0.789,
@@ -106832,7 +107003,7 @@
      "implied": 0.522,
      "edge": 0.059,
      "ev": 0.113,
-     "value": false,
+     "value": true,
      "stat": "pra",
      "side": "under",
      "p_model": 0.812,
@@ -106899,7 +107070,7 @@
      "implied": 0.455,
      "edge": 0.046,
      "ev": 0.102,
-     "value": true,
+     "value": false,
      "stat": "ast",
      "side": "under",
      "p_model": 0.653,
@@ -107078,7 +107249,7 @@
      "implied": 0.455,
      "edge": 0.039,
      "ev": 0.085,
-     "value": true,
+     "value": false,
      "stat": "ast",
      "side": "under",
      "p_model": 0.636,
@@ -111019,7 +111190,7 @@
    },
    "proj_total": 238.4,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 0,
    "top_bets": [
     {
      "kind": "prop",
@@ -111139,46 +111310,7 @@
      }
     }
    ],
-   "value_bets": [
-    {
-     "kind": "prop",
-     "label": "Aaron Gordon Under 12.5 Puntos",
-     "player": "Aaron Gordon",
-     "team": "DEN",
-     "line": 12.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.553,
-     "implied": 0.512,
-     "fair": -124,
-     "edge": 0.041,
-     "ev": 0.08,
-     "value": true,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.687,
-     "p_mkt": 0.509,
-     "cand": true,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 15,
-       "value": 20.5,
-       "lg": 20.0,
-       "n": 30
-      }
-     }
-    }
-   ],
+   "value_bets": [],
    "parlays": [
     {
      "legs": [
@@ -112077,7 +112209,7 @@
      "implied": 0.512,
      "edge": 0.041,
      "ev": 0.08,
-     "value": true,
+     "value": false,
      "stat": "pts",
      "side": "under",
      "p_model": 0.687,
@@ -122110,7 +122242,7 @@
    },
    "proj_total": 237.9,
    "used_db": true,
-   "n_value": 2,
+   "n_value": 3,
    "top_bets": [
     {
      "kind": "prop",
@@ -122237,61 +122369,85 @@
    "value_bets": [
     {
      "kind": "prop",
-     "label": "Josh Giddey Under 6.5 Rebotes",
-     "player": "Josh Giddey",
+     "label": "Matas Buzelis Under 6.5 REB+AST",
+     "player": "Matas Buzelis",
      "team": "CHI",
      "line": 6.5,
-     "odds": -105,
-     "dec": 1.952,
+     "odds": 112,
+     "dec": 2.12,
      "odds_assumed": false,
-     "p": 0.563,
-     "implied": 0.512,
-     "fair": -129,
-     "edge": 0.051,
-     "ev": 0.099,
+     "p": 0.535,
+     "implied": 0.472,
+     "fair": -115,
+     "edge": 0.063,
+     "ev": 0.134,
      "value": true,
-     "stat": "reb",
+     "stat": "ra",
      "side": "under",
-     "p_model": 0.734,
-     "p_mkt": 0.506,
+     "p_model": 0.725,
+     "p_mkt": 0.472,
      "cand": true,
      "hr": {
       "l10": [
-       6,
+       4,
        10
       ],
       "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 28,
-       "value": 7.2,
-       "lg": 5.8,
-       "n": 30
-      }
+       1,
+       2
+      ]
      }
     },
     {
      "kind": "prop",
-     "label": "Josh Giddey Under 8.5 Asistencias",
+     "label": "Josh Giddey Under 19.5 PTS+REB",
      "player": "Josh Giddey",
      "team": "CHI",
-     "line": 8.5,
-     "odds": -105,
-     "dec": 1.952,
+     "line": 19.5,
+     "odds": -103,
+     "dec": 1.971,
      "odds_assumed": false,
-     "p": 0.556,
-     "implied": 0.512,
-     "fair": -125,
-     "edge": 0.044,
-     "ev": 0.086,
+     "p": 0.573,
+     "implied": 0.507,
+     "fair": -134,
+     "edge": 0.066,
+     "ev": 0.129,
      "value": true,
-     "stat": "ast",
+     "stat": "pr",
      "side": "under",
-     "p_model": 0.748,
+     "p_model": 0.816,
      "p_mkt": 0.492,
+     "cand": true,
+     "hr": {
+      "l10": [
+       9,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Jalen Smith Under 1.5 Triples",
+     "player": "Jalen Smith",
+     "team": "CHI",
+     "line": 1.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.579,
+     "implied": 0.524,
+     "fair": -137,
+     "edge": 0.055,
+     "ev": 0.105,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.726,
+     "p_mkt": 0.53,
      "cand": true,
      "hr": {
       "l10": [
@@ -122299,14 +122455,14 @@
        10
       ],
       "h2h": [
-       0,
+       1,
        1
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 5,
-       "value": 6.7,
-       "lg": 7.9,
+       "pos": "C",
+       "rank": 16,
+       "value": 1.1,
+       "lg": 1.2,
        "n": 30
       }
      }
@@ -123106,7 +123262,7 @@
      "implied": 0.472,
      "edge": 0.063,
      "ev": 0.134,
-     "value": false,
+     "value": true,
      "stat": "ra",
      "side": "under",
      "p_model": 0.725,
@@ -123136,7 +123292,7 @@
      "implied": 0.507,
      "edge": 0.066,
      "ev": 0.129,
-     "value": false,
+     "value": true,
      "stat": "pr",
      "side": "under",
      "p_model": 0.816,
@@ -123275,7 +123431,7 @@
      "implied": 0.524,
      "edge": 0.055,
      "ev": 0.105,
-     "value": false,
+     "value": true,
      "stat": "fg3m",
      "side": "under",
      "p_model": 0.726,
@@ -123379,7 +123535,7 @@
      "implied": 0.512,
      "edge": 0.051,
      "ev": 0.099,
-     "value": true,
+     "value": false,
      "stat": "reb",
      "side": "under",
      "p_model": 0.734,
@@ -123513,7 +123669,7 @@
      "implied": 0.512,
      "edge": 0.044,
      "ev": 0.086,
-     "value": true,
+     "value": false,
      "stat": "ast",
      "side": "under",
      "p_model": 0.748,
@@ -133227,7 +133383,7 @@
    },
    "proj_total": 230.6,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 0,
    "top_bets": [
     {
      "kind": "prop",
@@ -133347,46 +133503,7 @@
      }
     }
    ],
-   "value_bets": [
-    {
-     "kind": "prop",
-     "label": "Reed Sheppard Over 8.5 Puntos",
-     "player": "Reed Sheppard",
-     "team": "HOU",
-     "line": 8.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.558,
-     "implied": 0.512,
-     "fair": -126,
-     "edge": 0.045,
-     "ev": 0.089,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.778,
-     "p_mkt": 0.484,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 5,
-       "value": 23.4,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    }
-   ],
+   "value_bets": [],
    "parlays": [
     {
      "legs": [
@@ -133945,7 +134062,7 @@
      "implied": 0.512,
      "edge": 0.045,
      "ev": 0.089,
-     "value": true,
+     "value": false,
      "stat": "pts",
      "side": "over",
      "p_model": 0.778,
@@ -138276,7 +138393,7 @@
    },
    "proj_total": 227.5,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 2,
    "top_bets": [
     {
      "kind": "prop",
@@ -138399,44 +138516,71 @@
    "value_bets": [
     {
      "kind": "prop",
-     "label": "Damian Lillard Under 3.5 Rebotes",
-     "player": "Damian Lillard",
+     "label": "Donovan Clingan Under 13.5 PTS+AST",
+     "player": "Donovan Clingan",
      "team": "POR",
-     "line": 3.5,
-     "odds": 110,
-     "dec": 2.1,
+     "line": 13.5,
+     "odds": -108,
+     "dec": 1.926,
      "odds_assumed": false,
-     "p": 0.523,
-     "implied": 0.476,
-     "fair": -110,
-     "edge": 0.047,
-     "ev": 0.098,
+     "p": 0.582,
+     "implied": 0.519,
+     "fair": -139,
+     "edge": 0.063,
+     "ev": 0.122,
      "value": true,
-     "stat": "reb",
+     "stat": "pa",
      "side": "under",
-     "p_model": 0.628,
-     "p_mkt": 0.488,
+     "p_model": 0.849,
+     "p_mkt": 0.494,
      "cand": true,
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
-       1,
-       1
+       4,
+       4
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Under 1.5 Triples",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 1.5,
+     "odds": 152,
+     "dec": 2.52,
+     "odds_assumed": false,
+     "p": 0.438,
+     "implied": 0.397,
+     "fair": 128,
+     "edge": 0.042,
+     "ev": 0.105,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.594,
+     "p_mkt": 0.387,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       3,
+       5
       ],
       "dvp": {
        "pos": "PG",
-       "rank": 30,
-       "value": 7.6,
-       "lg": 5.8,
+       "rank": 4,
+       "value": 2.7,
+       "lg": 3.6,
        "n": 30
       }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
      }
     }
    ],
@@ -139324,7 +139468,7 @@
      "implied": 0.519,
      "edge": 0.063,
      "ev": 0.122,
-     "value": false,
+     "value": true,
      "stat": "pa",
      "side": "under",
      "p_model": 0.849,
@@ -139459,7 +139603,7 @@
      "implied": 0.397,
      "edge": 0.042,
      "ev": 0.105,
-     "value": false,
+     "value": true,
      "stat": "fg3m",
      "side": "under",
      "p_model": 0.594,
@@ -139496,7 +139640,7 @@
      "implied": 0.476,
      "edge": 0.047,
      "ev": 0.098,
-     "value": true,
+     "value": false,
      "stat": "reb",
      "side": "under",
      "p_model": 0.628,
