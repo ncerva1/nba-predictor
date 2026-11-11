@@ -1,0 +1,1995 @@
+{
+ "date": "2026-11-11",
+ "sources": {
+  "schedule_odds": "NBA.com/games 11-nov (10 partidos de liga); Covers matchup/<id>/odds (9 casas en 6 partidos, ~11:40 ET) + consenso scoresandodds.com/nba?date=2026-11-11 en los 10; props de puntos, rebotes y asistencias de scoresandodds.com/nba/props/<stat>?date=2026-11-11 (mejor cuota por lado) y puntos de Covers donde faltaban; triples sin líneas del día",
+  "players_cur": "Game logs oficiales de nba.com 2026-27 hasta el 1-nov + box scores ESPN del 2 al 10-nov (results/) vía gamelogs/build_raw.py",
+  "players_prior": "Game logs oficiales de nba.com 2025-26 (temporada regular completa)",
+  "injuries": "ESPN injuries y CBS injuries, 11-nov ~16:45 UTC + capturas de @UnderdogNBA (Nicolas, 10-nov); en duda con p_play (más alta si las casas le dan líneas)",
+  "b2b": "Jugaron el 10-nov: NYK, BOS, MIL, ORL, UTA, OKC y POR",
+  "db": "BD de rankings: snapshot del 11-nov (B-Ref 2026-27 hasta el 10-nov; play types y zonas NBA.com del 27-oct; DvP statpick hasta el 9-nov)",
+  "h2h": "h2h/2025-26.json: 8 cruces nuevos (23 partidos) desde los game logs de nba.com"
+ },
+ "b2b_adj": {
+  "o": -1.0,
+  "d": 1.0,
+  "pace": -0.5
+ },
+ "prop_lines": {
+  "Luka Dončić": {
+   "pts": [
+    33.5,
+    -120,
+    -118,
+    35.5
+   ],
+   "reb": [
+    7.5,
+    110,
+    -130
+   ],
+   "ast": [
+    7.5,
+    116,
+    -125
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "pts": [
+    32.5,
+    -105,
+    -121,
+    33.5
+   ],
+   "reb": [
+    3.5,
+    -130,
+    -135,
+    4.5
+   ],
+   "ast": [
+    5.5,
+    116,
+    -140
+   ]
+  },
+  "Victor Wembanyama": {
+   "pts": [
+    28.5,
+    -125,
+    -112,
+    30.5
+   ],
+   "reb": [
+    11.5,
+    100,
+    -115
+   ]
+  },
+  "Jayson Tatum": {
+   "pts": [
+    26.5,
+    -111,
+    -112,
+    27.5
+   ],
+   "reb": [
+    6.5,
+    -135,
+    105,
+    7.5
+   ],
+   "ast": [
+    6.5,
+    102,
+    -105
+   ]
+  },
+  "Stephen Curry": {
+   "pts": [
+    25.5,
+    -136,
+    -115,
+    27.5
+   ],
+   "reb": [
+    3.5,
+    -135,
+    120
+   ],
+   "ast": [
+    4.5,
+    -105,
+    -110
+   ]
+  },
+  "Nikola Jokić": {
+   "pts": [
+    25.5,
+    -118,
+    -105,
+    26.5
+   ],
+   "reb": [
+    11.5,
+    -115,
+    -125,
+    12.5
+   ],
+   "ast": [
+    9.5,
+    106,
+    -112
+   ]
+  },
+  "Jalen Brunson": {
+   "pts": [
+    25.5,
+    -110,
+    -125,
+    26.5
+   ],
+   "ast": [
+    6.5,
+    -111,
+    101
+   ]
+  },
+  "RJ Barrett": {
+   "pts": [
+    23.5,
+    -110,
+    -118,
+    24.5
+   ],
+   "reb": [
+    5.5,
+    -115,
+    107
+   ],
+   "ast": [
+    3.5,
+    -140,
+    -140,
+    4.5
+   ]
+  },
+  "Donovan Mitchell": {
+   "pts": [
+    22.5,
+    -135,
+    -122,
+    24.5
+   ],
+   "reb": [
+    4.5,
+    120,
+    -138
+   ],
+   "ast": [
+    4.5,
+    -136,
+    120
+   ]
+  },
+  "Deni Avdija": {
+   "pts": [
+    23.5,
+    -100,
+    -115,
+    24.5
+   ],
+   "reb": [
+    6.5,
+    -138,
+    -145,
+    7.5
+   ],
+   "ast": [
+    6.5,
+    -115,
+    -104
+   ]
+  },
+  "Jamal Murray": {
+   "pts": [
+    23.5,
+    -111,
+    -105
+   ],
+   "reb": [
+    4.5,
+    107,
+    -120
+   ],
+   "ast": [
+    5.5,
+    -150,
+    -134,
+    6.5
+   ]
+  },
+  "Franz Wagner": {
+   "pts": [
+    23.5,
+    -105,
+    -105
+   ],
+   "reb": [
+    6.5,
+    116,
+    -120
+   ],
+   "ast": [
+    7.5,
+    -117,
+    105
+   ]
+  },
+  "Michael Porter Jr.": {
+   "pts": [
+    21.5,
+    -115,
+    -106,
+    22.5
+   ],
+   "reb": [
+    6.5,
+    -120,
+    -133,
+    7.5
+   ]
+  },
+  "Austin Reaves": {
+   "pts": [
+    21.5,
+    -125,
+    -113,
+    22.5
+   ],
+   "reb": [
+    3.5,
+    -112,
+    100
+   ],
+   "ast": [
+    4.5,
+    -135,
+    -146,
+    5.5
+   ]
+  },
+  "Anthony Davis": {
+   "pts": [
+    22.5,
+    -108,
+    -110
+   ],
+   "reb": [
+    10.5,
+    100,
+    -118
+   ]
+  },
+  "Pascal Siakam": {
+   "pts": [
+    21.5,
+    -114,
+    102,
+    22.5
+   ],
+   "reb": [
+    6.5,
+    -105,
+    -105
+   ],
+   "ast": [
+    3.5,
+    -118,
+    105
+   ]
+  },
+  "Kevin Durant": {
+   "pts": [
+    21.5,
+    -115,
+    -122,
+    22.5
+   ],
+   "reb": [
+    5.5,
+    102,
+    105
+   ],
+   "ast": [
+    3.5,
+    102,
+    -114
+   ]
+  },
+  "Ty Jerome": {
+   "pts": [
+    21.5,
+    -108,
+    -105
+   ],
+   "ast": [
+    4.5,
+    -140,
+    -115,
+    5.5
+   ]
+  },
+  "Damian Lillard": {
+   "pts": [
+    20.5,
+    -105,
+    -127,
+    21.5
+   ],
+   "reb": [
+    3.5,
+    100,
+    110
+   ],
+   "ast": [
+    4.5,
+    -110,
+    -157,
+    5.5
+   ]
+  },
+  "Karl-Anthony Towns": {
+   "pts": [
+    20.5,
+    -105,
+    -108
+   ],
+   "reb": [
+    12.5,
+    -112,
+    -106
+   ],
+   "ast": [
+    2.5,
+    -175,
+    -162,
+    3.5
+   ]
+  },
+  "Lauri Markkanen": {
+   "pts": [
+    20.5,
+    -116,
+    -105
+   ],
+   "reb": [
+    6.5,
+    -114,
+    102
+   ]
+  },
+  "Zion Williamson": {
+   "pts": [
+    19.5,
+    -125,
+    -105,
+    21.5
+   ],
+   "reb": [
+    5.5,
+    102,
+    -103
+   ]
+  },
+  "Julius Randle": {
+   "pts": [
+    18.5,
+    -150,
+    -116,
+    20.5
+   ],
+   "reb": [
+    6.5,
+    115,
+    -133
+   ],
+   "ast": [
+    4.5,
+    -130,
+    120
+   ]
+  },
+  "Keyonte George": {
+   "pts": [
+    19.5,
+    -120,
+    -105
+   ],
+   "reb": [
+    3.5,
+    -150,
+    120
+   ],
+   "ast": [
+    6.5,
+    102,
+    -130
+   ]
+  },
+  "Tyler Herro": {
+   "pts": [
+    19.5,
+    -118,
+    -110,
+    20.5
+   ],
+   "reb": [
+    3.5,
+    -155,
+    -135,
+    4.5
+   ],
+   "ast": [
+    3.5,
+    -165,
+    -130,
+    4.5
+   ]
+  },
+  "Alperen Sengun": {
+   "pts": [
+    19.5,
+    -115,
+    -105
+   ],
+   "reb": [
+    8.5,
+    -135,
+    -119,
+    9.5
+   ],
+   "ast": [
+    6.5,
+    -125,
+    -135,
+    7.5
+   ]
+  },
+  "Desmond Bane": {
+   "pts": [
+    18.5,
+    -120,
+    -114,
+    19.5
+   ],
+   "reb": [
+    4.5,
+    116,
+    -125
+   ]
+  },
+  "Paul George": {
+   "pts": [
+    18.5,
+    -105,
+    -105
+   ],
+   "reb": [
+    4.5,
+    -125,
+    112
+   ],
+   "ast": [
+    3.5,
+    120,
+    -137
+   ]
+  },
+  "Caleb Wilson": {
+   "pts": [
+    18.5,
+    -120,
+    -114,
+    19.5
+   ],
+   "reb": [
+    5.5,
+    -115,
+    115
+   ]
+  },
+  "Ajay Mitchell": {
+   "pts": [
+    17.5,
+    -115,
+    -105,
+    18.5
+   ],
+   "ast": [
+    3.5,
+    -109,
+    -105
+   ]
+  },
+  "Darryn Peterson": {
+   "pts": [
+    18.5,
+    -115,
+    -110
+   ],
+   "reb": [
+    4.5,
+    120,
+    -150
+   ],
+   "ast": [
+    3.5,
+    -112,
+    100
+   ]
+  },
+  "Norman Powell": {
+   "pts": [
+    18.5,
+    -105,
+    -136,
+    19.5
+   ]
+  },
+  "Immanuel Quickley": {
+   "pts": [
+    17.5,
+    -105,
+    -115,
+    18.5
+   ],
+   "reb": [
+    3.5,
+    -105,
+    -100
+   ],
+   "ast": [
+    5.5,
+    -140,
+    -140,
+    6.5
+   ]
+  },
+  "Anthony Black": {
+   "pts": [
+    18.5,
+    -105,
+    -120
+   ],
+   "reb": [
+    4.5,
+    -110,
+    -112
+   ],
+   "ast": [
+    4.5,
+    -115,
+    -105
+   ]
+  },
+  "Trae Young": {
+   "pts": [
+    17.5,
+    -140,
+    -123,
+    18.5
+   ],
+   "ast": [
+    8.5,
+    -145,
+    -140,
+    9.5
+   ]
+  },
+  "Yaxel Lendeborg": {
+   "pts": [
+    18.5,
+    -102,
+    -115
+   ],
+   "reb": [
+    6.5,
+    -115,
+    102
+   ],
+   "ast": [
+    3.5,
+    -130,
+    -132,
+    4.5
+   ]
+  },
+  "Dylan Harper": {
+   "pts": [
+    16.5,
+    -111,
+    -105,
+    17.5
+   ],
+   "reb": [
+    5.5,
+    110,
+    -110
+   ],
+   "ast": [
+    4.5,
+    105,
+    110
+   ]
+  },
+  "AJ Dybantsa": {
+   "pts": [
+    16.5,
+    -130,
+    -124,
+    17.5
+   ],
+   "reb": [
+    5.5,
+    -130,
+    115
+   ]
+  },
+  "Cameron Boozer": {
+   "pts": [
+    16.5,
+    -112,
+    -105
+   ],
+   "reb": [
+    8.5,
+    -120,
+    103
+   ],
+   "ast": [
+    4.5,
+    -145,
+    115
+   ]
+  },
+  "OG Anunoby": {
+   "pts": [
+    16.5,
+    -115,
+    -130,
+    17.5
+   ],
+   "reb": [
+    4.5,
+    -160,
+    -133,
+    5.5
+   ]
+  },
+  "Trey Murphy III": {
+   "pts": [
+    15.5,
+    -125,
+    -108,
+    16.5
+   ],
+   "reb": [
+    4.5,
+    -136,
+    120
+   ]
+  },
+  "Jeremiah Fears": {
+   "pts": [
+    15.5,
+    -118,
+    -115,
+    17.5
+   ],
+   "reb": [
+    3.5,
+    -145,
+    -124,
+    4.5
+   ],
+   "ast": [
+    4.5,
+    -125,
+    120
+   ]
+  },
+  "James Harden": {
+   "pts": [
+    16.5,
+    100,
+    -119
+   ],
+   "reb": [
+    4.5,
+    110,
+    -117
+   ],
+   "ast": [
+    5.5,
+    -135,
+    -160,
+    6.5
+   ]
+  },
+  "Stephon Castle": {
+   "pts": [
+    15.5,
+    -114,
+    -119,
+    16.5
+   ],
+   "reb": [
+    4.5,
+    -146,
+    -140,
+    5.5
+   ],
+   "ast": [
+    5.5,
+    -112,
+    -145,
+    6.5
+   ]
+  },
+  "Andrew Nembhard": {
+   "pts": [
+    15.5,
+    -116,
+    -115,
+    16.5
+   ],
+   "ast": [
+    6.5,
+    -165,
+    -135,
+    7.5
+   ]
+  },
+  "Evan Mobley": {
+   "pts": [
+    15.5,
+    -110,
+    102
+   ],
+   "reb": [
+    7.5,
+    -135,
+    -133,
+    8.5
+   ],
+   "ast": [
+    3.5,
+    120,
+    -111
+   ]
+  },
+  "Brandin Podziemski": {
+   "pts": [
+    15.5,
+    -106,
+    -113
+   ],
+   "reb": [
+    4.5,
+    -115,
+    110
+   ],
+   "ast": [
+    2.5,
+    -175,
+    -149,
+    3.5
+   ]
+  },
+  "Amen Thompson": {
+   "pts": [
+    14.5,
+    -125,
+    -114,
+    15.5
+   ],
+   "reb": [
+    6.5,
+    -145,
+    -140,
+    7.5
+   ],
+   "ast": [
+    3.5,
+    124,
+    -125
+   ]
+  },
+  "Dejounte Murray": {
+   "pts": [
+    14.5,
+    -110,
+    -125,
+    15.5
+   ],
+   "reb": [
+    4.5,
+    -120,
+    114
+   ],
+   "ast": [
+    4.5,
+    -138,
+    120
+   ]
+  },
+  "Kyshawn George": {
+   "pts": [
+    14.5,
+    -110,
+    -102
+   ],
+   "reb": [
+    4.5,
+    -105,
+    -105
+   ],
+   "ast": [
+    3.5,
+    -160,
+    -125,
+    4.5
+   ]
+  },
+  "Jabari Smith Jr.": {
+   "pts": [
+    14.5,
+    -111,
+    -112
+   ],
+   "reb": [
+    6.5,
+    102,
+    -111
+   ]
+  },
+  "Walker Kessler": {
+   "pts": [
+    13.5,
+    -128,
+    -120,
+    14.5
+   ],
+   "reb": [
+    10.5,
+    -130,
+    -135,
+    11.5
+   ]
+  },
+  "De'Aaron Fox": {
+   "pts": [
+    13.5,
+    -105,
+    -105
+   ],
+   "ast": [
+    5.5,
+    -148,
+    -115,
+    6.5
+   ]
+  },
+  "Matas Buzelis": {
+   "pts": [
+    13.5,
+    -110,
+    -108
+   ],
+   "reb": [
+    4.5,
+    -110,
+    -174,
+    5.5
+   ]
+  },
+  "Aaron Nesmith": {
+   "pts": [
+    13.5,
+    -110,
+    -111
+   ]
+  },
+  "Derrick White": {
+   "pts": [
+    13.5,
+    -100,
+    -110
+   ],
+   "ast": [
+    4.5,
+    110,
+    100
+   ]
+  },
+  "Ace Bailey": {
+   "pts": [
+    13.5,
+    -105,
+    -112
+   ],
+   "reb": [
+    5.5,
+    115,
+    -130
+   ],
+   "ast": [
+    1.5,
+    -135,
+    105
+   ]
+  },
+  "Jaime Jaquez Jr.": {
+   "pts": [
+    13.5,
+    100,
+    -108
+   ],
+   "reb": [
+    4.5,
+    -110,
+    104
+   ]
+  },
+  "Saddiq Bey": {
+   "pts": [
+    12.5,
+    -115,
+    -112,
+    13.5
+   ],
+   "reb": [
+    3.5,
+    -130,
+    -164,
+    4.5
+   ]
+  },
+  "Mikel Brown Jr.": {
+   "pts": [
+    12.5,
+    -115,
+    -120,
+    13.5
+   ],
+   "ast": [
+    3.5,
+    -140,
+    115
+   ]
+  },
+  "Josh Giddey": {
+   "pts": [
+    12.5,
+    -114,
+    -125,
+    13.5
+   ],
+   "reb": [
+    6.5,
+    100,
+    -105
+   ],
+   "ast": [
+    8.5,
+    -112,
+    -105
+   ]
+  },
+  "Ivica Zubac": {
+   "pts": [
+    12.5,
+    -120,
+    -114,
+    13.5
+   ],
+   "reb": [
+    9.5,
+    -136,
+    -135,
+    10.5
+   ]
+  },
+  "Toumani Camara": {
+   "pts": [
+    12.5,
+    100,
+    -115,
+    13.5
+   ],
+   "reb": [
+    4.5,
+    123,
+    -150
+   ]
+  },
+  "Payton Pritchard": {
+   "pts": [
+    12.5,
+    -110,
+    100,
+    13.5
+   ],
+   "ast": [
+    3.5,
+    -105,
+    122
+   ]
+  },
+  "Jared McCain": {
+   "pts": [
+    12.5,
+    -105,
+    -107
+   ]
+  },
+  "Ja'Kobe Walter": {
+   "pts": [
+    12.5,
+    -105,
+    -100
+   ],
+   "reb": [
+    3.5,
+    -150,
+    -140,
+    4.5
+   ]
+  },
+  "Cedric Coward": {
+   "pts": [
+    12.5,
+    -110,
+    -110
+   ],
+   "reb": [
+    6.5,
+    -120,
+    104
+   ]
+  },
+  "Jrue Holiday": {
+   "pts": [
+    12.5,
+    -110,
+    -115
+   ],
+   "reb": [
+    3.5,
+    -125,
+    100
+   ],
+   "ast": [
+    4.5,
+    120,
+    -145
+   ]
+  },
+  "Wendell Carter Jr.": {
+   "pts": [
+    12.5,
+    -109,
+    -125,
+    13.5
+   ],
+   "reb": [
+    8.5,
+    -120,
+    -115,
+    9.5
+   ]
+  },
+  "Ryan Rollins": {
+   "pts": [
+    12.5,
+    -105,
+    -125
+   ],
+   "ast": [
+    4.5,
+    115,
+    -150
+   ]
+  },
+  "Peyton Watson": {
+   "pts": [
+    11.5,
+    -105,
+    -125,
+    12.5
+   ],
+   "reb": [
+    4.5,
+    122,
+    -140
+   ]
+  },
+  "Aaron Gordon": {
+   "pts": [
+    12.5,
+    102,
+    -105
+   ],
+   "reb": [
+    4.5,
+    -140,
+    -135,
+    5.5
+   ]
+  },
+  "Collin Murray-Boyles": {
+   "pts": [
+    11.5,
+    -115,
+    -120,
+    12.5
+   ],
+   "reb": [
+    5.5,
+    -112,
+    107
+   ]
+  },
+  "Donovan Clingan": {
+   "pts": [
+    10.5,
+    -135,
+    -105,
+    11.5
+   ],
+   "reb": [
+    10.5,
+    -115,
+    -150,
+    11.5
+   ]
+  },
+  "Fred VanVleet": {
+   "pts": [
+    11.5,
+    -112,
+    -107
+   ],
+   "ast": [
+    4.5,
+    -150,
+    122
+   ]
+  },
+  "Obi Toppin": {
+   "pts": [
+    10.5,
+    -125,
+    -107,
+    11.5
+   ],
+   "reb": [
+    4.5,
+    103,
+    102
+   ]
+  },
+  "Jarrett Allen": {
+   "pts": [
+    11.5,
+    -117,
+    -104
+   ],
+   "reb": [
+    7.5,
+    106,
+    -110
+   ]
+  },
+  "Cameron Johnson": {
+   "pts": [
+    11.5,
+    -112,
+    100
+   ],
+   "reb": [
+    3.5,
+    -115,
+    104
+   ]
+  },
+  "Jakob Poeltl": {
+   "pts": [
+    11.5,
+    -105,
+    -112
+   ],
+   "reb": [
+    7.5,
+    -130,
+    -145,
+    8.5
+   ]
+  },
+  "Jalen Smith": {
+   "pts": [
+    11.5,
+    -110,
+    -105
+   ],
+   "reb": [
+    6.5,
+    -120,
+    -115,
+    7.5
+   ]
+  },
+  "Christian Braun": {
+   "pts": [
+    10.5,
+    -120,
+    -118,
+    11.5
+   ],
+   "reb": [
+    4.5,
+    128,
+    -150
+   ]
+  },
+  "Brayden Burries": {
+   "pts": [
+    10.5,
+    -127,
+    -125,
+    12.5
+   ],
+   "reb": [
+    5.5,
+    116,
+    -135
+   ]
+  },
+  "DeMar DeRozan": {
+   "pts": [
+    10.5,
+    -118,
+    -102
+   ]
+  },
+  "Keldon Johnson": {
+   "pts": [
+    10.5,
+    -125,
+    100
+   ],
+   "reb": [
+    5.5,
+    -115,
+    -105
+   ],
+   "ast": [
+    1.5,
+    -135,
+    105
+   ]
+  },
+  "Nolan Traore": {
+   "pts": [
+    10.5,
+    -125,
+    -120,
+    12.5
+   ],
+   "ast": [
+    3.5,
+    -112,
+    115
+   ]
+  },
+  "Devin Vassell": {
+   "pts": [
+    10.5,
+    -120,
+    100
+   ],
+   "reb": [
+    3.5,
+    -125,
+    115
+   ]
+  },
+  "Jerami Grant": {
+   "pts": [
+    10.5,
+    100,
+    -106
+   ]
+  },
+  "Alex Sarr": {
+   "pts": [
+    10.5,
+    -110,
+    -112
+   ],
+   "reb": [
+    6.5,
+    -110,
+    115
+   ]
+  },
+  "Kyle Kuzma": {
+   "pts": [
+    10.5,
+    -105,
+    -118
+   ],
+   "reb": [
+    4.5,
+    110,
+    -130
+   ]
+  },
+  "Jaylen Wells": {
+   "pts": [
+    9.5,
+    -115,
+    -120,
+    10.5
+   ]
+  },
+  "Julian Champagnie": {
+   "pts": [
+    9.5,
+    -105,
+    -120,
+    10.5
+   ],
+   "reb": [
+    4.5,
+    -102,
+    102
+   ]
+  },
+  "Collin Sexton": {
+   "pts": [
+    9.5,
+    -125,
+    100
+   ],
+   "ast": [
+    2.5,
+    102,
+    -130
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "reb": [
+    9.5,
+    -115,
+    105
+   ],
+   "ast": [
+    3.5,
+    109,
+    -120
+   ]
+  },
+  "Zach Edey": {
+   "reb": [
+    8.5,
+    -125,
+    107
+   ],
+   "pts": [
+    8.5,
+    -120,
+    -105
+   ]
+  },
+  "Day'Ron Sharpe": {
+   "reb": [
+    7.5,
+    -118,
+    105
+   ],
+   "ast": [
+    3.5,
+    -151,
+    -140,
+    4.5
+   ]
+  },
+  "Neemias Queta": {
+   "reb": [
+    6.5,
+    -105,
+    -140,
+    7.5
+   ]
+  },
+  "Josh Hart": {
+   "reb": [
+    6.5,
+    -127,
+    -145,
+    7.5
+   ],
+   "ast": [
+    3.5,
+    -145,
+    -149,
+    4.5
+   ]
+  },
+  "Jaxson Hayes": {
+   "reb": [
+    6.5,
+    100,
+    -125
+   ]
+  },
+  "Andre Drummond": {
+   "reb": [
+    6.5,
+    102,
+    -122
+   ]
+  },
+  "Derik Queen": {
+   "reb": [
+    5.5,
+    -105,
+    -105
+   ]
+  },
+  "Luke Kornet": {
+   "reb": [
+    5.5,
+    -110,
+    -115
+   ]
+  },
+  "Nic Claxton": {
+   "reb": [
+    4.5,
+    -115,
+    -145,
+    5.5
+   ],
+   "ast": [
+    2.5,
+    140,
+    -180
+   ]
+  },
+  "Draymond Green": {
+   "reb": [
+    4.5,
+    -140,
+    -150,
+    5.5
+   ],
+   "ast": [
+    6.5,
+    120,
+    -126
+   ],
+   "pts": [
+    3.5,
+    -130,
+    -120,
+    4.5
+   ]
+  },
+  "Jamal Cain": {
+   "reb": [
+    5.5,
+    120,
+    -150
+   ]
+  },
+  "Myles Turner": {
+   "reb": [
+    4.5,
+    -120,
+    -135,
+    5.5
+   ],
+   "pts": [
+    8.5,
+    -114,
+    -112,
+    9.5
+   ]
+  },
+  "Tari Eason": {
+   "reb": [
+    4.5,
+    -125,
+    101
+   ]
+  },
+  "Karlo Matković": {
+   "reb": [
+    4.5,
+    -100,
+    -110
+   ]
+  },
+  "Deandre Ayton": {
+   "reb": [
+    4.5,
+    -105,
+    -112
+   ]
+  },
+  "Kenrich Williams": {
+   "reb": [
+    4.5,
+    -112,
+    -112
+   ]
+  },
+  "Sandro Mamukelashvili": {
+   "reb": [
+    4.5,
+    100,
+    -115
+   ],
+   "pts": [
+    8.5,
+    -110,
+    -114
+   ]
+  },
+  "Jarace Walker": {
+   "reb": [
+    4.5,
+    102,
+    -130
+   ]
+  },
+  "Trevon Brazile": {
+   "reb": [
+    3.5,
+    -140,
+    110
+   ]
+  },
+  "Jaylon Tyson": {
+   "reb": [
+    3.5,
+    -128,
+    114
+   ]
+  },
+  "Gui Santos": {
+   "reb": [
+    3.5,
+    -115,
+    102
+   ]
+  },
+  "Isaiah Stewart": {
+   "reb": [
+    3.5,
+    -115,
+    -106
+   ]
+  },
+  "Cam Spencer": {
+   "ast": [
+    4.5,
+    105,
+    -112
+   ]
+  },
+  "T.J. McConnell": {
+   "ast": [
+    3.5,
+    -145,
+    -180,
+    4.5
+   ]
+  },
+  "Quenton Jackson": {
+   "ast": [
+    3.5,
+    130,
+    -165
+   ],
+   "pts": [
+    9.5,
+    100,
+    -115
+   ]
+  },
+  "Reed Sheppard": {
+   "ast": [
+    2.5,
+    135,
+    -170
+   ],
+   "pts": [
+    8.5,
+    -105,
+    -120
+   ]
+  },
+  "Quentin Grimes": {
+   "ast": [
+    1.5,
+    -170,
+    135
+   ],
+   "pts": [
+    7.5,
+    102,
+    -130
+   ]
+  },
+  "Bilal Coulibaly": {
+   "pts": [
+    7.5,
+    102,
+    -130,
+    8.5
+   ]
+  },
+  "Tre Johnson": {
+   "pts": [
+    6.5,
+    -130,
+    -120,
+    8.5
+   ]
+  },
+  "Kelly Oubre Jr.": {
+   "pts": [
+    7.5,
+    -125,
+    -125,
+    9.5
+   ]
+  },
+  "Jake LaRavia": {
+   "pts": [
+    5.5,
+    -140,
+    -112,
+    6.5
+   ]
+  },
+  "Matisse Thybulle": {
+   "pts": [
+    5.5,
+    -118,
+    100
+   ]
+  },
+  "De'Anthony Melton": {
+   "pts": [
+    8.5,
+    -125,
+    -125,
+    10.5
+   ]
+  },
+  "Al Horford": {
+   "pts": [
+    4.5,
+    -105,
+    100
+   ]
+  },
+  "Javon Small": {
+   "pts": [
+    9.5,
+    100,
+    null
+   ]
+  }
+ },
+ "games": [
+  {
+   "away": "CLE",
+   "home": "NYK",
+   "tip_et": "19:00",
+   "venue": "Madison Square Garden, New York",
+   "market": {
+    "ml_home": -180,
+    "ml_away": 151,
+    "spread_home": -4.5,
+    "total": 221.5
+   },
+   "b2b": [
+    "NYK"
+   ],
+   "adj": {},
+   "out": [
+    "Sam Merrill"
+   ],
+   "gtd": {
+    "Jaylon Tyson": 0.5,
+    "Josh Hart": 0.6
+   },
+   "notes": [
+    "Merrill (codo) OUT (CBS: fuera al menos hasta el 16-nov); Tyson (tobillo) en duda (CBS GTD, ESPN out)",
+    "Hart (enfermedad) no jugó el 10-nov; CBS 'out until at least Nov 11' pero las casas le dan líneas: 0.6",
+    "Back-to-back: NYK (jugó el 10-nov vs MIL)",
+    "Covers sin líneas para este partido: consenso de scoresandodds",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "BOS",
+   "home": "TOR",
+   "tip_et": "19:00",
+   "venue": "Scotiabank Arena, Toronto",
+   "market": {
+    "ml_home": 223,
+    "ml_away": -276,
+    "spread_home": 7.5,
+    "total": 215.5
+   },
+   "b2b": [
+    "BOS"
+   ],
+   "adj": {},
+   "out": [
+    "Kawhi Leonard",
+    "Scottie Barnes"
+   ],
+   "gtd": {
+    "Immanuel Quickley": 0.65,
+    "Collin Murray-Boyles": 0.65,
+    "Trayce Jackson-Davis": 0.5
+   },
+   "notes": [
+    "Leonard (rodilla) OUT hasta ~23-nov; Barnes (ingle) OUT (CBS: al menos hasta el 12-nov); Bittle (pie) OUT",
+    "Quickley (isquio) y Murray-Boyles (enfermedad) GTD; las casas les dan líneas: 0.65",
+    "Back-to-back: BOS (jugó el 10-nov en PHI)",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "WAS",
+   "home": "IND",
+   "tip_et": "19:00",
+   "venue": "Gainbridge Fieldhouse, Indianapolis",
+   "market": {
+    "ml_home": -165,
+    "ml_away": 138,
+    "spread_home": -3.5,
+    "total": 225.5
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Reece Beekman",
+    "Justin Champagnie",
+    "Tyrese Haliburton",
+    "Ben Sheppard"
+   ],
+   "gtd": {
+    "Bilal Coulibaly": 0.7,
+    "T.J. McConnell": 0.65
+   },
+   "notes": [
+    "Haliburton (isquio) OUT hasta ~13-nov; Vukcevic, Beekman, Champagnie y Watkins OUT en WAS",
+    "Coulibaly (mano) DTD con líneas en las casas: 0.7; McConnell (isquio) GTD: 0.65",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "LAL",
+   "home": "MIL",
+   "tip_et": "20:00",
+   "venue": "Fiserv Forum, Milwaukee",
+   "market": {
+    "ml_home": 430,
+    "ml_away": -599,
+    "spread_home": 11.5,
+    "total": 232.5
+   },
+   "b2b": [
+    "MIL"
+   ],
+   "adj": {},
+   "out": [],
+   "gtd": {
+    "Austin Reaves": 0.75,
+    "Quentin Grimes": 0.6,
+    "Tyler Herro": 0.55
+   },
+   "notes": [
+    "Reaves (enfermedad) y Grimes (dedo) no jugaron el 9-nov; DTD/GTD con líneas en las casas",
+    "Herro (rodilla) OUT el 10-nov; CBS 'out until at least Nov 11' pero tiene líneas: 0.55",
+    "Back-to-back: MIL (jugó el 10-nov en NYK)",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "BKN",
+   "home": "NOP",
+   "tip_et": "20:00",
+   "venue": "Smoothie King Center, New Orleans",
+   "market": {
+    "ml_home": -186,
+    "ml_away": 156,
+    "spread_home": -4.5,
+    "total": 229.5
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Trendon Watford",
+    "Yves Missi"
+   ],
+   "gtd": {
+    "Nolan Traore": 0.65,
+    "Mikel Brown Jr.": 0.7,
+    "Trey Murphy III": 0.9
+   },
+   "notes": [
+    "Missi (rodilla) OUT (también @UnderdogNBA vía Nicolas); Watford (tobillo) OUT",
+    "Murphy III probable (ESPN y @UnderdogNBA)",
+    "Traore (gemelo) GTD; Demin y Grant Nelson GTD; Mikel Brown Jr. DTD",
+    "Covers sin líneas para este partido: consenso de scoresandodds",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "DEN",
+   "home": "MEM",
+   "tip_et": "20:00",
+   "venue": "FedExForum, Memphis",
+   "market": {
+    "ml_home": 143,
+    "ml_away": -170,
+    "spread_home": 3.5,
+    "total": 228.5
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Quinten Post",
+    "Scotty Pippen Jr."
+   ],
+   "gtd": {
+    "Isaiah Stewart": 0.6
+   },
+   "notes": [
+    "Strawther (rodilla) OUT; Post (cabeza) y Pippen Jr. (espalda) OUT en MEM",
+    "Stewart (rodilla) GTD con líneas: 0.6",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "SAS",
+   "home": "CHI",
+   "tip_et": "20:00",
+   "venue": "United Center, Chicago",
+   "market": {
+    "ml_home": 750,
+    "ml_away": -1200,
+    "spread_home": 15.5,
+    "total": 240.5
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [],
+   "gtd": {
+    "Devin Vassell": 0.65,
+    "Norman Powell": 0.65,
+    "Zach Collins": 0.5
+   },
+   "notes": [
+    "Tobias Harris (gemelo) y Quaintance OUT en SAS; Vassell (ingle) GTD con líneas",
+    "Powell (hombro) GTD con líneas; Collins (enfermedad) GTD",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "ORL",
+   "home": "UTA",
+   "tip_et": "21:00",
+   "venue": "Delta Center, Salt Lake City",
+   "market": {
+    "ml_home": 142,
+    "ml_away": -170,
+    "spread_home": 3.5,
+    "total": 214.5
+   },
+   "b2b": [
+    "ORL",
+    "UTA"
+   ],
+   "adj": {},
+   "out": [
+    "Jalen Suggs",
+    "Paolo Banchero",
+    "Jaren Jackson Jr."
+   ],
+   "gtd": {
+    "Tristan da Silva": 0.5,
+    "Lauri Markkanen": 0.6,
+    "Keyonte George": 0.6
+   },
+   "notes": [
+    "Suggs, Isaac, Banchero, Penda e I. Nelson OUT en ORL; da Silva (gemelo) en duda",
+    "Markkanen (muñeca) y K. George (tobillo) OUT el 10-nov; CBS 'out until at least Nov 11' pero las casas les dan líneas: 0.6",
+    "Nurkic y Jaren Jackson Jr. OUT en UTA",
+    "Back-to-back: ORL (jugó el 10-nov en SAC) y UTA (vs MIA el 10-nov)",
+    "Covers sin líneas para este partido: consenso de scoresandodds",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "GSW",
+   "home": "HOU",
+   "tip_et": "21:30",
+   "venue": "Toyota Center, Houston",
+   "market": {
+    "ml_home": -218,
+    "ml_away": 180,
+    "spread_home": -5.5,
+    "total": 222.5
+   },
+   "b2b": [],
+   "adj": {},
+   "out": [
+    "Gary Payton II",
+    "Brandon Williams",
+    "Clint Capela",
+    "Steven Adams"
+   ],
+   "gtd": {
+    "Will Richard": 0.4,
+    "Oscar Tshiebwe": 0.6
+   },
+   "notes": [
+    "Payton II, B. Williams, Porzingis, Butler y Moody OUT en GSW; Will Richard (pulgar) GTD",
+    "Capela y Adams OUT hasta ~15-nov; Tshiebwe (enfermedad) DTD",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  },
+  {
+   "away": "OKC",
+   "home": "POR",
+   "tip_et": "22:00",
+   "venue": "Moda Center, Portland",
+   "market": {
+    "ml_home": 102,
+    "ml_away": -121,
+    "spread_home": 1.5,
+    "total": 225.5
+   },
+   "b2b": [
+    "OKC",
+    "POR"
+   ],
+   "adj": {},
+   "out": [
+    "Jaylin Williams",
+    "Cason Wallace",
+    "Chet Holmgren",
+    "Jalen Williams",
+    "Ja Morant"
+   ],
+   "gtd": {},
+   "notes": [
+    "Jaylin Williams, Sorber, Wallace, Holmgren y Jalen Williams OUT en OKC; Morant, Krejci y Sharpe OUT en POR",
+    "Back-to-back: OKC y POR (se enfrentaron el 10-nov en Portland)",
+    "Covers sin líneas para este partido: consenso de scoresandodds",
+    "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   ]
+  }
+ ]
+}
