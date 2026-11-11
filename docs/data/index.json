@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T00:35+00:00",
+ "generated": "2026-11-11T01:33+00:00",
  "value_ev": 0.03,
  "model": "1.5",
  "mkt_w": 0.25,
@@ -58,7 +58,7 @@
   },
   "2026-11-10": {
    "morning": "2026-11-10T16:29+00:00",
-   "pregame": "2026-11-11T00:35+00:00"
+   "pregame": "2026-11-11T01:33+00:00"
   }
  },
  "history": [
@@ -93096,7 +93096,7 @@
    },
    "proj_total": 230.1,
    "used_db": true,
-   "n_value": 5,
+   "n_value": 4,
    "top_bets": [
     {
      "kind": "prop",
@@ -93104,14 +93104,14 @@
      "player": "Keaton Wagler",
      "team": "LAC",
      "line": 8.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -120,
+     "dec": 1.833,
      "odds_assumed": false,
      "p": 0.764,
-     "implied": 0.528,
+     "implied": 0.545,
      "fair": -324,
-     "edge": 0.236,
-     "ev": 0.446,
+     "edge": 0.218,
+     "ev": 0.4,
      "value": false,
      "stat": "pts",
      "side": "over",
@@ -93143,22 +93143,61 @@
     },
     {
      "kind": "prop",
-     "label": "Oso Ighodaro Under 2.5 Asistencias",
-     "player": "Oso Ighodaro",
-     "team": "PHX",
-     "line": 2.5,
-     "odds": -110,
-     "dec": 1.909,
+     "label": "Rui Hachimura Under 15.5 Puntos",
+     "player": "Rui Hachimura",
+     "team": "LAC",
+     "line": 15.5,
+     "odds": -114,
+     "dec": 1.877,
      "odds_assumed": false,
-     "p": 0.751,
-     "implied": 0.524,
-     "fair": -302,
-     "edge": 0.227,
-     "ev": 0.434,
+     "p": 0.724,
+     "implied": 0.533,
+     "fair": -262,
+     "edge": 0.191,
+     "ev": 0.359,
      "value": false,
-     "stat": "ast",
+     "stat": "pts",
      "side": "under",
-     "p_model": 0.751,
+     "p_model": 0.724,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 13,
+       "value": 22.1,
+       "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Brook Lopez Under 13.5 Puntos",
+     "player": "Brook Lopez",
+     "team": "LAC",
+     "line": 13.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.747,
+     "implied": 0.556,
+     "fair": -295,
+     "edge": 0.191,
+     "ev": 0.345,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.747,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -93173,48 +93212,9 @@
       ],
       "dvp": {
        "pos": "C",
-       "rank": 29,
-       "value": 5.8,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Devin Booker Under 26.5 Puntos",
-     "player": "Devin Booker",
-     "team": "PHX",
-     "line": 26.5,
-     "odds": -117,
-     "dec": 1.855,
-     "odds_assumed": false,
-     "p": 0.753,
-     "implied": 0.539,
-     "fair": -305,
-     "edge": 0.214,
-     "ev": 0.397,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.753,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 19.3,
-       "lg": 27.0,
+       "rank": 27,
+       "value": 26.9,
+       "lg": 21.9,
        "n": 30
       }
      }
@@ -93299,38 +93299,38 @@
     },
     {
      "kind": "prop",
-     "label": "Devin Booker Over 3.5 Rebotes",
-     "player": "Devin Booker",
+     "label": "Oso Ighodaro Under 2.5 Asistencias",
+     "player": "Oso Ighodaro",
      "team": "PHX",
-     "line": 3.5,
-     "odds": 120,
-     "dec": 2.2,
+     "line": 2.5,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.455,
-     "fair": 103,
-     "edge": 0.038,
-     "ev": 0.084,
+     "p": 0.556,
+     "implied": 0.512,
+     "fair": -125,
+     "edge": 0.044,
+     "ev": 0.086,
      "value": true,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.577,
-     "p_mkt": 0.465,
+     "stat": "ast",
+     "side": "under",
+     "p_model": 0.751,
+     "p_mkt": 0.491,
      "cand": true,
      "hr": {
       "l10": [
-       3,
+       5,
        10
       ],
       "h2h": [
-       2,
-       3
+       4,
+       4
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 4,
-       "value": 4.1,
-       "lg": 5.8,
+       "pos": "C",
+       "rank": 29,
+       "value": 5.8,
+       "lg": 4.3,
        "n": 30
       }
      }
@@ -93369,44 +93369,6 @@
        "rank": 18,
        "value": 15.3,
        "lg": 14.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Oso Ighodaro Under 6.5 Puntos",
-     "player": "Oso Ighodaro",
-     "team": "PHX",
-     "line": 6.5,
-     "odds": -107,
-     "dec": 1.935,
-     "odds_assumed": false,
-     "p": 0.56,
-     "implied": 0.517,
-     "fair": -127,
-     "edge": 0.043,
-     "ev": 0.083,
-     "value": true,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.695,
-     "p_mkt": 0.514,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 18,
-       "value": 22.1,
-       "lg": 21.9,
        "n": 30
       }
      }
@@ -93471,15 +93433,15 @@
       },
       {
        "kind": "prop",
-       "label": "Oso Ighodaro Under 5.5 Rebotes",
-       "player": "Oso Ighodaro",
+       "label": "Devin Booker Under 26.5 Puntos",
+       "player": "Devin Booker",
        "team": "PHX",
-       "line": 5.5,
-       "stat": "reb",
+       "line": 26.5,
+       "stat": "pts",
        "side": "under",
-       "p": 0.568,
-       "dec": 1.909,
-       "ev": 0.084,
+       "p": 0.569,
+       "dec": 1.893,
+       "ev": 0.077,
        "gid": "2026-11-10-LAC-at-PHX",
        "game": "LAC @ PHX"
       },
@@ -93499,12 +93461,12 @@
       }
      ],
      "n": 3,
-     "p": 0.185,
-     "p_indep": 0.185,
-     "corr": 1.0,
-     "dec": 6.71,
-     "fair": 5.4,
-     "ev": 0.241,
+     "p": 0.187,
+     "p_indep": 0.186,
+     "corr": 1.01,
+     "dec": 6.65,
+     "fair": 5.33,
+     "ev": 0.247,
      "type": "sgp"
     }
    ],
@@ -93709,13 +93671,13 @@
      "player": "Keaton Wagler",
      "team": "LAC",
      "line": 8.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -120,
+     "dec": 1.833,
      "odds_assumed": false,
      "p": 0.764,
-     "implied": 0.528,
-     "edge": 0.236,
-     "ev": 0.446,
+     "implied": 0.545,
+     "edge": 0.218,
+     "ev": 0.4,
      "value": false,
      "stat": "pts",
      "side": "over",
@@ -93743,82 +93705,6 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Oso Ighodaro Under 2.5 Asistencias",
-     "player": "Oso Ighodaro",
-     "team": "PHX",
-     "line": 2.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.751,
-     "implied": 0.524,
-     "edge": 0.227,
-     "ev": 0.434,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.751,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 29,
-       "value": 5.8,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Devin Booker Under 26.5 Puntos",
-     "player": "Devin Booker",
-     "team": "PHX",
-     "line": 26.5,
-     "odds": -117,
-     "dec": 1.855,
-     "odds_assumed": false,
-     "p": 0.753,
-     "implied": 0.539,
-     "edge": 0.214,
-     "ev": 0.397,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.753,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 19.3,
-       "lg": 27.0,
-       "n": 30
-      }
      }
     },
     {
@@ -94391,37 +94277,37 @@
     },
     {
      "kind": "prop",
-     "label": "Devin Booker Over 3.5 Rebotes",
-     "player": "Devin Booker",
+     "label": "Oso Ighodaro Under 2.5 Asistencias",
+     "player": "Oso Ighodaro",
      "team": "PHX",
-     "line": 3.5,
-     "odds": 120,
-     "dec": 2.2,
+     "line": 2.5,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.455,
-     "edge": 0.038,
-     "ev": 0.084,
+     "p": 0.556,
+     "implied": 0.512,
+     "edge": 0.044,
+     "ev": 0.086,
      "value": true,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.577,
-     "p_mkt": 0.465,
+     "stat": "ast",
+     "side": "under",
+     "p_model": 0.751,
+     "p_mkt": 0.491,
      "cand": true,
      "hr": {
       "l10": [
-       3,
+       5,
        10
       ],
       "h2h": [
-       2,
-       3
+       4,
+       4
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 4,
-       "value": 4.1,
-       "lg": 5.8,
+       "pos": "C",
+       "rank": 29,
+       "value": 5.8,
+       "lg": 4.3,
        "n": 30
       }
      }
@@ -94476,7 +94362,7 @@
      "implied": 0.517,
      "edge": 0.043,
      "ev": 0.083,
-     "value": true,
+     "value": false,
      "stat": "pts",
      "side": "under",
      "p_model": 0.695,
@@ -94496,6 +94382,43 @@
        "rank": 18,
        "value": 22.1,
        "lg": 21.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Devin Booker Under 26.5 Puntos",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 26.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.569,
+     "implied": 0.528,
+     "edge": 0.041,
+     "ev": 0.077,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.753,
+     "p_mkt": 0.508,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 19.3,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -95000,6 +94923,43 @@
        "rank": 1,
        "value": 1.4,
        "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Devin Booker Over 3.5 Rebotes",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 3.5,
+     "odds": 116,
+     "dec": 2.16,
+     "odds_assumed": false,
+     "p": 0.476,
+     "implied": 0.463,
+     "edge": 0.013,
+     "ev": 0.028,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.577,
+     "p_mkt": 0.442,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 4,
+       "value": 4.1,
+       "lg": 5.8,
        "n": 30
       }
      }
@@ -95660,43 +95620,6 @@
        "rank": 9,
        "value": 4.9,
        "lg": 5.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Devin Booker Under 3.5 Rebotes",
-     "player": "Devin Booker",
-     "team": "PHX",
-     "line": 3.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.507,
-     "implied": 0.524,
-     "edge": -0.017,
-     "ev": -0.032,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.423,
-     "p_mkt": 0.535,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 4,
-       "value": 4.1,
-       "lg": 5.8,
        "n": 30
       }
      }
@@ -96914,6 +96837,43 @@
     },
     {
      "kind": "prop",
+     "label": "Devin Booker Under 3.5 Rebotes",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 3.5,
+     "odds": -140,
+     "dec": 1.714,
+     "odds_assumed": false,
+     "p": 0.524,
+     "implied": 0.583,
+     "edge": -0.06,
+     "ev": -0.102,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.423,
+     "p_mkt": 0.558,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 4,
+       "value": 4.1,
+       "lg": 5.8,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Collin Gillespie Over 1.5 Triples",
      "player": "Collin Gillespie",
      "team": "PHX",
@@ -97336,6 +97296,80 @@
        "rank": 30,
        "value": 7.1,
        "lg": 4.4,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Devin Booker Over 26.5 Puntos",
+     "player": "Devin Booker",
+     "team": "PHX",
+     "line": 26.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.431,
+     "implied": 0.512,
+     "edge": -0.081,
+     "ev": -0.159,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.247,
+     "p_mkt": 0.492,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       3
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 19.3,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Oso Ighodaro Over 2.5 Asistencias",
+     "player": "Oso Ighodaro",
+     "team": "PHX",
+     "line": 2.5,
+     "odds": -113,
+     "dec": 1.885,
+     "odds_assumed": false,
+     "p": 0.444,
+     "implied": 0.531,
+     "edge": -0.087,
+     "ev": -0.163,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.249,
+     "p_mkt": 0.509,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 29,
+       "value": 5.8,
+       "lg": 4.3,
        "n": 30
       }
      }
@@ -97872,13 +97906,13 @@
      "player": "Keaton Wagler",
      "team": "LAC",
      "line": 9.5,
-     "odds": -120,
-     "dec": 1.833,
+     "odds": -114,
+     "dec": 1.877,
      "odds_assumed": false,
      "p": 0.298,
-     "implied": 0.545,
-     "edge": -0.248,
-     "ev": -0.454,
+     "implied": 0.533,
+     "edge": -0.235,
+     "ev": -0.441,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -97906,43 +97940,6 @@
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 9 partidos esta temporada"
      }
-    },
-    {
-     "kind": "prop",
-     "label": "Devin Booker Over 25.5 Puntos",
-     "player": "Devin Booker",
-     "team": "PHX",
-     "line": 25.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.283,
-     "implied": 0.535,
-     "edge": -0.252,
-     "ev": -0.471,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.283,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 19.3,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
     }
    ]
   },
@@ -97969,61 +97966,22 @@
    },
    "proj_total": 236.0,
    "used_db": true,
-   "n_value": 2,
+   "n_value": 1,
    "top_bets": [
-    {
-     "kind": "prop",
-     "label": "Andrew Wiggins Over 8.5 Puntos",
-     "player": "Andrew Wiggins",
-     "team": "MIA",
-     "line": 8.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.783,
-     "implied": 0.556,
-     "fair": -361,
-     "edge": 0.227,
-     "ev": 0.409,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.783,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 20.7,
-       "lg": 24.0,
-       "n": 30
-      }
-     }
-    },
     {
      "kind": "prop",
      "label": "Giannis Antetokounmpo Under 30.5 Puntos",
      "player": "Giannis Antetokounmpo",
      "team": "MIA",
      "line": 30.5,
-     "odds": -120,
-     "dec": 1.833,
+     "odds": -114,
+     "dec": 1.877,
      "odds_assumed": false,
      "p": 0.741,
-     "implied": 0.545,
+     "implied": 0.533,
      "fair": -286,
-     "edge": 0.195,
-     "ev": 0.358,
+     "edge": 0.208,
+     "ev": 0.391,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -98051,22 +98009,22 @@
     },
     {
      "kind": "prop",
-     "label": "Klay Thompson Under 1.5 Asistencias",
-     "player": "Klay Thompson",
+     "label": "Andrew Wiggins Over 9.5 Puntos",
+     "player": "Andrew Wiggins",
      "team": "MIA",
-     "line": 1.5,
-     "odds": 141,
-     "dec": 2.41,
+     "line": 9.5,
+     "odds": -111,
+     "dec": 1.901,
      "odds_assumed": false,
-     "p": 0.54,
-     "implied": 0.415,
-     "fair": -117,
-     "edge": 0.125,
-     "ev": 0.301,
+     "p": 0.722,
+     "implied": 0.526,
+     "fair": -260,
+     "edge": 0.196,
+     "ev": 0.373,
      "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.54,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.722,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -98076,14 +98034,53 @@
        10
       ],
       "h2h": [
-       1,
-       4
+       2,
+       2
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 4,
-       "value": 3.4,
-       "lg": 4.4,
+       "pos": "SG",
+       "rank": 3,
+       "value": 20.7,
+       "lg": 24.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Jaxson Hayes Over 9.5 Puntos",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 9.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.749,
+     "implied": 0.545,
+     "fair": -298,
+     "edge": 0.203,
+     "ev": 0.373,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.749,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 19,
+       "value": 22.1,
+       "lg": 21.9,
        "n": 30
       }
      }
@@ -98124,44 +98121,6 @@
        "rank": 20,
        "value": 2.8,
        "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Jaxson Hayes Over 8.5 Puntos",
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "line": 8.5,
-     "odds": -119,
-     "dec": 1.84,
-     "odds_assumed": false,
-     "p": 0.589,
-     "implied": 0.543,
-     "fair": -143,
-     "edge": 0.045,
-     "ev": 0.083,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.807,
-     "p_mkt": 0.516,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 19,
-       "value": 22.1,
-       "lg": 21.9,
        "n": 30
       }
      }
@@ -98886,55 +98845,17 @@
    "all_bets": [
     {
      "kind": "prop",
-     "label": "Andrew Wiggins Over 8.5 Puntos",
-     "player": "Andrew Wiggins",
-     "team": "MIA",
-     "line": 8.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.783,
-     "implied": 0.556,
-     "edge": 0.227,
-     "ev": 0.409,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.783,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 20.7,
-       "lg": 24.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Giannis Antetokounmpo Under 30.5 Puntos",
      "player": "Giannis Antetokounmpo",
      "team": "MIA",
      "line": 30.5,
-     "odds": -120,
-     "dec": 1.833,
+     "odds": -114,
+     "dec": 1.877,
      "odds_assumed": false,
      "p": 0.741,
-     "implied": 0.545,
-     "edge": 0.195,
-     "ev": 0.358,
+     "implied": 0.533,
+     "edge": 0.208,
+     "ev": 0.391,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -98962,21 +98883,21 @@
     },
     {
      "kind": "prop",
-     "label": "Klay Thompson Under 1.5 Asistencias",
-     "player": "Klay Thompson",
+     "label": "Andrew Wiggins Over 9.5 Puntos",
+     "player": "Andrew Wiggins",
      "team": "MIA",
-     "line": 1.5,
-     "odds": 141,
-     "dec": 2.41,
+     "line": 9.5,
+     "odds": -111,
+     "dec": 1.901,
      "odds_assumed": false,
-     "p": 0.54,
-     "implied": 0.415,
-     "edge": 0.125,
-     "ev": 0.301,
+     "p": 0.722,
+     "implied": 0.526,
+     "edge": 0.196,
+     "ev": 0.373,
      "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.54,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.722,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -98986,14 +98907,52 @@
        10
       ],
       "h2h": [
-       1,
-       4
+       2,
+       2
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 4,
-       "value": 3.4,
-       "lg": 4.4,
+       "pos": "SG",
+       "rank": 3,
+       "value": 20.7,
+       "lg": 24.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Jaxson Hayes Over 9.5 Puntos",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 9.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.749,
+     "implied": 0.545,
+     "edge": 0.203,
+     "ev": 0.373,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.749,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 19,
+       "value": 22.1,
+       "lg": 21.9,
        "n": 30
       }
      }
@@ -99349,43 +99308,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jaxson Hayes Over 8.5 Puntos",
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "line": 8.5,
-     "odds": -119,
-     "dec": 1.84,
-     "odds_assumed": false,
-     "p": 0.589,
-     "implied": 0.543,
-     "edge": 0.045,
-     "ev": 0.083,
-     "value": true,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.807,
-     "p_mkt": 0.516,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 19,
-       "value": 22.1,
-       "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Andrew Wiggins Over 1.5 Triples",
      "player": "Andrew Wiggins",
      "team": "MIA",
@@ -99678,6 +99600,43 @@
        "rank": 17,
        "value": 3.8,
        "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Klay Thompson Under 1.5 Asistencias",
+     "player": "Klay Thompson",
+     "team": "MIA",
+     "line": 1.5,
+     "odds": 135,
+     "dec": 2.35,
+     "odds_assumed": false,
+     "p": 0.446,
+     "implied": 0.426,
+     "edge": 0.021,
+     "ev": 0.049,
+     "value": false,
+     "stat": "ast",
+     "side": "under",
+     "p_model": 0.54,
+     "p_mkt": 0.415,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 4,
+       "value": 3.4,
+       "lg": 4.4,
        "n": 30
       }
      }
@@ -101239,6 +101198,43 @@
     },
     {
      "kind": "prop",
+     "label": "Klay Thompson Over 1.5 Asistencias",
+     "player": "Klay Thompson",
+     "team": "MIA",
+     "line": 1.5,
+     "odds": -150,
+     "dec": 1.667,
+     "odds_assumed": false,
+     "p": 0.554,
+     "implied": 0.6,
+     "edge": -0.046,
+     "ev": -0.077,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.46,
+     "p_mkt": 0.585,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 4,
+       "value": 3.4,
+       "lg": 4.4,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Bobby Portis Jr. Under 1.5 Asistencias",
      "player": "Bobby Portis Jr.",
      "team": "MIA",
@@ -101862,43 +101858,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jaxson Hayes Under 8.5 Puntos",
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "line": 8.5,
-     "odds": -104,
-     "dec": 1.962,
-     "odds_assumed": false,
-     "p": 0.411,
-     "implied": 0.51,
-     "edge": -0.098,
-     "ev": -0.193,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.193,
-     "p_mkt": 0.484,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 19,
-       "value": 22.1,
-       "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Ace Bailey Under 15.5 Puntos",
      "player": "Ace Bailey",
      "team": "UTA",
@@ -102133,13 +102092,13 @@
      "player": "Andrew Wiggins",
      "team": "MIA",
      "line": 10.5,
-     "odds": -125,
-     "dec": 1.8,
+     "odds": -130,
+     "dec": 1.769,
      "odds_assumed": false,
      "p": 0.347,
-     "implied": 0.556,
-     "edge": -0.209,
-     "ev": -0.375,
+     "implied": 0.565,
+     "edge": -0.218,
+     "ev": -0.386,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -102166,26 +102125,63 @@
     },
     {
      "kind": "prop",
-     "label": "Giannis Antetokounmpo Over 28.5 Puntos",
-     "player": "Giannis Antetokounmpo",
-     "team": "MIA",
-     "line": 28.5,
-     "odds": -120,
-     "dec": 1.833,
+     "label": "Jaxson Hayes Under 10.5 Puntos",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 10.5,
+     "odds": -123,
+     "dec": 1.813,
      "odds_assumed": false,
-     "p": 0.328,
-     "implied": 0.545,
-     "edge": -0.218,
-     "ev": -0.399,
+     "p": 0.317,
+     "implied": 0.552,
+     "edge": -0.235,
+     "ev": -0.425,
      "value": false,
      "stat": "pts",
-     "side": "over",
-     "p_model": 0.328,
+     "side": "under",
+     "p_model": 0.317,
      "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 19,
+       "value": 22.1,
+       "lg": 21.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Giannis Antetokounmpo Over 29.5 Puntos",
+     "player": "Giannis Antetokounmpo",
+     "team": "MIA",
+     "line": 29.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.293,
+     "implied": 0.524,
+     "edge": -0.231,
+     "ev": -0.441,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.293,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
        10
       ],
       "h2h": [
@@ -102273,45 +102269,6 @@
     },
     {
      "kind": "prop",
-     "label": "Zach LaVine Under 2.5 Asistencias",
-     "player": "Zach LaVine",
-     "team": "SAC",
-     "line": 2.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.696,
-     "implied": 0.5,
-     "fair": -229,
-     "edge": 0.196,
-     "ev": 0.392,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.696,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 22,
-       "value": 6.3,
-       "lg": 5.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Malik Monk Under 4.5 Asistencias",
      "player": "Malik Monk",
      "team": "SAC",
@@ -102345,6 +102302,45 @@
        "rank": 22,
        "value": 6.3,
        "lg": 5.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Domantas Sabonis Under 13.5 Rebotes",
+     "player": "Domantas Sabonis",
+     "team": "SAC",
+     "line": 13.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.749,
+     "implied": 0.545,
+     "fair": -298,
+     "edge": 0.203,
+     "ev": 0.373,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.749,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 13,
+       "value": 13.8,
+       "lg": 14.9,
        "n": 30
       }
      }
@@ -102869,44 +102865,6 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Zach LaVine Under 2.5 Asistencias",
-     "player": "Zach LaVine",
-     "team": "SAC",
-     "line": 2.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.696,
-     "implied": 0.5,
-     "edge": 0.196,
-     "ev": 0.392,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.696,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 22,
-       "value": 6.3,
-       "lg": 5.6,
-       "n": 30
-      }
      }
     },
     {
@@ -103935,6 +103893,43 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Zach LaVine Under 2.5 Asistencias",
+     "player": "Zach LaVine",
+     "team": "SAC",
+     "line": 2.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.537,
+     "implied": 0.512,
+     "edge": 0.025,
+     "ev": 0.049,
+     "value": false,
+     "stat": "ast",
+     "side": "under",
+     "p_model": 0.696,
+     "p_mkt": 0.484,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 22,
+       "value": 6.3,
+       "lg": 5.6,
+       "n": 30
+      }
      }
     },
     {
@@ -106479,6 +106474,43 @@
     },
     {
      "kind": "prop",
+     "label": "Zach LaVine Over 2.5 Asistencias",
+     "player": "Zach LaVine",
+     "team": "SAC",
+     "line": 2.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.463,
+     "implied": 0.545,
+     "edge": -0.083,
+     "ev": -0.152,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.304,
+     "p_mkt": 0.516,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 22,
+       "value": 6.3,
+       "lg": 5.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "De'Andre Hunter Over 4.5 Rebotes",
      "player": "De'Andre Hunter",
      "team": "SAC",
@@ -106816,47 +106848,6 @@
     },
     {
      "kind": "prop",
-     "label": "Darius Acuff Jr. Over 23.5 Puntos",
-     "player": "Darius Acuff Jr.",
-     "team": "SAC",
-     "line": 23.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.321,
-     "implied": 0.545,
-     "edge": -0.225,
-     "ev": -0.412,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.321,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 14,
-       "value": 25.8,
-       "lg": 27.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Domantas Sabonis Over 12.5 Rebotes",
      "player": "Domantas Sabonis",
      "team": "SAC",
@@ -106928,6 +106919,47 @@
        "n": 30
       }
      }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Acuff Jr. Over 24.5 Puntos",
+     "player": "Darius Acuff Jr.",
+     "team": "SAC",
+     "line": 24.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.282,
+     "implied": 0.535,
+     "edge": -0.253,
+     "ev": -0.473,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.282,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 14,
+       "value": 25.8,
+       "lg": 27.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
     }
    ]
   },
@@ -106954,61 +106986,22 @@
    },
    "proj_total": 227.9,
    "used_db": true,
-   "n_value": 1,
+   "n_value": 2,
    "top_bets": [
-    {
-     "kind": "prop",
-     "label": "Donovan Clingan Under 1.5 Asistencias",
-     "player": "Donovan Clingan",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 120,
-     "dec": 2.2,
-     "odds_assumed": false,
-     "p": 0.712,
-     "implied": 0.455,
-     "fair": -247,
-     "edge": 0.257,
-     "ev": 0.566,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.712,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 14,
-       "value": 4.1,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
     {
      "kind": "prop",
      "label": "Donovan Clingan Under 11.5 Puntos",
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 11.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
      "p": 0.776,
-     "implied": 0.528,
+     "implied": 0.512,
      "fair": -346,
-     "edge": 0.248,
-     "ev": 0.469,
+     "edge": 0.264,
+     "ev": 0.515,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -107036,39 +107029,78 @@
     },
     {
      "kind": "prop",
-     "label": "Donovan Clingan Under 11.5 Rebotes",
-     "player": "Donovan Clingan",
+     "label": "Toumani Camara Under 12.5 Puntos",
+     "player": "Toumani Camara",
      "team": "POR",
-     "line": 11.5,
-     "odds": -132,
-     "dec": 1.758,
+     "line": 12.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.785,
-     "implied": 0.569,
-     "fair": -365,
-     "edge": 0.216,
-     "ev": 0.38,
+     "p": 0.671,
+     "implied": 0.528,
+     "fair": -204,
+     "edge": 0.143,
+     "ev": 0.27,
      "value": false,
-     "stat": "reb",
+     "stat": "pts",
      "side": "under",
-     "p_model": 0.785,
+     "p_model": 0.671,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
      "hr": {
       "l10": [
-       9,
+       4,
        10
       ],
       "h2h": [
-       3,
-       3
+       2,
+       4
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 7,
-       "value": 13.3,
-       "lg": 14.9,
+       "pos": "PF",
+       "rank": 19,
+       "value": 23.9,
+       "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Under 22.5 Puntos",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 22.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.652,
+     "implied": 0.528,
+     "fair": -187,
+     "edge": 0.124,
+     "ev": 0.234,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.652,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 24,
+       "value": 21.9,
+       "lg": 20.1,
        "n": 30
       }
      }
@@ -107077,38 +107109,76 @@
    "value_bets": [
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Under 3.5 Asistencias",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": 118,
-     "dec": 2.18,
+     "label": "Donovan Clingan Under 1.5 Asistencias",
+     "player": "Donovan Clingan",
+     "team": "POR",
+     "line": 1.5,
+     "odds": 122,
+     "dec": 2.22,
      "odds_assumed": false,
-     "p": 0.496,
-     "implied": 0.459,
-     "fair": 102,
-     "edge": 0.037,
-     "ev": 0.081,
+     "p": 0.498,
+     "implied": 0.45,
+     "fair": 101,
+     "edge": 0.047,
+     "ev": 0.105,
      "value": true,
      "stat": "ast",
      "side": "under",
-     "p_model": 0.548,
-     "p_mkt": 0.478,
+     "p_model": 0.712,
+     "p_mkt": 0.426,
      "cand": true,
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
        2,
-       2
+       3
       ],
       "dvp": {
        "pos": "C",
-       "rank": 27,
-       "value": 5.6,
+       "rank": 14,
+       "value": 4.1,
        "lg": 4.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Deni Avdija Under 1.5 Triples",
+     "player": "Deni Avdija",
+     "team": "POR",
+     "line": 1.5,
+     "odds": 116,
+     "dec": 2.16,
+     "odds_assumed": false,
+     "p": 0.499,
+     "implied": 0.463,
+     "fair": 100,
+     "edge": 0.036,
+     "ev": 0.078,
+     "value": true,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.679,
+     "p_mkt": 0.439,
+     "cand": true,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       4,
+       4
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 25,
+       "value": 3.1,
+       "lg": 2.7,
        "n": 30
       }
      }
@@ -107603,55 +107673,17 @@
    "all_bets": [
     {
      "kind": "prop",
-     "label": "Donovan Clingan Under 1.5 Asistencias",
-     "player": "Donovan Clingan",
-     "team": "POR",
-     "line": 1.5,
-     "odds": 120,
-     "dec": 2.2,
-     "odds_assumed": false,
-     "p": 0.712,
-     "implied": 0.455,
-     "edge": 0.257,
-     "ev": 0.566,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.712,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 14,
-       "value": 4.1,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Donovan Clingan Under 11.5 Puntos",
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 11.5,
-     "odds": -112,
-     "dec": 1.893,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
      "p": 0.776,
-     "implied": 0.528,
-     "edge": 0.248,
-     "ev": 0.469,
+     "implied": 0.512,
+     "edge": 0.264,
+     "ev": 0.515,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -107673,44 +107705,6 @@
        "rank": 1,
        "value": 16.0,
        "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Donovan Clingan Under 11.5 Rebotes",
-     "player": "Donovan Clingan",
-     "team": "POR",
-     "line": 11.5,
-     "odds": -132,
-     "dec": 1.758,
-     "odds_assumed": false,
-     "p": 0.785,
-     "implied": 0.569,
-     "edge": 0.216,
-     "ev": 0.38,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.785,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       9,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 7,
-       "value": 13.3,
-       "lg": 14.9,
        "n": 30
       }
      }
@@ -107831,6 +107825,44 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Donovan Clingan Under 11.5 Rebotes",
+     "player": "Donovan Clingan",
+     "team": "POR",
+     "line": 11.5,
+     "odds": -200,
+     "dec": 1.5,
+     "odds_assumed": false,
+     "p": 0.785,
+     "implied": 0.667,
+     "edge": 0.118,
+     "ev": 0.177,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.785,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       9,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 7,
+       "value": 13.3,
+       "lg": 14.9,
+       "n": 30
+      }
      }
     },
     {
@@ -107991,36 +108023,36 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Under 3.5 Asistencias",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": 118,
-     "dec": 2.18,
+     "label": "Donovan Clingan Under 1.5 Asistencias",
+     "player": "Donovan Clingan",
+     "team": "POR",
+     "line": 1.5,
+     "odds": 122,
+     "dec": 2.22,
      "odds_assumed": false,
-     "p": 0.496,
-     "implied": 0.459,
-     "edge": 0.037,
-     "ev": 0.081,
+     "p": 0.498,
+     "implied": 0.45,
+     "edge": 0.047,
+     "ev": 0.105,
      "value": true,
      "stat": "ast",
      "side": "under",
-     "p_model": 0.548,
-     "p_mkt": 0.478,
+     "p_model": 0.712,
+     "p_mkt": 0.426,
      "cand": true,
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
        2,
-       2
+       3
       ],
       "dvp": {
        "pos": "C",
-       "rank": 27,
-       "value": 5.6,
+       "rank": 14,
+       "value": 4.1,
        "lg": 4.3,
        "n": 30
       }
@@ -108039,7 +108071,7 @@
      "implied": 0.463,
      "edge": 0.036,
      "ev": 0.078,
-     "value": false,
+     "value": true,
      "stat": "fg3m",
      "side": "under",
      "p_model": 0.679,
@@ -109052,43 +109084,6 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Over 3.5 Asistencias",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.504,
-     "implied": 0.5,
-     "edge": 0.004,
-     "ev": 0.008,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.452,
-     "p_mkt": 0.522,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 27,
-       "value": 5.6,
-       "lg": 4.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Ajay Mitchell Under 3.5 Asistencias",
      "player": "Ajay Mitchell",
      "team": "OKC",
@@ -109268,6 +109263,43 @@
        "rank": 30,
        "value": 28.3,
        "lg": 21.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Isaiah Hartenstein Under 3.5 Asistencias",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 3.5,
+     "odds": 110,
+     "dec": 2.1,
+     "odds_assumed": false,
+     "p": 0.477,
+     "implied": 0.476,
+     "edge": 0.001,
+     "ev": 0.002,
+     "value": false,
+     "stat": "ast",
+     "side": "under",
+     "p_model": 0.548,
+     "p_mkt": 0.453,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 27,
+       "value": 5.6,
+       "lg": 4.3,
        "n": 30
       }
      }
@@ -111108,6 +111140,43 @@
     },
     {
      "kind": "prop",
+     "label": "Isaiah Hartenstein Over 3.5 Asistencias",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 3.5,
+     "odds": -135,
+     "dec": 1.741,
+     "odds_assumed": false,
+     "p": 0.523,
+     "implied": 0.574,
+     "edge": -0.051,
+     "ev": -0.089,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.452,
+     "p_mkt": 0.547,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 27,
+       "value": 5.6,
+       "lg": 4.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Aday Mara Over 0.5 Triples",
      "player": "Aday Mara",
      "team": "OKC",
@@ -111901,6 +111970,43 @@
     },
     {
      "kind": "prop",
+     "label": "Donovan Clingan Over 1.5 Asistencias",
+     "player": "Donovan Clingan",
+     "team": "POR",
+     "line": 1.5,
+     "odds": -154,
+     "dec": 1.649,
+     "odds_assumed": false,
+     "p": 0.502,
+     "implied": 0.606,
+     "edge": -0.104,
+     "ev": -0.172,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.288,
+     "p_mkt": 0.574,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 14,
+       "value": 4.1,
+       "lg": 4.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Bennett Stirtz Over 2.5 Rebotes",
      "player": "Bennett Stirtz",
      "team": "OKC",
@@ -112131,54 +112237,17 @@
     },
     {
      "kind": "prop",
-     "label": "Donovan Clingan Over 10.5 Puntos",
-     "player": "Donovan Clingan",
-     "team": "POR",
-     "line": 10.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.288,
-     "implied": 0.556,
-     "edge": -0.268,
-     "ev": -0.482,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.288,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 1,
-       "value": 16.0,
-       "lg": 21.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Donovan Clingan Over 10.5 Rebotes",
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 10.5,
-     "odds": -130,
-     "dec": 1.769,
+     "odds": -115,
+     "dec": 1.87,
      "odds_assumed": false,
      "p": 0.277,
-     "implied": 0.565,
-     "edge": -0.288,
-     "ev": -0.51,
+     "implied": 0.535,
+     "edge": -0.258,
+     "ev": -0.482,
      "value": false,
      "stat": "reb",
      "side": "over",
@@ -112199,6 +112268,43 @@
        "rank": 7,
        "value": 13.3,
        "lg": 14.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Donovan Clingan Over 10.5 Puntos",
+     "player": "Donovan Clingan",
+     "team": "POR",
+     "line": 10.5,
+     "odds": -126,
+     "dec": 1.794,
+     "odds_assumed": false,
+     "p": 0.288,
+     "implied": 0.558,
+     "edge": -0.269,
+     "ev": -0.483,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.288,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 1,
+       "value": 16.0,
+       "lg": 21.9,
        "n": 30
       }
      }
