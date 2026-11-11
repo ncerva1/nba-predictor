@@ -11,14 +11,15 @@
    "Gary Trent Jr. (enfermedad) no jugó el domingo; regreso estimado hoy",
    "Bajas revisadas en ESPN y CBS 10-nov ~16:30 UTC",
    "Capturas de @UnderdogNBA (Nicolas, 10-nov ~21:30 UTC): Josh Hart (enfermedad) bajado a doubtful (0.2); Kel'el Ware (tobillo) questionable; Herro sigue questionable",
-   "Revisión 18:55 ET: consenso scoresandodds (spread local -15.5, total 220.5, ML 670/-1040); bajas sin cambios en ESPN/CBS; líneas de props con pick iguales"
+   "Revisión 18:55 ET: consenso scoresandodds (spread local -15.5, total 220.5, ML 670/-1040); bajas sin cambios en ESPN/CBS; líneas de props con pick iguales",
+   "Revisión 19:15 ET (pedida por Nicolas): Herro OUT (Bucks, SI 10-nov), Hart OUT por enfermedad (Knicks, Basketnews/NBC 10-nov), Ware juega"
   ],
-  "out": [],
+  "out": [
+   "Tyler Herro",
+   "Josh Hart"
+  ],
   "gtd": {
-   "Tyler Herro": 0.6,
-   "Josh Hart": 0.2,
-   "Gary Trent Jr.": 0.6,
-   "Kel'el Ware": 0.5
+   "Gary Trent Jr.": 0.6
   },
   "reserves": {
    "MIL": [
@@ -130,7 +131,7 @@
    "name": "Jalen Brunson",
    "pos": "PG",
    "starter": true,
-   "min": 30.5,
+   "min": 34.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -172,7 +173,7 @@
    "name": "OG Anunoby",
    "pos": "PF",
    "starter": true,
-   "min": 29.8,
+   "min": 33.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -211,52 +212,10 @@
   },
   {
    "team": "NYK",
-   "name": "Josh Hart",
-   "pos": "SG",
-   "starter": true,
-   "min": 28.5,
-   "g_cur": 7,
-   "p_play": 0.2,
-   "cur": {
-    "min": 31.7,
-    "pts": 8.57,
-    "reb": 7.29,
-    "ast": 3.86,
-    "fg3m": 1.86,
-    "fgm": 3.14,
-    "fga": 8.14,
-    "fg3a": 5.43,
-    "stl": 2.14,
-    "blk": 0.29,
-    "tov": 2.0,
-    "pf": 3.0,
-    "ftm": 0.43,
-    "fta": 0.71
-   },
-   "prior": {
-    "min": 30.2,
-    "pts": 12.0,
-    "reb": 7.36,
-    "ast": 4.8,
-    "fg3m": 1.52,
-    "fgm": 4.56,
-    "fga": 8.97,
-    "fg3a": 3.67,
-    "stl": 1.14,
-    "blk": 0.26,
-    "tov": 1.94,
-    "pf": 2.5,
-    "ftm": 1.36,
-    "fta": 1.89
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "NYK",
    "name": "Karl-Anthony Towns",
    "pos": "C",
    "starter": true,
-   "min": 28.4,
+   "min": 32.2,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -298,7 +257,7 @@
    "name": "Mikal Bridges",
    "pos": "SF",
    "starter": true,
-   "min": 23.4,
+   "min": 26.5,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -339,8 +298,8 @@
    "team": "NYK",
    "name": "Landry Shamet",
    "pos": "SG",
-   "starter": false,
-   "min": 22.7,
+   "starter": true,
+   "min": 25.8,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -374,14 +333,15 @@
     "pf": 1.51,
     "ftm": 1.06,
     "fta": 1.49
-   }
+   },
+   "slot": "SG"
   },
   {
    "team": "NYK",
    "name": "Miles McBride",
    "pos": "PG",
    "starter": false,
-   "min": 15.6,
+   "min": 17.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -422,7 +382,7 @@
    "name": "Andre Drummond",
    "pos": "C",
    "starter": false,
-   "min": 11.8,
+   "min": 13.4,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -463,7 +423,7 @@
    "name": "Tyler Kolek",
    "pos": "PG",
    "starter": false,
-   "min": 11.1,
+   "min": 12.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -504,7 +464,7 @@
    "name": "Jose Alvarado",
    "pos": "PG",
    "starter": false,
-   "min": 10.1,
+   "min": 11.4,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -545,7 +505,7 @@
    "name": "Mohamed Diawara",
    "pos": "SF",
    "starter": false,
-   "min": 9.4,
+   "min": 10.7,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -586,7 +546,7 @@
    "name": "Dalton Knecht",
    "pos": "F",
    "starter": false,
-   "min": 9.4,
+   "min": 10.7,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -627,7 +587,7 @@
    "name": "Jordan Clarkson",
    "pos": "SG",
    "starter": false,
-   "min": 9.3,
+   "min": 10.6,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -665,52 +625,10 @@
   },
   {
    "team": "MIL",
-   "name": "Tyler Herro",
-   "pos": "SG",
-   "starter": true,
-   "min": 30.7,
-   "g_cur": 10,
-   "p_play": 0.6,
-   "cur": {
-    "min": 30.7,
-    "pts": 21.4,
-    "reb": 4.6,
-    "ast": 4.3,
-    "fg3m": 3.1,
-    "fgm": 7.6,
-    "fga": 16.7,
-    "fg3a": 7.8,
-    "stl": 0.9,
-    "blk": 0.1,
-    "tov": 2.1,
-    "pf": 0.7,
-    "ftm": 3.1,
-    "fta": 4.0
-   },
-   "prior": {
-    "min": 31.2,
-    "pts": 20.52,
-    "reb": 4.79,
-    "ast": 4.12,
-    "fg3m": 2.55,
-    "fgm": 7.48,
-    "fga": 15.61,
-    "fg3a": 6.73,
-    "stl": 0.7,
-    "blk": 0.36,
-    "tov": 1.94,
-    "pf": 1.88,
-    "ftm": 3.0,
-    "fta": 3.27
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "MIL",
    "name": "Jaime Jaquez Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 27.8,
+   "min": 31.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -752,7 +670,7 @@
    "name": "Kyle Kuzma",
    "pos": "PF",
    "starter": true,
-   "min": 27.4,
+   "min": 31.4,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -794,7 +712,7 @@
    "name": "Myles Turner",
    "pos": "C",
    "starter": true,
-   "min": 27.1,
+   "min": 31.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -836,7 +754,7 @@
    "name": "Ryan Rollins",
    "pos": "PG",
    "starter": true,
-   "min": 23.3,
+   "min": 26.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -877,8 +795,8 @@
    "team": "MIL",
    "name": "Brayden Burries",
    "pos": "SG",
-   "starter": false,
-   "min": 21.0,
+   "starter": true,
+   "min": 24.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -912,14 +830,15 @@
     "pf": 1.83,
     "ftm": 2.5,
     "fta": 3.4
-   }
+   },
+   "slot": "SG"
   },
   {
    "team": "MIL",
    "name": "AJ Green",
    "pos": "SG",
    "starter": false,
-   "min": 20.1,
+   "min": 23.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -960,7 +879,7 @@
    "name": "Kasparas Jakučionis",
    "pos": "SG",
    "starter": false,
-   "min": 18.6,
+   "min": 21.3,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -1001,9 +920,9 @@
    "name": "Kel'el Ware",
    "pos": "C",
    "starter": false,
-   "min": 17.3,
+   "min": 19.8,
    "g_cur": 10,
-   "p_play": 0.5,
+   "p_play": 1.0,
    "cur": {
     "min": 17.3,
     "pts": 8.6,
@@ -1042,7 +961,7 @@
    "name": "Nate Ament",
    "pos": "SF",
    "starter": false,
-   "min": 16.0,
+   "min": 18.3,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -1083,7 +1002,7 @@
    "name": "Ousmane Dieng",
    "pos": "C",
    "starter": false,
-   "min": 10.9,
+   "min": 12.5,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -1172,29 +1091,6 @@
     1.5,
     100,
     -105
-   ]
-  },
-  "Tyler Herro": {
-   "pts": [
-    19.5,
-    -112,
-    -112
-   ],
-   "reb": [
-    4.5,
-    110,
-    -125
-   ],
-   "ast": [
-    3.5,
-    -151,
-    -160,
-    4.5
-   ],
-   "fg3m": [
-    2.5,
-    100,
-    102
    ]
   },
   "OG Anunoby": {
@@ -1342,30 +1238,6 @@
     1.5,
     -175,
     142
-   ]
-  },
-  "Josh Hart": {
-   "pts": [
-    8.5,
-    -115,
-    -115,
-    9.5
-   ],
-   "reb": [
-    6.5,
-    -145,
-    -135,
-    7.5
-   ],
-   "ast": [
-    3.5,
-    -130,
-    115
-   ],
-   "fg3m": [
-    1.5,
-    125,
-    -120
    ]
   },
   "Andre Drummond": {
