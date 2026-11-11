@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Datos — 2026-11-11: líneas de combinadas (P+R, P+A, R+A, PRA) y triples
+- Pedido de Nicolas: el modelo ya simulaba las combinadas, pero no había líneas de casa (scoresandodds las carga por
+  JS en /nba/props). Ahora salen de la página de cada jugador en scoresandodds (6-8 casas): `odds/combos/<fecha>.json`
+  + `python odds/merge_combos.py <fecha>` las añade a prop_lines del slate. Con eso entran en apuestas, props,
+  portada, parlays, soñador y Armar apuesta como cualquier otra prop.
+- 11-nov: 79 jugadores y 387 líneas, re-simulado a las 15:00 ET. Los 15 picks y el soñador ya publicados de ese día se
+  dejaron como estaban (las combinadas desplazaban 10 de los 15 picks).
+
 ## Web — 2026-11-11: Armar apuesta en cada partido
 - Pedido de Nicolas (estilo ludoprops): sección **Armar apuesta** arriba de las apuestas de cada partido, con las 5
   mejores líneas del partido o de cada equipo y el porqué de cada una (proyección y rango, prob. modelo vs casa,
