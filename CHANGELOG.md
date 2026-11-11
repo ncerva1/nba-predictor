@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Web — 2026-11-11: Mis picks con tu cuota y aviso de valor perdido
+- Pedido de Nicolas: en cada pick de Mis picks se puede escribir **Tu cuota** (`dec_taken`, la de su casa) mientras no
+  esté liquidado. Las unidades usan esa cuota, y un panel compara el EV de la web con el EV a tu cuota (misma prob.).
+- Aviso en pendientes cuando la última revisión movió la línea (mismo jugador, estadística y lado con otra línea),
+  dejó sin valor un pick recomendado o bajó la cuota más de 0.04. En la portada aparece "n perdieron valor".
+- El soñador de las jornadas desde el 11-nov (`DREAM_CO_FROM`) va siempre a cuota colombiana, aunque la jornada se
+  haya publicado antes de 1.5.1, así una revisión horaria no lo devuelve a cuotas de EE. UU.
+
 ## Modelo 1.5.1 — 2026-11-12: cuotas de props al margen de Betano Colombia
 - Pedido de Nicolas (11-nov): en Betano las cuotas salen más bajas que en la web, así que el EV real es menor y el
   soñador de cuota 50 queda en ~37. Causa: las props que leemos (scoresandodds / Covers) son la MEJOR cuota de cada
