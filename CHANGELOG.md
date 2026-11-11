@@ -1,5 +1,15 @@
 # Cambios del modelo
 
+## Web — 2026-11-11: Armar apuesta en cada partido
+- Pedido de Nicolas (estilo ludoprops): sección **Armar apuesta** arriba de las apuestas de cada partido, con las 5
+  mejores líneas del partido o de cada equipo y el porqué de cada una (proyección y rango, prob. modelo vs casa,
+  Últ. 10, H2H, DvP del rival, bajas de hoy con sus partidos reales sin ese jugador, minutos, total esperado, paliza,
+  back-to-back). Filtros: Partido / equipo, Over / Under / ambos y mercado.
+- Solo líneas con cuota en los dos lados y prob. ≥ 50%. Puntaje = EV a cuota tipo Betano + apoyo de Últ. 10 / H2H /
+  DvP; máx. 2 por jugador y una por familia. Sin jugadores fuera o en duda (p_play < 0.9) ni Unders de rookies.
+- Cuota: la de 1.5.1; en jornadas anteriores al 12-nov se estima en la web con la misma fórmula (CO_OVERROUND 1.08),
+  y con esa cuota van a Mi combinada / Mis picks. Todo se calcula en el navegador con el JSON ya publicado.
+
 ## Web — 2026-11-11: Mis picks con tu cuota y aviso de valor perdido
 - Pedido de Nicolas: en cada pick de Mis picks se puede escribir **Tu cuota** (`dec_taken`, la de su casa) mientras no
   esté liquidado. Las unidades usan esa cuota, y un panel compara el EV de la web con el EV a tu cuota (misma prob.).

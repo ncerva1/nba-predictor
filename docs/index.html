@@ -371,6 +371,24 @@ tr.detail td { background: var(--bg) }
   .pl-list { grid-template-columns: 1fr }
   .pl-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
+/* Armar apuesta: las 5 mejores líneas con su porqué */
+.aa-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px }
+.aa-item { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; min-width: 0 }
+.aa-h { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto auto; gap: 6px 14px; align-items: center }
+.aa-qs { display: flex; gap: 16px; align-items: center }
+.aa-n { font: 700 20px/1 var(--display); color: var(--accent) }
+.aa-t { min-width: 0 }
+.aa-q { display: grid; justify-items: end; gap: 2px; font-size: 14px; white-space: nowrap }
+.aa-why { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 13.5px; color: var(--muted); line-height: 1.45 }
+.aa-why b { color: var(--ink) }
+.aa-why li.warn { color: var(--bad) }
+.aa-item .take { justify-self: start; margin-top: 0 }
+.aa-all { margin-top: 12px }
+@media (max-width: 640px) {
+  .aa-h { grid-template-columns: 22px minmax(0, 1fr) auto }
+  .aa-qs { grid-row: 2; grid-column: 2 / -1; justify-content: flex-start }
+  .aa-qs .aa-q { justify-items: start }
+}
 /* Mis picks: botón "Lo tomo" en los picks recomendados y página #mis-picks */
 .take { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font: 500 12px var(--body); color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px 3px 7px; cursor: pointer; white-space: nowrap }
 .take .bx { width: 12px; height: 12px; border: 1.5px solid currentColor; border-radius: 3px; display: inline-grid; place-items: center; font-size: 10px; line-height: 1 }
@@ -1790,6 +1808,7 @@ async function renderGame(id) {
     <div class="stat"><span class="eyebrow">Paliza 20+ / prórroga</span><b class="num">${pct(s.p_blowout_any, 0)} / ${pct(s.p_ot, 0)}</b><span class="muted">${esc(a)} ${pct(s.p_blowout_by[a], 0)} · ${esc(h)} ${pct(s.p_blowout_by[h], 0)}</span></div>
   </div>
   ${bajaSection(d)}
+  ${aaSection(d)}
   <section class="section">
     <h2>Apuestas de este partido ${qh("ev", "EV y colores")}</h2>
     <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
@@ -1901,6 +1920,7 @@ async function renderGame(id) {
   addFolds();
   bindPickForm("c", { d });
   woBind(d);
+  aaBind(d);
   ladderBind(d);
   if (d.matchup_view) {
     document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
@@ -2003,6 +2023,167 @@ function woBind(d) {
   $("#wo-stat").addEventListener("change", e => { k = e.target.value; draw(); });
   draw();
 }
+
+// Armar apuesta (pedido de Nicolas 11-nov, estilo ludoprops): las 5 mejores líneas del partido y de cada equipo,
+// cada una con el porqué sacado de los datos del modelo (proyección, Últ. 10, H2H, DvP, bajas, ritmo, contexto).
+// Solo entran líneas con cuota de la casa en los dos lados (prob. mezclada con la casa) y probabilidad >= 50%.
+// Puntaje = EV a cuota tipo Betano + apoyo de los % de cumplimiento (Últ. 10 y H2H) y del DvP del rival.
+// Cuota: desde AA_CO_FROM las props ya vienen a margen colombiano (build_site.localize_odds, modelo 1.5.1); antes
+// se estima aquí con la misma fórmula (CO_OVERROUND 1.08). Las de equipo quedan con el promedio de las casas.
+const AA_CO_FROM = "2026-11-12", AA_CO = 1.08, AA_US = 1.035, AA_N = 5, AA_MIN_P = 0.5;
+const AA_MK = { all: "Todos", team: "Equipo", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", combo: "Combinadas", def: "Robos y tapones" };
+const AA_FAM = { pts: "p", pr: "p", pa: "p", pra: "p", reb: "r", ra: "r", ast: "a", stl: "d", blk: "d", stocks: "d" };
+const AA_NO_UNDER = { rookie: 1, lesion: 1 };
+let AA = { list: "game", side: "both", mk: "all" }, AA_REG = {};
+const aaSide = b => b.kind === "prop" ? b.side : b.kind === "total" ? (/^Over/.test(b.label) ? "over" : "under") : null;
+const aaRate = (x, n0) => x && x[1] >= n0 ? x[0] / x[1] : null;
+const aaNum = x => String(Math.round(x * 10) / 10);
+function aaPrices(d) {   // cuota tipo Betano de cada apuesta (Map apuesta → {dec, ref})
+  const out = new Map(), est = d.game.date < AA_CO_FROM, groups = {};
+  d.bets.forEach(b => {
+    out.set(b, { dec: b.dec, ref: b.dec_ref || null });
+    if (est && b.kind === "prop" && !b.odds_assumed && !b.dec_ref) (groups[b.player + "|" + b.stat + "|" + b.line] ||= []).push(b);
+  });
+  Object.values(groups).forEach(g => {
+    const tot = g.reduce((s, b) => s + 1 / b.dec, 0);
+    g.forEach(b => {
+      const imp = g.length === 2 ? (1 / b.dec) / tot * AA_CO : (1 / b.dec) * AA_CO / AA_US, x = Math.min(b.dec, 1 / Math.min(imp, 0.995));
+      if (x < b.dec - 1e-9) out.set(b, { dec: Math.round(x * 100) / 100, ref: b.dec });
+    });
+  });
+  return out;
+}
+function aaCands(d) {
+  const g = d.game, pr = aaPrices(d), P = {}, out = new Set(g.out || []);
+  d.summary.players.forEach(p => { P[p.name] = p; });
+  return d.bets.filter(b => b.p_mkt != null && b.p >= AA_MIN_P).map(b => {
+    const q = pr.get(b), ev = b.p * q.dec - 1, hr = b.hr || {}, side = aaSide(b);
+    let score = ev;
+    if (b.kind === "prop") {
+      const p = P[b.player];
+      if (!p || out.has(b.player) || p.p_play < 0.9) return null;
+      if (side === "under" && p.flag && AA_NO_UNDER[p.flag.t]) return null;
+      const l10 = aaRate(hr.l10, 5), h2h = aaRate(hr.h2h, 2), dv = hr.dvp;
+      if (l10 != null) score += 0.10 * (l10 - 0.5);
+      if (h2h != null) score += 0.06 * (h2h - 0.5);
+      if (dv && dv.n) { const most = (dv.n - dv.rank + 1) / dv.n; score += 0.02 * (side === "over" ? (most <= 1 / 3 ? 1 : most > 2 / 3 ? -1 : 0) : (most > 2 / 3 ? 1 : most <= 1 / 3 ? -1 : 0)); }
+    }
+    return { b, dec: q.dec, ref: q.ref, ev, score, side };
+  }).filter(Boolean).sort((x, y) => y.score - x.score);
+}
+function aaPick(cands, n = AA_N) {   // como mucho 2 líneas por jugador y una por familia (puntos, rebotes...); una de ganador/hándicap
+  const res = [], per = {}, fam = new Set();
+  for (const c of cands) {
+    if (res.length >= n) break;
+    const b = c.b, who = b.player || b.kind + "|" + (b.team || ""), f = who + "|" + (b.kind === "prop" ? AA_FAM[b.stat] || b.stat : "");
+    if ((per[who] || 0) >= (b.kind === "prop" ? 2 : 1) || fam.has(f)) continue;
+    per[who] = (per[who] || 0) + 1; fam.add(f); res.push(c);
+  }
+  return res;
+}
+function aaWhy(c, d) {   // 3-5 razones cortas (HTML) a partir de los datos del partido
+  const b = c.b, g = d.game, s = d.summary, mk = d.market || {}, why = [], warn = [], side = c.side, ov = side === "over";
+  const opp = b.team === g.away ? g.home : g.away;
+  if (b.kind === "prop") {
+    const p = s.players.find(x => x.name === b.player), st = p && p[b.stat], lab = (STAT_LABEL[b.stat] || b.stat).toLowerCase();
+    if (st) why.push(`El modelo le proyecta <b>${aaNum(st.mean)}</b> ${esc(lab)} en ${aaNum(p.min)} min (8 de cada 10 partidos simulados entre ${st.p10} y ${st.p90}), frente a la línea de ${b.line}.`);
+    why.push(`Prob. del ${ov ? "Over" : "Under"}: modelo <b>${pct(b.p_model, 0)}</b>, casa sin margen ${pct(b.p_mkt, 0)}; mezclada, ${pct(b.p, 0)}.`);
+    const hr = b.hr || {};
+    if (hr.l10 && hr.l10[1] >= 3) (aaRate(hr.l10, 1) <= 0.4 ? warn : why).push(`${aaRate(hr.l10, 1) <= 0.4 ? "Ojo: solo " : "Se cumplió en "}<b>${hr.l10[0]} de sus últimos ${hr.l10[1]}</b> partidos.`);
+    if (hr.h2h && hr.h2h[1]) (hr.h2h[1] >= 2 && aaRate(hr.h2h, 1) <= 0.34 ? warn : why).push(`${hr.h2h[1] >= 2 && aaRate(hr.h2h, 1) <= 0.34 ? "Ojo: " : ""}Contra ${esc(opp)}: <b>${hr.h2h[0]} de ${hr.h2h[1]}</b> (esta temporada y la pasada).`);
+    const dv = hr.dvp;
+    if (dv && dv.n) {
+      const most = dv.n - dv.rank + 1, good = ov ? most <= dv.n / 3 : most > dv.n * 2 / 3, bad = ov ? most > dv.n * 2 / 3 : most <= dv.n / 3;
+      if (good || bad) (good ? why : warn).push(`${bad ? "Ojo: " : ""}${esc(opp)} concede ${dv.value} ${esc(lab)} por 48 min a los ${esc(dv.pos)} (liga ${dv.lg}): es la ${most <= dv.n / 2 ? `${most}.ª defensa que más` : `${dv.rank}.ª que menos`} les permite de ${dv.n}.`);
+    }
+    const W = d.without && d.without[b.team];
+    (W && W.out_today || []).forEach(o => {
+      const m = o.real && o.real.mates && o.real.mates[b.player], v = m && m.out && m.out[b.stat];
+      if (v != null && m.out.n >= 2 && (ov ? v > b.line : v < b.line)) why.push(`${esc(o.name)} está fuera hoy: en los ${m.out.n} partidos sin él promedia <b>${aaNum(v)}</b> ${esc(lab)}.`);
+    });
+    const r = (d.rotation && d.rotation[b.team] || []).find(x => x.name === b.player);
+    if (r && r.mpg && Math.abs(r.min - r.mpg) >= 3 && (r.min > r.mpg) === ov) why.push(`${r.min > r.mpg ? "Sube" : "Baja"} a ${aaNum(r.min)} min proyectados (promedia ${aaNum(r.mpg)}).`);
+    if (mk.total && ["pts", "pr", "pa", "pra"].includes(b.stat) && Math.abs(s.proj_total - mk.total) >= 3 && (s.proj_total > mk.total) === ov)
+      why.push(`Partido de ${ov ? "más" : "menos"} puntos de lo que espera la casa: ${aaNum(s.proj_total)} proyectados vs ${mk.total}.`);
+    if (!ov && s.p_blowout_any >= 0.25 && p && p.min >= 26) why.push(`Paliza de 20+ en el ${pct(s.p_blowout_any, 0)} de las simulaciones: menos minutos para los titulares.`);
+    const cx = d.context || {};
+    if (cx[b.team] && cx[b.team].b2b) (ov ? warn : why).push(`${ov ? "Ojo: " : ""}${esc(b.team)} juega back-to-back (jugó ayer).`);
+    else if (ov && cx[opp] && cx[opp].b2b) why.push(`${esc(opp)} juega back-to-back (jugó ayer).`);
+  } else {
+    const t = b.team, o = t === g.away ? g.home : g.away, H = (d.h2h && d.h2h.games || []).filter(x => x.score);
+    why.push(`Marcador proyectado: ${esc(g.away)} <b>${s.proj[g.away]}</b> – ${esc(g.home)} <b>${s.proj[g.home]}</b>.`);
+    if (b.kind === "ml") {
+      why.push(`${esc(t)} gana en el <b>${pct(s.win_prob[t], 0)}</b> de las simulaciones; la casa sin margen le da ${pct(b.p_mkt, 0)}.`);
+      if (H.length) why.push(`Contra ${esc(o)}: ganó ${H.filter(x => x.score[t] > x.score[o]).length} de ${H.length} (esta temporada y la pasada).`);
+    } else if (b.kind === "spread") {
+      const m = t === g.away ? s.proj_margin_away : -s.proj_margin_away;
+      why.push(`${esc(t)} ${m >= 0 ? "gana por" : "pierde por"} ${aaNum(Math.abs(m))} en promedio; cubre el ${b.line > 0 ? "+" : ""}${b.line} en el <b>${pct(b.p_model, 0)}</b> de las simulaciones (casa ${pct(b.p_mkt, 0)}).`);
+      if (s.p_blowout_by && s.p_blowout_by[t] >= 0.2) why.push(`${esc(t)} llega a ganar por 20+ en el ${pct(s.p_blowout_by[t], 0)} de las simulaciones.`);
+      if (H.length) why.push(`Contra ${esc(o)}: cubrió esta línea en ${H.filter(x => x.score[t] - x.score[o] + b.line > 0).length} de ${H.length}.`);
+    } else {
+      why.push(`Total proyectado <b>${aaNum(s.proj_total)}</b> (8 de cada 10 entre ${s.total_pcts[10]} y ${s.total_pcts[90]}), ritmo ${s.pace} posesiones; ${ov ? "Over" : "Under"} en el ${pct(b.p_model, 0)} de las simulaciones (casa ${pct(b.p_mkt, 0)}).`);
+      if (H.length) why.push(`En sus duelos de esta temporada y la pasada, ${H.filter(x => (x.score[g.away] + x.score[g.home] > b.line) === ov).length} de ${H.length} quedaron ${ov ? "por encima" : "por debajo"} de ${b.line}.`);
+    }
+    const cx = d.context || {};
+    [g.away, g.home].filter(x => cx[x] && cx[x].b2b).forEach(x => why.push(`${esc(x)} juega back-to-back (jugó ayer).`));
+  }
+  return why.slice(0, 5).concat(warn.slice(0, 2));
+}
+function aaSection(d) {
+  if (!d.bets.some(b => b.p_mkt != null)) return "";
+  const g = d.game;
+  return `<section class="section" id="armar">
+    <h2>Armar apuesta ${qh("armar", "armar apuesta")}</h2>
+    <p class="lede">Las ${AA_N} mejores líneas del partido y de cada equipo según el modelo, cada una con su porqué. Cuota estimada para una casa colombiana (margen tipo Betano).</p>
+    <div class="filters" role="group" aria-label="Lista" id="aa-list"><span class="lbl">Ver</span>${[["game", "Partido"], [g.away, g.away], [g.home, g.home]].map(([k, t]) =>
+      `<button type="button" data-aal="${esc(k)}">${esc(t)}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Lado" id="aa-side"><span class="lbl">Lado</span>${[["both", "Ambos"], ["over", "Over"], ["under", "Under"]].map(([k, t]) =>
+      `<button type="button" data-aas="${k}">${t}</button>`).join("")}</div>
+    <div class="filters" role="group" aria-label="Mercado" id="aa-mk"></div>
+    <div id="aa-body"></div>
+  </section>`;
+}
+function aaBind(d) {
+  if (!$("#armar")) return;
+  const g = d.game, all = aaCands(d), gid = d.id, game = `${g.away} @ ${g.home}`;
+  if (![ "game", g.away, g.home ].includes(AA.list)) AA.list = "game";
+  const draw = () => {
+    const inList = c => AA.list === "game" || (c.b.kind === "prop" ? c.b.team === AA.list : c.b.kind !== "total" && c.b.team === AA.list);
+    const inSide = c => AA.side === "both" || c.side === AA.side;
+    const base = all.filter(c => inList(c) && inSide(c));
+    const mks = Object.keys(AA_MK).filter(k => k === "all" || base.some(c => catOf(c.b) === k));
+    if (!mks.includes(AA.mk)) AA.mk = "all";
+    const top = aaPick(base.filter(c => AA.mk === "all" || catOf(c.b) === AA.mk));
+    document.querySelectorAll("#aa-list button").forEach(x => x.setAttribute("aria-pressed", x.dataset.aal === AA.list));
+    document.querySelectorAll("#aa-side button").forEach(x => x.setAttribute("aria-pressed", x.dataset.aas === AA.side));
+    $("#aa-mk").innerHTML = `<span class="lbl">Mercado</span>` + mks.map(k => `<button type="button" data-aam="${k}" aria-pressed="${k === AA.mk}">${AA_MK[k]}</button>`).join("");
+    document.querySelectorAll("#aa-mk button").forEach(x => x.addEventListener("click", () => { AA.mk = x.dataset.aam; draw(); }));
+    if (!top.length) { $("#aa-body").innerHTML = `<div class="empty">Sin líneas con cuota en los dos lados y probabilidad de 50% o más para este filtro.</div>`; return; }
+    const ks = top.map(c => { const k = gid + "|" + c.b.label; AA_REG[k] = { ...c.b, dec: c.dec }; return k; });
+    ks.forEach((k, i) => regLeg(AA_REG[k], gid, game));
+    const thr = INDEX.value_ev;
+    $("#aa-body").innerHTML = `<ol class="aa-list">${top.map((c, i) => { const b = c.b, k = ks[i]; return `<li class="aa-item">
+      <div class="aa-h"><span class="aa-n">${i + 1}</span><div class="aa-t"><b>${esc(b.label)}</b><div class="kind">${b.kind === "prop" ? `${esc(b.team)} · ${STAT_LABEL[b.stat] || b.stat}` : KIND[b.kind]}</div></div>
+        <div class="aa-qs"><div class="aa-q"><span class="num"><b>${c.dec.toFixed(2)}</b></span><span class="kind">${c.ref ? `≈ Betano · EE. UU. ${c.ref.toFixed(2)}` : b.n_books ? `prom. ${b.n_books} casas` : "cuota casa"}</span></div>
+        <div class="aa-q"><span class="num">${pct(b.p, 0)}</span><span class="kind">prob.</span></div>
+        <div class="aa-q">${evPill(c.ev, thr)}<span class="kind">EV</span></div></div>${addBtn(k)}</div>
+      <ul class="aa-why">${aaWhy(c, d).map(w => `<li${/^Ojo/.test(w) ? ' class="warn"' : ""}>${w}</li>`).join("")}</ul>
+      ${b.result ? `<div>${resPill(b.result)}</div>` : takeBtn(k)}</li>`; }).join("")}</ol>
+      ${top.length > 1 && !gameLocked(INDEX.games.find(x => x.id === gid)) ? `<button type="button" class="btn ghost aa-all" data-addpl="${PLREG.push(ks) - 1}">+ Agregar las ${top.length} a mi combinada</button>` : ""}
+      <p class="foot">Puntaje = EV a la cuota mostrada, más un plus si se cumplió seguido en sus últimos 10 y contra este rival, y si la defensa rival concede mucho (Over) o poco (Under) a su posición. Como mucho 2 líneas por jugador y una por tipo (puntos, rebotes, asistencias...). No entran jugadores en duda o fuera, ni Unders de rookies o de quien no jugó la temporada pasada. Las líneas del mismo partido no son independientes: en Mi combinada la probabilidad conjunta sale de las simulaciones.</p>`;
+    syncAddBtns();
+  };
+  document.querySelectorAll("#aa-list button").forEach(x => x.addEventListener("click", () => { AA.list = x.dataset.aal; draw(); }));
+  document.querySelectorAll("#aa-side button").forEach(x => x.addEventListener("click", () => { AA.side = x.dataset.aas; draw(); }));
+  draw();
+}
+// las líneas de Armar apuesta van a Mi combinada / Mis picks con su cuota tipo Betano, aunque la tabla de apuestas
+// haya registrado la misma línea con la cuota de EE. UU. (captura: corre antes del manejador general de [data-addc])
+document.addEventListener("click", e => {
+  const a = e.target.closest("#armar [data-addc], #armar [data-take], #armar [data-addpl]"); if (!a) return;
+  const ks = a.dataset.addpl ? PLREG[a.dataset.addpl] : [a.dataset.addc || a.dataset.take];
+  ks.forEach(k => { const b = AA_REG[k]; if (b) regLeg(b, k.split("|")[0], LEGREG[k] ? LEGREG[k].game : ""); });
+}, true);
 
 // Calculadora: P(over) sale de la escalera de la simulación (ladder[k] = P(estadística >= k))
 function ladderP(st, k) {
@@ -2717,6 +2898,11 @@ const GUIDE = [
     <dt>Estilo de juego</dt><dd>Cuánto usa el equipo cada tipo de jugada (pick &amp; roll, aislamiento, transición…), cuántos puntos saca por jugada y cuánto concede el rival a esa jugada.</dd></dl>`],
   ["h2h", "Enfrentamientos", "Enfrentamientos esta temporada y la pasada", () => `<p>Los partidos entre ambos equipos esta temporada y la anterior, de liga y de Copa, con el marcador, la máxima ventaja de cada uno y si hubo paliza (ventaja de 20 o más en algún momento). El modelo usa estos partidos para dar peso extra a lo que hizo cada jugador contra este rival.</p>
     <p>En los player props, la columna <b>Vs rival</b> muestra el promedio del jugador en esos partidos y cuántas veces superó la línea: <span class="pill value">3/4 over</span> = la superó en 3 de 4 partidos.</p>`],
+  ["armar", "Armar apuesta", "Armar apuesta", () => `<p>En cada partido, <b>Armar apuesta</b> junta las 5 mejores líneas del partido y las 5 de cada equipo según el modelo, con el porqué de cada una: lo que el modelo le proyecta, la probabilidad del modelo y de la casa, cuántas veces se cumplió en sus últimos 10 y contra este rival, lo que concede la defensa rival a su posición (DvP), las bajas de hoy, los minutos y el ritmo del partido.</p>
+    <ul><li><b>Ver</b>: el partido entero o solo las líneas de un equipo (sus jugadores, su ganador y su hándicap).</li>
+    <li><b>Lado</b>: solo Over, solo Under o ambos. <b>Mercado</b>: puntos, rebotes, asistencias, triples, combinadas, robos y tapones o líneas de equipo.</li>
+    <li>La cuota es la estimada para una casa colombiana (margen tipo Betano); el EV se calcula con esa cuota.</li></ul>
+    <p>Solo entran líneas con cuota en los dos lados y probabilidad de 50% o más, como mucho 2 por jugador y una por tipo. Con <b>+</b> sumas una a Mi combinada, o las 5 de una vez.</p>`],
   ["sin", "Si no juega…", "Si no juega un jugador", () => `<p>En cada partido, la sección <b>Si no juega…</b> muestra cómo cambian sus compañeros si un jugador importante no juega (los que tienen 20+ minutos proyectados y los que están en duda).</p>
     <ul><li><b>Modelo</b>: se repite la misma simulación del partido con ese jugador fuera. Sus minutos se reparten entre los que juegan y sus tiros pasan a los compañeros; el ataque del equipo baja un poco según lo que aporta por encima de un suplente. Verás la media <b>con él → sin él</b> y, por estadística, la probabilidad de superar la misma línea.</li>
     <li><b>Real</b>: los partidos de esta temporada en que su equipo jugó sin él, con el promedio de cada compañero con y sin él. Los que ya están <b>OUT hoy</b> solo tienen esta parte, porque el modelo ya los deja fuera.</li></ul>
