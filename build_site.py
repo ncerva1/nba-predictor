@@ -698,19 +698,24 @@ def dream_parlay(rs):
     from itertools import combinations
     import math
     opts = []  # por partido: [(log p, log cuota, patas)]
+    wide = {}  # por partido: (patas candidatas, muestra de simulaciones), para los reemplazos
     for r in rs:
         g = r["game"]
         pp = {p["name"]: p.get("p_play", 1) for p in r["summary"]["players"]}
         pool = [b for b in r["bets"] + r.get("alt_bets", []) if (not b.get("alt") or b["dec"] >= ALT_LEG_MIN_DEC) and b["kind"] == "prop" and b.get("stat") and b.get("p_mkt") is not None
-                and b["p"] >= DREAM_LEG_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
+                and b["p"] >= DREAM_SWAP_MIN_P and b["ev"] >= 0 and pp.get(b["player"], 0) >= PARLAY_P_PLAY
                 and (b.get("flag") or {}).get("t") not in NO_UNDER_FLAGS]
-        pool = sorted(pool, key=lambda b: -b["p"])[:DREAM_POOL]
+        pool = sorted(pool, key=lambda b: -b["p"])
         if not pool:
             continue
-        legs = [dict({k: b.get(k) for k in LEG_KEYS}, gid=r["id"], game=f"{g['away']} @ {g['home']}",
-                     **({"flag": b["flag"]} if b.get("flag") else {})) for b in pool]
-        o = [(math.log(l["p"]), math.log(l["dec"]), (l,)) for l in legs]
+        mk = lambda b: dict({k: b.get(k) for k in LEG_KEYS}, gid=r["id"], game=f"{g['away']} @ {g['home']}",
+                            **({"flag": b["flag"]} if b.get("flag") else {}))
         smp = read_sample(r["id"])
+        wide[r["id"]] = ([mk(b) for b in pool[:DREAM_SWAP_POOL]], smp)  # candidatas a reemplazo
+        legs = [mk(b) for b in pool if b["p"] >= DREAM_LEG_P][:DREAM_POOL]
+        if not legs:
+            continue
+        o = [(math.log(l["p"]), math.log(l["dec"]), (l,)) for l in legs]
         if smp and DREAM_PER_GAME >= 2:
             hits = [sample_hits(l, smp) for l in legs]
             for i, j in combinations(range(len(legs)), 2):
@@ -751,7 +756,98 @@ def dream_parlay(rs):
     pl = parlay(list(legs), math.exp(lp))
     pl["type"] = "dream"
     pl["games"] = len({l["gid"] for l in legs})
+    dream_swaps(pl, wide)
     return pl
+
+
+# Reemplazos (pedido de Nicolas, 11-nov): si la casa no ofrece una pata (p. ej. el jugador no sale en Betano), la web
+# deja cambiarla por otra muy probable que cumpla las mismas reglas: p >= DREAM_LEG_P, EV >= 0, sin repetir jugador,
+# máx. DREAM_PER_GAME patas por partido y, si comparte partido con otra pata, correlación >= DREAM_MIN_CORR en las
+# simulaciones; máx. DREAM_MAX_UNDER de Unders y cuota total dentro de DREAM_MIN–DREAM_MAX. Cada pata lleva en
+# `swaps` hasta DREAM_SWAPS candidatas (las más probables), y cada candidata en `pc` su correlación con las demás
+# patas y candidatas de su partido, para que la web pueda combinar varios reemplazos y recalcular cuota y prob.
+# Si con todas las reglas no salen 3, entran después (marcadas en `soft`) las que solo fallan en reglas blandas: prob.
+# entre DREAM_SWAP_MIN_P y DREAM_LEG_P ("p") o cuota total fuera de 50–200 pero dentro de DREAM_SWAP_DEC ("dec").
+# El tope de Unders, el de patas por partido, el jugador repetido y la correlación no se relajan nunca.
+DREAM_SWAP_POOL = 25     # candidatas por partido que se miran
+DREAM_SWAPS = 6          # candidatas guardadas por pata (la web muestra las 3 mejores que encajan)
+DREAM_SWAP_MIN_P = 0.52
+DREAM_SWAP_DEC = (40.0, 250.0)
+
+
+def leg_key(l):
+    return f"{l['player']}|{l['stat']}|{l['side']}|{l['line']}"
+
+
+def dream_swaps(pl, wide):
+    legs = pl["legs"]
+    n = len(legs)
+    keys = {leg_key(l) for l in legs}
+    players = {l["player"] for l in legs}
+    hits = {}
+
+    def h(l):
+        k = (l["gid"], leg_key(l))
+        if k not in hits:
+            smp = wide.get(l["gid"], (None, None))[1]
+            hits[k] = sample_hits(l, smp) if smp else None
+        return hits[k]
+
+    def corr(a, b):
+        ha, hb = h(a), h(b)
+        if not ha or not hb:
+            return None
+        ok = ha[1] & hb[1]
+        if ok.sum() < 100:
+            return None
+        pa, pb = ha[0][ok].mean(), hb[0][ok].mean()
+        return round(float((ha[0] & hb[0])[ok].mean() / (pa * pb)), 2) if pa * pb else None
+    dec = float(np.prod([l["dec"] for l in legs]))
+    under = sum(l.get("side") == "under" for l in legs)
+    chosen = {}  # candidatas elegidas por partido (para la tabla pc)
+    for i, l in enumerate(legs):
+        rest = [x for j, x in enumerate(legs) if j != i]
+        out = []
+        for gid, (cands, _) in wide.items():
+            mates = [x for x in rest if x["gid"] == gid]
+            if len(mates) >= DREAM_PER_GAME:
+                continue
+            for c in cands:
+                if c["player"] in players or leg_key(c) in keys:
+                    continue
+                if under - (l.get("side") == "under") + (c.get("side") == "under") > DREAM_MAX_UNDER * n:
+                    continue
+                d = dec / l["dec"] * c["dec"]
+                if not DREAM_SWAP_DEC[0] <= d <= DREAM_SWAP_DEC[1]:
+                    continue
+                soft = (["p"] if c["p"] < DREAM_LEG_P else []) + ([] if DREAM_MIN <= d <= DREAM_MAX else ["dec"])
+                cc = None
+                if mates:
+                    cc = corr(c, mates[0])
+                    if cc is None or cc < DREAM_MIN_CORR:
+                        continue
+                out.append((len(soft), -c["p"], dict(c, **({"soft": soft} if soft else {}))))
+        out.sort(key=lambda x: x[:2])
+        l["swaps"] = [c for *_, c in out[:DREAM_SWAPS]]
+        for c in l["swaps"]:
+            chosen.setdefault(c["gid"], {})[leg_key(c)] = c
+    # correlación de cada candidata con las patas y demás candidatas de su partido (None = no se puede comprobar)
+    for gid, cs in chosen.items():
+        group = [x for x in legs if x["gid"] == gid] + list(cs.values())
+        for c in cs.values():
+            pc = {}
+            for x in group:
+                if x is c or x["player"] == c["player"]:
+                    continue
+                pc[leg_key(x)] = corr(c, x)
+            for l in legs:
+                for s in l["swaps"]:
+                    if s["gid"] == gid and leg_key(s) == leg_key(c):
+                        s["pc"] = pc
+    for l in legs:
+        l["key"] = leg_key(l)
+        for s in l["swaps"]:
+            s["key"] = leg_key(s)
 
 
 def dream_units(pl):
