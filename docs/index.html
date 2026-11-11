@@ -2049,6 +2049,9 @@ function slipSide(raw) {
   if (m) return { side: "under", line: slipNum(m[1]), dot: /[.,]/.test(m[1]) };
   m = t.match(/(?:^|[^\d.,+\-])(\d{1,3})\s*(?:\+|o m\w?s\b|or more\b)/) || t.match(/\bal menos\s*(\d{1,3})\b/);
   if (m) return { side: "over", line: +m[1] - .5, dot: true, plus: true };
+  // renglón con solo un número (y quizá la cuota): una escalera "9+" a la que el OCR le comió el "+"
+  m = t.trim().match(/^(?:[^a-z0-9\s]|[a-z0-9])?\s*(\d{1,2})(?:\s+\d{1,2}[.,]\d{2})?$/);
+  if (m) return { side: "over", line: +m[1] - .5, dot: true, plus: true, guess: true };
   return null;
 }
 // cuotas decimales de un renglón (1.85 / 1,85); también americanas (+150 / -120) si no hay decimales
@@ -2059,8 +2062,9 @@ function slipOdds(raw, max) {
   return out;
 }
 const slipSigned = raw => { const m = String(raw).match(/(?:^|\s)([+\-−]\s?\d{1,2}(?:[.,]\d)?)(?![\d])/); return m ? slipNum(m[1].replace(/\s/g, "").replace("−", "-")) : null; };
-const SLIP_SUM = /cuota|apuesta|ganancia|pago|potencial|stake|retorno|cash ?out|importe|saldo|total odds|payout|bono/;
-const SLIP_ML = /ganador|linea de dinero|moneyline|money line|para ganar|\bgana\b|1x2|victoria/;
+const SLIP_SUM = /cuota|combinada de \d|apuesta |apuesta$|ganancia|pago|potencial|stake|retorno|cash ?out|importe|saldo|total odds|payout|bono/;
+const SLIP_GRP = /bet ?builder|crear apuesta|same game|sgp|mismo partido/;
+const SLIP_ML = /ganador|resultado final|linea de dinero|moneyline|money line|para ganar|\bgana\b|1x2|victoria/;
 const SLIP_SPREAD = /handicap|spread|diferencia/;
 function parseSlip(rows, cat) {
   const keys = slipPlayerKeys(cat), teams = [...new Set(cat.flatMap(g => [g.away, g.home]))];
@@ -2069,17 +2073,29 @@ function parseSlip(rows, cat) {
     const ws = slipWords(r.text), t = slipNorm(r.text), x = { ...r, i, ws, t };
     if (SLIP_SUM.test(t) && !slipFindPlayer(ws, keys)) {
       x.sum = true;
-      if (/cuota|odds/.test(t)) { const o = slipOdds(r.text, 100000); if (o.length) total = o[o.length - 1]; }
+      if (/cuota|odds|combinada/.test(t)) { const o = slipOdds(r.text, 100000); if (o.length) total = o[o.length - 1]; }
       return x;
     }
     x.pl = slipFindPlayer(ws, keys); x.teams = slipTeams(r.text, ws, teams); x.side = slipSide(r.text);
     x.odds = slipOdds(r.text, 50); x.stat = slipStat(r.text); x.signed = slipSigned(r.text);
+    if (SLIP_GRP.test(t) && x.odds.length && !x.pl) x.grp = x.odds[0];   // "Bet Builder 1.65": cuota de un grupo de patas
     return x;
+  });
+  // partido en dos renglones (un equipo por renglón, con su logo): son el partido, no patas de equipo
+  const lone = x => !x.sum && !x.grp && !x.pl && x.teams.length === 1 && !x.side && x.signed == null;
+  R.forEach((x, i) => {
+    if (!lone(x)) return;
+    for (let j = i + 1; j <= i + 2 && j < R.length; j++) {
+      const y = R[j];
+      if (lone(y) && cat.some(g => [g.away, g.home].includes(x.teams[0]) && [g.away, g.home].includes(y.teams[0]) && x.teams[0] !== y.teams[0])) {
+        x.teams = y.teams = [x.teams[0], y.teams[0]]; break;
+      }
+    }
   });
   // anclas: jugador; o un renglón con un total (más/menos de 100+) sin jugador; o un equipo solo (no "A - B")
   const anchors = [];
   R.forEach(x => {
-    if (x.sum) return;
+    if (x.sum || x.grp) return;
     if (x.pl) anchors.push({ type: "p", row: x, p: x.pl.p });
     else if (x.teams.length >= 2) x.event = true;
     else if (x.side && x.side.line >= 100 && !x.side.plus) anchors.push({ type: "tot", row: x });
@@ -2088,7 +2104,7 @@ function parseSlip(rows, cat) {
   // el mismo jugador en dos renglones seguidos (mercado + selección) es una sola pata si uno de los dos no trae línea
   for (let i = anchors.length - 1; i > 0; i--) {
     const a = anchors[i - 1], b = anchors[i];
-    const same = a.type === "p" && b.type === "p" && a.p.name === b.p.name && b.row.i - a.row.i <= 2 && (!a.row.side || !b.row.side);
+    const same = a.type === "p" && b.type === "p" && a.p.name === b.p.name && b.row.i - a.row.i === 1 && (!a.row.side || !b.row.side);
     const teamTot = (a.type === "t" && b.type === "tot" || a.type === "tot" && b.type === "t") && b.row.i - a.row.i <= 1;
     if (same || teamTot) { const keep = a.type === "tot" || (same && a.row.side) ? a : b, drop = keep === a ? b : a; (keep.extra ||= []).push(drop.row); if (drop.team) keep.team = drop.team; anchors.splice(anchors.indexOf(drop), 1); }
   }
@@ -2096,14 +2112,15 @@ function parseSlip(rows, cat) {
   // cada renglón suelto va a la pata de arriba o a la de abajo: si entre las dos hay un renglón de partido ("A - B"),
   // ese renglón cierra la de arriba; si no, decide el orden de la casa (selección encima o debajo del jugador)
   const first = anchors.length ? anchors[0].row.y : 0;
-  const dataAbove = R.some(x => !x.sum && x.y < first && (x.side || x.odds.length));
+  let dataAbove = R.some(x => !x.sum && x.y < first && (x.side || x.odds.length));
   R.forEach(x => {
-    if (x.sum || anchors.some(a => a.rows.includes(x)) || !anchors.length) return;
+    if (x.sum || x.grp || anchors.some(a => a.rows.includes(x)) || !anchors.length) return;
     const A = [...anchors].reverse().find(a => a.row.y <= x.y), B = anchors.find(a => a.row.y > x.y);
     let to = !A ? B : !B ? A : null;
     if (!to) {
       const E = R.find(r => r.event && r.y > A.row.y && r.y < B.row.y && r !== x);
       to = E ? (x.y <= E.y ? A : B) : x.event ? A : dataAbove ? B : A;
+      if (E && (x.side || x.odds.length)) dataAbove = to === B;   // lo que se ve en una pata vale para las siguientes
     }
     to.rows.push(x);
   });
@@ -2119,6 +2136,8 @@ function parseSlip(rows, cat) {
       Object.assign(leg, { type: "p", gid: a.p.gid, player: a.p.name, team: a.p.team, stat: pick(r => r.stat), side: side && side.side, line: side ? side.line : null });
       if (side && !side.dot && leg.line >= 60 && leg.line % 10 === 5) leg.line /= 10;   // "245" = 24.5 (se perdió el punto)
       if (a.row.pl.fuzzy || a.row.pl.weak) issues.push("nombre");
+      if (!leg.stat && /tiros? d/.test(all) && leg.line != null && leg.line <= 7) { leg.stat = "fg3m"; issues.push("estadística"); }   // "Total de Tiros d…" (cortado)
+      if (side && side.guess) issues.push("línea");
     } else {
       const ev = rs.find(r => r.event) || R.filter(r => r.event).sort((p, q) => Math.abs(p.y - a.row.y) - Math.abs(q.y - a.row.y))[0];
       const team = a.team || pick(r => r.teams.length === 1 ? r.teams[0] : null), evT = ev ? ev.teams : [];
@@ -2128,17 +2147,24 @@ function parseSlip(rows, cat) {
         line = side.line; if (!side.dot && line >= 1000 && line % 10 === 5) line /= 10;
         mk = team && line < 170 ? "tt" : "total";   // puntos de un equipo (~100-135) o total del partido
       } else if (SLIP_SPREAD.test(all) || pick(r => r.signed) != null) { mk = "spread"; line = pick(r => r.signed); }
-      else if (SLIP_ML.test(all) || oddsAll.length) mk = "ml";
+      else if (SLIP_ML.test(all)) mk = "ml";
       if (!mk || !g) return;   // un equipo suelto sin mercado ni partido no es una pata
       Object.assign(leg, { type: "t", gid: g.gid, mk, team: mk === "total" ? null : team, side: mk === "total" || mk === "tt" ? side.side : null, line });
-      if (mk === "ml" && !SLIP_ML.test(all)) issues.push("mercado");
     }
-    if (leg.type === "p" && !leg.stat) issues.push("estadística");
+    if (leg.type === "p" && !leg.stat && !issues.includes("estadística")) issues.push("estadística");
     if ((leg.type === "p" || leg.mk === "total" || leg.mk === "tt") && (!leg.side || leg.line == null)) issues.push("línea");
     if (leg.mk === "spread" && leg.line == null) issues.push("línea");
     if (!leg.dec) issues.push("cuota");
     if (lowConf) issues.push("lectura");
     legs.push(leg);
+  });
+  // patas de un Bet Builder: la cuota del grupo se reparte por igual entre las patas que van debajo sin cuota propia
+  const G = R.filter(x => x.grp);
+  G.forEach((g, k) => {
+    const end = G[k + 1] ? G[k + 1].y : Infinity, ms = legs.filter(l => l.y > g.y && l.y < end && !l.dec);
+    if (!ms.length) return;
+    const q = +Math.pow(g.grp, 1 / ms.length).toFixed(2);
+    ms.forEach(l => { l.dec = q; l.grp = g.grp; l.split = true; l.issues = l.issues.filter(x => x !== "cuota"); });
   });
   return { legs, total, rows: R };
 }
@@ -2218,7 +2244,7 @@ async function readSlip(file) {
     const r = parseSlip(rows, cat);
     IMP.text = rows.map(x => x.text).join("\n"); IMP.total = r.total;
     IMP.legs = r.legs.map(l => ({ on: true, kind: l.type === "p" ? "p" : l.mk, gid: l.gid, player: l.player || null, stat: l.stat || "pts", team: l.team || null,
-      side: l.side || (l.type === "p" || l.mk === "total" || l.mk === "tt" ? "over" : null), line: l.line, dec: l.dec, issues: l.issues, src: l.src }));
+      side: l.side || (l.type === "p" || l.mk === "total" || l.mk === "tt" ? "over" : null), line: l.line, dec: l.dec, issues: l.issues, src: l.src, split: !!l.split, grp: l.grp || null }));
     // "crear apuesta" (todas las patas sin cuota propia y una cuota total): la total se reparte por igual entre las patas
     if (IMP.legs.length > 1 && IMP.total > 1 && IMP.legs.every(l => !l.dec)) {
       const q = +Math.pow(IMP.total, 1 / IMP.legs.length).toFixed(2);
@@ -2354,7 +2380,7 @@ function impLegHTML(l, i, games) {
   return `<li class="im-leg${l.on ? "" : " off"}${iss.length ? " chk" : ""}">
     <div class="im-top"><label class="im-on"><input type="checkbox" id="${P}-on"${l.on ? " checked" : ""}><span id="${P}-h"></span></label><button type="button" class="cb-x" id="${P}-x" aria-label="Quitar esta pata">×</button></div>
     ${iss.length ? `<p class="im-iss">Revisa ${iss.map(x => ISSUE_TXT[x]).join(", ")}: no se leyó con seguridad.</p>` : ""}
-    ${l.split ? `<p class="im-iss">Tu boleto no trae cuota por pata: repartimos la cuota total por igual. Si la casa te muestra la de cada pata, escríbela.</p>` : ""}
+    ${l.split ? `<p class="im-iss">${l.grp ? `Va dentro de un Bet Builder de cuota ${l.grp}: repartimos esa cuota por igual entre sus patas.` : "Tu boleto no trae cuota por pata: repartimos la cuota total por igual."} Si la casa te muestra la de cada pata, escríbela.</p>` : ""}
     <div class="calc">${f}</div>
     <div class="im-out" id="${P}-out" aria-live="polite"></div>
     ${l.src && l.src.length ? `<p class="im-src">Leído: «${esc(l.src.join(" · "))}»</p>` : ""}</li>`;
