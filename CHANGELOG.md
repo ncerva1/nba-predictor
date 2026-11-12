@@ -1,5 +1,13 @@
 # Cambios del modelo
 
+## Web — 2026-11-12: partidos previos tocables y soñador a lo ancho en escritorio
+- Tocar una barra de los últimos 10 o un cruce (tarjetas de picks y ficha del jugador) abre ese partido: marcador,
+  la línea completa del jugador (min, pts, reb, ast, triples, tiros de campo, libres, robos, tapones, pérdidas,
+  faltas) y el box score de los dos equipos. Datos en docs/data/boxes/<fecha>.json (player_cards.py, solo los
+  últimos 10 de cada jugador y sus cruces con el rival de hoy; se carga al tocar).
+- Escritorio (≥900 px): el parlay soñador ocupa todo el ancho con las patas en filas de tarjetas y el seguimiento en
+  columnas; en móvil sigue vertical.
+
 ## Contexto de rol (probado, apagado) y "Su rol según quién juega" en la web — 2026-11-12
 - context.py: por jugador, forma reciente (últimos 5) y medias en los partidos con la misma situación de compañeros
   clave (≥28 min) que hoy. model.py lo mezcla con las tasas de temporada (USE_CTX, RECENT_W, RECENT_MW, CTX_K, CTX_RK).

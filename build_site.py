@@ -461,7 +461,7 @@ def player_logs(date):
             have[d]["team"] = have[d]["team"] or row["team"]
             have[d]["home"] = have[d].get("home") or row.get("home")
             return
-        row.update(date=d, cur=season_of(d) == season_of(date))
+        row.update(date=d, cur=season_of(d) == season_of(date), name=n)
         have[d] = row
     import csv  # gamelogs/nba/: game logs oficiales de nba.com (leaguegamelog), bajados desde el PC de Nicolas
     for fp in sorted(glob.glob(os.path.join(HERE, "gamelogs", "nba", "leaguegamelog_P_*.csv"))):
