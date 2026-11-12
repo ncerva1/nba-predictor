@@ -880,6 +880,49 @@ b.hi { color: var(--good) !important } b.lo { color: var(--bad) !important }
   .pcards-hint { display: block; font: 500 10.5px var(--mono); color: var(--muted); letter-spacing: .03em; margin-bottom: -4px }
   .pcd:hover { transform: none }
 }
+/* secciones de la portada (13-nov) */
+.mcards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }
+.mcard { display: grid; gap: 10px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); min-width: 0 }
+.mcard > header { display: flex; align-items: center; gap: 10px; min-width: 0 }
+.mcard > header .av { width: 40px; height: 40px; margin: 0; font-size: 13px }
+.mcard > header > div { flex: 1; min-width: 0; display: grid; gap: 2px }
+.mcard > header b { font: 700 15px/1.2 var(--display); text-transform: uppercase; letter-spacing: .01em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.mcard > header .muted { font: 500 11.5px var(--mono); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px } .mcard > header .muted a { color: inherit; white-space: nowrap }
+.mcard .tag { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; padding: 3px 7px; border-radius: 6px; white-space: nowrap; background: var(--accent-soft); color: var(--accent) }
+.mcard .tag.out { background: var(--bad-soft); color: var(--bad) } .mcard .tag.fuera { background: var(--bg); color: var(--muted) }
+.bst ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.bst li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0 8px; padding: 6px 8px; border-radius: 10px; background: var(--bg) }
+.bst li .pname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.bst li .muted { grid-column: 1 / -1; font-size: 11.5px }
+.bst .up { font: 700 14px var(--mono); color: var(--good) }
+.mup-pick { font: 600 15px var(--body) }
+.mup-dvp { display: flex; align-items: center; gap: 10px; font-size: 13px }
+.mup-dvp .rk { display: grid; justify-items: center; flex: none; min-width: 52px; padding: 6px 4px; border-radius: 10px; font: 700 20px/1 var(--display) }
+.mup-dvp .rk small { font: 500 9.5px var(--mono); color: var(--muted); margin-top: 2px }
+.mup-dvp .rk.hi { background: var(--good-soft); color: var(--good) } .mup-dvp .rk.lo { background: var(--accent-soft); color: var(--accent) }
+.mup-l10 { font-size: 12.5px; display: flex; align-items: baseline; gap: 6px } .mup-l10 .kind { display: inline }
+.mv-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 6px }
+.mv-rows > div { display: grid; gap: 2px; padding: 6px 8px; border-radius: 10px; background: var(--bg) }
+.mv-rows small { font: 500 9.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted) }
+.mv-up { color: var(--good) } .mv-dn { color: var(--bad) }
+.empty-s { color: var(--muted); font-size: 14px }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+dialog.psearch { width: min(560px, calc(100vw - 16px)) }
+dialog.psearch .g-head { gap: 8px }
+#ps-q { flex: 1; min-width: 0; font: 500 16px var(--body); padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink) }
+#ps-q:focus { outline: 2px solid var(--accent); outline-offset: 1px }
+.ps-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
+.ps-list button { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; font: inherit; color: inherit; background: none; border: 0; border-radius: 10px; padding: 8px; cursor: pointer }
+.ps-list button:hover, .ps-list button:focus-visible { background: var(--bg); outline: none }
+.ps-list .av { width: 36px; height: 36px; margin: 0; font-size: 12px }
+.ps-list button > span:last-child { display: grid; gap: 1px; min-width: 0 } .ps-list .muted { font: 500 11.5px var(--mono) }
+@media (max-width: 640px) {
+  .mcards { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 82%; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin: 0 -16px; padding: 2px 16px 10px; scroll-padding-left: 16px; scrollbar-width: none }
+  .mcards::-webkit-scrollbar { display: none }
+  .mcards > * { scroll-snap-align: start }
+  .banner .side { gap: 8px }
+}
 </style>
 
 <header class="banner gutter">
@@ -888,6 +931,9 @@ b.hi { color: var(--good) !important } b.lo { color: var(--bad) !important }
       <span class="brand-t"><span>Simulaciones Monte Carlo · NBA</span><h1>NBA Predictor</h1></span></a>
     <div class="side">
       <div class="meta" id="meta"></div>
+      <button type="button" class="theme-btn" id="search-btn" aria-label="Buscar un jugador" title="Buscar un jugador">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      </button>
       <button type="button" class="theme-btn help-btn" id="help-btn" data-guide="que" aria-label="Guía: cómo funciona la página" title="Cómo funciona la página">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6.9c0 1.9-2.8 2.4-2.8 4.1"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg><span class="lbl-t">Guía</span>
       </button>
@@ -928,6 +974,10 @@ b.hi { color: var(--good) !important } b.lo { color: var(--bad) !important }
     </div>
   </section>
 </div>
+<dialog class="guide psearch" id="psearch" aria-labelledby="ps-t">
+  <div class="g-head"><h2 id="ps-t" class="sr-only">Buscar un jugador</h2><input type="search" id="ps-q" placeholder="Buscar jugador o equipo…" autocomplete="off" aria-label="Buscar jugador o equipo"><button type="button" class="g-close" id="ps-close" aria-label="Cerrar búsqueda">×</button></div>
+  <div class="g-body" id="ps-body"></div>
+</dialog>
 <dialog class="guide pcard" id="pcard" aria-labelledby="pc-title">
   <div class="g-head"><span id="pc-face"></span><div class="pc-head-t"><h2 id="pc-title">Jugador</h2><div class="pc-sub" id="pc-sub"></div></div><button type="button" class="g-close" id="pc-close" aria-label="Cerrar ficha">×</button></div>
   <div class="g-body" id="pc-body"></div>
@@ -1506,6 +1556,9 @@ function renderIndex(scope = "reg") {
     <div id="picks"></div>
     ${howto}
   </section>
+  ${boostSection(todays)}
+  ${matchupSection(allBets, thr)}
+  ${movesSection(allBets, todays)}
   ${allBets.length ? `<section class="section">
     <h2>Los ${TOP_N} de mayor EV</h2>
     <p class="lede">Información adicional: los ${TOP_N} picks con cuota de mejor valor esperado (EV) de la jornada, lleguen o no al +${(thr * 100).toFixed(0)}% (solo los verdes son recomendados). Elige una categoría para ver sus ${TOP_N} mejores.</p>
@@ -3528,6 +3581,107 @@ async function hydrateSparks(root) {
 }
 new MutationObserver(() => { clearTimeout(hydrateSparks.t); hydrateSparks.t = setTimeout(() => hydrateSparks(document), 60); })
   .observe(document.getElementById("app"), { childList: true, subtree: true });
+// ---- Secciones de la portada (13-nov): beneficiados por bajas, cruces favorables y movimientos de línea ----
+const miniWrap = (items, cls = "") => `<div class="mcards ${cls}">${items.join("")}</div>`;
+// quién gana minutos y puntos por una baja: OUT de última hora y dudas (simulación sin él, index "wo".model) y los
+// que ya están fuera hoy (cómo les fue a los compañeros en los partidos reales sin él, "wo".real)
+function boostSection(todays) {
+  const items = [];
+  todays.filter(g => !g.result && g.wo).forEach(g => [g.away, g.home].forEach(t => {
+    const W = g.wo[t]; if (!W) return;
+    const seen = new Set();
+    const add = (who, tag, cls, ups, fmt) => {
+      if (seen.has(who) || !ups || !ups.length) return; seen.add(who);
+      items.push(`<article class="mcard bst ${cls}"><header>${face(who)}<div><b>Sin ${esc(who)}</b><span class="muted">${badge(t)} <a href="#${esc(g.id)}">${esc(g.away)} @ ${esc(g.home)}</a><span class="tag ${cls}">${tag}</span></span></div></header>
+        <ul>${ups.filter(u => !isOut(g.id, u[0])).map(u => `<li>${pn(u[0], g.id, "pts")}<b class="up">+${u[1].toFixed(1)} pts</b><span class="muted">${fmt(u)}</span></li>`).join("")}</ul></article>`);
+    };
+    BAJAS.filter(b => b.gid === g.id && b.team === t && b.status === "out" && !b.sim).forEach(b => {
+      const k = Object.keys(W.model).find(n => nName(n) === nName(b.player));
+      add(k || b.player, "OUT", "out", k && W.model[k], u => `${u[2] >= 0 ? "+" : ""}${u[2].toFixed(1)} min`);
+    });
+    BAJAS.filter(b => b.gid === g.id && b.team === t && b.status === "duda").forEach(b => {
+      const k = Object.keys(W.model).find(n => nName(n) === nName(b.player));
+      add(k || b.player, "Duda", "duda", k && W.model[k], u => `si no juega · ${u[2] >= 0 ? "+" : ""}${u[2].toFixed(1)} min`);
+    });
+    (W.doubt || []).forEach(([n, pp]) => add(n, `Duda · juega ${pct(pp, 0)}`, "duda", W.model[n], u => `si no juega · ${u[2] >= 0 ? "+" : ""}${u[2].toFixed(1)} min`));
+    Object.entries(W.real || {}).forEach(([n, ups]) => add(n, "Fuera", "fuera", ups, u => `real: ${u[2]} partidos sin él vs ${u[3]} con él`));
+  }));
+  if (!items.length) return "";
+  return `<section class="section">
+    <h2>Beneficiados por bajas</h2>
+    <p class="lede">Quién sube si falta un compañero: bajas de última hora y dudas (con la simulación sin él) y los que ya están fuera hoy (lo que hicieron sus compañeros en los partidos reales sin él). Toca un nombre para ver su ficha.</p>
+    ${miniWrap(items)}
+  </section>`;
+}
+// cruces favorables: props de hoy contra un rival del sexto que más concede a su posición (Over) o del que menos (Under)
+function matchupSection(allBets, thr) {
+  const best = {};
+  allBets.filter(b => b.kind === "prop" && b.hr && b.hr.dvp && !(b._gid && INDEX.games.find(g => g.id === b._gid)?.result)).forEach(b => {
+    const d = b.hr.dvp, top = d.n || 30, over = isOver(b);
+    const fav = over ? d.rank > top * 5 / 6 : d.rank <= top / 6;
+    if (!fav || !d.lg) return;
+    const sc = Math.abs(d.value - d.lg) / d.lg + (b.hr.l10 && b.hr.l10[1] ? b.hr.l10[0] / b.hr.l10[1] : 0.5) * 0.3 + Math.max(b.ev, 0);
+    const k = b.player + "|" + b.stat;
+    if (!best[k] || best[k].sc < sc) best[k] = { b, sc };
+  });
+  const L = Object.values(best).sort((x, y) => y.sc - x.sc).slice(0, 10).map(x => x.b);
+  if (!L.length) return "";
+  return `<section class="section">
+    <h2>Cruces favorables</h2>
+    <p class="lede">Props de hoy contra un rival que concede mucho a su posición (para el Más de) o casi nada (para el Menos de), según la DvP; primero los más marcados. Es contexto, no un pick: el pick lo decide el EV.</p>
+    ${miniWrap(L.map(b => {
+      const d = b.hr.dvp, over = isOver(b), opp = (b._game || "").split(" @ ").find(t => t !== b.team) || "";
+      return `<article class="mcard mup"><header>${face(b.player)}<div><b>${pn(b.player, b._gid, b.stat, true)}</b><span class="muted"><a href="#${esc(b._gid)}">${esc(b._game)}</a></span></div></header>
+        <div class="mup-pick">${esc(b.label.slice(b.player.length).trim())} <span class="muted">@ ${(b.dec || 0).toFixed(2)}</span></div>
+        <div class="mup-dvp"><span class="rk ${over ? "hi" : "lo"}">${d.rank}º<small>de ${d.n || 30}</small></span><span>${esc(opp)} ${over ? "concede" : "solo concede"} <b>${d.value}</b> ${esc((STAT_LABEL[b.stat] || b.stat).toLowerCase())} a los ${esc(d.pos)} (liga ${d.lg})</span></div>
+        ${b.hr.l10 ? `<div class="mup-l10 muted">Últ. 10: ${hrPct(b.hr.l10)}</div>` : ""}</article>`;
+    }), "mup-row")}
+  </section>`;
+}
+// movimientos de línea: props de hoy cuya línea o cuota cambió desde la primera publicación (campo "open")
+function movesSection(allBets, todays) {
+  if (!todays.some(g => !g.result)) return "";
+  const seen = {}, L = [];
+  allBets.filter(b => b.kind === "prop" && b.open && b.open[0] != null && b.dec).forEach(b => {
+    const dl = b.line - b.open[0], dp = b.open[1] ? 1 / b.dec - 1 / b.open[1] : 0;
+    if (!dl && Math.abs(dp) < 0.015) return;
+    const k = b.player + "|" + b.stat; const sc = Math.abs(dl) * 2 + Math.abs(dp) * 10;
+    if (seen[k] != null && L[seen[k]].sc >= sc) return;
+    const x = { b, dl, dp, sc }; if (seen[k] != null) L[seen[k]] = x; else { seen[k] = L.length; L.push(x); }
+  });
+  L.sort((x, y) => y.sc - x.sc);
+  const arrow = v => v > 0 ? `<span class="mv-up">▲</span>` : `<span class="mv-dn">▼</span>`;
+  return `<section class="section">
+    <h2>Movimientos de línea</h2>
+    <p class="lede">Props de hoy cuya línea o cuota cambió desde la primera publicación de la mañana. Si la línea sube, las casas esperan más del jugador; si la cuota baja, ese lado se está apostando más.</p>
+    ${L.length ? miniWrap(L.slice(0, 12).map(({ b, dl }) => `<article class="mcard mvc"><header>${face(b.player)}<div><b>${pn(b.player, b._gid, b.stat, true)}</b><span class="muted"><a href="#${esc(b._gid)}">${esc(b._game)}</a> · ${esc((STAT_LABEL[b.stat] || b.stat))}</span></div></header>
+        <div class="mv-rows"><div><small>Línea</small><span class="num">${b.open[0]} → <b>${b.line}</b> ${dl ? arrow(dl) : ""}</span></div>
+        <div><small>Cuota ${isOver(b) ? "Más de" : "Menos de"}</small><span class="num">${b.open[1] ? b.open[1].toFixed(2) : "—"} → <b>${b.dec.toFixed(2)}</b> ${b.open[1] && Math.abs(b.dec - b.open[1]) >= 0.01 ? arrow(b.dec - b.open[1]) : ""}</span></div></div></article>`))
+      : `<div class="panel empty-s">Todavía no se movió ninguna línea. Las cuotas se vuelven a leer en cada revisión, desde unos 45 minutos antes del primer partido.</div>`}
+  </section>`;
+}
+// ---- Buscador de jugadores: los de la jornada y de las 3 anteriores (docs/data/players/<fecha>.json) ----
+let PS_LIST = null;
+async function psLoad() {
+  if (PS_LIST) return PS_LIST;
+  const dates = [...new Set(INDEX.games.map(g => g.date))].sort().reverse().slice(0, 4);
+  const files = await Promise.all(dates.map(d => playersOf(d).then(F => [d, F])));
+  const by = {};
+  files.forEach(([d, F]) => F && Object.entries(F.players).forEach(([n, P]) => { if (!by[n]) by[n] = { n, d, P, k: pnorm(n) }; }));
+  return (PS_LIST = Object.values(by));
+}
+async function psDraw() {
+  const q = pnorm($("#ps-q").value || ""), L = await psLoad();
+  const hits = !q ? L.filter(x => x.d === DAY).sort((x, y) => x.n.localeCompare(y.n)).slice(0, 0)
+    : L.filter(x => x.k.includes(q) || (x.P.t || "").toLowerCase() === q).sort((x, y) => (y.d === DAY) - (x.d === DAY) || x.k.indexOf(q) - y.k.indexOf(q) || x.n.localeCompare(y.n)).slice(0, 30);
+  $("#ps-body").innerHTML = !q ? `<p class="muted">Escribe un nombre (o la sigla de un equipo, como <b>DAL</b>) para abrir la ficha de un jugador de la jornada o de las 3 anteriores.</p>`
+    : hits.length ? `<ul class="ps-list">${hits.map(x => `<li><button type="button" data-pc="${esc(x.n)}" data-gid="${esc(x.P.gid || "")}">${face(x.n)}<span><b>${esc(x.n)}</b><span class="muted">${badge(x.P.t)} ${esc(x.P.pos || "")} · ${x.P.h ? "vs" : "@"} ${esc(x.P.opp)} · ${x.d === DAY ? "hoy" : esc(x.d.slice(5))}</span></span></button></li>`).join("")}</ul>`
+    : `<p class="muted">Ningún jugador con ese nombre en las últimas jornadas.</p>`;
+}
+$("#search-btn").addEventListener("click", () => { const d = $("#psearch"); d.showModal ? d.showModal() : d.setAttribute("open", ""); $("#ps-q").value = ""; psDraw(); setTimeout(() => $("#ps-q").focus(), 30); });
+$("#ps-q").addEventListener("input", () => { clearTimeout(psDraw.t); psDraw.t = setTimeout(psDraw, 120); });
+$("#ps-close").addEventListener("click", () => $("#psearch").close());
+$("#psearch").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); if (e.target.closest("[data-pc]")) e.currentTarget.close(); });
 function potdCard() {
   const b = potd(DAY), thr = INDEX.value_ev;
   const past = [...new Set(INDEX.games.filter(g => g.date < DAY && g.result).map(g => g.date))].sort().map(d => ({ d, b: potd(d) })).filter(x => x.b && x.b.result);
@@ -4019,7 +4173,7 @@ darkMQ.addEventListener?.("change", syncThemeBtn);
 syncThemeBtn();
 
 Promise.all([getJSON("data/index.json"), getJSON("data/bajas.json").catch(() => null), getJSON("data/player_ids.json").catch(() => null)]).then(([d, bj, ids]) => {
-  INDEX = d; PIDS = ids || {};
+  INDEX = d; PIDS = Object.fromEntries(Object.entries(ids || {}).map(([k, v]) => [pnorm(k), v]));
   setBajas(bj); bajasIndex();
   const dates = [...new Set(d.games.map(g => g.date))].sort().reverse();
   DAY = dates[0];

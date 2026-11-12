@@ -72,7 +72,8 @@ MODEL_VERSIONS = [
     ("1.3", "2026-10-29", "H2H con peso y más mercados de props"),
     ("1.5", "2026-11-01", "mezcla con la casa, solo props y tope de 15 picks"),
     # 1.5.1 (cuotas al margen de Betano) y 1.6 (nivel de anotación, puntos más abiertos) empiezan la misma jornada
-    ("1.6", "2026-11-12", "cuotas de Betano, anotación de esta temporada y puntos más abiertos"),
+    # 1.6.1 (12-nov, antes del primer partido): minutos y puntos de las estrellas; la 1.6 no llegó a liquidar jornada
+    ("1.6.1", "2026-11-12", "Betano, anotación de esta temporada, puntos más abiertos y más minutos y puntos para las estrellas"),
 ]
 MODEL = MODEL_VERSIONS[-1][0]
 
@@ -1326,6 +1327,36 @@ def attach_result(r, res):
     return r
 
 
+def wo_index(r):
+    """Para la sección "Beneficiados por bajas" de la portada: por equipo, a quién sube la proyección si falta cada
+    jugador (simulación sin él, de without.py) y, para los que ya están fuera hoy, cómo les fue a los compañeros en
+    los partidos reales sin él frente a los partidos con él. {equipo: {"model": {ausente: [[compañero, +pts, +min]]},
+    "real": {ausente: [[compañero, +pts, n sin, n con]]}}}"""
+    out = {}
+    for t, W in (r.get("without") or {}).items():
+        B, mod, real = W.get("base") or {}, {}, {}
+        for A in W.get("absent") or []:
+            up = sorted(([n, round(v["pts"][0] - B[n]["pts"][0], 1), round(v.get("min", 0) - B[n].get("min", 0), 1)]
+                         for n, v in (A.get("model") or {}).items() if n in B and v.get("pts") and B[n].get("pts")),
+                        key=lambda x: -x[1])
+            up = [x for x in up if x[1] >= 0.5][:3]
+            if up:
+                mod[A["name"]] = up
+        for O in W.get("out_today") or []:
+            ms = []
+            for n, v in ((O.get("real") or {}).get("mates") or {}).items():
+                o, i = v.get("out"), v.get("in")
+                if o and i and o["n"] >= 2 and i["n"] >= 2 and o["pts"] - i["pts"] >= 1.5:
+                    ms.append([n, round(o["pts"] - i["pts"], 1), o["n"], i["n"]])
+            if ms:
+                real[O["name"]] = sorted(ms, key=lambda x: -x[1])[:3]
+        doubt = [[p["name"], round(p["p_play"], 2)] for p in r["summary"]["players"]
+                 if p["team"] == t and p.get("p_play", 1) < 0.95 and p["name"] in mod]
+        if mod or real:
+            out[t] = dict(model=mod, real=real, doubt=doubt)
+    return out
+
+
 def index_entry(r):
     g, sm = r["game"], r["summary"]
     vb = [b for b in r["bets"] if b["value"]]
@@ -1336,6 +1367,8 @@ def index_entry(r):
              n_value=len(vb), top_bets=r["bets"][:3], value_bets=vb, parlays=r.get("parlays", []),
              model_picks=r.get("model_picks", []),
              all_bets=[{k: v for k, v in b.items() if k not in ("books", "fair")} for b in r["bets"]])
+    if "result" not in r and r.get("without"):
+        e["wo"] = wo_index(r)
     if "result" in r:
         e["result"] = dict(r["result"], picks_won=sum(b["result"] == "won" for b in vb),
                            picks_lost=sum(b["result"] == "lost" for b in vb),
