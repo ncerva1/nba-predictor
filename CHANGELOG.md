@@ -1,5 +1,14 @@
 # Cambios del modelo
 
+## Web — 2026-11-12 (4): tarjetas de pick con gráficas y resumen del modelo actual
+- Picks en tarjetas (vista por defecto; también "Por partido" y "Tabla"): foto, el pick en grande, cuota, gráfica de
+  sus últimos 10 partidos contra la línea de hoy (verde = se habría cumplido) y cruces recientes contra el rival.
+  En móvil se deslizan a los lados. El Pick del día usa la tarjeta grande.
+- Mini gráfica de los últimos 10 en la columna Últ. 10 de todas las tablas de picks.
+- "Cómo le ha ido al modelo": las cifras son de la última versión con jornadas liquidadas, con su curva de unidades
+  acumuladas; las versiones anteriores quedan en el detalle.
+- Sombras suaves, esquinas más redondeadas y entrada animada de las secciones.
+
 ## Web — 2026-11-12 (3): limpieza visual y fotos de jugadores
 - Portada: picks justo después del Pick del día; "Cómo le ha ido al modelo" al final como 4 cifras (picks, unidades,
   ROI, línea de cierre) con las tablas plegadas. Mayor EV y picks sin cuota plegados de entrada. Actualizaciones,
