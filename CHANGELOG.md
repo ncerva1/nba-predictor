@@ -1,5 +1,15 @@
 # Cambios del modelo
 
+## Web — 2026-11-12 (2): pestaña Liga, Pick del día y proyección vs línea (ideas 4-9 de bucketsbase)
+- Pestaña Liga (#liga) con cuatro secciones: Equipos (récord total/local/visitante, últimos 10, ratings con su puesto
+  y DvP de las 5 posiciones), Lesiones (parte de toda la liga con fecha estimada de regreso, `docs/data/injuries.json`
+  de `injuries.py`; lo refrescan las revisiones horarias, paso 1b), Líderes (promedios de esta temporada) y Margen de
+  las casas (prob. implícitas de los dos lados − 1 por casa y mercado, con todo lo guardado en odds/).
+  `league_view.py` escribe `docs/data/league.json`; build_site.py lo llama al final.
+- Pick del día en la portada: el pick con valor de mayor EV de la jornada, con el historial de los anteriores.
+- Proyección vs línea: cada prop guarda `mean` (media simulada) y las tablas de picks la muestran bajo la
+  probabilidad ("proy. 27.4 (+2.9)", verde si favorece al pick). Jornadas anteriores rellenadas con `line_moves.py`.
+
 ## Web — 2026-11-12: ficha de jugador, Rachas y línea de cierre (ideas de bucketsbase)
 - Ficha de jugador: tocar cualquier nombre (picks, tablas de props, Rachas) abre su ficha con barras de sus últimos
   partidos frente a la línea (editable), % por encima en Últ. 5/10/20, esta temporada y H2H, filtros de sede, minutos,
