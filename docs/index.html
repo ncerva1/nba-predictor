@@ -303,11 +303,12 @@ tr.detail td { background: var(--bg) }
 }
 @media (max-width: 640px) {
   .hide-sm { display: none }
+  table.stack { width: 100%; table-layout: fixed }
   table.stack thead { display: none }
   table.stack, table.stack tbody { display: block }
-  table.stack tr { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; padding: 12px 0; border-bottom: 1px solid var(--line) }
+  table.stack tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 16px; padding: 12px 0; border-bottom: 1px solid var(--line) }
   table.stack tr:last-child { border-bottom: 0 }
-  table.stack td { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 0; border: 0; text-align: right }
+  table.stack td { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 8px; padding: 0; border: 0; text-align: right; min-width: 0; overflow-wrap: anywhere }
   table.stack td::before { content: attr(data-label); font: 500 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); text-align: left }
   table.stack td.num { white-space: nowrap }
   table.stack td.head { grid-column: 1 / -1; display: block; text-align: left; font-weight: 600 }
@@ -435,15 +436,6 @@ tr.detail td { background: var(--bg) }
 .mine-act .btn { font-size: 13px; padding: 6px 16px }
 .mine-act label.btn { display: inline-block }
 .btn.ghost:disabled, .btn:disabled { opacity: .5; cursor: default }
-/* líneas escalonadas X+ */
-table.lad td { vertical-align: top; padding: 10px 8px }
-table.lad td.lad-n { width: 28%; min-width: 110px }
-.lad-r { display: flex; flex-wrap: wrap; gap: 6px }
-.lad-c { display: grid; justify-items: center; min-width: 64px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 8px; font: 13px var(--mono); font-variant-numeric: tabular-nums }
-.lad-c small { font-size: 11px; color: var(--muted) }
-.lad-c.casa { border-color: var(--accent) }
-.lad-c.val { border-color: var(--good); background: var(--good-soft) }
-@media (max-width: 640px) { table.lad tr { display: block; border-bottom: 1px solid var(--line) } table.lad td { display: block; border: 0; padding: 6px 4px } table.lad td.lad-n { width: auto; padding-top: 10px } }
 /* picks de inicio agrupados por partido (acordeones) */
 .pgroups { display: grid; gap: 10px }
 .pgroup { background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
@@ -706,6 +698,11 @@ dialog.pcard .g-body > * + * { margin-top: 14px }
 dialog.pcard .g-body > p.muted { margin-top: 8px }
 .pc-sub { font: 500 12px var(--mono); color: var(--muted); margin-top: 2px }
 .pc-head-t { flex: 1; min-width: 0 }
+.av { position: relative; display: inline-grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 50%; overflow: hidden; vertical-align: middle; margin-right: 6px;
+  background: var(--accent-soft); color: var(--accent); font: 600 9px/1 var(--mono); letter-spacing: 0; text-transform: uppercase }
+.av img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; background: var(--surface) }
+.av-lg { width: 64px; height: 64px; font-size: 20px; margin: 0 4px 0 0; border: 1px solid var(--line) }
+.pname .av { margin-top: -2px }
 .pc-head-t h2 { font-size: 24px }
 .pc-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px }
 .pc-line .lnum { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; overflow: hidden }
@@ -767,6 +764,43 @@ dialog.pcard .g-body > p.muted { margin-top: 8px }
 .potd .pl-stats .mv { display: block }
 .potd-act { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 8px }
 .proj.good { color: var(--good) } .proj.bad { color: var(--bad) }
+/* limpieza visual (12-nov) */
+.upd1 { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; font-size: 13px; color: var(--muted) }
+.upd1 > span.done { color: var(--good) }
+.upd1 > span { white-space: nowrap }
+.legend-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px }
+.legend-chips .pill { cursor: help }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0 }
+.kpi b { font-size: 24px } .kpi b.pos { color: var(--good) } .kpi b.neg { color: var(--bad) }
+.kpi .muted { font-size: 12px }
+details.hist-d > summary { cursor: pointer; color: var(--accent); font-size: 14px; padding: 4px 0 }
+details.hist-d[open] > summary { margin-bottom: 10px }
+details.hist-d { display: grid; gap: 12px }
+.gtabs { display: flex; gap: 6px; position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--line) }
+.gtabs button { font: 600 14px var(--display); letter-spacing: .06em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer }
+.gtabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface) }
+.gtabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.gtab { display: grid; gap: 30px; min-width: 0 }
+.gtab[hidden] { display: none }
+.gtab > * { min-width: 0; max-width: 100% }
+.bets-all { margin: 12px 0 4px 12px }
+.pk-act { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 6px }
+.pk-act .take { margin-top: 0 }
+.pk-act .addc { width: 26px; height: 26px; font-size: 16px }
+.pk-odd { display: none; font: 600 12px var(--mono); color: var(--muted); white-space: nowrap }
+b.odd { font-size: 16px }
+tr.is-val > td:first-child { box-shadow: inset 3px 0 0 var(--good) }
+@media (max-width: 640px) {
+  h2 { font-size: 22px }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .pk-odd { display: inline }
+  #app .filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px }
+  #app .filters::-webkit-scrollbar { display: none }
+  #app .filters > * { flex: none }
+  .gtabs button { flex: 1; padding: 8px 6px; font-size: 13px }
+  table.swipe tr.is-val td.pk { box-shadow: inset 3px 0 0 var(--good), 1px 0 0 var(--line) }
+}
 </style>
 
 <header class="banner gutter">
@@ -816,7 +850,7 @@ dialog.pcard .g-body > p.muted { margin-top: 8px }
   </section>
 </div>
 <dialog class="guide pcard" id="pcard" aria-labelledby="pc-title">
-  <div class="g-head"><div class="pc-head-t"><h2 id="pc-title">Jugador</h2><div class="pc-sub" id="pc-sub"></div></div><button type="button" class="g-close" id="pc-close" aria-label="Cerrar ficha">×</button></div>
+  <div class="g-head"><span id="pc-face"></span><div class="pc-head-t"><h2 id="pc-title">Jugador</h2><div class="pc-sub" id="pc-sub"></div></div><button type="button" class="g-close" id="pc-close" aria-label="Cerrar ficha">×</button></div>
   <div class="g-body" id="pc-body"></div>
 </dialog>
 <dialog class="guide" id="guide" aria-labelledby="g-title">
@@ -956,11 +990,7 @@ function evPill(ev, thr) {
   return `<span class="pill neg">${evTxt(ev)}</span>`;
 }
 
-const legend = thr => `<div class="legend-row">
-  <div class="legend-item"><span class="pill value">Verde · EV ≥ +${(thr * 100).toFixed(0)}%</span>Pick con valor: la probabilidad (modelo mezclado con la casa) supera a la que paga la cuota. Máximo ${INDEX.max_daily || 15} por jornada.</div>
-  <div class="legend-item"><span class="pill flat">${document.documentElement.dataset.mode === "cup" ? "Dorado" : "Azul"} · EV 0 a +${(thr * 100).toFixed(0)}%</span>Ligeramente a favor, pero el margen es tan pequeño que no se recomienda.</div>
-  <div class="legend-item"><span class="pill neg">Rojo · EV negativo</span>La cuota paga menos de lo que vale según el modelo. Evitar.</div>
-</div>`;
+const legend = thr => `<div class="legend-chips"><span class="pill value" title="Pick con valor: la probabilidad (modelo mezclado con la casa) supera a la que paga la cuota. Máximo ${INDEX.max_daily || 15} por jornada.">EV ≥ +${(thr * 100).toFixed(0)}% · con valor</span><span class="pill flat" title="Ligeramente a favor, pero el margen es tan pequeño que no se recomienda.">0 a +${(thr * 100).toFixed(0)}% · sin recomendar</span><span class="pill neg" title="La cuota paga menos de lo que vale según el modelo.">Negativo · evitar</span>${qh("ev", "EV y colores")}</div>`;
 
 const howto = `<details class="howto"><summary>¿Cómo leer esta tabla?</summary><dl>
   <dt>Cuota</dt><dd>Cuota decimal promedio de las casas que ofrecen la línea más repetida (la de consenso): lo que recibes por cada 1 apostado, incluido lo apostado. Un * indica que no hubo cuota publicada y se asume 1.91.</dd>
@@ -1007,15 +1037,12 @@ function updatesStrip() {
   const todays = INDEX.games.filter(g => g.date === DAY);  // la jornada completa (liga y Copa)
   if (!todays.length) return "";
   const u = (INDEX.updates || {})[DAY] || {}, tip = firstTip(todays), allRes = todays.every(g => g.result);
-  const item = (k, done, at, todo) => `<li class="${done ? "done" : ""}"><span class="st">${done ? "✓ Hecha" : "Pendiente"}</span><b>${STAGE[k]}</b>
-    <span class="muted">${done ? (at ? whenTxt(toDate(at)) : "Publicada") : todo}</span></li>`;
   const pre = tip ? new Date(tip - 45 * 60000) : null;
-  return `<section class="section"><h2>Actualizaciones de la jornada ${qh("actualizaciones", "actualizaciones del día")}</h2>
-    <ul class="upd">
-      ${item("morning", true, u.morning, "")}
-      ${item("pregame", !!u.pregame, u.pregame, pre ? `Hacia las ${hm(pre)}, entre 30 y 60 min antes del primer partido (${hm(tip)}).` : "Entre 30 y 60 min antes del primer partido.")}
-      ${item("results", allRes, u.results, todays.some(g => g.result) ? "Faltan partidos por terminar." : "En la madrugada, cuando termine el último partido.")}
-    </ul><p class="muted">Horas en tu zona horaria.</p></section>`;
+  const item = (k, done, at, todo) => `<span class="${done ? "done" : ""}" title="${done ? (at ? whenTxt(toDate(at)) : "Publicada") : todo}">${done ? "✓" : "○"} ${STAGE[k]}${done && at ? ` <span class="muted">${hm(toDate(at))}</span>` : ""}</span>`;
+  return `<div class="upd1">${item("morning", true, u.morning, "")}
+    ${item("pregame", !!u.pregame, u.pregame, pre ? `Hacia las ${hm(pre)}, entre 30 y 60 min antes del primer partido (${hm(tip)}).` : "Entre 30 y 60 min antes del primer partido.")}${!u.pregame && pre ? ` <span class="muted">~${hm(pre)}</span>` : ""}
+    ${item("results", allRes, u.results, todays.some(g => g.result) ? "Faltan partidos por terminar." : "En la madrugada, cuando termine el último partido.")}
+    ${qh("actualizaciones", "actualizaciones del día")}</div>`;
 }
 // récord de parlays: [ganados, perdidos] (las nulas no cuentan)
 const plRec = pls => [pls.filter(p => p.result === "won").length, pls.filter(p => p.result === "lost").length];
@@ -1041,10 +1068,10 @@ const hrCells = b => `<td class="r num" data-label="Últ. 10">${b.hr ? hrPct(b.h
 function betRows(bets, thr, withGame) {
   const withHr = hasHr(bets);
   const withRes = bets.some(b => b.result);
-  return bets.map((b, i) => { const k = regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game); return `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
+  return bets.map((b, i) => { const k = regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game), cls = [withGame && "link", b.ev >= thr && "is-val"].filter(Boolean).join(" "), dc = (b.dec || +dec(b.odds)).toFixed(2); return `<tr${cls ? ` class="${cls}"` : ""}${withGame ? ` data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head pk"><div class="pick-h"><div><div>${lbl(b, withGame ? b._gid : CUR_GAME.id)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${bajaWarn(b, withGame ? b._gid : CUR_GAME.id)}${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${takeBtn(k)}</div>${addBtn(k)}</div></td>
-    <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${mvTxt(b)}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}${b.dec_ref ? `<div class="kind" title="Cuota estimada para una casa colombiana (margen tipo Betano). La mejor cuota de EE. UU. leída era ${b.dec_ref.toFixed(2)}">≈ Betano · EE. UU. ${b.dec_ref.toFixed(2)}</div>` : ""}</td>
+    <td class="head pk"><div>${lbl(b, withGame ? b._gid : CUR_GAME.id)}${ftag(b.flag)} <span class="pk-odd">@${dc}</span></div>${b.kind === "prop" ? "" : `<div class="kind">${KIND[b.kind] || b.kind}</div>`}${bajaWarn(b, withGame ? b._gid : CUR_GAME.id)}<div class="pk-act">${takeBtn(k)}${addBtn(k)}${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}</div></td>
+    <td class="r num" data-label="Cuota"><b class="odd">${dc}</b>${b.odds_assumed ? "*" : ""}${mvTxt(b)}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}${b.dec_ref ? `<div class="kind" title="Cuota estimada para una casa colombiana (margen tipo Betano). La mejor cuota de EE. UU. leída era ${b.dec_ref.toFixed(2)}">≈ Betano · EE. UU. ${b.dec_ref.toFixed(2)}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}${projTxt(b)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
     <td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
@@ -1063,7 +1090,7 @@ const dayModelPicks = todays => todays.flatMap(g => (g.model_picks || []).map(b 
 // filtro por estadística dentro de la tabla (dobles, triples intentados, libres...): solo muestra u oculta filas;
 // en "Todas" se ven las MP_SHOW más probables
 const MP_SHOW = 20;
-let MP_ST = "all";
+let MP_ST = "all", MP_OPEN = false;
 function mpFilter(root) {
   root.querySelectorAll(".mp-f button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mpst === MP_ST));
   let n = 0;
@@ -1220,7 +1247,7 @@ function bindBetSort(barId, root, draw) {
   }));
 }
 // Secciones plegables: botón en cada título de sección (h2) y de panel (h3); se recuerda en la sesión
-const FOLDED = new Set();
+const FOLDED = new Set(["Los 20 de mayor EV", "Picks sin cuota de casa"]);
 function addFolds() {
   document.querySelectorAll("#app .section > h2, #app .panel.section > h3").forEach(h => {
     const sec = h.parentElement, key = h.textContent.replace(/\?/g, "").trim().slice(0, 60);
@@ -1287,7 +1314,7 @@ const CUP_HERO = n => `<section class="cup-hero">
     </ol>
   </section>`;
 // Todas las apuestas de la jornada (index.json trae "all_bets" de los partidos del último día), ordenadas por EV
-const TOP_N = 20;
+const TOP_N = 20, BETS_TOP = 10;
 const dayBets = todays => todays.flatMap(g => (g.all_bets || g.value_bets || g.top_bets.filter(b => b.value))
   .map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` }))).sort((a, b) => b.ev - a.ev);
 
@@ -1339,6 +1366,28 @@ function renderIndex(scope = "reg") {
   const clvCell = (b, s, l) => b == null ? "—" : `<span title="${b} a favor, ${l} en contra, ${s} sin cambio">${b}–${l}</span>${s ? ` <span class="muted">(${s} =)</span>` : ""}`;
   const recTxt = (w, l) => w || l ? `${w}–${l}` : "—";
   const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
+  const roi = tot.w + tot.l ? tot.u / (tot.w + tot.l) : null;
+  const histHtml = !hist.length ? "" : `<section class="section">
+    <h2>Cómo le ha ido al modelo ${qh("historial", "resultados del modelo")}</h2>
+    <div class="kpis">
+      <div class="kpi"><span class="eyebrow">Picks</span><b class="num">${tot.w}–${tot.l}</b><span class="muted">${tot.w + tot.l ? (100 * tot.w / (tot.w + tot.l)).toFixed(1) + "% acierto" : ""}</span></div>
+      <div class="kpi"><span class="eyebrow">Unidades</span><b class="num ${tot.u >= 0 ? "pos" : "neg"}">${uTxt(tot.u)}</b><span class="muted">${hist.length} jornadas</span></div>
+      <div class="kpi"><span class="eyebrow">ROI</span><b class="num">${roi == null ? "—" : (roi >= 0 ? "+" : "") + (100 * roi).toFixed(1) + "%"}</b><span class="muted">a 1 u por pick</span></div>
+      <div class="kpi"><span class="eyebrow">Línea de cierre</span><b class="num">${tot.vb + tot.vl ? `${tot.vb}–${tot.vl}` : "—"}</b><span class="muted">a favor–en contra</span></div>
+    </div>
+    <details class="hist-d"><summary>Ver el detalle por versión y por jornada</summary>
+    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. SGP y parlays: combinadas recomendadas acertadas–falladas. <b>Línea de cierre</b>: picks cuya línea o cuota se movió a su favor–en contra entre el análisis de la mañana y el inicio del partido (entre paréntesis, los que no cambiaron); ganarle al cierre con frecuencia es la mejor señal de que el modelo encuentra valor real, más allá de la suerte del resultado${tot.vb + tot.vl ? `: en total <b>${tot.vb}–${tot.vl}</b>` : ""}. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
+    ${(INDEX.versions || []).length > 1 ? `<h3>Por versión del modelo</h3>
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th>Jornadas</th><th class="r">Picks ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th><th class="r">Picks por jornada</th><th class="r">Línea de cierre</th></tr></thead><tbody>
+      ${INDEX.versions.map(v => { const n = v.picks_won + v.picks_lost; return `<tr><td class="head"><b>${esc(v.model)}</b><br><span class="muted">${esc(v.desc)}</span></td><td data-label="Jornadas">${esc(v.first.slice(5))}${v.last !== v.first ? ` a ${esc(v.last.slice(5))}` : ""} (${v.days})</td><td class="r num" data-label="Picks">${v.picks_won}–${v.picks_lost}</td><td class="r num" data-label="% acierto">${n ? (100 * v.picks_won / n).toFixed(1) + "%" : "—"}</td><td class="r num" data-label="Unidades">${uTxt(v.units)}</td><td class="r num" data-label="ROI">${v.roi == null ? "—" : (v.roi >= 0 ? "+" : "") + (100 * v.roi).toFixed(1) + "%"}</td><td class="r num" data-label="Picks por jornada">${(n / v.days).toFixed(0)}</td><td class="r num" data-label="Línea de cierre">${clvCell(v.clv_beat, v.clv_same, v.clv_lost)}</td></tr>`; }).join("")}
+    </tbody></table></div>
+    <h3>Por jornada</h3>` : ""}
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th>Modelo</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th><th class="r">SGP</th><th class="r">Parlays entre partidos</th><th class="r">Línea de cierre</th></tr></thead><tbody>
+      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td data-label="Modelo">${esc(x.model || "")}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td><td class="r num" data-label="SGP">${recTxt(x.sgp_won, x.sgp_lost)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(x.cross_won, x.cross_lost)}</td><td class="r num" data-label="Línea de cierre">${clvCell(x.clv_beat, x.clv_same, x.clv_lost)}</td></tr>`).join("")}
+      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td><td class="r num" data-label="SGP">${recTxt(tot.sw, tot.sl)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(tot.cw, tot.cl)}</td><td class="r num" data-label="Línea de cierre">${clvCell(tot.vb, tot.vs, tot.vl)}</td></tr>` : ""}
+    </tbody></table></div>
+    </details>
+  </section>`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
     $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + olderSection(older, true);
@@ -1350,19 +1399,6 @@ function renderIndex(scope = "reg") {
   ${updatesStrip()}
   ${bajasStrip()}
   ${cup ? "" : potdCard()}
-  ${hist.length ? `<section class="section">
-    <h2>Cómo le ha ido al modelo ${qh("historial", "resultados del modelo")}</h2>
-    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. SGP y parlays: combinadas recomendadas acertadas–falladas. <b>Línea de cierre</b>: picks cuya línea o cuota se movió a su favor–en contra entre el análisis de la mañana y el inicio del partido (entre paréntesis, los que no cambiaron); ganarle al cierre con frecuencia es la mejor señal de que el modelo encuentra valor real, más allá de la suerte del resultado${tot.vb + tot.vl ? `: en total <b>${tot.vb}–${tot.vl}</b>` : ""}. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
-    ${(INDEX.versions || []).length > 1 ? `<h3>Por versión del modelo</h3>
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th>Jornadas</th><th class="r">Picks ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th><th class="r">Picks por jornada</th><th class="r">Línea de cierre</th></tr></thead><tbody>
-      ${INDEX.versions.map(v => { const n = v.picks_won + v.picks_lost; return `<tr><td class="head"><b>${esc(v.model)}</b><br><span class="muted">${esc(v.desc)}</span></td><td data-label="Jornadas">${esc(v.first.slice(5))}${v.last !== v.first ? ` a ${esc(v.last.slice(5))}` : ""} (${v.days})</td><td class="r num" data-label="Picks">${v.picks_won}–${v.picks_lost}</td><td class="r num" data-label="% acierto">${n ? (100 * v.picks_won / n).toFixed(1) + "%" : "—"}</td><td class="r num" data-label="Unidades">${uTxt(v.units)}</td><td class="r num" data-label="ROI">${v.roi == null ? "—" : (v.roi >= 0 ? "+" : "") + (100 * v.roi).toFixed(1) + "%"}</td><td class="r num" data-label="Picks por jornada">${(n / v.days).toFixed(0)}</td><td class="r num" data-label="Línea de cierre">${clvCell(v.clv_beat, v.clv_same, v.clv_lost)}</td></tr>`; }).join("")}
-    </tbody></table></div>
-    <h3>Por jornada</h3>` : ""}
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th>Modelo</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th><th class="r">SGP</th><th class="r">Parlays entre partidos</th><th class="r">Línea de cierre</th></tr></thead><tbody>
-      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td data-label="Modelo">${esc(x.model || "")}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td><td class="r num" data-label="SGP">${recTxt(x.sgp_won, x.sgp_lost)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(x.cross_won, x.cross_lost)}</td><td class="r num" data-label="Línea de cierre">${clvCell(x.clv_beat, x.clv_same, x.clv_lost)}</td></tr>`).join("")}
-      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td><td class="r num" data-label="SGP">${recTxt(tot.sw, tot.sl)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(tot.cw, tot.cl)}</td><td class="r num" data-label="Línea de cierre">${clvCell(tot.vb, tot.vs, tot.vl)}</td></tr>` : ""}
-    </tbody></table></div>
-  </section>` : ""}
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>Picks recomendados por el sistema ${qh("ev", "picks con valor y EV")}</h2>
@@ -1393,6 +1429,7 @@ function renderIndex(scope = "reg") {
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
+  ${histHtml}
   ${olderSection(older, cup)}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
   const open = new Set();   // acordeones abiertos, se conservan al cambiar de filtro
@@ -1857,6 +1894,16 @@ function h2hCell(d, p, k, line) {
     <span class="vals" title="${L.map(x => `${x.date}${x.cup ? " Copa" : ""} (${x.team}, ${x.min} min): ${sv(x)}`).join("\n")}">${L.map(x => sv(x) + (x.cup ? "ᶜ" : "")).join(" · ")}${other.length ? ` · entonces en ${[...new Set(other)].join("/")}` : ""}</span></span>`;
 }
 
+// pestañas de la página del partido; la elegida se mantiene al pasar de un partido a otro
+const GT = [["picks", "Picks"], ["jug", "Jugadores"], ["ana", "Análisis"]];
+let GTAB = "picks";
+function gtShow(k, scroll) {
+  GTAB = k;
+  document.querySelectorAll(".gtabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.gt === k));
+  document.querySelectorAll(".gtab").forEach(x => { x.hidden = x.dataset.gtab !== k; });
+  const n = $(".gtabs"); if (scroll && n && n.getBoundingClientRect().top < 0) n.scrollIntoView({ block: "start" });
+}
+document.addEventListener("click", e => { const b = e.target.closest(".gtabs button"); if (b) gtShow(b.dataset.gt, true); });
 async function renderGame(id) {
   const thr = INDEX.value_ev;
   let d = cache[id];
@@ -1886,10 +1933,12 @@ async function renderGame(id) {
     <div class="stat"><span class="eyebrow">Paliza 20+ / prórroga</span><b class="num">${pct(s.p_blowout_any, 0)} / ${pct(s.p_ot, 0)}</b><span class="muted">${esc(a)} ${pct(s.p_blowout_by[a], 0)} · ${esc(h)} ${pct(s.p_blowout_by[h], 0)}</span></div>
   </div>
   ${bajaSection(d)}
+  <nav class="gtabs" role="tablist" aria-label="Secciones del partido">${GT.map(([k, t]) => `<button type="button" role="tab" data-gt="${k}" aria-selected="${k === GTAB}">${t}</button>`).join("")}</nav>
+  <div class="gtab" data-gtab="picks"${GTAB === "picks" ? "" : " hidden"}>
   ${aaSection(d)}
   <section class="section">
     <h2>Apuestas de este partido ${qh("ev", "EV y colores")}</h2>
-    <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Todas las apuestas con cuota, ordenadas por EV.</p>
+    <p class="lede">${nVal ? `${nVal} pick${nVal > 1 ? "s" : ""} con valor (en verde).` : "Ningún pick con valor en este partido."} Se ven los de valor y los ${BETS_TOP} de mayor EV; abajo puedes abrir todas.</p>
     ${legend(thr)}
     ${d.bets.length || (d.model_picks || []).length ? segBar(d.bets.concat(d.model_picks || []), "seg-game") : ""}
     ${d.bets.length ? betSortBar("bs-game", false) : ""}
@@ -1903,6 +1952,9 @@ async function renderGame(id) {
     <div class="pl-list">${d.parlays.map(pl => parlayCard(pl, thr, false)).join("")}</div>
     ${plHowto}
   </section>` : ""}
+  ${d.result ? "" : `<p class="mk-cta"><button type="button" class="btn ghost" data-mkpick="${esc(id)}">+ Crea tu pick de este partido</button><span class="muted">Cualquier jugador o mercado de equipo, con la línea y la cuota de tu casa.</span></p>`}
+  </div>
+  <div class="gtab" data-gtab="ana"${GTAB === "ana" ? "" : " hidden"}>
   <div class="grid2">
     <section class="panel section"><h3>Margen final (${esc(a)} − ${esc(h)})${qh("partido", "margen final")}</h3>${histogram(s.margin_hist, a, h)}</section>
     <section class="panel section"><h3>Escenarios${qh("partido", "escenarios")}</h3>
@@ -1913,6 +1965,9 @@ async function renderGame(id) {
   ${mvSection(d)}
   ${cupSection(d)}
   ${h2hSection(d)}
+  ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}
+  </div>
+  <div class="gtab" data-gtab="jug"${GTAB === "jug" ? "" : " hidden"}>
   <section class="section">
     <h2>Player props proyectados ${qh("props", "player props")}</h2>
     <div class="filters" role="group" aria-label="Estadística">${["all", ...stats].map(k =>
@@ -1924,14 +1979,8 @@ async function renderGame(id) {
     <div class="panel tbl-wrap" id="props"></div>
     <p class="foot">Resumen = proyección media de cada estadística en los minutos proyectados (P+R, P+A, R+A y PRA combinadas; ROB robos, TAP tapones, R+T robos + tapones, PÉR pérdidas, FAL faltas, TCA / TCI tiros de campo anotados / intentados, 2PA / 2PI dobles, 3PI triples intentados, TLA / TLI tiros libres; DD / TD probabilidad de doble-doble / triple-doble, contando puntos, rebotes, asistencias, robos y tapones); toca un encabezado (o usa "Ordenar") para ordenar la tabla. Media = promedio en las simulaciones. Rango = lo que hace en 8 de cada 10 partidos simulados. Línea justa = línea .5 más cercana a la media; P(over) = probabilidad de superarla. Si la casa publicó línea, se muestra con su cuota decimal y EV. Etiquetas: <b>Rookie</b> = novato, <b>Sin 2025-26</b> = no jugó la temporada pasada (lesión), <b>Sin datos previos</b> = el modelo no tiene su temporada pasada; con tan poca historia sus proyecciones varían mucho más (pasa el cursor o toca la etiqueta para ver el detalle).${d.h2h && d.h2h.games.length ? ` Vs rival = promedio del jugador contra este rival esta temporada y la pasada (liga y Copa), cuántas veces superó la línea (la de la casa si existe, si no la justa) y su valor en cada partido, del más reciente al más antiguo (ᶜ = partido de Copa).` : ""}</p>
   </section>
-  ${ladderSection(d)}
   ${woSection(d)}
-  <section class="section" id="crea-pick">
-    <h2>Crea tu pick</h2>
-    <p class="lede">Arma tu propio pick con la línea y la cuota decimal que te da tu casa, también para lo que las casas que leemos no publican (combinadas, tiros, libres, faltas, robos + tapones...): elige <b>Jugador</b> (cualquier estadística) o <b>Equipo</b> (ganador, hándicap, total del partido o puntos de un equipo). El modelo te dice la probabilidad y el EV, y lo puedes sumar a tu combinada.</p>
-    <div class="panel calc" id="c-calc"></div>
-  </section>
-  ${(g.notes || []).length ? `<section class="section"><h2>Contexto</h2><ul class="notes">${g.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}`;
+  </div>`;
   // apuestas de props del partido por jugador y estadística (over y/o under, con su EV)
   const propBets = {};
   d.bets.filter(b => b.kind === "prop").forEach(b => { (propBets[b.player + "|" + b.stat] ||= []).push(b); });
@@ -1977,14 +2026,21 @@ async function renderGame(id) {
   $("#sortdir").addEventListener("click", () => { sortAsc = !sortAsc; draw(); });
   document.querySelectorAll("button[data-k]").forEach(b => b.addEventListener("click", () => draw(b.dataset.k)));
   document.querySelectorAll("#teams button").forEach(b => b.addEventListener("click", () => { team = b.dataset.t; draw(); }));
+  let betsAll = false;
   const drawBets = () => {
-    const list = sortBets(d.bets.filter(b => inSeg(b, SEG)));
+    const full = sortBets(d.bets.filter(b => inSeg(b, SEG)));
+    const top = new Set([...full].sort((x, y) => y.ev - x.ev).slice(0, BETS_TOP));
+    const list = betsAll ? full : full.filter(b => b.ev >= thr || top.has(b));
     const mp = (SEG === "all" || MP_CATS[SEG]) ? (d.model_picks || []).filter(b => inSeg(b, SEG)) : [];
-    $("#mp-game").innerHTML = mpBlock(mp, false);
+    // en "Todas", los picks sin cuota van plegados para que la tabla de apuestas no quede enterrada
+    $("#mp-game").innerHTML = SEG === "all" && mp.length && d.bets.length ? `<details class="hist-d mp-d"${MP_OPEN ? " open" : ""}><summary>Ver los ${mp.length} picks del modelo sin cuota de casa</summary>${mpBlock(mp, false, true)}</details>` : mpBlock(mp, false);
+    $("#mp-game details")?.addEventListener("toggle", e => { MP_OPEN = e.target.open; });
     $("#bets").hidden = !list.length && !!mp.length;  // sin cuotas de este tipo pero con picks del modelo: solo la tabla de abajo
     if (!d.bets.length) { $("#bets").innerHTML = `<div class="empty">Sin cuotas cargadas para este partido.</div>`; return; }
-    $("#bets").innerHTML = list.length ? `${SWIPE_HINT}<table class="swipe">${betHead(false, list.some(b => b.result), hasHr(list))}<tbody>${betRows(list, thr, false)}</tbody></table>`
+    $("#bets").innerHTML = list.length ? `${SWIPE_HINT}<table class="swipe">${betHead(false, list.some(b => b.result), hasHr(list))}<tbody>${betRows(list, thr, false)}</tbody></table>
+      ${full.length > list.length || betsAll && full.length > BETS_TOP ? `<button type="button" class="btn ghost bets-all" id="bets-all">${betsAll ? `Ver solo las de valor y las ${BETS_TOP} de mayor EV` : `Ver las ${full.length} apuestas`}</button>` : ""}`
       : `<div class="empty">Sin apuestas con cuota de este tipo para este partido.</div>`;
+    $("#bets-all")?.addEventListener("click", () => { betsAll = !betsAll; drawBets(); });
     document.querySelectorAll("#bets button.more").forEach(btn => btn.addEventListener("click", () => {
       const row = $("#det-" + btn.dataset.i), open = row.hidden;
       row.hidden = !open; btn.setAttribute("aria-expanded", open);
@@ -1996,47 +2052,12 @@ async function renderGame(id) {
   drawBets();
   draw();
   addFolds();
-  bindPickForm("c", { d });
   woBind(d);
   aaBind(d);
-  ladderBind(d);
   if (d.matchup_view) {
     document.querySelectorAll("#mv-teams button").forEach(b => b.addEventListener("click", () => mvDraw(d, b.dataset.t)));
     mvDraw(d, a);
   }
-}
-
-// Líneas escalonadas "X+" (d.ladders, build_site.ladders): prob. de llegar a cada umbral y cuota mínima con valor;
-// si Rushbet / BetPlay publican ese umbral, su cuota y EV.
-const LAD_STATS = ["pts", "reb", "ast", "fg3m", "pra", "ra", "stl", "blk"];
-let LAD_ST = "pts", LAD_T = null;
-function ladderSection(d) {
-  const L = d.ladders; if (!L || !Object.keys(L).length || d.result) return "";
-  const sts = LAD_STATS.filter(k => Object.values(L).some(p => p[k]));
-  if (!sts.includes(LAD_ST)) LAD_ST = sts[0];
-  return `<section class="section" id="ladder">
-    <h2>Líneas escalonadas (X+)</h2>
-    <p class="lede">Lo que en muchas casas sale como "25+ puntos", "8+ rebotes"…: la probabilidad de que cada jugador llegue al menos a ese número y la <b>cuota mínima</b> que hace falta para que tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). Si tu casa paga más, vale la pena. Cuando la casa tiene la línea principal, la probabilidad ya viene ajustada con su mercado. Solo jugadores que seguro juegan, entre ${pct(0.5, 0)} y ${pct(0.97, 0)}.</p>
-    <div class="filters" role="group" aria-label="Estadística" id="lad-st">${sts.map(k => `<button type="button" data-k="${k}" aria-pressed="${k === LAD_ST}">${STAT_BTN[k] || STAT_LABEL[k]}</button>`).join("")}</div>
-    <div class="filters" role="group" aria-label="Equipo" id="lad-t"><span class="lbl">Equipo</span>${[d.game.away, d.game.home, "all"].map(t => `<button type="button" data-t="${esc(t)}">${t === "all" ? "Ambos" : esc(t)}</button>`).join("")}</div>
-    <div class="panel tbl-wrap" id="lad-body"></div>
-  </section>`;
-}
-function ladderBind(d) {
-  if (!$("#ladder")) return;
-  if (!LAD_T) LAD_T = matchMedia("(max-width: 640px)").matches ? d.game.away : "all";
-  const draw = () => {
-    document.querySelectorAll("#lad-st button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === LAD_ST));
-    document.querySelectorAll("#lad-t button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === LAD_T));
-    const rows = Object.entries(d.ladders).filter(([, p]) => p[LAD_ST] && (LAD_T === "all" || p.team === LAD_T))
-      .sort((x, y) => y[1][LAD_ST].at(-1)[0] - x[1][LAD_ST].at(-1)[0]);
-    $("#lad-body").innerHTML = rows.length ? `<table class="lad"><tbody>${rows.map(([n, p]) => `<tr><td class="lad-n"><b>${esc(n)}</b> <span class="muted">${esc(p.team)}</span></td>
-      <td><div class="lad-r">${p[LAD_ST].map(([k, q, mn, dc, ev]) => `<span class="lad-c${dc ? (ev >= INDEX.value_ev ? " val" : " casa") : ""}" title="${k}+ ${esc(STAT_LABEL[LAD_ST])}: ${pct(q)}; cuota mínima ${mn.toFixed(2)}${dc ? ` · casa ${dc.toFixed(2)}, EV ${(ev * 100).toFixed(1)}%` : ""}"><b>${k}+</b> ${pct(q, 0)}<small>${dc ? `casa @${dc.toFixed(2)}` : `mín @${mn.toFixed(2)}`}</small></span>`).join("")}</div></td></tr>`).join("")}</tbody></table>`
-      : `<div class="empty">Ningún jugador con esa estadística.</div>`;
-  };
-  document.querySelectorAll("#lad-st button").forEach(b => b.addEventListener("click", () => { LAD_ST = b.dataset.k; draw(); }));
-  document.querySelectorAll("#lad-t button").forEach(b => b.addEventListener("click", () => { LAD_T = b.dataset.t; draw(); }));
-  draw();
 }
 
 // "Sin un jugador" (d.without, de without.py): cómo cambian los compañeros si un jugador no juega.
@@ -2097,7 +2118,7 @@ function woBind(d) {
     $("#wo-body").innerHTML = html;
   };
   document.querySelectorAll("#wo-teams button").forEach(b => b.addEventListener("click", () => { t = b.dataset.t; who = null; draw(); }));
-  document.querySelectorAll("[data-wo]").forEach(b => b.addEventListener("click", () => { t = b.dataset.wot; who = b.dataset.wo; draw(); $("#wo").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  document.querySelectorAll("[data-wo]").forEach(b => b.addEventListener("click", () => { t = b.dataset.wot; who = b.dataset.wo; gtShow("jug"); draw(); $("#wo").scrollIntoView({ behavior: "smooth", block: "start" }); }));
   $("#wo-stat").addEventListener("change", e => { k = e.target.value; draw(); });
   draw();
 }
@@ -3028,18 +3049,7 @@ function jumpGuide(id, quiet) {
 }
 const introOff = () => { try { return localStorage.getItem("nbap-intro") === "off"; } catch (e) { return false; } };
 function hideIntro() { try { localStorage.setItem("nbap-intro", "off"); } catch (e) {} document.querySelectorAll(".intro, .newbie").forEach(x => x.remove()); }
-const INTRO = () => introOff() ? "" : `<section class="intro" aria-labelledby="intro-t">
-    <span class="eyebrow">Bienvenido</span>
-    <h2 id="intro-t">¿Qué es esto?</h2>
-    <p>NBA Predictor <b>simula cada partido de la NBA decenas de miles de veces</b> con las estadísticas de equipos y jugadores, y compara el resultado con las cuotas de las casas de apuestas. Así encuentra apuestas donde la probabilidad real parece mayor de lo que paga la casa: los <b>picks con valor</b>.</p>
-    <ol class="intro-steps">
-      <li><b>Elige un partido</b><span>En la barra de arriba o en "Partidos de hoy", más abajo.</span></li>
-      <li><b>Mira los picks en verde</b><span>Son las apuestas con valor. El % es la probabilidad según el modelo.</span></li>
-      <li><b>Compara con tu casa</b><span>Si tu casa paga más que la cuota justa, la apuesta tiene valor.</span></li>
-    </ol>
-    <div class="intro-act"><button type="button" class="btn" data-guide="que">Ver la guía completa</button><button type="button" class="btn ghost" data-intro-off>Entendido, ocultar</button>
-      <span class="muted" style="font-size:13px">Los botones ${qh("usar", "cómo usar la página")} explican cada sección.</span></div>
-  </section>`;
+const INTRO = () => introOff() ? "" : `<div class="newbie"><span><b>NBA Predictor</b> simula cada partido miles de veces y marca en <b style="color:var(--good)">verde</b> las apuestas que pagan más de lo que valen.</span><button type="button" data-guide="que">Cómo funciona</button><button type="button" class="x" data-intro-off>Ocultar</button></div>`;
 const NEWBIE = () => introOff() ? "" : `<div class="newbie"><span>¿Primera vez aquí? Esta es la simulación de un partido.</span><button type="button" data-guide="partido">Cómo leer esta página</button><button type="button" class="x" data-intro-off>Ocultar</button></div>`;
 $("#g-close").addEventListener("click", () => $("#guide").close());
 $("#guide").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); });   // clic fuera del cuadro
@@ -3064,7 +3074,14 @@ function pcVal(F, row, st) {
   for (const k of PC_SUM[st] || [st]) { const v = row[F.ix[k]]; if (v == null) return null; s += v; }
   return s;
 }
-const pn = (name, gid, st) => `<button type="button" class="pname" data-pc="${esc(name)}" data-gid="${esc(gid || "")}"${st ? ` data-st="${esc(st)}"` : ""} title="Ver la ficha de ${esc(name)}">${esc(name)}</button>`;
+// fotos oficiales de nba.com (docs/data/player_ids.json, de league_view.player_ids); sin foto o si no carga, iniciales
+let PIDS = {};
+const pnorm = n => n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[.']/g, "").replace(/ jr| iii| ii/g, "").trim();
+const face = (name, big) => {
+  const id = PIDS[pnorm(name)], ini = name.replace(/ (Jr\.?|Sr\.?|I{2,3}|IV)$/, "").split(/\s+/).map(w => w[0] || "").filter(Boolean);
+  return `<span class="av${big ? " av-lg" : ""}" aria-hidden="true">${esc((ini[0] || "") + (ini.length > 1 ? ini.at(-1) : ""))}${id ? `<img src="https://cdn.nba.com/headshots/nba/latest/260x190/${id}.png" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ""}</span>`;
+};
+const pn = (name, gid, st) => `<button type="button" class="pname" data-pc="${esc(name)}" data-gid="${esc(gid || "")}"${st ? ` data-st="${esc(st)}"` : ""} title="Ver la ficha de ${esc(name)}">${face(name)}${esc(name)}</button>`;
 const lbl = (b, gid) => b.player && b.label.startsWith(b.player) ? pn(b.player, gid, b.stat) + esc(b.label.slice(b.player.length)) : esc(b.label);
 document.addEventListener("click", e => {
   const t = e.target.closest("[data-pc]"); if (!t) return;
@@ -3125,6 +3142,7 @@ const PC_F = {
 function drawCard() {
   const { P, F, sp, name, date } = PC, body = $("#pc-body");
   const g = INDEX.games.find(x => x.id === PC.gid);
+  $("#pc-face").innerHTML = face(name, true);
   if (!P) { body.innerHTML = `<p class="muted">No hay historial publicado de ${esc(name)} para la jornada ${esc(date)}.</p>`; return; }
   $("#pc-sub").innerHTML = `${badge(P.t)} ${esc(P.pos || "")} · ${P.h ? "vs" : "@"} ${esc(P.opp)}${date !== DAY ? ` · jornada ${esc(date)}` : g && g.tip_et ? ` · ${esc(g.tip_et)} ET` : ""}${P.flag ? " " + ftag(P.flag) : ""}`;
   const st = PC.st, cur = seasonStart(date);
@@ -3348,7 +3366,7 @@ function lgLead() {
   return `<p class="lede">Promedios por partido de esta temporada (mínimo 5 partidos y el 60% de los de su equipo), con los box scores hasta la última jornada.</p>
   <div class="filters" role="group" aria-label="Estadística">${Object.entries(LG_LEAD).map(([k, t]) => `<button type="button" data-lgl="${k}" aria-pressed="${LG.lead === k}">${t}</button>`).join("")}</div>
   <div class="panel tbl-wrap"><table class="swipe"><thead><tr><th class="r">#</th><th class="pk">Jugador</th><th class="r">PJ</th><th class="r">${esc(LG_LEAD[LG.lead])}</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">Min</th></tr></thead><tbody>
-  ${L.map((r, i) => `<tr><td class="r num">${i + 1}</td><td class="head pk">${esc(r.name)} <span class="muted">${esc(r.team || "")}</span></td><td class="r num">${r.gp}</td><td class="r num"><b>${r[LG.lead]}</b></td><td class="r num">${r.pts}</td><td class="r num">${r.reb}</td><td class="r num">${r.ast}</td><td class="r num">${r.min}</td></tr>`).join("")}</tbody></table></div>`;
+  ${L.map((r, i) => `<tr><td class="r num">${i + 1}</td><td class="head pk">${face(r.name)}${esc(r.name)} <span class="muted">${esc(r.team || "")}</span></td><td class="r num">${r.gp}</td><td class="r num"><b>${r[LG.lead]}</b></td><td class="r num">${r.pts}</td><td class="r num">${r.reb}</td><td class="r num">${r.ast}</td><td class="r num">${r.min}</td></tr>`).join("")}</tbody></table></div>`;
 }
 function lgBooks() {
   if (!LEAGUE || !LEAGUE.books.length) return `<div class="panel empty">Aún no hay cuotas por casa.</div>`;
@@ -3863,8 +3881,8 @@ $("#theme-btn").addEventListener("click", () => {
 darkMQ.addEventListener?.("change", syncThemeBtn);
 syncThemeBtn();
 
-Promise.all([getJSON("data/index.json"), getJSON("data/bajas.json").catch(() => null)]).then(([d, bj]) => {
-  INDEX = d;
+Promise.all([getJSON("data/index.json"), getJSON("data/bajas.json").catch(() => null), getJSON("data/player_ids.json").catch(() => null)]).then(([d, bj, ids]) => {
+  INDEX = d; PIDS = ids || {};
   setBajas(bj); bajasIndex();
   const dates = [...new Set(d.games.map(g => g.date))].sort().reverse();
   DAY = dates[0];
@@ -3872,7 +3890,8 @@ Promise.all([getJSON("data/index.json"), getJSON("data/bajas.json").catch(() => 
   const nCup = todays.filter(isCup).length;
   $("#n-reg").textContent = todays.length - nCup || ""; $("#n-cup").textContent = nCup || ""; syncMineCount();
   const gen = toDate(d.generated);
-  $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos<br>Actualizado ${gen ? esc(whenTxt(gen)) : ""}${d.last_stage ? ` · ${esc(STAGE[d.last_stage] || "")}` : ""}`;
+  $("#meta").innerHTML = `Jornada ${esc(DAY)} · ${todays.length} partidos · act. ${gen ? esc(hm(gen)) : ""}`;
+  $("#meta").title = gen ? `Actualizado ${whenTxt(gen)}${d.last_stage ? ` · ${STAGE[d.last_stage] || ""}` : ""}` : "";
   const prevDay = dates[1], prev = prevDay ? d.games.filter(g => g.date === prevDay) : [];
   setupTicker();
   renderTicker(prev, todays);
