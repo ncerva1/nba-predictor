@@ -72,6 +72,19 @@ def display_names():
     return names
 
 
+def player_ids():
+    """docs/data/player_ids.json: nombre normalizado -> PLAYER_ID de nba.com, para las fotos oficiales
+    (cdn.nba.com/headshots/nba/latest/260x190/<id>.png) que muestra la web."""
+    from evaluate import norm
+    ids = {}
+    for fp in sorted(glob.glob(os.path.join(HERE, "gamelogs", "nba", "leaguegamelog_P_*.csv"))):
+        for r in csv.DictReader(open(fp, encoding="utf-8")):
+            ids[norm(r["PLAYER_NAME"])] = int(r["PLAYER_ID"])
+    fp = os.path.join(OUT, "player_ids.json")
+    json.dump(ids, open(fp, "w"), ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+    return fp
+
+
 def leaders(date):
     logs = player_logs((_d.fromisoformat(date) + timedelta(days=1)).isoformat())
     names = display_names()
@@ -141,6 +154,7 @@ def build(date=None):
     out = dict(date=date, snapshot=R.get("snapshot_date"), teams=teams, leaders=leaders(date), books=book_margins())
     fp = os.path.join(OUT, "league.json")
     json.dump(out, open(fp, "w"), ensure_ascii=False, separators=(",", ":"))
+    player_ids()
     return fp
 
 

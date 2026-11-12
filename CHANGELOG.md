@@ -1,5 +1,17 @@
 # Cambios del modelo
 
+## Web — 2026-11-12 (3): limpieza visual y fotos de jugadores
+- Portada: picks justo después del Pick del día; "Cómo le ha ido al modelo" al final como 4 cifras (picks, unidades,
+  ROI, línea de cierre) con las tablas plegadas. Mayor EV y picks sin cuota plegados de entrada. Actualizaciones,
+  bienvenida y leyenda en una línea. Móvil: de ~15.800 px a ~5.900 px de alto.
+- Partido en pestañas Picks / Jugadores / Análisis. Apuestas del partido: las de valor y las 10 de mayor EV, con botón
+  para ver todas; picks sin cuota plegados. Sin "Líneas escalonadas"; "Crea tu pick" pasa a un botón que abre el
+  formulario de Mi combinada. Móvil: de ~47.000 px a ~7.400 px en la pestaña Picks.
+- Filas de picks: sin la etiqueta "Player prop", Lo tomo y + en una fila, cuota junto al nombre en móvil, borde verde
+  en los picks con valor y cuota más grande. Tablas apiladas sin cortes a la derecha; títulos más pequeños en móvil.
+- Fotos oficiales de nba.com junto a cada nombre y en grande en la ficha (`docs/data/player_ids.json`, de
+  `league_view.player_ids`; si no hay foto o no carga, iniciales).
+
 ## Web — 2026-11-12 (2): pestaña Liga, Pick del día y proyección vs línea (ideas 4-9 de bucketsbase)
 - Pestaña Liga (#liga) con cuatro secciones: Equipos (récord total/local/visitante, últimos 10, ratings con su puesto
   y DvP de las 5 posiciones), Lesiones (parte de toda la liga con fecha estimada de regreso, `docs/data/injuries.json`
