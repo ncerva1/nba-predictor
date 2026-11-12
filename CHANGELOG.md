@@ -1,5 +1,10 @@
 # Cambios del modelo
 
+## Web — 2026-11-12: botón "Arma tu combinada" siempre visible
+- El botón flotante de Mi combinada se ve siempre (vacío dice "+ Arma tu combinada"); al abrirlo explica que ahí se
+  calcula la probabilidad de cualquier combinada (prob. del modelo, cuota justa y EV). Antes solo aparecía al
+  agregar el primer pick.
+
 ## Web — 2026-11-12: partidos previos tocables y soñador a lo ancho en escritorio
 - Tocar una barra de los últimos 10 o un cruce (tarjetas de picks y ficha del jugador) abre ese partido: marcador,
   la línea completa del jugador (min, pts, reb, ast, triples, tiros de campo, libres, robos, tapones, pérdidas,

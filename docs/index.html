@@ -580,6 +580,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 @keyframes cbump { 40% { transform: scale(1.08) } }
 @media (prefers-reduced-motion: reduce) { .combo-pill.bump { animation: none } }
 .combo.open .combo-pill { display: none }
+/* 12-nov (pedido de Nicolas): el botón se ve siempre, también vacío, para que se sepa dónde calcular una combinada */
+.combo-pill .cp-plus { display: none; place-items: center; width: 24px; height: 24px; margin-left: -8px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font: 700 17px/1 var(--body) }
+.combo-pill.empty { padding-right: 16px } .combo-pill.empty .cp-plus { display: inline-grid } .combo-pill.empty .n, .combo-pill.empty .d { display: none }
 .combo-panel { width: min(420px, calc(100vw - 32px)); max-height: min(78dvh, 720px); display: flex; flex-direction: column; background: var(--surface); color: var(--ink);
   border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.35); overflow: hidden }
 .combo-panel[hidden] { display: none }
@@ -1000,8 +1003,8 @@ dialog.psearch .g-head { gap: 8px }
 </nav>
 <main class="wrap gutter"><div class="inner" id="app"><p class="muted">Cargando partidos…</p></div></main>
 <button type="button" class="to-top" id="to-top" hidden><span aria-hidden="true">↑</span> <span id="to-top-t">Arriba</span></button>
-<div class="combo" id="combo" hidden>
-  <button type="button" class="combo-pill" id="combo-pill" aria-expanded="false" aria-controls="combo-panel"><span class="t">Mi combinada</span> <span class="n" id="cp-n">0</span> <span class="d" id="cp-d"></span></button>
+<div class="combo" id="combo">
+  <button type="button" class="combo-pill" id="combo-pill" aria-expanded="false" aria-controls="combo-panel"><span class="cp-plus" aria-hidden="true">+</span><span class="t" id="cp-t">Mi combinada</span> <span class="n" id="cp-n">0</span> <span class="d" id="cp-d"></span></button>
   <section class="combo-panel" id="combo-panel" hidden aria-labelledby="cb-title">
     <div class="cb-head"><h2 id="cb-title"><span class="cbm-t">Mi </span>combinada</h2><button type="button" class="cb-min cb-img" id="cb-img" aria-label="Leer tu combinada desde una imagen" title="Leer tu combinada desde una imagen"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button type="button" class="cb-min cb-mk" id="cb-mk">+ Crear pick</button><button type="button" class="cb-min" id="cb-min" aria-label="Minimizar mi combinada"><span class="cbm-t">Minimizar </span>▾</button></div>
     <p class="cb-msg" id="cb-msg" role="status" hidden></p>
@@ -4200,13 +4203,15 @@ function comboCalc() {
 const fmtMoney = x => x.toLocaleString("es-CO", { maximumFractionDigits: x < 100 ? 2 : 0 });
 function drawCombo() {
   const box = $("#combo"), n = MYC.length;
-  box.hidden = !n && !box.classList.contains("open");
-  document.body.classList.toggle("has-combo", !!n);
+  box.hidden = false;
+  document.body.classList.add("has-combo");
   $("#cp-n").textContent = n;
+  $("#combo-pill").classList.toggle("empty", !n);
+  $("#cp-t").textContent = n ? "Mi combinada" : "Arma tu combinada";
   syncMkBtn();
   if (!n) {
     $("#cp-d").textContent = "";
-    $("#cb-body").innerHTML = `<div class="empty">Tu combinada está vacía. Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí, o crea el tuyo con <b>+ Crear pick</b>.<br><br>¿Ya la armaste en tu casa? <button type="button" class="btn ghost im-cta" data-imgcta>Súbela desde una imagen</button></div>`;
+    $("#cb-body").innerHTML = `<div class="empty"><b>Calcula la probabilidad de cualquier combinada.</b> Junta las patas y te damos la probabilidad del modelo (contando juntas las del mismo partido), la cuota justa y el EV frente a la cuota de tu casa.<br><br>Toca <span class="addc" aria-hidden="true">+</span> junto a cualquier pick (o "Agregar a mi combinada" en un parlay) para sumarlo aquí, o crea el tuyo con <b>+ Crear pick</b>.<br><br>¿Ya la armaste en tu casa? <button type="button" class="btn ghost im-cta" data-imgcta>Súbela desde una imagen</button></div>`;
     $("#cb-body [data-imgcta]").addEventListener("click", () => $("#cb-img").click());
     $("#cb-foot").hidden = true;
     return;
