@@ -1,5 +1,24 @@
 # Cambios del modelo
 
+## 1.6 — 2026-11-12: nivel de anotación de esta temporada y puntos más abiertos
+Recálculo pedido por Nicolas cuando todos los equipos llegaron a 10 partidos. Backtest: las 127 jornadas-partido del
+26-oct al 11-nov re-simuladas con la BD de cada mañana (`db/build_db.py --snapshot <fecha>`) y 1.875 líneas de props
+con cuota a los dos lados.
+
+- Totales: salían +5,4 puntos sobre lo real (la casa +2,3). El JSON de cada partido fija el nivel de liga de 2025-26
+  (115 x 100,5 = ~115,6 puntos por equipo) y esta temporada se anotan ~113,2. `db_link` calcula `league.pts_scale` =
+  media de puntos de la liga esta temporada (mezclada con la pasada por N / (N + 30) partidos de liga) / nivel del
+  JSON, y `model.expected_scores` la aplica a los dos equipos (hoy 0,983, unos −4 puntos de total). Sesgo del
+  backtest: +5,4 → +2,6; MAE del total 15,2 → 14,8 (casa 14,0).
+- Puntos de jugador: dispersión NB 20 → 7. Antes el 17% de las anotaciones reales caía bajo el percentil 10 simulado
+  y el 12% sobre el 90; ahora 13% y 9,5%. Log loss del modelo solo en las líneas: 0,711 → 0,708. Equipos, rebotes,
+  asistencias y triples ya tenían el ancho correcto y no cambian.
+- Probado y descartado: corrección del Over por estadística (no mejora fuera de muestra: los ajustes cambian de signo
+  según el periodo) y bajar `MKT_W` a 0,15 (log loss casi igual, 0,6826 vs 0,6830, pero con cuotas al margen de
+  Betano deja 0–1 picks por jornada). `MKT_W` sigue en 0,25: con cuotas colombianas el backtest da 89 picks en 10
+  jornadas, −1,5 u: el modelo apenas supera el margen de la casa.
+- Web: la tabla por versión cuenta 1.5.1 y 1.6 juntas como 1.6 (empiezan la misma jornada).
+
 ## Datos — 2026-11-11: líneas de combinadas (P+R, P+A, R+A, PRA) y triples
 - Pedido de Nicolas: el modelo ya simulaba las combinadas, pero no había líneas de casa (scoresandodds las carga por
   JS en /nba/props). Ahora salen de la página de cada jugador en scoresandodds (6-8 casas): `odds/combos/<fecha>.json`

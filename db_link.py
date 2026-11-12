@@ -32,6 +32,13 @@ POS_MAP = {"G": ["PG", "SG"], "F": ["SF", "PF"], "W": ["SG", "SF"]}
 DVP_STAT = {"pts": "PTS", "reb": "REB", "ast": "AST", "fg3m": "3PM"}
 
 
+LEAGUE_K = 30  # partidos de liga (en total) que pesan igual que la temporada pasada en el nivel de anotación (1.6)
+
+
+def _has(R, m, season):
+    return all(season in R["teams"][t]["metrics"].get(m, {}) for t in R["teams"])
+
+
 def _metric(R, t, m, which="blend"):
     d = R["teams"][t]["metrics"].get(m, {})
     v = d.get(which) or d.get(R["season"])
@@ -80,6 +87,21 @@ def apply_db(cfg, rankings_path):
         }
         cfg["teams"][t]["cur"] = new
         rep["teams"][t] = {"cur_json": old, "cur_db": new}
+
+    # ---- 1b (1.6). nivel de anotación de la liga: el JSON fija ortg/pace de la temporada pasada (115 x 100.5 = ~115.6
+    # puntos por equipo) y esta temporada se anota menos (113 a los 10 partidos), así que los totales salían ~6 puntos
+    # altos. Escala = media de puntos por equipo y partido de la liga esta temporada (mezclada con la pasada por los
+    # partidos jugados en toda la liga, N / (N + LEAGUE_K)) / la de las ratings del JSON.
+    if dbc.get("league_scale", True) and _has(R, "PTS", cur):
+        lg_pts_cur = _league_mean(R, "PTS", cur)
+        prior = R.get("prior_season")
+        lg_pts_prior = _league_mean(R, "PTS", prior) if prior and _has(R, "PTS", prior) else L["ortg"] * L["pace"] / 100
+        n_games = sum(R["teams"][t]["gp"] or 0 for t in R["teams"]) / 2
+        w = n_games / (n_games + LEAGUE_K)
+        target = w * lg_pts_cur + (1 - w) * lg_pts_prior
+        L["pts_scale"] = round(target / (L["ortg"] * L["pace"] / 100), 4)
+        rep["league"] = dict(pts_cur=round(lg_pts_cur, 1), pts_prior=round(lg_pts_prior, 1), games=n_games,
+                             w=round(w, 3), target=round(target, 1), pts_scale=L["pts_scale"])
 
     # ---- 2. multiplicadores de enfrentamiento
     manual = cfg.get("matchup_manual", {})

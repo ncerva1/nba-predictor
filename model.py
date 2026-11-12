@@ -1,5 +1,5 @@
 """
-NBA-Predictor 1.3.6 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.6 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
@@ -31,7 +31,9 @@ Flujo:
 import csv, glob, json, os, re, sys, unicodedata
 import numpy as np
 
-STAT_R = {"pts": 20.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
+STAT_R = {"pts": 7.0, "reb": 12.0, "ast": 14.0, "fg3m": 8.0}  # dispersión NB
+# 1.6 (12-nov): puntos 20 -> 7. Con 20, el 17% de las anotaciones reales caía por debajo del percentil 10 simulado y el
+# 12% por encima del 90 (debían ser 10 y 10); con 7 quedan 13% y 9,5% y el log loss en las líneas de la casa mejora.
 # 1.3.4: props secundarias si el JSON trae FG, FGA, 3PA, STL, BLK, TOV y PF del jugador (ver build_slate.EXTRA_COL).
 # Los tiros salen de los puntos simulados: lo que no son triples (pts - 3 x triples) se reparte entre dobles y
 # tiros libres con la proporción del jugador, y los fallos se dibujan aparte; robos, tapones, pérdidas y faltas
@@ -91,8 +93,9 @@ def expected_scores(cfg, r):
     st_a = cfg["matchup"][a].get("style_per100", 0)
     ppp_h = lg["ortg"] + (r[h]["o"] - lg["ortg"]) + (r[a]["d"] - lg["ortg"]) + ha + st_h
     ppp_a = lg["ortg"] + (r[a]["o"] - lg["ortg"]) + (r[h]["d"] - lg["ortg"]) - ha + st_a
-    mh = ppp_h * pace / 100 + cfg["matchup"][h].get("ft_bonus_pts", 0)
-    ma = ppp_a * pace / 100 + cfg["matchup"][a].get("ft_bonus_pts", 0)
+    k = lg.get("pts_scale", 1.0)  # 1.6: nivel de anotación de la liga esta temporada (db_link)
+    mh = k * ppp_h * pace / 100 + cfg["matchup"][h].get("ft_bonus_pts", 0)
+    ma = k * ppp_a * pace / 100 + cfg["matchup"][a].get("ft_bonus_pts", 0)
     return mh, ma, pace, ppp_h, ppp_a
 
 
