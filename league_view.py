@@ -73,13 +73,12 @@ def display_names():
 
 
 def player_ids():
-    """docs/data/player_ids.json: nombre normalizado -> PLAYER_ID de nba.com, para las fotos oficiales
+    """docs/data/player_ids.json: nombre -> PLAYER_ID de nba.com, para las fotos oficiales
     (cdn.nba.com/headshots/nba/latest/260x190/<id>.png) que muestra la web."""
-    from evaluate import norm
-    ids = {}
+    ids = {}  # nombre como lo escribe nba.com -> id (la web normaliza el nombre al buscar la foto)
     for fp in sorted(glob.glob(os.path.join(HERE, "gamelogs", "nba", "leaguegamelog_P_*.csv"))):
         for r in csv.DictReader(open(fp, encoding="utf-8")):
-            ids[norm(r["PLAYER_NAME"])] = int(r["PLAYER_ID"])
+            ids[r["PLAYER_NAME"]] = int(r["PLAYER_ID"])
     fp = os.path.join(OUT, "player_ids.json")
     json.dump(ids, open(fp, "w"), ensure_ascii=False, separators=(",", ":"), sort_keys=True)
     return fp

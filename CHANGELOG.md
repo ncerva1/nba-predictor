@@ -1,5 +1,26 @@
 # Cambios del modelo
 
+## Modelo 1.6.1 — 2026-11-12: más minutos y puntos para las estrellas
+- Diagnóstico (Cooper Flagg en 16.1 pts con 25.9 de media): el modelo comprimía hacia la media. Desde el 1-nov, los
+  de 25+ pts quedaban −2.6 pts y −1.7 min; los de 20-25, −1.7 pts y −2.9 min; los suplentes de <10 pts, +0.6 pts.
+  En las líneas de la casa, P(over) media 0.445 frente a 0.487 real (0.424 frente a 0.502 en los de 20+ pts):
+  de ahí el exceso de Unders.
+- Cambios en model.py: MIN_BETA = 1.15 (los minutos del equipo se concentran algo más en los que más juegan),
+  PTS_GAMMA = 1.1 (el reparto de puntos del equipo se concentra algo más en los anotadores), GARBAGE_CUT 0.86 → 0.93
+  (en una paliza los titulares siguen perdiendo minutos, pero menos).
+- Backtest 1-11 nov (`bt_stars.py`, 1.599 actuaciones, 2.571 líneas de casa): sesgo de puntos por nivel entre −0.1 y
+  +0.4; MAE de puntos 4.685 → 4.635 y de minutos 4.95 → 4.84; P(over) media 0.473 frente a 0.487 real (estrellas
+  0.479 frente a 0.502); log loss en las líneas 0.7083 → 0.7016. Pendiente: los triples siguen algo cortos
+  (P(over) 0.468 frente a 0.512).
+- Jornada del 12-nov re-simulada con 1.6.1 antes del primer partido (pedido de Nicolas).
+
+## Web — 2026-11-12 (5): beneficiados por bajas, cruces favorables, movimientos de línea y buscador
+- Portada: "Beneficiados por bajas" (OUT de última hora y dudas con la simulación sin él, index `wo` de
+  build_site.wo_index; fuera hoy con los partidos reales sin él), "Cruces favorables" (DvP del rival en el sexto
+  extremo para el lado del prop) y "Movimientos de línea" (línea y cuota desde la apertura, campo `open`).
+- Buscador de jugadores (lupa arriba): jugadores de la jornada y de las 3 anteriores; abre la ficha.
+- player_ids.json guarda el nombre como lo escribe nba.com (la web lo normaliza).
+
 ## Web — 2026-11-12 (4): tarjetas de pick con gráficas y resumen del modelo actual
 - Picks en tarjetas (vista por defecto; también "Por partido" y "Tabla"): foto, el pick en grande, cuota, gráfica de
   sus últimos 10 partidos contra la línea de hoy (verde = se habría cumplido) y cruces recientes contra el rival.

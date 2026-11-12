@@ -60,6 +60,13 @@ PLAYER_K = 6  # partidos de encogimiento de las tasas por minuto hacia la tempor
 # >= H2H_FULL de sus minutos de hoy, y si cambió de rol pesan un tercio (H2H_ROLE_W) en vez de nada.
 H2H_K, H2H_MIN_MIN, H2H_FULL, H2H_ROLE_W = 3, 10, 0.5, 1 / 3
 MAX_MIN = 44
+# 1.6.1 (12-nov, pedido de Nicolas tras ver a Cooper Flagg en 16 pts proyectados con 25.9 de media): el modelo
+# comprimía hacia la media (estrellas -1.9 pts y -2 min, suplentes +0.9 pts frente a lo real desde el 1-nov).
+# GARBAGE_CUT = fracción de minutos que conservan los titulares en una paliza (antes 0.86);
+# PTS_GAMMA = concentración del reparto de puntos del equipo (parte de cada uno ∝ (tasa × minutos) ** PTS_GAMMA).
+# MIN_BETA = concentración de los minutos del equipo en los que más juegan (minutos ∝ minutos ** MIN_BETA, el total
+# del equipo no cambia): el reparto a 240 recortaba igual a todos y dejaba a los titulares cortos.
+GARBAGE_CUT, PTS_GAMMA, MIN_BETA = 0.93, 1.1, 1.15
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -321,6 +328,12 @@ def simulate(cfg, n=20000, seed=7):
         k = sum(p["min"] for p in tp) / max(sum(base_min[p["name"]] for p in tp), 1e-6)
         for p in tp:
             base_min[p["name"]] = min(base_min[p["name"]] * k, MAX_MIN)
+        if MIN_BETA != 1:
+            tot = sum(base_min[p["name"]] for p in tp)
+            pw = {p["name"]: base_min[p["name"]] ** MIN_BETA for p in tp}
+            k2 = tot / max(sum(pw.values()), 1e-6)
+            for p in tp:
+                base_min[p["name"]] = min(pw[p["name"]] * k2, MAX_MIN)
 
     # minutos: ruido + salidas tempranas + bajas de última hora (p_play); los minutos que faltan
     # se reparten entre los que juegan para que el equipo siga sumando sus 240
@@ -338,12 +351,12 @@ def simulate(cfg, n=20000, seed=7):
         scale = np.maximum(base.sum() - fixed, 0) / np.maximum(np.where(flex, m_, 0.0).sum(axis=0), 1)
         m_ = np.where(flex, np.minimum(m_ * scale, MAX_MIN), m_)
         for p, x in zip(tp, m_):
-            x = np.where(garbage, x * (0.86 if p["starter"] else 1.18), x)
+            x = np.where(garbage, x * (GARBAGE_CUT if p["starter"] else 1.18), x)
             mins[p["name"]] = x + ot * (4.0 if p["starter"] else 1.0) * (x > 0)
 
     # puntos: cada jugador se lleva su parte (tasa x minutos x DvP) del marcador simulado de su equipo,
     # así una baja o una salida temprana pasa sus tiros a los compañeros
-    pts_w = {p["name"]: p["rate"]["pts"] * mins[p["name"]] * cfg["matchup"][p["team"]].get("pts_mult", 1)
+    pts_w = {p["name"]: (p["rate"]["pts"] * mins[p["name"]] * cfg["matchup"][p["team"]].get("pts_mult", 1)) ** PTS_GAMMA
              for p in players}
     pts_sum = {t: sum(pts_w[p["name"]] for p in players if p["team"] == t) for t in (h, a)}
 
