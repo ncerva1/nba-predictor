@@ -9,6 +9,9 @@ Escribe docs/data/players/<fecha>.json con, por cada jugador de los partidos de 
     m: {stat: [línea, cuota over, cuota under, prob. over, prob. under, lado con valor]} de las líneas de la casa
     g: últimos partidos de temporada regular (esta y la pasada, más reciente primero):
        [fecha, rival, local 1/0, min, pts, reb, ast, fg3m, stl, blk, tov] (null si la fuente no lo trae)
+    ro: rol según quién juega (context.role_splits): hoy = medias en partidos con la misma situación de compañeros
+        clave que hoy, out = clave que faltan hoy, m = [compañero, falta hoy, con él, sin él]
+        ([partidos, min, pts, reb, ast, fg3m]); solo esta temporada
 y dvp: {equipo: {posición: {PTS/REB/AST/3PM/PRA/STL/BLK/TOV: puesto}}} (1 = el que menos concede) para el filtro
 "nivel del rival". build_site.py lo llama solo al final de cada pasada; no re-simula ni cambia ningún pick.
 """
@@ -45,7 +48,7 @@ def build(date):
         return None
     logs = player_logs(date)
     R = load_rankings() or {}
-    out = {}
+    out, on = {}, {}
     for p in paths:
         r = json.load(open(p))
         g = r["game"]
@@ -54,6 +57,7 @@ def build(date):
             if "pts" not in pl:
                 continue
             team = pl["team"]
+            on[pl["name"]] = pl.get("p_play", 1) >= 0.5
             opp = g["home"] if team == g["away"] else g["away"]
             rows = sorted(logs.get(norm(pl["name"]), {}).values(), key=lambda x: x["date"], reverse=True)[:N_GAMES]
             gl = []
@@ -65,6 +69,14 @@ def build(date):
             out[pl["name"]] = dict(t=team, pos=pl.get("pos"), dv=(_positions(pl.get("pos") or "") or [None])[0],
                                    gid=r["id"], opp=opp, h=int(team == g["home"]), m=lines.get(pl["name"], {}),
                                    **({"flag": pl["flag"]} if pl.get("flag") else {}), g=gl)
+    try:
+        from context import role_splits
+        ro = role_splits([(n, x["t"], on[n]) for n, x in out.items()], date)
+    except Exception as e:  # sin logs suficientes la ficha sigue sin este bloque
+        print("rol según quién juega no disponible:", e, file=sys.stderr)
+        ro = {}
+    for n, x in ro.items():
+        out[n]["ro"] = x
     dvp = {t: {pos: {c: v["rank"] for c, v in cols.items()} for pos, cols in (T.get("dvp") or {}).items()}
            for t, T in (R.get("teams") or {}).items()}
     os.makedirs(os.path.join(OUT, "players"), exist_ok=True)

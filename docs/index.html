@@ -728,6 +728,16 @@ dialog.pcard .g-body > p.muted { margin-top: 8px }
 .pc-xl div b { display: block; color: var(--ink); font-weight: 600 }
 .pc-model { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 14px }
 .pc-model .k { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.pc-role { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; font-size: 14px }
+.pc-role .k { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.pc-role table { width: 100%; border-collapse: collapse; font-size: 13px }
+.pc-role th, .pc-role td { padding: 5px 4px; border-top: 1px solid var(--line); text-align: right; white-space: nowrap }
+.pc-role th:first-child, .pc-role td:first-child { text-align: left; white-space: normal }
+.pc-role .ro-n { display: block; font-size: 11px; color: var(--muted) }
+.pc-role td b { font-size: 15px }
+.pc-role th { font-weight: 500; color: var(--muted); border-top: 0 }
+.pc-role td.up b { color: var(--good) } .pc-role td.dn b { color: var(--bad) }
+.pc-role .out-tag { font-size: 11px; padding: 1px 6px; border-radius: 99px; background: var(--bad-soft); color: var(--bad); margin-left: 4px }
 .pc-fs { display: grid; gap: 6px }
 .pc-fs .filters { gap: 6px } .pc-fs .filters button { padding: 5px 10px } .pc-fs .filters .lbl { min-width: 70px }
 @media (max-width: 640px) { .pc-fs .filters .lbl { min-width: 0; flex-basis: 100% } }
@@ -3289,6 +3299,20 @@ const PC_F = {
   ss: [["all", "Ambas"], ["cur", ""]],
   n: [[10, "10"], [20, "20"], [40, "40"]],
 };
+// "Su rol según quién juega": medias reales de esta temporada con / sin cada compañero clave (player_cards.py, ro)
+const RO_IX = { min: 1, pts: 2, reb: 3, ast: 4, fg3m: 5 }, RO_SUM = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"] };
+const roVal = (r, st) => !r ? null : RO_IX[st] ? r[RO_IX[st]] : RO_SUM[st] ? Math.round(RO_SUM[st].reduce((a, k) => a + r[RO_IX[k]], 0) * 10) / 10 : null;
+function roleBlock(P, st) {
+  const R = P.ro; if (!R || !R.m || !R.m.length) return "";
+  const s0 = RO_IX[st] || RO_SUM[st] ? st : "pts", lab = STAT_SHORT[s0] || s0;
+  const cellR = (r, ref) => { const v = roVal(r, s0); if (v == null) return `<td>—</td>`; const d = ref == null ? 0 : v - ref;
+    return `<td class="${d >= 1 ? "up" : d <= -1 ? "dn" : ""}"><b>${v}</b><span class="ro-n">${r[1]} min · ${r[0]} PJ</span></td>`; };
+  const hoy = R.hoy ? `<div>Hoy ${R.out.length ? `falta${R.out.length > 1 ? "n" : ""} <b>${R.out.map(esc).join(", ")}</b>` : "juegan todos sus compañeros clave"}. ${R.hoy[0] === 1 ? "En el único partido así hizo" : `En los <b>${R.hoy[0]}</b> partidos así promedia`} <b>${roVal(R.hoy, s0)} ${lab}</b> en ${R.hoy[1]} min.${R.hoy[0] < 3 ? ` <span class="muted">(muestra corta)</span>` : ""}</div>` : "";
+  return `<div class="pc-role"><span class="k">Su rol según quién juega · ${lab}</span>${hoy}
+    <div class="tbl-wrap"><table><thead><tr><th>Compañero</th><th>Con él</th><th>Sin él</th></tr></thead><tbody>
+    ${R.m.map(([n, o, w, wo]) => `<tr><td>${esc(n)}${o ? `<span class="out-tag">falta hoy</span>` : ""}</td>${cellR(w)}${cellR(wo, roVal(w, s0))}</tr>`).join("")}
+    </tbody></table></div><span class="muted">Medias reales de esta temporada. Verde/rojo: sube o baja al menos 1 sin ese compañero.</span></div>`;
+}
 function drawCard() {
   const { P, F, sp, name, date } = PC, body = $("#pc-body");
   const g = INDEX.games.find(x => x.id === PC.gid);
@@ -3331,6 +3355,7 @@ function drawCard() {
       <div>Proyecta <b>${ss.mean}</b> ${STAT_SHORT[st] || st} en ${sp.min} min (8 de cada 10 simulaciones entre ${ss.p10} y ${ss.p90}).${lp ? ` Over ${L}: <b>${lp.gt ? "más de " : lp.lt ? "menos de " : ""}${pct(lp.p, 0)}</b> · Under: <b>${lp.gt ? "menos de " : lp.lt ? "más de " : ""}${pct(1 - lp.p, 0)}</b>${!lp.gt && !lp.lt ? ` (cuota justa Over ${fairDec(lp.p)} · Under ${fairDec(1 - lp.p)})` : ""}.` : ""}</div>
       ${isMkt && (m[3] != null || m[4] != null) ? `<div class="muted">Con la línea de la casa, la probabilidad publicada (modelo mezclado con la casa) es Over ${m[3] != null ? pct(m[3], 0) : "—"} · Under ${m[4] != null ? pct(m[4], 0) : "—"}${m[1] && m[3] != null ? ` · EV Over ${evTxt(m[3] * m[1] - 1)}` : ""}${m[2] && m[4] != null ? ` · EV Under ${evTxt(m[4] * m[2] - 1)}` : ""}.</div>` : lp ? `<div class="muted">Con otra línea la probabilidad es solo la del modelo, sin mezclar con la casa.</div>` : ""}
     </div>` : ""}
+    ${roleBlock(P, st)}
     ${rows.length ? `<details><summary class="muted">Ver los partidos en tabla</summary><div class="tbl-wrap"><table class="pc-tbl"><thead><tr><th>Fecha</th><th>Rival</th><th class="r">Min</th><th class="r">${STAT_SHORT[st] || st}</th><th class="r">vs ${L}</th></tr></thead><tbody>
       ${rows.slice(0, PC.n).map(x => `<tr><td>${esc(x.r[F.ix.date])}</td><td>${x.r[F.ix.home] === 0 ? "@ " : x.r[F.ix.home] === 1 ? "vs " : ""}${esc(x.r[F.ix.opp] || "?")}</td><td class="r num">${x.r[F.ix.min] ?? "—"}</td><td class="r num"><b>${x.v}</b></td><td class="r">${ouPill(x.v > L ? "over" : x.v < L ? "under" : "push")}</td></tr>`).join("")}</tbody></table></div></details>` : ""}
     <div class="pc-foot">${PC.gid && location.hash !== "#" + PC.gid ? `<a href="#${esc(PC.gid)}" data-pc-go>Ver el partido</a>` : ""}<span class="muted">Temporada regular de esta temporada y la pasada (game logs de nba.com, box scores y H2H). Barras verdes: por encima de la línea; rojas: por debajo.</span></div>`;
