@@ -467,6 +467,16 @@ tr.detail td { background: var(--bg) }
 .dream-card .ds-opt { display: grid; gap: 2px; text-align: left; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: inherit; font: inherit; cursor: pointer }
 .dream-card .ds-opt:hover { border-color: var(--accent, currentColor) }
 .dream-card .ds-soft { color: var(--hot) }
+/* escritorio (13-nov, pedido de Nicolas): el soñador a lo ancho, patas en filas de tarjetas; en móvil sigue vertical */
+@media (min-width: 900px) {
+  #sonador .pl-list { grid-template-columns: 1fr }
+  .dream-card .pl-legs { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px }
+  .dream-card .pl-legs li { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; align-content: start; grid-template-columns: 22px 1fr }
+  .dream-card .pl-legs li .lp { grid-column: 2; display: flex; gap: 8px; align-items: center }
+  .dream-card .pl-legs li.ds-swapped { padding-left: 12px }
+  .dream-card .pl-stats { max-width: 640px }
+  .dream-past { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); align-items: start }
+}
 .pgroup.day .pg-t { text-transform: capitalize }
 .to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 6px;
   border: 0; border-radius: 999px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); font: 600 14px var(--body, inherit);
@@ -865,6 +875,28 @@ b.hi { color: var(--good) !important } b.lo { color: var(--bad) !important }
 .pcd-h2h { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted) }
 .h2c { font: 600 11.5px var(--mono); padding: 2px 7px; border-radius: 6px; background: var(--bad-soft); color: var(--bad) }
 .h2c.hit { background: var(--good-soft); color: var(--good) }
+[data-bx] { cursor: pointer }
+.pc-h3 { display: flex; align-items: center; gap: 8px; font-size: 16px; margin: 0 0 8px }
+.h2c[data-bx] { border: 0; font: 600 11.5px var(--mono) }
+.h2c[data-bx]:hover, .spk i[data-bx]:hover, .pc-bar[data-bx]:hover { outline: 2px solid var(--accent); outline-offset: 1px }
+.bx-tip { font-size: 11.5px; color: var(--muted); margin-top: -8px }
+dialog.gbox { width: min(820px, calc(100vw - 16px)) }
+dialog.gbox .g-body { padding-top: 12px } dialog.gbox .g-body > * + * { margin-top: 14px } dialog.gbox .gb-score + p { margin-top: 2px }
+.gb-score { display: flex; align-items: center; justify-content: center; gap: 14px; font: 600 15px var(--body); padding: 6px 0 2px }
+.gb-score b { font: 700 30px/1 var(--display, var(--body)) } .gb-score .w { color: var(--ink) } .gb-score .l { color: var(--muted) }
+.gb-me { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 6px }
+.gb-me div { border: 1px solid var(--line); border-radius: 10px; padding: 7px 8px; display: grid; gap: 2px }
+.gb-me small { font: 500 10.5px var(--mono); letter-spacing: .05em; color: var(--muted); text-transform: uppercase }
+.gb-me b { font: 700 19px var(--mono) } .gb-me .hl { border-color: var(--accent); background: var(--accent-soft) }
+.gb-tm { display: flex; gap: 6px; flex-wrap: wrap }
+.gb-tm button { border: 1px solid var(--line); background: none; color: var(--ink); border-radius: 99px; padding: 5px 12px; font: 600 13px var(--body); cursor: pointer }
+.gb-tm button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink) }
+table.gb-t { width: 100%; border-collapse: collapse; font-size: 13px }
+table.gb-t th, table.gb-t td { padding: 6px 6px; border-top: 1px solid var(--line); text-align: right; white-space: nowrap }
+table.gb-t th { color: var(--muted); font-weight: 500; border-top: 0; font-size: 11.5px }
+table.gb-t th:first-child, table.gb-t td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface) }
+table.gb-t tr.me td { background: var(--accent-soft); font-weight: 700 }
+table.gb-t tr.me td:first-child { background: var(--accent-soft) }
 .pcd-h2h b { margin-left: auto }
 .pcd-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 6px }
 .pcd-stats > div { display: grid; gap: 1px; padding: 6px 8px; border-radius: 10px; background: var(--bg); min-width: 0 }
@@ -991,6 +1023,10 @@ dialog.psearch .g-head { gap: 8px }
 <dialog class="guide pcard" id="pcard" aria-labelledby="pc-title">
   <div class="g-head"><span id="pc-face"></span><div class="pc-head-t"><h2 id="pc-title">Jugador</h2><div class="pc-sub" id="pc-sub"></div></div><button type="button" class="g-close" id="pc-close" aria-label="Cerrar ficha">×</button></div>
   <div class="g-body" id="pc-body"></div>
+</dialog>
+<dialog class="guide gbox" id="gbox" aria-labelledby="gb-title">
+  <div class="g-head"><div class="pc-head-t"><h2 id="gb-title">Partido</h2><div class="pc-sub" id="gb-sub"></div></div><button type="button" class="g-close" id="gb-close" aria-label="Cerrar partido">×</button></div>
+  <div class="g-body" id="gb-body"></div>
 </dialog>
 <dialog class="guide" id="guide" aria-labelledby="g-title">
   <div class="g-head"><h2 id="g-title">Cómo funciona</h2><button type="button" class="g-close" id="g-close" aria-label="Cerrar guía">×</button></div>
@@ -3346,7 +3382,7 @@ function drawCard() {
     <p class="muted">% de partidos por <b>encima</b> de ${L} (Over). ${sk.n >= 2 ? `Racha: <b class="rk-streak ${sk.side === "over" ? "ov" : "un"}">${sk.n} seguidos ${sk.side === "over" ? "por encima" : "por debajo"}</b>.` : ""}</p>
     ${shown.length ? `<div class="pc-chart"><div class="pc-plot">
       <div class="pc-ln" style="bottom:${(L / mx) * 100}%"><b>${L}</b></div>
-      ${shown.map(x => `<div class="pc-bar ${x.v > L ? "ov" : x.v < L ? "un" : ""}" style="height:${Math.max(1.5, (x.v / mx) * 100)}%" title="${esc(x.r[F.ix.date])} ${x.r[F.ix.home] ? "vs" : "@"} ${esc(x.r[F.ix.opp] || "")}: ${x.v} ${STAT_SHORT[st] || st} en ${x.r[F.ix.min]} min"><span>${x.v}</span></div>`).join("")}
+      ${shown.map(x => `<div class="pc-bar ${x.v > L ? "ov" : x.v < L ? "un" : ""}" style="height:${Math.max(1.5, (x.v / mx) * 100)}%"${x.r[F.ix.k] != null ? ` data-bx="${esc(date)}|${x.r[F.ix.k]}|${esc(name)}" role="button" tabindex="0"` : ""} title="${esc(x.r[F.ix.date])} ${x.r[F.ix.home] ? "vs" : "@"} ${esc(x.r[F.ix.opp] || "")}: ${x.v} ${STAT_SHORT[st] || st} en ${x.r[F.ix.min]} min"><span>${x.v}</span></div>`).join("")}
     </div><div class="pc-xl">${shown.map(x => `<div><b>${x.r[F.ix.home] === 0 ? "@" : ""}${esc(x.r[F.ix.opp] || "?")}</b>${dd(x.r[F.ix.date])}</div>`).join("")}</div></div>
     <p class="muted">${rows.length} partido${rows.length === 1 ? "" : "s"} con estos filtros · media <b>${avg.toFixed(1)}</b> · mediana <b>${med}</b> · ${mins.toFixed(1)} min de media${PC.rival !== "all" ? ` · rival según lo que concede de ${STAT_SHORT[st] || st} a su posición (${esc(P.dv || "")}) esta temporada` : ""}.</p>`
     : `<div class="panel empty">Ningún partido con estos filtros.</div>`}
@@ -3373,6 +3409,50 @@ $("#pc-body").addEventListener("click", e => {
   drawCard();
 });
 $("#pc-close").addEventListener("click", () => $("#pcard").close());
+// ---- Partido previo (13-nov, pedido de Nicolas): tocar una barra o un cruce abre el box score de ese partido ----
+const BXF = {};
+const boxesOf = date => BXF[date] || (BXF[date] = getJSON(`data/boxes/${date}.json`).then(B => { B.ix = Object.fromEntries(B.cols.map((c, i) => [c, i])); return B; }).catch(() => null));
+const GB = { t: null };
+async function openBox(key) {
+  const [date, k, name] = key.split("|"), dlg = $("#gbox");
+  $("#gb-title").textContent = "Partido"; $("#gb-sub").textContent = ""; $("#gb-body").innerHTML = `<p class="muted">Cargando…</p>`;
+  if (!dlg.open) { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); }
+  const B = await boxesOf(date), G = B && B.games[+k];
+  if (!G) { $("#gb-body").innerHTML = `<p class="muted">No hay box score de ese partido.</p>`; return; }
+  const [d, a, h, pa, ph, T] = G, me = pnorm(name);
+  const myT = Object.keys(T).find(t => T[t].some(r => pnorm(r[0]) === me)) || a;
+  Object.assign(GB, { B, G, name, me, t: myT });
+  drawBox();
+}
+function drawBox() {
+  const { B, G, me, name } = GB, [d, a, h, pa, ph, T] = G, ix = B.ix;
+  const v = (r, c) => r[ix[c]], dash = x => x == null ? "—" : x;
+  const sh = (r, m, at) => v(r, at) == null ? "—" : `${v(r, m)}/${v(r, at)}`;
+  const row = (T[GB.t] || []).find(r => pnorm(r[0]) === me) || Object.values(T).flat().find(r => pnorm(r[0]) === me);
+  const dd = `${d.slice(8, 10)}/${d.slice(5, 7)}/${d.slice(0, 4)}`;
+  $("#gb-title").innerHTML = `${badge(a)} <span class="muted">@</span> ${badge(h)}`;
+  $("#gb-sub").textContent = `${dd} · temporada ${seasonTxt(d)}`;
+  const won = pa > ph ? a : h, full = pa > 40 && ph > 40;
+  const st = [["Min", "min"], ["Pts", "pts"], ["Reb", "reb"], ["Ast", "ast"], ["P+R+A", null], ["Triples", ["fg3m", "fg3a"]], ["Tiros de campo", ["fgm", "fga"]], ["Libres", ["ftm", "fta"]], ["Robos", "stl"], ["Tapones", "blk"], ["Pérdidas", "tov"], ["Faltas", "pf"]];
+  const cellMe = ([lab, c]) => {
+    const val = !c ? (v(row, "pts") ?? 0) + (v(row, "reb") ?? 0) + (v(row, "ast") ?? 0) : Array.isArray(c) ? sh(row, c[0], c[1]) : dash(v(row, c));
+    return val === "—" ? "" : `<div${c === "min" ? ` class="hl"` : ""}><small>${lab}</small><b>${val}</b></div>`;
+  };
+  const teams = [GB.t, ...Object.keys(T).filter(t => t !== GB.t)];
+  const cols = [["MIN", "min"], ["PTS", "pts"], ["REB", "reb"], ["AST", "ast"], ["3PM", ["fg3m", "fg3a"]], ["TC", ["fgm", "fga"]], ["TL", ["ftm", "fta"]], ["ROB", "stl"], ["TAP", "blk"], ["PÉR", "tov"]];
+  const tb = (T[GB.t] || []).map(r => `<tr${pnorm(r[0]) === me ? ` class="me"` : ""}><td>${esc(r[0])}</td>${cols.map(([, c]) => `<td class="num">${Array.isArray(c) ? sh(r, c[0], c[1]) : dash(v(r, c))}</td>`).join("")}</tr>`).join("");
+  $("#gb-body").innerHTML = `
+    ${full ? `<div class="gb-score"><span class="${won === a ? "w" : "l"}">${esc(a)} <b>${pa}</b></span><span class="muted">–</span><span class="${won === h ? "w" : "l"}"><b>${ph}</b> ${esc(h)}</span></div>
+      <p class="muted" style="text-align:center">Ganó <b>${esc(won)}</b> por ${Math.abs(pa - ph)}${Math.abs(pa - ph) >= 15 ? " (paliza: los titulares suelen jugar menos)" : ""}.</p>` : ""}
+    ${row ? `<div><h3 class="pc-h3">${face(name)} ${esc(name)} en ese partido</h3><div class="gb-me">${st.map(cellMe).join("")}</div></div>` : ""}
+    <div class="gb-tm" role="group" aria-label="Equipo">${teams.map(t => `<button type="button" data-gbt="${esc(t)}" aria-pressed="${t === GB.t}">${esc(t)}</button>`).join("")}</div>
+    <div class="tbl-wrap"><table class="gb-t"><thead><tr><th>Jugador</th>${cols.map(([l]) => `<th>${l}</th>`).join("")}</tr></thead><tbody>${tb}</tbody></table></div>
+    <p class="muted">Box score de los game logs oficiales de nba.com (o del box score cargado esa noche). TC = tiros de campo, TL = tiros libres.</p>`;
+}
+$("#gb-close").addEventListener("click", () => $("#gbox").close());
+$("#gb-body").addEventListener("click", e => { const t = e.target.closest("[data-gbt]"); if (t) { GB.t = t.dataset.gbt; drawBox(); } });
+document.addEventListener("click", e => { const t = e.target.closest("[data-bx]"); if (!t) return; e.preventDefault(); e.stopPropagation(); openBox(t.dataset.bx); }, true);
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("[data-bx]")) { e.preventDefault(); openBox(e.target.dataset.bx); } });
 $("#pcard").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 
 // Rachas (#rachas): jugadores que llevan varios partidos seguidos por encima o por debajo de su línea de HOY
@@ -3582,7 +3662,7 @@ const pickCards = (list, thr) => `<div class="pcards-hint">Desliza → ${list.le
 function spkBars(xs, L, over, mini) {
   const top = Math.max(L * 1.5, ...xs.map(x => x.v), 1);
   const hit = v => over ? v > L : v < L;
-  return `<div class="spk${mini ? " mini" : ""}" style="--ln:${(L / top).toFixed(3)}">${xs.map(x => `<i class="${hit(x.v) ? "hit" : ""}" style="--h:${Math.max(x.v / top, .02).toFixed(3)}" title="${esc(x.d)} ${x.home ? "vs" : "@"} ${esc(x.opp)}: ${x.v}">${mini ? "" : `<b>${x.v}</b><em>${esc(x.opp)}</em>`}</i>`).join("")}</div>`;
+  return `<div class="spk${mini ? " mini" : ""}" style="--ln:${(L / top).toFixed(3)}">${xs.map(x => `<i class="${hit(x.v) ? "hit" : ""}" style="--h:${Math.max(x.v / top, .02).toFixed(3)}"${!mini && x.bx ? ` data-bx="${esc(x.bx)}" role="button" tabindex="0"` : ""} title="${esc(x.d)} ${x.home ? "vs" : "@"} ${esc(x.opp)}: ${x.v}">${mini ? "" : `<b>${x.v}</b><em>${esc(x.opp)}</em>`}</i>`).join("")}</div>`;
 }
 async function hydrateSparks(root) {
   const els = [...root.querySelectorAll("[data-spk]:not([data-done])")];
@@ -3591,7 +3671,8 @@ async function hydrateSparks(root) {
     const F = await playersOf(e.dataset.dt), P = F && F.players[e.dataset.spk];
     const st = e.dataset.st, L = +e.dataset.ln, over = e.dataset.sd === "o", mini = e.classList.contains("spk-mini");
     if (!P) { e.remove(); continue; }
-    const xs = P.g.map(r => ({ v: pcVal(F, r, st), d: r[F.ix.date], opp: r[F.ix.opp], home: r[F.ix.home], min: r[F.ix.min] }))
+    const bk = r => r[F.ix.k] == null ? null : `${e.dataset.dt}|${r[F.ix.k]}|${e.dataset.spk}`;
+    const xs = P.g.map(r => ({ v: pcVal(F, r, st), d: r[F.ix.date], opp: r[F.ix.opp], home: r[F.ix.home], min: r[F.ix.min], bx: bk(r) }))
       .filter(x => x.v != null && x.min > 0);
     const last = xs.slice(0, 10).reverse();
     if (!last.length) { e.remove(); continue; }
@@ -3600,8 +3681,8 @@ async function hydrateSparks(root) {
     const h2h = xs.filter(x => x.opp === P.opp).slice(0, 5);
     const hh = h2h.filter(x => over ? x.v > L : x.v < L).length;
     e.innerHTML = `<div class="pcd-vh"><span>Últimos ${last.length}</span><b class="${n / last.length >= .6 ? "hi" : n / last.length <= .4 ? "lo" : ""}">${n} de ${last.length}</b><span class="muted">línea ${L}</span></div>
-      ${spkBars(last, L, over)}
-      <div class="pcd-h2h"><span>Vs ${esc(P.opp)}</span>${h2h.length ? h2h.map(x => `<span class="h2c${(over ? x.v > L : x.v < L) ? " hit" : ""}" title="${esc(x.d)}">${x.v}</span>`).join("") + `<b class="${hh / h2h.length >= .6 ? "hi" : hh / h2h.length <= .4 ? "lo" : ""}">${hh} de ${h2h.length}</b>` : `<span class="muted">sin cruces recientes</span>`}</div>`;
+      ${spkBars(last, L, over)}${last.some(x => x.bx) ? `<div class="bx-tip">Toca una barra o un cruce para ver ese partido</div>` : ""}
+      <div class="pcd-h2h"><span>Vs ${esc(P.opp)}</span>${h2h.length ? h2h.map(x => x.bx ? `<button type="button" class="h2c${(over ? x.v > L : x.v < L) ? " hit" : ""}" data-bx="${esc(x.bx)}" title="${esc(x.d)}: ver el partido">${x.v}</button>` : `<span class="h2c${(over ? x.v > L : x.v < L) ? " hit" : ""}" title="${esc(x.d)}">${x.v}</span>`).join("") + `<b class="${hh / h2h.length >= .6 ? "hi" : hh / h2h.length <= .4 ? "lo" : ""}">${hh} de ${h2h.length}</b>` : `<span class="muted">sin cruces recientes</span>`}</div>`;
   }
 }
 new MutationObserver(() => { clearTimeout(hydrateSparks.t); hydrateSparks.t = setTimeout(() => hydrateSparks(document), 60); })
