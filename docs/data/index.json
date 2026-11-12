@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T23:20+00:00",
+ "generated": "2026-11-12T01:34+00:00",
  "value_ev": 0.03,
  "model": "1.5.1",
  "mkt_w": 0.25,
@@ -63,7 +63,7 @@
   },
   "2026-11-11": {
    "morning": "2026-11-11T16:29+00:00",
-   "pregame": "2026-11-11T23:20+00:00"
+   "pregame": "2026-11-12T01:34+00:00"
   }
  },
  "history": [
@@ -127321,28 +127321,28 @@
    "top_bets": [
     {
      "kind": "prop",
-     "label": "Desmond Bane Over 18.5 Puntos",
-     "player": "Desmond Bane",
+     "label": "Anthony Black Over 16.5 Puntos",
+     "player": "Anthony Black",
      "team": "ORL",
-     "line": 18.5,
-     "odds": -120,
-     "dec": 1.833,
+     "line": 16.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.652,
-     "implied": 0.545,
-     "fair": -187,
-     "edge": 0.106,
-     "ev": 0.195,
+     "p": 0.646,
+     "implied": 0.528,
+     "fair": -182,
+     "edge": 0.118,
+     "ev": 0.223,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.652,
+     "p_model": 0.646,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
      "hr": {
       "l10": [
-       4,
+       5,
        10
       ],
       "h2h": [
@@ -127350,10 +127350,49 @@
        2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 21.0,
-       "lg": 23.9,
+       "pos": "PG",
+       "rank": 29,
+       "value": 34.1,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Under 15.5 Puntos",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 15.5,
+     "odds": -111,
+     "dec": 1.901,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.526,
+     "fair": -172,
+     "edge": 0.106,
+     "ev": 0.201,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.632,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 30,
+       "value": 30.2,
+       "lg": 23.3,
        "n": 30
       }
      }
@@ -127367,15 +127406,15 @@
      "odds": -115,
      "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.609,
+     "p": 0.613,
      "implied": 0.535,
-     "fair": -156,
-     "edge": 0.074,
-     "ev": 0.139,
+     "fair": -158,
+     "edge": 0.078,
+     "ev": 0.146,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.609,
+     "p_model": 0.613,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -127393,44 +127432,6 @@
        "rank": 16,
        "value": 15.1,
        "lg": 14.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Under 7.5 Asistencias",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 7.5,
-     "odds": 105,
-     "dec": 2.05,
-     "odds_assumed": false,
-     "p": 0.52,
-     "implied": 0.488,
-     "fair": -108,
-     "edge": 0.032,
-     "ev": 0.067,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.656,
-     "p_mkt": 0.475,
-     "cand": true,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 2,
-       "value": 3.3,
-       "lg": 4.4,
        "n": 30
       }
      }
@@ -127462,20 +127463,20 @@
        "line": 5.5,
        "stat": "reb",
        "side": "under",
-       "p": 0.567,
+       "p": 0.58,
        "dec": 1.769,
-       "ev": 0.004,
+       "ev": 0.026,
        "gid": "2026-11-11-ORL-at-UTA",
        "game": "ORL @ UTA"
       }
      ],
      "n": 2,
-     "p": 0.333,
-     "p_indep": 0.331,
-     "corr": 1.01,
+     "p": 0.338,
+     "p_indep": 0.338,
+     "corr": 1.0,
      "dec": 3.08,
-     "fair": 3.01,
-     "ev": 0.024,
+     "fair": 2.96,
+     "ev": 0.042,
      "type": "sgp"
     }
    ],
@@ -127488,9 +127489,9 @@
      "stat": "fgm",
      "side": "over",
      "line": 5.5,
-     "p": 0.742,
-     "fair": 1.35,
-     "min_dec": 1.39,
+     "p": 0.745,
+     "fair": 1.34,
+     "min_dec": 1.38,
      "ref": 5.9,
      "label": "Desmond Bane Over 5.5 Tiros de campo anotados",
      "hr": {
@@ -127533,36 +127534,12 @@
      "model_only": true,
      "player": "Anthony Black",
      "team": "ORL",
-     "stat": "ftm",
-     "side": "over",
-     "line": 2.5,
-     "p": 0.698,
-     "fair": 1.43,
-     "min_dec": 1.47,
-     "ref": 3.0,
-     "label": "Anthony Black Over 2.5 Tiros libres anotados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Anthony Black",
-     "team": "ORL",
      "stat": "fga",
      "side": "over",
      "line": 11.5,
-     "p": 0.694,
-     "fair": 1.44,
-     "min_dec": 1.48,
+     "p": 0.699,
+     "fair": 1.43,
+     "min_dec": 1.47,
      "ref": 11.6,
      "label": "Anthony Black Over 11.5 Tiros de campo intentados",
      "hr": {
@@ -127581,10 +127558,34 @@
      "model_only": true,
      "player": "Anthony Black",
      "team": "ORL",
+     "stat": "ftm",
+     "side": "over",
+     "line": 2.5,
+     "p": 0.695,
+     "fair": 1.44,
+     "min_dec": 1.48,
+     "ref": 3.0,
+     "label": "Anthony Black Over 2.5 Tiros libres anotados",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Anthony Black",
+     "team": "ORL",
      "stat": "fgm",
      "side": "over",
      "line": 5.5,
-     "p": 0.676,
+     "p": 0.677,
      "fair": 1.48,
      "min_dec": 1.52,
      "ref": 5.5,
@@ -127608,8 +127609,8 @@
      "stat": "fta",
      "side": "over",
      "line": 3.5,
-     "p": 0.656,
-     "fair": 1.52,
+     "p": 0.654,
+     "fair": 1.53,
      "min_dec": 1.57,
      "ref": 3.8,
      "label": "Anthony Black Over 3.5 Tiros libres intentados",
@@ -127627,14 +127628,38 @@
     {
      "kind": "prop",
      "model_only": true,
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "stat": "fg2a",
+     "side": "over",
+     "line": 6.5,
+     "p": 0.646,
+     "fair": 1.55,
+     "min_dec": 1.59,
+     "ref": 6.5,
+     "label": "Desmond Bane Over 6.5 Dobles intentados",
+     "hr": {
+      "l10": [
+       1,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
      "player": "Anthony Black",
      "team": "ORL",
      "stat": "fg2a",
      "side": "over",
      "line": 7.5,
-     "p": 0.647,
+     "p": 0.645,
      "fair": 1.55,
-     "min_dec": 1.59,
+     "min_dec": 1.6,
      "ref": 7.1,
      "label": "Anthony Black Over 7.5 Dobles intentados",
      "hr": {
@@ -127653,36 +127678,12 @@
      "model_only": true,
      "player": "Desmond Bane",
      "team": "ORL",
-     "stat": "fg2a",
-     "side": "over",
-     "line": 6.5,
-     "p": 0.641,
-     "fair": 1.56,
-     "min_dec": 1.61,
-     "ref": 6.5,
-     "label": "Desmond Bane Over 6.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       1,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Desmond Bane",
-     "team": "ORL",
      "stat": "fta",
      "side": "over",
      "line": 3.5,
-     "p": 0.629,
-     "fair": 1.59,
-     "min_dec": 1.64,
+     "p": 0.631,
+     "fair": 1.58,
+     "min_dec": 1.63,
      "ref": 3.6,
      "label": "Desmond Bane Over 3.5 Tiros libres intentados",
      "hr": {
@@ -127704,9 +127705,9 @@
      "stat": "fga",
      "side": "over",
      "line": 14.5,
-     "p": 0.623,
+     "p": 0.627,
      "fair": 1.6,
-     "min_dec": 1.65,
+     "min_dec": 1.64,
      "ref": 14.2,
      "label": "Desmond Bane Over 14.5 Tiros de campo intentados",
      "hr": {
@@ -127723,38 +127724,14 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "stat": "fgm",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.618,
-     "fair": 1.62,
-     "min_dec": 1.67,
-     "ref": 5.9,
-     "label": "Darryn Peterson Over 5.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Desmond Bane",
      "team": "ORL",
      "stat": "fg2m",
      "side": "over",
      "line": 3.5,
-     "p": 0.607,
-     "fair": 1.65,
-     "min_dec": 1.7,
+     "p": 0.611,
+     "fair": 1.64,
+     "min_dec": 1.69,
      "ref": 3.1,
      "label": "Desmond Bane Over 3.5 Dobles anotados",
      "hr": {
@@ -127776,9 +127753,9 @@
      "stat": "ftm",
      "side": "over",
      "line": 3.5,
-     "p": 0.582,
-     "fair": 1.72,
-     "min_dec": 1.77,
+     "p": 0.584,
+     "fair": 1.71,
+     "min_dec": 1.76,
      "ref": 3.1,
      "label": "Desmond Bane Over 3.5 Tiros libres anotados",
      "hr": {
@@ -127795,36 +127772,12 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.574,
-     "fair": 1.74,
-     "min_dec": 1.8,
-     "ref": 3.7,
-     "label": "Darryn Peterson Over 3.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Franz Wagner",
      "team": "ORL",
      "stat": "ftm",
      "side": "over",
      "line": 4.5,
-     "p": 0.572,
+     "p": 0.571,
      "fair": 1.75,
      "min_dec": 1.8,
      "ref": 4.9,
@@ -127867,62 +127820,14 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "stat": "fgm",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.566,
-     "fair": 1.77,
-     "min_dec": 1.82,
-     "ref": 3.7,
-     "label": "Jaxson Hayes Over 3.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "stat": "fg2m",
-     "side": "over",
-     "line": 3.5,
-     "p": 0.562,
-     "fair": 1.78,
-     "min_dec": 1.83,
-     "ref": 3.7,
-     "label": "Jaxson Hayes Over 3.5 Dobles anotados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
      "player": "Franz Wagner",
      "team": "ORL",
      "stat": "fg2a",
      "side": "over",
      "line": 12.5,
-     "p": 0.556,
-     "fair": 1.8,
-     "min_dec": 1.85,
+     "p": 0.561,
+     "fair": 1.78,
+     "min_dec": 1.84,
      "ref": 12.8,
      "label": "Franz Wagner Over 12.5 Dobles intentados",
      "hr": {
@@ -127940,27 +127845,27 @@
    "all_bets": [
     {
      "kind": "prop",
-     "label": "Desmond Bane Over 18.5 Puntos",
-     "player": "Desmond Bane",
+     "label": "Anthony Black Over 16.5 Puntos",
+     "player": "Anthony Black",
      "team": "ORL",
-     "line": 18.5,
-     "odds": -120,
-     "dec": 1.833,
+     "line": 16.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.652,
-     "implied": 0.545,
-     "edge": 0.106,
-     "ev": 0.195,
+     "p": 0.646,
+     "implied": 0.528,
+     "edge": 0.118,
+     "ev": 0.223,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.652,
+     "p_model": 0.646,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
      "hr": {
       "l10": [
-       4,
+       5,
        10
       ],
       "h2h": [
@@ -127968,10 +127873,48 @@
        2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 21.0,
-       "lg": 23.9,
+       "pos": "PG",
+       "rank": 29,
+       "value": 34.1,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Under 15.5 Puntos",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 15.5,
+     "odds": -111,
+     "dec": 1.901,
+     "odds_assumed": false,
+     "p": 0.632,
+     "implied": 0.526,
+     "edge": 0.106,
+     "ev": 0.201,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.632,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 30,
+       "value": 30.2,
+       "lg": 23.3,
        "n": 30
       }
      }
@@ -127985,14 +127928,14 @@
      "odds": -115,
      "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.609,
+     "p": 0.613,
      "implied": 0.535,
-     "edge": 0.074,
-     "ev": 0.139,
+     "edge": 0.078,
+     "ev": 0.146,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.609,
+     "p_model": 0.613,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -128026,11 +127969,11 @@
      "p": 0.52,
      "implied": 0.488,
      "edge": 0.032,
-     "ev": 0.067,
+     "ev": 0.065,
      "value": false,
      "stat": "ast",
      "side": "under",
-     "p_model": 0.656,
+     "p_model": 0.653,
      "p_mkt": 0.475,
      "cand": true,
      "hr": {
@@ -128049,6 +127992,48 @@
        "lg": 4.4,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 18.5 Puntos",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 18.5,
+     "odds": -102,
+     "dec": 1.98,
+     "odds_assumed": false,
+     "p": 0.533,
+     "implied": 0.505,
+     "edge": 0.028,
+     "ev": 0.056,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.66,
+     "p_mkt": 0.491,
+     "cand": false,
+     "no_value_why": "sin Unders de rookies ni de quien no jugó la temporada pasada",
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 7,
+       "value": 22.1,
+       "lg": 23.9,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -128088,14 +128073,14 @@
      "odds": -150,
      "dec": 1.667,
      "odds_assumed": false,
-     "p": 0.629,
+     "p": 0.63,
      "implied": 0.6,
-     "edge": 0.029,
-     "ev": 0.048,
+     "edge": 0.03,
+     "ev": 0.05,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.808,
+     "p_model": 0.813,
      "p_mkt": 0.569,
      "cand": true,
      "hr": {
@@ -128125,14 +128110,14 @@
      "odds": -110,
      "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.545,
+     "p": 0.546,
      "implied": 0.524,
-     "edge": 0.021,
-     "ev": 0.041,
+     "edge": 0.022,
+     "ev": 0.042,
      "value": false,
      "stat": "ra",
      "side": "under",
-     "p_model": 0.624,
+     "p_model": 0.627,
      "p_mkt": 0.519,
      "cand": true,
      "hr": {
@@ -128148,217 +128133,36 @@
     },
     {
      "kind": "prop",
-     "label": "Keyonte George Under 1.5 Triples",
-     "player": "Keyonte George",
+     "label": "Darryn Peterson Under 22.5 PTS+REB",
+     "player": "Darryn Peterson",
      "team": "UTA",
-     "line": 1.5,
-     "odds": 145,
-     "dec": 2.45,
+     "line": 22.5,
+     "odds": -105,
+     "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.418,
-     "implied": 0.408,
-     "edge": 0.01,
-     "ev": 0.024,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.514,
-     "p_mkt": 0.386,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 9,
-       "value": 3.1,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Wendell Carter Jr. Under 13.5 Puntos",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 13.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.568,
-     "implied": 0.556,
-     "edge": 0.012,
-     "ev": 0.022,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.568,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 4,
-       "value": 18.2,
-       "lg": 22.2,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Desmond Bane Over 23.5 PTS+REB",
-     "player": "Desmond Bane",
-     "team": "ORL",
-     "line": 23.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.532,
-     "implied": 0.524,
-     "edge": 0.008,
-     "ev": 0.016,
+     "p": 0.527,
+     "implied": 0.512,
+     "edge": 0.015,
+     "ev": 0.029,
      "value": false,
      "stat": "pr",
-     "side": "over",
-     "p_model": 0.615,
-     "p_mkt": 0.504,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Under 1.5 Triples",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 1.5,
-     "odds": -135,
-     "dec": 1.741,
-     "odds_assumed": false,
-     "p": 0.583,
-     "implied": 0.574,
-     "edge": 0.009,
-     "ev": 0.015,
-     "value": false,
-     "stat": "fg3m",
      "side": "under",
-     "p_model": 0.638,
-     "p_mkt": 0.565,
+     "p_model": 0.655,
+     "p_mkt": 0.484,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       6,
        10
       ],
       "h2h": [
        0,
        0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 10,
-       "value": 2.4,
-       "lg": 2.7,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Anthony Black Under 1.5 Triples",
-     "player": "Anthony Black",
-     "team": "ORL",
-     "line": 1.5,
-     "odds": 120,
-     "dec": 2.2,
-     "odds_assumed": false,
-     "p": 0.459,
-     "implied": 0.455,
-     "edge": 0.005,
-     "ev": 0.01,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.543,
-     "p_mkt": 0.431,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 16,
-       "value": 3.7,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Over 13.5 Puntos",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 13.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.516,
-     "implied": 0.512,
-     "edge": 0.004,
-     "ev": 0.008,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.589,
-     "p_mkt": 0.492,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 30,
-       "value": 30.2,
-       "lg": 23.3,
-       "n": 30
-      }
+      ]
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -128370,14 +128174,14 @@
      "odds": -130,
      "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.567,
+     "p": 0.58,
      "implied": 0.565,
-     "edge": 0.002,
-     "ev": 0.004,
+     "edge": 0.015,
+     "ev": 0.026,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.624,
+     "p_model": 0.674,
      "p_mkt": 0.549,
      "cand": false,
      "hr": {
@@ -128400,6 +128204,437 @@
     },
     {
      "kind": "prop",
+     "label": "Keyonte George Under 1.5 Triples",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 1.5,
+     "odds": 145,
+     "dec": 2.45,
+     "odds_assumed": false,
+     "p": 0.418,
+     "implied": 0.408,
+     "edge": 0.01,
+     "ev": 0.024,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.513,
+     "p_mkt": 0.386,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 3.1,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 26.5 PTS+REB+AST",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 26.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.524,
+     "implied": 0.512,
+     "edge": 0.012,
+     "ev": 0.023,
+     "value": false,
+     "stat": "pra",
+     "side": "under",
+     "p_model": 0.643,
+     "p_mkt": 0.484,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 11,
+       "value": 34.4,
+       "lg": 36.1,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Desmond Bane Over 19.5 Puntos",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 19.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.524,
+     "implied": 0.512,
+     "edge": 0.011,
+     "ev": 0.022,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.605,
+     "p_mkt": 0.497,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 3,
+       "value": 21.0,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Under 24.5 Puntos",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 24.5,
+     "odds": -118,
+     "dec": 1.847,
+     "odds_assumed": false,
+     "p": 0.55,
+     "implied": 0.541,
+     "edge": 0.009,
+     "ev": 0.016,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.55,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 17,
+       "value": 21.0,
+       "lg": 20.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Desmond Bane Over 23.5 PTS+REB",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 23.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.532,
+     "implied": 0.524,
+     "edge": 0.008,
+     "ev": 0.016,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.616,
+     "p_mkt": 0.504,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 22.5 PTS+AST",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 22.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.537,
+     "implied": 0.528,
+     "edge": 0.008,
+     "ev": 0.016,
+     "value": false,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.647,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Under 1.5 Triples",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 1.5,
+     "odds": -135,
+     "dec": 1.741,
+     "odds_assumed": false,
+     "p": 0.583,
+     "implied": 0.574,
+     "edge": 0.009,
+     "ev": 0.015,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.637,
+     "p_mkt": 0.565,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 10,
+       "value": 2.4,
+       "lg": 2.7,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Under 1.5 Triples",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 1.5,
+     "odds": 110,
+     "dec": 2.1,
+     "odds_assumed": false,
+     "p": 0.483,
+     "implied": 0.476,
+     "edge": 0.007,
+     "ev": 0.015,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.585,
+     "p_mkt": 0.449,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 15,
+       "value": 2.7,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Jaxson Hayes Under 6.5 Rebotes",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 6.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.564,
+     "implied": 0.556,
+     "edge": 0.008,
+     "ev": 0.015,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.676,
+     "p_mkt": 0.526,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 12,
+       "value": 13.7,
+       "lg": 14.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Anthony Black Under 1.5 Triples",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 1.5,
+     "odds": 120,
+     "dec": 2.2,
+     "odds_assumed": false,
+     "p": 0.458,
+     "implied": 0.455,
+     "edge": 0.004,
+     "ev": 0.008,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.539,
+     "p_mkt": 0.431,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 16,
+       "value": 3.7,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Desmond Bane Over 22.5 PTS+AST",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 22.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.512,
+     "edge": 0.002,
+     "ev": 0.004,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "p_model": 0.578,
+     "p_mkt": 0.493,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Desmond Bane Under 2.5 Triples",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 2.5,
+     "odds": 130,
+     "dec": 2.3,
+     "odds_assumed": false,
+     "p": 0.436,
+     "implied": 0.435,
+     "edge": 0.001,
+     "ev": 0.002,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.501,
+     "p_mkt": 0.414,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 13,
+       "value": 3.1,
+       "lg": 3.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Anthony Black Over 27.5 PTS+REB+AST",
      "player": "Anthony Black",
      "team": "ORL",
@@ -128407,14 +128642,14 @@
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.514,
+     "p": 0.513,
      "implied": 0.512,
-     "edge": 0.002,
-     "ev": 0.003,
+     "edge": 0.001,
+     "ev": 0.002,
      "value": false,
      "stat": "pra",
      "side": "over",
-     "p_model": 0.573,
+     "p_model": 0.57,
      "p_mkt": 0.494,
      "cand": false,
      "hr": {
@@ -128446,12 +128681,12 @@
      "odds_assumed": false,
      "p": 0.546,
      "implied": 0.545,
-     "edge": 0.001,
-     "ev": 0.002,
+     "edge": 0.0,
+     "ev": 0.001,
      "value": false,
      "stat": "ra",
      "side": "under",
-     "p_model": 0.628,
+     "p_model": 0.626,
      "p_mkt": 0.519,
      "cand": false,
      "hr": {
@@ -128467,36 +128702,6 @@
     },
     {
      "kind": "prop",
-     "label": "Desmond Bane Over 22.5 PTS+AST",
-     "player": "Desmond Bane",
-     "team": "ORL",
-     "line": 22.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.514,
-     "implied": 0.512,
-     "edge": 0.001,
-     "ev": 0.002,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "p_model": 0.574,
-     "p_mkt": 0.493,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Franz Wagner Under 31.5 PTS+AST",
      "player": "Franz Wagner",
      "team": "ORL",
@@ -128507,11 +128712,11 @@
      "p": 0.51,
      "implied": 0.51,
      "edge": 0.0,
-     "ev": 0.001,
+     "ev": 0.0,
      "value": false,
      "stat": "pa",
      "side": "under",
-     "p_model": 0.558,
+     "p_model": 0.557,
      "p_mkt": 0.494,
      "cand": false,
      "hr": {
@@ -128527,80 +128732,6 @@
     },
     {
      "kind": "prop",
-     "label": "Desmond Bane Under 2.5 Triples",
-     "player": "Desmond Bane",
-     "team": "ORL",
-     "line": 2.5,
-     "odds": 130,
-     "dec": 2.3,
-     "odds_assumed": false,
-     "p": 0.435,
-     "implied": 0.435,
-     "edge": 0.0,
-     "ev": 0.001,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.499,
-     "p_mkt": 0.414,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 13,
-       "value": 3.1,
-       "lg": 3.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Under 1.5 Triples",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 1.5,
-     "odds": 110,
-     "dec": 2.1,
-     "odds_assumed": false,
-     "p": 0.475,
-     "implied": 0.476,
-     "edge": -0.001,
-     "ev": -0.002,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.552,
-     "p_mkt": 0.449,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 15,
-       "value": 2.7,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Desmond Bane Under 4.5 Rebotes",
      "player": "Desmond Bane",
      "team": "ORL",
@@ -128608,14 +128739,14 @@
      "odds": -125,
      "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.554,
+     "p": 0.555,
      "implied": 0.556,
      "edge": -0.001,
-     "ev": -0.003,
+     "ev": -0.002,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.58,
+     "p_model": 0.582,
      "p_mkt": 0.545,
      "cand": false,
      "hr": {
@@ -128638,103 +128769,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Over 15.5 PTS+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 15.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.527,
-     "implied": 0.528,
-     "edge": -0.002,
-     "ev": -0.003,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "p_model": 0.607,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Over 19.5 Puntos",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 19.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.542,
-     "implied": 0.545,
-     "edge": -0.003,
-     "ev": -0.006,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.622,
-     "p_mkt": 0.516,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 13,
-       "value": 25.6,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Anthony Black Over 22.5 PTS+REB",
-     "player": "Anthony Black",
-     "team": "ORL",
-     "line": 22.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.531,
-     "implied": 0.535,
-     "edge": -0.003,
-     "ev": -0.006,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "p_model": 0.593,
-     "p_mkt": 0.511,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Franz Wagner Over 6.5 Rebotes",
      "player": "Franz Wagner",
      "team": "ORL",
@@ -128742,14 +128776,14 @@
      "odds": 116,
      "dec": 2.16,
      "odds_assumed": false,
-     "p": 0.46,
+     "p": 0.461,
      "implied": 0.463,
-     "edge": -0.003,
-     "ev": -0.007,
+     "edge": -0.002,
+     "ev": -0.005,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.462,
+     "p_model": 0.466,
      "p_mkt": 0.459,
      "cand": false,
      "hr": {
@@ -128772,22 +128806,52 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Over 3.5 Asistencias",
+     "label": "Anthony Black Over 22.5 PTS+REB",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 22.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.531,
+     "implied": 0.535,
+     "edge": -0.004,
+     "ev": -0.007,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.591,
+     "p_mkt": 0.511,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 4.5 Rebotes",
      "player": "Darryn Peterson",
      "team": "UTA",
-     "line": 3.5,
-     "odds": -112,
-     "dec": 1.893,
+     "line": 4.5,
+     "odds": -150,
+     "dec": 1.667,
      "odds_assumed": false,
-     "p": 0.524,
-     "implied": 0.528,
-     "edge": -0.004,
+     "p": 0.595,
+     "implied": 0.6,
+     "edge": -0.005,
      "ev": -0.008,
      "value": false,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.554,
-     "p_mkt": 0.514,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.674,
+     "p_mkt": 0.569,
      "cand": false,
      "hr": {
       "l10": [
@@ -128800,89 +128864,15 @@
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 23,
-       "value": 6.4,
-       "lg": 5.6,
+       "rank": 7,
+       "value": 5.9,
+       "lg": 6.6,
        "n": 30
       }
      },
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Jaxson Hayes Under 6.5 Rebotes",
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "line": 6.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.551,
-     "implied": 0.556,
-     "edge": -0.004,
-     "ev": -0.008,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.626,
-     "p_mkt": 0.526,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 12,
-       "value": 13.7,
-       "lg": 14.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Under 6.5 Rebotes",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 6.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.54,
-     "implied": 0.545,
-     "edge": -0.005,
-     "ev": -0.01,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "p_model": 0.538,
-     "p_mkt": 0.541,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 27,
-       "value": 9.3,
-       "lg": 8.0,
-       "n": 30
-      }
      }
     },
     {
@@ -128894,14 +128884,14 @@
      "odds": -115,
      "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.529,
+     "p": 0.53,
      "implied": 0.535,
-     "edge": -0.006,
-     "ev": -0.01,
+     "edge": -0.005,
+     "ev": -0.009,
      "value": false,
      "stat": "pra",
      "side": "over",
-     "p_model": 0.588,
+     "p_model": 0.59,
      "p_mkt": 0.51,
      "cand": false,
      "hr": {
@@ -128924,39 +128914,80 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Over 1.5 Asistencias",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 1.5,
-     "odds": -135,
-     "dec": 1.741,
+     "label": "Franz Wagner Under 6.5 Rebotes",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 6.5,
+     "odds": -120,
+     "dec": 1.833,
      "odds_assumed": false,
-     "p": 0.568,
-     "implied": 0.574,
-     "edge": -0.007,
+     "p": 0.539,
+     "implied": 0.545,
+     "edge": -0.006,
      "ev": -0.012,
      "value": false,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.648,
+     "stat": "reb",
+     "side": "under",
+     "p_model": 0.534,
      "p_mkt": 0.541,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
-       2,
-       2
+       0,
+       0
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 28,
-       "value": 6.2,
-       "lg": 4.7,
+       "pos": "SF",
+       "rank": 27,
+       "value": 9.3,
+       "lg": 8.0,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Under 2.5 Triples",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 2.5,
+     "odds": -145,
+     "dec": 1.69,
+     "odds_assumed": false,
+     "p": 0.584,
+     "implied": 0.592,
+     "edge": -0.008,
+     "ev": -0.013,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "p_model": 0.657,
+     "p_mkt": 0.56,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 18,
+       "value": 3.5,
+       "lg": 3.3,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -128970,12 +129001,12 @@
      "odds_assumed": false,
      "p": 0.42,
      "implied": 0.426,
-     "edge": -0.005,
-     "ev": -0.012,
+     "edge": -0.006,
+     "ev": -0.013,
      "value": false,
      "stat": "fg3m",
      "side": "under",
-     "p_model": 0.45,
+     "p_model": 0.448,
      "p_mkt": 0.411,
      "cand": false,
      "hr": {
@@ -128998,22 +129029,22 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Over 20.5 PTS+REB+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 20.5,
-     "odds": -115,
-     "dec": 1.87,
+     "label": "Wendell Carter Jr. Over 14.5 PTS+AST",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 14.5,
+     "odds": -102,
+     "dec": 1.98,
      "odds_assumed": false,
-     "p": 0.526,
-     "implied": 0.535,
+     "p": 0.497,
+     "implied": 0.505,
      "edge": -0.008,
-     "ev": -0.016,
+     "ev": -0.015,
      "value": false,
-     "stat": "pra",
+     "stat": "pa",
      "side": "over",
-     "p_model": 0.59,
-     "p_mkt": 0.505,
+     "p_model": 0.5,
+     "p_mkt": 0.496,
      "cand": false,
      "hr": {
       "l10": [
@@ -129023,14 +129054,7 @@
       "h2h": [
        1,
        2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 30,
-       "value": 47.4,
-       "lg": 38.7,
-       "n": 30
-      }
+      ]
      }
     },
     {
@@ -129042,14 +129066,14 @@
      "odds": -112,
      "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.519,
+     "p": 0.518,
      "implied": 0.528,
-     "edge": -0.009,
-     "ev": -0.017,
+     "edge": -0.01,
+     "ev": -0.019,
      "value": false,
      "stat": "pra",
      "side": "under",
-     "p_model": 0.56,
+     "p_model": 0.557,
      "p_mkt": 0.505,
      "cand": false,
      "hr": {
@@ -129072,36 +129096,6 @@
     },
     {
      "kind": "prop",
-     "label": "Wendell Carter Jr. Over 14.5 PTS+AST",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 14.5,
-     "odds": -102,
-     "dec": 1.98,
-     "odds_assumed": false,
-     "p": 0.497,
-     "implied": 0.505,
-     "edge": -0.008,
-     "ev": -0.017,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "p_model": 0.497,
-     "p_mkt": 0.496,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Wendell Carter Jr. Under 14.5 PTS+AST",
      "player": "Wendell Carter Jr.",
      "team": "ORL",
@@ -129109,14 +129103,14 @@
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
-     "p": 0.503,
+     "p": 0.502,
      "implied": 0.512,
-     "edge": -0.009,
-     "ev": -0.017,
+     "edge": -0.01,
+     "ev": -0.019,
      "value": false,
      "stat": "pa",
      "side": "under",
-     "p_model": 0.503,
+     "p_model": 0.499,
      "p_mkt": 0.504,
      "cand": false,
      "hr": {
@@ -129139,14 +129133,14 @@
      "odds": 100,
      "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.491,
+     "p": 0.49,
      "implied": 0.5,
-     "edge": -0.009,
-     "ev": -0.019,
+     "edge": -0.01,
+     "ev": -0.02,
      "value": false,
      "stat": "pa",
      "side": "over",
-     "p_model": 0.525,
+     "p_model": 0.522,
      "p_mkt": 0.479,
      "cand": false,
      "hr": {
@@ -129162,37 +129156,67 @@
     },
     {
      "kind": "prop",
-     "label": "Franz Wagner Under 23.5 Puntos",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 23.5,
-     "odds": -105,
-     "dec": 1.952,
+     "label": "Ace Bailey Under 6.5 REB+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 6.5,
+     "odds": 115,
+     "dec": 2.15,
      "odds_assumed": false,
-     "p": 0.502,
-     "implied": 0.512,
-     "edge": -0.011,
-     "ev": -0.021,
+     "p": 0.456,
+     "implied": 0.465,
+     "edge": -0.009,
+     "ev": -0.02,
      "value": false,
-     "stat": "pts",
+     "stat": "ra",
      "side": "under",
-     "p_model": 0.506,
-     "p_mkt": 0.5,
+     "p_model": 0.503,
+     "p_mkt": 0.44,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       4,
        10
       ],
       "h2h": [
-       0,
-       0
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Over 21.5 Puntos",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 21.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.489,
+     "implied": 0.5,
+     "edge": -0.011,
+     "ev": -0.022,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.535,
+     "p_mkt": 0.474,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 17,
-       "value": 21.0,
-       "lg": 20.0,
+       "pos": "PG",
+       "rank": 13,
+       "value": 25.6,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -129206,14 +129230,14 @@
      "odds": 120,
      "dec": 2.2,
      "odds_assumed": false,
-     "p": 0.444,
+     "p": 0.445,
      "implied": 0.455,
      "edge": -0.01,
-     "ev": -0.023,
+     "ev": -0.022,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.484,
+     "p_model": 0.485,
      "p_mkt": 0.431,
      "cand": false,
      "hr": {
@@ -129236,22 +129260,22 @@
     },
     {
      "kind": "prop",
-     "label": "Anthony Black Over 9.5 REB+AST",
+     "label": "Anthony Black Under 9.5 REB+AST",
      "player": "Anthony Black",
      "team": "ORL",
      "line": 9.5,
-     "odds": 100,
-     "dec": 2.0,
+     "odds": -110,
+     "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.488,
-     "implied": 0.5,
-     "edge": -0.012,
-     "ev": -0.023,
+     "p": 0.512,
+     "implied": 0.524,
+     "edge": -0.011,
+     "ev": -0.022,
      "value": false,
      "stat": "ra",
-     "side": "over",
-     "p_model": 0.488,
-     "p_mkt": 0.488,
+     "side": "under",
+     "p_model": 0.515,
+     "p_mkt": 0.512,
      "cand": false,
      "hr": {
       "l10": [
@@ -129266,32 +129290,39 @@
     },
     {
      "kind": "prop",
-     "label": "Anthony Black Under 9.5 REB+AST",
-     "player": "Anthony Black",
-     "team": "ORL",
-     "line": 9.5,
-     "odds": -110,
-     "dec": 1.909,
+     "label": "Ace Bailey Over 1.5 Asistencias",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 1.5,
+     "odds": -135,
+     "dec": 1.741,
      "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.524,
-     "edge": -0.012,
-     "ev": -0.023,
+     "p": 0.56,
+     "implied": 0.574,
+     "edge": -0.014,
+     "ev": -0.024,
      "value": false,
-     "stat": "ra",
-     "side": "under",
-     "p_model": 0.512,
-     "p_mkt": 0.512,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.619,
+     "p_mkt": 0.541,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       6,
        10
       ],
       "h2h": [
-       1,
+       2,
        2
-      ]
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 28,
+       "value": 6.2,
+       "lg": 4.7,
+       "n": 30
+      }
      }
     },
     {
@@ -129323,39 +129354,32 @@
     },
     {
      "kind": "prop",
-     "label": "Anthony Black Over 18.5 Puntos",
+     "label": "Anthony Black Over 9.5 REB+AST",
      "player": "Anthony Black",
      "team": "ORL",
-     "line": 18.5,
-     "odds": -105,
-     "dec": 1.952,
+     "line": 9.5,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.512,
-     "edge": -0.013,
-     "ev": -0.026,
+     "p": 0.488,
+     "implied": 0.5,
+     "edge": -0.012,
+     "ev": -0.025,
      "value": false,
-     "stat": "pts",
+     "stat": "ra",
      "side": "over",
-     "p_model": 0.544,
-     "p_mkt": 0.484,
+     "p_model": 0.485,
+     "p_mkt": 0.488,
      "cand": false,
      "hr": {
       "l10": [
-       2,
+       5,
        10
       ],
       "h2h": [
-       2,
+       1,
        2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 29,
-       "value": 34.1,
-       "lg": 27.0,
-       "n": 30
-      }
+      ]
      }
     },
     {
@@ -129397,63 +129421,26 @@
     },
     {
      "kind": "prop",
-     "label": "Franz Wagner Over 23.5 Puntos",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 23.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.498,
-     "implied": 0.512,
-     "edge": -0.014,
-     "ev": -0.027,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.494,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 17,
-       "value": 21.0,
-       "lg": 20.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darryn Peterson Under 4.5 Rebotes",
+     "label": "Darryn Peterson Under 3.5 Asistencias",
      "player": "Darryn Peterson",
      "team": "UTA",
-     "line": 4.5,
-     "odds": -150,
-     "dec": 1.667,
+     "line": 3.5,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
-     "p": 0.583,
-     "implied": 0.6,
-     "edge": -0.016,
+     "p": 0.487,
+     "implied": 0.5,
+     "edge": -0.013,
      "ev": -0.027,
      "value": false,
-     "stat": "reb",
+     "stat": "ast",
      "side": "under",
-     "p_model": 0.627,
-     "p_mkt": 0.569,
+     "p_model": 0.488,
+     "p_mkt": 0.486,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       3,
        10
       ],
       "h2h": [
@@ -129462,9 +129449,9 @@
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 7,
-       "value": 5.9,
-       "lg": 6.6,
+       "rank": 23,
+       "value": 6.4,
+       "lg": 5.6,
        "n": 30
       }
      },
@@ -129475,36 +129462,32 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 22.5 PTS+REB",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 22.5,
-     "odds": -105,
-     "dec": 1.952,
+     "label": "Wendell Carter Jr. Under 10.5 REB+AST",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 10.5,
+     "odds": -110,
+     "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.512,
+     "p": 0.51,
+     "implied": 0.524,
      "edge": -0.014,
      "ev": -0.027,
      "value": false,
-     "stat": "pr",
+     "stat": "ra",
      "side": "under",
-     "p_model": 0.542,
-     "p_mkt": 0.484,
+     "p_model": 0.526,
+     "p_mkt": 0.504,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       5,
        10
       ],
       "h2h": [
-       0,
-       0
+       1,
+       2
       ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -129536,93 +129519,22 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 2.5 Triples",
+     "label": "Darryn Peterson Over 3.5 Asistencias",
      "player": "Darryn Peterson",
      "team": "UTA",
-     "line": 2.5,
-     "odds": -145,
-     "dec": 1.69,
+     "line": 3.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.575,
-     "implied": 0.592,
-     "edge": -0.017,
-     "ev": -0.028,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "p_model": 0.621,
-     "p_mkt": 0.56,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 18,
-       "value": 3.5,
-       "lg": 3.3,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Over 18.5 PTS+REB",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 18.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.531,
-     "implied": 0.545,
+     "p": 0.513,
+     "implied": 0.528,
      "edge": -0.015,
      "ev": -0.028,
      "value": false,
-     "stat": "pr",
+     "stat": "ast",
      "side": "over",
-     "p_model": 0.575,
-     "p_mkt": 0.516,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darryn Peterson Under 18.5 Puntos",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 18.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.509,
-     "implied": 0.524,
-     "edge": -0.015,
-     "ev": -0.029,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.55,
-     "p_mkt": 0.495,
+     "p_model": 0.512,
+     "p_mkt": 0.514,
      "cand": false,
      "hr": {
       "l10": [
@@ -129635,9 +129547,9 @@
       ],
       "dvp": {
        "pos": "SG",
-       "rank": 7,
-       "value": 22.1,
-       "lg": 23.9,
+       "rank": 23,
+       "value": 6.4,
+       "lg": 5.6,
        "n": 30
       }
      },
@@ -129648,22 +129560,56 @@
     },
     {
      "kind": "prop",
-     "label": "Wendell Carter Jr. Under 10.5 REB+AST",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 10.5,
-     "odds": -110,
-     "dec": 1.909,
+     "label": "Darryn Peterson Under 7.5 REB+AST",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 7.5,
+     "odds": 102,
+     "dec": 2.02,
      "odds_assumed": false,
-     "p": 0.509,
-     "implied": 0.524,
-     "edge": -0.015,
-     "ev": -0.029,
+     "p": 0.481,
+     "implied": 0.495,
+     "edge": -0.014,
+     "ev": -0.028,
      "value": false,
      "stat": "ra",
      "side": "under",
-     "p_model": 0.521,
-     "p_mkt": 0.504,
+     "p_model": 0.525,
+     "p_mkt": 0.467,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Over 27.5 PTS+AST",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 27.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.512,
+     "implied": 0.528,
+     "edge": -0.016,
+     "ev": -0.031,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "p_model": 0.548,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
@@ -129678,10 +129624,47 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 26.5 PTS+REB+AST",
-     "player": "Darryn Peterson",
+     "label": "Keyonte George Over 31.5 PTS+REB+AST",
+     "player": "Keyonte George",
      "team": "UTA",
-     "line": 26.5,
+     "line": 31.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.511,
+     "implied": 0.528,
+     "edge": -0.017,
+     "ev": -0.033,
+     "value": false,
+     "stat": "pra",
+     "side": "over",
+     "p_model": 0.544,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 16,
+       "value": 41.3,
+       "lg": 40.7,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Wendell Carter Jr. Under 12.5 Puntos",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 12.5,
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
@@ -129690,61 +129673,27 @@
      "edge": -0.017,
      "ev": -0.033,
      "value": false,
-     "stat": "pra",
+     "stat": "pts",
      "side": "under",
-     "p_model": 0.529,
-     "p_mkt": 0.484,
+     "p_model": 0.498,
+     "p_mkt": 0.494,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       5,
        10
       ],
       "h2h": [
-       0,
-       0
+       1,
+       2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 11,
-       "value": 34.4,
-       "lg": 36.1,
+       "pos": "C",
+       "rank": 4,
+       "value": 18.2,
+       "lg": 22.2,
        "n": 30
       }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Under 30.5 PTS+REB",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 30.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.51,
-     "implied": 0.528,
-     "edge": -0.018,
-     "ev": -0.034,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "p_model": 0.515,
-     "p_mkt": 0.509,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
      }
     },
     {
@@ -129786,26 +129735,116 @@
     },
     {
      "kind": "prop",
-     "label": "Keyonte George Over 27.5 PTS+AST",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 27.5,
+     "label": "Franz Wagner Under 30.5 PTS+REB",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 30.5,
      "odds": -112,
      "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.51,
+     "p": 0.509,
      "implied": 0.528,
      "edge": -0.019,
      "ev": -0.036,
      "value": false,
-     "stat": "pa",
-     "side": "over",
-     "p_model": 0.538,
-     "p_mkt": 0.5,
+     "stat": "pr",
+     "side": "under",
+     "p_model": 0.51,
+     "p_mkt": 0.509,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Under 18.5 PTS+REB",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 18.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.494,
+     "implied": 0.512,
+     "edge": -0.018,
+     "ev": -0.036,
+     "value": false,
+     "stat": "pr",
+     "side": "under",
+     "p_model": 0.523,
+     "p_mkt": 0.484,
      "cand": false,
      "hr": {
       "l10": [
        5,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Over 30.5 PTS+REB",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 30.5,
+     "odds": -104,
+     "dec": 1.962,
+     "odds_assumed": false,
+     "p": 0.491,
+     "implied": 0.51,
+     "edge": -0.019,
+     "ev": -0.037,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.49,
+     "p_mkt": 0.491,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Over 25.5 PTS+REB",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 25.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.508,
+     "implied": 0.528,
+     "edge": -0.02,
+     "ev": -0.037,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.534,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
        10
       ],
       "h2h": [
@@ -129816,22 +129855,22 @@
     },
     {
      "kind": "prop",
-     "label": "Keyonte George Over 31.5 PTS+REB+AST",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 31.5,
-     "odds": -112,
-     "dec": 1.893,
+     "label": "Wendell Carter Jr. Over 12.5 Puntos",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 12.5,
+     "odds": -110,
+     "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.509,
-     "implied": 0.528,
+     "p": 0.505,
+     "implied": 0.524,
      "edge": -0.019,
-     "ev": -0.036,
+     "ev": -0.037,
      "value": false,
-     "stat": "pra",
+     "stat": "pts",
      "side": "over",
-     "p_model": 0.536,
-     "p_mkt": 0.5,
+     "p_model": 0.502,
+     "p_mkt": 0.506,
      "cand": false,
      "hr": {
       "l10": [
@@ -129843,10 +129882,10 @@
        2
       ],
       "dvp": {
-       "pos": "PG",
-       "rank": 16,
-       "value": 41.3,
-       "lg": 40.7,
+       "pos": "C",
+       "rank": 4,
+       "value": 18.2,
+       "lg": 22.2,
        "n": 30
       }
      }
@@ -129860,14 +129899,14 @@
      "odds": 116,
      "dec": 2.16,
      "odds_assumed": false,
-     "p": 0.446,
+     "p": 0.445,
      "implied": 0.463,
-     "edge": -0.017,
-     "ev": -0.037,
+     "edge": -0.018,
+     "ev": -0.038,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.42,
+     "p_model": 0.418,
      "p_mkt": 0.455,
      "cand": false,
      "hr": {
@@ -129890,40 +129929,6 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 22.5 PTS+AST",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 22.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.508,
-     "implied": 0.528,
-     "edge": -0.02,
-     "ev": -0.037,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "p_model": 0.534,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Anthony Black Over 4.5 Rebotes",
      "player": "Anthony Black",
      "team": "ORL",
@@ -129933,12 +129938,12 @@
      "odds_assumed": false,
      "p": 0.504,
      "implied": 0.524,
-     "edge": -0.019,
-     "ev": -0.037,
+     "edge": -0.02,
+     "ev": -0.038,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.524,
+     "p_model": 0.523,
      "p_mkt": 0.498,
      "cand": false,
      "hr": {
@@ -129970,12 +129975,12 @@
      "odds_assumed": false,
      "p": 0.534,
      "implied": 0.556,
-     "edge": -0.021,
-     "ev": -0.038,
+     "edge": -0.022,
+     "ev": -0.039,
      "value": false,
      "stat": "ra",
      "side": "under",
-     "p_model": 0.558,
+     "p_model": 0.557,
      "p_mkt": 0.526,
      "cand": false,
      "hr": {
@@ -130001,11 +130006,11 @@
      "p": 0.543,
      "implied": 0.565,
      "edge": -0.022,
-     "ev": -0.039,
+     "ev": -0.04,
      "value": false,
      "stat": "ast",
      "side": "under",
-     "p_model": 0.574,
+     "p_model": 0.572,
      "p_mkt": 0.533,
      "cand": false,
      "hr": {
@@ -130028,103 +130033,6 @@
     },
     {
      "kind": "prop",
-     "label": "Franz Wagner Over 30.5 PTS+REB",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 30.5,
-     "odds": -104,
-     "dec": 1.962,
-     "odds_assumed": false,
-     "p": 0.49,
-     "implied": 0.51,
-     "edge": -0.02,
-     "ev": -0.04,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "p_model": 0.485,
-     "p_mkt": 0.491,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Wendell Carter Jr. Over 12.5 Puntos",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 12.5,
-     "odds": -109,
-     "dec": 1.917,
-     "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.522,
-     "edge": -0.021,
-     "ev": -0.04,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.501,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 4,
-       "value": 18.2,
-       "lg": 22.2,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Over 25.5 PTS+REB",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 25.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.507,
-     "implied": 0.528,
-     "edge": -0.022,
-     "ev": -0.041,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "p_model": 0.527,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Wendell Carter Jr. Under 21.5 PTS+REB",
      "player": "Wendell Carter Jr.",
      "team": "ORL",
@@ -130132,14 +130040,14 @@
      "odds": -108,
      "dec": 1.926,
      "odds_assumed": false,
-     "p": 0.498,
+     "p": 0.499,
      "implied": 0.519,
      "edge": -0.021,
-     "ev": -0.041,
+     "ev": -0.04,
      "value": false,
      "stat": "pr",
      "side": "under",
-     "p_model": 0.505,
+     "p_model": 0.507,
      "p_mkt": 0.496,
      "cand": false,
      "hr": {
@@ -130155,22 +130063,22 @@
     },
     {
      "kind": "prop",
-     "label": "Wendell Carter Jr. Over 10.5 REB+AST",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 10.5,
-     "odds": -106,
-     "dec": 1.943,
+     "label": "Ace Bailey Over 15.5 PTS+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 15.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.491,
-     "implied": 0.515,
-     "edge": -0.023,
-     "ev": -0.045,
+     "p": 0.503,
+     "implied": 0.528,
+     "edge": -0.025,
+     "ev": -0.047,
      "value": false,
-     "stat": "ra",
+     "stat": "pa",
      "side": "over",
-     "p_model": 0.479,
-     "p_mkt": 0.496,
+     "p_model": 0.513,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
@@ -130212,63 +130120,22 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 3.5 Asistencias",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 3.5,
-     "odds": 100,
-     "dec": 2.0,
+     "label": "Wendell Carter Jr. Over 10.5 REB+AST",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 10.5,
+     "odds": -106,
+     "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.476,
-     "implied": 0.5,
+     "p": 0.49,
+     "implied": 0.515,
      "edge": -0.024,
      "ev": -0.048,
      "value": false,
-     "stat": "ast",
-     "side": "under",
-     "p_model": 0.446,
-     "p_mkt": 0.486,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 23,
-       "value": 6.4,
-       "lg": 5.6,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Wendell Carter Jr. Over 21.5 PTS+REB",
-     "player": "Wendell Carter Jr.",
-     "team": "ORL",
-     "line": 21.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.502,
-     "implied": 0.528,
-     "edge": -0.026,
-     "ev": -0.05,
-     "value": false,
-     "stat": "pr",
+     "stat": "ra",
      "side": "over",
-     "p_model": 0.495,
-     "p_mkt": 0.504,
+     "p_model": 0.474,
+     "p_mkt": 0.496,
      "cand": false,
      "hr": {
       "l10": [
@@ -130283,6 +130150,43 @@
     },
     {
      "kind": "prop",
+     "label": "Ace Bailey Under 20.5 PTS+REB+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 20.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.498,
+     "implied": 0.524,
+     "edge": -0.025,
+     "ev": -0.049,
+     "value": false,
+     "stat": "pra",
+     "side": "under",
+     "p_model": 0.509,
+     "p_mkt": 0.495,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 30,
+       "value": 47.4,
+       "lg": 38.7,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Wendell Carter Jr. Over 0.5 Triples",
      "player": "Wendell Carter Jr.",
      "team": "ORL",
@@ -130293,11 +130197,11 @@
      "p": 0.58,
      "implied": 0.611,
      "edge": -0.031,
-     "ev": -0.051,
+     "ev": -0.05,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.55,
+     "p_model": 0.552,
      "p_mkt": 0.589,
      "cand": false,
      "hr": {
@@ -130316,6 +130220,36 @@
        "lg": 1.2,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Wendell Carter Jr. Over 21.5 PTS+REB",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 21.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.501,
+     "implied": 0.528,
+     "edge": -0.027,
+     "ev": -0.051,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.493,
+     "p_mkt": 0.504,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
      }
     },
     {
@@ -130357,100 +130291,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Under 6.5 REB+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 6.5,
-     "odds": 115,
-     "dec": 2.15,
-     "odds_assumed": false,
-     "p": 0.441,
-     "implied": 0.465,
-     "edge": -0.024,
-     "ev": -0.052,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "p_model": 0.444,
-     "p_mkt": 0.44,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Over 6.5 REB+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 6.5,
-     "odds": -145,
-     "dec": 1.69,
-     "odds_assumed": false,
-     "p": 0.559,
-     "implied": 0.592,
-     "edge": -0.033,
-     "ev": -0.055,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "p_model": 0.556,
-     "p_mkt": 0.56,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darryn Peterson Over 7.5 REB+AST",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 7.5,
-     "odds": -130,
-     "dec": 1.769,
-     "odds_assumed": false,
-     "p": 0.534,
-     "implied": 0.565,
-     "edge": -0.031,
-     "ev": -0.056,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "p_model": 0.536,
-     "p_mkt": 0.533,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Franz Wagner Over 1.5 Triples",
      "player": "Franz Wagner",
      "team": "ORL",
@@ -130460,12 +130300,12 @@
      "odds_assumed": false,
      "p": 0.417,
      "implied": 0.442,
-     "edge": -0.026,
-     "ev": -0.058,
+     "edge": -0.025,
+     "ev": -0.057,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.362,
+     "p_model": 0.363,
      "p_mkt": 0.435,
      "cand": false,
      "hr": {
@@ -130488,40 +130328,6 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Under 7.5 REB+AST",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 7.5,
-     "odds": 102,
-     "dec": 2.02,
-     "odds_assumed": false,
-     "p": 0.466,
-     "implied": 0.495,
-     "edge": -0.029,
-     "ev": -0.058,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "p_model": 0.464,
-     "p_mkt": 0.467,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Franz Wagner Over 31.5 PTS+AST",
      "player": "Franz Wagner",
      "team": "ORL",
@@ -130532,11 +130338,11 @@
      "p": 0.49,
      "implied": 0.522,
      "edge": -0.032,
-     "ev": -0.061,
+     "ev": -0.06,
      "value": false,
      "stat": "pa",
      "side": "over",
-     "p_model": 0.442,
+     "p_model": 0.443,
      "p_mkt": 0.506,
      "cand": false,
      "hr": {
@@ -130552,6 +130358,73 @@
     },
     {
      "kind": "prop",
+     "label": "Ace Bailey Under 15.5 PTS+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 15.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.497,
+     "implied": 0.528,
+     "edge": -0.032,
+     "ev": -0.06,
+     "value": false,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.487,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Over 23.5 Puntos",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 23.5,
+     "odds": -111,
+     "dec": 1.901,
+     "odds_assumed": false,
+     "p": 0.494,
+     "implied": 0.526,
+     "edge": -0.032,
+     "ev": -0.061,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.494,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 17,
+       "value": 21.0,
+       "lg": 20.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Anthony Black Under 4.5 Rebotes",
      "player": "Anthony Black",
      "team": "ORL",
@@ -130561,12 +130434,12 @@
      "odds_assumed": false,
      "p": 0.496,
      "implied": 0.528,
-     "edge": -0.033,
-     "ev": -0.062,
+     "edge": -0.032,
+     "ev": -0.061,
      "value": false,
      "stat": "reb",
      "side": "under",
-     "p_model": 0.476,
+     "p_model": 0.477,
      "p_mkt": 0.502,
      "cand": false,
      "hr": {
@@ -130589,32 +130462,69 @@
     },
     {
      "kind": "prop",
-     "label": "Desmond Bane Over 7.5 REB+AST",
-     "player": "Desmond Bane",
+     "label": "Anthony Black Under 23.5 PTS+AST",
+     "player": "Anthony Black",
      "team": "ORL",
-     "line": 7.5,
-     "odds": 106,
-     "dec": 2.06,
+     "line": 23.5,
+     "odds": -119,
+     "dec": 1.84,
      "odds_assumed": false,
-     "p": 0.455,
-     "implied": 0.485,
-     "edge": -0.031,
-     "ev": -0.063,
+     "p": 0.51,
+     "implied": 0.543,
+     "edge": -0.033,
+     "ev": -0.061,
      "value": false,
-     "stat": "ra",
-     "side": "over",
-     "p_model": 0.376,
-     "p_mkt": 0.481,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.478,
+     "p_mkt": 0.521,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       6,
        10
       ],
       "h2h": [
        0,
        2
       ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Over 20.5 PTS+REB+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 20.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.502,
+     "implied": 0.535,
+     "edge": -0.033,
+     "ev": -0.062,
+     "value": false,
+     "stat": "pra",
+     "side": "over",
+     "p_model": 0.491,
+     "p_mkt": 0.505,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 30,
+       "value": 47.4,
+       "lg": 38.7,
+       "n": 30
+      }
      }
     },
     {
@@ -130656,90 +130566,30 @@
     },
     {
      "kind": "prop",
-     "label": "Anthony Black Under 23.5 PTS+AST",
-     "player": "Anthony Black",
+     "label": "Desmond Bane Over 7.5 REB+AST",
+     "player": "Desmond Bane",
      "team": "ORL",
-     "line": 23.5,
-     "odds": -119,
-     "dec": 1.84,
+     "line": 7.5,
+     "odds": 106,
+     "dec": 2.06,
      "odds_assumed": false,
-     "p": 0.509,
-     "implied": 0.543,
-     "edge": -0.034,
-     "ev": -0.063,
+     "p": 0.454,
+     "implied": 0.485,
+     "edge": -0.031,
+     "ev": -0.065,
      "value": false,
-     "stat": "pa",
-     "side": "under",
-     "p_model": 0.475,
-     "p_mkt": 0.521,
+     "stat": "ra",
+     "side": "over",
+     "p_model": 0.373,
+     "p_mkt": 0.481,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       4,
        10
       ],
       "h2h": [
        0,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Under 25.5 PTS+REB",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 25.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.528,
-     "edge": -0.035,
-     "ev": -0.066,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "p_model": 0.473,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Over 10.5 REB+AST",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 10.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.466,
-     "implied": 0.5,
-     "edge": -0.034,
-     "ev": -0.068,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "p_model": 0.442,
-     "p_mkt": 0.474,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
        2
       ]
      }
@@ -130753,14 +130603,14 @@
      "odds": -107,
      "dec": 1.935,
      "odds_assumed": false,
-     "p": 0.481,
+     "p": 0.482,
      "implied": 0.517,
-     "edge": -0.036,
-     "ev": -0.069,
+     "edge": -0.035,
+     "ev": -0.068,
      "value": false,
      "stat": "pra",
      "side": "over",
-     "p_model": 0.44,
+     "p_model": 0.443,
      "p_mkt": 0.495,
      "cand": false,
      "hr": {
@@ -130783,10 +130633,40 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Over 22.5 PTS+AST",
-     "player": "Darryn Peterson",
+     "label": "Keyonte George Over 10.5 REB+AST",
+     "player": "Keyonte George",
      "team": "UTA",
-     "line": 22.5,
+     "line": 10.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.466,
+     "implied": 0.5,
+     "edge": -0.034,
+     "ev": -0.068,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "p_model": 0.443,
+     "p_mkt": 0.474,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Under 25.5 PTS+REB",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 25.5,
      "odds": -112,
      "dec": 1.893,
      "odds_assumed": false,
@@ -130795,128 +130675,20 @@
      "edge": -0.037,
      "ev": -0.07,
      "value": false,
-     "stat": "pa",
-     "side": "over",
+     "stat": "pr",
+     "side": "under",
      "p_model": 0.466,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Over 5.5 Rebotes",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 5.5,
-     "odds": 115,
-     "dec": 2.15,
-     "odds_assumed": false,
-     "p": 0.433,
-     "implied": 0.465,
-     "edge": -0.033,
-     "ev": -0.07,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.376,
-     "p_mkt": 0.451,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 21,
-       "value": 11.1,
-       "lg": 10.7,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Under 27.5 PTS+AST",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 27.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.49,
-     "implied": 0.528,
-     "edge": -0.038,
-     "ev": -0.071,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "p_model": 0.462,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
+       6,
        10
       ],
       "h2h": [
        1,
        2
       ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Under 31.5 PTS+REB+AST",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 31.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.491,
-     "implied": 0.528,
-     "edge": -0.037,
-     "ev": -0.071,
-     "value": false,
-     "stat": "pra",
-     "side": "under",
-     "p_model": 0.464,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 16,
-       "value": 41.3,
-       "lg": 40.7,
-       "n": 30
-      }
      }
     },
     {
@@ -130928,14 +130700,14 @@
      "odds": -110,
      "dec": 1.909,
      "odds_assumed": false,
-     "p": 0.486,
+     "p": 0.487,
      "implied": 0.524,
-     "edge": -0.038,
-     "ev": -0.072,
+     "edge": -0.037,
+     "ev": -0.071,
      "value": false,
      "stat": "pra",
      "side": "under",
-     "p_model": 0.427,
+     "p_model": 0.43,
      "p_mkt": 0.506,
      "cand": false,
      "hr": {
@@ -130958,6 +130730,36 @@
     },
     {
      "kind": "prop",
+     "label": "Ace Bailey Over 18.5 PTS+REB",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 18.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.506,
+     "implied": 0.545,
+     "edge": -0.04,
+     "ev": -0.072,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.477,
+     "p_mkt": 0.516,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Keyonte George Over 3.5 Rebotes",
      "player": "Keyonte George",
      "team": "UTA",
@@ -130965,14 +130767,14 @@
      "odds": -150,
      "dec": 1.667,
      "odds_assumed": false,
-     "p": 0.556,
+     "p": 0.555,
      "implied": 0.6,
      "edge": -0.044,
      "ev": -0.074,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.516,
+     "p_model": 0.515,
      "p_mkt": 0.569,
      "cand": false,
      "hr": {
@@ -130995,73 +130797,69 @@
     },
     {
      "kind": "prop",
-     "label": "Desmond Bane Under 22.5 PTS+AST",
-     "player": "Desmond Bane",
-     "team": "ORL",
-     "line": 22.5,
-     "odds": -111,
-     "dec": 1.901,
+     "label": "Keyonte George Under 31.5 PTS+REB+AST",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 31.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.486,
-     "implied": 0.526,
-     "edge": -0.04,
-     "ev": -0.075,
+     "p": 0.489,
+     "implied": 0.528,
+     "edge": -0.039,
+     "ev": -0.074,
      "value": false,
-     "stat": "pa",
+     "stat": "pra",
      "side": "under",
-     "p_model": 0.426,
-     "p_mkt": 0.507,
+     "p_model": 0.456,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       5,
        10
       ],
       "h2h": [
-       0,
+       1,
        2
-      ]
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 16,
+       "value": 41.3,
+       "lg": 40.7,
+       "n": 30
+      }
      }
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Over 26.5 PTS+REB+AST",
-     "player": "Darryn Peterson",
+     "label": "Keyonte George Under 27.5 PTS+AST",
+     "player": "Keyonte George",
      "team": "UTA",
-     "line": 26.5,
-     "odds": -120,
-     "dec": 1.833,
+     "line": 27.5,
+     "odds": -112,
+     "dec": 1.893,
      "odds_assumed": false,
-     "p": 0.505,
-     "implied": 0.545,
-     "edge": -0.041,
-     "ev": -0.075,
+     "p": 0.488,
+     "implied": 0.528,
+     "edge": -0.04,
+     "ev": -0.076,
      "value": false,
-     "stat": "pra",
-     "side": "over",
-     "p_model": 0.471,
-     "p_mkt": 0.516,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.452,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       5,
        10
       ],
       "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 11,
-       "value": 34.4,
-       "lg": 36.1,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+       1,
+       2
+      ]
      }
     },
     {
@@ -131076,11 +130874,11 @@
      "p": 0.457,
      "implied": 0.495,
      "edge": -0.038,
-     "ev": -0.078,
+     "ev": -0.077,
      "value": false,
      "stat": "ast",
      "side": "over",
-     "p_model": 0.426,
+     "p_model": 0.428,
      "p_mkt": 0.467,
      "cand": false,
      "hr": {
@@ -131103,77 +130901,136 @@
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Over 18.5 Puntos",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 18.5,
-     "odds": -115,
-     "dec": 1.87,
+     "label": "Desmond Bane Under 22.5 PTS+AST",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 22.5,
+     "odds": -111,
+     "dec": 1.901,
      "odds_assumed": false,
-     "p": 0.491,
-     "implied": 0.535,
-     "edge": -0.043,
-     "ev": -0.081,
+     "p": 0.485,
+     "implied": 0.526,
+     "edge": -0.041,
+     "ev": -0.077,
      "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.45,
-     "p_mkt": 0.505,
+     "stat": "pa",
+     "side": "under",
+     "p_model": 0.422,
+     "p_mkt": 0.507,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       7,
        10
       ],
       "h2h": [
        0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 7,
-       "value": 22.1,
-       "lg": 23.9,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+       2
+      ]
      }
     },
     {
      "kind": "prop",
-     "label": "Darryn Peterson Over 22.5 PTS+REB",
-     "player": "Darryn Peterson",
+     "label": "Keyonte George Under 21.5 Puntos",
+     "player": "Keyonte George",
      "team": "UTA",
-     "line": 22.5,
-     "odds": -120,
-     "dec": 1.833,
+     "line": 21.5,
+     "odds": -125,
+     "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.545,
-     "edge": -0.044,
-     "ev": -0.081,
+     "p": 0.511,
+     "implied": 0.556,
+     "edge": -0.045,
+     "ev": -0.08,
      "value": false,
-     "stat": "pr",
-     "side": "over",
-     "p_model": 0.458,
-     "p_mkt": 0.516,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.465,
+     "p_mkt": 0.526,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 13,
+       "value": 25.6,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Over 6.5 REB+AST",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 6.5,
+     "odds": -145,
+     "dec": 1.69,
+     "odds_assumed": false,
+     "p": 0.544,
+     "implied": 0.592,
+     "edge": -0.048,
+     "ev": -0.08,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "p_model": 0.497,
+     "p_mkt": 0.56,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Desmond Bane Under 19.5 Puntos",
+     "player": "Desmond Bane",
+     "team": "ORL",
+     "line": 19.5,
+     "odds": -108,
+     "dec": 1.926,
+     "odds_assumed": false,
+     "p": 0.476,
+     "implied": 0.519,
+     "edge": -0.043,
+     "ev": -0.083,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.395,
+     "p_mkt": 0.503,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
        10
       ],
       "h2h": [
        0,
-       0
-      ]
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 3,
+       "value": 21.0,
+       "lg": 23.9,
+       "n": 30
+      }
      }
     },
     {
@@ -131185,14 +131042,14 @@
      "odds": -160,
      "dec": 1.625,
      "odds_assumed": false,
-     "p": 0.565,
+     "p": 0.564,
      "implied": 0.615,
      "edge": -0.051,
-     "ev": -0.082,
+     "ev": -0.083,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.501,
+     "p_model": 0.499,
      "p_mkt": 0.586,
      "cand": false,
      "hr": {
@@ -131215,76 +131072,32 @@
     },
     {
      "kind": "prop",
-     "label": "Anthony Black Under 18.5 Puntos",
-     "player": "Anthony Black",
-     "team": "ORL",
-     "line": 18.5,
-     "odds": -120,
-     "dec": 1.833,
-     "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.545,
-     "edge": -0.045,
-     "ev": -0.082,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.456,
-     "p_mkt": 0.516,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 29,
-       "value": 34.1,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darryn Peterson Over 4.5 Rebotes",
+     "label": "Darryn Peterson Over 7.5 REB+AST",
      "player": "Darryn Peterson",
      "team": "UTA",
-     "line": 4.5,
-     "odds": 120,
-     "dec": 2.2,
+     "line": 7.5,
+     "odds": -130,
+     "dec": 1.769,
      "odds_assumed": false,
-     "p": 0.417,
-     "implied": 0.455,
-     "edge": -0.038,
-     "ev": -0.084,
+     "p": 0.519,
+     "implied": 0.565,
+     "edge": -0.047,
+     "ev": -0.083,
      "value": false,
-     "stat": "reb",
+     "stat": "ra",
      "side": "over",
-     "p_model": 0.373,
-     "p_mkt": 0.431,
+     "p_model": 0.475,
+     "p_mkt": 0.533,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       7,
        10
       ],
       "h2h": [
        0,
        0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 7,
-       "value": 5.9,
-       "lg": 6.6,
-       "n": 30
-      }
+      ]
      },
      "flag": {
       "t": "rookie",
@@ -131293,10 +131106,10 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Under 18.5 PTS+REB",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 18.5,
+     "label": "Anthony Black Under 22.5 PTS+REB",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 22.5,
      "odds": -105,
      "dec": 1.952,
      "odds_assumed": false,
@@ -131307,16 +131120,16 @@
      "value": false,
      "stat": "pr",
      "side": "under",
-     "p_model": 0.425,
-     "p_mkt": 0.484,
+     "p_model": 0.409,
+     "p_mkt": 0.489,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       6,
        10
       ],
       "h2h": [
-       2,
+       0,
        2
       ]
      }
@@ -131330,14 +131143,14 @@
      "odds": -106,
      "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.471,
+     "p": 0.47,
      "implied": 0.515,
      "edge": -0.044,
-     "ev": -0.085,
+     "ev": -0.086,
      "value": false,
      "stat": "pra",
      "side": "under",
-     "p_model": 0.412,
+     "p_model": 0.41,
      "p_mkt": 0.49,
      "cand": false,
      "hr": {
@@ -131356,114 +131169,6 @@
        "lg": 36.1,
        "n": 30
       }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Anthony Black Under 22.5 PTS+REB",
-     "player": "Anthony Black",
-     "team": "ORL",
-     "line": 22.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.469,
-     "implied": 0.512,
-     "edge": -0.044,
-     "ev": -0.085,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "p_model": 0.407,
-     "p_mkt": 0.489,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Under 13.5 Puntos",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 13.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.484,
-     "implied": 0.528,
-     "edge": -0.045,
-     "ev": -0.085,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.411,
-     "p_mkt": 0.508,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 30,
-       "value": 30.2,
-       "lg": 23.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Darryn Peterson Over 2.5 Triples",
-     "player": "Darryn Peterson",
-     "team": "UTA",
-     "line": 2.5,
-     "odds": 115,
-     "dec": 2.15,
-     "odds_assumed": false,
-     "p": 0.425,
-     "implied": 0.465,
-     "edge": -0.04,
-     "ev": -0.087,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.379,
-     "p_mkt": 0.44,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 18,
-       "value": 3.5,
-       "lg": 3.3,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -131509,7 +131214,7 @@
      "value": false,
      "stat": "pr",
      "side": "under",
-     "p_model": 0.385,
+     "p_model": 0.384,
      "p_mkt": 0.496,
      "cand": false,
      "hr": {
@@ -131525,43 +131230,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Under 20.5 PTS+REB+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 20.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.474,
-     "implied": 0.524,
-     "edge": -0.05,
-     "ev": -0.096,
-     "value": false,
-     "stat": "pra",
-     "side": "under",
-     "p_model": 0.41,
-     "p_mkt": 0.495,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 30,
-       "value": 47.4,
-       "lg": 38.7,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Anthony Black Over 1.5 Triples",
      "player": "Anthony Black",
      "team": "ORL",
@@ -131569,14 +131237,14 @@
      "odds": -150,
      "dec": 1.667,
      "odds_assumed": false,
-     "p": 0.541,
+     "p": 0.542,
      "implied": 0.6,
-     "edge": -0.059,
-     "ev": -0.098,
+     "edge": -0.058,
+     "ev": -0.097,
      "value": false,
      "stat": "fg3m",
      "side": "over",
-     "p_model": 0.457,
+     "p_model": 0.461,
      "p_mkt": 0.569,
      "cand": false,
      "hr": {
@@ -131599,245 +131267,37 @@
     },
     {
      "kind": "prop",
-     "label": "Ace Bailey Over 1.5 Triples",
+     "label": "Ace Bailey Over 5.5 Rebotes",
      "player": "Ace Bailey",
      "team": "UTA",
-     "line": 1.5,
-     "odds": -140,
-     "dec": 1.714,
+     "line": 5.5,
+     "odds": 115,
+     "dec": 2.15,
      "odds_assumed": false,
-     "p": 0.525,
-     "implied": 0.583,
-     "edge": -0.058,
-     "ev": -0.1,
+     "p": 0.42,
+     "implied": 0.465,
+     "edge": -0.045,
+     "ev": -0.097,
      "value": false,
-     "stat": "fg3m",
+     "stat": "reb",
      "side": "over",
-     "p_model": 0.448,
-     "p_mkt": 0.551,
+     "p_model": 0.326,
+     "p_mkt": 0.451,
      "cand": false,
      "hr": {
       "l10": [
-       2,
+       8,
        10
       ],
       "h2h": [
-       1,
+       0,
        2
       ],
       "dvp": {
        "pos": "PF",
-       "rank": 15,
-       "value": 2.7,
-       "lg": 2.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Over 14.5 REB+AST",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 14.5,
-     "odds": -102,
-     "dec": 1.98,
-     "odds_assumed": false,
-     "p": 0.454,
-     "implied": 0.505,
-     "edge": -0.052,
-     "ev": -0.102,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "p_model": 0.372,
-     "p_mkt": 0.481,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Jaxson Hayes Over 6.5 Rebotes",
-     "player": "Jaxson Hayes",
-     "team": "UTA",
-     "line": 6.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.449,
-     "implied": 0.5,
-     "edge": -0.051,
-     "ev": -0.102,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "p_model": 0.374,
-     "p_mkt": 0.474,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 12,
-       "value": 13.7,
-       "lg": 14.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Over 1.5 Triples",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 1.5,
-     "odds": -185,
-     "dec": 1.541,
-     "odds_assumed": false,
-     "p": 0.582,
-     "implied": 0.649,
-     "edge": -0.067,
-     "ev": -0.103,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "p_model": 0.486,
-     "p_mkt": 0.614,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 9,
-       "value": 3.1,
-       "lg": 3.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ace Bailey Under 15.5 PTS+AST",
-     "player": "Ace Bailey",
-     "team": "UTA",
-     "line": 15.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.473,
-     "implied": 0.528,
-     "edge": -0.055,
-     "ev": -0.104,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "p_model": 0.393,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Keyonte George Under 19.5 Puntos",
-     "player": "Keyonte George",
-     "team": "UTA",
-     "line": 19.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.458,
-     "implied": 0.512,
-     "edge": -0.055,
-     "ev": -0.107,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.378,
-     "p_mkt": 0.484,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 13,
-       "value": 25.6,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Franz Wagner Over 7.5 Asistencias",
-     "player": "Franz Wagner",
-     "team": "ORL",
-     "line": 7.5,
-     "odds": -117,
-     "dec": 1.855,
-     "odds_assumed": false,
-     "p": 0.48,
-     "implied": 0.539,
-     "edge": -0.059,
-     "ev": -0.11,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "p_model": 0.344,
-     "p_mkt": 0.525,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 2,
-       "value": 3.3,
-       "lg": 4.4,
+       "rank": 21,
+       "value": 11.1,
+       "lg": 10.7,
        "n": 30
       }
      }
@@ -131851,14 +131311,14 @@
      "odds": 105,
      "dec": 2.05,
      "odds_assumed": false,
-     "p": 0.432,
+     "p": 0.44,
      "implied": 0.488,
-     "edge": -0.055,
-     "ev": -0.114,
+     "edge": -0.048,
+     "ev": -0.099,
      "value": false,
      "stat": "ast",
      "side": "under",
-     "p_model": 0.352,
+     "p_model": 0.381,
      "p_mkt": 0.459,
      "cand": false,
      "hr": {
@@ -131881,10 +131341,308 @@
     },
     {
      "kind": "prop",
-     "label": "Wendell Carter Jr. Over 8.5 Rebotes",
-     "player": "Wendell Carter Jr.",
+     "label": "Franz Wagner Over 14.5 REB+AST",
+     "player": "Franz Wagner",
      "team": "ORL",
-     "line": 8.5,
+     "line": 14.5,
+     "odds": -102,
+     "dec": 1.98,
+     "odds_assumed": false,
+     "p": 0.454,
+     "implied": 0.505,
+     "edge": -0.051,
+     "ev": -0.101,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "p_model": 0.373,
+     "p_mkt": 0.481,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keyonte George Over 1.5 Triples",
+     "player": "Keyonte George",
+     "team": "UTA",
+     "line": 1.5,
+     "odds": -185,
+     "dec": 1.541,
+     "odds_assumed": false,
+     "p": 0.582,
+     "implied": 0.649,
+     "edge": -0.067,
+     "ev": -0.103,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.487,
+     "p_mkt": 0.614,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 9,
+       "value": 3.1,
+       "lg": 3.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 2.5 Triples",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 2.5,
+     "odds": 115,
+     "dec": 2.15,
+     "odds_assumed": false,
+     "p": 0.416,
+     "implied": 0.465,
+     "edge": -0.049,
+     "ev": -0.106,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.343,
+     "p_mkt": 0.44,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 18,
+       "value": 3.5,
+       "lg": 3.3,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Franz Wagner Over 7.5 Asistencias",
+     "player": "Franz Wagner",
+     "team": "ORL",
+     "line": 7.5,
+     "odds": -117,
+     "dec": 1.855,
+     "odds_assumed": false,
+     "p": 0.48,
+     "implied": 0.539,
+     "edge": -0.059,
+     "ev": -0.109,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "p_model": 0.347,
+     "p_mkt": 0.525,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 2,
+       "value": 3.3,
+       "lg": 4.4,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 18.5 Puntos",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 18.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.467,
+     "implied": 0.524,
+     "edge": -0.057,
+     "ev": -0.109,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.34,
+     "p_mkt": 0.509,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 7,
+       "value": 22.1,
+       "lg": 23.9,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 4.5 Rebotes",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 4.5,
+     "odds": 120,
+     "dec": 2.2,
+     "odds_assumed": false,
+     "p": 0.405,
+     "implied": 0.455,
+     "edge": -0.05,
+     "ev": -0.109,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.326,
+     "p_mkt": 0.431,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 7,
+       "value": 5.9,
+       "lg": 6.6,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Ace Bailey Over 1.5 Triples",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 1.5,
+     "odds": -140,
+     "dec": 1.714,
+     "odds_assumed": false,
+     "p": 0.517,
+     "implied": 0.583,
+     "edge": -0.067,
+     "ev": -0.114,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "p_model": 0.415,
+     "p_mkt": 0.551,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 15,
+       "value": 2.7,
+       "lg": 2.6,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 22.5 PTS+AST",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 22.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.463,
+     "implied": 0.528,
+     "edge": -0.065,
+     "ev": -0.123,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "p_model": 0.353,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 26.5 PTS+REB+AST",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 26.5,
      "odds": -120,
      "dec": 1.833,
      "odds_assumed": false,
@@ -131893,9 +131651,87 @@
      "edge": -0.07,
      "ev": -0.127,
      "value": false,
+     "stat": "pra",
+     "side": "over",
+     "p_model": 0.357,
+     "p_mkt": 0.516,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 11,
+       "value": 34.4,
+       "lg": 36.1,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Jaxson Hayes Over 6.5 Rebotes",
+     "player": "Jaxson Hayes",
+     "team": "UTA",
+     "line": 6.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.436,
+     "implied": 0.5,
+     "edge": -0.064,
+     "ev": -0.127,
+     "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.476,
+     "p_model": 0.324,
+     "p_mkt": 0.474,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 12,
+       "value": 13.7,
+       "lg": 14.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Wendell Carter Jr. Over 8.5 Rebotes",
+     "player": "Wendell Carter Jr.",
+     "team": "ORL",
+     "line": 8.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.474,
+     "implied": 0.545,
+     "edge": -0.072,
+     "ev": -0.131,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "p_model": 0.474,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -131914,6 +131750,40 @@
        "lg": 14.9,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darryn Peterson Over 22.5 PTS+REB",
+     "player": "Darryn Peterson",
+     "team": "UTA",
+     "line": 22.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.473,
+     "implied": 0.545,
+     "edge": -0.073,
+     "ev": -0.133,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "p_model": 0.345,
+     "p_mkt": 0.516,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ]
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -131952,14 +131822,14 @@
      "odds": 120,
      "dec": 2.2,
      "odds_assumed": false,
-     "p": 0.371,
+     "p": 0.37,
      "implied": 0.455,
-     "edge": -0.083,
-     "ev": -0.183,
+     "edge": -0.084,
+     "ev": -0.186,
      "value": false,
      "stat": "reb",
      "side": "over",
-     "p_model": 0.192,
+     "p_model": 0.187,
      "p_mkt": 0.431,
      "cand": false,
      "hr": {
@@ -131982,26 +131852,26 @@
     },
     {
      "kind": "prop",
-     "label": "Desmond Bane Under 19.5 Puntos",
-     "player": "Desmond Bane",
-     "team": "ORL",
-     "line": 19.5,
-     "odds": -114,
-     "dec": 1.877,
+     "label": "Ace Bailey Over 14.5 Puntos",
+     "player": "Ace Bailey",
+     "team": "UTA",
+     "line": 14.5,
+     "odds": -115,
+     "dec": 1.87,
      "odds_assumed": false,
-     "p": 0.397,
-     "implied": 0.533,
-     "edge": -0.136,
-     "ev": -0.255,
+     "p": 0.431,
+     "implied": 0.535,
+     "edge": -0.104,
+     "ev": -0.194,
      "value": false,
      "stat": "pts",
-     "side": "under",
-     "p_model": 0.397,
+     "side": "over",
+     "p_model": 0.431,
      "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       5,
        10
       ],
       "h2h": [
@@ -132009,10 +131879,47 @@
        2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 21.0,
-       "lg": 23.9,
+       "pos": "PF",
+       "rank": 30,
+       "value": 30.2,
+       "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Anthony Black Under 17.5 Puntos",
+     "player": "Anthony Black",
+     "team": "ORL",
+     "line": 17.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.407,
+     "implied": 0.528,
+     "edge": -0.121,
+     "ev": -0.23,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.407,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 29,
+       "value": 34.1,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -132085,45 +131992,6 @@
     },
     {
      "kind": "prop",
-     "label": "Stephen Curry Under 27.5 Puntos",
-     "player": "Stephen Curry",
-     "team": "GSW",
-     "line": 27.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.742,
-     "implied": 0.535,
-     "fair": -288,
-     "edge": 0.207,
-     "ev": 0.388,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.742,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 17,
-       "value": 27.4,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Draymond Green Over 3.5 Puntos",
      "player": "Draymond Green",
      "team": "GSW",
@@ -132157,6 +132025,45 @@
        "rank": 2,
        "value": 19.1,
        "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Stephen Curry Under 26.5 Puntos",
+     "player": "Stephen Curry",
+     "team": "GSW",
+     "line": 26.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.707,
+     "implied": 0.545,
+     "fair": -241,
+     "edge": 0.161,
+     "ev": 0.296,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.707,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 17,
+       "value": 27.4,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -132512,44 +132419,6 @@
     },
     {
      "kind": "prop",
-     "label": "Stephen Curry Under 27.5 Puntos",
-     "player": "Stephen Curry",
-     "team": "GSW",
-     "line": 27.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.742,
-     "implied": 0.535,
-     "edge": 0.207,
-     "ev": 0.388,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.742,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 17,
-       "value": 27.4,
-       "lg": 27.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Draymond Green Over 3.5 Puntos",
      "player": "Draymond Green",
      "team": "GSW",
@@ -132582,6 +132451,44 @@
        "rank": 2,
        "value": 19.1,
        "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Stephen Curry Under 26.5 Puntos",
+     "player": "Stephen Curry",
+     "team": "GSW",
+     "line": 26.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.707,
+     "implied": 0.545,
+     "edge": 0.161,
+     "ev": 0.296,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.707,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 17,
+       "value": 27.4,
+       "lg": 27.0,
        "n": 30
       }
      }
@@ -132738,44 +132645,6 @@
        "rank": 15,
        "value": 5.4,
        "lg": 5.6,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Amen Thompson Under 15.5 Puntos",
-     "player": "Amen Thompson",
-     "team": "HOU",
-     "line": 15.5,
-     "odds": -114,
-     "dec": 1.877,
-     "odds_assumed": false,
-     "p": 0.584,
-     "implied": 0.533,
-     "edge": 0.051,
-     "ev": 0.096,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.584,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 10,
-       "value": 22.8,
-       "lg": 23.9,
        "n": 30
       }
      }
@@ -133177,6 +133046,44 @@
     },
     {
      "kind": "prop",
+     "label": "Brandin Podziemski Under 15.5 Puntos",
+     "player": "Brandin Podziemski",
+     "team": "GSW",
+     "line": 15.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.551,
+     "implied": 0.535,
+     "edge": 0.016,
+     "ev": 0.03,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.551,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 8,
+       "value": 22.5,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Amen Thompson Under 7.5 Rebotes",
      "player": "Amen Thompson",
      "team": "HOU",
@@ -133248,6 +133155,47 @@
        "lg": 1.2,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Yaxel Lendeborg Under 18.5 Puntos",
+     "player": "Yaxel Lendeborg",
+     "team": "GSW",
+     "line": 18.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.549,
+     "implied": 0.535,
+     "edge": 0.014,
+     "ev": 0.027,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.549,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 8,
+       "value": 18.5,
+       "lg": 20.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -133502,6 +133450,43 @@
     },
     {
      "kind": "prop",
+     "label": "Jabari Smith Jr. Under 14.5 Puntos",
+     "player": "Jabari Smith Jr.",
+     "team": "HOU",
+     "line": 14.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.512,
+     "edge": 0.003,
+     "ev": 0.005,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.542,
+     "p_mkt": 0.506,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 27,
+       "value": 22.7,
+       "lg": 20.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Draymond Green Under 5.5 Rebotes",
      "player": "Draymond Green",
      "team": "GSW",
@@ -133670,43 +133655,6 @@
     },
     {
      "kind": "prop",
-     "label": "Alperen Sengun Under 19.5 Puntos",
-     "player": "Alperen Sengun",
-     "team": "HOU",
-     "line": 19.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.51,
-     "implied": 0.512,
-     "edge": -0.002,
-     "ev": -0.004,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.574,
-     "p_mkt": 0.489,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 7,
-       "value": 20.4,
-       "lg": 22.2,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Yaxel Lendeborg Under 28.5 PTS+REB+AST",
      "player": "Yaxel Lendeborg",
      "team": "GSW",
@@ -133822,37 +133770,74 @@
     },
     {
      "kind": "prop",
-     "label": "Kevin Durant Under 22.5 Puntos",
-     "player": "Kevin Durant",
+     "label": "Alperen Sengun Under 19.5 Puntos",
+     "player": "Alperen Sengun",
      "team": "HOU",
-     "line": 22.5,
-     "odds": -122,
-     "dec": 1.82,
+     "line": 19.5,
+     "odds": -111,
+     "dec": 1.901,
      "odds_assumed": false,
-     "p": 0.543,
-     "implied": 0.55,
-     "edge": -0.006,
-     "ev": -0.012,
+     "p": 0.521,
+     "implied": 0.526,
+     "edge": -0.005,
+     "ev": -0.01,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.543,
-     "p_mkt": null,
+     "p_model": 0.574,
+     "p_mkt": 0.503,
      "cand": false,
      "hr": {
       "l10": [
-       8,
+       4,
        10
       ],
       "h2h": [
-       0,
-       2
+       2,
+       3
       ],
       "dvp": {
-       "pos": "PF",
+       "pos": "C",
        "rank": 7,
-       "value": 21.2,
-       "lg": 23.3,
+       "value": 20.4,
+       "lg": 22.2,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Amen Thompson Under 15.5 Puntos",
+     "player": "Amen Thompson",
+     "team": "HOU",
+     "line": 15.5,
+     "odds": -118,
+     "dec": 1.847,
+     "odds_assumed": false,
+     "p": 0.536,
+     "implied": 0.541,
+     "edge": -0.006,
+     "ev": -0.01,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.584,
+     "p_mkt": 0.52,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 10,
+       "value": 22.8,
+       "lg": 23.9,
        "n": 30
       }
      }
@@ -134068,47 +134053,6 @@
     },
     {
      "kind": "prop",
-     "label": "Yaxel Lendeborg Under 18.5 Puntos",
-     "player": "Yaxel Lendeborg",
-     "team": "GSW",
-     "line": 18.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.523,
-     "implied": 0.535,
-     "edge": -0.012,
-     "ev": -0.022,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.549,
-     "p_mkt": 0.514,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 8,
-       "value": 18.5,
-       "lg": 20.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Amen Thompson Under 22.5 PTS+REB",
      "player": "Amen Thompson",
      "team": "HOU",
@@ -134139,37 +134083,37 @@
     },
     {
      "kind": "prop",
-     "label": "Brandin Podziemski Under 15.5 Puntos",
-     "player": "Brandin Podziemski",
-     "team": "GSW",
-     "line": 15.5,
-     "odds": -113,
-     "dec": 1.885,
+     "label": "Kevin Durant Under 22.5 Puntos",
+     "player": "Kevin Durant",
+     "team": "HOU",
+     "line": 22.5,
+     "odds": -125,
+     "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.518,
-     "implied": 0.531,
-     "edge": -0.012,
+     "p": 0.543,
+     "implied": 0.556,
+     "edge": -0.013,
      "ev": -0.023,
      "value": false,
      "stat": "pts",
      "side": "under",
-     "p_model": 0.551,
-     "p_mkt": 0.508,
+     "p_model": 0.543,
+     "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       8,
        10
       ],
       "h2h": [
-       1,
-       3
+       0,
+       2
       ],
       "dvp": {
-       "pos": "SG",
-       "rank": 8,
-       "value": 22.5,
-       "lg": 23.9,
+       "pos": "PF",
+       "rank": 7,
+       "value": 21.2,
+       "lg": 23.3,
        "n": 30
       }
      }
@@ -134385,6 +134329,43 @@
     },
     {
      "kind": "prop",
+     "label": "Jabari Smith Jr. Over 14.5 Puntos",
+     "player": "Jabari Smith Jr.",
+     "team": "HOU",
+     "line": 14.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.485,
+     "implied": 0.5,
+     "edge": -0.015,
+     "ev": -0.03,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.458,
+     "p_mkt": 0.494,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 27,
+       "value": 22.7,
+       "lg": 20.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Fred VanVleet Over 16.5 PTS+AST",
      "player": "Fred VanVleet",
      "team": "HOU",
@@ -134482,43 +134463,6 @@
        1,
        3
       ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Jabari Smith Jr. Under 14.5 Puntos",
-     "player": "Jabari Smith Jr.",
-     "team": "HOU",
-     "line": 14.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.511,
-     "implied": 0.528,
-     "edge": -0.017,
-     "ev": -0.032,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.542,
-     "p_mkt": 0.501,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 27,
-       "value": 22.7,
-       "lg": 20.0,
-       "n": 30
-      }
      }
     },
     {
@@ -134661,6 +134605,47 @@
     },
     {
      "kind": "prop",
+     "label": "Fred VanVleet Over 11.5 Puntos",
+     "player": "Fred VanVleet",
+     "team": "HOU",
+     "line": 11.5,
+     "odds": -106,
+     "dec": 1.943,
+     "odds_assumed": false,
+     "p": 0.495,
+     "implied": 0.515,
+     "edge": -0.02,
+     "ev": -0.038,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.5,
+     "p_mkt": 0.493,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 5,
+       "value": 23.4,
+       "lg": 27.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Amen Thompson Under 18.5 PTS+AST",
      "player": "Amen Thompson",
      "team": "HOU",
@@ -134722,47 +134707,6 @@
        "rank": 6,
        "value": 37.2,
        "lg": 40.7,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "lesion",
-      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Fred VanVleet Under 11.5 Puntos",
-     "player": "Fred VanVleet",
-     "team": "HOU",
-     "line": 11.5,
-     "odds": -107,
-     "dec": 1.935,
-     "odds_assumed": false,
-     "p": 0.496,
-     "implied": 0.517,
-     "edge": -0.021,
-     "ev": -0.04,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.5,
-     "p_mkt": 0.495,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 5,
-       "value": 23.4,
-       "lg": 27.0,
        "n": 30
       }
      },
@@ -134942,6 +134886,47 @@
     },
     {
      "kind": "prop",
+     "label": "Fred VanVleet Under 11.5 Puntos",
+     "player": "Fred VanVleet",
+     "team": "HOU",
+     "line": 11.5,
+     "odds": -112,
+     "dec": 1.893,
+     "odds_assumed": false,
+     "p": 0.505,
+     "implied": 0.528,
+     "edge": -0.023,
+     "ev": -0.044,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.5,
+     "p_mkt": 0.507,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       9
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 5,
+       "value": 23.4,
+       "lg": 27.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "lesion",
+      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Draymond Green Under 6.5 Asistencias",
      "player": "Draymond Green",
      "team": "GSW",
@@ -135067,47 +135052,6 @@
      "p_model": 0.499,
      "p_mkt": 0.499,
      "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Fred VanVleet Over 11.5 Puntos",
-     "player": "Fred VanVleet",
-     "team": "HOU",
-     "line": 11.5,
-     "odds": -112,
-     "dec": 1.893,
-     "odds_assumed": false,
-     "p": 0.504,
-     "implied": 0.528,
-     "edge": -0.024,
-     "ev": -0.046,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.5,
-     "p_mkt": 0.505,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       9
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 5,
-       "value": 23.4,
-       "lg": 27.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "lesion",
-      "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
-     }
     },
     {
      "kind": "prop",
@@ -135465,47 +135409,6 @@
     },
     {
      "kind": "prop",
-     "label": "Yaxel Lendeborg Over 18.5 Puntos",
-     "player": "Yaxel Lendeborg",
-     "team": "GSW",
-     "line": 18.5,
-     "odds": -102,
-     "dec": 1.98,
-     "odds_assumed": false,
-     "p": 0.477,
-     "implied": 0.505,
-     "edge": -0.028,
-     "ev": -0.055,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.451,
-     "p_mkt": 0.486,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       0,
-       0
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 8,
-       "value": 18.5,
-       "lg": 20.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Tari Eason Under 4.5 Rebotes",
      "player": "Tari Eason",
      "team": "HOU",
@@ -135670,43 +135573,6 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Brandin Podziemski Over 15.5 Puntos",
-     "player": "Brandin Podziemski",
-     "team": "GSW",
-     "line": 15.5,
-     "odds": -106,
-     "dec": 1.943,
-     "odds_assumed": false,
-     "p": 0.482,
-     "implied": 0.515,
-     "edge": -0.033,
-     "ev": -0.064,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.449,
-     "p_mkt": 0.492,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 8,
-       "value": 22.5,
-       "lg": 23.9,
-       "n": 30
-      }
      }
     },
     {
@@ -136035,43 +135901,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jabari Smith Jr. Over 14.5 Puntos",
-     "player": "Jabari Smith Jr.",
-     "team": "HOU",
-     "line": 14.5,
-     "odds": -111,
-     "dec": 1.901,
-     "odds_assumed": false,
-     "p": 0.489,
-     "implied": 0.526,
-     "edge": -0.037,
-     "ev": -0.071,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.458,
-     "p_mkt": 0.499,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 27,
-       "value": 22.7,
-       "lg": 20.0,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Alperen Sengun Over 0.5 Triples",
      "player": "Alperen Sengun",
      "team": "HOU",
@@ -136109,6 +135938,80 @@
     },
     {
      "kind": "prop",
+     "label": "Brandin Podziemski Over 14.5 Puntos",
+     "player": "Brandin Podziemski",
+     "team": "GSW",
+     "line": 14.5,
+     "odds": -122,
+     "dec": 1.82,
+     "odds_assumed": false,
+     "p": 0.51,
+     "implied": 0.55,
+     "edge": -0.039,
+     "ev": -0.072,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.51,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 8,
+       "value": 22.5,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Amen Thompson Over 15.5 Puntos",
+     "player": "Amen Thompson",
+     "team": "HOU",
+     "line": 15.5,
+     "odds": 100,
+     "dec": 2.0,
+     "odds_assumed": false,
+     "p": 0.464,
+     "implied": 0.5,
+     "edge": -0.036,
+     "ev": -0.072,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.416,
+     "p_mkt": 0.48,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 10,
+       "value": 22.8,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Jabari Smith Jr. Over 16.5 PTS+AST",
      "player": "Jabari Smith Jr.",
      "team": "HOU",
@@ -136135,6 +136038,43 @@
        2,
        3
       ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Alperen Sengun Over 19.5 Puntos",
+     "player": "Alperen Sengun",
+     "team": "HOU",
+     "line": 19.5,
+     "odds": -108,
+     "dec": 1.926,
+     "odds_assumed": false,
+     "p": 0.479,
+     "implied": 0.519,
+     "edge": -0.04,
+     "ev": -0.077,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.426,
+     "p_mkt": 0.497,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 7,
+       "value": 20.4,
+       "lg": 22.2,
+       "n": 30
+      }
      }
     },
     {
@@ -136247,43 +136187,6 @@
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Alperen Sengun Over 19.5 Puntos",
-     "player": "Alperen Sengun",
-     "team": "HOU",
-     "line": 19.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.49,
-     "implied": 0.535,
-     "edge": -0.045,
-     "ev": -0.085,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.426,
-     "p_mkt": 0.511,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 7,
-       "value": 20.4,
-       "lg": 22.2,
-       "n": 30
-      }
      }
     },
     {
@@ -136425,6 +136328,47 @@
        "lg": 10.7,
        "n": 30
       }
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Yaxel Lendeborg Over 17.5 Puntos",
+     "player": "Yaxel Lendeborg",
+     "team": "GSW",
+     "line": 17.5,
+     "odds": -125,
+     "dec": 1.8,
+     "odds_assumed": false,
+     "p": 0.504,
+     "implied": 0.556,
+     "edge": -0.052,
+     "ev": -0.093,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.504,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       0,
+       0
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 8,
+       "value": 18.5,
+       "lg": 20.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 11 partidos esta temporada"
      }
     },
     {
@@ -136662,43 +136606,6 @@
        "rank": 1,
        "value": 6.1,
        "lg": 7.9,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Amen Thompson Over 14.5 Puntos",
-     "player": "Amen Thompson",
-     "team": "HOU",
-     "line": 14.5,
-     "odds": -125,
-     "dec": 1.8,
-     "odds_assumed": false,
-     "p": 0.48,
-     "implied": 0.556,
-     "edge": -0.076,
-     "ev": -0.136,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.48,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 10,
-       "value": 22.8,
-       "lg": 23.9,
        "n": 30
       }
      }
@@ -137032,13 +136939,13 @@
      "player": "Stephen Curry",
      "team": "GSW",
      "line": 25.5,
-     "odds": -136,
-     "dec": 1.735,
+     "odds": -117,
+     "dec": 1.855,
      "odds_assumed": false,
      "p": 0.328,
-     "implied": 0.576,
-     "edge": -0.248,
-     "ev": -0.431,
+     "implied": 0.539,
+     "edge": -0.211,
+     "ev": -0.392,
      "value": false,
      "stat": "pts",
      "side": "over",
@@ -137133,14 +137040,14 @@
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 11.5,
-     "odds": -105,
-     "dec": 1.952,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
      "p": 0.809,
-     "implied": 0.512,
+     "implied": 0.5,
      "fair": -424,
-     "edge": 0.297,
-     "ev": 0.579,
+     "edge": 0.309,
+     "ev": 0.618,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -137207,41 +137114,45 @@
     },
     {
      "kind": "prop",
-     "label": "Toumani Camara Under 13.5 Puntos",
-     "player": "Toumani Camara",
+     "label": "Damian Lillard Under 5.5 Asistencias",
+     "player": "Damian Lillard",
      "team": "POR",
-     "line": 13.5,
-     "odds": -115,
-     "dec": 1.87,
+     "line": 5.5,
+     "odds": -157,
+     "dec": 1.637,
      "odds_assumed": false,
-     "p": 0.706,
-     "implied": 0.535,
-     "fair": -240,
-     "edge": 0.171,
-     "ev": 0.32,
+     "p": 0.793,
+     "implied": 0.611,
+     "fair": -383,
+     "edge": 0.182,
+     "ev": 0.298,
      "value": false,
-     "stat": "pts",
+     "stat": "ast",
      "side": "under",
-     "p_model": 0.706,
+     "p_model": 0.793,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
-       3,
-       5
+       1,
+       1
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 19,
-       "value": 24.1,
-       "lg": 23.3,
+       "pos": "PG",
+       "rank": 4,
+       "value": 6.3,
+       "lg": 7.9,
        "n": 30
       }
+     },
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
      }
     }
    ],
@@ -138134,13 +138045,13 @@
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 11.5,
-     "odds": -105,
-     "dec": 1.952,
+     "odds": 100,
+     "dec": 2.0,
      "odds_assumed": false,
      "p": 0.809,
-     "implied": 0.512,
-     "edge": 0.297,
-     "ev": 0.579,
+     "implied": 0.5,
+     "edge": 0.309,
+     "ev": 0.618,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -138206,44 +138117,6 @@
     },
     {
      "kind": "prop",
-     "label": "Toumani Camara Under 13.5 Puntos",
-     "player": "Toumani Camara",
-     "team": "POR",
-     "line": 13.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.706,
-     "implied": 0.535,
-     "edge": 0.171,
-     "ev": 0.32,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.706,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       3,
-       5
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 19,
-       "value": 24.1,
-       "lg": 23.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Damian Lillard Under 5.5 Asistencias",
      "player": "Damian Lillard",
      "team": "POR",
@@ -138290,13 +138163,13 @@
      "player": "Deni Avdija",
      "team": "POR",
      "line": 24.5,
-     "odds": -115,
-     "dec": 1.87,
+     "odds": -120,
+     "dec": 1.833,
      "odds_assumed": false,
      "p": 0.689,
-     "implied": 0.535,
-     "edge": 0.154,
-     "ev": 0.288,
+     "implied": 0.545,
+     "edge": 0.143,
+     "ev": 0.263,
      "value": false,
      "stat": "pts",
      "side": "under",
@@ -138400,6 +138273,48 @@
     },
     {
      "kind": "prop",
+     "label": "Damian Lillard Under 20.5 Puntos",
+     "player": "Damian Lillard",
+     "team": "POR",
+     "line": 20.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.569,
+     "implied": 0.512,
+     "edge": 0.057,
+     "ev": 0.111,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.569,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 6,
+       "value": 23.6,
+       "lg": 27.0,
+       "n": 30
+      }
+     },
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Donovan Clingan Under 13.5 PTS+AST",
      "player": "Donovan Clingan",
      "team": "POR",
@@ -138426,48 +138341,6 @@
        4,
        4
       ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Damian Lillard Under 21.5 Puntos",
-     "player": "Damian Lillard",
-     "team": "POR",
-     "line": 21.5,
-     "odds": -127,
-     "dec": 1.787,
-     "odds_assumed": false,
-     "p": 0.617,
-     "implied": 0.559,
-     "edge": 0.057,
-     "ev": 0.103,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.617,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 6,
-       "value": 23.6,
-       "lg": 27.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
      }
     },
     {
@@ -138503,44 +138376,6 @@
        "rank": 1,
        "value": 33.4,
        "lg": 41.5,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 32.5 Puntos",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 32.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.562,
-     "implied": 0.512,
-     "edge": 0.05,
-     "ev": 0.097,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.562,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       2,
-       5
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 19,
-       "value": 27.9,
-       "lg": 27.0,
        "n": 30
       }
      }
@@ -138857,6 +138692,44 @@
     },
     {
      "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 32.5 Puntos",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 32.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.562,
+     "implied": 0.535,
+     "edge": 0.027,
+     "ev": 0.051,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.562,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       5
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 19,
+       "value": 27.9,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Donovan Clingan Under 12.5 REB+AST",
      "player": "Donovan Clingan",
      "team": "POR",
@@ -138883,6 +138756,43 @@
        3,
        4
       ]
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Toumani Camara Under 12.5 Puntos",
+     "player": "Toumani Camara",
+     "team": "POR",
+     "line": 12.5,
+     "odds": -104,
+     "dec": 1.962,
+     "odds_assumed": false,
+     "p": 0.534,
+     "implied": 0.51,
+     "edge": 0.024,
+     "ev": 0.047,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.639,
+     "p_mkt": 0.499,
+     "cand": true,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       5
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 19,
+       "value": 24.1,
+       "lg": 23.3,
+       "n": 30
+      }
      }
     },
     {
@@ -139684,6 +139594,43 @@
     },
     {
      "kind": "prop",
+     "label": "Jrue Holiday Over 12.5 Puntos",
+     "player": "Jrue Holiday",
+     "team": "POR",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.506,
+     "implied": 0.512,
+     "edge": -0.006,
+     "ev": -0.012,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.529,
+     "p_mkt": 0.499,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       1,
+       2
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 2,
+       "value": 20.3,
+       "lg": 23.9,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Jrue Holiday Under 21.5 PTS+REB+AST",
      "player": "Jrue Holiday",
      "team": "POR",
@@ -140115,26 +140062,26 @@
     },
     {
      "kind": "prop",
-     "label": "Jrue Holiday Over 12.5 Puntos",
+     "label": "Jrue Holiday Under 12.5 Puntos",
      "player": "Jrue Holiday",
      "team": "POR",
      "line": 12.5,
-     "odds": -110,
-     "dec": 1.909,
+     "odds": -106,
+     "dec": 1.943,
      "odds_assumed": false,
-     "p": 0.503,
-     "implied": 0.524,
-     "edge": -0.02,
-     "ev": -0.039,
+     "p": 0.494,
+     "implied": 0.515,
+     "edge": -0.021,
+     "ev": -0.041,
      "value": false,
      "stat": "pts",
-     "side": "over",
-     "p_model": 0.529,
-     "p_mkt": 0.495,
+     "side": "under",
+     "p_model": 0.471,
+     "p_mkt": 0.501,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       6,
        10
       ],
       "h2h": [
@@ -140558,43 +140505,6 @@
      "p_model": 0.465,
      "p_mkt": 0.507,
      "cand": false
-    },
-    {
-     "kind": "prop",
-     "label": "Jrue Holiday Under 12.5 Puntos",
-     "player": "Jrue Holiday",
-     "team": "POR",
-     "line": 12.5,
-     "odds": -115,
-     "dec": 1.87,
-     "odds_assumed": false,
-     "p": 0.497,
-     "implied": 0.535,
-     "edge": -0.038,
-     "ev": -0.071,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "p_model": 0.471,
-     "p_mkt": 0.505,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       2
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 2,
-       "value": 20.3,
-       "lg": 23.9,
-       "n": 30
-      }
-     }
     },
     {
      "kind": "prop",
@@ -141055,6 +140965,43 @@
     },
     {
      "kind": "prop",
+     "label": "Toumani Camara Over 12.5 Puntos",
+     "player": "Toumani Camara",
+     "team": "POR",
+     "line": 12.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.466,
+     "implied": 0.512,
+     "edge": -0.046,
+     "ev": -0.09,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "p_model": 0.361,
+     "p_mkt": 0.501,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       2,
+       5
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 19,
+       "value": 24.1,
+       "lg": 23.3,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Jrue Holiday Under 2.5 Triples",
      "player": "Jrue Holiday",
      "team": "POR",
@@ -141401,6 +141348,43 @@
     },
     {
      "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Under 33.5 Puntos",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 33.5,
+     "odds": -120,
+     "dec": 1.833,
+     "odds_assumed": false,
+     "p": 0.473,
+     "implied": 0.545,
+     "edge": -0.073,
+     "ev": -0.133,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "p_model": 0.473,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       3,
+       5
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 19,
+       "value": 27.9,
+       "lg": 27.0,
+       "n": 30
+      }
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Damian Lillard Over 30.5 PTS+REB+AST",
      "player": "Damian Lillard",
      "team": "POR",
@@ -141442,21 +141426,21 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 33.5 Puntos",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 33.5,
-     "odds": -121,
-     "dec": 1.826,
+     "label": "Damian Lillard Over 19.5 Puntos",
+     "player": "Damian Lillard",
+     "team": "POR",
+     "line": 19.5,
+     "odds": -125,
+     "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.473,
-     "implied": 0.548,
-     "edge": -0.075,
+     "p": 0.48,
+     "implied": 0.556,
+     "edge": -0.076,
      "ev": -0.136,
      "value": false,
      "stat": "pts",
-     "side": "under",
-     "p_model": 0.473,
+     "side": "over",
+     "p_model": 0.48,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -141465,16 +141449,20 @@
        10
       ],
       "h2h": [
-       3,
-       5
+       1,
+       1
       ],
       "dvp": {
        "pos": "PG",
-       "rank": 19,
-       "value": 27.9,
+       "rank": 6,
+       "value": 23.6,
        "lg": 27.0,
        "n": 30
       }
+     },
+     "flag": {
+      "t": "sin_datos",
+      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
      }
     },
     {
@@ -141565,47 +141553,6 @@
        1,
        4
       ]
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Damian Lillard Over 20.5 Puntos",
-     "player": "Damian Lillard",
-     "team": "POR",
-     "line": 20.5,
-     "odds": -105,
-     "dec": 1.952,
-     "odds_assumed": false,
-     "p": 0.431,
-     "implied": 0.512,
-     "edge": -0.081,
-     "ev": -0.159,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.431,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 6,
-       "value": 23.6,
-       "lg": 27.0,
-       "n": 30
-      }
-     },
-     "flag": {
-      "t": "sin_datos",
-      "note": "Sin datos 2025-26 en el modelo; 10 partidos esta temporada"
      }
     },
     {
@@ -141848,63 +141795,26 @@
     },
     {
      "kind": "prop",
-     "label": "Toumani Camara Over 12.5 Puntos",
-     "player": "Toumani Camara",
-     "team": "POR",
-     "line": 12.5,
-     "odds": 100,
-     "dec": 2.0,
-     "odds_assumed": false,
-     "p": 0.361,
-     "implied": 0.5,
-     "edge": -0.139,
-     "ev": -0.278,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "p_model": 0.361,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       5
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 19,
-       "value": 24.1,
-       "lg": 23.3,
-       "n": 30
-      }
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Deni Avdija Over 23.5 Puntos",
+     "label": "Deni Avdija Over 22.5 Puntos",
      "player": "Deni Avdija",
      "team": "POR",
-     "line": 23.5,
-     "odds": -100,
-     "dec": 2.0,
+     "line": 22.5,
+     "odds": -125,
+     "dec": 1.8,
      "odds_assumed": false,
-     "p": 0.352,
-     "implied": 0.5,
-     "edge": -0.148,
-     "ev": -0.296,
+     "p": 0.398,
+     "implied": 0.556,
+     "edge": -0.158,
+     "ev": -0.284,
      "value": false,
      "stat": "pts",
      "side": "over",
-     "p_model": 0.352,
+     "p_model": 0.398,
      "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       6,
        10
       ],
       "h2h": [
@@ -142041,13 +141951,13 @@
      "player": "Donovan Clingan",
      "team": "POR",
      "line": 10.5,
-     "odds": -135,
-     "dec": 1.741,
+     "odds": -130,
+     "dec": 1.769,
      "odds_assumed": false,
      "p": 0.251,
-     "implied": 0.574,
-     "edge": -0.323,
-     "ev": -0.563,
+     "implied": 0.565,
+     "edge": -0.314,
+     "ev": -0.556,
      "value": false,
      "stat": "pts",
      "side": "over",
