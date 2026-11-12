@@ -67,6 +67,9 @@ MAX_MIN = 44
 # MIN_BETA = concentración de los minutos del equipo en los que más juegan (minutos ∝ minutos ** MIN_BETA, el total
 # del equipo no cambia): el reparto a 240 recortaba igual a todos y dejaba a los titulares cortos.
 GARBAGE_CUT, PTS_GAMMA, MIN_BETA = 0.93, 1.1, 1.15
+# 1.7, contexto del jugador (context.py): forma reciente (últimos 5) y partidos con la misma situación de compañeros
+# clave que hoy. RECENT_W / RECENT_MW = peso de las tasas por minuto / minutos recientes; el contexto pesa n / (n + CTX_K)
+USE_CTX, RECENT_W, RECENT_MW, CTX_K, CTX_RK = False, 0.0, 0.0, 4.0, 12.0
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -294,8 +297,17 @@ def simulate(cfg, n=20000, seed=7):
         w = player_weight(p)
         # la DvP va dentro de la tasa; la parte H2H ya trae al rival de hoy, así que no se le aplica
         p["rate"] = {s: (w * p["cur"][s] / max(p["cur"]["min"], 1) +
-                         (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1)) * dvp(p, s) for s in STAT_R}
+                         (1 - w) * p["prior"][s] / max(p["prior"]["min"], 1)) for s in STAT_R}
         base_min[p["name"]] = p["min"]
+        rc, cx = p.get("recent"), p.get("ctx")
+        if rc and rc["min"] > 0:  # forma reciente
+            p["rate"] = {s: (1 - RECENT_W) * p["rate"][s] + RECENT_W * rc[s] / rc["min"] for s in STAT_R}
+            base_min[p["name"]] = (1 - RECENT_MW) * base_min[p["name"]] + RECENT_MW * rc["min"]
+        if cx and cx["min"] > 0:  # rol con los mismos compañeros clave dentro/fuera que hoy
+            wc, wr = cx["g"] / (cx["g"] + CTX_K), cx["g"] / (cx["g"] + CTX_RK)
+            p["rate"] = {s: (1 - wr) * p["rate"][s] + wr * cx[s] / cx["min"] for s in STAT_R}
+            base_min[p["name"]] = (1 - wc) * base_min[p["name"]] + wc * cx["min"]
+        p["rate"] = {s: p["rate"][s] * dvp(p, s) for s in STAT_R}
         hh = p.get("h2h")
         if hh and hh["g"] > 0 and hh["min"] > 0:
             wh, wm, mh2h = h2h_weights(p)
@@ -491,7 +503,14 @@ def load_game(path, use_db=None, use_h2h=None):
         from db_link import apply_db
         rk = cfg.get("db", {}).get("rankings") or os.path.join(HERE, "db", "rankings_latest.json")
         cfg = apply_db(cfg, rk)
-    return apply_h2h(cfg)
+    cfg = apply_h2h(cfg)
+    if USE_CTX and cfg.get("context", True):
+        try:
+            from context import add_context
+            cfg = add_context(cfg, cfg["game"]["date"])
+        except Exception as e:  # sin logs no hay contexto: el modelo sigue con las medias de temporada
+            print("contexto no disponible:", e, file=sys.stderr)
+    return cfg
 
 
 if __name__ == "__main__":

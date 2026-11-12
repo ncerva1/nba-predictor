@@ -1,5 +1,5 @@
-"""Backtest 1.6.1: proyección de minutos y puntos frente a lo real por nivel de anotador (cur pts), jornadas 1-11 nov.
-    python bt_stars.py GARBAGE_CUT PTS_GAMMA [n]
+"""Backtest 1.6.1/1.7: proyección de minutos y puntos frente a lo real por nivel de anotador (cur pts), jornadas 1-11 nov.
+    python bt_stars.py GARBAGE_CUT PTS_GAMMA MIN_BETA [n] [RECENT_W RECENT_MW CTX_K]   (CTX_K 0 = sin contexto)
 """
 import glob, json, sys, statistics as st
 import numpy as np
@@ -8,6 +8,10 @@ from evaluate import norm
 
 model.GARBAGE_CUT, model.PTS_GAMMA, model.MIN_BETA = float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3])
 N = int(sys.argv[4]) if len(sys.argv) > 4 else 3000
+if len(sys.argv) > 7:
+    model.RECENT_W, model.RECENT_MW, model.CTX_K = map(float, sys.argv[5:8])
+    if len(sys.argv) > 8: model.CTX_RK = float(sys.argv[8])
+    model.USE_CTX = model.CTX_K > 0
 rows, props = [], []
 for f in sorted(glob.glob("games/2026-11-0[1-9]_*.json")) + sorted(glob.glob("games/2026-11-1[01]_*.json")):
     if f.endswith("_results.json"):
