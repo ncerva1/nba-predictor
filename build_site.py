@@ -1263,6 +1263,16 @@ def bet_key(b):
                                       b["line"] if b.get("alt") else ""))
 
 
+def add_means(r):
+    """Proyección media del modelo en cada prop (para "Proy. vs línea" en la web; idea 7 de bucketsbase)."""
+    sp = {p["name"]: p for p in r["summary"]["players"]}
+    for b in r["bets"] + r.get("model_picks", []):
+        st = (sp.get(b.get("player")) or {}).get(b.get("stat") or "")
+        if b.get("kind") == "prop" and isinstance(st, dict) and "mean" in st and b.get("stat") not in ("dd", "td"):
+            b["mean"] = st["mean"]
+    return r
+
+
 def carry_open(r, old):
     """Pasa a r (re-simulado) la línea y cuota de apertura de la versión publicada antes (old)."""
     prev = {bet_key(b): b for b in (old or {}).get("bets", [])}
@@ -1413,6 +1423,7 @@ def main():
         except Exception as e:  # un JSON roto no debe tumbar toda la jornada
             print(f"ERROR {os.path.basename(p)}: {e}")
             continue
+        add_means(r)
         flags = player_flags(date, p)
         apply_flags(r, flags)
         all_flags.update(flags)
@@ -1506,6 +1517,11 @@ def main():
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
     json.dump(dict(generated=now, value_ev=VALUE_EV, model=MODEL, mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
                    history=history, versions=versions, parlays=cross, dream=dream, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+    try:  # pestaña Liga: equipos, líderes y margen de las casas (docs/data/league.json)
+        import league_view
+        league_view.build(last)
+    except Exception as e:
+        print(f"ERROR league_view: {e}")
     import player_cards  # ficha de jugador y rachas: docs/data/players/<fecha>.json de las jornadas tocadas
     for date in sorted({os.path.basename(p)[:10] for p in paths} | sim_dates):
         if any(g["date"] == date and "result" not in g for g in games) or not os.path.exists(os.path.join(OUT, "players", f"{date}.json")):

@@ -1,14 +1,15 @@
 """
 Rellena la línea y cuota de apertura ("open") de las jornadas publicadas antes de que build_site.py la guardara
 (12-nov): la apertura es la primera versión de docs/data/<id>.json en el historial de git (el análisis de la mañana).
-No re-simula ni cambia ningún pick; solo añade "open" a las apuestas que no lo tienen y refresca index.json.
+No re-simula ni cambia ningún pick; solo añade "open" a las apuestas que no lo tienen, la proyección media ("mean")
+de cada prop y refresca index.json.
 
     python line_moves.py            # todas las jornadas
     python line_moves.py 2026-11-12 # solo esa
 """
 import glob, json, os, subprocess, sys
 
-from build_site import OUT, HERE, bet_key, index_entry
+from build_site import OUT, HERE, add_means, bet_key, index_entry
 
 
 def first_version(path):
@@ -20,8 +21,9 @@ def first_version(path):
 
 
 def backfill(path):
-    r = json.load(open(path))
+    r = add_means(json.load(open(path)))
     if all("open" in b for b in r["bets"]):
+        json.dump(r, open(path, "w"), ensure_ascii=False, separators=(",", ":"))
         return r, 0
     first = first_version(path) or r
     prev = {bet_key(b): b for b in first["bets"]}
