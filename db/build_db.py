@@ -223,8 +223,12 @@ def latest(con):
                        " (SELECT prior_season FROM snapshots ORDER BY snapshot_date DESC LIMIT 1) FROM snapshots").fetchone()
 
 
-def export_json(con):
-    date, cur, prior = latest(con)
+def export_json(con, date=None, out_path=OUT_JSON):
+    """Exporta el snapshot más reciente (o el de `date`, para re-simular jornadas pasadas con lo que se sabía ese día)."""
+    if date is None:
+        date, cur, prior = latest(con)
+    else:
+        cur, prior = con.execute("SELECT season, prior_season FROM snapshots WHERE snapshot_date=?", (date,)).fetchone()
     q = lambda sql, *a: pd.read_sql(sql, con, params=(date, *a))
     out = {"snapshot_date": date, "season": cur, "prior_season": prior, "shrink_games": SHRINK, "teams": {}}
     tm = q("SELECT * FROM team_metrics WHERE snapshot_date=?")
@@ -253,7 +257,7 @@ def export_json(con):
                 {"fga": r.fga, "fg_pct": r.fg_pct, "fga_rank": int(r.fga_rank), "fg_pct_rank": int(r.fg_pct_rank)}
         for _, r in dv[dv.team == t].iterrows():
             T["dvp"].setdefault(r.position, {})[r.stat] = {"value": r.value, "rank": int(r["rank"])}
-    json.dump(out, open(OUT_JSON, "w"), indent=1)
+    json.dump(out, open(out_path, "w"), indent=1)
 
 
 # ---------------- informe de enfrentamiento ----------------
@@ -301,8 +305,12 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--team")
     ap.add_argument("--vs")
+    ap.add_argument("--snapshot", help="además exporta este snapshot (YYYY-MM-DD) a --out (backtests)")
+    ap.add_argument("--out")
     a = ap.parse_args()
     con = build()
+    if a.snapshot:
+        export_json(con, a.snapshot, a.out or os.path.join(HERE, f"rankings_{a.snapshot}.json"))
     n = con.execute("SELECT COUNT(*) FROM team_metrics").fetchone()[0]
     print(f"BD reconstruida: {DB} ({n} filas de métricas)")
     if a.team and a.vs:

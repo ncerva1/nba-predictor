@@ -71,7 +71,8 @@ MODEL_VERSIONS = [
     ("1.2", "2026-10-27", "minutos más abiertos, calibrada con el 26-oct"),
     ("1.3", "2026-10-29", "H2H con peso y más mercados de props"),
     ("1.5", "2026-11-01", "mezcla con la casa, solo props y tope de 15 picks"),
-    ("1.5.1", "2026-11-12", "cuotas de props al margen de Betano Colombia"),
+    # 1.5.1 (cuotas al margen de Betano) y 1.6 (nivel de anotación, puntos más abiertos) empiezan la misma jornada
+    ("1.6", "2026-11-12", "cuotas de Betano, anotación de esta temporada y puntos más abiertos"),
 ]
 MODEL = MODEL_VERSIONS[-1][0]
 
