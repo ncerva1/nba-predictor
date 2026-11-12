@@ -1,5 +1,49 @@
 # Cambios del modelo
 
+## Datos — 2026-11-11: líneas de combinadas (P+R, P+A, R+A, PRA) y triples
+- Pedido de Nicolas: el modelo ya simulaba las combinadas, pero no había líneas de casa (scoresandodds las carga por
+  JS en /nba/props). Ahora salen de la página de cada jugador en scoresandodds (6-8 casas): `odds/combos/<fecha>.json`
+  + `python odds/merge_combos.py <fecha>` las añade a prop_lines del slate. Con eso entran en apuestas, props,
+  portada, parlays, soñador y Armar apuesta como cualquier otra prop.
+- 11-nov: 79 jugadores y 387 líneas, re-simulado a las 15:00 ET. A pedido de Nicolas (15:26 ET) se republicaron los
+  15 picks y el soñador de ese día con las combinadas: entraron 10 picks nuevos y 5 patas nuevas en el soñador (cuota 50.86).
+
+## Web — 2026-11-11: Armar apuesta en cada partido
+- Pedido de Nicolas (estilo ludoprops): sección **Armar apuesta** arriba de las apuestas de cada partido, con las 5
+  mejores líneas del partido o de cada equipo y el porqué de cada una (proyección y rango, prob. modelo vs casa,
+  Últ. 10, H2H, DvP del rival, bajas de hoy con sus partidos reales sin ese jugador, minutos, total esperado, paliza,
+  back-to-back). Filtros: Partido / equipo, Over / Under / ambos y mercado.
+- Solo líneas con cuota en los dos lados y prob. ≥ 50%. Puntaje = EV a cuota tipo Betano + apoyo de Últ. 10 / H2H /
+  DvP; máx. 2 por jugador y una por familia. Sin jugadores fuera o en duda (p_play < 0.9) ni Unders de rookies.
+- Cuota: la de 1.5.1; en jornadas anteriores al 12-nov se estima en la web con la misma fórmula (CO_OVERROUND 1.08),
+  y con esa cuota van a Mi combinada / Mis picks. Todo se calcula en el navegador con el JSON ya publicado.
+
+## Web — 2026-11-11: Mis picks con tu cuota y aviso de valor perdido
+- Pedido de Nicolas: en cada pick de Mis picks se puede escribir **Tu cuota** (`dec_taken`, la de su casa) mientras no
+  esté liquidado. Las unidades usan esa cuota, y un panel compara el EV de la web con el EV a tu cuota (misma prob.).
+- Aviso en pendientes cuando la última revisión movió la línea (mismo jugador, estadística y lado con otra línea),
+  dejó sin valor un pick recomendado o bajó la cuota más de 0.04. En la portada aparece "n perdieron valor".
+- El soñador de las jornadas desde el 11-nov (`DREAM_CO_FROM`) va siempre a cuota colombiana, aunque la jornada se
+  haya publicado antes de 1.5.1, así una revisión horaria no lo devuelve a cuotas de EE. UU.
+
+## Modelo 1.5.1 — 2026-11-12: cuotas de props al margen de Betano Colombia
+- Pedido de Nicolas (11-nov): en Betano las cuotas salen más bajas que en la web, así que el EV real es menor y el
+  soñador de cuota 50 queda en ~37. Causa: las props que leemos (scoresandodds / Covers) son la MEJOR cuota de cada
+  lado entre 6 casas de EE. UU. (margen conjunto ~3.5%); en Colombia el margen es ~7-8% (Kambi 29/30-oct: 7.3%).
+- `localize_odds` (build_site.py), desde las jornadas del 12-nov: quita el margen del par y aplica `CO_OVERROUND`
+  = 1.08; un lado sin pareja sube su prob. implícita en 1.08 / 1.035. La cuota leída queda en `odds_ref`/`dec_ref`
+  (la web la muestra como "≈ Betano · EE. UU. x.xx"). No toca juegos con `"prop_odds_region": "CO"`.
+- Soñador: con esas cuotas casi ninguna pata tiene EV ≥ 0, así que cada pata pide EV ≥ −3% (`DREAM_LEG_EV`).
+- Prueba con la jornada del 11-nov: 12 picks (EV de +3% a +10% en vez de +8% a +17%) y soñador de 7 patas a ~56.
+
+## Web — 2026-11-11: reemplazos para las patas del soñador
+- Pedido de Nicolas: si la casa no ofrece una pata (p. ej. Reed Sheppard no sale en Betano), cada pata del soñador de
+  hoy tiene "No está en mi casa" con hasta 3 reemplazos y la cuota/prob. se recalculan. `dream_swaps` (build_site.py)
+  guarda por pata hasta 6 candidatas en `swaps` (con `pc`, su correlación con las patas y candidatas de su partido).
+  Reglas duras: sin repetir jugador, máx. 2 por partido con corr. ≥ 0.97, máx. mitad Unders. Si no salen 3, entran
+  marcadas en `soft` las de prob. 52–55% o cuota total 40–250 fuera de 50–200. La elección se guarda en el navegador;
+  el seguimiento del soñador cuenta la publicada.
+
 ## Web — 2026-11-09: líneas escalonadas (X+)
 - Pedido de Nicolas: las líneas tipo "31+ puntos @1.30". `ladders` da por jugador (≥ 15 min, juega seguro) la prob.
   de llegar a cada umbral de PTS, REB, AST, 3PM, PRA, R+A, robos y tapones (50–97%) con su cuota mínima con valor,

@@ -9,7 +9,8 @@
   "notes": [
    "Haliburton (isquio) OUT hasta ~13-nov; Vukcevic, Beekman, Champagnie y Watkins OUT en WAS",
    "Coulibaly (mano) DTD con líneas en las casas: 0.7; McConnell (isquio) GTD: 0.65",
-   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+   "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET"
   ],
   "out": [
    "Reece Beekman",
@@ -1110,10 +1111,10 @@
  ],
  "market": {
   "source": "NBA.com/games 11-nov (10 partidos de liga); Covers matchup/<id>/odds (9 casas en 6 partidos, ~11:40 ET) + consenso scoresandodds.com/nba?date=2026-11-11 en los 10; props de puntos, rebotes y asistencias de scoresandodds.com/nba/props/<stat>?date=2026-11-11 (mejor cuota por lado) y puntos de Covers donde faltaban; triples sin líneas del día",
-  "ml_home": -165,
-  "ml_away": 138,
+  "ml_home": -155,
+  "ml_away": 131,
   "spread_home": -3.5,
-  "total": 225.5
+  "total": 226.5
  },
  "prop_lines": {
   "Anthony Davis": {
@@ -1126,6 +1127,31 @@
     10.5,
     100,
     -118
+   ],
+   "fg3m": [
+    0.5,
+    -150,
+    120
+   ],
+   "pr": [
+    33.5,
+    -106,
+    -112
+   ],
+   "pa": [
+    24.5,
+    -112,
+    -106
+   ],
+   "ra": [
+    12.5,
+    -108,
+    105
+   ],
+   "pra": [
+    35.5,
+    -110,
+    -112
    ]
   },
   "Pascal Siakam": {
@@ -1144,6 +1170,31 @@
     3.5,
     -118,
     105
+   ],
+   "fg3m": [
+    1.5,
+    110,
+    -110
+   ],
+   "pr": [
+    28.5,
+    -112,
+    -112
+   ],
+   "pa": [
+    25.5,
+    -110,
+    -112
+   ],
+   "ra": [
+    10.5,
+    -102,
+    -105
+   ],
+   "pra": [
+    32.5,
+    -106,
+    -112
    ]
   },
   "Trae Young": {
@@ -1158,6 +1209,31 @@
     -145,
     -140,
     9.5
+   ],
+   "fg3m": [
+    2.5,
+    136,
+    -170
+   ],
+   "pr": [
+    20.5,
+    -105,
+    -104
+   ],
+   "pa": [
+    26.5,
+    -105,
+    -120
+   ],
+   "ra": [
+    11.5,
+    -115,
+    -102
+   ],
+   "pra": [
+    29.5,
+    -105,
+    -120
    ]
   },
   "AJ Dybantsa": {
@@ -1171,6 +1247,31 @@
     5.5,
     -130,
     115
+   ],
+   "fg3m": [
+    1.5,
+    154,
+    -180
+   ],
+   "pr": [
+    23.5,
+    -104,
+    -110
+   ],
+   "pa": [
+    19.5,
+    -114,
+    -105
+   ],
+   "ra": [
+    8.5,
+    105,
+    -130
+   ],
+   "pra": [
+    25.5,
+    -114,
+    -105
    ]
   },
   "Andrew Nembhard": {
@@ -1185,13 +1286,39 @@
     -165,
     -135,
     7.5
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    135
+   ],
+   "pr": [
+    18.5,
+    -114,
+    -105
+   ],
+   "pa": [
+    23.5,
+    -110,
+    -115
+   ],
+   "ra": [
+    9.5,
+    -125,
+    100
+   ],
+   "pra": [
+    26.5,
+    -102,
+    -115
    ]
   },
   "Kyshawn George": {
    "pts": [
     14.5,
-    -110,
-    -102
+    -112,
+    -125,
+    15.5
    ],
    "reb": [
     4.5,
@@ -1203,6 +1330,31 @@
     -160,
     -125,
     4.5
+   ],
+   "fg3m": [
+    2.5,
+    158,
+    -183
+   ],
+   "pr": [
+    19.5,
+    -110,
+    -111
+   ],
+   "pa": [
+    19.5,
+    -110,
+    -112
+   ],
+   "ra": [
+    9.5,
+    107,
+    -138
+   ],
+   "pra": [
+    24.5,
+    -104,
+    -118
    ]
   },
   "Aaron Nesmith": {
@@ -1224,6 +1376,26 @@
     -136,
     -135,
     10.5
+   ],
+   "pr": [
+    22.5,
+    -112,
+    -104
+   ],
+   "pa": [
+    14.5,
+    -110,
+    -101
+   ],
+   "ra": [
+    12.5,
+    101,
+    -125
+   ],
+   "pra": [
+    25.5,
+    -108,
+    -110
    ]
   },
   "Obi Toppin": {
@@ -1237,6 +1409,31 @@
     4.5,
     103,
     102
+   ],
+   "fg3m": [
+    1.5,
+    105,
+    -125
+   ],
+   "pr": [
+    16.5,
+    -108,
+    -121
+   ],
+   "pa": [
+    13.5,
+    -114,
+    -108
+   ],
+   "ra": [
+    6.5,
+    -105,
+    -110
+   ],
+   "pra": [
+    18.5,
+    -110,
+    -118
    ]
   },
   "Alex Sarr": {
@@ -1249,6 +1446,31 @@
     6.5,
     -110,
     115
+   ],
+   "fg3m": [
+    0.5,
+    -175,
+    175
+   ],
+   "pr": [
+    17.5,
+    -105,
+    -105
+   ],
+   "pa": [
+    12.5,
+    105,
+    -112
+   ],
+   "ra": [
+    8.5,
+    -115,
+    105
+   ],
+   "pra": [
+    19.5,
+    -104,
+    -105
    ]
   },
   "Deandre Ayton": {

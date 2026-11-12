@@ -15,12 +15,13 @@
   ],
   "out": [
    "Trendon Watford",
-   "Yves Missi"
+   "Yves Missi",
+   "Nolan Traore",
+   "Mikel Brown Jr.",
+   "Bennedict Mathurin"
   ],
   "gtd": {
-   "Nolan Traore": 0.65,
-   "Mikel Brown Jr.": 0.7,
-   "Trey Murphy III": 0.9
+   "Trey Murphy III": 0.25
   },
   "reserves": {
    "BKN": [
@@ -120,7 +121,7 @@
    "name": "Zion Williamson",
    "pos": "PF",
    "starter": true,
-   "min": 28.5,
+   "min": 30.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -162,9 +163,9 @@
    "name": "Trey Murphy III",
    "pos": "SF",
    "starter": true,
-   "min": 28.2,
+   "min": 29.9,
    "g_cur": 9,
-   "p_play": 0.9,
+   "p_play": 0.25,
    "cur": {
     "min": 32.8,
     "pts": 15.56,
@@ -204,7 +205,7 @@
    "name": "Dejounte Murray",
    "pos": "PG",
    "starter": true,
-   "min": 27.5,
+   "min": 29.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -246,7 +247,7 @@
    "name": "Jeremiah Fears",
    "pos": "PG",
    "starter": true,
-   "min": 24.9,
+   "min": 26.4,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -288,7 +289,7 @@
    "name": "Saddiq Bey",
    "pos": "SF",
    "starter": false,
-   "min": 22.9,
+   "min": 24.3,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -329,7 +330,7 @@
    "name": "Herbert Jones",
    "pos": "SF",
    "starter": false,
-   "min": 19.5,
+   "min": 20.7,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -370,7 +371,7 @@
    "name": "Derik Queen",
    "pos": "C",
    "starter": false,
-   "min": 19.2,
+   "min": 20.3,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -411,7 +412,7 @@
    "name": "Jordan Poole",
    "pos": "SG",
    "starter": false,
-   "min": 16.9,
+   "min": 17.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -452,7 +453,7 @@
    "name": "Karlo Matković",
    "pos": "PF",
    "starter": false,
-   "min": 15.9,
+   "min": 16.9,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -493,7 +494,7 @@
    "name": "DeAndre Jordan",
    "pos": "C",
    "starter": true,
-   "min": 14.2,
+   "min": 15.1,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -532,51 +533,10 @@
   },
   {
    "team": "NOP",
-   "name": "Bennedict Mathurin",
-   "pos": "SF",
-   "starter": false,
-   "min": 13.5,
-   "g_cur": 11,
-   "p_play": 1.0,
-   "cur": {
-    "min": 15.7,
-    "pts": 6.0,
-    "reb": 1.91,
-    "ast": 1.27,
-    "fg3m": 0.45,
-    "fgm": 2.09,
-    "fga": 5.73,
-    "fg3a": 2.36,
-    "stl": 0.36,
-    "blk": 0.0,
-    "tov": 0.91,
-    "pf": 1.36,
-    "ftm": 1.36,
-    "fta": 1.45
-   },
-   "prior": {
-    "min": 30.0,
-    "pts": 17.57,
-    "reb": 5.43,
-    "ast": 2.39,
-    "fg3m": 1.39,
-    "fgm": 5.39,
-    "fga": 12.54,
-    "fg3a": 4.41,
-    "stl": 0.8,
-    "blk": 0.24,
-    "tov": 2.19,
-    "pf": 2.54,
-    "ftm": 5.41,
-    "fta": 6.22
-   }
-  },
-  {
-   "team": "NOP",
    "name": "Bryce McGowens",
    "pos": "SG",
    "starter": false,
-   "min": 8.8,
+   "min": 9.3,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -617,7 +577,7 @@
    "name": "Julius Randle",
    "pos": "PF",
    "starter": true,
-   "min": 27.2,
+   "min": 32.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -659,7 +619,7 @@
    "name": "Michael Porter Jr.",
    "pos": "SF",
    "starter": true,
-   "min": 26.9,
+   "min": 31.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -701,7 +661,7 @@
    "name": "Day'Ron Sharpe",
    "pos": "C",
    "starter": true,
-   "min": 19.3,
+   "min": 22.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -740,51 +700,10 @@
   },
   {
    "team": "BKN",
-   "name": "Mikel Brown Jr.",
-   "pos": "PG",
-   "starter": false,
-   "min": 19.0,
-   "g_cur": 7,
-   "p_play": 0.7,
-   "cur": {
-    "min": 23.3,
-    "pts": 12.86,
-    "reb": 2.14,
-    "ast": 3.86,
-    "fg3m": 2.0,
-    "fgm": 4.0,
-    "fga": 11.57,
-    "fg3a": 6.43,
-    "stl": 0.71,
-    "blk": 0.14,
-    "tov": 2.14,
-    "pf": 2.0,
-    "ftm": 2.86,
-    "fta": 3.57
-   },
-   "prior": {
-    "min": 23.3,
-    "pts": 12.86,
-    "reb": 2.14,
-    "ast": 3.86,
-    "fg3m": 2.0,
-    "fgm": 4.0,
-    "fga": 11.57,
-    "fg3a": 6.43,
-    "stl": 0.91,
-    "blk": 0.28,
-    "tov": 1.51,
-    "pf": 2.03,
-    "ftm": 2.86,
-    "fta": 3.57
-   }
-  },
-  {
-   "team": "BKN",
    "name": "Danny Wolf",
    "pos": "PF",
    "starter": false,
-   "min": 18.4,
+   "min": 21.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -825,7 +744,7 @@
    "name": "Keon Ellis",
    "pos": "SG",
    "starter": true,
-   "min": 18.3,
+   "min": 21.6,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -864,51 +783,10 @@
   },
   {
    "team": "BKN",
-   "name": "Nolan Traore",
-   "pos": "PG",
-   "starter": false,
-   "min": 18.0,
-   "g_cur": 10,
-   "p_play": 0.65,
-   "cur": {
-    "min": 22.1,
-    "pts": 12.9,
-    "reb": 2.0,
-    "ast": 2.6,
-    "fg3m": 1.8,
-    "fgm": 4.9,
-    "fga": 9.5,
-    "fg3a": 3.9,
-    "stl": 1.3,
-    "blk": 0.5,
-    "tov": 1.6,
-    "pf": 2.2,
-    "ftm": 1.3,
-    "fta": 1.9
-   },
-   "prior": {
-    "min": 22.2,
-    "pts": 8.91,
-    "reb": 1.77,
-    "ast": 3.8,
-    "fg3m": 1.09,
-    "fgm": 3.25,
-    "fga": 8.55,
-    "fg3a": 3.43,
-    "stl": 0.8,
-    "blk": 0.41,
-    "tov": 2.3,
-    "pf": 2.12,
-    "ftm": 1.32,
-    "fta": 1.68
-   }
-  },
-  {
-   "team": "BKN",
    "name": "Egor Dëmin",
    "pos": "PG",
    "starter": true,
-   "min": 17.8,
+   "min": 21.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -950,7 +828,7 @@
    "name": "Noah Clowney",
    "pos": "PF",
    "starter": false,
-   "min": 16.1,
+   "min": 19.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -991,7 +869,7 @@
    "name": "Chaney Johnson",
    "pos": "SF",
    "starter": false,
-   "min": 15.7,
+   "min": 18.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -1032,7 +910,7 @@
    "name": "Moritz Wagner",
    "pos": "C",
    "starter": false,
-   "min": 14.9,
+   "min": 17.6,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -1073,7 +951,7 @@
    "name": "Terance Mann",
    "pos": "SG",
    "starter": false,
-   "min": 12.7,
+   "min": 15.0,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1114,7 +992,7 @@
    "name": "Josh Minott",
    "pos": "SF",
    "starter": false,
-   "min": 8.3,
+   "min": 9.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1155,7 +1033,7 @@
    "name": "Drake Powell",
    "pos": "SG",
    "starter": false,
-   "min": 7.3,
+   "min": 8.7,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -1212,6 +1090,31 @@
     -120,
     -133,
     7.5
+   ],
+   "fg3m": [
+    3.5,
+    145,
+    -145
+   ],
+   "pr": [
+    28.5,
+    -120,
+    -105
+   ],
+   "pa": [
+    23.5,
+    -114,
+    -110
+   ],
+   "ra": [
+    8.5,
+    102,
+    -130
+   ],
+   "pra": [
+    30.5,
+    -115,
+    -110
    ]
   },
   "Zion Williamson": {
@@ -1225,6 +1128,31 @@
     5.5,
     102,
     -103
+   ],
+   "fg3m": [
+    0.5,
+    450,
+    -700
+   ],
+   "pr": [
+    25.5,
+    -112,
+    -105
+   ],
+   "pa": [
+    23.5,
+    -105,
+    -120
+   ],
+   "ra": [
+    8.5,
+    -108,
+    -115
+   ],
+   "pra": [
+    28.5,
+    -106,
+    -105
    ]
   },
   "Julius Randle": {
@@ -1243,6 +1171,31 @@
     4.5,
     -130,
     120
+   ],
+   "fg3m": [
+    1.5,
+    130,
+    -165
+   ],
+   "pr": [
+    25.5,
+    -112,
+    -112
+   ],
+   "pa": [
+    24.5,
+    -105,
+    -114
+   ],
+   "ra": [
+    10.5,
+    -125,
+    100
+   ],
+   "pra": [
+    30.5,
+    -112,
+    -102
    ]
   },
   "Trey Murphy III": {
@@ -1256,6 +1209,31 @@
     4.5,
     -136,
     120
+   ],
+   "fg3m": [
+    2.5,
+    130,
+    -148
+   ],
+   "pr": [
+    20.5,
+    -112,
+    -108
+   ],
+   "pa": [
+    19.5,
+    -110,
+    -115
+   ],
+   "ra": [
+    7.5,
+    -118,
+    -105
+   ],
+   "pra": [
+    23.5,
+    -120,
+    -105
    ]
   },
   "Jeremiah Fears": {
@@ -1275,6 +1253,31 @@
     4.5,
     -125,
     120
+   ],
+   "fg3m": [
+    1.5,
+    120,
+    -135
+   ],
+   "pr": [
+    20.5,
+    -106,
+    -109
+   ],
+   "pa": [
+    20.5,
+    -118,
+    -108
+   ],
+   "ra": [
+    9.5,
+    115,
+    -133
+   ],
+   "pra": [
+    25.5,
+    -106,
+    -109
    ]
   },
   "Dejounte Murray": {
@@ -1307,32 +1310,31 @@
     -130,
     -164,
     4.5
-   ]
-  },
-  "Mikel Brown Jr.": {
-   "pts": [
-    12.5,
+   ],
+   "fg3m": [
+    1.5,
+    -145,
+    128
+   ],
+   "pr": [
+    18.5,
     -115,
-    -120,
-    13.5
+    -105
    ],
-   "ast": [
-    3.5,
-    -140,
-    115
-   ]
-  },
-  "Nolan Traore": {
-   "pts": [
-    10.5,
-    -125,
-    -120,
-    12.5
+   "pa": [
+    16.5,
+    -114,
+    -104
    ],
-   "ast": [
-    3.5,
-    -112,
-    115
+   "ra": [
+    6.5,
+    108,
+    -135
+   ],
+   "pra": [
+    20.5,
+    -120,
+    -105
    ]
   },
   "Day'Ron Sharpe": {
@@ -1346,6 +1348,31 @@
     -151,
     -140,
     4.5
+   ],
+   "fg3m": [
+    0.5,
+    240,
+    -330
+   ],
+   "pr": [
+    16.5,
+    -125,
+    -106
+   ],
+   "pa": [
+    13.5,
+    -102,
+    -112
+   ],
+   "ra": [
+    11.5,
+    -128,
+    -104
+   ],
+   "pra": [
+    21.5,
+    -102,
+    -112
    ]
   },
   "Derik Queen": {

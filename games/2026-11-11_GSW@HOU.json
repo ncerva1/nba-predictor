@@ -9,7 +9,9 @@
   "notes": [
    "Payton II, B. Williams, Porzingis, Butler y Moody OUT en GSW; Will Richard (pulgar) GTD",
    "Capela y Adams OUT hasta ~15-nov; Tshiebwe (enfermedad) DTD",
-   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+   "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET",
+   "Líneas de puntos actualizadas con scoresandodds /nba/props/points 20:40 ET; spread/total/ML sin cambios"
   ],
   "out": [
    "Gary Payton II",
@@ -18,7 +20,7 @@
    "Steven Adams"
   ],
   "gtd": {
-   "Will Richard": 0.4,
+   "Will Richard": 0.85,
    "Oscar Tshiebwe": 0.6
   },
   "reserves": {
@@ -840,7 +842,7 @@
    "starter": false,
    "min": 17.1,
    "g_cur": 10,
-   "p_play": 0.4,
+   "p_play": 0.85,
    "cur": {
     "min": 17.1,
     "pts": 5.1,
@@ -959,18 +961,18 @@
  ],
  "market": {
   "source": "NBA.com/games 11-nov (10 partidos de liga); Covers matchup/<id>/odds (9 casas en 6 partidos, ~11:40 ET) + consenso scoresandodds.com/nba?date=2026-11-11 en los 10; props de puntos, rebotes y asistencias de scoresandodds.com/nba/props/<stat>?date=2026-11-11 (mejor cuota por lado) y puntos de Covers donde faltaban; triples sin líneas del día",
-  "ml_home": -218,
-  "ml_away": 180,
-  "spread_home": -5.5,
+  "ml_home": -237,
+  "ml_away": 196,
+  "spread_home": -6.5,
   "total": 222.5
  },
  "prop_lines": {
   "Stephen Curry": {
    "pts": [
     25.5,
-    -136,
-    -115,
-    27.5
+    -117,
+    -120,
+    26.5
    ],
    "reb": [
     3.5,
@@ -987,7 +989,7 @@
    "pts": [
     21.5,
     -115,
-    -122,
+    -125,
     22.5
    ],
    "reb": [
@@ -999,13 +1001,38 @@
     3.5,
     102,
     -114
+   ],
+   "fg3m": [
+    1.5,
+    -120,
+    -105
+   ],
+   "pr": [
+    27.5,
+    -105,
+    -120
+   ],
+   "pa": [
+    25.5,
+    -105,
+    -106
+   ],
+   "ra": [
+    8.5,
+    -140,
+    110
+   ],
+   "pra": [
+    30.5,
+    -115,
+    -110
    ]
   },
   "Alperen Sengun": {
    "pts": [
     19.5,
-    -115,
-    -105
+    -108,
+    -111
    ],
    "reb": [
     8.5,
@@ -1018,13 +1045,39 @@
     -125,
     -135,
     7.5
+   ],
+   "fg3m": [
+    0.5,
+    105,
+    -114
+   ],
+   "pr": [
+    29.5,
+    -105,
+    -120
+   ],
+   "pa": [
+    27.5,
+    -105,
+    -120
+   ],
+   "ra": [
+    16.5,
+    -112,
+    -112
+   ],
+   "pra": [
+    36.5,
+    -112,
+    -112
    ]
   },
   "Yaxel Lendeborg": {
    "pts": [
-    18.5,
-    -102,
-    -115
+    17.5,
+    -125,
+    -115,
+    18.5
    ],
    "reb": [
     6.5,
@@ -1036,13 +1089,39 @@
     -130,
     -132,
     4.5
+   ],
+   "fg3m": [
+    1.5,
+    -125,
+    124
+   ],
+   "pr": [
+    24.5,
+    -115,
+    -104
+   ],
+   "pa": [
+    22.5,
+    105,
+    -115
+   ],
+   "ra": [
+    10.5,
+    110,
+    -125
+   ],
+   "pra": [
+    28.5,
+    -110,
+    -105
    ]
   },
   "Brandin Podziemski": {
    "pts": [
-    15.5,
-    -106,
-    -113
+    14.5,
+    -122,
+    -115,
+    15.5
    ],
    "reb": [
     4.5,
@@ -1054,14 +1133,18 @@
     -175,
     -149,
     3.5
+   ],
+   "fg3m": [
+    2.5,
+    132,
+    -150
    ]
   },
   "Amen Thompson": {
    "pts": [
-    14.5,
-    -125,
-    -114,
-    15.5
+    15.5,
+    100,
+    -118
    ],
    "reb": [
     6.5,
@@ -1073,30 +1156,105 @@
     3.5,
     124,
     -125
+   ],
+   "fg3m": [
+    0.5,
+    300,
+    -425
+   ],
+   "pr": [
+    22.5,
+    -112,
+    -112
+   ],
+   "pa": [
+    18.5,
+    -120,
+    -105
+   ],
+   "ra": [
+    10.5,
+    -104,
+    105
+   ],
+   "pra": [
+    26.5,
+    -110,
+    -115
    ]
   },
   "Jabari Smith Jr.": {
    "pts": [
     14.5,
-    -111,
-    -112
+    100,
+    -105
    ],
    "reb": [
     6.5,
     102,
     -111
+   ],
+   "fg3m": [
+    2.5,
+    132,
+    -155
+   ],
+   "pr": [
+    21.5,
+    -105,
+    -114
+   ],
+   "pa": [
+    16.5,
+    -110,
+    -112
+   ],
+   "ra": [
+    8.5,
+    100,
+    -122
+   ],
+   "pra": [
+    23.5,
+    100,
+    -122
    ]
   },
   "Fred VanVleet": {
    "pts": [
     11.5,
-    -112,
-    -107
+    -106,
+    -112
    ],
    "ast": [
     4.5,
     -150,
     122
+   ],
+   "fg3m": [
+    2.5,
+    100,
+    -105
+   ],
+   "pr": [
+    14.5,
+    -112,
+    -108
+   ],
+   "pa": [
+    16.5,
+    -105,
+    -110
+   ],
+   "ra": [
+    6.5,
+    -140,
+    110
+   ],
+   "pra": [
+    18.5,
+    -125,
+    100
    ]
   },
   "Draymond Green": {

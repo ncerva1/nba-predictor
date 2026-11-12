@@ -12,17 +12,20 @@
    "Nurkic y Jaren Jackson Jr. OUT en UTA",
    "Back-to-back: ORL (jugó el 10-nov en SAC) y UTA (vs MIA el 10-nov)",
    "Covers sin líneas para este partido: consenso de scoresandodds",
-   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+   "Cuotas actualizadas con el consenso de scoresandodds 18:20 ET",
+   "K. George (tobillo) pasa a disponible (NBC Sports/Rotoworld 20:08 ET); da Silva y Cain siguen en duda",
+   "Líneas de puntos actualizadas con scoresandodds /nba/props/points 20:40 ET"
   ],
   "out": [
    "Jalen Suggs",
    "Paolo Banchero",
-   "Jaren Jackson Jr."
+   "Jaren Jackson Jr.",
+   "Lauri Markkanen"
   ],
   "gtd": {
    "Tristan da Silva": 0.5,
-   "Lauri Markkanen": 0.6,
-   "Keyonte George": 0.6
+   "Jamal Cain": 0.5
   },
   "reserves": {
    "ORL": [
@@ -116,9 +119,9 @@
    "name": "Keyonte George",
    "pos": "PG",
    "starter": true,
-   "min": 29.6,
+   "min": 33.6,
    "g_cur": 10,
-   "p_play": 0.6,
+   "p_play": 1.0,
    "cur": {
     "min": 32.1,
     "pts": 21.1,
@@ -158,7 +161,7 @@
    "name": "Ace Bailey",
    "pos": "SF",
    "starter": true,
-   "min": 28.6,
+   "min": 32.5,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -193,48 +196,6 @@
     "ftm": 0.92,
     "fta": 1.22
    },
-   "slot": "SF"
-  },
-  {
-   "team": "UTA",
-   "name": "Lauri Markkanen",
-   "pos": "PF",
-   "starter": true,
-   "min": 28.5,
-   "g_cur": 8,
-   "p_play": 0.6,
-   "cur": {
-    "min": 30.9,
-    "pts": 18.0,
-    "reb": 6.75,
-    "ast": 2.0,
-    "fg3m": 3.62,
-    "fgm": 5.5,
-    "fga": 14.12,
-    "fg3a": 9.12,
-    "stl": 0.62,
-    "blk": 0.62,
-    "tov": 1.5,
-    "pf": 2.25,
-    "ftm": 3.38,
-    "fta": 4.0
-   },
-   "prior": {
-    "min": 34.4,
-    "pts": 26.74,
-    "reb": 6.88,
-    "ast": 2.12,
-    "fg3m": 2.74,
-    "fgm": 9.14,
-    "fga": 19.17,
-    "fg3a": 7.71,
-    "stl": 1.0,
-    "blk": 0.5,
-    "tov": 1.5,
-    "pf": 1.83,
-    "ftm": 5.71,
-    "fta": 6.38
-   },
    "slot": "PF"
   },
   {
@@ -242,7 +203,7 @@
    "name": "Darryn Peterson",
    "pos": "SG",
    "starter": true,
-   "min": 28.3,
+   "min": 32.2,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -284,7 +245,7 @@
    "name": "Jaxson Hayes",
    "pos": "C",
    "starter": true,
-   "min": 22.6,
+   "min": 25.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -325,8 +286,8 @@
    "team": "UTA",
    "name": "Josh Green",
    "pos": "SG",
-   "starter": false,
-   "min": 17.8,
+   "starter": true,
+   "min": 20.2,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -360,14 +321,15 @@
     "pf": 1.1,
     "ftm": 0.43,
     "fta": 0.48
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "UTA",
    "name": "Josh Okogie",
    "pos": "SG",
    "starter": false,
-   "min": 17.4,
+   "min": 19.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -408,7 +370,7 @@
    "name": "Mo Bamba",
    "pos": "C",
    "starter": false,
-   "min": 16.3,
+   "min": 18.4,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -449,7 +411,7 @@
    "name": "Isaiah Collier",
    "pos": "PG",
    "starter": false,
-   "min": 15.1,
+   "min": 17.2,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -490,7 +452,7 @@
    "name": "Svi Mykhailiuk",
    "pos": "SF",
    "starter": false,
-   "min": 14.4,
+   "min": 16.3,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -531,7 +493,7 @@
    "name": "Brice Sensabaugh",
    "pos": "SF",
    "starter": false,
-   "min": 13.1,
+   "min": 14.9,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -572,7 +534,7 @@
    "name": "Kyle Filipowski",
    "pos": "C",
    "starter": false,
-   "min": 8.1,
+   "min": 9.2,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -866,7 +828,7 @@
    "starter": false,
    "min": 18.7,
    "g_cur": 10,
-   "p_play": 1.0,
+   "p_play": 0.5,
    "cur": {
     "min": 19.5,
     "pts": 7.0,
@@ -1067,17 +1029,18 @@
  ],
  "market": {
   "source": "NBA.com/games 11-nov (10 partidos de liga); Covers matchup/<id>/odds (9 casas en 6 partidos, ~11:40 ET) + consenso scoresandodds.com/nba?date=2026-11-11 en los 10; props de puntos, rebotes y asistencias de scoresandodds.com/nba/props/<stat>?date=2026-11-11 (mejor cuota por lado) y puntos de Covers donde faltaban; triples sin líneas del día",
-  "ml_home": 142,
-  "ml_away": -170,
-  "spread_home": 3.5,
-  "total": 214.5
+  "ml_home": 150,
+  "ml_away": -179,
+  "spread_home": 4.5,
+  "total": 217.5
  },
  "prop_lines": {
   "Franz Wagner": {
    "pts": [
     23.5,
-    -105,
-    -105
+    -111,
+    -118,
+    24.5
    ],
    "reb": [
     6.5,
@@ -1088,25 +1051,38 @@
     7.5,
     -117,
     105
-   ]
-  },
-  "Lauri Markkanen": {
-   "pts": [
-    20.5,
-    -116,
-    -105
    ],
-   "reb": [
-    6.5,
-    -114,
-    102
+   "fg3m": [
+    1.5,
+    126,
+    -135
+   ],
+   "pr": [
+    30.5,
+    -104,
+    -112
+   ],
+   "pa": [
+    31.5,
+    -109,
+    -104
+   ],
+   "ra": [
+    14.5,
+    -102,
+    -120
+   ],
+   "pra": [
+    38.5,
+    -107,
+    -112
    ]
   },
   "Keyonte George": {
    "pts": [
-    19.5,
-    -120,
-    -105
+    21.5,
+    100,
+    -125
    ],
    "reb": [
     3.5,
@@ -1117,26 +1093,75 @@
     6.5,
     102,
     -130
+   ],
+   "fg3m": [
+    1.5,
+    -185,
+    145
+   ],
+   "pr": [
+    25.5,
+    -112,
+    -112
+   ],
+   "pa": [
+    27.5,
+    -112,
+    -112
+   ],
+   "ra": [
+    10.5,
+    100,
+    -125
+   ],
+   "pra": [
+    31.5,
+    -112,
+    -112
    ]
   },
   "Desmond Bane": {
    "pts": [
-    18.5,
-    -120,
-    -114,
-    19.5
+    19.5,
+    -105,
+    -108
    ],
    "reb": [
     4.5,
     116,
     -125
+   ],
+   "fg3m": [
+    2.5,
+    -160,
+    130
+   ],
+   "pr": [
+    23.5,
+    -110,
+    -106
+   ],
+   "pa": [
+    22.5,
+    -105,
+    -111
+   ],
+   "ra": [
+    7.5,
+    106,
+    -110
+   ],
+   "pra": [
+    26.5,
+    -115,
+    -106
    ]
   },
   "Darryn Peterson": {
    "pts": [
     18.5,
-    -115,
-    -110
+    -110,
+    -102
    ],
    "reb": [
     4.5,
@@ -1147,13 +1172,39 @@
     3.5,
     -112,
     100
+   ],
+   "fg3m": [
+    2.5,
+    115,
+    -145
+   ],
+   "pr": [
+    22.5,
+    -120,
+    -105
+   ],
+   "pa": [
+    22.5,
+    -112,
+    -112
+   ],
+   "ra": [
+    7.5,
+    -130,
+    102
+   ],
+   "pra": [
+    26.5,
+    -120,
+    -105
    ]
   },
   "Anthony Black": {
    "pts": [
-    18.5,
-    -105,
-    -120
+    16.5,
+    -112,
+    -112,
+    17.5
    ],
    "reb": [
     4.5,
@@ -1164,13 +1215,39 @@
     4.5,
     -115,
     -105
+   ],
+   "fg3m": [
+    1.5,
+    -150,
+    120
+   ],
+   "pr": [
+    22.5,
+    -115,
+    -105
+   ],
+   "pa": [
+    23.5,
+    100,
+    -119
+   ],
+   "ra": [
+    9.5,
+    100,
+    -110
+   ],
+   "pra": [
+    27.5,
+    -105,
+    -110
    ]
   },
   "Ace Bailey": {
    "pts": [
-    13.5,
-    -105,
-    -112
+    14.5,
+    -115,
+    -111,
+    15.5
    ],
    "reb": [
     5.5,
@@ -1181,20 +1258,69 @@
     1.5,
     -135,
     105
+   ],
+   "fg3m": [
+    1.5,
+    -140,
+    110
+   ],
+   "pr": [
+    18.5,
+    -120,
+    -105
+   ],
+   "pa": [
+    15.5,
+    -112,
+    -112
+   ],
+   "ra": [
+    6.5,
+    -145,
+    115
+   ],
+   "pra": [
+    20.5,
+    -115,
+    -110
    ]
   },
   "Wendell Carter Jr.": {
    "pts": [
     12.5,
-    -109,
-    -125,
-    13.5
+    -110,
+    -105
    ],
    "reb": [
     8.5,
     -120,
     -115,
     9.5
+   ],
+   "fg3m": [
+    0.5,
+    -157,
+    135
+   ],
+   "pr": [
+    21.5,
+    -112,
+    -108
+   ],
+   "pa": [
+    14.5,
+    -102,
+    -105
+   ],
+   "ra": [
+    10.5,
+    -106,
+    -110
+   ],
+   "pra": [
+    23.5,
+    -114,
+    -105
    ]
   },
   "Jaxson Hayes": {

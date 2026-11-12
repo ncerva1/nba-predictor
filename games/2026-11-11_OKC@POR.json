@@ -10,14 +10,18 @@
    "Jaylin Williams, Sorber, Wallace, Holmgren y Jalen Williams OUT en OKC; Morant, Krejci y Sharpe OUT en POR",
    "Back-to-back: OKC y POR (se enfrentaron el 10-nov en Portland)",
    "Covers sin líneas para este partido: consenso de scoresandodds",
-   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC"
+   "Bajas revisadas en ESPN y CBS 11-nov ~16:45 UTC",
+   "Líneas de puntos actualizadas con scoresandodds /nba/props/points 20:40 ET; spread/total/ML sin cambios",
+   "Revisión 21:35 ET: líneas de reb/ast/triples actualizadas con scoresandodds (McCain triples 1.5→2.5, Lillard triples 3.5→2.5/3.5); bajas sin cambios en ESPN"
   ],
   "out": [
    "Jaylin Williams",
    "Cason Wallace",
    "Chet Holmgren",
    "Jalen Williams",
-   "Ja Morant"
+   "Ja Morant",
+   "Ajay Mitchell",
+   "Chris Youngblood"
   ],
   "gtd": {},
   "reserves": {
@@ -130,7 +134,7 @@
    "name": "Deni Avdija",
    "pos": "SF",
    "starter": true,
-   "min": 31.9,
+   "min": 33.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -172,7 +176,7 @@
    "name": "Damian Lillard",
    "pos": "PG",
    "starter": true,
-   "min": 28.6,
+   "min": 30.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -214,7 +218,7 @@
    "name": "Toumani Camara",
    "pos": "PF",
    "starter": true,
-   "min": 27.2,
+   "min": 28.8,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -256,7 +260,7 @@
    "name": "Jrue Holiday",
    "pos": "PG",
    "starter": true,
-   "min": 25.5,
+   "min": 27.0,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -298,7 +302,7 @@
    "name": "Donovan Clingan",
    "pos": "C",
    "starter": true,
-   "min": 24.6,
+   "min": 26.1,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -340,7 +344,7 @@
    "name": "Scoot Henderson",
    "pos": "PG",
    "starter": false,
-   "min": 22.2,
+   "min": 23.5,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -381,7 +385,7 @@
    "name": "Sidy Cissoko",
    "pos": "SF",
    "starter": false,
-   "min": 22.0,
+   "min": 23.3,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -422,7 +426,7 @@
    "name": "Robert Williams III",
    "pos": "C",
    "starter": false,
-   "min": 16.0,
+   "min": 16.9,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -460,51 +464,10 @@
   },
   {
    "team": "POR",
-   "name": "Chris Youngblood",
-   "pos": "F",
-   "starter": false,
-   "min": 13.3,
-   "g_cur": 6,
-   "p_play": 1.0,
-   "cur": {
-    "min": 13.5,
-    "pts": 6.0,
-    "reb": 1.33,
-    "ast": 1.0,
-    "fg3m": 1.33,
-    "fgm": 1.67,
-    "fga": 4.5,
-    "fg3a": 3.83,
-    "stl": 0.5,
-    "blk": 0.17,
-    "tov": 0.83,
-    "pf": 2.17,
-    "ftm": 1.33,
-    "fta": 1.67
-   },
-   "prior": {
-    "min": 5.8,
-    "pts": 2.22,
-    "reb": 0.88,
-    "ast": 0.38,
-    "fg3m": 0.56,
-    "fgm": 0.69,
-    "fga": 1.97,
-    "fg3a": 1.69,
-    "stl": 0.12,
-    "blk": 0.09,
-    "tov": 0.06,
-    "pf": 0.69,
-    "ftm": 0.28,
-    "fta": 0.31
-   }
-  },
-  {
-   "team": "POR",
    "name": "Vít Krejčí",
    "pos": "PG",
    "starter": false,
-   "min": 10.0,
+   "min": 10.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -545,7 +508,7 @@
    "name": "Jayson Kent",
    "pos": "SF",
    "starter": false,
-   "min": 9.4,
+   "min": 9.9,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -586,7 +549,7 @@
    "name": "Yang Hansen",
    "pos": "C",
    "starter": false,
-   "min": 9.3,
+   "min": 9.8,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -627,7 +590,7 @@
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
    "starter": true,
-   "min": 35.5,
+   "min": 38.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -666,52 +629,10 @@
   },
   {
    "team": "OKC",
-   "name": "Ajay Mitchell",
-   "pos": "SG",
-   "starter": true,
-   "min": 29.8,
-   "g_cur": 11,
-   "p_play": 1.0,
-   "cur": {
-    "min": 27.3,
-    "pts": 18.45,
-    "reb": 3.64,
-    "ast": 3.27,
-    "fg3m": 0.82,
-    "fgm": 7.36,
-    "fga": 14.09,
-    "fg3a": 3.09,
-    "stl": 1.18,
-    "blk": 0.36,
-    "tov": 1.55,
-    "pf": 2.36,
-    "ftm": 2.91,
-    "fta": 3.45
-   },
-   "prior": {
-    "min": 25.8,
-    "pts": 13.58,
-    "reb": 3.33,
-    "ast": 3.61,
-    "fg3m": 1.07,
-    "fgm": 5.02,
-    "fga": 10.35,
-    "fg3a": 3.09,
-    "stl": 1.25,
-    "blk": 0.32,
-    "tov": 1.42,
-    "pf": 2.09,
-    "ftm": 2.47,
-    "fta": 2.84
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "OKC",
    "name": "Jared McCain",
    "pos": "SG",
    "starter": true,
-   "min": 28.0,
+   "min": 32.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -746,14 +667,14 @@
     "ftm": 0.76,
     "fta": 0.88
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "OKC",
    "name": "Isaiah Hartenstein",
    "pos": "C",
    "starter": true,
-   "min": 26.4,
+   "min": 30.2,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -795,7 +716,7 @@
    "name": "Aday Mara",
    "pos": "C",
    "starter": false,
-   "min": 22.3,
+   "min": 25.4,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -836,7 +757,7 @@
    "name": "Kenrich Williams",
    "pos": "PF",
    "starter": true,
-   "min": 20.2,
+   "min": 23.1,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -878,7 +799,7 @@
    "name": "Alex Caruso",
    "pos": "SG",
    "starter": false,
-   "min": 20.2,
+   "min": 23.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -919,7 +840,7 @@
    "name": "Bennett Stirtz",
    "pos": "PG",
    "starter": false,
-   "min": 19.6,
+   "min": 22.4,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -959,8 +880,8 @@
    "team": "OKC",
    "name": "Micah Peavy",
    "pos": "SG",
-   "starter": false,
-   "min": 19.2,
+   "starter": true,
+   "min": 21.9,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -994,14 +915,15 @@
     "pf": 1.57,
     "ftm": 0.36,
     "fta": 0.48
-   }
+   },
+   "slot": "SF"
   },
   {
    "team": "OKC",
    "name": "Josh Dix",
    "pos": "SG",
    "starter": false,
-   "min": 18.8,
+   "min": 21.4,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -1049,47 +971,97 @@
   "Shai Gilgeous-Alexander": {
    "pts": [
     32.5,
-    -105,
-    -121,
+    -115,
+    -120,
     33.5
    ],
    "reb": [
     3.5,
-    -130,
-    -135,
-    4.5
+    -140,
+    130
    ],
    "ast": [
-    5.5,
-    116,
-    -140
+    4.5,
+    -145,
+    -152,
+    5.5
+   ],
+   "fg3m": [
+    1.5,
+    -170,
+    152
+   ],
+   "pr": [
+    36.5,
+    -115,
+    108
+   ],
+   "pa": [
+    37.5,
+    -115,
+    -107
+   ],
+   "ra": [
+    9.5,
+    110,
+    -120
+   ],
+   "pra": [
+    42.5,
+    -110,
+    -110
    ]
   },
   "Deni Avdija": {
    "pts": [
-    23.5,
-    -100,
-    -115,
+    22.5,
+    -125,
+    -120,
     24.5
    ],
    "reb": [
     6.5,
-    -138,
-    -145,
+    -130,
+    -150,
     7.5
    ],
    "ast": [
     6.5,
     -115,
-    -104
+    -102
+   ],
+   "fg3m": [
+    1.5,
+    -140,
+    122
+   ],
+   "pr": [
+    30.5,
+    -114,
+    -107
+   ],
+   "pa": [
+    30.5,
+    -108,
+    -113
+   ],
+   "ra": [
+    13.5,
+    -130,
+    101
+   ],
+   "pra": [
+    37.5,
+    -117,
+    -107
    ]
   },
   "Damian Lillard": {
    "pts": [
-    20.5,
+    19.5,
+    -125,
     -105,
-    -127,
-    21.5
+    20.5
    ],
    "reb": [
     3.5,
@@ -1098,66 +1070,150 @@
    ],
    "ast": [
     4.5,
-    -110,
-    -157,
-    5.5
-   ]
-  },
-  "Ajay Mitchell": {
-   "pts": [
-    17.5,
-    -115,
-    -105,
-    18.5
+    -135,
+    120
    ],
-   "ast": [
-    3.5,
-    -109,
-    -105
+   "fg3m": [
+    2.5,
+    -165,
+    -140,
+    3.5
+   ],
+   "pr": [
+    24.5,
+    -110,
+    -102
+   ],
+   "pa": [
+    26.5,
+    -106,
+    -118
+   ],
+   "pra": [
+    30.5,
+    -108,
+    -118
    ]
   },
   "Toumani Camara": {
    "pts": [
     12.5,
-    100,
-    -115,
-    13.5
+    -105,
+    -104
    ],
    "reb": [
-    4.5,
-    123,
-    -150
+    3.5,
+    -152,
+    -165,
+    4.5
+   ],
+   "fg3m": [
+    2.5,
+    -140,
+    114
+   ],
+   "pr": [
+    17.5,
+    -114,
+    -114
+   ],
+   "pa": [
+    14.5,
+    -112,
+    -102
+   ],
+   "ra": [
+    5.5,
+    -118,
+    102
+   ],
+   "pra": [
+    19.5,
+    100,
+    -120
    ]
   },
   "Jared McCain": {
    "pts": [
     12.5,
+    -140,
+    -110,
+    13.5
+   ],
+   "fg3m": [
+    2.5,
+    110,
+    -125
+   ],
+   "pr": [
+    16.5,
+    -102,
+    -112
+   ],
+   "pa": [
+    14.5,
+    -112,
+    -110
+   ],
+   "ra": [
+    4.5,
     -105,
-    -107
+    115
+   ],
+   "pra": [
+    17.5,
+    -114,
+    -105
    ]
   },
   "Jrue Holiday": {
    "pts": [
     12.5,
-    -110,
-    -115
+    -105,
+    -106
    ],
    "reb": [
     3.5,
-    -125,
-    100
+    -135,
+    -165,
+    4.5
    ],
    "ast": [
     4.5,
+    106,
+    -113
+   ],
+   "fg3m": [
+    2.5,
     120,
-    -145
+    -136
+   ],
+   "pr": [
+    16.5,
+    -105,
+    -105
+   ],
+   "pa": [
+    17.5,
+    -102,
+    -115
+   ],
+   "ra": [
+    8.5,
+    -116,
+    -112
+   ],
+   "pra": [
+    21.5,
+    -108,
+    -112
    ]
   },
   "Donovan Clingan": {
    "pts": [
     10.5,
-    -135,
-    -105,
+    -130,
+    100,
     11.5
    ],
    "reb": [
@@ -1165,25 +1221,51 @@
     -115,
     -150,
     11.5
+   ],
+   "fg3m": [
+    0.5,
+    -225,
+    172
+   ],
+   "pr": [
+    22.5,
+    -106,
+    -112
+   ],
+   "pa": [
+    13.5,
+    -114,
+    -108
+   ],
+   "ra": [
+    12.5,
+    -122,
+    -105
+   ],
+   "pra": [
+    24.5,
+    -110,
+    -109
    ]
   },
   "Isaiah Hartenstein": {
    "reb": [
     9.5,
-    -115,
-    105
+    -125,
+    102
    ],
    "ast": [
     3.5,
-    109,
-    -120
+    -170,
+    -150,
+    4.5
    ]
   },
   "Kenrich Williams": {
    "reb": [
     4.5,
-    -112,
-    -112
+    -105,
+    -115
    ]
   }
  },
