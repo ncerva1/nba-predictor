@@ -458,6 +458,7 @@ def player_logs(date):
             for k, v in row["line"].items():
                 have[d]["line"].setdefault(k, v)
             have[d]["team"] = have[d]["team"] or row["team"]
+            have[d]["home"] = have[d].get("home") or row.get("home")
             return
         row.update(date=d, cur=season_of(d) == season_of(date))
         have[d] = row
@@ -471,12 +472,13 @@ def player_logs(date):
             if mi <= 0:
                 continue
             opp = re.split(r" @ | vs\. ", r["MATCHUP"])[-1].strip()
+            home = opp if " @ " in r["MATCHUP"] else r["TEAM_ABBREVIATION"]
             line = dict(min=round(mi), **{k: int(float(r[c] or 0)) for k, c in (
                 ("pts", "PTS"), ("reb", "REB"), ("ast", "AST"), ("stl", "STL"), ("blk", "BLK"), ("fgm", "FGM"),
                 ("fga", "FGA"), ("fg3m", "FG3M"), ("fg3a", "FG3A"), ("ftm", "FTM"), ("fta", "FTA"), ("tov", "TOV"),
                 ("pf", "PF"))})
             put(r["PLAYER_NAME"], r["GAME_DATE"][:10], dict(pair={r["TEAM_ABBREVIATION"], opp},
-                                                            team=r["TEAM_ABBREVIATION"], line=_derive(line)))
+                                                            team=r["TEAM_ABBREVIATION"], home=home, line=_derive(line)))
     for rp in sorted(glob.glob(os.path.join(HERE, "results", "20??-??-??.json"))):
         R = json.load(open(rp))
         for key, x in R["games"].items():
@@ -484,14 +486,14 @@ def player_logs(date):
             for n in x["players"]:
                 al = actual_line(x["players"], n)
                 if al and al["min"] > 0:
-                    put(n, R["date"], dict(pair={a, h}, team=None, line=al))
+                    put(n, R["date"], dict(pair={a, h}, team=None, home=h, line=al))
     hp = os.path.join(HERE, "h2h", f"{prior_season(date)}.json")
     if os.path.exists(hp):
         for x in json.load(open(hp))["games"]:
             for team, ps in x["players"].items():
                 for n, mi, pts, reb, ast, f3, *_ in ps:
                     if mi > 0:
-                        put(n, x["date"], dict(pair={x["away"], x["home"]}, team=team,
+                        put(n, x["date"], dict(pair={x["away"], x["home"]}, team=team, home=x["home"],
                                                line=_derive(dict(min=mi, pts=pts, reb=reb, ast=ast, fg3m=f3))))
     _LOGS[date] = logs
     return logs
@@ -1247,6 +1249,45 @@ def run_game(path, n):
     return r
 
 
+# Movimiento de línea y línea de cierre (pedido de Nicolas 12-nov, idea de bucketsbase). Cada apuesta guarda en
+# "open" = [línea, cuota] la primera vez que se publicó (análisis de la mañana); al re-simular en las revisiones
+# horarias se conserva y line / dec pasan a ser las de la última revisión, que al empezar el partido es la de cierre.
+# clv(): +1 si el pick le ganó a la línea de cierre (la línea se movió hacia su lado o su cuota bajó), -1 si se movió
+# en contra, 0 si no cambió. Es la señal de valor más estable: no depende de la suerte del resultado.
+CLV_DEC = 0.01  # cambio mínimo de cuota (sin cambio de línea) para contarlo como movimiento
+
+
+def bet_key(b):
+    side = b.get("side") or (b["label"].split()[0] if b["kind"] == "total" else None)
+    return "|".join(str(x) for x in (b["kind"], b.get("player") or "", b.get("team") or "", b.get("stat") or "", side or "",
+                                      b["line"] if b.get("alt") else ""))
+
+
+def carry_open(r, old):
+    """Pasa a r (re-simulado) la línea y cuota de apertura de la versión publicada antes (old)."""
+    prev = {bet_key(b): b for b in (old or {}).get("bets", [])}
+    for b in r["bets"]:
+        o = prev.get(bet_key(b))
+        b["open"] = (o.get("open") or [o.get("line"), o.get("dec")]) if o else [b.get("line"), b.get("dec")]
+    return r
+
+
+def clv(b):
+    o = b.get("open")
+    if not o or o[1] is None or b.get("dec") is None:
+        return None
+    ol, od = o
+    if ol is not None and b.get("line") is not None and ol != b["line"]:
+        up = b["line"] > ol
+        if b["kind"] == "spread":
+            return 1 if not up else -1   # hándicap de su equipo más negativo = el mercado lo quiere más
+        over = (b.get("side") or b["label"].split()[0].lower()) == "over"
+        return 1 if up == over else -1
+    if abs(b["dec"] - od) < CLV_DEC:
+        return 0
+    return 1 if b["dec"] < od else -1
+
+
 def load_results(date):
     """results/<fecha>.json: marcadores y box scores reales (ver evaluate.py)."""
     path = os.path.join(HERE, "results", f"{date}.json")
@@ -1364,7 +1405,8 @@ def main():
                 r = json.load(open(out_path))
                 add_hit_rates(load_game(p, r["used_db"]), r["bets"] + r.get("model_picks", []))
             else:
-                r = run_game(p, n)
+                old = json.load(open(out_path)) if os.path.exists(out_path) else None
+                r = carry_open(run_game(p, n), old)
                 if res:
                     r = attach_result(r, res)
                     drop_sample(gid)
@@ -1436,7 +1478,10 @@ def main():
         rs = [g["result"] for g in games if g["date"] == date and "result" in g]
         sg = [pl.get("result") for g in games if g["date"] == date for pl in g.get("parlays", [])]
         cr = [pl.get("result") for pl in cross.get(date, [])]
+        cl = [clv(b) for g in games if g["date"] == date and "result" in g for b in g.get("value_bets", [])]
+        cl = [c for c in cl if c is not None]
         history.append(dict(date=date, model=model_for(date), games=len(rs), winners_ok=sum(x["winner_ok"] for x in rs),
+                            clv_beat=cl.count(1), clv_same=cl.count(0), clv_lost=cl.count(-1),
                             picks_won=sum(x["picks_won"] for x in rs), picks_lost=sum(x["picks_lost"] for x in rs),
                             units=round(sum(x["units"] for x in rs), 2),
                             sgp_won=sg.count("won"), sgp_lost=sg.count("lost"),
@@ -1451,7 +1496,8 @@ def main():
                                  games=sum(x["games"] for x in hs), winners_ok=sum(x["winners_ok"] for x in hs),
                                  picks_won=w, picks_lost=l, units=u, roi=round(u / (w + l), 4) if w + l else None,
                                  sgp_won=sum(x["sgp_won"] for x in hs), sgp_lost=sum(x["sgp_lost"] for x in hs),
-                                 cross_won=sum(x["cross_won"] for x in hs), cross_lost=sum(x["cross_lost"] for x in hs)))
+                                 cross_won=sum(x["cross_won"] for x in hs), cross_lost=sum(x["cross_lost"] for x in hs),
+                                 **{k: sum(x.get(k, 0) for x in hs) for k in ("clv_beat", "clv_same", "clv_lost")}))
     now = datetime.now(timezone.utc).isoformat(timespec="minutes")
     updates = index.get("updates", {})  # las tres actualizaciones diarias: {jornada: {etapa: hora UTC}}
     if stage:
@@ -1460,6 +1506,10 @@ def main():
     updates = {d: updates[d] for d in sorted(updates)[-14:]}
     json.dump(dict(generated=now, value_ev=VALUE_EV, model=MODEL, mkt_w=MKT_W, max_daily=MAX_DAILY, last_stage=stage or index.get("last_stage"), updates=updates,
                    history=history, versions=versions, parlays=cross, dream=dream, cup=cup_summary(), games=games), open(idx_path, "w"), ensure_ascii=False, indent=1)
+    import player_cards  # ficha de jugador y rachas: docs/data/players/<fecha>.json de las jornadas tocadas
+    for date in sorted({os.path.basename(p)[:10] for p in paths} | sim_dates):
+        if any(g["date"] == date and "result" not in g for g in games) or not os.path.exists(os.path.join(OUT, "players", f"{date}.json")):
+            player_cards.build(date)
     if sim_dates:  # bajas de última hora (bajas.py): las que ya entraron en la simulación quedan marcadas "sim"
         import bajas
         bajas.sync(sim_dates)
