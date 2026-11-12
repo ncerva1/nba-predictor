@@ -1,5 +1,15 @@
 # Cambios del modelo
 
+## Contexto de rol (probado, apagado) y "Su rol según quién juega" en la web — 2026-11-12
+- context.py: por jugador, forma reciente (últimos 5) y medias en los partidos con la misma situación de compañeros
+  clave (≥28 min) que hoy. model.py lo mezcla con las tasas de temporada (USE_CTX, RECENT_W, RECENT_MW, CTX_K, CTX_RK).
+- Backtest 1-11 nov (`bt_stars.py ... 0 0 4 12`): MAE de puntos 4.635 → 4.620 y de minutos 4.84 → 4.83, pero log loss
+  en las líneas de la casa 0.7016 → 0.7019 (asistencias 0.6928 → 0.6964); la forma reciente sola no aporta. Con ~10
+  partidos por equipo las muestras "sin X" son de 2-8 partidos y la casa ya mueve la línea. Queda APAGADO
+  (USE_CTX = False, el modelo sigue en 1.6.1) y se vuelve a probar hacia el 25-nov (decisión de Nicolas).
+- Web: la ficha del jugador muestra sus medias reales de esta temporada con y sin cada compañero clave (≥24 min en
+  ≥2 partidos), quién falta hoy y cómo le fue en los partidos con esa misma situación (player_cards.py, campo `ro`).
+
 ## Modelo 1.6.1 — 2026-11-12: más minutos y puntos para las estrellas
 - Diagnóstico (Cooper Flagg en 16.1 pts con 25.9 de media): el modelo comprimía hacia la media. Desde el 1-nov, los
   de 25+ pts quedaban −2.6 pts y −1.7 min; los de 20-25, −1.7 pts y −2.9 min; los suplentes de <10 pts, +0.6 pts.
