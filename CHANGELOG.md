@@ -1,5 +1,18 @@
 # Cambios del modelo
 
+## Web — 2026-11-12: ficha de jugador, Rachas y línea de cierre (ideas de bucketsbase)
+- Ficha de jugador: tocar cualquier nombre (picks, tablas de props, Rachas) abre su ficha con barras de sus últimos
+  partidos frente a la línea (editable), % por encima en Últ. 5/10/20, esta temporada y H2H, filtros de sede, minutos,
+  nivel del rival (DvP de esta temporada para su posición y estadística) y temporada, y lo que proyecta el modelo para
+  esa línea. Datos en `docs/data/players/<fecha>.json` (`player_cards.py`, lo llama build_site.py al final; no
+  re-simula). `player_logs` guarda ahora el local de cada partido.
+- Pestaña Rachas (#rachas): jugadores con 3+ partidos seguidos por encima o por debajo de su línea de hoy, con lo que
+  dice el modelo de ese lado. Se omiten líneas con cuota < 1.20.
+- Línea de cierre: cada apuesta guarda `open` = [línea, cuota] de su primera publicación y build_site.py lo conserva al
+  re-simular. La web marca en la cuota si la línea se movió a favor o en contra desde la apertura, y el historial y
+  Mis picks cuentan cuántos picks le ganaron al cierre (`clv_beat`/`clv_same`/`clv_lost`). Las jornadas anteriores se
+  rellenaron con la primera versión de cada partido en git (`line_moves.py`).
+
 ## 1.6 — 2026-11-12: nivel de anotación de esta temporada y puntos más abiertos
 Recálculo pedido por Nicolas cuando todos los equipos llegaron a 10 partidos. Backtest: las 127 jornadas-partido del
 26-oct al 11-nov re-simuladas con la BD de cada mañana (`db/build_db.py --snapshot <fecha>`) y 1.875 líneas de props

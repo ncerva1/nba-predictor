@@ -698,6 +698,59 @@ body:has(dialog.guide[open]) { overflow: hidden }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important }
 }
+/* Ficha de jugador, Rachas y movimiento de línea (ideas de bucketsbase, 12-nov) */
+.pname { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: 3px }
+.pname:hover, .pname:focus-visible { color: var(--accent); text-decoration-color: var(--accent) }
+dialog.pcard .g-body { padding-top: 12px }
+dialog.pcard .g-body > * + * { margin-top: 14px }
+dialog.pcard .g-body > p.muted { margin-top: 8px }
+.pc-sub { font: 500 12px var(--mono); color: var(--muted); margin-top: 2px }
+.pc-head-t { flex: 1; min-width: 0 }
+.pc-head-t h2 { font-size: 24px }
+.pc-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px }
+.pc-line .lnum { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; overflow: hidden }
+.pc-line .lnum button { width: 34px; height: 32px; border: 0; background: none; color: var(--ink); font: 600 16px var(--mono); cursor: pointer }
+.pc-line .lnum input { width: 64px; height: 32px; border: 0; border-left: 1px solid var(--line); border-right: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 600 15px var(--mono); text-align: center }
+.pc-line .lbl { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.pc-hr { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px }
+.pc-hr .c { border: 1px solid var(--line); border-radius: 10px; padding: 8px 6px; text-align: center; min-width: 0 }
+.pc-hr .k { display: block; font: 500 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted) }
+.pc-hr .v { display: block; font: 700 20px/1.2 var(--display) }
+.pc-hr .n { display: block; font: 11px var(--mono); color: var(--muted) }
+.pc-hr .c.hi { background: var(--good-soft); border-color: transparent } .pc-hr .c.hi .v { color: var(--good) }
+.pc-hr .c.lo { background: var(--bad-soft); border-color: transparent } .pc-hr .c.lo .v { color: var(--bad) }
+.pc-chart { overflow-x: auto; max-width: 100%; padding-bottom: 4px; scrollbar-width: thin }
+.pc-plot { position: relative; height: 170px; padding-left: 36px; display: flex; align-items: flex-end; gap: 4px; border-bottom: 1px solid var(--line); min-width: min-content }
+.pc-bar { flex: 1 0 22px; max-width: 46px; position: relative; border-radius: 4px 4px 0 0; background: var(--muted); opacity: .9 }
+.pc-bar.ov { background: var(--good) } .pc-bar.un { background: var(--bad) }
+.pc-bar span { position: absolute; bottom: 100%; left: 0; right: 0; text-align: center; font: 600 11px var(--mono); color: var(--ink); padding-bottom: 2px }
+.pc-ln { position: absolute; left: 34px; right: 0; border-top: 2px dashed var(--ink); pointer-events: none; z-index: 1 }
+.pc-ln b { position: absolute; right: 100%; bottom: -9px; margin-right: 2px; font: 600 11px var(--mono); background: var(--surface); padding: 0 4px; border-radius: 4px }
+.pc-xl { display: flex; gap: 4px; min-width: min-content; margin-top: 4px; padding-left: 36px }
+.pc-xl div { flex: 1 0 22px; max-width: 46px; text-align: center; font: 10px/1.25 var(--mono); color: var(--muted); white-space: nowrap; overflow: hidden }
+.pc-xl div b { display: block; color: var(--ink); font-weight: 600 }
+.pc-model { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 14px }
+.pc-model .k { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.pc-fs { display: grid; gap: 6px }
+.pc-fs .filters { gap: 6px } .pc-fs .filters button { padding: 5px 10px } .pc-fs .filters .lbl { min-width: 70px }
+@media (max-width: 640px) { .pc-fs .filters .lbl { min-width: 0; flex-basis: 100% } }
+.pc-foot { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 13px }
+.pc-tbl td, .pc-tbl th { padding: 6px 8px }
+@media (max-width: 640px) {
+  dialog.pcard { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; margin: 0 }
+  .pc-hr { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+  .pc-hr .v { font-size: 18px }
+}
+.mv { display: block; font: 11px var(--mono); margin-top: 2px; white-space: nowrap }
+.mv.good { color: var(--good) } .mv.bad { color: var(--bad) }
+.rk-streak { font-weight: 700 }
+.rk-streak.ov { color: var(--good) } .rk-streak.un { color: var(--bad) }
+@media (max-width: 440px) {
+  .tabs { min-width: 0; overflow-x: auto; scrollbar-width: none } .tabs::-webkit-scrollbar { display: none }
+  .tab { padding: 9px 7px 11px; gap: 4px; font-size: 12.5px; letter-spacing: .04em } .tab.cup-tab { font-size: 15px; letter-spacing: .06em }
+}
+.agree { font: 600 11px var(--mono); padding: 2px 6px; border-radius: 999px; background: var(--good-soft); color: var(--good); white-space: nowrap }
+.disagree { font: 600 11px var(--mono); padding: 2px 6px; border-radius: 999px; background: var(--bad-soft); color: var(--bad); white-space: nowrap }
 </style>
 
 <header class="banner gutter">
@@ -717,6 +770,7 @@ body:has(dialog.guide[open]) { overflow: hidden }
     <nav class="tabs" aria-label="Competición">
       <a class="tab" href="#" id="tab-reg">Liga regular <span class="n" id="n-reg"></span></a>
       <a class="tab cup-tab" href="#cup" id="tab-cup"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12v2h3v3a4 4 0 0 1-4 4h-.4A5 5 0 0 1 13 15v3h3v3H8v-3h3v-3a5 5 0 0 1-3.6-3H7a4 4 0 0 1-4-4V5h3V3zm0 4H5v1a2 2 0 0 0 1 1.7V7zm12 0v2.7A2 2 0 0 0 19 8V7h-1z"/></svg>NBA Cup <span class="n" id="n-cup"></span></a>
+      <a class="tab" href="#rachas" id="tab-rk">Rachas</a>
       <a class="tab" href="#mis-picks" id="tab-mine">Mis picks <span class="n" id="n-mine"></span></a>
     </nav>
   </div>
@@ -744,6 +798,10 @@ body:has(dialog.guide[open]) { overflow: hidden }
     </div>
   </section>
 </div>
+<dialog class="guide pcard" id="pcard" aria-labelledby="pc-title">
+  <div class="g-head"><div class="pc-head-t"><h2 id="pc-title">Jugador</h2><div class="pc-sub" id="pc-sub"></div></div><button type="button" class="g-close" id="pc-close" aria-label="Cerrar ficha">×</button></div>
+  <div class="g-body" id="pc-body"></div>
+</dialog>
 <dialog class="guide" id="guide" aria-labelledby="g-title">
   <div class="g-head"><h2 id="g-title">Cómo funciona</h2><button type="button" class="g-close" id="g-close" aria-label="Cerrar guía">×</button></div>
   <nav class="g-toc" id="g-toc" aria-label="Temas de la guía"></nav>
@@ -968,8 +1026,8 @@ function betRows(bets, thr, withGame) {
   const withRes = bets.some(b => b.result);
   return bets.map((b, i) => { const k = regLeg(b, withGame ? b._gid : CUR_GAME.id, withGame ? b._game : CUR_GAME.game); return `<tr${withGame ? ` class="link" data-go="${b._gid}"` : ""}>
     ${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head pk"><div class="pick-h"><div><div>${esc(b.label)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${bajaWarn(b, withGame ? b._gid : CUR_GAME.id)}${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${takeBtn(k)}</div>${addBtn(k)}</div></td>
-    <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}${b.dec_ref ? `<div class="kind" title="Cuota estimada para una casa colombiana (margen tipo Betano). La mejor cuota de EE. UU. leída era ${b.dec_ref.toFixed(2)}">≈ Betano · EE. UU. ${b.dec_ref.toFixed(2)}</div>` : ""}</td>
+    <td class="head pk"><div class="pick-h"><div><div>${lbl(b, withGame ? b._gid : CUR_GAME.id)}${ftag(b.flag)}</div><div class="kind">${KIND[b.kind] || b.kind}</div>${bajaWarn(b, withGame ? b._gid : CUR_GAME.id)}${!withGame && b.books ? `<button type="button" class="more" id="more-${i}" data-i="${i}" aria-expanded="false">Ver ${b.books.length} casas</button>` : ""}${takeBtn(k)}</div>${addBtn(k)}</div></td>
+    <td class="r num" data-label="Cuota">${(b.dec || +dec(b.odds)).toFixed(2)}${b.odds_assumed ? "*" : ""}${mvTxt(b)}${b.n_books ? `<div class="kind">prom. ${b.n_books} casa${b.n_books > 1 ? "s" : ""}</div>` : ""}${b.dec_ref ? `<div class="kind" title="Cuota estimada para una casa colombiana (margen tipo Betano). La mejor cuota de EE. UU. leída era ${b.dec_ref.toFixed(2)}">≈ Betano · EE. UU. ${b.dec_ref.toFixed(2)}</div>` : ""}</td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>
     <td class="r num" data-label="Prob. casa">${pct(b.implied)}</td>
     <td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
@@ -1011,7 +1069,7 @@ function mpBlock(list, withGame, noHead) {
   ${sts.length > 1 ? `<div class="filters mp-f" role="group" aria-label="Estadística">${["all", ...sts].map(k => `<button type="button" data-mpst="${k}" aria-pressed="${k === MP_ST}">${k === "all" ? "Todas" : STAT_BTN[k] || STAT_LABEL[k]} · ${k === "all" ? list.length : list.filter(b => b.stat === k).length}</button>`).join("")}</div>` : ""}
   <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th class="pk">Pick</th><th class="r">Prob. modelo</th>${hasHr(list) ? HR_TH : ""}<th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
   ${list.map(b => `<tr data-st="${b.stat}"${vis(b) ? "" : " hidden"}${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
-    <td class="head pk"><div>${esc(b.label)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
+    <td class="head pk"><div>${lbl(b, withGame ? b._gid : CUR_GAME.id)}</div><div class="kind">${STAT_LABEL[b.stat]} · sin cuota</div></td>
     <td class="r num" data-label="Prob. modelo">${pct(b.p)}</td>${hasHr(list) ? hrCells(b) : ""}<td class="r num" data-label="Cuota justa">${fairDec(b.p)}</td>
     <td class="r num" data-label="Cuota mínima"><b>${b.min_dec.toFixed(2)}</b></td><td class="r num" data-label="Su promedio">${b.ref != null ? b.ref : "—"}</td>
     ${withRes ? `<td class="r" data-label="Resultado">${resPill(b.result)}</td>` : ""}</tr>`).join("")}</tbody></table></div>
@@ -1259,7 +1317,9 @@ function renderIndex(scope = "reg") {
   const older = INDEX.games.filter(g => g.date !== DAY && inScope(g, scope));
   const hist = scope === "cup" ? [] : INDEX.history || [];
   const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok,
-    sw: t.sw + (x.sgp_won || 0), sl: t.sl + (x.sgp_lost || 0), cw: t.cw + (x.cross_won || 0), cl: t.cl + (x.cross_lost || 0) }), { w: 0, l: 0, u: 0, g: 0, ok: 0, sw: 0, sl: 0, cw: 0, cl: 0 });
+    sw: t.sw + (x.sgp_won || 0), sl: t.sl + (x.sgp_lost || 0), cw: t.cw + (x.cross_won || 0), cl: t.cl + (x.cross_lost || 0),
+    vb: t.vb + (x.clv_beat || 0), vs: t.vs + (x.clv_same || 0), vl: t.vl + (x.clv_lost || 0) }), { w: 0, l: 0, u: 0, g: 0, ok: 0, sw: 0, sl: 0, cw: 0, cl: 0, vb: 0, vs: 0, vl: 0 });
+  const clvCell = (b, s, l) => b == null ? "—" : `<span title="${b} a favor, ${l} en contra, ${s} sin cambio">${b}–${l}</span>${s ? ` <span class="muted">(${s} =)</span>` : ""}`;
   const recTxt = (w, l) => w || l ? `${w}–${l}` : "—";
   const uTxt = u => `${u >= 0 ? "+" : ""}${u.toFixed(2)} u`;
   const cup = scope === "cup";
@@ -1274,15 +1334,15 @@ function renderIndex(scope = "reg") {
   ${bajasStrip()}
   ${hist.length ? `<section class="section">
     <h2>Cómo le ha ido al modelo ${qh("historial", "resultados del modelo")}</h2>
-    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. SGP y parlays: combinadas recomendadas acertadas–falladas. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
+    <p class="lede">Picks con valor (EV ≥ +${(thr * 100).toFixed(0)}%) publicados antes de cada partido y liquidados con el resultado real. Unidades = ganancia apostando 1 a cada pick con la cuota promedio. SGP y parlays: combinadas recomendadas acertadas–falladas. <b>Línea de cierre</b>: picks cuya línea o cuota se movió a su favor–en contra entre el análisis de la mañana y el inicio del partido (entre paréntesis, los que no cambiaron); ganarle al cierre con frecuencia es la mejor señal de que el modelo encuentra valor real, más allá de la suerte del resultado${tot.vb + tot.vl ? `: en total <b>${tot.vb}–${tot.vl}</b>` : ""}. ${tot.w + tot.l < 100 ? "Con tan pocos picks el resultado es sobre todo suerte: hacen falta cientos para juzgar el modelo." : ""}</p>
     ${(INDEX.versions || []).length > 1 ? `<h3>Por versión del modelo</h3>
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th>Jornadas</th><th class="r">Picks ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th><th class="r">Picks por jornada</th></tr></thead><tbody>
-      ${INDEX.versions.map(v => { const n = v.picks_won + v.picks_lost; return `<tr><td class="head"><b>${esc(v.model)}</b><br><span class="muted">${esc(v.desc)}</span></td><td data-label="Jornadas">${esc(v.first.slice(5))}${v.last !== v.first ? ` a ${esc(v.last.slice(5))}` : ""} (${v.days})</td><td class="r num" data-label="Picks">${v.picks_won}–${v.picks_lost}</td><td class="r num" data-label="% acierto">${n ? (100 * v.picks_won / n).toFixed(1) + "%" : "—"}</td><td class="r num" data-label="Unidades">${uTxt(v.units)}</td><td class="r num" data-label="ROI">${v.roi == null ? "—" : (v.roi >= 0 ? "+" : "") + (100 * v.roi).toFixed(1) + "%"}</td><td class="r num" data-label="Picks por jornada">${(n / v.days).toFixed(0)}</td></tr>`; }).join("")}
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Versión</th><th>Jornadas</th><th class="r">Picks ganados–perdidos</th><th class="r">% acierto</th><th class="r">Unidades</th><th class="r">ROI</th><th class="r">Picks por jornada</th><th class="r">Línea de cierre</th></tr></thead><tbody>
+      ${INDEX.versions.map(v => { const n = v.picks_won + v.picks_lost; return `<tr><td class="head"><b>${esc(v.model)}</b><br><span class="muted">${esc(v.desc)}</span></td><td data-label="Jornadas">${esc(v.first.slice(5))}${v.last !== v.first ? ` a ${esc(v.last.slice(5))}` : ""} (${v.days})</td><td class="r num" data-label="Picks">${v.picks_won}–${v.picks_lost}</td><td class="r num" data-label="% acierto">${n ? (100 * v.picks_won / n).toFixed(1) + "%" : "—"}</td><td class="r num" data-label="Unidades">${uTxt(v.units)}</td><td class="r num" data-label="ROI">${v.roi == null ? "—" : (v.roi >= 0 ? "+" : "") + (100 * v.roi).toFixed(1) + "%"}</td><td class="r num" data-label="Picks por jornada">${(n / v.days).toFixed(0)}</td><td class="r num" data-label="Línea de cierre">${clvCell(v.clv_beat, v.clv_same, v.clv_lost)}</td></tr>`; }).join("")}
     </tbody></table></div>
     <h3>Por jornada</h3>` : ""}
-    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th>Modelo</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th><th class="r">SGP</th><th class="r">Parlays entre partidos</th></tr></thead><tbody>
-      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td data-label="Modelo">${esc(x.model || "")}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td><td class="r num" data-label="SGP">${recTxt(x.sgp_won, x.sgp_lost)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(x.cross_won, x.cross_lost)}</td></tr>`).join("")}
-      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td><td class="r num" data-label="SGP">${recTxt(tot.sw, tot.sl)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(tot.cw, tot.cl)}</td></tr>` : ""}
+    <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Jornada</th><th>Modelo</th><th class="r">Ganador acertado</th><th class="r">Picks ganados–perdidos</th><th class="r">Unidades</th><th class="r">SGP</th><th class="r">Parlays entre partidos</th><th class="r">Línea de cierre</th></tr></thead><tbody>
+      ${hist.map(x => `<tr><td class="head">${esc(x.date)}</td><td data-label="Modelo">${esc(x.model || "")}</td><td class="r num" data-label="Ganador acertado">${x.winners_ok} de ${x.games}</td><td class="r num" data-label="Picks">${x.picks_won}–${x.picks_lost}</td><td class="r num" data-label="Unidades">${uTxt(x.units)}</td><td class="r num" data-label="SGP">${recTxt(x.sgp_won, x.sgp_lost)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(x.cross_won, x.cross_lost)}</td><td class="r num" data-label="Línea de cierre">${clvCell(x.clv_beat, x.clv_same, x.clv_lost)}</td></tr>`).join("")}
+      ${hist.length > 1 ? `<tr><td class="head"><b>Total</b></td><td></td><td class="r num" data-label="Ganador acertado">${tot.ok} de ${tot.g}</td><td class="r num" data-label="Picks">${tot.w}–${tot.l}</td><td class="r num" data-label="Unidades">${uTxt(tot.u)}</td><td class="r num" data-label="SGP">${recTxt(tot.sw, tot.sl)}</td><td class="r num" data-label="Parlays entre partidos">${recTxt(tot.cw, tot.cl)}</td><td class="r num" data-label="Línea de cierre">${clvCell(tot.vb, tot.vs, tot.vl)}</td></tr>` : ""}
     </tbody></table></div>
   </section>` : ""}
   <section class="section">
@@ -1881,13 +1941,13 @@ async function renderGame(id) {
     const played = players.some(p => p.actual !== undefined);
     if (k === "all") {
       $("#props").innerHTML = `${SWIPE_HINT}<table class="swipe"><thead><tr>${th("name", "Jugador", "pk")}${th("min", "Min")}${SUMMARY.map(s => th(s, STAT_SHORT[s])).join("")}</tr></thead><tbody>
-      ${rows.map(p => `<tr><td class="head pk">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
+      ${rows.map(p => `<tr><td class="head pk">${pn(p.name, id)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}${p.p_play < 0.95 ? ` · juega ${pct(p.p_play, 0)}` : ""}</span></td>
         <td class="r num" data-label="Minutos"><b>${p.min}</b></td>${SUMMARY.map(s => `<td class="r num" data-label="${STAT_LABEL[s]}">${p[s] ? cellV(s, p[s]) : "—"}${p.actual && p.actual[s] !== undefined ? ` <span class="muted">(${actV(s, p.actual[s])})</span>` : ""}</td>`).join("")}</tr>`).join("")}</tbody></table>
       ${played ? `<p class="muted">Entre paréntesis, lo que hizo en el partido real.</p>` : ""}`;
     } else {
     const hh = d.h2h && d.h2h.games.length;
     $("#props").innerHTML = `${SWIPE_HINT}<table class="swipe"><thead><tr>${th("name", "Jugador", "pk")}${th("min", "Min")}${th("mean", "Media")}<th class="r">Rango</th><th class="r">Línea justa</th>${th("p_over", "P(over)")}${th("ev", "Casa")}${hh ? `<th class="r">Vs rival</th>` : ""}${played ? '<th class="r">Real</th>' : ""}</tr></thead><tbody>
-    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head pk">${esc(p.name)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
+    ${rows.map(p => { const st = p[k], bs = propBets[p.name + "|" + k], ln = bs ? bs[0].line : st.line, act = p.actual ? p.actual[k] : undefined; return `<tr><td class="head pk">${pn(p.name, id, PC_ST.includes(k) ? k : null)}${ftag(p.flag)} <span class="muted">${esc(p.pos)} · ${esc(p.team)}</span></td>
       <td class="r num" data-label="Minutos">${p.min}</td><td class="r num" data-label="Media"><b>${YN[k] ? pct(st.mean, 0) : st.mean}</b></td><td class="r num" data-label="Rango">${YN[k] ? "—" : `${st.p10}–${st.p90}`}</td><td class="r num" data-label="Línea justa">${YN[k] ? "Sí / No" : st.line}</td>
       <td class="r num" data-label="P(over)">${pct(st.p_over, 0)}</td><td class="r num" data-label="Casa">${casa(p, k)}</td>${hh ? `<td class="r num" data-label="Vs rival">${h2hCell(d, p, k, ln)}</td>` : ""}${played ? `<td class="r num" data-label="Real">${!p.actual ? '<span class="muted">no jugó</span>' : act === undefined ? "—" : YN[k] ? `<b>${act ? "Sí" : "No"}</b>` : `<b>${act}</b> ${resPill(act > st.line ? "won" : "lost").replace(/Ganada|Perdida/, act > st.line ? "over" : "under")}`}</td>` : ""}</tr>`; }).join("")}</tbody></table>`;
     }
@@ -2971,6 +3031,210 @@ document.addEventListener("click", e => {
   if (t.hasAttribute("data-intro-off")) hideIntro(); else openGuide(t.dataset.guide);
 }, true);
 
+// ===== Ficha de jugador, Rachas y línea de cierre (ideas de bucketsbase, pedido de Nicolas 12-nov) =====
+// data/players/<fecha>.json (player_cards.py): últimos partidos de temporada regular (esta y la pasada) de cada
+// jugador de la jornada, sus líneas de la casa y el DvP de cada equipo (1 = el que menos concede).
+const PC_ST = ["pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "tov"];
+const PC_SUM = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"] };
+const PC_DVP = { pts: "PTS", reb: "REB", ast: "AST", fg3m: "3PM", pra: "PRA", pr: "PRA", pa: "PRA", ra: "PRA", stl: "STL", blk: "BLK", tov: "TOV" };
+const PLF = {};
+const playersOf = date => PLF[date] || (PLF[date] = getJSON(`data/players/${date}.json`).then(F => { F.ix = Object.fromEntries(F.cols.map((c, i) => [c, i])); return F; }).catch(() => null));
+const seasonStart = date => { const y = +date.slice(0, 4), m = +date.slice(5, 7); return `${m >= 9 ? y : y - 1}-09-01`; };
+const seasonTxt = date => { const y = +seasonStart(date).slice(0, 4); return `${y}-${String(y + 1).slice(2)}`; };
+function pcVal(F, row, st) {
+  let s = 0;
+  for (const k of PC_SUM[st] || [st]) { const v = row[F.ix[k]]; if (v == null) return null; s += v; }
+  return s;
+}
+const pn = (name, gid, st) => `<button type="button" class="pname" data-pc="${esc(name)}" data-gid="${esc(gid || "")}"${st ? ` data-st="${esc(st)}"` : ""} title="Ver la ficha de ${esc(name)}">${esc(name)}</button>`;
+const lbl = (b, gid) => b.player && b.label.startsWith(b.player) ? pn(b.player, gid, b.stat) + esc(b.label.slice(b.player.length)) : esc(b.label);
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-pc]"); if (!t) return;
+  e.preventDefault(); e.stopPropagation();
+  openCard(t.dataset.pc, t.dataset.gid, t.dataset.st);
+}, true);
+
+let PC = null;
+async function openCard(name, gid, st) {
+  const date = (gid || "").slice(0, 10) || DAY;
+  PC = { name, gid, date, st: PC_ST.includes(st) ? st : "pts", line: null, sede: "all", min: 0, rival: "all", ss: "all", n: 20 };
+  const dlg = $("#pcard");
+  $("#pc-title").textContent = name; $("#pc-sub").textContent = ""; $("#pc-body").innerHTML = `<p class="muted">Cargando…</p>`;
+  if (!dlg.open) { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); }
+  const me = PC;
+  const [F, d] = await Promise.all([playersOf(date), !gid ? null : cache[gid] ? cache[gid] : getJSON(`data/${gid}.json`).then(x => (cache[gid] = x)).catch(() => null)]);
+  if (PC !== me) return;
+  Object.assign(PC, { F, d, P: F && F.players[name], sp: d && d.summary.players.find(p => p.name === name) });
+  drawCard();
+}
+// prob. del modelo de pasar una línea, con la escalera X+ del resumen (P de llegar a cada entero)
+function ladP(ss, L) {
+  if (!ss || !ss.ladder || L == null) return null;
+  const k = Number.isInteger(L) ? L + 1 : Math.ceil(L), lad = ss.ladder, ks = Object.keys(lad).map(Number);
+  if (!ks.length) return null;
+  if (lad[k] != null) return { p: lad[k] };
+  const lo = Math.min(...ks), hi = Math.max(...ks);
+  return k < lo ? { p: lad[lo], gt: true } : k > hi ? { p: lad[hi], lt: true } : null;
+}
+const pcDefLine = () => {
+  const m = PC.P && PC.P.m && PC.P.m[PC.st], ss = PC.sp && PC.sp[PC.st];
+  if (m && m[0] != null) return m[0];
+  if (ss && ss.line != null) return ss.line;
+  const v = (PC.P ? PC.P.g : []).slice(0, 10).map(r => pcVal(PC.F, r, PC.st)).filter(x => x != null);
+  return v.length ? Math.floor(v.reduce((a, b) => a + b, 0) / v.length) + .5 : .5;
+};
+function pcTier(o) {
+  const r = (((PC.F.dvp || {})[o] || {})[PC.P.dv] || {})[PC_DVP[PC.st]];
+  return r == null ? null : r <= 10 ? "dura" : r >= 21 ? "blanda" : "media";
+}
+function streakOf(F, rows, st, L) {
+  let side = null, n = 0;
+  for (const r of rows) {
+    const v = pcVal(F, r, st); if (v == null) continue;
+    const s = v > L ? "over" : v < L ? "under" : null;
+    if (!s || (side && s !== side)) break;
+    side = s; n++;
+  }
+  return { side, n };
+}
+const PC_F = {
+  sede: [["all", "Todos"], ["home", "Local"], ["away", "Visitante"]],
+  min: [[0, "Todos"], [20, "20+ min"], [25, "25+ min"], [30, "30+ min"]],
+  rival: [["all", "Todos"], ["dura", "Defensa dura"], ["media", "Media"], ["blanda", "Defensa blanda"]],
+  ss: [["all", "Ambas"], ["cur", ""]],
+  n: [[10, "10"], [20, "20"], [40, "40"]],
+};
+function drawCard() {
+  const { P, F, sp, name, date } = PC, body = $("#pc-body");
+  const g = INDEX.games.find(x => x.id === PC.gid);
+  if (!P) { body.innerHTML = `<p class="muted">No hay historial publicado de ${esc(name)} para la jornada ${esc(date)}.</p>`; return; }
+  $("#pc-sub").innerHTML = `${badge(P.t)} ${esc(P.pos || "")} · ${P.h ? "vs" : "@"} ${esc(P.opp)}${date !== DAY ? ` · jornada ${esc(date)}` : g && g.tip_et ? ` · ${esc(g.tip_et)} ET` : ""}${P.flag ? " " + ftag(P.flag) : ""}`;
+  const st = PC.st, cur = seasonStart(date);
+  if (PC.line == null) PC.line = pcDefLine();
+  const L = PC.line;
+  const sts = PC_ST.filter(k => P.g.some(r => pcVal(F, r, k) != null));
+  const all = P.g.map(r => ({ r, v: pcVal(F, r, st) })).filter(x => x.v != null);
+  const rows = all.filter(({ r }) => (PC.sede === "all" || r[F.ix.home] === (PC.sede === "home" ? 1 : 0)) && (r[F.ix.min] || 0) >= PC.min
+    && (PC.rival === "all" || pcTier(r[F.ix.opp]) === PC.rival) && (PC.ss === "all" || r[F.ix.date] >= cur));
+  const rate = list => { const n = list.length, o = list.filter(x => x.v > L).length; return { n, o }; };
+  const cell = (k, list, tip) => { const { n, o } = rate(list), r = n ? o / n : null; return `<div class="c${r == null ? "" : r >= .6 ? " hi" : r <= .4 ? " lo" : ""}" title="${esc(tip)}"><span class="k">${k}</span><span class="v">${r == null ? "—" : Math.round(r * 100) + "%"}</span><span class="n">${n ? `${o} de ${n}` : "sin partidos"}</span></div>`; };
+  const sk = streakOf(F, P.g, st, L);
+  const m = (P.m || {})[st], ss = sp && sp[st], lp = ladP(ss, L);
+  const shown = rows.slice(0, PC.n).reverse();
+  const mx = Math.max(L, ...shown.map(x => x.v), 1) * 1.15;
+  const avg = rows.length ? rows.reduce((a, x) => a + x.v, 0) / rows.length : null;
+  const sorted = rows.map(x => x.v).sort((a, b) => a - b), med = sorted.length ? (sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2) : null;
+  const mins = rows.length ? rows.reduce((a, x) => a + (x.r[F.ix.min] || 0), 0) / rows.length : null;
+  const fb = (key, opts, lab) => `<div class="filters" role="group" aria-label="${lab}"><span class="lbl">${lab}</span>${opts.map(([v, t]) => `<button type="button" data-pcf="${key}" data-v="${v}" aria-pressed="${String(PC[key]) === String(v)}">${key === "ss" && v === "cur" ? "Solo " + seasonTxt(date) : t}</button>`).join("")}</div>`;
+  const dd = s => `${s.slice(8, 10)}/${s.slice(5, 7)}`;
+  const isMkt = m && m[0] === L;
+  body.innerHTML = `
+    <div class="filters" role="group" aria-label="Mercado">${sts.map(k => `<button type="button" data-pcst="${k}" aria-pressed="${k === st}">${STAT_SHORT[k] || k}</button>`).join("")}</div>
+    <div class="pc-line"><span class="lbl">Línea</span><span class="lnum"><button type="button" data-pcl="-1" aria-label="Bajar la línea">−</button><input id="pc-l" type="text" inputmode="decimal" value="${L}" aria-label="Línea"><button type="button" data-pcl="1" aria-label="Subir la línea">+</button></span>
+      ${m && m[0] != null ? `<span class="muted">Casa: <b>${m[0]}</b>${m[1] ? ` · Over ${m[1].toFixed(2)}` : ""}${m[2] ? ` · Under ${m[2].toFixed(2)}` : ""}${m[5] ? ` · <span class="agree">pick con valor: ${m[5] === "over" ? "Over" : "Under"}</span>` : ""}</span>${!isMkt ? ` <button type="button" class="more" data-pcl="mkt">Usar la línea de la casa</button>` : ""}` : `<span class="muted">Sin línea de casa hoy: prueba la que te dé tu casa.</span>`}</div>
+    <div class="pc-hr">${cell("Últ. 5", rows.slice(0, 5), "Últimos 5 partidos con los filtros elegidos")}${cell("Últ. 10", rows.slice(0, 10), "Últimos 10 partidos con los filtros elegidos")}${cell("Últ. 20", rows.slice(0, 20), "Últimos 20 partidos con los filtros elegidos")}${cell(seasonTxt(date), rows.filter(x => x.r[F.ix.date] >= cur), "Esta temporada, con los filtros elegidos")}${cell("H2H " + P.opp, rows.filter(x => x.r[F.ix.opp] === P.opp), `Contra ${P.opp} (esta temporada y la pasada)`)}</div>
+    <p class="muted">% de partidos por <b>encima</b> de ${L} (Over). ${sk.n >= 2 ? `Racha: <b class="rk-streak ${sk.side === "over" ? "ov" : "un"}">${sk.n} seguidos ${sk.side === "over" ? "por encima" : "por debajo"}</b>.` : ""}</p>
+    ${shown.length ? `<div class="pc-chart"><div class="pc-plot">
+      <div class="pc-ln" style="bottom:${(L / mx) * 100}%"><b>${L}</b></div>
+      ${shown.map(x => `<div class="pc-bar ${x.v > L ? "ov" : x.v < L ? "un" : ""}" style="height:${Math.max(1.5, (x.v / mx) * 100)}%" title="${esc(x.r[F.ix.date])} ${x.r[F.ix.home] ? "vs" : "@"} ${esc(x.r[F.ix.opp] || "")}: ${x.v} ${STAT_SHORT[st] || st} en ${x.r[F.ix.min]} min"><span>${x.v}</span></div>`).join("")}
+    </div><div class="pc-xl">${shown.map(x => `<div><b>${x.r[F.ix.home] === 0 ? "@" : ""}${esc(x.r[F.ix.opp] || "?")}</b>${dd(x.r[F.ix.date])}</div>`).join("")}</div></div>
+    <p class="muted">${rows.length} partido${rows.length === 1 ? "" : "s"} con estos filtros · media <b>${avg.toFixed(1)}</b> · mediana <b>${med}</b> · ${mins.toFixed(1)} min de media${PC.rival !== "all" ? ` · rival según lo que concede de ${STAT_SHORT[st] || st} a su posición (${esc(P.dv || "")}) esta temporada` : ""}.</p>`
+    : `<div class="panel empty">Ningún partido con estos filtros.</div>`}
+    <div class="pc-fs">${fb("sede", PC_F.sede, "Sede")}${fb("min", PC_F.min, "Minutos")}${fb("rival", PC_F.rival, "Rival")}${fb("ss", PC_F.ss, "Temporada")}${fb("n", PC_F.n, "Barras")}</div>
+    ${ss ? `<div class="pc-model"><span class="k">Modelo para ${P.h ? "vs" : "@"} ${esc(P.opp)}</span>
+      <div>Proyecta <b>${ss.mean}</b> ${STAT_SHORT[st] || st} en ${sp.min} min (8 de cada 10 simulaciones entre ${ss.p10} y ${ss.p90}).${lp ? ` Over ${L}: <b>${lp.gt ? "más de " : lp.lt ? "menos de " : ""}${pct(lp.p, 0)}</b> · Under: <b>${lp.gt ? "menos de " : lp.lt ? "más de " : ""}${pct(1 - lp.p, 0)}</b>${!lp.gt && !lp.lt ? ` (cuota justa Over ${fairDec(lp.p)} · Under ${fairDec(1 - lp.p)})` : ""}.` : ""}</div>
+      ${isMkt && (m[3] != null || m[4] != null) ? `<div class="muted">Con la línea de la casa, la probabilidad publicada (modelo mezclado con la casa) es Over ${m[3] != null ? pct(m[3], 0) : "—"} · Under ${m[4] != null ? pct(m[4], 0) : "—"}${m[1] && m[3] != null ? ` · EV Over ${evTxt(m[3] * m[1] - 1)}` : ""}${m[2] && m[4] != null ? ` · EV Under ${evTxt(m[4] * m[2] - 1)}` : ""}.</div>` : lp ? `<div class="muted">Con otra línea la probabilidad es solo la del modelo, sin mezclar con la casa.</div>` : ""}
+    </div>` : ""}
+    ${rows.length ? `<details><summary class="muted">Ver los partidos en tabla</summary><div class="tbl-wrap"><table class="pc-tbl"><thead><tr><th>Fecha</th><th>Rival</th><th class="r">Min</th><th class="r">${STAT_SHORT[st] || st}</th><th class="r">vs ${L}</th></tr></thead><tbody>
+      ${rows.slice(0, PC.n).map(x => `<tr><td>${esc(x.r[F.ix.date])}</td><td>${x.r[F.ix.home] === 0 ? "@ " : x.r[F.ix.home] === 1 ? "vs " : ""}${esc(x.r[F.ix.opp] || "?")}</td><td class="r num">${x.r[F.ix.min] ?? "—"}</td><td class="r num"><b>${x.v}</b></td><td class="r">${ouPill(x.v > L ? "over" : x.v < L ? "under" : "push")}</td></tr>`).join("")}</tbody></table></div></details>` : ""}
+    <div class="pc-foot">${PC.gid && location.hash !== "#" + PC.gid ? `<a href="#${esc(PC.gid)}" data-pc-go>Ver el partido</a>` : ""}<span class="muted">Temporada regular de esta temporada y la pasada (game logs de nba.com, box scores y H2H). Barras verdes: por encima de la línea; rojas: por debajo.</span></div>`;
+  const ch = body.querySelector(".pc-chart"); if (ch) ch.scrollLeft = ch.scrollWidth;   // los más recientes a la vista
+  const li = $("#pc-l");
+  li.addEventListener("change", () => { const v = parseFloat(li.value.replace(",", ".")); if (!isNaN(v) && v >= 0) PC.line = v; drawCard(); });
+}
+$("#pc-body").addEventListener("click", e => {
+  const t = e.target.closest("[data-pcst], [data-pcf], [data-pcl], [data-pc-go]"); if (!t || !PC) return;
+  if (t.hasAttribute("data-pc-go")) { $("#pcard").close(); return; }
+  if (t.dataset.pcst) { PC.st = t.dataset.pcst; PC.line = null; }
+  else if (t.dataset.pcf) { const k = t.dataset.pcf, v = t.dataset.v; PC[k] = k === "min" || k === "n" ? +v : v; }
+  else if (t.dataset.pcl === "mkt") PC.line = null;
+  else PC.line = Math.max(0, PC.line + +t.dataset.pcl);
+  drawCard();
+});
+$("#pc-close").addEventListener("click", () => $("#pcard").close());
+$("#pcard").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+
+// Rachas (#rachas): jugadores que llevan varios partidos seguidos por encima o por debajo de su línea de HOY
+let RK = { side: "all", mk: "all", min: 4, agree: "all" };
+const RK_MK = { all: "Todos", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", combo: "Combinadas", def: "Robos, tapones, pérdidas" };
+const rkMk = st => PC_SUM[st] ? "combo" : ["stl", "blk", "tov"].includes(st) ? "def" : st;
+async function renderStreaks() {
+  $("#app").innerHTML = `<p class="muted">Cargando rachas…</p>`;
+  const F = await playersOf(DAY);
+  if (location.hash !== "#rachas") return;
+  const items = [];
+  if (F) for (const [name, P] of Object.entries(F.players)) {
+    if (isOut(P.gid, name)) continue;
+    const g = INDEX.games.find(x => x.id === P.gid);
+    for (const [st, m] of Object.entries(P.m || {})) {
+      if (!PC_ST.includes(st) || m[0] == null) continue;
+      const s = streakOf(F, P.g, st, m[0]);
+      const dk = s.side === "over" ? m[1] : m[2];
+      if (s.n < 3 || (dk && dk < 1.2)) continue;   // líneas casi seguras (cuota < 1.20, p. ej. Under 0.5 triples de un pívot) no aportan
+      const l10 = P.g.map(r => pcVal(F, r, st)).filter(v => v != null).slice(0, 10), hit = l10.filter(v => s.side === "over" ? v > m[0] : v < m[0]).length;
+      items.push({ name, P, st, line: m[0], side: s.side, n: s.n, dec: s.side === "over" ? m[1] : m[2], p: s.side === "over" ? m[3] : m[4], val: m[5], hit, n10: l10.length, g });
+    }
+  }
+  const draw = () => {
+    const list = items.filter(x => (RK.side === "all" || x.side === RK.side) && (RK.mk === "all" || rkMk(x.st) === RK.mk) && x.n >= RK.min
+      && (RK.agree === "all" || (RK.agree === "yes" ? x.val === x.side || (x.p != null && x.p >= .5) : x.p != null && x.p < .5)))
+      .sort((a, b) => b.n - a.n || b.hit / (b.n10 || 1) - a.hit / (a.n10 || 1));
+    const fb = (key, opts, lab) => `<div class="filters" role="group" aria-label="${lab}"><span class="lbl">${lab}</span>${opts.map(([v, t]) => `<button type="button" data-rk="${key}" data-v="${v}" aria-pressed="${String(RK[key]) === String(v)}">${t}</button>`).join("")}</div>`;
+    $("#rk-f").innerHTML = fb("side", [["all", "Ambos"], ["over", "Over"], ["under", "Under"]], "Lado") + fb("mk", Object.entries(RK_MK), "Mercado")
+      + fb("min", [[3, "3+"], [4, "4+"], [5, "5+"], [7, "7+"], [10, "10+"]], "Seguidos") + fb("agree", [["all", "Todas"], ["yes", "El modelo coincide"], ["no", "El modelo va en contra"]], "Modelo");
+    $("#rk-list").innerHTML = list.length ? `<p class="muted">${list.length} racha${list.length === 1 ? "" : "s"}</p><div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr><th class="pk">Jugador</th><th>Partido</th><th>Racha</th><th class="r">Últ. 10</th><th class="r">Modelo</th><th class="r">Cuota</th></tr></thead><tbody>
+      ${list.map(x => `<tr><td class="head pk">${pn(x.name, x.P.gid, x.st)}${x.P.flag ? ftag(x.P.flag) : ""}<div class="kind">${esc(x.P.t)} · ${esc(x.P.pos || "")}</div></td>
+        <td data-label="Partido"><a href="#${esc(x.P.gid)}">${x.g ? `${esc(x.g.away)} @ ${esc(x.g.home)}` : esc(x.P.gid.slice(11))}</a>${x.g && x.g.tip_et ? `<div class="kind">${esc(x.g.tip_et)} ET</div>` : ""}</td>
+        <td data-label="Racha"><span class="rk-streak ${x.side === "over" ? "ov" : "un"}">${x.side === "over" ? "Over" : "Under"} ${x.line}</span> ${STAT_SHORT[x.st] || x.st}<div class="kind"><b>${x.n}</b> partidos seguidos</div></td>
+        <td class="r num" data-label="Últ. 10">${hrPct([x.hit, x.n10])}</td>
+        <td class="r" data-label="Modelo">${x.p != null ? `<span class="num">${pct(x.p, 0)}</span>` : `<span class="muted">—</span>`}${x.val === x.side ? `<div><span class="agree">pick con valor</span></div>` : x.val ? `<div><span class="disagree">pick al otro lado</span></div>` : x.p != null && x.p < .5 ? `<div><span class="disagree">va en contra</span></div>` : ""}</td>
+        <td class="r num" data-label="Cuota">${x.dec ? x.dec.toFixed(2) : "—"}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="panel empty">${F ? "Ninguna racha con esos filtros." : "Aún no hay datos de jugadores para esta jornada."}</div>`;
+  };
+  $("#app").innerHTML = `<section class="section">
+    <span class="eyebrow">Jornada ${esc(DAY)}</span>
+    <h2>Rachas</h2>
+    <p class="lede">Jugadores que llevan varios partidos seguidos por <b>encima</b> (Over) o por <b>debajo</b> (Under) de su línea de hoy en la casa, contando sus últimos partidos de temporada regular (esta temporada y la pasada). Una racha sola no es un pick: la columna <b>Modelo</b> dice la probabilidad que le da el sistema a ese lado (mezclada con la casa) y si coincide con un pick con valor. Toca el nombre para ver su ficha con todos sus partidos.</p>
+    <div id="rk-f" style="display:grid;gap:8px"></div>
+    <div id="rk-list"></div>
+  </section>`;
+  $("#rk-f").addEventListener("click", e => { const b = e.target.closest("[data-rk]"); if (!b) return; const k = b.dataset.rk; RK[k] = k === "min" ? +b.dataset.v : b.dataset.v; draw(); });
+  draw();
+}
+
+// Movimiento de línea: "open" = línea y cuota de la primera publicación (análisis de la mañana). Si la línea se movió
+// hacia el pick (o su cuota bajó) el mercado le dio la razón al pick: eso es ganarle a la línea de cierre.
+const sideOver = b => b.side ? b.side === "over" : /^Over\b| Over /.test(b.label);
+function clvSign(b, o = b.open) {
+  if (!o || o[1] == null || b.dec == null) return null;
+  const [ol, od] = o;
+  if (ol != null && b.line != null && ol !== b.line) { const up = b.line > ol; return b.kind === "spread" ? (up ? -1 : 1) : up === sideOver(b) ? 1 : -1; }
+  return Math.abs(b.dec - od) < 0.01 ? 0 : b.dec < od ? 1 : -1;
+}
+const mvTxt = b => {
+  const s = clvSign(b); if (!s) return "";
+  const [ol, od] = b.open, lm = ol != null && b.line != null && ol !== b.line, lt = l => b.kind === "spread" && l > 0 ? "+" + l : l;
+  return `<span class="mv ${s > 0 ? "good" : "bad"}" title="${s > 0 ? "Desde la apertura el mercado se movió hacia este pick (buena señal: le gana a la línea de cierre)" : "Desde la apertura el mercado se movió en contra de este pick"}">${lm ? (b.line > ol ? "↑" : "↓") : (b.dec < od ? "↓" : "↑")} abrió ${lm ? lt(ol) + " @ " : "@ "}${od.toFixed(2)}</span>`;
+};
+const clvKey = b => [b.kind, b.player || "", b.team || "", b.stat || "", b.side || (b.kind === "total" ? (/^Over/.test(b.label) ? "o" : "u") : "")].join("|");
+function mineClv(l) {   // tu pick frente a la línea de cierre (la última publicada antes del partido)
+  if (l.combo || l.custom) return null;
+  const g = INDEX.games.find(x => x.id === l.gid), d = cache[l.gid];
+  if (!g || !gameLocked(g)) return null;
+  const k = clvKey(l), b = [g.all_bets, g.value_bets, g.top_bets, d && d.bets].map(a => (a || []).find(x => clvKey(x) === k)).find(Boolean);
+  return b ? clvSign(b, [l.line, l.dec_taken || l.dec]) : null;
+}
+
 function route() {
   const id = location.hash.slice(1);
   window.scrollTo(0, 0);
@@ -2978,13 +3242,13 @@ function route() {
   const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" ? "cup" : "reg";
   // la pestaña NBA Cup (y sus partidos) cambia la paleta y la tipografía
   if (scope === "cup") document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
-  ["#tab-reg", "#tab-cup", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
-  $(id === "mis-picks" ? "#tab-mine" : scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
+  ["#tab-reg", "#tab-cup", "#tab-rk", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
+  $(id === "mis-picks" ? "#tab-mine" : id === "rachas" ? "#tab-rk" : scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
   markTicker(game ? id : null);
   $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
   SEG = game || id.startsWith("todos") ? "all" : "top";
   BS.k = "ev"; BS.asc = false;
-  if (game) renderGame(id); else if (id === "mis-picks") renderMine(); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
+  if (game) renderGame(id); else if (id === "mis-picks") renderMine(); else if (id === "rachas") renderStreaks(); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
 }
 
 // Mi combinada: el usuario junta picks de cualquier parte de la página (botón "+" de cada pick, "Agregar a mi combinada"
@@ -3192,6 +3456,12 @@ function renderMine(keepScroll) {
       <div class="cell"><span class="k">EV de la web</span><span class="v">${evTxt(evW)}</span></div>
       <div class="cell main"><span class="k">EV con tu cuota</span><span class="v ${evT > 0 ? "pos" : evT < 0 ? "neg" : ""}">${evTxt(evT)}</span></div>
     </div>`; })()}
+    ${(() => { const c = MINE.map(mineClv).filter(x => x != null); if (!c.length) return ""; const b = c.filter(x => x > 0).length, w = c.filter(x => x < 0).length, q = c.length - b - w;
+      return `<div class="panel pl-stats mine-kpi">
+      <div class="cell main"><span class="k">Le ganaste al cierre</span><span class="v ${b > w ? "pos" : b < w ? "neg" : ""}">${b} de ${c.length}</span></div>
+      <div class="cell"><span class="k">En contra</span><span class="v">${w}</span></div>
+      <div class="cell"><span class="k">Sin cambio</span><span class="v">${q}</span></div>
+    </div><p class="muted mine-note">Línea de cierre: compara la línea y la cuota con las que tomaste cada pick con las últimas publicadas antes del partido. Si se movieron hacia tu lado, le ganaste al cierre: a la larga es la mejor señal de que estás tomando valor.</p>`; })()}
     <p class="muted mine-note">${T.n} pick${T.n === 1 ? "" : "s"} tomado${T.n === 1 ? "" : "s"} en ${days.length} jornada${days.length === 1 ? "" : "s"}${T.pend ? ` · ${T.pend} sin liquidar` : ""}${T.p ? ` · ${T.p} nulo${T.p === 1 ? "" : "s"} (push)` : ""}.${T.w + T.l < 100 ? " Con pocos picks el resultado es sobre todo suerte." : ""}</p>`}
   </section>
   ${per.length ? `<section class="section">
