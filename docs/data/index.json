@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-13T00:23+00:00",
+ "generated": "2026-11-13T08:15+00:00",
  "value_ev": 0.03,
  "model": "1.6.1",
  "mkt_w": 0.25,
  "max_daily": 15,
- "last_stage": "pregame",
+ "last_stage": "results",
  "updates": {
   "2026-10-30": {
    "morning": "2026-10-30T16:48+00:00",
@@ -68,7 +68,8 @@
   },
   "2026-11-12": {
    "morning": "2026-11-12T16:40+00:00",
-   "pregame": "2026-11-13T00:23+00:00"
+   "pregame": "2026-11-13T00:23+00:00",
+   "results": "2026-11-13T08:15+00:00"
   }
  },
  "history": [
@@ -327,6 +328,22 @@
    "sgp_lost": 14,
    "cross_won": 0,
    "cross_lost": 1
+  },
+  {
+   "date": "2026-11-12",
+   "model": "1.6.1",
+   "games": 4,
+   "winners_ok": 4,
+   "clv_beat": 2,
+   "clv_same": 5,
+   "clv_lost": 4,
+   "picks_won": 8,
+   "picks_lost": 3,
+   "units": 4.19,
+   "sgp_won": 1,
+   "sgp_lost": 5,
+   "cross_won": 0,
+   "cross_lost": 1
   }
  ],
  "versions": [
@@ -409,6 +426,26 @@
    "clv_beat": 1,
    "clv_same": 118,
    "clv_lost": 8
+  },
+  {
+   "model": "1.6.1",
+   "desc": "Betano, anotación de esta temporada, puntos más abiertos y más minutos y puntos para las estrellas",
+   "first": "2026-11-12",
+   "last": "2026-11-12",
+   "days": 1,
+   "games": 4,
+   "winners_ok": 4,
+   "picks_won": 8,
+   "picks_lost": 3,
+   "units": 4.19,
+   "roi": 0.3809,
+   "sgp_won": 1,
+   "sgp_lost": 5,
+   "cross_won": 0,
+   "cross_lost": 1,
+   "clv_beat": 2,
+   "clv_same": 5,
+   "clv_lost": 4
   }
  ],
  "parlays": {
@@ -1457,7 +1494,9 @@
       "dec": 1.72,
       "ev": 0.03,
       "gid": "2026-11-12-DAL-at-MIN",
-      "game": "DAL @ MIN"
+      "game": "DAL @ MIN",
+      "result": "lost",
+      "actual": 7
      },
      {
       "kind": "prop",
@@ -1471,7 +1510,9 @@
       "dec": 1.599,
       "ev": 0.03,
       "gid": "2026-11-12-DET-at-WAS",
-      "game": "DET @ WAS"
+      "game": "DET @ WAS",
+      "result": "lost",
+      "actual": 3
      }
     ],
     "n": 2,
@@ -1482,7 +1523,7 @@
     "fair": 2.59,
     "ev": 0.061,
     "type": "cross",
-    "result": null
+    "result": "lost"
    }
   ]
  },
@@ -2926,7 +2967,9 @@
        "key": "Devin Booker|ra|over|7.5"
       }
      ],
-     "key": "Ryan Dunn|reb|under|4.5"
+     "key": "Ryan Dunn|reb|under|4.5",
+     "result": "won",
+     "actual": 4
     },
     {
      "kind": "prop",
@@ -3104,7 +3147,9 @@
        "key": "Terrence Shannon Jr|ast|over|1.5"
       }
      ],
-     "key": "Ayo Dosunmu|ra|over|8.5"
+     "key": "Ayo Dosunmu|ra|over|8.5",
+     "result": "lost",
+     "actual": 3
     },
     {
      "kind": "prop",
@@ -3285,7 +3330,9 @@
        "key": "Devin Booker|ra|over|7.5"
       }
      ],
-     "key": "Cooper Flagg|ra|under|12.5"
+     "key": "Cooper Flagg|ra|under|12.5",
+     "result": "won",
+     "actual": 10
     },
     {
      "kind": "prop",
@@ -3445,7 +3492,9 @@
        "key": "Oso Ighodaro|pts|under|6.5"
       }
      ],
-     "key": "Cade Cunningham|fg3m|under|2.5"
+     "key": "Cade Cunningham|fg3m|under|2.5",
+     "result": "lost",
+     "actual": 3
     },
     {
      "kind": "prop",
@@ -3623,7 +3672,9 @@
        "key": "Daniss Jenkins|ra|over|8.5"
       }
      ],
-     "key": "Paul Reed|pr|over|17.5"
+     "key": "Paul Reed|pr|over|17.5",
+     "result": "won",
+     "actual": 24
     },
     {
      "kind": "prop",
@@ -3774,7 +3825,9 @@
        "key": "Ja'Kobe Walter|pa|over|12.5"
       }
      ],
-     "key": "Collin Murray-Boyles|ra|over|6.5"
+     "key": "Collin Murray-Boyles|ra|over|6.5",
+     "result": "lost",
+     "actual": 4
     },
     {
      "kind": "prop",
@@ -3937,7 +3990,9 @@
        "key": "Ja'Kobe Walter|pa|over|12.5"
       }
      ],
-     "key": "Immanuel Quickley|reb|over|3.5"
+     "key": "Immanuel Quickley|reb|over|3.5",
+     "result": "won",
+     "actual": 4
     }
    ],
    "n": 7,
@@ -3949,8 +4004,8 @@
    "ev": 0.229,
    "type": "dream",
    "games": 4,
-   "result": null,
-   "units": null
+   "result": "lost",
+   "units": -1.0
   }
  },
  "cup": {
@@ -107446,7 +107501,8 @@
       9.5,
       1.83
      ],
-     "mean": 7.3
+     "mean": 7.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107492,7 +107548,8 @@
       14.5,
       1.744
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107538,7 +107595,8 @@
       10.5,
       1.824
      ],
-     "mean": 8.7
+     "mean": 8.7,
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -107585,7 +107643,8 @@
       1.5,
       1.771
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107623,7 +107682,8 @@
       18.5,
       1.887
      ],
-     "mean": 15.0
+     "mean": 15.0,
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -107641,7 +107701,9 @@
        "dec": 1.599,
        "ev": 0.03,
        "gid": "2026-11-12-DET-at-WAS",
-       "game": "DET @ WAS"
+       "game": "DET @ WAS",
+       "result": "lost",
+       "actual": 3
       },
       {
        "kind": "prop",
@@ -107655,7 +107717,9 @@
        "dec": 1.748,
        "ev": 0.026,
        "gid": "2026-11-12-DET-at-WAS",
-       "game": "DET @ WAS"
+       "game": "DET @ WAS",
+       "result": "lost",
+       "actual": 32
       }
      ],
      "n": 2,
@@ -107665,7 +107729,8 @@
      "dec": 2.8,
      "fair": 2.64,
      "ev": 0.059,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -107692,7 +107757,8 @@
        3
       ]
      },
-     "mean": 4.3
+     "mean": 4.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107717,7 +107783,8 @@
        3
       ]
      },
-     "mean": 10.6
+     "mean": 10.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107742,7 +107809,8 @@
        4
       ]
      },
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107767,7 +107835,8 @@
        4
       ]
      },
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107792,7 +107861,8 @@
        4
       ]
      },
-     "mean": 8.7
+     "mean": 8.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107817,7 +107887,8 @@
        4
       ]
      },
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107842,7 +107913,8 @@
        4
       ]
      },
-     "mean": 7.9
+     "mean": 7.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107867,7 +107939,8 @@
        3
       ]
      },
-     "mean": 5.9
+     "mean": 5.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107892,7 +107965,8 @@
        4
       ]
      },
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107917,7 +107991,8 @@
        2
       ]
      },
-     "mean": 5.9
+     "mean": 5.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107942,7 +108017,8 @@
        1
       ]
      },
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -107967,7 +108043,8 @@
        4
       ]
      },
-     "mean": 12.2
+     "mean": 12.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -107992,7 +108069,8 @@
        4
       ]
      },
-     "mean": 5.6
+     "mean": 5.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108017,7 +108095,8 @@
        4
       ]
      },
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108042,7 +108121,8 @@
        4
       ]
      },
-     "mean": 7.2
+     "mean": 7.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108067,7 +108147,8 @@
        4
       ]
      },
-     "mean": 10.0
+     "mean": 10.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108092,7 +108173,8 @@
        4
       ]
      },
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108117,7 +108199,8 @@
        4
       ]
      },
-     "mean": 7.3
+     "mean": 7.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108142,7 +108225,8 @@
        2
       ]
      },
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108167,7 +108251,8 @@
        4
       ]
      },
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108192,7 +108277,8 @@
        4
       ]
      },
-     "mean": 20.0
+     "mean": 20.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108217,7 +108303,8 @@
        4
       ]
      },
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108242,7 +108329,8 @@
        3
       ]
      },
-     "mean": 1.7
+     "mean": 1.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108267,7 +108355,8 @@
        4
       ]
      },
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108292,7 +108381,8 @@
        5
       ]
      },
-     "mean": 8.3
+     "mean": 8.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108316,7 +108406,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108340,7 +108431,8 @@
        2,
        2
       ]
-     }
+     },
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108364,7 +108456,8 @@
        1,
        4
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -108411,7 +108504,8 @@
       9.5,
       1.83
      ],
-     "mean": 7.3
+     "mean": 7.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108456,7 +108550,8 @@
       14.5,
       1.744
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108501,7 +108596,8 @@
       10.5,
       1.824
      ],
-     "mean": 8.7
+     "mean": 8.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108546,7 +108642,8 @@
       6.5,
       1.615
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108592,6 +108689,7 @@
       1.757
      ],
      "mean": 14.2,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -108640,7 +108738,8 @@
       9.5,
       1.794
      ],
-     "mean": 8.0
+     "mean": 8.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108686,6 +108785,7 @@
       1.394
      ],
      "mean": 0.7,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -108734,7 +108834,8 @@
       2.5,
       1.522
      ],
-     "mean": 1.9
+     "mean": 1.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108779,7 +108880,8 @@
       8.5,
       1.58
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -108811,7 +108913,8 @@
      "open": [
       -10.5,
       1.926
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108855,7 +108958,8 @@
       1.5,
       1.771
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -108892,7 +108996,8 @@
       18.5,
       1.887
      ],
-     "mean": 15.0
+     "mean": 15.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108937,7 +109042,8 @@
       10.5,
       1.701
      ],
-     "mean": 10.2
+     "mean": 10.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -108981,7 +109087,8 @@
       23.5,
       1.802
      ],
-     "mean": 18.9
+     "mean": 18.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109025,7 +109132,8 @@
       2.5,
       1.621
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109062,7 +109170,8 @@
       18.5,
       1.88
      ],
-     "mean": 15.3
+     "mean": 15.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109099,7 +109208,8 @@
       11.5,
       1.748
      ],
-     "mean": 8.6
+     "mean": 8.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109143,7 +109253,8 @@
       24.5,
       1.813
      ],
-     "mean": 27.7
+     "mean": 27.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109187,7 +109298,8 @@
       2.5,
       1.477
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109231,7 +109343,8 @@
       15.5,
       1.836
      ],
-     "mean": 15.6
+     "mean": 15.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109268,7 +109381,8 @@
       9.5,
       2.047
      ],
-     "mean": 11.5
+     "mean": 11.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109306,6 +109420,7 @@
       1.833
      ],
      "mean": 15.7,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -109353,7 +109468,8 @@
       7.5,
       1.643
      ],
-     "mean": 6.9
+     "mean": 6.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109397,7 +109513,8 @@
       4.5,
       1.557
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109441,7 +109558,8 @@
       1.5,
       2.443
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109485,7 +109603,8 @@
       0.5,
       1.438
      ],
-     "mean": 1.4
+     "mean": 1.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109529,7 +109648,8 @@
       17.5,
       1.888
      ],
-     "mean": 15.5
+     "mean": 15.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109566,7 +109686,8 @@
       8.5,
       1.884
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109603,7 +109724,8 @@
       17.5,
       1.805
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -109634,7 +109756,8 @@
      "open": [
       null,
       1.235
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109678,7 +109801,8 @@
       19.5,
       1.795
      ],
-     "mean": 24.4
+     "mean": 24.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109715,7 +109839,8 @@
       10.5,
       1.916
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109759,7 +109884,8 @@
       1.5,
       1.766
      ],
-     "mean": 1.2
+     "mean": 1.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -109796,7 +109922,8 @@
       16.5,
       1.775
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109833,7 +109960,8 @@
       8.5,
       1.887
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109878,6 +110006,7 @@
       1.759
      ],
      "mean": 21.4,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -109925,7 +110054,8 @@
       0.5,
       2.362
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -109963,6 +110093,7 @@
       1.871
      ],
      "mean": 19.9,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -110010,7 +110141,8 @@
       4.5,
       1.802
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110054,7 +110186,8 @@
       5.5,
       1.91
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110091,7 +110224,8 @@
       14.5,
       1.999
      ],
-     "mean": 15.7
+     "mean": 15.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110135,7 +110269,8 @@
       22.5,
       1.839
      ],
-     "mean": 26.8
+     "mean": 26.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110179,7 +110314,8 @@
       10.5,
       1.875
      ],
-     "mean": 12.9
+     "mean": 12.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110223,7 +110359,8 @@
       22.5,
       1.852
      ],
-     "mean": 23.3
+     "mean": 23.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110267,7 +110404,8 @@
       4.5,
       1.546
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110311,7 +110449,8 @@
       27.5,
       1.824
      ],
-     "mean": 25.9
+     "mean": 25.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110349,6 +110488,7 @@
       1.896
      ],
      "mean": 7.2,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -110396,7 +110536,8 @@
       3.5,
       1.682
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110433,7 +110574,8 @@
       19.5,
       1.802
      ],
-     "mean": 18.5
+     "mean": 18.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110477,7 +110619,8 @@
       4.5,
       1.576
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110521,7 +110664,8 @@
       39.5,
       1.88
      ],
-     "mean": 43.4
+     "mean": 43.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110558,7 +110702,8 @@
       24.5,
       1.875
      ],
-     "mean": 23.8
+     "mean": 23.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110602,7 +110747,8 @@
       1.5,
       1.852
      ],
-     "mean": 2.3
+     "mean": 2.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110646,7 +110792,8 @@
       3.5,
       1.96
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110683,7 +110830,8 @@
       17.5,
       1.86
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110720,7 +110868,8 @@
       12.5,
       1.852
      ],
-     "mean": 14.9
+     "mean": 14.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110757,7 +110906,8 @@
       30.5,
       1.852
      ],
-     "mean": 34.3
+     "mean": 34.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110794,7 +110944,8 @@
       24.5,
       1.916
      ],
-     "mean": 24.9
+     "mean": 24.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110831,7 +110982,8 @@
       12.5,
       1.852
      ],
-     "mean": 12.1
+     "mean": 12.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -110868,7 +111020,8 @@
       19.5,
       1.868
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110912,7 +111065,8 @@
       10.5,
       1.757
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -110943,7 +111097,8 @@
      "open": [
       220.5,
       1.893
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -110987,7 +111142,8 @@
       0.5,
       1.055
      ],
-     "mean": 0.0
+     "mean": 0.0,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -111018,7 +111174,8 @@
      "open": [
       220.5,
       1.926
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111055,7 +111212,8 @@
       8.5,
       1.786
      ],
-     "mean": 8.1
+     "mean": 8.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111099,7 +111257,8 @@
       21.5,
       1.916
      ],
-     "mean": 23.5
+     "mean": 23.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111136,7 +111295,8 @@
       17.5,
       1.913
      ],
-     "mean": 17.9
+     "mean": 17.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111180,7 +111340,8 @@
       16.5,
       1.808
      ],
-     "mean": 16.4
+     "mean": 16.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111217,7 +111378,8 @@
       19.5,
       1.799
      ],
-     "mean": 22.1
+     "mean": 22.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111254,7 +111416,8 @@
       33.5,
       1.836
      ],
-     "mean": 36.8
+     "mean": 36.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111291,7 +111454,8 @@
       13.5,
       1.78
      ],
-     "mean": 16.1
+     "mean": 16.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111328,7 +111492,8 @@
       18.5,
       1.819
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111372,7 +111537,8 @@
       0.5,
       1.425
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111417,6 +111583,7 @@
       1.81
      ],
      "mean": 5.7,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -111464,7 +111631,8 @@
       35.5,
       1.824
      ],
-     "mean": 35.4
+     "mean": 35.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111508,7 +111676,8 @@
       2.5,
       2.208
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111552,7 +111721,8 @@
       12.5,
       1.834
      ],
-     "mean": 14.7
+     "mean": 14.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111596,7 +111766,8 @@
       3.5,
       1.81
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111640,7 +111811,8 @@
       20.5,
       1.819
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111684,7 +111856,8 @@
       22.5,
       1.852
      ],
-     "mean": 23.3
+     "mean": 23.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111721,7 +111894,8 @@
       32.5,
       1.936
      ],
-     "mean": 33.8
+     "mean": 33.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111765,7 +111939,8 @@
       6.5,
       1.725
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111809,7 +111984,8 @@
       0.5,
       1.212
      ],
-     "mean": 0.2
+     "mean": 0.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111853,7 +112029,8 @@
       8.5,
       1.844
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111897,7 +112074,8 @@
       6.5,
       1.633
      ],
-     "mean": 7.7
+     "mean": 7.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -111934,7 +112112,8 @@
       8.5,
       1.969
      ],
-     "mean": 8.8
+     "mean": 8.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -111978,7 +112157,8 @@
       0.5,
       1.792
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112022,7 +112202,8 @@
       6.5,
       1.759
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112066,7 +112247,8 @@
       2.5,
       1.833
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112110,7 +112292,8 @@
       13.5,
       1.725
      ],
-     "mean": 16.2
+     "mean": 16.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112154,7 +112337,8 @@
       0.5,
       1.684
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112191,7 +112375,8 @@
       4.5,
       1.701
      ],
-     "mean": 5.1
+     "mean": 5.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112235,7 +112420,8 @@
       3.5,
       1.833
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112279,7 +112465,8 @@
       3.5,
       1.871
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112316,7 +112503,8 @@
       4.5,
       2.032
      ],
-     "mean": 5.1
+     "mean": 5.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112360,7 +112548,8 @@
       14.5,
       1.829
      ],
-     "mean": 16.2
+     "mean": 16.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112404,7 +112593,8 @@
       0.5,
       2.057
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112448,7 +112638,8 @@
       2.5,
       1.871
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112485,7 +112676,8 @@
       8.5,
       1.748
      ],
-     "mean": 8.8
+     "mean": 8.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112529,7 +112721,8 @@
       6.5,
       1.955
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112573,7 +112766,8 @@
       0.5,
       1.916
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112617,7 +112811,8 @@
       8.5,
       1.86
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112654,7 +112849,8 @@
       32.5,
       1.775
      ],
-     "mean": 33.8
+     "mean": 33.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112698,7 +112894,8 @@
       20.5,
       1.886
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112742,7 +112939,8 @@
       7.5,
       1.606
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112786,7 +112984,8 @@
       9.5,
       1.668
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112830,7 +113029,8 @@
       3.5,
       1.896
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -112874,7 +113074,8 @@
       12.5,
       1.87
      ],
-     "mean": 14.7
+     "mean": 14.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112918,7 +113119,8 @@
       35.5,
       1.881
      ],
-     "mean": 35.4
+     "mean": 35.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -112963,6 +113165,7 @@
       1.896
      ],
      "mean": 5.7,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -113003,7 +113206,8 @@
       18.5,
       1.886
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113040,7 +113244,8 @@
       17.5,
       1.795
      ],
-     "mean": 17.9
+     "mean": 17.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113077,7 +113282,8 @@
       33.5,
       1.868
      ],
-     "mean": 36.8
+     "mean": 36.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113121,7 +113327,8 @@
       2.5,
       1.595
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113158,7 +113365,8 @@
       13.5,
       1.93
      ],
-     "mean": 16.1
+     "mean": 16.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113202,7 +113410,8 @@
       21.5,
       1.792
      ],
-     "mean": 23.5
+     "mean": 23.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113239,7 +113448,8 @@
       19.5,
       1.907
      ],
-     "mean": 22.1
+     "mean": 22.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113283,7 +113493,8 @@
       16.5,
       1.897
      ],
-     "mean": 16.4
+     "mean": 16.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113320,7 +113531,8 @@
       19.5,
       1.836
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113357,7 +113569,8 @@
       24.5,
       1.792
      ],
-     "mean": 24.9
+     "mean": 24.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113394,7 +113607,8 @@
       12.5,
       1.852
      ],
-     "mean": 12.1
+     "mean": 12.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113431,7 +113645,8 @@
       8.5,
       1.922
      ],
-     "mean": 8.1
+     "mean": 8.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113475,7 +113690,8 @@
       3.5,
       2.06
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113512,7 +113728,8 @@
       30.5,
       1.852
      ],
-     "mean": 34.3
+     "mean": 34.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113556,7 +113773,8 @@
       5.5,
       1.62
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113600,7 +113818,8 @@
       0.5,
       2.644
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113637,7 +113856,8 @@
       12.5,
       1.852
      ],
-     "mean": 14.9
+     "mean": 14.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113681,7 +113901,8 @@
       39.5,
       1.825
      ],
-     "mean": 43.4
+     "mean": 43.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113718,7 +113939,8 @@
       24.5,
       1.829
      ],
-     "mean": 23.8
+     "mean": 23.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -113762,7 +113984,8 @@
       3.5,
       1.755
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113799,7 +114022,8 @@
       17.5,
       1.844
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113843,7 +114067,8 @@
       0.5,
       3.925
      ],
-     "mean": 0.2
+     "mean": 0.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113887,7 +114112,8 @@
       1.5,
       1.852
      ],
-     "mean": 2.3
+     "mean": 2.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -113925,6 +114151,7 @@
       1.81
      ],
      "mean": 7.2,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -113965,7 +114192,8 @@
       19.5,
       1.904
      ],
-     "mean": 18.5
+     "mean": 18.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114002,7 +114230,8 @@
       14.5,
       1.725
      ],
-     "mean": 15.7
+     "mean": 15.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114046,7 +114275,8 @@
       10.5,
       1.83
      ],
-     "mean": 12.9
+     "mean": 12.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114090,7 +114320,8 @@
       1.5,
       1.491
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114134,7 +114365,8 @@
       27.5,
       1.881
      ],
-     "mean": 25.9
+     "mean": 25.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114178,7 +114410,8 @@
       5.5,
       1.797
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114222,7 +114455,8 @@
       0.5,
       1.523
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114266,7 +114500,8 @@
       22.5,
       1.865
      ],
-     "mean": 26.8
+     "mean": 26.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114310,7 +114545,8 @@
       7.5,
       1.638
      ],
-     "mean": 7.7
+     "mean": 7.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114348,6 +114584,7 @@
       1.833
      ],
      "mean": 19.9,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -114395,7 +114632,8 @@
       4.5,
       1.904
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -114426,7 +114664,8 @@
      "open": [
       10.5,
       1.893
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114470,7 +114709,8 @@
       3.5,
       1.506
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114507,7 +114747,8 @@
       10.5,
       1.792
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114551,7 +114792,8 @@
       1.5,
       1.539
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114588,7 +114830,8 @@
       8.5,
       1.818
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114632,7 +114875,8 @@
       15.5,
       1.868
      ],
-     "mean": 15.6
+     "mean": 15.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114669,7 +114913,8 @@
       9.5,
       1.691
      ],
-     "mean": 11.5
+     "mean": 11.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114706,7 +114951,8 @@
       8.5,
       1.821
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114750,7 +114996,8 @@
       17.5,
       1.817
      ],
-     "mean": 15.5
+     "mean": 15.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114794,7 +115041,8 @@
       1.5,
       1.384
      ],
-     "mean": 1.4
+     "mean": 1.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114839,6 +115087,7 @@
       1.955
      ],
      "mean": 21.4,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -114886,7 +115135,8 @@
       1.5,
       1.947
      ],
-     "mean": 1.2
+     "mean": 1.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -114923,7 +115173,8 @@
       16.5,
       1.936
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -114967,7 +115218,8 @@
       19.5,
       1.912
      ],
-     "mean": 24.4
+     "mean": 24.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115004,7 +115256,8 @@
       17.5,
       1.902
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115048,7 +115301,8 @@
       24.5,
       1.892
      ],
-     "mean": 27.7
+     "mean": 27.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115086,6 +115340,7 @@
       1.871
      ],
      "mean": 15.7,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -115133,7 +115388,8 @@
       9.5,
       1.829
      ],
-     "mean": 10.2
+     "mean": 10.2,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -115164,7 +115420,8 @@
      "open": [
       null,
       4.294
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115201,7 +115458,8 @@
       18.5,
       1.825
      ],
-     "mean": 15.3
+     "mean": 15.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115238,7 +115496,8 @@
       18.5,
       1.818
      ],
-     "mean": 15.0
+     "mean": 15.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115282,7 +115541,8 @@
       23.5,
       1.904
      ],
-     "mean": 18.9
+     "mean": 18.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115319,7 +115579,8 @@
       11.5,
       1.969
      ],
-     "mean": 8.6
+     "mean": 8.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115363,7 +115624,8 @@
       1.5,
       1.557
      ],
-     "mean": 1.9
+     "mean": 1.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115407,7 +115669,8 @@
       1.5,
       1.941
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115451,7 +115714,8 @@
       6.5,
       1.638
      ],
-     "mean": 6.9
+     "mean": 6.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115495,7 +115759,8 @@
       2.5,
       2.159
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115539,7 +115804,8 @@
       3.5,
       1.598
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115583,7 +115849,8 @@
       7.5,
       1.725
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115627,7 +115894,8 @@
       0.5,
       7.589
      ],
-     "mean": 0.0
+     "mean": 0.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115672,6 +115940,7 @@
       1.384
      ],
      "mean": 0.7,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -115719,7 +115988,8 @@
       9.5,
       1.914
      ],
-     "mean": 8.0
+     "mean": 8.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115764,6 +116034,7 @@
       1.725
      ],
      "mean": 14.2,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 8 partidos esta temporada"
@@ -115811,7 +116082,8 @@
       7.5,
       1.695
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -115855,7 +116127,8 @@
       10.5,
       1.881
      ],
-     "mean": 8.7
+     "mean": 8.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115899,7 +116172,8 @@
       9.5,
       1.875
      ],
-     "mean": 7.3
+     "mean": 7.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -115943,260 +116217,21 @@
       13.5,
       1.695
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "won"
     }
    ],
-   "wo": {
-    "DET": {
-     "model": {
-      "Cade Cunningham": [
-       [
-        "Duncan Robinson",
-        4.0,
-        5.2
-       ],
-       [
-        "John Collins",
-        4.0,
-        4.9
-       ],
-       [
-        "Daniss Jenkins",
-        3.7,
-        4.7
-       ]
-      ],
-      "Daniss Jenkins": [
-       [
-        "Cade Cunningham",
-        3.2,
-        3.3
-       ],
-       [
-        "Duncan Robinson",
-        2.3,
-        3.8
-       ],
-       [
-        "John Collins",
-        2.3,
-        3.5
-       ]
-      ],
-      "Duncan Robinson": [
-       [
-        "Cade Cunningham",
-        2.9,
-        3.7
-       ],
-       [
-        "John Collins",
-        2.2,
-        4.0
-       ],
-       [
-        "Daniss Jenkins",
-        2.2,
-        4.4
-       ]
-      ],
-      "Kevin Huerter": [
-       [
-        "Cade Cunningham",
-        1.9,
-        2.9
-       ],
-       [
-        "Daniss Jenkins",
-        1.7,
-        3.5
-       ],
-       [
-        "Duncan Robinson",
-        1.5,
-        3.2
-       ]
-      ],
-      "Ausar Thompson": [
-       [
-        "Daniss Jenkins",
-        1.4,
-        4.0
-       ],
-       [
-        "Cade Cunningham",
-        1.3,
-        3.2
-       ],
-       [
-        "Duncan Robinson",
-        1.2,
-        3.7
-       ]
-      ],
-      "John Collins": [
-       [
-        "Cade Cunningham",
-        2.8,
-        3.3
-       ],
-       [
-        "Duncan Robinson",
-        2.1,
-        3.8
-       ],
-       [
-        "Daniss Jenkins",
-        2.0,
-        3.7
-       ]
-      ],
-      "Paul Reed": [
-       [
-        "Cade Cunningham",
-        2.5,
-        3.1
-       ],
-       [
-        "Duncan Robinson",
-        1.8,
-        3.5
-       ],
-       [
-        "John Collins",
-        1.8,
-        3.3
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": []
+   "result": {
+    "score": {
+     "DET": 144,
+     "WAS": 140
     },
-    "WAS": {
-     "model": {
-      "Trae Young": [
-       [
-        "Anthony Davis",
-        3.6,
-        4.4
-       ],
-       [
-        "AJ Dybantsa",
-        2.1,
-        4.3
-       ],
-       [
-        "Kyshawn George",
-        1.9,
-        4.2
-       ]
-      ],
-      "AJ Dybantsa": [
-       [
-        "Anthony Davis",
-        3.1,
-        4.1
-       ],
-       [
-        "Trae Young",
-        1.9,
-        3.9
-       ],
-       [
-        "Kyshawn George",
-        1.7,
-        3.9
-       ]
-      ],
-      "Anthony Davis": [
-       [
-        "Trae Young",
-        3.3,
-        3.6
-       ],
-       [
-        "AJ Dybantsa",
-        3.1,
-        3.7
-       ],
-       [
-        "Kyshawn George",
-        2.7,
-        3.6
-       ]
-      ],
-      "Kyshawn George": [
-       [
-        "Anthony Davis",
-        2.6,
-        3.7
-       ],
-       [
-        "Trae Young",
-        1.5,
-        3.6
-       ],
-       [
-        "AJ Dybantsa",
-        1.5,
-        3.6
-       ]
-      ],
-      "Bilal Coulibaly": [
-       [
-        "Anthony Davis",
-        1.8,
-        3.1
-       ],
-       [
-        "Trae Young",
-        1.1,
-        3.1
-       ],
-       [
-        "AJ Dybantsa",
-        1.1,
-        3.1
-       ]
-      ],
-      "Tre Johnson": [
-       [
-        "Anthony Davis",
-        1.9,
-        2.9
-       ],
-       [
-        "Trae Young",
-        1.1,
-        2.8
-       ],
-       [
-        "AJ Dybantsa",
-        1.1,
-        2.8
-       ]
-      ],
-      "Alex Sarr": [
-       [
-        "Anthony Davis",
-        1.7,
-        3.0
-       ],
-       [
-        "AJ Dybantsa",
-        1.1,
-        3.0
-       ],
-       [
-        "Trae Young",
-        1.0,
-        3.0
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": []
-    }
+    "ot": 2,
+    "winner": "DET",
+    "winner_ok": true,
+    "picks_won": 1,
+    "picks_lost": 1,
+    "units": -0.2
    }
   },
   {
@@ -116337,7 +116372,8 @@
      "open": [
       null,
       4.165
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116383,7 +116419,8 @@
       10.5,
       1.806
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116429,7 +116466,8 @@
       5.5,
       1.941
      ],
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "lost"
     }
    ],
    "value_bets": [],
@@ -116448,7 +116486,9 @@
        "dec": 1.678,
        "ev": 0.011,
        "gid": "2026-11-12-TOR-at-PHI",
-       "game": "TOR @ PHI"
+       "game": "TOR @ PHI",
+       "result": "lost",
+       "actual": 4
       },
       {
        "kind": "prop",
@@ -116462,7 +116502,9 @@
        "dec": 1.81,
        "ev": 0.004,
        "gid": "2026-11-12-TOR-at-PHI",
-       "game": "TOR @ PHI"
+       "game": "TOR @ PHI",
+       "result": "won",
+       "actual": 4
       }
      ],
      "n": 2,
@@ -116472,7 +116514,8 @@
      "dec": 3.04,
      "fair": 3.0,
      "ev": 0.013,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -116499,7 +116542,8 @@
        3
       ]
      },
-     "mean": 8.5
+     "mean": 8.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116524,7 +116568,8 @@
        3
       ]
      },
-     "mean": 5.2
+     "mean": 5.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116549,7 +116594,8 @@
        3
       ]
      },
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116574,7 +116620,8 @@
        1
       ]
      },
-     "mean": 7.5
+     "mean": 7.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -116599,7 +116646,8 @@
        3
       ]
      },
-     "mean": 15.7
+     "mean": 15.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -116624,7 +116672,8 @@
        2
       ]
      },
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     }
    ],
    "all_bets": [
@@ -116658,7 +116707,8 @@
      "open": [
       null,
       4.165
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116703,7 +116753,8 @@
       10.5,
       1.806
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116748,7 +116799,8 @@
       5.5,
       1.941
      ],
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -116780,7 +116832,8 @@
      "open": [
       9.5,
       1.907
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116825,7 +116878,8 @@
       11.5,
       1.784
      ],
-     "mean": 12.1
+     "mean": 12.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116862,7 +116916,8 @@
       19.5,
       1.933
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -116906,7 +116961,8 @@
       5.5,
       2.085
      ],
-     "mean": 7.5
+     "mean": 7.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116943,7 +116999,8 @@
       6.5,
       1.678
      ],
-     "mean": 9.8
+     "mean": 9.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -116987,7 +117044,8 @@
       2.5,
       1.814
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117031,7 +117089,8 @@
       24.5,
       1.88
      ],
-     "mean": 30.1
+     "mean": 30.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117075,7 +117134,8 @@
       3.5,
       1.954
      ],
-     "mean": 5.2
+     "mean": 5.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117119,7 +117179,8 @@
       2.5,
       2.302
      ],
-     "mean": 3.1
+     "mean": 3.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117163,7 +117224,8 @@
       14.5,
       1.713
      ],
-     "mean": 13.8
+     "mean": 13.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117207,7 +117269,8 @@
       10.5,
       1.854
      ],
-     "mean": 11.7
+     "mean": 11.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117244,7 +117307,8 @@
       12.5,
       1.824
      ],
-     "mean": 16.7
+     "mean": 16.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117288,7 +117352,8 @@
       3.5,
       2.075
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117325,7 +117390,8 @@
       8.5,
       1.823
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117369,7 +117435,8 @@
       5.5,
       1.946
      ],
-     "mean": 5.3
+     "mean": 5.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117413,7 +117480,8 @@
       16.5,
       1.795
      ],
-     "mean": 20.6
+     "mean": 20.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117450,7 +117518,8 @@
       20.5,
       1.856
      ],
-     "mean": 24.9
+     "mean": 24.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117487,7 +117556,8 @@
       14.5,
       1.759
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117531,7 +117601,8 @@
       20.5,
       1.757
      ],
-     "mean": 22.5
+     "mean": 22.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117575,7 +117646,8 @@
       7.5,
       1.941
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117619,7 +117691,8 @@
       0.5,
       1.654
      ],
-     "mean": 0.4
+     "mean": 0.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117663,7 +117736,8 @@
       18.5,
       1.839
      ],
-     "mean": 21.9
+     "mean": 21.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117700,7 +117774,8 @@
       9.5,
       1.731
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117737,7 +117812,8 @@
       16.5,
       1.827
      ],
-     "mean": 19.5
+     "mean": 19.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117774,7 +117850,8 @@
       28.5,
       1.86
      ],
-     "mean": 32.4
+     "mean": 32.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117811,7 +117888,8 @@
       25.5,
       1.836
      ],
-     "mean": 29.8
+     "mean": 29.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117855,7 +117933,8 @@
       32.5,
       1.829
      ],
-     "mean": 36.8
+     "mean": 36.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -117899,7 +117978,8 @@
       0.5,
       2.231
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117943,7 +118023,8 @@
       14.5,
       1.757
      ],
-     "mean": 19.6
+     "mean": 19.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -117987,7 +118068,8 @@
       5.5,
       1.927
      ],
-     "mean": 5.7
+     "mean": 5.7,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -118018,7 +118100,8 @@
      "open": [
       221.5,
       1.903
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118062,7 +118145,8 @@
       33.5,
       1.876
      ],
-     "mean": 36.9
+     "mean": 36.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118099,7 +118183,8 @@
       19.5,
       1.876
      ],
-     "mean": 19.3
+     "mean": 19.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118143,7 +118228,8 @@
       31.5,
       1.811
      ],
-     "mean": 35.1
+     "mean": 35.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118187,7 +118273,8 @@
       2.5,
       1.775
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118231,7 +118318,8 @@
       3.5,
       1.884
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118275,7 +118363,8 @@
       2.5,
       2.032
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118312,7 +118401,8 @@
       29.5,
       1.828
      ],
-     "mean": 33.2
+     "mean": 33.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118349,7 +118439,8 @@
       9.5,
       1.871
      ],
-     "mean": 9.3
+     "mean": 9.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118386,7 +118477,8 @@
       9.5,
       1.996
      ],
-     "mean": 9.6
+     "mean": 9.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118430,7 +118522,8 @@
       3.5,
       1.603
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -118461,7 +118554,8 @@
      "open": [
       221.5,
       1.915
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118498,7 +118592,8 @@
       9.5,
       2.047
      ],
-     "mean": 9.8
+     "mean": 9.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118535,7 +118630,8 @@
       23.5,
       1.852
      ],
-     "mean": 26.5
+     "mean": 26.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118572,7 +118668,8 @@
       9.5,
       1.925
      ],
-     "mean": 9.6
+     "mean": 9.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118609,7 +118706,8 @@
       28.5,
       1.873
      ],
-     "mean": 31.1
+     "mean": 31.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118646,7 +118744,8 @@
       27.5,
       1.806
      ],
-     "mean": 31.2
+     "mean": 31.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118690,7 +118789,8 @@
       8.5,
       1.775
      ],
-     "mean": 8.6
+     "mean": 8.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118734,7 +118834,8 @@
       1.5,
       2.114
      ],
-     "mean": 1.9
+     "mean": 1.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118771,7 +118872,8 @@
       26.5,
       1.9
      ],
-     "mean": 28.6
+     "mean": 28.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118808,7 +118910,8 @@
       16.5,
       1.812
      ],
-     "mean": 18.2
+     "mean": 18.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118852,7 +118955,8 @@
       1.5,
       1.715
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118896,7 +119000,8 @@
       3.5,
       1.598
      ],
-     "mean": 4.3
+     "mean": 4.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -118933,7 +119038,8 @@
       11.5,
       1.755
      ],
-     "mean": 12.6
+     "mean": 12.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -118977,7 +119083,8 @@
       1.5,
       1.91
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119014,7 +119121,8 @@
       27.5,
       1.856
      ],
-     "mean": 29.6
+     "mean": 29.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119051,7 +119159,8 @@
       18.5,
       1.878
      ],
-     "mean": 19.1
+     "mean": 19.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119095,7 +119204,8 @@
       24.5,
       1.892
      ],
-     "mean": 27.6
+     "mean": 27.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119139,7 +119249,8 @@
       20.5,
       1.892
      ],
-     "mean": 21.3
+     "mean": 21.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119183,7 +119294,8 @@
       22.5,
       1.814
      ],
-     "mean": 25.4
+     "mean": 25.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119220,7 +119332,8 @@
       12.5,
       1.804
      ],
-     "mean": 13.9
+     "mean": 13.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119264,7 +119377,8 @@
       5.5,
       1.643
      ],
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119301,7 +119415,8 @@
       5.5,
       1.759
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119345,7 +119460,8 @@
       6.5,
       2.017
      ],
-     "mean": 7.0
+     "mean": 7.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119389,7 +119505,8 @@
       32.5,
       1.884
      ],
-     "mean": 33.9
+     "mean": 33.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119433,7 +119550,8 @@
       22.5,
       1.802
      ],
-     "mean": 23.6
+     "mean": 23.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119477,7 +119595,8 @@
       3.5,
       1.833
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119521,7 +119640,8 @@
       21.5,
       1.871
      ],
-     "mean": 24.3
+     "mean": 24.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119558,7 +119678,8 @@
       13.5,
       1.829
      ],
-     "mean": 14.4
+     "mean": 14.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119595,7 +119716,8 @@
       13.5,
       1.875
      ],
-     "mean": 14.4
+     "mean": 14.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119639,7 +119761,8 @@
       22.5,
       1.757
      ],
-     "mean": 24.3
+     "mean": 24.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119683,7 +119806,8 @@
       22.5,
       1.904
      ],
-     "mean": 23.6
+     "mean": 23.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119727,7 +119851,8 @@
       3.5,
       1.872
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119771,7 +119896,8 @@
       6.5,
       1.712
      ],
-     "mean": 7.0
+     "mean": 7.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119815,7 +119941,8 @@
       32.5,
       1.821
      ],
-     "mean": 33.9
+     "mean": 33.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119859,7 +119986,8 @@
       4.5,
       1.62
      ],
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119896,7 +120024,8 @@
       5.5,
       1.955
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -119940,7 +120069,8 @@
       21.5,
       1.725
      ],
-     "mean": 25.4
+     "mean": 25.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -119977,7 +120107,8 @@
       12.5,
       1.902
      ],
-     "mean": 13.9
+     "mean": 13.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120021,7 +120152,8 @@
       20.5,
       1.813
      ],
-     "mean": 21.3
+     "mean": 21.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120065,7 +120197,8 @@
       1.5,
       1.797
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120102,7 +120235,8 @@
       18.5,
       1.827
      ],
-     "mean": 19.1
+     "mean": 19.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120139,7 +120273,8 @@
       27.5,
       1.848
      ],
-     "mean": 29.6
+     "mean": 29.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120183,7 +120318,8 @@
       1.5,
       1.647
      ],
-     "mean": 1.9
+     "mean": 1.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120220,7 +120356,8 @@
       16.5,
       1.894
      ],
-     "mean": 18.2
+     "mean": 18.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120257,7 +120394,8 @@
       11.5,
       1.96
      ],
-     "mean": 12.6
+     "mean": 12.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120294,7 +120432,8 @@
       26.5,
       1.806
      ],
-     "mean": 28.6
+     "mean": 28.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120338,7 +120477,8 @@
       1.5,
       2.012
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120382,7 +120522,8 @@
       8.5,
       1.936
      ],
-     "mean": 8.6
+     "mean": 8.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120419,7 +120560,8 @@
       9.5,
       1.691
      ],
-     "mean": 9.8
+     "mean": 9.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120463,7 +120605,8 @@
       2.5,
       1.701
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120500,7 +120643,8 @@
       9.5,
       1.727
      ],
-     "mean": 9.6
+     "mean": 9.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120537,7 +120681,8 @@
       28.5,
       1.831
      ],
-     "mean": 31.1
+     "mean": 31.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120574,7 +120719,8 @@
       27.5,
       1.9
      ],
-     "mean": 31.2
+     "mean": 31.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120611,7 +120757,8 @@
       9.5,
       1.784
      ],
-     "mean": 9.6
+     "mean": 9.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120648,7 +120795,8 @@
       9.5,
       1.834
      ],
-     "mean": 9.3
+     "mean": 9.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120685,7 +120833,8 @@
       23.5,
       1.852
      ],
-     "mean": 26.5
+     "mean": 26.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120729,7 +120878,8 @@
       24.5,
       1.813
      ],
-     "mean": 27.6
+     "mean": 27.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120773,7 +120923,8 @@
       3.5,
       1.821
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120817,7 +120968,8 @@
       0.5,
       1.583
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120854,7 +121006,8 @@
       29.5,
       1.876
      ],
-     "mean": 33.2
+     "mean": 33.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120898,7 +121051,8 @@
       33.5,
       1.828
      ],
-     "mean": 36.9
+     "mean": 36.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -120942,7 +121096,8 @@
       5.5,
       1.783
      ],
-     "mean": 5.7
+     "mean": 5.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -120979,7 +121134,8 @@
       19.5,
       1.828
      ],
-     "mean": 19.3
+     "mean": 19.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121023,7 +121179,8 @@
       31.5,
       1.894
      ],
-     "mean": 35.1
+     "mean": 35.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121067,7 +121224,8 @@
       2.5,
       1.936
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121111,7 +121269,8 @@
       4.5,
       1.557
      ],
-     "mean": 4.3
+     "mean": 4.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121155,7 +121314,8 @@
       3.5,
       2.192
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121199,7 +121359,8 @@
       15.5,
       1.829
      ],
-     "mean": 19.6
+     "mean": 19.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121236,7 +121397,8 @@
       28.5,
       1.844
      ],
-     "mean": 32.4
+     "mean": 32.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121273,7 +121435,8 @@
       25.5,
       1.868
      ],
-     "mean": 29.8
+     "mean": 29.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121317,7 +121480,8 @@
       32.5,
       1.875
      ],
-     "mean": 36.8
+     "mean": 36.8,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -121348,7 +121512,8 @@
      "open": [
       null,
       1.247
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121392,7 +121557,8 @@
       9.5,
       1.695
      ],
-     "mean": 11.7
+     "mean": 11.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121429,7 +121595,8 @@
       16.5,
       1.878
      ],
-     "mean": 19.5
+     "mean": 19.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121473,7 +121640,8 @@
       18.5,
       1.792
      ],
-     "mean": 22.5
+     "mean": 22.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121517,7 +121685,8 @@
       18.5,
       1.865
      ],
-     "mean": 21.9
+     "mean": 21.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121561,7 +121730,8 @@
       5.5,
       1.766
      ],
-     "mean": 5.3
+     "mean": 5.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121605,7 +121775,8 @@
       2.5,
       1.549
      ],
-     "mean": 3.1
+     "mean": 3.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121642,7 +121813,8 @@
       9.5,
       1.991
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121679,7 +121851,8 @@
       20.5,
       1.848
      ],
-     "mean": 24.9
+     "mean": 24.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121723,7 +121896,8 @@
       0.5,
       2.104
      ],
-     "mean": 0.4
+     "mean": 0.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121767,7 +121941,8 @@
       7.5,
       1.771
      ],
-     "mean": 7.4
+     "mean": 7.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121804,7 +121979,8 @@
       14.5,
       1.955
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121848,7 +122024,8 @@
       3.5,
       1.539
      ],
-     "mean": 4.4
+     "mean": 4.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121892,7 +122069,8 @@
       16.5,
       1.912
      ],
-     "mean": 20.6
+     "mean": 20.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -121929,7 +122107,8 @@
       8.5,
       1.882
      ],
-     "mean": 10.5
+     "mean": 10.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -121966,7 +122145,8 @@
       12.5,
       1.881
      ],
-     "mean": 16.7
+     "mean": 16.7,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -121997,7 +122177,8 @@
      "open": [
       -9.5,
       1.914
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122041,7 +122222,8 @@
       5.5,
       1.666
      ],
-     "mean": 7.5
+     "mean": 7.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122085,7 +122267,8 @@
       24.5,
       1.825
      ],
-     "mean": 30.1
+     "mean": 30.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -122122,7 +122305,8 @@
       19.5,
       1.777
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -122166,7 +122350,8 @@
       3.5,
       1.76
      ],
-     "mean": 5.2
+     "mean": 5.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -122210,7 +122395,8 @@
       10.5,
       1.725
      ],
-     "mean": 12.1
+     "mean": 12.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122247,7 +122433,8 @@
       6.5,
       2.066
      ],
-     "mean": 9.8
+     "mean": 9.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122291,7 +122478,8 @@
       3.5,
       1.672
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122335,7 +122523,8 @@
       12.5,
       1.829
      ],
-     "mean": 13.8
+     "mean": 13.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122379,7 +122568,8 @@
       5.5,
       1.771
      ],
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122423,289 +122613,21 @@
       10.5,
       1.9
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "won"
     }
    ],
-   "wo": {
-    "TOR": {
-     "model": {
-      "RJ Barrett": [
-       [
-        "Immanuel Quickley",
-        3.6,
-        4.1
-       ],
-       [
-        "Ja'Kobe Walter",
-        3.1,
-        4.6
-       ],
-       [
-        "Collin Murray-Boyles",
-        3.1,
-        4.7
-       ]
-      ],
-      "Immanuel Quickley": [
-       [
-        "RJ Barrett",
-        3.6,
-        4.1
-       ],
-       [
-        "Ja'Kobe Walter",
-        2.6,
-        4.7
-       ],
-       [
-        "Jakob Poeltl",
-        2.5,
-        4.7
-       ]
-      ],
-      "Ja'Kobe Walter": [
-       [
-        "RJ Barrett",
-        2.7,
-        3.9
-       ],
-       [
-        "Immanuel Quickley",
-        2.2,
-        4.0
-       ],
-       [
-        "Jakob Poeltl",
-        1.9,
-        4.3
-       ]
-      ],
-      "Jamal Shead": [
-       [
-        "RJ Barrett",
-        1.5,
-        3.2
-       ],
-       [
-        "Immanuel Quickley",
-        1.1,
-        3.2
-       ],
-       [
-        "Ja'Kobe Walter",
-        1.1,
-        3.5
-       ]
-      ],
-      "Collin Murray-Boyles": [
-       [
-        "RJ Barrett",
-        2.3,
-        3.3
-       ],
-       [
-        "Immanuel Quickley",
-        1.8,
-        3.4
-       ],
-       [
-        "Ja'Kobe Walter",
-        1.6,
-        3.6
-       ]
-      ],
-      "Jakob Poeltl": [
-       [
-        "RJ Barrett",
-        2.3,
-        3.3
-       ],
-       [
-        "Immanuel Quickley",
-        1.8,
-        3.3
-       ],
-       [
-        "Ja'Kobe Walter",
-        1.6,
-        3.6
-       ]
-      ]
-     },
-     "real": {
-      "Scottie Barnes": [
-       [
-        "Alijah Martin",
-        9.2,
-        3,
-        4
-       ],
-       [
-        "Jakob Poeltl",
-        7.0,
-        3,
-        3
-       ],
-       [
-        "Jamal Shead",
-        4.4,
-        3,
-        5
-       ]
-      ],
-      "Trayce Jackson-Davis": [
-       [
-        "Alijah Martin",
-        15.5,
-        2,
-        5
-       ],
-       [
-        "Allen Graves",
-        4.5,
-        2,
-        6
-       ],
-       [
-        "Jakob Poeltl",
-        2.5,
-        2,
-        4
-       ]
-      ]
-     },
-     "doubt": []
+   "result": {
+    "score": {
+     "TOR": 112,
+     "PHI": 123
     },
-    "PHI": {
-     "model": {
-      "Tyrese Maxey": [
-       [
-        "Joel Embiid",
-        6.5,
-        5.2
-       ],
-       [
-        "Jaylen Brown",
-        5.4,
-        3.2
-       ],
-       [
-        "Anfernee Simons",
-        3.9,
-        5.1
-       ]
-      ],
-      "Jaylen Brown": [
-       [
-        "Joel Embiid",
-        6.0,
-        5.1
-       ],
-       [
-        "Tyrese Maxey",
-        5.0,
-        2.6
-       ],
-       [
-        "Anfernee Simons",
-        3.6,
-        4.9
-       ]
-      ],
-      "VJ Edgecombe": [
-       [
-        "Joel Embiid",
-        3.6,
-        5.0
-       ],
-       [
-        "Jaylen Brown",
-        2.4,
-        3.2
-       ],
-       [
-        "Anfernee Simons",
-        2.4,
-        4.8
-       ]
-      ],
-      "Joel Embiid": [
-       [
-        "Tyrese Maxey",
-        4.0,
-        2.4
-       ],
-       [
-        "Jaylen Brown",
-        4.0,
-        2.8
-       ],
-       [
-        "Anfernee Simons",
-        2.5,
-        3.5
-       ]
-      ],
-      "Dean Wade": [
-       [
-        "Joel Embiid",
-        1.4,
-        3.6
-       ],
-       [
-        "Anfernee Simons",
-        1.0,
-        3.3
-       ],
-       [
-        "Jaylen Brown",
-        0.5,
-        2.5
-       ]
-      ],
-      "Anfernee Simons": [
-       [
-        "Joel Embiid",
-        2.6,
-        3.1
-       ],
-       [
-        "Tyrese Maxey",
-        2.1,
-        2.0
-       ],
-       [
-        "Jaylen Brown",
-        2.1,
-        2.2
-       ]
-      ],
-      "Kentavious Caldwell-Pope": [
-       [
-        "Joel Embiid",
-        1.7,
-        3.1
-       ],
-       [
-        "Anfernee Simons",
-        1.1,
-        2.7
-       ],
-       [
-        "Jaylen Brown",
-        1.0,
-        2.2
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": [
-      [
-       "Joel Embiid",
-       0.85
-      ]
-     ]
-    }
+    "ot": 0,
+    "winner": "PHI",
+    "winner_ok": true,
+    "picks_won": 0,
+    "picks_lost": 0,
+    "units": 0
    }
   },
   {
@@ -122777,7 +122699,8 @@
       24.5,
       1.757
      ],
-     "mean": 17.7
+     "mean": 17.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122823,7 +122746,8 @@
       6.5,
       1.643
      ],
-     "mean": 3.7
+     "mean": 3.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122869,7 +122793,8 @@
       17.5,
       1.695
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "won"
     }
    ],
    "value_bets": [
@@ -122909,7 +122834,8 @@
       12.5,
       1.887
      ],
-     "mean": 8.2
+     "mean": 8.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122954,7 +122880,8 @@
       36.5,
       1.888
      ],
-     "mean": 26.0
+     "mean": 26.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -122999,7 +122926,8 @@
       0.5,
       2.557
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -123044,7 +122972,8 @@
       2.5,
       1.912
      ],
-     "mean": 4.2
+     "mean": 4.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123089,7 +123018,8 @@
       1.5,
       2.114
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123134,7 +123064,8 @@
       0.5,
       1.912
      ],
-     "mean": 0.3
+     "mean": 0.3,
+     "result": "lost"
     }
    ],
    "parlays": [
@@ -123152,7 +123083,9 @@
        "dec": 1.647,
        "ev": 0.003,
        "gid": "2026-11-12-DAL-at-MIN",
-       "game": "DAL @ MIN"
+       "game": "DAL @ MIN",
+       "result": "won",
+       "actual": 1
       },
       {
        "kind": "prop",
@@ -123166,7 +123099,9 @@
        "dec": 1.712,
        "ev": 0.022,
        "gid": "2026-11-12-DAL-at-MIN",
-       "game": "DAL @ MIN"
+       "game": "DAL @ MIN",
+       "result": "lost",
+       "actual": 7
       }
      ],
      "n": 2,
@@ -123176,7 +123111,8 @@
      "dec": 2.82,
      "fair": 2.75,
      "ev": 0.024,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     },
     {
      "legs": [
@@ -123192,7 +123128,9 @@
        "dec": 1.72,
        "ev": 0.03,
        "gid": "2026-11-12-DAL-at-MIN",
-       "game": "DAL @ MIN"
+       "game": "DAL @ MIN",
+       "result": "lost",
+       "actual": 7
       },
       {
        "kind": "prop",
@@ -123206,7 +123144,9 @@
        "dec": 1.735,
        "ev": 0.022,
        "gid": "2026-11-12-DAL-at-MIN",
-       "game": "DAL @ MIN"
+       "game": "DAL @ MIN",
+       "result": "lost",
+       "actual": 3
       },
       {
        "kind": "prop",
@@ -123220,7 +123160,9 @@
        "dec": 1.871,
        "ev": 0.031,
        "gid": "2026-11-12-DAL-at-MIN",
-       "game": "DAL @ MIN"
+       "game": "DAL @ MIN",
+       "result": "lost",
+       "actual": 1
       }
      ],
      "n": 3,
@@ -123230,7 +123172,8 @@
      "dec": 5.58,
      "fair": 5.14,
      "ev": 0.085,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -123257,7 +123200,8 @@
        4
       ]
      },
-     "mean": 4.7
+     "mean": 4.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123282,7 +123226,8 @@
        4
       ]
      },
-     "mean": 4.7
+     "mean": 4.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123307,7 +123252,8 @@
        4
       ]
      },
-     "mean": 6.9
+     "mean": 6.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123332,7 +123278,8 @@
        3
       ]
      },
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123357,7 +123304,8 @@
        3
       ]
      },
-     "mean": 4.2
+     "mean": 4.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -123382,7 +123330,8 @@
        4
       ]
      },
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -123407,7 +123356,8 @@
        2
       ]
      },
-     "mean": 5.6
+     "mean": 5.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123432,7 +123382,8 @@
        3
       ]
      },
-     "mean": 11.9
+     "mean": 11.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123457,7 +123408,8 @@
        2
       ]
      },
-     "mean": 6.4
+     "mean": 6.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123482,7 +123434,8 @@
        2
       ]
      },
-     "mean": 5.4
+     "mean": 5.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123507,7 +123460,8 @@
        1
       ]
      },
-     "mean": 8.5
+     "mean": 8.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123532,7 +123486,8 @@
        3
       ]
      },
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123557,7 +123512,8 @@
        2
       ]
      },
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123582,7 +123538,8 @@
        2
       ]
      },
-     "mean": 4.7
+     "mean": 4.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123606,7 +123563,8 @@
        2,
        4
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -123653,7 +123611,8 @@
       24.5,
       1.757
      ],
-     "mean": 17.7
+     "mean": 17.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123698,7 +123657,8 @@
       6.5,
       1.643
      ],
-     "mean": 3.7
+     "mean": 3.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123743,7 +123703,8 @@
       17.5,
       1.695
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123789,6 +123750,7 @@
       1.757
      ],
      "mean": 20.4,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -123829,7 +123791,8 @@
       12.5,
       1.887
      ],
-     "mean": 8.2
+     "mean": 8.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123873,7 +123836,8 @@
       36.5,
       1.888
      ],
-     "mean": 26.0
+     "mean": 26.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123918,7 +123882,8 @@
       18.5,
       1.792
      ],
-     "mean": 16.9
+     "mean": 16.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123955,7 +123920,8 @@
       30.5,
       1.831
      ],
-     "mean": 21.4
+     "mean": 21.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -123992,7 +123958,8 @@
       30.5,
       1.856
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124036,7 +124003,8 @@
       0.5,
       2.557
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124080,7 +124048,8 @@
       2.5,
       1.912
      ],
-     "mean": 4.2
+     "mean": 4.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124124,7 +124093,8 @@
       1.5,
       2.114
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124169,7 +124139,8 @@
       20.5,
       1.829
      ],
-     "mean": 20.4
+     "mean": 20.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124213,7 +124184,8 @@
       0.5,
       1.912
      ],
-     "mean": 0.3
+     "mean": 0.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124257,7 +124229,8 @@
       6.5,
       1.75
      ],
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124301,7 +124274,8 @@
       3.5,
       1.598
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124339,6 +124313,7 @@
       1.965
      ],
      "mean": 6.4,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -124379,7 +124354,8 @@
       8.5,
       1.735
      ],
-     "mean": 12.0
+     "mean": 12.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124423,7 +124399,8 @@
       4.5,
       2.016
      ],
-     "mean": 3.8
+     "mean": 3.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124467,7 +124444,8 @@
       2.5,
       1.576
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124512,6 +124490,7 @@
       1.526
      ],
      "mean": 2.8,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -124546,7 +124525,8 @@
      "open": [
       -5.5,
       1.877
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124590,7 +124570,8 @@
       4.5,
       1.852
      ],
-     "mean": 7.6
+     "mean": 7.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124634,7 +124615,8 @@
       1.5,
       1.634
      ],
-     "mean": 1.0
+     "mean": 1.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124678,7 +124660,8 @@
       0.5,
       2.252
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124722,7 +124705,8 @@
       2.5,
       2.296
      ],
-     "mean": 3.0
+     "mean": 3.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -124767,6 +124751,7 @@
       1.912
      ],
      "mean": 5.7,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -124807,7 +124792,8 @@
       20.5,
       1.823
      ],
-     "mean": 18.1
+     "mean": 18.1,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -124838,7 +124824,8 @@
      "open": [
       null,
       1.461
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124883,6 +124870,7 @@
       1.797
      ],
      "mean": 26.8,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -124930,7 +124918,8 @@
       13.5,
       1.685
      ],
-     "mean": 13.3
+     "mean": 13.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -124967,7 +124956,8 @@
       11.5,
       1.999
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125011,7 +125001,8 @@
       7.5,
       1.801
      ],
-     "mean": 6.5
+     "mean": 6.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125055,7 +125046,8 @@
       9.5,
       1.904
      ],
-     "mean": 12.5
+     "mean": 12.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125093,6 +125085,7 @@
       1.864
      ],
      "mean": 23.3,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -125140,7 +125133,8 @@
       4.5,
       1.951
      ],
-     "mean": 5.7
+     "mean": 5.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125177,7 +125171,8 @@
       22.5,
       1.824
      ],
-     "mean": 20.1
+     "mean": 20.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125221,7 +125216,8 @@
       0.5,
       2.06
      ],
-     "mean": 0.6
+     "mean": 0.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125265,7 +125261,8 @@
       0.5,
       1.603
      ],
-     "mean": 0.3
+     "mean": 0.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125310,6 +125307,7 @@
       1.654
      ],
      "mean": 1.0,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -125358,6 +125356,7 @@
       1.754
      ],
      "mean": 2.8,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -125405,7 +125404,8 @@
       9.5,
       1.836
      ],
-     "mean": 10.7
+     "mean": 10.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125449,7 +125449,8 @@
       0.5,
       1.795
      ],
-     "mean": 1.2
+     "mean": 1.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125487,6 +125488,7 @@
       1.831
      ],
      "mean": 23.9,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -125534,7 +125536,8 @@
       3.5,
       2.19
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125578,7 +125581,8 @@
       25.5,
       1.889
      ],
-     "mean": 23.6
+     "mean": 23.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125623,6 +125627,7 @@
       1.647
      ],
      "mean": 3.5,
+     "result": "won",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -125670,7 +125675,8 @@
       1.5,
       2.63
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125715,6 +125721,7 @@
       2.016
      ],
      "mean": 4.4,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -125762,7 +125769,8 @@
       22.5,
       1.916
      ],
-     "mean": 25.5
+     "mean": 25.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125806,7 +125814,8 @@
       1.5,
       1.795
      ],
-     "mean": 2.4
+     "mean": 2.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125850,7 +125859,8 @@
       5.5,
       1.852
      ],
-     "mean": 5.1
+     "mean": 5.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125887,7 +125897,8 @@
       7.5,
       1.747
      ],
-     "mean": 9.4
+     "mean": 9.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -125924,7 +125935,8 @@
       20.5,
       1.813
      ],
-     "mean": 23.9
+     "mean": 23.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -125968,7 +125980,8 @@
       0.5,
       2.104
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126012,7 +126025,8 @@
       1.5,
       2.077
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126057,6 +126071,7 @@
       1.281
      ],
      "mean": 0.2,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -126104,7 +126119,8 @@
       1.5,
       1.595
      ],
-     "mean": 1.1
+     "mean": 1.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126141,7 +126157,8 @@
       6.5,
       1.889
      ],
-     "mean": 6.2
+     "mean": 6.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126185,7 +126202,8 @@
       3.5,
       1.926
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126229,7 +126247,8 @@
       5.5,
       1.759
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126273,7 +126292,8 @@
       1.5,
       2.195
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126317,7 +126337,8 @@
       21.5,
       1.813
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126361,7 +126382,8 @@
       9.5,
       1.873
      ],
-     "mean": 11.9
+     "mean": 11.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126398,7 +126420,8 @@
       7.5,
       1.758
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -126429,7 +126452,8 @@
      "open": [
       227.5,
       1.909
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126473,7 +126497,8 @@
       3.5,
       1.689
      ],
-     "mean": 3.1
+     "mean": 3.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126517,7 +126542,8 @@
       5.5,
       1.937
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126561,7 +126587,8 @@
       4.5,
       1.955
      ],
-     "mean": 5.5
+     "mean": 5.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126605,7 +126632,8 @@
       31.5,
       1.852
      ],
-     "mean": 30.8
+     "mean": 30.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126642,7 +126670,8 @@
       27.5,
       1.82
      ],
-     "mean": 26.8
+     "mean": 26.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126679,7 +126708,8 @@
       19.5,
       1.887
      ],
-     "mean": 21.7
+     "mean": 21.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126723,7 +126753,8 @@
       11.5,
       1.695
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126760,7 +126791,8 @@
       24.5,
       1.86
      ],
-     "mean": 24.3
+     "mean": 24.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126804,7 +126836,8 @@
       6.5,
       1.898
      ],
-     "mean": 7.6
+     "mean": 7.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -126849,6 +126882,7 @@
       1.417
      ],
      "mean": 1.0,
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -126889,7 +126923,8 @@
       8.5,
       1.941
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -126920,7 +126955,8 @@
      "open": [
       227.5,
       1.909
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -126964,7 +127000,8 @@
       2.5,
       1.569
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127001,7 +127038,8 @@
       16.5,
       1.894
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127038,7 +127076,8 @@
       10.5,
       1.878
      ],
-     "mean": 10.4
+     "mean": 10.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127082,7 +127121,8 @@
       26.5,
       1.813
      ],
-     "mean": 29.0
+     "mean": 29.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127119,7 +127159,8 @@
       22.5,
       1.856
      ],
-     "mean": 22.7
+     "mean": 22.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127163,7 +127204,8 @@
       1.5,
       2.058
      ],
-     "mean": 1.7
+     "mean": 1.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127200,7 +127242,8 @@
       14.5,
       1.831
      ],
-     "mean": 14.8
+     "mean": 14.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127244,7 +127287,8 @@
       5.5,
       1.685
      ],
-     "mean": 5.5
+     "mean": 5.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127288,7 +127332,8 @@
       2.5,
       2.354
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127332,7 +127377,8 @@
       13.5,
       1.83
      ],
-     "mean": 15.4
+     "mean": 15.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127376,7 +127422,8 @@
       0.5,
       1.852
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127420,7 +127467,8 @@
       6.5,
       1.794
      ],
-     "mean": 6.5
+     "mean": 6.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127465,6 +127513,7 @@
       1.759
      ],
      "mean": 4.6,
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -127512,7 +127561,8 @@
       1.5,
       2.096
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127557,6 +127607,7 @@
       2.443
      ],
      "mean": 1.0,
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -127597,7 +127648,8 @@
       19.5,
       1.869
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127642,6 +127694,7 @@
       1.759
      ],
      "mean": 6.9,
+     "result": "won",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -127689,7 +127742,8 @@
       15.5,
       1.769
      ],
-     "mean": 15.7
+     "mean": 15.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127726,7 +127780,8 @@
       12.5,
       1.889
      ],
-     "mean": 13.0
+     "mean": 13.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127763,7 +127818,8 @@
       13.5,
       1.907
      ],
-     "mean": 14.6
+     "mean": 14.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127800,7 +127856,8 @@
       9.5,
       1.844
      ],
-     "mean": 10.6
+     "mean": 10.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127844,7 +127901,8 @@
       21.5,
       1.826
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127881,7 +127939,8 @@
       22.5,
       1.816
      ],
-     "mean": 23.2
+     "mean": 23.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -127925,7 +127984,8 @@
       21.5,
       1.879
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127962,7 +128022,8 @@
       22.5,
       1.889
      ],
-     "mean": 23.2
+     "mean": 23.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -127999,7 +128060,8 @@
       9.5,
       1.859
      ],
-     "mean": 10.6
+     "mean": 10.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128036,7 +128098,8 @@
       13.5,
       1.799
      ],
-     "mean": 14.6
+     "mean": 14.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128073,7 +128136,8 @@
       12.5,
       1.816
      ],
-     "mean": 13.0
+     "mean": 13.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128118,6 +128182,7 @@
       1.491
      ],
      "mean": 1.0,
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -128165,7 +128230,8 @@
       1.5,
       1.659
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128202,7 +128268,8 @@
       19.5,
       1.835
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128247,6 +128314,7 @@
       1.955
      ],
      "mean": 6.9,
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -128294,7 +128362,8 @@
       15.5,
       1.943
      ],
-     "mean": 15.7
+     "mean": 15.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128338,7 +128407,8 @@
       2.5,
       1.526
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128383,6 +128453,7 @@
       1.955
      ],
      "mean": 4.6,
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -128430,7 +128501,8 @@
       0.5,
       1.852
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128474,7 +128546,8 @@
       6.5,
       1.914
      ],
-     "mean": 6.5
+     "mean": 6.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128518,7 +128591,8 @@
       1.5,
       1.684
      ],
-     "mean": 1.7
+     "mean": 1.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128562,7 +128636,8 @@
       13.5,
       1.875
      ],
-     "mean": 15.4
+     "mean": 15.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128606,7 +128681,8 @@
       5.5,
       2.055
      ],
-     "mean": 5.5
+     "mean": 5.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128650,7 +128726,8 @@
       3.5,
       1.557
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128687,7 +128764,8 @@
       14.5,
       1.873
      ],
-     "mean": 14.8
+     "mean": 14.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128724,7 +128802,8 @@
       22.5,
       1.848
      ],
-     "mean": 22.7
+     "mean": 22.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128761,7 +128840,8 @@
       10.5,
       1.827
      ],
-     "mean": 10.4
+     "mean": 10.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128798,7 +128878,8 @@
       8.5,
       1.771
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128842,7 +128923,8 @@
       26.5,
       1.892
      ],
-     "mean": 29.0
+     "mean": 29.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128879,7 +128961,8 @@
       16.5,
       1.812
      ],
-     "mean": 18.4
+     "mean": 18.4,
+     "result": "lost"
     },
     {
      "kind": "spread",
@@ -128910,7 +128993,8 @@
      "open": [
       5.5,
       1.943
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -128947,7 +129031,8 @@
       24.5,
       1.844
      ],
-     "mean": 24.3
+     "mean": 24.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -128991,7 +129076,8 @@
       6.5,
       1.808
      ],
-     "mean": 7.6
+     "mean": 7.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129028,7 +129114,8 @@
       19.5,
       1.818
      ],
-     "mean": 21.7
+     "mean": 21.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129065,7 +129152,8 @@
       27.5,
       1.885
      ],
-     "mean": 26.8
+     "mean": 26.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129109,7 +129197,8 @@
       5.5,
       1.774
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129153,7 +129242,8 @@
       1.5,
       1.429
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129197,7 +129287,8 @@
       4.5,
       1.759
      ],
-     "mean": 5.5
+     "mean": 5.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129241,7 +129332,8 @@
       31.5,
       1.852
      ],
-     "mean": 30.8
+     "mean": 30.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129285,7 +129377,8 @@
       1.5,
       1.601
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -129316,7 +129409,8 @@
      "open": [
       null,
       2.784
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129360,7 +129454,8 @@
       9.5,
       1.831
      ],
-     "mean": 11.9
+     "mean": 11.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129404,7 +129499,8 @@
       0.5,
       1.654
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129448,7 +129544,8 @@
       9.5,
       1.868
      ],
-     "mean": 10.7
+     "mean": 10.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129485,7 +129582,8 @@
       7.5,
       1.956
      ],
-     "mean": 9.1
+     "mean": 9.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129529,7 +129627,8 @@
       1.5,
       1.67
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129573,7 +129672,8 @@
       3.5,
       1.783
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129617,7 +129717,8 @@
       3.5,
       2.05
      ],
-     "mean": 3.1
+     "mean": 3.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129661,7 +129762,8 @@
       21.5,
       1.892
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129705,7 +129807,8 @@
       8.5,
       1.757
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129742,7 +129845,8 @@
       6.5,
       1.816
      ],
-     "mean": 6.2
+     "mean": 6.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129786,7 +129890,8 @@
       10.5,
       1.643
      ],
-     "mean": 11.4
+     "mean": 11.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129830,7 +129935,8 @@
       5.5,
       1.955
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -129867,7 +129973,8 @@
       20.5,
       1.892
      ],
-     "mean": 23.9
+     "mean": 23.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129911,7 +130018,8 @@
       2.5,
       1.552
      ],
-     "mean": 3.0
+     "mean": 3.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -129956,6 +130064,7 @@
       1.712
      ],
      "mean": 4.4,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -130003,7 +130112,8 @@
       22.5,
       1.792
      ],
-     "mean": 25.5
+     "mean": 25.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130048,6 +130158,7 @@
       2.67
      ],
      "mean": 1.0,
+     "result": "lost",
      "flag": {
       "t": "sin_datos",
       "note": "Sin datos 2025-26 en el modelo; 11 partidos esta temporada"
@@ -130095,7 +130206,8 @@
       5.5,
       1.852
      ],
-     "mean": 5.1
+     "mean": 5.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130139,7 +130251,8 @@
       0.5,
       1.682
      ],
-     "mean": 0.6
+     "mean": 0.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130183,7 +130296,8 @@
       0.5,
       1.572
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130227,7 +130341,8 @@
       1.5,
       1.912
      ],
-     "mean": 2.4
+     "mean": 2.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130271,7 +130386,8 @@
       12.5,
       1.792
      ],
-     "mean": 13.3
+     "mean": 13.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130308,7 +130424,8 @@
       7.5,
       1.97
      ],
-     "mean": 9.4
+     "mean": 9.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130352,7 +130469,8 @@
       25.5,
       1.816
      ],
-     "mean": 23.6
+     "mean": 23.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130389,7 +130507,8 @@
       11.5,
       1.725
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130433,7 +130552,8 @@
       4.5,
       1.762
      ],
-     "mean": 5.7
+     "mean": 5.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130477,7 +130597,8 @@
       0.5,
       1.452
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130521,7 +130642,8 @@
       1.5,
       2.208
      ],
-     "mean": 1.1
+     "mean": 1.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130565,7 +130687,8 @@
       9.5,
       1.802
      ],
-     "mean": 12.5
+     "mean": 12.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130603,6 +130726,7 @@
       1.839
      ],
      "mean": 23.3,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -130644,6 +130768,7 @@
       1.873
      ],
      "mean": 23.9,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -130684,7 +130809,8 @@
       22.5,
       1.881
      ],
-     "mean": 20.1
+     "mean": 20.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -130728,7 +130854,8 @@
       0.5,
       1.912
      ],
-     "mean": 1.2
+     "mean": 1.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130772,7 +130899,8 @@
       7.5,
       1.906
      ],
-     "mean": 6.5
+     "mean": 6.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130816,7 +130944,8 @@
       7.5,
       1.576
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130853,7 +130982,8 @@
       20.5,
       1.882
      ],
-     "mean": 18.1
+     "mean": 18.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -130898,6 +131028,7 @@
       1.961
      ],
      "mean": 2.8,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -130946,6 +131077,7 @@
       1.795
      ],
      "mean": 5.7,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -130994,6 +131126,7 @@
       1.91
      ],
      "mean": 26.8,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -131042,6 +131175,7 @@
       2.114
      ],
      "mean": 3.5,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -131089,7 +131223,8 @@
       4.5,
       1.852
      ],
-     "mean": 7.6
+     "mean": 7.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131133,7 +131268,8 @@
       1.5,
       1.647
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131171,6 +131307,7 @@
       1.751
      ],
      "mean": 6.4,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -131219,6 +131356,7 @@
       2.104
      ],
      "mean": 1.0,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -131266,7 +131404,8 @@
       4.5,
       1.663
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131310,7 +131449,8 @@
       3.5,
       1.604
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131354,7 +131494,8 @@
       3.5,
       1.62
      ],
-     "mean": 3.6
+     "mean": 3.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131398,7 +131539,8 @@
       2.5,
       1.795
      ],
-     "mean": 4.2
+     "mean": 4.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131442,7 +131584,8 @@
       1.5,
       2.136
      ],
-     "mean": 1.0
+     "mean": 1.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131486,7 +131629,8 @@
       0.5,
       1.795
      ],
-     "mean": 0.3
+     "mean": 0.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131530,7 +131674,8 @@
       0.5,
       2.192
      ],
-     "mean": 0.3
+     "mean": 0.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131574,7 +131719,8 @@
       19.5,
       1.725
      ],
-     "mean": 20.4
+     "mean": 20.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131611,7 +131757,8 @@
       8.5,
       1.986
      ],
-     "mean": 12.0
+     "mean": 12.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131655,7 +131802,8 @@
       4.5,
       1.712
      ],
-     "mean": 3.8
+     "mean": 3.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131700,6 +131848,7 @@
       3.342
      ],
      "mean": 0.2,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -131747,7 +131896,8 @@
       6.5,
       1.966
      ],
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -131784,7 +131934,8 @@
       30.5,
       1.848
      ],
-     "mean": 22.3
+     "mean": 22.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131829,6 +131980,7 @@
       1.557
      ],
      "mean": 2.8,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -131869,7 +132021,8 @@
       30.5,
       1.873
      ],
-     "mean": 21.4
+     "mean": 21.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131913,7 +132066,8 @@
       36.5,
       1.817
      ],
-     "mean": 26.0
+     "mean": 26.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131950,7 +132104,8 @@
       12.5,
       1.818
      ],
-     "mean": 8.2
+     "mean": 8.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -131994,7 +132149,8 @@
       17.5,
       1.725
      ],
-     "mean": 16.9
+     "mean": 16.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132039,6 +132195,7 @@
       1.792
      ],
      "mean": 20.4,
+     "result": "lost",
      "flag": {
       "t": "lesion",
       "note": "No jugó la 2025-26 (ligamento cruzado de la rodilla); 9 partidos esta temporada"
@@ -132086,7 +132243,8 @@
       16.5,
       1.792
      ],
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -132130,7 +132288,8 @@
       23.5,
       1.757
      ],
-     "mean": 17.7
+     "mean": 17.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -132174,231 +132333,21 @@
       5.5,
       1.633
      ],
-     "mean": 3.7
+     "mean": 3.7,
+     "result": "lost"
     }
    ],
-   "wo": {
-    "DAL": {
-     "model": {
-      "P.J. Washington": [
-       [
-        "Kyrie Irving",
-        2.7,
-        3.8
-       ],
-       [
-        "Cooper Flagg",
-        2.2,
-        3.9
-       ],
-       [
-        "Naji Marshall",
-        1.5,
-        3.7
-       ]
-      ],
-      "Cooper Flagg": [
-       [
-        "Kyrie Irving",
-        3.3,
-        3.6
-       ],
-       [
-        "P.J. Washington",
-        2.1,
-        3.8
-       ],
-       [
-        "Naji Marshall",
-        1.8,
-        3.4
-       ]
-      ],
-      "Kyrie Irving": [
-       [
-        "Cooper Flagg",
-        3.2,
-        3.2
-       ],
-       [
-        "P.J. Washington",
-        2.5,
-        3.3
-       ],
-       [
-        "Naji Marshall",
-        2.1,
-        3.0
-       ]
-      ],
-      "Naji Marshall": [
-       [
-        "Kyrie Irving",
-        2.1,
-        3.0
-       ],
-       [
-        "Cooper Flagg",
-        1.8,
-        3.2
-       ],
-       [
-        "P.J. Washington",
-        1.4,
-        3.2
-       ]
-      ],
-      "Zaccharie Risacher": [
-       [
-        "Kyrie Irving",
-        1.3,
-        2.4
-       ],
-       [
-        "Cooper Flagg",
-        1.1,
-        2.6
-       ],
-       [
-        "P.J. Washington",
-        0.9,
-        2.6
-       ]
-      ],
-      "Morez Johnson Jr.": [
-       [
-        "Kyrie Irving",
-        0.9,
-        1.3
-       ],
-       [
-        "Cooper Flagg",
-        0.8,
-        1.4
-       ],
-       [
-        "P.J. Washington",
-        0.6,
-        1.4
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": [
-      [
-       "Morez Johnson Jr.",
-       0.84
-      ]
-     ]
+   "result": {
+    "score": {
+     "DAL": 94,
+     "MIN": 133
     },
-    "MIN": {
-     "model": {
-      "Jaden McDaniels": [
-       [
-        "LaMelo Ball",
-        2.8,
-        4.3
-       ],
-       [
-        "Ayo Dosunmu",
-        2.3,
-        4.4
-       ],
-       [
-        "Jonathan Kuminga",
-        2.0,
-        4.4
-       ]
-      ],
-      "Ayo Dosunmu": [
-       [
-        "LaMelo Ball",
-        3.2,
-        4.2
-       ],
-       [
-        "Jonathan Kuminga",
-        2.3,
-        4.3
-       ],
-       [
-        "Jaden McDaniels",
-        2.2,
-        4.3
-       ]
-      ],
-      "Jonathan Kuminga": [
-       [
-        "LaMelo Ball",
-        2.9,
-        4.1
-       ],
-       [
-        "Ayo Dosunmu",
-        2.3,
-        4.3
-       ],
-       [
-        "Jaden McDaniels",
-        1.9,
-        4.2
-       ]
-      ],
-      "Rudy Gobert": [
-       [
-        "LaMelo Ball",
-        2.5,
-        3.8
-       ],
-       [
-        "Ayo Dosunmu",
-        1.9,
-        3.9
-       ],
-       [
-        "Jonathan Kuminga",
-        1.7,
-        3.9
-       ]
-      ],
-      "LaMelo Ball": [
-       [
-        "Ayo Dosunmu",
-        3.1,
-        3.9
-       ],
-       [
-        "Jonathan Kuminga",
-        2.8,
-        4.0
-       ],
-       [
-        "Jaden McDaniels",
-        2.6,
-        3.9
-       ]
-      ],
-      "Terrence Shannon Jr": [
-       [
-        "LaMelo Ball",
-        2.2,
-        2.7
-       ],
-       [
-        "Ayo Dosunmu",
-        1.8,
-        2.8
-       ],
-       [
-        "Jonathan Kuminga",
-        1.6,
-        2.8
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": []
-    }
+    "ot": 0,
+    "winner": "MIN",
+    "winner_ok": true,
+    "picks_won": 4,
+    "picks_lost": 2,
+    "units": 1.87
    }
   },
   {
@@ -132470,7 +132419,8 @@
       15.5,
       1.792
      ],
-     "mean": 13.9
+     "mean": 13.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132516,7 +132466,8 @@
       7.5,
       1.792
      ],
-     "mean": 6.0
+     "mean": 6.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132562,7 +132513,8 @@
       13.5,
       1.864
      ],
-     "mean": 17.3
+     "mean": 17.3,
+     "result": "lost"
     }
    ],
    "value_bets": [
@@ -132609,7 +132561,8 @@
       5.5,
       1.955
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132654,7 +132607,8 @@
       6.5,
       1.81
      ],
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132699,7 +132653,8 @@
       4.5,
       1.737
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "won"
     }
    ],
    "parlays": [
@@ -132717,7 +132672,9 @@
        "dec": 1.612,
        "ev": 0.006,
        "gid": "2026-11-12-CHA-at-PHX",
-       "game": "CHA @ PHX"
+       "game": "CHA @ PHX",
+       "result": "won",
+       "actual": 0
       },
       {
        "kind": "prop",
@@ -132731,7 +132688,9 @@
        "dec": 1.852,
        "ev": 0.046,
        "gid": "2026-11-12-CHA-at-PHX",
-       "game": "CHA @ PHX"
+       "game": "CHA @ PHX",
+       "result": "won",
+       "actual": 2
       }
      ],
      "n": 2,
@@ -132741,7 +132700,8 @@
      "dec": 2.99,
      "fair": 2.84,
      "ev": 0.053,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "won"
     },
     {
      "legs": [
@@ -132757,7 +132717,9 @@
        "dec": 1.759,
        "ev": 0.042,
        "gid": "2026-11-12-CHA-at-PHX",
-       "game": "CHA @ PHX"
+       "game": "CHA @ PHX",
+       "result": "won",
+       "actual": 4
       },
       {
        "kind": "prop",
@@ -132771,7 +132733,9 @@
        "dec": 1.771,
        "ev": -0.0,
        "gid": "2026-11-12-CHA-at-PHX",
-       "game": "CHA @ PHX"
+       "game": "CHA @ PHX",
+       "result": "won",
+       "actual": 3
       },
       {
        "kind": "prop",
@@ -132785,7 +132749,9 @@
        "dec": 1.819,
        "ev": 0.018,
        "gid": "2026-11-12-CHA-at-PHX",
-       "game": "CHA @ PHX"
+       "game": "CHA @ PHX",
+       "result": "lost",
+       "actual": 6
       }
      ],
      "n": 3,
@@ -132795,7 +132761,8 @@
      "dec": 5.67,
      "fair": 5.43,
      "ev": 0.043,
-     "type": "sgp"
+     "type": "sgp",
+     "result": "lost"
     }
    ],
    "model_picks": [
@@ -132822,7 +132789,8 @@
        3
       ]
      },
-     "mean": 19.7
+     "mean": 19.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132847,7 +132815,8 @@
        2
       ]
      },
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132872,7 +132841,8 @@
        3
       ]
      },
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132897,7 +132867,8 @@
        0
       ]
      },
-     "mean": 13.3
+     "mean": 13.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -132922,7 +132893,8 @@
        2
       ]
      },
-     "mean": 5.7
+     "mean": 5.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -132947,7 +132919,8 @@
        3
       ]
      },
-     "mean": 12.0
+     "mean": 12.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -132972,7 +132945,8 @@
        2
       ]
      },
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -132997,7 +132971,8 @@
        3
       ]
      },
-     "mean": 9.6
+     "mean": 9.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133022,7 +132997,8 @@
        2
       ]
      },
-     "mean": 14.5
+     "mean": 14.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133047,7 +133023,8 @@
        0
       ]
      },
-     "mean": 6.5
+     "mean": 6.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133072,7 +133049,8 @@
        1
       ]
      },
-     "mean": 3.4
+     "mean": 3.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133097,7 +133075,8 @@
        2
       ]
      },
-     "mean": 6.7
+     "mean": 6.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133122,7 +133101,8 @@
        2
       ]
      },
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133147,7 +133127,8 @@
        0
       ]
      },
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133171,7 +133152,8 @@
        0,
        3
       ]
-     }
+     },
+     "result": "lost"
     }
    ],
    "all_bets": [
@@ -133218,7 +133200,8 @@
       15.5,
       1.792
      ],
-     "mean": 13.9
+     "mean": 13.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133263,7 +133246,8 @@
       7.5,
       1.792
      ],
-     "mean": 6.0
+     "mean": 6.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133308,7 +133292,8 @@
       13.5,
       1.864
      ],
-     "mean": 17.3
+     "mean": 17.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133353,7 +133338,8 @@
       2.5,
       1.522
      ],
-     "mean": 1.7
+     "mean": 1.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133399,6 +133385,7 @@
       1.955
      ],
      "mean": 3.9,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -133447,7 +133434,8 @@
       3.5,
       1.569
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133492,7 +133480,8 @@
       8.5,
       2.048
      ],
-     "mean": 9.7
+     "mean": 9.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133536,7 +133525,8 @@
       5.5,
       1.955
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133580,7 +133570,8 @@
       6.5,
       1.81
      ],
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133625,7 +133616,8 @@
       14.5,
       1.725
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133669,7 +133661,8 @@
       4.5,
       1.737
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133715,6 +133708,7 @@
       1.612
      ],
      "mean": 0.6,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -133763,7 +133757,8 @@
       5.5,
       1.792
      ],
-     "mean": 5.0
+     "mean": 5.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -133807,7 +133802,8 @@
       14.5,
       1.904
      ],
-     "mean": 14.8
+     "mean": 14.8,
+     "result": "won"
     },
     {
      "kind": "total",
@@ -133838,7 +133834,8 @@
      "open": [
       214.5,
       1.926
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -133883,6 +133880,7 @@
       1.833
      ],
      "mean": 1.8,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -133930,7 +133928,8 @@
       4.5,
       1.92
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "ml",
@@ -133961,7 +133960,8 @@
      "open": [
       null,
       3.002
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134006,6 +134006,7 @@
       1.759
      ],
      "mean": 1.9,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -134053,7 +134054,8 @@
       0.5,
       2.296
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134097,7 +134099,8 @@
       1.5,
       1.595
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134141,7 +134144,8 @@
       1.5,
       2.149
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134185,7 +134189,8 @@
       6.5,
       1.844
      ],
-     "mean": 5.6
+     "mean": 5.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134229,7 +134234,8 @@
       8.5,
       1.922
      ],
-     "mean": 9.7
+     "mean": 9.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134273,7 +134279,8 @@
       3.5,
       1.813
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -134304,7 +134311,8 @@
      "open": [
       6.5,
       1.893
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134348,7 +134356,8 @@
       1.5,
       2.016
      ],
-     "mean": 1.5
+     "mean": 1.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134392,7 +134401,8 @@
       8.5,
       1.653
      ],
-     "mean": 8.2
+     "mean": 8.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134429,7 +134439,8 @@
       28.5,
       1.876
      ],
-     "mean": 33.7
+     "mean": 33.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134466,7 +134477,8 @@
       5.5,
       1.913
      ],
-     "mean": 5.0
+     "mean": 5.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134503,7 +134515,8 @@
       21.5,
       1.912
      ],
-     "mean": 20.1
+     "mean": 20.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134540,7 +134553,8 @@
       16.5,
       1.835
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134584,7 +134598,8 @@
       30.5,
       1.789
      ],
-     "mean": 36.2
+     "mean": 36.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134628,7 +134643,8 @@
       1.5,
       1.754
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134672,7 +134688,8 @@
       4.5,
       1.771
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134716,7 +134733,8 @@
       1.5,
       1.955
      ],
-     "mean": 1.5
+     "mean": 1.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134760,7 +134778,8 @@
       24.5,
       1.864
      ],
-     "mean": 23.0
+     "mean": 23.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134804,7 +134823,8 @@
       14.5,
       2.006
      ],
-     "mean": 16.5
+     "mean": 16.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134841,7 +134861,8 @@
       7.5,
       1.706
      ],
-     "mean": 9.4
+     "mean": 9.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134885,7 +134906,8 @@
       20.5,
       1.852
      ],
-     "mean": 24.1
+     "mean": 24.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -134929,7 +134951,8 @@
       8.5,
       1.792
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -134973,7 +134996,8 @@
       1.5,
       1.598
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135010,7 +135034,8 @@
       7.5,
       1.785
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135047,7 +135072,8 @@
       11.5,
       1.943
      ],
-     "mean": 13.6
+     "mean": 13.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135084,7 +135110,8 @@
       17.5,
       1.868
      ],
-     "mean": 16.8
+     "mean": 16.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135121,7 +135148,8 @@
       18.5,
       1.84
      ],
-     "mean": 17.6
+     "mean": 17.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135158,7 +135186,8 @@
       17.5,
       1.876
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135202,7 +135231,8 @@
       3.5,
       1.904
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135246,7 +135276,8 @@
       17.5,
       1.856
      ],
-     "mean": 21.2
+     "mean": 21.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135283,7 +135314,8 @@
       22.5,
       1.852
      ],
-     "mean": 26.5
+     "mean": 26.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135327,7 +135359,8 @@
       6.5,
       1.881
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135371,7 +135404,8 @@
       20.5,
       1.868
      ],
-     "mean": 19.8
+     "mean": 19.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135408,7 +135442,8 @@
       11.5,
       1.72
      ],
-     "mean": 10.6
+     "mean": 10.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135445,7 +135480,8 @@
       21.5,
       1.911
      ],
-     "mean": 24.5
+     "mean": 24.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135489,7 +135525,8 @@
       3.5,
       2.046
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135526,7 +135563,8 @@
       10.5,
       1.827
      ],
-     "mean": 12.7
+     "mean": 12.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135563,7 +135601,8 @@
       10.5,
       1.766
      ],
-     "mean": 12.2
+     "mean": 12.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135607,7 +135646,8 @@
       1.5,
       2.114
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135651,7 +135691,8 @@
       8.5,
       1.814
      ],
-     "mean": 8.5
+     "mean": 8.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135695,7 +135736,8 @@
       1.5,
       1.783
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135732,7 +135774,8 @@
       17.5,
       1.924
      ],
-     "mean": 18.1
+     "mean": 18.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135776,7 +135819,8 @@
       1.5,
       2.064
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135813,7 +135857,8 @@
       9.5,
       1.778
      ],
-     "mean": 9.0
+     "mean": 9.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135857,7 +135902,8 @@
       1.5,
       2.231
      ],
-     "mean": 2.0
+     "mean": 2.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135894,7 +135940,8 @@
       16.5,
       1.872
      ],
-     "mean": 16.9
+     "mean": 16.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -135938,7 +135985,8 @@
       0.5,
       1.203
      ],
-     "mean": 0.2
+     "mean": 0.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -135982,7 +136030,8 @@
       3.5,
       1.996
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136026,7 +136075,8 @@
       3.5,
       2.093
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136070,7 +136120,8 @@
       20.5,
       1.868
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136114,7 +136165,8 @@
       2.5,
       1.606
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136151,7 +136203,8 @@
       10.5,
       1.816
      ],
-     "mean": 10.4
+     "mean": 10.4,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136195,7 +136248,8 @@
       0.5,
       2.644
      ],
-     "mean": 1.0
+     "mean": 1.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136239,7 +136293,8 @@
       3.5,
       1.705
      ],
-     "mean": 4.3
+     "mean": 4.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136276,7 +136331,8 @@
       22.5,
       1.93
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136320,7 +136376,8 @@
       25.5,
       1.881
      ],
-     "mean": 28.0
+     "mean": 28.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136357,7 +136414,8 @@
       5.5,
       1.668
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136401,7 +136459,8 @@
       7.5,
       1.653
      ],
-     "mean": 7.0
+     "mean": 7.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136445,7 +136504,8 @@
       32.5,
       1.86
      ],
-     "mean": 35.2
+     "mean": 35.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136482,7 +136542,8 @@
       16.5,
       1.886
      ],
-     "mean": 17.1
+     "mean": 17.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136519,7 +136580,8 @@
       6.5,
       1.964
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136563,7 +136625,8 @@
       19.5,
       1.725
      ],
-     "mean": 24.0
+     "mean": 24.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136600,7 +136663,8 @@
       6.5,
       1.894
      ],
-     "mean": 6.7
+     "mean": 6.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136644,7 +136708,8 @@
       3.5,
       1.824
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136688,7 +136753,8 @@
       0.5,
       2.104
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136732,7 +136798,8 @@
       24.5,
       1.873
      ],
-     "mean": 25.8
+     "mean": 25.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136769,7 +136836,8 @@
       29.5,
       1.833
      ],
-     "mean": 32.0
+     "mean": 32.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -136813,7 +136881,8 @@
       5.5,
       1.926
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136857,7 +136926,8 @@
       14.5,
       1.865
      ],
-     "mean": 15.0
+     "mean": 15.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136901,7 +136971,8 @@
       3.5,
       1.625
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136945,7 +137016,8 @@
       2.5,
       1.852
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -136982,7 +137054,8 @@
       6.5,
       1.76
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137019,7 +137092,8 @@
       11.5,
       1.819
      ],
-     "mean": 12.6
+     "mean": 12.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137063,7 +137137,8 @@
       1.5,
       1.681
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137100,7 +137175,8 @@
       10.5,
       1.775
      ],
-     "mean": 11.5
+     "mean": 11.5,
+     "result": "won"
     },
     {
      "kind": "ml",
@@ -137131,7 +137207,8 @@
      "open": [
       null,
       1.409
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137168,7 +137245,8 @@
       27.5,
       1.868
      ],
-     "mean": 29.1
+     "mean": 29.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137212,7 +137290,8 @@
       19.5,
       1.824
      ],
-     "mean": 19.9
+     "mean": 19.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137249,7 +137328,8 @@
       17.5,
       1.831
      ],
-     "mean": 18.0
+     "mean": 18.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137286,7 +137366,8 @@
       17.5,
       1.873
      ],
-     "mean": 18.0
+     "mean": 18.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137330,7 +137411,8 @@
       19.5,
       1.881
      ],
-     "mean": 19.9
+     "mean": 19.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137367,7 +137449,8 @@
       27.5,
       1.836
      ],
-     "mean": 29.1
+     "mean": 29.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137411,7 +137494,8 @@
       2.5,
       1.852
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137448,7 +137532,8 @@
       11.5,
       1.886
      ],
-     "mean": 12.6
+     "mean": 12.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137485,7 +137570,8 @@
       10.5,
       1.936
      ],
-     "mean": 11.5
+     "mean": 11.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137529,7 +137615,8 @@
       1.5,
       2.062
      ],
-     "mean": 1.6
+     "mean": 1.6,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137566,7 +137653,8 @@
       6.5,
       1.954
      ],
-     "mean": 6.6
+     "mean": 6.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137610,7 +137698,8 @@
       14.5,
       1.839
      ],
-     "mean": 15.0
+     "mean": 15.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137654,7 +137743,8 @@
       24.5,
       1.831
      ],
-     "mean": 25.8
+     "mean": 25.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137691,7 +137781,8 @@
       29.5,
       1.872
      ],
-     "mean": 32.0
+     "mean": 32.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137735,7 +137826,8 @@
       3.5,
       2.152
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137779,7 +137871,8 @@
       0.5,
       1.654
      ],
-     "mean": 0.8
+     "mean": 0.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137823,7 +137916,8 @@
       5.5,
       1.783
      ],
-     "mean": 6.3
+     "mean": 6.3,
+     "result": "won"
     },
     {
      "kind": "spread",
@@ -137854,7 +137948,8 @@
      "open": [
       -6.5,
       1.926
-     ]
+     ],
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -137898,7 +137993,8 @@
       3.5,
       1.881
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137935,7 +138031,8 @@
       6.5,
       1.811
      ],
-     "mean": 6.7
+     "mean": 6.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -137979,7 +138076,8 @@
       0.5,
       1.425
      ],
-     "mean": 1.0
+     "mean": 1.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138023,7 +138121,8 @@
       3.5,
       1.553
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138060,7 +138159,8 @@
       6.5,
       1.752
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138104,7 +138204,8 @@
       1.5,
       1.583
      ],
-     "mean": 2.0
+     "mean": 2.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138141,7 +138242,8 @@
       16.5,
       1.819
      ],
-     "mean": 17.1
+     "mean": 17.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138185,7 +138287,8 @@
       32.5,
       1.844
      ],
-     "mean": 35.2
+     "mean": 35.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138222,7 +138325,8 @@
       22.5,
       1.78
      ],
-     "mean": 24.7
+     "mean": 24.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138266,7 +138370,8 @@
       25.5,
       1.824
      ],
-     "mean": 28.0
+     "mean": 28.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138310,7 +138415,8 @@
       3.5,
       1.66
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138354,7 +138460,8 @@
       3.5,
       1.727
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138398,7 +138505,8 @@
       6.5,
       1.829
      ],
-     "mean": 7.0
+     "mean": 7.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138442,7 +138550,8 @@
       1.5,
       1.679
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138486,7 +138595,8 @@
       20.5,
       1.836
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138523,7 +138633,8 @@
       16.5,
       1.832
      ],
-     "mean": 16.9
+     "mean": 16.9,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138560,7 +138671,8 @@
       10.5,
       1.889
      ],
-     "mean": 10.4
+     "mean": 10.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138597,7 +138709,8 @@
       5.5,
       2.082
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138634,7 +138747,8 @@
       17.5,
       1.785
      ],
-     "mean": 18.1
+     "mean": 18.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138678,7 +138792,8 @@
       1.5,
       1.647
      ],
-     "mean": 1.8
+     "mean": 1.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138722,7 +138837,8 @@
       3.5,
       2.027
      ],
-     "mean": 4.3
+     "mean": 4.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138766,7 +138882,8 @@
       3.5,
       1.691
      ],
-     "mean": 3.9
+     "mean": 3.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138803,7 +138920,8 @@
       9.5,
       1.932
      ],
-     "mean": 9.0
+     "mean": 9.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138847,7 +138965,8 @@
       7.5,
       1.668
      ],
-     "mean": 8.5
+     "mean": 8.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138884,7 +139003,8 @@
       21.5,
       1.796
      ],
-     "mean": 24.5
+     "mean": 24.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -138921,7 +139041,8 @@
       10.5,
       1.878
      ],
-     "mean": 12.7
+     "mean": 12.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -138965,7 +139086,8 @@
       1.5,
       1.926
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139002,7 +139124,8 @@
       10.5,
       1.946
      ],
-     "mean": 12.2
+     "mean": 12.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139046,7 +139169,8 @@
       20.5,
       1.836
      ],
-     "mean": 19.8
+     "mean": 19.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139083,7 +139207,8 @@
       22.5,
       1.852
      ],
-     "mean": 26.5
+     "mean": 26.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139120,7 +139245,8 @@
       11.5,
       1.769
      ],
-     "mean": 13.6
+     "mean": 13.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139164,7 +139290,8 @@
       2.5,
       1.539
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139201,7 +139328,8 @@
       11.5,
       2.006
      ],
-     "mean": 10.6
+     "mean": 10.6,
+     "result": "lost"
     },
     {
      "kind": "total",
@@ -139232,7 +139360,8 @@
      "open": [
       214.5,
       1.893
-     ]
+     ],
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139276,7 +139405,8 @@
       17.5,
       1.848
      ],
-     "mean": 21.2
+     "mean": 21.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139320,7 +139450,8 @@
       6.5,
       1.824
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139364,7 +139495,8 @@
       14.5,
       1.72
      ],
-     "mean": 16.5
+     "mean": 16.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139408,7 +139540,8 @@
       3.5,
       1.802
      ],
-     "mean": 3.3
+     "mean": 3.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139445,7 +139578,8 @@
       17.5,
       1.828
      ],
-     "mean": 20.7
+     "mean": 20.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139482,7 +139616,8 @@
       17.5,
       1.836
      ],
-     "mean": 16.8
+     "mean": 16.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139526,7 +139661,8 @@
       9.5,
       1.615
      ],
-     "mean": 9.5
+     "mean": 9.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139563,7 +139699,8 @@
       18.5,
       1.864
      ],
-     "mean": 17.6
+     "mean": 17.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139607,7 +139744,8 @@
       1.5,
       1.759
      ],
-     "mean": 1.5
+     "mean": 1.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139644,7 +139782,8 @@
       7.5,
       1.924
      ],
-     "mean": 6.8
+     "mean": 6.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139688,7 +139827,8 @@
       20.5,
       1.852
      ],
-     "mean": 24.1
+     "mean": 24.1,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139732,7 +139872,8 @@
       24.5,
       1.839
      ],
-     "mean": 23.0
+     "mean": 23.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139776,7 +139917,8 @@
       0.5,
       1.552
      ],
-     "mean": 0.7
+     "mean": 0.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139820,7 +139962,8 @@
       1.5,
       1.712
      ],
-     "mean": 1.5
+     "mean": 1.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139857,7 +140000,8 @@
       21.5,
       1.795
      ],
-     "mean": 20.1
+     "mean": 20.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139894,7 +140038,8 @@
       5.5,
       1.795
      ],
-     "mean": 5.0
+     "mean": 5.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -139938,7 +140083,8 @@
       3.5,
       1.539
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -139982,7 +140128,8 @@
       30.5,
       1.919
      ],
-     "mean": 36.2
+     "mean": 36.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140019,7 +140166,8 @@
       7.5,
       2.025
      ],
-     "mean": 9.4
+     "mean": 9.4,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140063,7 +140211,8 @@
       1.5,
       1.961
      ],
-     "mean": 1.3
+     "mean": 1.3,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140100,7 +140249,8 @@
       28.5,
       1.828
      ],
-     "mean": 33.7
+     "mean": 33.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140144,7 +140294,8 @@
       4.5,
       1.941
      ],
-     "mean": 6.1
+     "mean": 6.1,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140188,7 +140339,8 @@
       1.5,
       1.627
      ],
-     "mean": 2.2
+     "mean": 2.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140225,7 +140377,8 @@
       16.5,
       1.869
      ],
-     "mean": 20.8
+     "mean": 20.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140269,7 +140422,8 @@
       6.5,
       1.86
      ],
-     "mean": 5.6
+     "mean": 5.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140313,7 +140467,8 @@
       7.5,
       1.792
      ],
-     "mean": 8.2
+     "mean": 8.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140357,7 +140512,8 @@
       3.5,
       1.892
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140401,7 +140557,8 @@
       0.5,
       4.02
      ],
-     "mean": 0.2
+     "mean": 0.2,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140446,6 +140603,7 @@
       1.955
      ],
      "mean": 1.9,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -140493,7 +140651,8 @@
       8.5,
       1.786
      ],
-     "mean": 9.7
+     "mean": 9.7,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140537,7 +140696,8 @@
       4.5,
       1.788
      ],
-     "mean": 3.5
+     "mean": 3.5,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140581,7 +140741,8 @@
       14.5,
       1.802
      ],
-     "mean": 14.8
+     "mean": 14.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140626,6 +140787,7 @@
       1.871
      ],
      "mean": 1.8,
+     "result": "lost",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -140673,7 +140835,8 @@
       1.5,
       2.208
      ],
-     "mean": 0.9
+     "mean": 0.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140717,7 +140880,8 @@
       5.5,
       1.759
      ],
-     "mean": 4.0
+     "mean": 4.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140761,7 +140925,8 @@
       13.5,
       1.757
      ],
-     "mean": 14.2
+     "mean": 14.2,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140805,7 +140970,8 @@
       6.5,
       1.896
      ],
-     "mean": 4.6
+     "mean": 4.6,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140849,7 +141015,8 @@
       2.5,
       1.484
      ],
-     "mean": 2.5
+     "mean": 2.5,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140893,7 +141060,8 @@
       4.5,
       1.983
      ],
-     "mean": 2.9
+     "mean": 2.9,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -140937,7 +141105,8 @@
       21.5,
       1.799
      ],
-     "mean": 24.0
+     "mean": 24.0,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -140981,7 +141150,8 @@
       4.5,
       1.598
      ],
-     "mean": 5.0
+     "mean": 5.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -141026,6 +141196,7 @@
       2.176
      ],
      "mean": 0.6,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -141073,7 +141244,8 @@
       2.5,
       1.557
      ],
-     "mean": 2.8
+     "mean": 2.8,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -141118,6 +141290,7 @@
       1.759
      ],
      "mean": 3.9,
+     "result": "won",
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -141165,7 +141338,8 @@
       8.5,
       1.69
      ],
-     "mean": 9.7
+     "mean": 9.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -141209,7 +141383,8 @@
       6.5,
       1.917
      ],
-     "mean": 6.0
+     "mean": 6.0,
+     "result": "lost"
     },
     {
      "kind": "prop",
@@ -141253,7 +141428,8 @@
       1.5,
       1.539
      ],
-     "mean": 1.7
+     "mean": 1.7,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -141297,7 +141473,8 @@
       13.5,
       1.84
      ],
-     "mean": 17.3
+     "mean": 17.3,
+     "result": "won"
     },
     {
      "kind": "prop",
@@ -141341,269 +141518,21 @@
       14.5,
       1.792
      ],
-     "mean": 13.9
+     "mean": 13.9,
+     "result": "lost"
     }
    ],
-   "wo": {
-    "CHA": {
-     "model": {
-      "Naz Reid": [
-       [
-        "Grayson Allen",
-        4.7,
-        4.5
-       ],
-       [
-        "Coby White",
-        3.6,
-        3.8
-       ],
-       [
-        "Ryan Kalkbrenner",
-        2.2,
-        4.0
-       ]
-      ],
-      "Grayson Allen": [
-       [
-        "Naz Reid",
-        4.1,
-        3.6
-       ],
-       [
-        "Coby White",
-        3.3,
-        3.4
-       ],
-       [
-        "Ryan Kalkbrenner",
-        2.1,
-        3.5
-       ]
-      ],
-      "Moussa Diabaté": [
-       [
-        "Grayson Allen",
-        1.5,
-        3.5
-       ],
-       [
-        "Naz Reid",
-        1.2,
-        3.3
-       ],
-       [
-        "Coby White",
-        1.1,
-        2.6
-       ]
-      ],
-      "Sion James": [
-       [
-        "Grayson Allen",
-        1.6,
-        3.9
-       ],
-       [
-        "Coby White",
-        1.4,
-        3.0
-       ],
-       [
-        "Naz Reid",
-        1.3,
-        3.5
-       ]
-      ],
-      "Royce O'Neale": [
-       [
-        "Grayson Allen",
-        1.4,
-        2.8
-       ],
-       [
-        "Naz Reid",
-        1.2,
-        2.6
-       ],
-       [
-        "Coby White",
-        1.1,
-        2.1
-       ]
-      ],
-      "Ryan Kalkbrenner": [
-       [
-        "Grayson Allen",
-        1.8,
-        2.8
-       ],
-       [
-        "Naz Reid",
-        1.7,
-        2.6
-       ],
-       [
-        "Coby White",
-        1.4,
-        2.1
-       ]
-      ],
-      "Coby White": [
-       [
-        "Naz Reid",
-        2.7,
-        2.3
-       ],
-       [
-        "Grayson Allen",
-        2.6,
-        2.5
-       ],
-       [
-        "Ryan Kalkbrenner",
-        1.2,
-        2.1
-       ]
-      ]
-     },
-     "real": {
-      "Dennis Schröder": [
-       [
-        "Tidjane Salaün",
-        8.8,
-        2,
-        6
-       ],
-       [
-        "Liam McNeeley",
-        6.5,
-        2,
-        2
-       ],
-       [
-        "Naz Reid",
-        4.2,
-        2,
-        6
-       ]
-      ]
-     },
-     "doubt": [
-      [
-       "Moussa Diabaté",
-       0.85
-      ]
-     ]
+   "result": {
+    "score": {
+     "CHA": 96,
+     "PHX": 101
     },
-    "PHX": {
-     "model": {
-      "Devin Booker": [
-       [
-        "Jalen Green",
-        4.5,
-        4.5
-       ],
-       [
-        "Dillon Brooks",
-        3.9,
-        4.6
-       ],
-       [
-        "Miles Bridges",
-        3.6,
-        4.5
-       ]
-      ],
-      "Miles Bridges": [
-       [
-        "Devin Booker",
-        3.0,
-        3.7
-       ],
-       [
-        "Jalen Green",
-        2.5,
-        3.8
-       ],
-       [
-        "Dillon Brooks",
-        2.2,
-        3.8
-       ]
-      ],
-      "Jalen Green": [
-       [
-        "Devin Booker",
-        3.8,
-        3.7
-       ],
-       [
-        "Dillon Brooks",
-        2.6,
-        3.8
-       ],
-       [
-        "Miles Bridges",
-        2.4,
-        3.7
-       ]
-      ],
-      "Dillon Brooks": [
-       [
-        "Devin Booker",
-        3.2,
-        3.6
-       ],
-       [
-        "Jalen Green",
-        2.6,
-        3.7
-       ],
-       [
-        "Miles Bridges",
-        2.1,
-        3.7
-       ]
-      ],
-      "Collin Gillespie": [
-       [
-        "Devin Booker",
-        2.1,
-        3.0
-       ],
-       [
-        "Jalen Green",
-        1.7,
-        3.0
-       ],
-       [
-        "Dillon Brooks",
-        1.5,
-        3.0
-       ]
-      ],
-      "Oso Ighodaro": [
-       [
-        "Devin Booker",
-        0.9,
-        2.8
-       ],
-       [
-        "Jalen Green",
-        0.9,
-        2.7
-       ],
-       [
-        "Miles Bridges",
-        0.7,
-        2.8
-       ]
-      ]
-     },
-     "real": {},
-     "doubt": []
-    }
+    "ot": 0,
+    "winner": "PHX",
+    "winner_ok": true,
+    "picks_won": 3,
+    "picks_lost": 0,
+    "units": 2.52
    }
   }
  ]
