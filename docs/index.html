@@ -915,6 +915,9 @@ table.gb-t tr.me td:first-child { background: var(--accent-soft) }
 .pcd.big .pcd-ln { font-size: 34px } .pcd.big .pcd-odd b { font-size: 30px }
 .potd .pcd { max-width: 640px }
 .potd-rec { margin: 0; font-size: 13px }
+.cup-grps { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px }
+.cup-grp table { width: 100%; min-width: 0 } .cup-grp th, .cup-grp td { white-space: nowrap; padding: 7px 8px } .cup-grp th.pk { font-family: "Bebas Neue", var(--display); font-size: 17px; letter-spacing: .05em; font-weight: 400 }
+.cup-grp tr.lead td { background: rgba(226,183,90,.10) } .cup-grp tr.lead td.pk { box-shadow: inset 3px 0 0 #e2b75a }
 @media (min-width: 760px) { .potd .pcd.big { max-width: none; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 24px }
   .potd .pcd.big > .pcd-h, .potd .pcd.big > .pcd-pick, .potd .pcd.big > .pcd-f, .potd .pcd.big > .bj-warn { grid-column: 1 } .potd .pcd.big > .pcd-viz { grid-column: 2; grid-row: 1 / span 3 } .potd .pcd.big > .pcd-stats { grid-column: 2 } }
 @media (max-width: 640px) {
@@ -1537,7 +1540,7 @@ function renderIndex(scope = "reg") {
   const picks = allBets.filter(b => b.value);
   const mps = dayModelPicks(todays);
   const older = INDEX.games.filter(g => g.date !== DAY && inScope(g, scope));
-  const hist = scope === "cup" ? [] : INDEX.history || [];
+  const hist = INDEX.history || [];   // el récord del modelo es uno solo: se ve igual en Liga y en NBA Cup
   const tot = hist.reduce((t, x) => ({ w: t.w + x.picks_won, l: t.l + x.picks_lost, u: t.u + x.units, g: t.g + x.games, ok: t.ok + x.winners_ok,
     sw: t.sw + (x.sgp_won || 0), sl: t.sl + (x.sgp_lost || 0), cw: t.cw + (x.cross_won || 0), cl: t.cl + (x.cross_lost || 0),
     vb: t.vb + (x.clv_beat || 0), vs: t.vs + (x.clv_same || 0), vl: t.vl + (x.clv_lost || 0) }), { w: 0, l: 0, u: 0, g: 0, ok: 0, sw: 0, sl: 0, cw: 0, cl: 0, vb: 0, vs: 0, vl: 0 });
@@ -1585,7 +1588,8 @@ function renderIndex(scope = "reg") {
   </section>`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
-    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + olderSection(older, true);
+    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupTable() + cupStudy() + olderSection(older, true);
+    fillLgRecs(); addFolds();
     return;
   }
   $("#app").innerHTML = `
@@ -1593,7 +1597,7 @@ function renderIndex(scope = "reg") {
   ${cup ? CUP_HERO(todays.length) : ""}
   ${updatesStrip()}
   ${bajasStrip()}
-  ${cup ? "" : potdCard()}
+  ${potdCard(scope)}
   <section class="section">
     <span class="eyebrow">${cup ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>Picks recomendados por el sistema ${qh("ev", "picks con valor y EV")}</h2>
@@ -1621,12 +1625,13 @@ function renderIndex(scope = "reg") {
   </section>` : ""}
   ${todays.some(g => !g.result) ? `<p class="mk-cta"><button type="button" class="btn ghost" data-mkpick>+ Crea tu propio pick</button><span class="muted">Cualquier jugador o mercado de equipo de los partidos de hoy, con la línea y la cuota de tu casa, para sumarlo a tu combinada.</span></p>` : ""}
   ${parlaySection(todays, thr)}
-  ${cup ? "" : dreamSection()}
+  ${dreamSection(scope)}
   ${cup ? cupStudy() : ""}
   <section class="section">
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
+  ${cup ? cupTable() : ""}
   ${histHtml}
   ${olderSection(older, cup)}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
@@ -1684,6 +1689,7 @@ function renderIndex(scope = "reg") {
   if ($("#picks-mp")) bindLinks($("#picks-mp"));
   bindParlays(todays, thr);
   addFolds();
+  if (cup) fillLgRecs();
 }
 
 // Parlays recomendados (build_site.py): mismo partido = prob. conjunta contada en las simulaciones
@@ -1887,14 +1893,16 @@ function dreamPast(d, x, uTxt) {
         <div class="lp"><span>${pct(l.p, 0)} · @ ${l.dec.toFixed(2)}</span>${resPill(l.result)}</div></li>`).join("")}</ol>
     </div></details>`;
 }
-function dreamSection() {
-  const all = INDEX.dream || {}, pl = all[DAY], thr = INDEX.value_ev;
+// El soñador es uno por jornada y va en la pestaña de sus patas: Copa, Liga o ambas si mezcla partidos (13-nov)
+const dreamIn = (pl, scope) => !pl || !(pl.legs || []).length || pl.legs.some(l => { const g = INDEX.games.find(x => x.id === l.gid); return !g || inScope(g, scope); });
+function dreamSection(scope = "reg") {
+  const all0 = INDEX.dream || {}, all = Object.fromEntries(Object.entries(all0).filter(([, x]) => dreamIn(x, scope))), pl = all[DAY], thr = INDEX.value_ev;
   const done = Object.keys(all).sort().reverse().filter(d => all[d].units != null && all[d].result);
   if (!pl && !done.length) return "";
   const w = done.filter(d => all[d].result === "won").length, l = done.filter(d => all[d].result === "lost").length;
   const u = done.reduce((s, d) => s + all[d].units, 0), uTxt = x => `${x >= 0 ? "+" : ""}${x.toFixed(2)} u`;
   return `<section class="section" id="sonador">
-    <span class="eyebrow">Jornada ${esc(DAY)}</span>
+    <span class="eyebrow">${scope === "cup" ? "NBA Cup · " : ""}Jornada ${esc(DAY)}</span>
     <h2>Parlay soñador</h2>
     <p class="lede">Una combinada larga por día, para soñar: las líneas que el modelo ve más probables de la jornada, juntas hasta una cuota total entre 50 y 200. Entre partidos las patas son independientes; del mismo partido van como mucho 2 y solo si en las simulaciones no se estorban. Es muy difícil de acertar: apuesta poco. Si tu casa no ofrece alguna pata, toca <b>No está en mi casa</b> y elige uno de los reemplazos: cumplen las mismas reglas y la cuota se recalcula.</p>
     ${pl ? `<div class="pl-list">${dreamCard(pl, thr)}</div>` : `<div class="panel"><div class="empty">Hoy ninguna combinación de patas con buena probabilidad llega a cuota 50.</div></div>`}
@@ -2066,6 +2074,43 @@ function cupSection(d) {
     <div class="panel tbl-wrap"><table class="stack"><thead><tr><th>Equipo</th><th class="r">Copa G–P</th><th class="r">Anota (vs liga)</th><th class="r">Recibe (vs liga)</th><th class="r">Over–Under</th></tr></thead><tbody>${rows}</tbody></table></div>
     <p class="foot">Puntos por partido en sus 4 partidos de grupo; entre paréntesis, la diferencia con sus partidos de liga regular del mismo tramo de la temporada. Over–Under frente a la línea de cierre.</p>` : ""}
   </section>`;
+}
+// Récord en la Copa (13-nov, pedido de Nicolas): G–P de cada equipo en sus partidos de NBA Cup ya jugados de esta
+// temporada (INDEX.games con "competition": "cup"), por grupo (INDEX.cup.groups, de cup/<temporada>.json). Los partidos
+// de grupos también cuentan en el récord de liga, que se rellena desde data/league.json.
+function cupRecs() {
+  const R = {};
+  INDEX.games.filter(g => isCup(g) && g.result && g.result.score).forEach(g => {
+    const s = g.result.score;
+    [[g.away, g.home], [g.home, g.away]].forEach(([t, o]) => {
+      const x = R[t] || (R[t] = { w: 0, l: 0, pf: 0, pa: 0 });
+      s[t] > s[o] ? x.w++ : x.l++; x.pf += s[t]; x.pa += s[o];
+    });
+  });
+  return R;
+}
+function cupTable() {
+  const G = INDEX.cup && INDEX.cup.groups; if (!G) return "";
+  const R = cupRecs(), today = new Set(INDEX.games.filter(g => g.date === DAY && isCup(g)).flatMap(g => [g.away, g.home]));
+  const r0 = t => R[t] || { w: 0, l: 0, pf: 0, pa: 0 }, dif = x => x.pf - x.pa;
+  const grp = ([name, ts]) => {
+    const rows = [...ts].sort((a, b) => r0(b).w - r0(a).w || r0(a).l - r0(b).l || dif(r0(b)) - dif(r0(a)));
+    return `<div class="panel tbl-wrap cup-grp"><table><thead><tr><th class="pk">Grupo ${esc(name)}</th><th class="r">Copa</th><th class="r" title="Diferencia de puntos en la Copa">Dif.</th><th class="r" title="Récord total de la temporada regular (los partidos de grupos también cuentan)">Liga</th></tr></thead><tbody>
+      ${rows.map((t, i) => { const x = r0(t), d = dif(x); return `<tr${i === 0 && x.w + x.l ? ' class="lead"' : ""}><td class="head pk">${badge(t)}${today.has(t) ? ` <span class="pill flat">hoy</span>` : ""}</td><td class="r num"><b>${x.w}–${x.l}</b></td><td class="r num ${d > 0 ? "pos" : d < 0 ? "neg" : ""}">${x.w + x.l ? (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d) : "—"}</td><td class="r num" data-lgrec="${t}">…</td></tr>`; }).join("")}
+    </tbody></table></div>`;
+  };
+  return `<section class="section" id="cup-rec">
+    <span class="eyebrow">NBA Cup${INDEX.cup.season ? " " + esc(INDEX.cup.season) : ""} · fase de grupos</span>
+    <h2>Récord en la Copa</h2>
+    <p class="lede">Victorias–derrotas de cada equipo en sus partidos de Copa, por grupo, con la diferencia de puntos y su récord de liga (que ya incluye esos partidos). Pasan a cuartos el primero de cada grupo y los dos mejores segundos de cada conferencia.</p>
+    <div class="cup-grps">${Object.entries(G).map(grp).join("")}</div>
+  </section>`;
+}
+// la columna Liga de las tablas de Copa sale de data/league.json (se carga aparte)
+async function fillLgRecs() {
+  const cells = document.querySelectorAll("[data-lgrec]"); if (!cells.length) return;
+  if (!LEAGUE) LEAGUE = await getJSON("data/league.json").catch(() => null);
+  document.querySelectorAll("[data-lgrec]").forEach(c => { const T = LEAGUE && LEAGUE.teams[c.dataset.lgrec]; c.textContent = T ? recTxt2(T.rec) : "—"; });
 }
 function cupStudy() {
   const C = INDEX.cup; if (!C) return "";
@@ -3580,17 +3625,17 @@ function lgTeams(today) {
   const T = LEAGUE.teams, ids = Object.keys(T).sort((a, b) => (T[b].rec[0] - T[b].rec[1]) - (T[a].rec[0] - T[a].rec[1]) || T[b].rec[0] - T[a].rec[0]);
   const m = (t, k) => (T[t].m || {})[k];
   const rk = (x, col = 1) => x ? `<span class="${col ? rankCls(x[1]) : ""}">#${x[1]}</span>` : "—";
-  const sel = LG.team && T[LG.team] ? LG.team : null;
-  return `<p class="lede">Récord, ratings y lo que concede cada defensa a cada posición (DvP) esta temporada. Toca un equipo para ver su detalle. En los puestos, #1 es el mejor en ataque y en defensa (el que menos concede); en el DvP, verde = defensa blanda con esa posición (bueno para el Over del rival).</p>
-  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe lg-tbl"><thead><tr><th class="pk">Equipo</th><th class="r">Récord</th><th class="r">Local</th><th class="r">Visit.</th><th class="r">Últ. 10</th><th class="r">Neto</th><th class="r">Ataque</th><th class="r">Defensa</th><th class="r">Ritmo</th></tr></thead><tbody>
+  const sel = LG.team && T[LG.team] ? LG.team : null, CR = cupRecs();
+  return `<p class="lede">Récord (Copa = sus partidos de la NBA Cup, que también cuentan en el récord), ratings y lo que concede cada defensa a cada posición (DvP) esta temporada. Toca un equipo para ver su detalle. En los puestos, #1 es el mejor en ataque y en defensa (el que menos concede); en el DvP, verde = defensa blanda con esa posición (bueno para el Over del rival).</p>
+  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe lg-tbl"><thead><tr><th class="pk">Equipo</th><th class="r">Récord</th><th class="r" title="Victorias–derrotas en la NBA Cup (ya cuentan en el récord)">Copa</th><th class="r">Local</th><th class="r">Visit.</th><th class="r">Últ. 10</th><th class="r">Neto</th><th class="r">Ataque</th><th class="r">Defensa</th><th class="r">Ritmo</th></tr></thead><tbody>
   ${ids.map(t => { const L = T[t].last, w = L.filter(g => g[3] > g[4]).length; return `<tr class="lg-row${t === sel ? " on" : ""}" data-lgt="${t}"><td class="head pk"><button type="button" class="pname" data-lgt="${t}">${badge(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))}</button>${today.has(t) ? ` <span class="pill flat">hoy</span>` : ""}</td>
-    <td class="r num"><b>${recTxt2(T[t].rec)}</b></td><td class="r num">${recTxt2(T[t].home)}</td><td class="r num">${recTxt2(T[t].away)}</td><td class="r num">${w}–${L.length - w}</td>
+    <td class="r num"><b>${recTxt2(T[t].rec)}</b></td><td class="r num">${CR[t] ? `${CR[t].w}–${CR[t].l}` : "—"}</td><td class="r num">${recTxt2(T[t].home)}</td><td class="r num">${recTxt2(T[t].away)}</td><td class="r num">${w}–${L.length - w}</td>
     <td class="r num">${rk(m(t, "NET_RATING"))}</td><td class="r num">${rk(m(t, "OFF_RATING"))}</td><td class="r num">${rk(m(t, "DEF_RATING"))}</td><td class="r num">${rk(m(t, "PACE"), 0)}</td></tr>`; }).join("")}</tbody></table></div>
   ${sel ? lgTeam(sel) : ""}`;
 }
 function lgTeam(t) {
   const X = LEAGUE.teams[t];
-  return `<div class="lg-team" id="lg-team"><h3>${badge(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))} <span class="muted">${recTxt2(X.rec)}</span></h3>
+  return `<div class="lg-team" id="lg-team"><h3>${badge(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))} <span class="muted">${recTxt2(X.rec)}${(() => { const c = cupRecs()[t]; return c ? ` · Copa ${c.w}–${c.l}` : ""; })()}</span></h3>
   <h4>Últimos ${X.last.length} partidos</h4>
   <div class="lg-last">${X.last.map(g => `<div class="lg-g ${g[3] > g[4] ? "w" : "l"}"><b>${g[3] > g[4] ? "G" : "P"}</b><span>${g[2] ? "vs" : "@"} ${esc(g[1])}</span><span class="num">${g[3]}–${g[4]}</span><span class="kind">${g[0].slice(8, 10)}/${g[0].slice(5, 7)}</span></div>`).join("")}</div>
   <h4>Ratings y estadísticas</h4>
@@ -3635,8 +3680,9 @@ function lgBooks() {
 }
 
 // Pick del día (idea 6): el pick con valor de mayor EV de la jornada, con su historial (el de mayor EV de cada jornada)
-function potd(date) {
-  const vb = INDEX.games.filter(g => g.date === date && !isCup(g)).flatMap(g => (g.value_bets || []).filter(notOut(g.id)).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })));
+// Cada pestaña tiene el suyo: Liga con los partidos de liga, NBA Cup con los de Copa (13-nov)
+function potd(date, scope = "reg") {
+  const vb = INDEX.games.filter(g => g.date === date && inScope(g, scope)).flatMap(g => (g.value_bets || []).filter(notOut(g.id)).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })));
   return vb.sort((a, b) => b.ev - a.ev)[0] || null;
 }
 // Tarjetas de pick (13-nov): foto, el pick en grande, cuota, gráfica de sus últimos 10 partidos contra la línea de hoy
@@ -3791,13 +3837,13 @@ $("#search-btn").addEventListener("click", () => { const d = $("#psearch"); d.sh
 $("#ps-q").addEventListener("input", () => { clearTimeout(psDraw.t); psDraw.t = setTimeout(psDraw, 120); });
 $("#ps-close").addEventListener("click", () => $("#psearch").close());
 $("#psearch").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); if (e.target.closest("[data-pc]")) e.currentTarget.close(); });
-function potdCard() {
-  const b = potd(DAY), thr = INDEX.value_ev;
-  const past = [...new Set(INDEX.games.filter(g => g.date < DAY && g.result).map(g => g.date))].sort().map(d => ({ d, b: potd(d) })).filter(x => x.b && x.b.result);
+function potdCard(scope = "reg") {
+  const b = potd(DAY, scope), thr = INDEX.value_ev;
+  const past = [...new Set(INDEX.games.filter(g => g.date < DAY && g.result && inScope(g, scope)).map(g => g.date))].sort().map(d => ({ d, b: potd(d, scope) })).filter(x => x.b && x.b.result);
   const w = past.filter(x => x.b.result === "won").length, l = past.filter(x => x.b.result === "lost").length, u = past.reduce((s, x) => s + (x.b.result === "won" ? x.b.dec - 1 : x.b.result === "lost" ? -1 : 0), 0);
   if (!b) return "";
   return `<section class="section potd" aria-labelledby="potd-t">
-    <span class="eyebrow">${esc(DAY)} · el pick con valor de mayor EV de la jornada</span>
+    <span class="eyebrow">${scope === "cup" ? "NBA Cup · " : ""}${esc(DAY)} · el pick con valor de mayor EV ${scope === "cup" ? "de los partidos de Copa" : "de la jornada"}</span>
     <h2 id="potd-t">Pick del día</h2>
     ${pickCard(b, thr, true)}
     ${past.length ? `<p class="muted potd-rec">Historial del pick del día: <b>${w}–${l}</b> · ${u >= 0 ? "+" : "−"}${Math.abs(u).toFixed(2)} u en ${past.length} jornada${past.length === 1 ? "" : "s"}.</p>` : ""}

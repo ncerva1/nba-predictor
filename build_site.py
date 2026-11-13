@@ -1121,7 +1121,13 @@ def rotation_view(cfg, summ):
 def cup_summary():
     """Resumen de liga para el inicio de la pestaña NBA Cup."""
     C = cup_history()
-    return C and dict(seasons=C["seasons"], pooled=C["pooled"], model_total_adj=C.get("model_total_adj", 0.0))
+    if not C:
+        return None
+    out = dict(seasons=C["seasons"], pooled=C["pooled"], model_total_adj=C.get("model_total_adj", 0.0))
+    cur = _cup_files()[-1] if _cup_files() else None
+    if cur and cur.get("groups"):   # grupos de la Copa en curso: la web arma la tabla G–P de Copa con los resultados
+        out.update(season=cur.get("season"), groups=cur["groups"])
+    return out
 
 
 def player_flags(date, cfg_path):
