@@ -915,9 +915,47 @@ table.gb-t tr.me td:first-child { background: var(--accent-soft) }
 .pcd.big .pcd-ln { font-size: 34px } .pcd.big .pcd-odd b { font-size: 30px }
 .potd .pcd { max-width: 640px }
 .potd-rec { margin: 0; font-size: 13px }
-.cup-grps { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px }
-.cup-grp table { width: 100%; min-width: 0 } .cup-grp th, .cup-grp td { white-space: nowrap; padding: 7px 8px } .cup-grp th.pk { font-family: "Bebas Neue", var(--display); font-size: 17px; letter-spacing: .05em; font-weight: 400 }
-.cup-grp tr.lead td { background: rgba(226,183,90,.10) } .cup-grp tr.lead td.pk { box-shadow: inset 3px 0 0 #e2b75a }
+/* NBA Cup: grupos y llaves (13-nov) */
+.cup-nav { display: flex; gap: 6px; margin: 4px 0 18px; flex-wrap: wrap }
+.cup-nav a { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); font: 600 13px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--ink); text-decoration: none }
+.cup-nav a[aria-current="page"] { background: #1a1408; color: #f0c66b; border-color: #a77a1c }
+.cup-grps { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 14px; min-width: 0 }
+.cup-grp { padding: 14px 14px 10px; min-width: 0 } .cup-grp h3 { margin: 0 0 8px; font: 400 24px/1 "Bebas Neue", var(--display); letter-spacing: .05em }
+.cup-grp table { width: 100% } .cup-grp th, .cup-grp td { white-space: nowrap; padding: 7px 7px }
+.cup-grp tr.lead td { background: rgba(226,183,90,.12) } .cup-grp tr.lead td.pk { box-shadow: inset 3px 0 0 #e2b75a }
+.cup-grp tr.wc td, .cg-wc2 tr.wc td { background: rgba(160,170,185,.14) } .cup-grp tr.wc td.pk, .cg-wc2 tr.wc td.pk { box-shadow: inset 3px 0 0 #9aa4b2 }
+.cg-wc { background: rgba(160,170,185,.2); color: var(--ink); font-size: 10px }
+.cg-key { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; font-size: 13px; color: var(--muted) }
+.cg-k { width: 14px; height: 14px; border-radius: 3px; display: inline-block } .cg-k.lead { background: #e2b75a } .cg-k.wc { background: #9aa4b2 }
+.cg-games { margin-top: 8px; font-size: 13px } .cg-games summary { cursor: pointer; color: var(--muted); font: 600 12px var(--mono); letter-spacing: .03em }
+.cg-games ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px }
+.cg-games li { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 8px; padding: 4px 0; border-top: 1px solid var(--line) }
+.cg-games li.pend { opacity: .8 } .cg-m { display: inline-flex; align-items: center; gap: 6px } .cg-m b.w { color: var(--good) }
+.cg-wc2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px; min-width: 0 }
+/* escudos (cdn.nba.com); si no cargan queda la sigla de color */
+.tlogo { position: relative; display: inline-grid; place-items: center; width: 28px; height: 28px; vertical-align: middle; flex: none }
+.tlogo b { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 6px; background: var(--tc); color: var(--tf); font: 700 9px var(--mono) }
+.tlogo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0 }
+.tlogo.ok b { visibility: hidden } .tlogo.ok img { opacity: 1 }
+.tlogo.sm { width: 22px; height: 22px } .tlogo.sm b { font-size: 8px } .tlogo.lg { width: 40px; height: 40px }
+/* cuadro de eliminatorias */
+.bk-wrap { overflow-x: auto; min-width: 0; padding-bottom: 6px; -webkit-overflow-scrolling: touch }
+.bk { display: grid; grid-template-columns: repeat(5, minmax(150px, 1fr)); gap: 14px; min-width: 820px; align-items: stretch }
+.bk-col { display: grid; grid-template-rows: auto 1fr; gap: 10px } .bk-ms { display: flex; flex-direction: column; justify-content: space-around; gap: 14px }
+.bk-r { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: center }
+.bk-m { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 8px; display: grid; gap: 4px; position: relative }
+.bk-h { font: 600 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.bk-t { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 6px; min-height: 28px }
+.bk-t.w { background: rgba(226,183,90,.16) } .bk-t.w .bk-n { font-weight: 700 } .bk-t.l { opacity: .55 }
+.bk-s { font: 600 10px var(--mono); color: #a77a1c; min-width: 12px }
+.bk-n { font: 600 13px var(--mono) } .bk-t > b { font: 700 14px var(--mono) }
+.bk-go { font-size: 12px; justify-self: end }
+ .bk-final { border-color: #a77a1c; box-shadow: 0 0 0 1px rgba(226,183,90,.35), 0 8px 24px rgba(167,122,28,.15) }
+.bk-cup { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 6px; padding-top: 8px; border-top: 1px dashed rgba(226,183,90,.5) }
+.bk-cup svg { width: 22px; height: 22px; color: #e2b75a }
+/* tablas ordenables */
+table.sortable thead th { cursor: pointer; user-select: none }
+table.sortable thead th[aria-sort="ascending"]::after { content: " ▲"; font-size: 9px } table.sortable thead th[aria-sort="descending"]::after { content: " ▼"; font-size: 9px }
 @media (min-width: 760px) { .potd .pcd.big { max-width: none; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 24px }
   .potd .pcd.big > .pcd-h, .potd .pcd.big > .pcd-pick, .potd .pcd.big > .pcd-f, .potd .pcd.big > .bj-warn { grid-column: 1 } .potd .pcd.big > .pcd-viz { grid-column: 2; grid-row: 1 / span 3 } .potd .pcd.big > .pcd-stats { grid-column: 2 } }
 @media (max-width: 640px) {
@@ -1490,7 +1528,7 @@ const CUP_HERO = n => `<section class="cup-hero">
     <ol class="cup-steps">
       <li><b>Fase de grupos</b><span>6 grupos de 5 equipos</span></li>
       <li><b>Cuartos de final</b><span>8 clasificados</span></li>
-      <li><b>Semifinales</b><span>Las Vegas</span></li>
+      <li><b>Semifinales</b><span>8 y 9 de diciembre</span></li>
       <li><b>Final</b><span>Campeón de la Copa</span></li>
     </ol>
   </section>`;
@@ -1588,13 +1626,13 @@ function renderIndex(scope = "reg") {
   </section>`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
-    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupTable() + cupStudy() + olderSection(older, true);
-    fillLgRecs(); addFolds();
+    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupNav("picks") + cupStudy() + olderSection(older, true);
+    addFolds();
     return;
   }
   $("#app").innerHTML = `
   ${INTRO()}
-  ${cup ? CUP_HERO(todays.length) : ""}
+  ${cup ? CUP_HERO(todays.length) + cupNav("picks") : ""}
   ${updatesStrip()}
   ${bajasStrip()}
   ${potdCard(scope)}
@@ -1631,7 +1669,6 @@ function renderIndex(scope = "reg") {
     <h2>${todays.some(g => g.result) ? "Partidos de la jornada" : "Partidos de hoy"} ${qh("usar", "cómo usar la página")}</h2>
     <div class="games">${todays.map(card).join("") || `<div class="empty">No hay partidos para esta jornada.</div>`}</div>
   </section>
-  ${cup ? cupTable() : ""}
   ${histHtml}
   ${olderSection(older, cup)}
   <p class="foot">EV alto (+15% o más) al inicio de temporada suele indicar que al modelo le falta información (lesiones, rotaciones); revisa el contexto del partido antes de apostar. Herramienta de análisis, no consejo de apuesta.</p>`;
@@ -1689,7 +1726,6 @@ function renderIndex(scope = "reg") {
   if ($("#picks-mp")) bindLinks($("#picks-mp"));
   bindParlays(todays, thr);
   addFolds();
-  if (cup) fillLgRecs();
 }
 
 // Parlays recomendados (build_site.py): mismo partido = prob. conjunta contada en las simulaciones
@@ -2075,12 +2111,14 @@ function cupSection(d) {
     <p class="foot">Puntos por partido en sus 4 partidos de grupo; entre paréntesis, la diferencia con sus partidos de liga regular del mismo tramo de la temporada. Over–Under frente a la línea de cierre.</p>` : ""}
   </section>`;
 }
-// Récord en la Copa (13-nov, pedido de Nicolas): G–P de cada equipo en sus partidos de NBA Cup ya jugados de esta
-// temporada (INDEX.games con "competition": "cup"), por grupo (INDEX.cup.groups, de cup/<temporada>.json). Los partidos
-// de grupos también cuentan en el récord de liga, que se rellena desde data/league.json.
-function cupRecs() {
+// NBA Cup tipo Mundial (13-nov, pedido de Nicolas): pestaña "Grupos y llaves" (#copa-grupos) con la tabla de cada
+// grupo, sus partidos, la carrera por el comodín y el cuadro de cuartos, semis y final. Todo sale de INDEX.games
+// ("competition": "cup" con resultado) y de INDEX.cup (groups, schedule y knockout de cup/<temporada>.json).
+// Mientras no haya eliminatorias cargadas, el cuadro es "si terminara hoy". La columna Liga sale de data/league.json.
+const isKO = g => /cuartos|semi|final/i.test(g.cup_round || "");
+function cupRecs(groupOnly) {
   const R = {};
-  INDEX.games.filter(g => isCup(g) && g.result && g.result.score).forEach(g => {
+  INDEX.games.filter(g => isCup(g) && g.result && g.result.score && (!groupOnly || !isKO(g))).forEach(g => {
     const s = g.result.score;
     [[g.away, g.home], [g.home, g.away]].forEach(([t, o]) => {
       const x = R[t] || (R[t] = { w: 0, l: 0, pf: 0, pa: 0 });
@@ -2089,29 +2127,135 @@ function cupRecs() {
   });
   return R;
 }
-function cupTable() {
-  const G = INDEX.cup && INDEX.cup.groups; if (!G) return "";
-  const R = cupRecs(), today = new Set(INDEX.games.filter(g => g.date === DAY && isCup(g)).flatMap(g => [g.away, g.home]));
-  const r0 = t => R[t] || { w: 0, l: 0, pf: 0, pa: 0 }, dif = x => x.pf - x.pa;
-  const grp = ([name, ts]) => {
-    const rows = [...ts].sort((a, b) => r0(b).w - r0(a).w || r0(a).l - r0(b).l || dif(r0(b)) - dif(r0(a)));
-    return `<div class="panel tbl-wrap cup-grp"><table><thead><tr><th class="pk">Grupo ${esc(name)}</th><th class="r">Copa</th><th class="r" title="Diferencia de puntos en la Copa">Dif.</th><th class="r" title="Récord total de la temporada regular (los partidos de grupos también cuentan)">Liga</th></tr></thead><tbody>
-      ${rows.map((t, i) => { const x = r0(t), d = dif(x); return `<tr${i === 0 && x.w + x.l ? ' class="lead"' : ""}><td class="head pk">${badge(t)}${today.has(t) ? ` <span class="pill flat">hoy</span>` : ""}</td><td class="r num"><b>${x.w}–${x.l}</b></td><td class="r num ${d > 0 ? "pos" : d < 0 ? "neg" : ""}">${x.w + x.l ? (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d) : "—"}</td><td class="r num" data-lgrec="${t}">…</td></tr>`; }).join("")}
-    </tbody></table></div>`;
-  };
-  return `<section class="section" id="cup-rec">
-    <span class="eyebrow">NBA Cup${INDEX.cup.season ? " " + esc(INDEX.cup.season) : ""} · fase de grupos</span>
-    <h2>Récord en la Copa</h2>
-    <p class="lede">Victorias–derrotas de cada equipo en sus partidos de Copa, por grupo, con la diferencia de puntos y su récord de liga (que ya incluye esos partidos). Pasan a cuartos el primero de cada grupo y los dos mejores segundos de cada conferencia.</p>
-    <div class="cup-grps">${Object.entries(G).map(grp).join("")}</div>
-  </section>`;
+const TEAM_ID = { ATL: 37, BOS: 38, CLE: 39, NOP: 40, CHI: 41, DAL: 42, DEN: 43, GSW: 44, HOU: 45, LAC: 46, LAL: 47, MIA: 48, MIL: 49, MIN: 50, BKN: 51,
+  NYK: 52, ORL: 53, IND: 54, PHI: 55, PHX: 56, POR: 57, SAC: 58, SAS: 59, OKC: 60, TOR: 61, UTA: 62, MEM: 63, WAS: 64, DET: 65, CHA: 66 };
+// escudo oficial (cdn.nba.com, como las fotos de jugadores); si no carga se queda la sigla de color
+const logo = (t, cls = "") => TEAM_ID[t] ? `<span class="tlogo ${cls}" style="--tc:${tc(t)};--tf:${tf(t)}" title="${esc((NBA_TEAMS[t] || [t, ""]).join(" "))}"><b>${esc(t)}</b><img src="https://cdn.nba.com/logos/nba/16106127${TEAM_ID[t]}/primary/L/logo.svg" alt="" loading="lazy" decoding="async" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></span>` : badge(t);
+const tname = t => (NBA_TEAMS[t] || [t, ""])[1] || t;
+function cupStand() {
+  const C = INDEX.cup || {}, G = C.groups || {}, R = cupRecs(true);
+  const r0 = t => R[t] || { w: 0, l: 0, pf: 0, pa: 0 }, dif = t => r0(t).pf - r0(t).pa;
+  const cmp = (a, b) => r0(b).w - r0(a).w || r0(a).l - r0(b).l || dif(b) - dif(a) || r0(b).pf - r0(a).pf;
+  const groups = Object.entries(G).map(([name, ts]) => ({ name, conf: name.startsWith("Oeste") ? "Oeste" : "Este", rows: [...ts].sort(cmp) }));
+  const played = Object.values(R).some(x => x.w + x.l);
+  const confs = ["Este", "Oeste"].map(conf => {
+    const gs = groups.filter(g => g.conf === conf), leaders = gs.map(g => g.rows[0]).sort(cmp);
+    const seconds = gs.map(g => g.rows[1]).filter(Boolean).sort(cmp);
+    return { conf, leaders, wc: seconds[0], seconds, grpOf: Object.fromEntries(gs.flatMap(g => g.rows.map((t, i) => [t, [g.name, i + 1]]))) };
+  });
+  return { G, R, r0, dif, groups, confs, played };
 }
+function cupGroupsPage() {
+  const C = INDEX.cup; if (!C || !C.groups) { $("#app").innerHTML = `<div class="panel empty">Aún no hay grupos de la Copa.</div>`; return; }
+  const S = cupStand(), sched = C.schedule || [], byPair = {};
+  INDEX.games.filter(isCup).forEach(g => { byPair[g.date + [g.away, g.home].sort().join("")] = g; });
+  const findG = x => byPair[x.date + [x.away, x.home].sort().join("")];
+  const wcSet = new Set(S.confs.map(c => c.wc)), ldSet = new Set(S.confs.flatMap(c => c.leaders));
+  const sg = d => d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "0";
+  const grp = g => {
+    const gm = sched.filter(x => x.round === "Grupo " + g.name).map(x => ({ x, g: findG(x) })), done = gm.filter(y => y.g && y.g.result).length;
+    return `<article class="cup-grp panel">
+    <h3>Grupo ${esc(g.name)}</h3>
+    <div class="tbl-wrap"><table class="swipe sortable cg-tbl"><thead><tr><th class="r" data-asc>#</th><th class="pk">Equipo</th><th class="r">PJ</th><th class="r">G</th><th class="r" data-asc>P</th><th class="r">Dif.</th><th class="r">PF</th><th class="r" data-asc>PC</th><th class="r" title="Récord de liga (ya incluye los partidos de grupos)">Liga</th></tr></thead><tbody>
+    ${g.rows.map((t, i) => { const x = S.r0(t), d = S.dif(t), st = S.played && ldSet.has(t) && i === 0 ? "lead" : S.played && wcSet.has(t) ? "wc" : "";
+      return `<tr class="${st}"><td class="r num" data-v="${i + 1}">${i + 1}</td><td class="head pk" data-v="${t}">${logo(t)} <span class="cg-n">${esc(tname(t))}</span>${st === "wc" ? ` <span class="pill cg-wc">comodín</span>` : ""}</td>
+        <td class="r num">${x.w + x.l}</td><td class="r num"><b>${x.w}</b></td><td class="r num">${x.l}</td><td class="r num ${d > 0 ? "pos" : d < 0 ? "neg" : ""}" data-v="${d}">${x.w + x.l ? sg(d) : "—"}</td><td class="r num">${x.pf}</td><td class="r num">${x.pa}</td><td class="r num" data-lgrec="${t}">…</td></tr>`; }).join("")}
+    </tbody></table></div>
+    ${gm.length ? `<details class="cg-games"><summary>Partidos del grupo · ${done} de ${gm.length} jugados</summary><ul>
+      ${gm.map(({ x, g: G2 }) => { const r = G2 && G2.result, s = r && r.score;
+        return `<li${r ? "" : ' class="pend"'}><span class="kind">${esc(x.date.slice(8, 10))}/${esc(x.date.slice(5, 7))}</span><span class="cg-m">${logo(x.away, "sm")} ${s ? `<b class="num${s[x.away] > s[x.home] ? " w" : ""}">${s[x.away]}</b>` : ""} <span class="muted">@</span> ${s ? `<b class="num${s[x.home] > s[x.away] ? " w" : ""}">${s[x.home]}</b>` : ""} ${logo(x.home, "sm")}</span>${G2 ? `<a href="#${esc(G2.id)}">${r ? "Ver" : "Análisis"} →</a>` : `<span class="muted">pendiente</span>`}</li>`; }).join("")}</ul></details>` : ""}
+  </article>`;
+  };
+  const wcRace = c => `<div class="panel tbl-wrap"><table class="swipe"><thead><tr><th class="pk">Comodín ${c.conf}</th><th>Grupo</th><th class="r">G–P</th><th class="r">Dif.</th></tr></thead><tbody>
+    ${c.seconds.map((t, i) => { const x = S.r0(t); return `<tr${i === 0 && S.played ? ' class="wc"' : ""}><td class="head pk">${logo(t)} ${esc(tname(t))}</td><td>${esc(c.grpOf[t][0])}</td><td class="r num"><b>${x.w}–${x.l}</b></td><td class="r num">${x.w + x.l ? sg(S.dif(t)) : "—"}</td></tr>`; }).join("")}</tbody></table></div>`;
+  $("#app").innerHTML = `${cupNav("grupos")}
+  <section class="section">
+    <span class="eyebrow">NBA Cup ${esc(C.season || "")}</span>
+    <h1>Grupos y llaves</h1>
+    <p class="lede">Como en un Mundial: 6 grupos de 5 equipos (3 por conferencia) y 4 partidos de grupo por equipo. Pasan a cuartos los 6 líderes y el mejor segundo de cada conferencia (comodín). Desempate: victorias, diferencia de puntos y puntos a favor (la NBA mira antes el cara a cara). Toca una columna para ordenar la tabla.</p>
+    <p class="cg-key"><span class="cg-k lead"></span> líder (va a cuartos) <span class="cg-k wc"></span> comodín si terminara hoy</p>
+    <div class="cup-grps">${S.groups.map(grp).join("")}</div>
+  </section>
+  <section class="section">
+    <h2>Carrera por el comodín</h2>
+    <p class="lede">Los segundos de cada grupo; el mejor de cada conferencia entra a cuartos como 4.º sembrado.</p>
+    <div class="cg-wc2">${S.confs.map(wcRace).join("")}</div>
+  </section>
+  <section class="section">
+    <h2>Llaves</h2>
+    ${cupBracket(S)}
+  </section>`;
+  fillLgRecs(); addFolds();
+}
+function cupBracket(S) {
+  const C = INDEX.cup, K = C.knockout || {}, ko = INDEX.games.filter(g => isCup(g) && isKO(g));
+  const confOf = t => S.groups.find(g => g.rows.includes(t))?.conf;
+  const fd = d => d ? `${d.slice(8, 10)}/${d.slice(5, 7)}` : "";
+  const win = g => g && g.result && g.result.score ? (g.result.score[g.away] > g.result.score[g.home] ? g.away : g.home) : null;
+  const side = (t, lab, g, seed) => {
+    const s = g && g.result && g.result.score, w = win(g);
+    return `<div class="bk-t${w ? (w === t ? " w" : " l") : ""}">${seed ? `<span class="bk-s">${seed}</span>` : ""}${t ? `${logo(t, "sm")}<span class="bk-n">${esc(t)}</span>` : `<span class="bk-n muted">${esc(lab || "Por definir")}</span>`}${s && t ? `<b class="num">${s[t]}</b>` : ""}</div>`;
+  };
+  const box = (title, date, a, b, g) => `<div class="bk-m">${title ? `<span class="bk-h">${esc(title)}${date ? " · " + esc(date) : ""}</span>` : ""}${side(a.t, a.lab, g, a.seed)}${side(b.t, b.lab, g, b.seed)}${g ? `<a class="bk-go" href="#${esc(g.id)}">${g.result ? "Ver" : "Análisis"} →</a>` : ""}</div>`;
+  const pick = (round, conf) => ko.filter(g => new RegExp(round, "i").test(g.cup_round) && (!conf || confOf(g.home) === conf)).sort((a, b) => a.date < b.date ? -1 : 1);
+  const lab = (c, t, seed) => ({ t: S.played ? t : null, seed, lab: S.played ? null : seed === 4 ? `Comodín ${c.conf}` : `${seed}.º líder ${c.conf}` });
+  const conf = c => {
+    const seeds = [...c.leaders.slice(0, 3), c.wc];
+    const qf = pick("cuartos", c.conf);
+    const proj = [[lab(c, seeds[0], 1), lab(c, seeds[3], 4)], [lab(c, seeds[1], 2), lab(c, seeds[2], 3)]];
+    const pairs = qf.length === 2 ? qf.map(g => [{ t: g.home }, { t: g.away }]) : proj;
+    const qg = qf.length === 2 ? qf : [null, null];
+    const sf = pick("semi", c.conf)[0], w1 = win(qg[0]), w2 = win(qg[1]);
+    return { c, qf: pairs.map((p, i) => box(`Cuartos`, qg[i] ? fd(qg[i].date) : fd(K.quarterfinals && K.quarterfinals[0]) + (K.quarterfinals && K.quarterfinals[1] ? "–" + fd(K.quarterfinals[1]) : ""), p[0], p[1], qg[i])),
+      sf: box(`Semifinal ${c.conf}`, sf ? fd(sf.date) : (K.semifinals || []).map(fd).join("–"), sf ? { t: sf.home } : { t: w1, lab: "Ganador cuartos 1" }, sf ? { t: sf.away } : { t: w2, lab: "Ganador cuartos 2" }, sf),
+      champ: win(sf) };
+  };
+  const E = conf(S.confs[0]), W = conf(S.confs[1]), fin = pick("final").filter(g => !/semi|cuartos/i.test(g.cup_round))[0], champ = win(fin);
+  const finBox = `<div class="bk-m bk-final"><span class="bk-h">Final · ${esc(fd(fin ? fin.date : K.final))}${K.final_venue ? `<br>${esc(K.final_venue)}` : ""}</span>${side(fin ? fin.home : E.champ, "Campeón Este", fin)}${side(fin ? fin.away : W.champ, "Campeón Oeste", fin)}${fin ? `<a class="bk-go" href="#${esc(fin.id)}">${fin.result ? "Ver" : "Análisis"} →</a>` : ""}
+    <div class="bk-cup"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12v2h3v3a4 4 0 0 1-4 4h-.4A5 5 0 0 1 13 15v3h3v3H8v-3h3v-3a5 5 0 0 1-3.6-3H7a4 4 0 0 1-4-4V5h3V3zm0 4H5v1a2 2 0 0 0 1 1.7V7zm12 0v2.7A2 2 0 0 0 19 8V7h-1z"/></svg>${champ ? `${logo(champ)} <b>Campeón</b>` : `<span class="muted">Campeón</span>`}</div></div>`;
+  const live = ko.length ? "" : `<p class="lede">${S.played ? "<b>Si la fase de grupos terminara hoy</b>: los líderes se siembran 1–3 por récord y el comodín es el 4.º; el mejor sembrado juega en casa. Cambia con cada jornada de Copa (20, 24, 25 y 27-nov)." : "Los cruces se conocen al terminar la fase de grupos."}</p>`;
+  return `${live}<div class="bk-wrap"><div class="bk">
+    <div class="bk-col"><span class="bk-r">Cuartos · Este</span><div class="bk-ms">${E.qf.join("")}</div></div>
+    <div class="bk-col"><span class="bk-r">Semis · Este</span><div class="bk-ms">${E.sf}</div></div>
+    <div class="bk-col bk-mid"><span class="bk-r">Final</span><div class="bk-ms">${finBox}</div></div>
+    <div class="bk-col"><span class="bk-r">Semis · Oeste</span><div class="bk-ms">${W.sf}</div></div>
+    <div class="bk-col"><span class="bk-r">Cuartos · Oeste</span><div class="bk-ms">${W.qf.join("")}</div></div>
+  </div></div>`;
+}
+// barra de la pestaña NBA Cup: picks del día / grupos y llaves
+const cupNav = on => `<nav class="cup-nav" aria-label="NBA Cup"><a href="#cup"${on === "picks" ? ' aria-current="page"' : ""}>Picks de la Copa</a><a href="#copa-grupos"${on === "grupos" ? ' aria-current="page"' : ""}>Grupos y llaves</a></nav>`;
 // la columna Liga de las tablas de Copa sale de data/league.json (se carga aparte)
 async function fillLgRecs() {
   const cells = document.querySelectorAll("[data-lgrec]"); if (!cells.length) return;
   if (!LEAGUE) LEAGUE = await getJSON("data/league.json").catch(() => null);
-  document.querySelectorAll("[data-lgrec]").forEach(c => { const T = LEAGUE && LEAGUE.teams[c.dataset.lgrec]; c.textContent = T ? recTxt2(T.rec) : "—"; });
+  document.querySelectorAll("[data-lgrec]").forEach(c => { const T = LEAGUE && LEAGUE.teams[c.dataset.lgrec]; c.textContent = T ? recTxt2(T.rec) : "—"; if (T) c.dataset.v = T.rec[0] / Math.max(1, T.rec[0] + T.rec[1]); });
 }
+// Tablas ordenables (13-nov): toca la cabecera de una columna de cualquier table.sortable. Ordena por data-v de la
+// celda o por su número; texto alfabético. Las columnas con data-asc (puestos, derrotas) empiezan de menor a mayor.
+// El orden elegido se recuerda por tabla (data-sk) y se vuelve a aplicar al redibujar.
+const SORTS = {};
+const cellV = td => {
+  if (!td) return -1e9;
+  const v = (td.dataset.v ?? td.textContent).trim().replace(/−/g, "-").replace(/^#/, "");
+  if (v === "—" || v === "" || v === "…") return -1e9;
+  const m = v.match(/^(\d+)–(\d+)$/); if (m) { const w = +m[1], l = +m[2]; return w / Math.max(1, w + l) + w * 1e-4; }   // récord G–P
+  return /^[-+]?\d+(\.\d+)?%?$/.test(v) ? parseFloat(v) : v.toLowerCase();
+};
+function sortTable(tb, i, asc) {
+  const body = tb.tBodies[0]; if (!body) return;
+  const rows = [...body.rows];
+  rows.sort((a, b) => { const x = cellV(a.cells[i]), y = cellV(b.cells[i]); const r = typeof x === "number" && typeof y === "number" ? x - y : String(x).localeCompare(String(y), "es"); return asc ? r : -r; });
+  rows.forEach(r => body.appendChild(r));
+  tb.querySelectorAll("thead th").forEach((th, j) => { th.removeAttribute("aria-sort"); if (j === i) th.setAttribute("aria-sort", asc ? "ascending" : "descending"); });
+}
+function applySorts(root = document) { root.querySelectorAll("table.sortable[data-sk]").forEach(tb => { const s = SORTS[tb.dataset.sk]; if (s) sortTable(tb, s[0], s[1]); }); }
+document.addEventListener("click", e => {
+  const th = e.target.closest("table.sortable thead th"); if (!th) return;
+  const tb = th.closest("table"), i = [...th.parentNode.children].indexOf(th), k = tb.dataset.sk;
+  const cur = th.getAttribute("aria-sort"), first = tb.tBodies[0] && cellV(tb.tBodies[0].rows[0]?.cells[i]);
+  const asc = cur ? cur === "descending" : th.hasAttribute("data-asc") || typeof first !== "number";
+  sortTable(tb, i, asc); if (k) SORTS[k] = [i, asc];
+});
 function cupStudy() {
   const C = INDEX.cup; if (!C) return "";
   const S = Object.entries(C.seasons), P = C.pooled;
@@ -3605,6 +3749,7 @@ async function renderLeague() {
     else if (LG.sec === "lesiones") B.innerHTML = lgInj(today);
     else if (LG.sec === "lideres") B.innerHTML = lgLead();
     else B.innerHTML = lgBooks();
+    applySorts(B);
     const q = $("#lg-q"); if (q) { q.value = LG.q; q.addEventListener("input", e => { LG.q = e.target.value; const pos = e.target.selectionStart; draw(); const n = $("#lg-q"); n.focus(); n.setSelectionRange(pos, pos); }); }
   };
   LG_DRAW = draw;
@@ -3627,15 +3772,15 @@ function lgTeams(today) {
   const rk = (x, col = 1) => x ? `<span class="${col ? rankCls(x[1]) : ""}">#${x[1]}</span>` : "—";
   const sel = LG.team && T[LG.team] ? LG.team : null, CR = cupRecs();
   return `<p class="lede">Récord (Copa = sus partidos de la NBA Cup, que también cuentan en el récord), ratings y lo que concede cada defensa a cada posición (DvP) esta temporada. Toca un equipo para ver su detalle. En los puestos, #1 es el mejor en ataque y en defensa (el que menos concede); en el DvP, verde = defensa blanda con esa posición (bueno para el Over del rival).</p>
-  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe lg-tbl"><thead><tr><th class="pk">Equipo</th><th class="r">Récord</th><th class="r" title="Victorias–derrotas en la NBA Cup (ya cuentan en el récord)">Copa</th><th class="r">Local</th><th class="r">Visit.</th><th class="r">Últ. 10</th><th class="r">Neto</th><th class="r">Ataque</th><th class="r">Defensa</th><th class="r">Ritmo</th></tr></thead><tbody>
-  ${ids.map(t => { const L = T[t].last, w = L.filter(g => g[3] > g[4]).length; return `<tr class="lg-row${t === sel ? " on" : ""}" data-lgt="${t}"><td class="head pk"><button type="button" class="pname" data-lgt="${t}">${badge(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))}</button>${today.has(t) ? ` <span class="pill flat">hoy</span>` : ""}</td>
+  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe lg-tbl sortable" data-sk="lg-eq"><thead><tr><th class="pk">Equipo</th><th class="r">Récord</th><th class="r" title="Victorias–derrotas en la NBA Cup (ya cuentan en el récord)">Copa</th><th class="r">Local</th><th class="r">Visit.</th><th class="r">Últ. 10</th><th class="r" data-asc>Neto</th><th class="r" data-asc>Ataque</th><th class="r" data-asc>Defensa</th><th class="r" data-asc>Ritmo</th></tr></thead><tbody>
+  ${ids.map(t => { const L = T[t].last, w = L.filter(g => g[3] > g[4]).length; return `<tr class="lg-row${t === sel ? " on" : ""}" data-lgt="${t}"><td class="head pk" data-v="${esc((NBA_TEAMS[t] || [t, ""]).join(" "))}"><button type="button" class="pname" data-lgt="${t}">${logo(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))}</button>${today.has(t) ? ` <span class="pill flat">hoy</span>` : ""}</td>
     <td class="r num"><b>${recTxt2(T[t].rec)}</b></td><td class="r num">${CR[t] ? `${CR[t].w}–${CR[t].l}` : "—"}</td><td class="r num">${recTxt2(T[t].home)}</td><td class="r num">${recTxt2(T[t].away)}</td><td class="r num">${w}–${L.length - w}</td>
     <td class="r num">${rk(m(t, "NET_RATING"))}</td><td class="r num">${rk(m(t, "OFF_RATING"))}</td><td class="r num">${rk(m(t, "DEF_RATING"))}</td><td class="r num">${rk(m(t, "PACE"), 0)}</td></tr>`; }).join("")}</tbody></table></div>
   ${sel ? lgTeam(sel) : ""}`;
 }
 function lgTeam(t) {
   const X = LEAGUE.teams[t];
-  return `<div class="lg-team" id="lg-team"><h3>${badge(t)} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))} <span class="muted">${recTxt2(X.rec)}${(() => { const c = cupRecs()[t]; return c ? ` · Copa ${c.w}–${c.l}` : ""; })()}</span></h3>
+  return `<div class="lg-team" id="lg-team"><h3>${logo(t, "lg")} ${esc((NBA_TEAMS[t] || [t, ""]).join(" "))} <span class="muted">${recTxt2(X.rec)}${(() => { const c = cupRecs()[t]; return c ? ` · Copa ${c.w}–${c.l}` : ""; })()}</span></h3>
   <h4>Últimos ${X.last.length} partidos</h4>
   <div class="lg-last">${X.last.map(g => `<div class="lg-g ${g[3] > g[4] ? "w" : "l"}"><b>${g[3] > g[4] ? "G" : "P"}</b><span>${g[2] ? "vs" : "@"} ${esc(g[1])}</span><span class="num">${g[3]}–${g[4]}</span><span class="kind">${g[0].slice(8, 10)}/${g[0].slice(5, 7)}</span></div>`).join("")}</div>
   <h4>Ratings y estadísticas</h4>
@@ -3657,10 +3802,10 @@ function lgInj(today) {
   <div class="filters" role="group" aria-label="Estado"><span class="lbl">Estado</span>${[["all", "Todos"], ["Out", "Fuera"], ["Day-To-Day", "Día a día"]].map(([k, t]) => `<button type="button" data-lgi="${k}" aria-pressed="${LG.inj === k}">${t} · ${k === "all" ? INJ.list.length : INJ.list.filter(x => x.status === k).length}</button>`).join("")}
     <button type="button" data-lgtoday aria-pressed="${LG.injToday}">Solo equipos que juegan hoy</button></div>
   <input class="search" id="lg-q" type="search" placeholder="Buscar jugador o equipo" aria-label="Buscar jugador o equipo">
-  ${list.length ? `<div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr><th class="pk">Jugador</th><th>Equipo</th><th>Estado</th><th>Regreso estimado</th><th>Nota</th></tr></thead><tbody>
-  ${list.map(x => `<tr><td class="head pk">${esc(x.player)}<div class="kind">${esc(x.pos)}</div></td><td>${badge(x.team)}${today.has(x.team) ? ` <span class="pill flat">hoy</span>` : ""}</td>
+  ${list.length ? `<div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe sortable" data-sk="lg-inj"><thead><tr><th class="pk">Jugador</th><th>Equipo</th><th>Estado</th><th>Regreso estimado</th><th>Nota</th></tr></thead><tbody>
+  ${list.map(x => `<tr><td class="head pk">${esc(x.player)}<div class="kind">${esc(x.pos)}</div></td><td data-v="${esc(x.team)}">${logo(x.team, "sm")} ${esc(x.team)}${today.has(x.team) ? ` <span class="pill flat">hoy</span>` : ""}</td>
     <td><span class="pill ${x.status === "Out" ? "neg" : "flat"}">${INJ_ST[x.status] || esc(x.status)}</span></td>
-    <td class="num">${esc(x.ret)}${soon(x) && x.status === "Out" ? ` <span class="pill value">puede volver ya</span>` : ""}</td><td class="lg-note">${esc(x.note)}</td></tr>`).join("")}</tbody></table></div>`
+    <td class="num" data-v="${esc(x.ret_iso || "9999")}">${esc(x.ret)}${soon(x) && x.status === "Out" ? ` <span class="pill value">puede volver ya</span>` : ""}</td><td class="lg-note">${esc(x.note)}</td></tr>`).join("")}</tbody></table></div>`
     : `<div class="panel empty">Nadie con esos filtros.</div>`}`;
 }
 function lgLead() {
@@ -3668,15 +3813,15 @@ function lgLead() {
   const L = LEAGUE.leaders[LG.lead] || [];
   return `<p class="lede">Promedios por partido de esta temporada (mínimo 5 partidos y el 60% de los de su equipo), con los box scores hasta la última jornada.</p>
   <div class="filters" role="group" aria-label="Estadística">${Object.entries(LG_LEAD).map(([k, t]) => `<button type="button" data-lgl="${k}" aria-pressed="${LG.lead === k}">${t}</button>`).join("")}</div>
-  <div class="panel tbl-wrap"><table class="swipe"><thead><tr><th class="r">#</th><th class="pk">Jugador</th><th class="r">PJ</th><th class="r">${esc(LG_LEAD[LG.lead])}</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">Min</th></tr></thead><tbody>
-  ${L.map((r, i) => `<tr><td class="r num">${i + 1}</td><td class="head pk">${face(r.name)}${esc(r.name)} <span class="muted">${esc(r.team || "")}</span></td><td class="r num">${r.gp}</td><td class="r num"><b>${r[LG.lead]}</b></td><td class="r num">${r.pts}</td><td class="r num">${r.reb}</td><td class="r num">${r.ast}</td><td class="r num">${r.min}</td></tr>`).join("")}</tbody></table></div>`;
+  <div class="panel tbl-wrap"><table class="swipe sortable" data-sk="lg-lead"><thead><tr><th class="r" data-asc>#</th><th class="pk">Jugador</th><th class="r">PJ</th><th class="r">${esc(LG_LEAD[LG.lead])}</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">Min</th></tr></thead><tbody>
+  ${L.map((r, i) => `<tr><td class="r num">${i + 1}</td><td class="head pk" data-v="${esc(r.name)}">${face(r.name)}${esc(r.name)} ${r.team ? logo(r.team, "sm") : ""}</td><td class="r num">${r.gp}</td><td class="r num"><b>${r[LG.lead]}</b></td><td class="r num">${r.pts}</td><td class="r num">${r.reb}</td><td class="r num">${r.ast}</td><td class="r num">${r.min}</td></tr>`).join("")}</tbody></table></div>`;
 }
 function lgBooks() {
   if (!LEAGUE || !LEAGUE.books.length) return `<div class="panel empty">Aún no hay cuotas por casa.</div>`;
   const c = x => x ? `<b>${(x[0] * 100).toFixed(1)}%</b><div class="kind">${x[1]} líneas</div>` : "—";
   return `<p class="lede">Margen = cuánto se queda la casa: suma de las probabilidades implícitas de los dos lados menos 100%. Cuanto más bajo, mejor paga. Calculado con todas las cuotas por casa que hemos guardado esta temporada (las de EE. UU. vienen de Covers; Rushbet y BetPlay se bajan desde el PC de Nicolas). Betano no se puede leer; la web estima sus props con un margen de ${((AA_CO - 1) * 100).toFixed(0)}%. En props, la web usa la mejor cuota entre 6 casas de EE. UU. (margen conjunto ~${((AA_US - 1) * 100).toFixed(1)}%).</p>
-  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr><th class="pk">Casa</th><th class="r">Ganador</th><th class="r">Hándicap</th><th class="r">Total</th><th class="r">Props</th></tr></thead><tbody>
-  ${LEAGUE.books.map(b => `<tr><td class="head pk">${esc(b.book)} ${b.region === "CO" ? coTag({ region: "CO" }) : ""}</td><td class="r num">${c(b.ml)}</td><td class="r num">${c(b.spread)}</td><td class="r num">${c(b.total)}</td><td class="r num">${c(b.props)}</td></tr>`).join("")}</tbody></table></div>`;
+  <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe sortable" data-sk="lg-bk"><thead><tr><th class="pk">Casa</th><th class="r" data-asc>Ganador</th><th class="r" data-asc>Hándicap</th><th class="r" data-asc>Total</th><th class="r" data-asc>Props</th></tr></thead><tbody>
+  ${LEAGUE.books.map(b => `<tr><td class="head pk">${esc(b.book)} ${b.region === "CO" ? coTag({ region: "CO" }) : ""}</td><td class="r num" data-v="${b.ml ? b.ml[0] : ""}">${c(b.ml)}</td><td class="r num" data-v="${b.spread ? b.spread[0] : ""}">${c(b.spread)}</td><td class="r num" data-v="${b.total ? b.total[0] : ""}">${c(b.total)}</td><td class="r num" data-v="${b.props ? b.props[0] : ""}">${c(b.props)}</td></tr>`).join("")}</tbody></table></div>`;
 }
 
 // Pick del día (idea 6): el pick con valor de mayor EV de la jornada, con su historial (el de mayor EV de cada jornada)
@@ -3860,7 +4005,7 @@ function route() {
   const id = location.hash.slice(1);
   window.scrollTo(0, 0);
   const game = id && INDEX.games.find(g => g.id === id);
-  const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" ? "cup" : "reg";
+  const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" || id === "copa-grupos" ? "cup" : "reg";
   // la pestaña NBA Cup (y sus partidos) cambia la paleta y la tipografía
   if (scope === "cup") document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
   ["#tab-reg", "#tab-cup", "#tab-rk", "#tab-lg", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
@@ -3870,7 +4015,7 @@ function route() {
   $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
   SEG = game || id.startsWith("todos") ? "all" : "top";
   BS.k = "ev"; BS.asc = false;
-  if (game) renderGame(id); else if (id === "mis-picks") renderMine(); else if (id === "rachas") renderStreaks(); else if (id === "liga") renderLeague(); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
+  if (game) renderGame(id); else if (id === "mis-picks") renderMine(); else if (id === "rachas") renderStreaks(); else if (id === "liga") renderLeague(); else if (id === "copa-grupos") cupGroupsPage(); else if (id.startsWith("todos")) renderAll(scope); else renderIndex(scope);
 }
 
 // Mi combinada: el usuario junta picks de cualquier parte de la página (botón "+" de cada pick, "Agregar a mi combinada"
