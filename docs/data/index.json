@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T23:20+00:00",
+ "generated": "2026-11-13T00:23+00:00",
  "value_ev": 0.03,
  "model": "1.6.1",
  "mkt_w": 0.25,
@@ -68,7 +68,7 @@
   },
   "2026-11-12": {
    "morning": "2026-11-12T16:40+00:00",
-   "pregame": "2026-11-12T23:20+00:00"
+   "pregame": "2026-11-13T00:23+00:00"
   }
  },
  "history": [
@@ -124533,7 +124533,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": -5.5,
       "odds": -114,
       "dec": 1.877,
@@ -124815,25 +124815,25 @@
      "player": null,
      "team": "MIN",
      "line": null,
-     "odds": -217,
-     "dec": 1.461,
+     "odds": -222,
+     "dec": 1.451,
      "odds_assumed": false,
-     "p": 0.681,
-     "implied": 0.685,
-     "edge": -0.003,
+     "p": 0.686,
+     "implied": 0.689,
+     "edge": -0.004,
      "ev": -0.005,
      "value": false,
      "n_books": 10,
      "best": {
-      "book": "Hard Rock Bet",
+      "book": "FanDuel",
       "line": null,
-      "odds": -200,
-      "dec": 1.5,
-      "p": 0.681,
-      "ev": 0.022
+      "odds": -215,
+      "dec": 1.465,
+      "p": 0.686,
+      "ev": 0.005
      },
      "p_model": 0.758,
-     "p_mkt": 0.656,
+     "p_mkt": 0.661,
      "cand": false,
      "open": [
       null,
@@ -125890,37 +125890,6 @@
      "mean": 9.4
     },
     {
-     "kind": "total",
-     "label": "Under 227.5",
-     "player": null,
-     "team": null,
-     "line": 227.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.51,
-     "implied": 0.524,
-     "edge": -0.013,
-     "ev": -0.025,
-     "value": false,
-     "n_books": 1,
-     "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
-      "line": 227.5,
-      "odds": -110,
-      "dec": 1.909,
-      "p": 0.51,
-      "ev": -0.026
-     },
-     "p_model": 0.542,
-     "p_mkt": 0.5,
-     "cand": false,
-     "open": [
-      227.5,
-      1.909
-     ]
-    },
-    {
      "kind": "prop",
      "label": "Rudy Gobert Over 20.5 PTS+REB",
      "player": "Rudy Gobert",
@@ -126432,6 +126401,37 @@
      "mean": 9.1
     },
     {
+     "kind": "total",
+     "label": "Under 226.5",
+     "player": null,
+     "team": null,
+     "line": 226.5,
+     "odds": -115,
+     "dec": 1.87,
+     "odds_assumed": false,
+     "p": 0.513,
+     "implied": 0.535,
+     "edge": -0.021,
+     "ev": -0.04,
+     "value": false,
+     "n_books": 1,
+     "best": {
+      "book": "scoresandodds (consenso 19:25 ET)",
+      "line": 226.5,
+      "odds": -115,
+      "dec": 1.87,
+      "p": 0.513,
+      "ev": -0.041
+     },
+     "p_model": 0.521,
+     "p_mkt": 0.511,
+     "cand": false,
+     "open": [
+      227.5,
+      1.909
+     ]
+    },
+    {
      "kind": "prop",
      "label": "LaMelo Ball Under 3.5 Triples",
      "player": "LaMelo Ball",
@@ -126890,6 +126890,37 @@
       1.941
      ],
      "mean": 9.1
+    },
+    {
+     "kind": "total",
+     "label": "Over 226.5",
+     "player": null,
+     "team": null,
+     "line": 226.5,
+     "odds": -105,
+     "dec": 1.952,
+     "odds_assumed": false,
+     "p": 0.487,
+     "implied": 0.512,
+     "edge": -0.026,
+     "ev": -0.05,
+     "value": false,
+     "n_books": 1,
+     "best": {
+      "book": "scoresandodds (consenso 19:25 ET)",
+      "line": 226.5,
+      "odds": -105,
+      "dec": 1.952,
+      "p": 0.487,
+      "ev": -0.049
+     },
+     "p_model": 0.479,
+     "p_mkt": 0.489,
+     "cand": false,
+     "open": [
+      227.5,
+      1.909
+     ]
     },
     {
      "kind": "prop",
@@ -127567,37 +127598,6 @@
       1.869
      ],
      "mean": 20.8
-    },
-    {
-     "kind": "total",
-     "label": "Over 227.5",
-     "player": null,
-     "team": null,
-     "line": 227.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.489,
-     "implied": 0.524,
-     "edge": -0.034,
-     "ev": -0.066,
-     "value": false,
-     "n_books": 1,
-     "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
-      "line": 227.5,
-      "odds": -110,
-      "dec": 1.909,
-      "p": 0.489,
-      "ev": -0.066
-     },
-     "p_model": 0.458,
-     "p_mkt": 0.5,
-     "cand": false,
-     "open": [
-      227.5,
-      1.909
-     ]
     },
     {
      "kind": "prop",
@@ -128897,7 +128897,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": 5.5,
       "odds": -106,
       "dec": 1.943,
@@ -129288,6 +129288,37 @@
      "mean": 1.8
     },
     {
+     "kind": "ml",
+     "label": "DAL gana",
+     "player": null,
+     "team": "DAL",
+     "line": null,
+     "odds": 184,
+     "dec": 2.835,
+     "odds_assumed": false,
+     "p": 0.314,
+     "implied": 0.353,
+     "edge": -0.038,
+     "ev": -0.109,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "BetRivers",
+      "line": null,
+      "odds": 195,
+      "dec": 2.95,
+      "p": 0.314,
+      "ev": -0.074
+     },
+     "p_model": 0.242,
+     "p_mkt": 0.339,
+     "cand": false,
+     "open": [
+      null,
+      2.784
+     ]
+    },
+    {
      "kind": "prop",
      "label": "Terrence Shannon Jr Under 9.5 Puntos",
      "player": "Terrence Shannon Jr",
@@ -129418,37 +129449,6 @@
       1.868
      ],
      "mean": 10.7
-    },
-    {
-     "kind": "ml",
-     "label": "DAL gana",
-     "player": null,
-     "team": "DAL",
-     "line": null,
-     "odds": 178,
-     "dec": 2.784,
-     "odds_assumed": false,
-     "p": 0.319,
-     "implied": 0.359,
-     "edge": -0.041,
-     "ev": -0.113,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "Caesars",
-      "line": null,
-      "odds": 185,
-      "dec": 2.85,
-      "p": 0.319,
-      "ev": -0.091
-     },
-     "p_model": 0.242,
-     "p_mkt": 0.344,
-     "cand": false,
-     "open": [
-      null,
-      2.784
-     ]
     },
     {
      "kind": "prop",
@@ -133825,7 +133825,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": 214.5,
       "odds": -108,
       "dec": 1.926,
@@ -133889,37 +133889,6 @@
      }
     },
     {
-     "kind": "ml",
-     "label": "CHA gana",
-     "player": null,
-     "team": "CHA",
-     "line": null,
-     "odds": 200,
-     "dec": 3.002,
-     "odds_assumed": false,
-     "p": 0.341,
-     "implied": 0.333,
-     "edge": 0.008,
-     "ev": 0.024,
-     "value": false,
-     "n_books": 10,
-     "best": {
-      "book": "bet365",
-      "line": null,
-      "odds": 205,
-      "dec": 3.05,
-      "p": 0.341,
-      "ev": 0.04
-     },
-     "p_model": 0.406,
-     "p_mkt": 0.319,
-     "cand": false,
-     "open": [
-      null,
-      3.002
-     ]
-    },
-    {
      "kind": "prop",
      "label": "Grayson Allen Under 4.5 Asistencias",
      "player": "Grayson Allen",
@@ -133962,6 +133931,37 @@
       1.92
      ],
      "mean": 3.5
+    },
+    {
+     "kind": "ml",
+     "label": "CHA gana",
+     "player": null,
+     "team": "CHA",
+     "line": null,
+     "odds": 192,
+     "dec": 2.916,
+     "odds_assumed": false,
+     "p": 0.348,
+     "implied": 0.343,
+     "edge": 0.005,
+     "ev": 0.015,
+     "value": false,
+     "n_books": 10,
+     "best": {
+      "book": "scoresandodds (consenso 19:25 ET)",
+      "line": null,
+      "odds": 201,
+      "dec": 3.01,
+      "p": 0.348,
+      "ev": 0.047
+     },
+     "p_model": 0.406,
+     "p_mkt": 0.329,
+     "cand": false,
+     "open": [
+      null,
+      3.002
+     ]
     },
     {
      "kind": "prop",
@@ -134291,7 +134291,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": 6.5,
       "odds": -112,
       "dec": 1.893,
@@ -137108,25 +137108,25 @@
      "player": null,
      "team": "PHX",
      "line": null,
-     "odds": -245,
-     "dec": 1.409,
+     "odds": -233,
+     "dec": 1.429,
      "odds_assumed": false,
-     "p": 0.659,
-     "implied": 0.71,
-     "edge": -0.051,
-     "ev": -0.072,
+     "p": 0.652,
+     "implied": 0.7,
+     "edge": -0.048,
+     "ev": -0.069,
      "value": false,
      "n_books": 10,
      "best": {
       "book": "theScore Bet",
       "line": null,
-      "odds": -230,
-      "dec": 1.435,
-      "p": 0.659,
-      "ev": -0.054
+      "odds": -215,
+      "dec": 1.465,
+      "p": 0.652,
+      "ev": -0.045
      },
      "p_model": 0.594,
-     "p_mkt": 0.681,
+     "p_mkt": 0.671,
      "cand": false,
      "open": [
       null,
@@ -137841,7 +137841,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": -6.5,
       "odds": -108,
       "dec": 1.926,
@@ -139219,7 +139219,7 @@
      "value": false,
      "n_books": 1,
      "best": {
-      "book": "scoresandodds (consenso 11:40 ET)",
+      "book": "scoresandodds (consenso 19:25 ET)",
       "line": 214.5,
       "odds": -112,
       "dec": 1.893,
