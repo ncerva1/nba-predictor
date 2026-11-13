@@ -9,7 +9,8 @@
   "notes": [
    "OKC: Holmgren, J. Williams, Wallace, Jaylin Williams y Sorber OUT; A. Mitchell (tobillo) GTD con líneas: 0.7",
    "LAC: Ingram (Aquiles) OUT el viernes; Beal, Niederhauser y Miller OUT; Christie (tobillo) GTD",
-   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC"
+   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
+   "Cuotas 18:20 ET (scoresandodds): OKC@LAC spread local +6.5, total 222.5, ML -283/231"
   ],
   "out": [
    "Thomas Sorber",
@@ -1046,34 +1047,32 @@
  ],
  "market": {
   "source": "NBA.com/games 13-nov (9 partidos, todos de la NBA Cup); Covers matchup/<id>/odds (8-9 casas en 7 partidos, ~12:10 ET) + ML del comparador de Covers (NYK@IND) + consenso scoresandodds.com/nba?date=2026-11-13&s=1 en los 9; props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-13&s=1 (~12:20 ET, mejor cuota por lado)",
-  "ml_home": 226,
-  "ml_away": -276,
-  "spread_home": 7.5,
-  "total": 221.5
+  "ml_home": 231,
+  "ml_away": -283,
+  "spread_home": 6.5,
+  "total": 222.5
  },
  "prop_lines": {
   "Shai Gilgeous-Alexander": {
    "pts": [
-    30.5,
-    -120,
-    -112,
-    31.5
+    31.5,
+    -105,
+    -110
    ],
    "reb": [
-    3.5,
-    -155,
-    -140,
-    4.5
+    4.5,
+    125,
+    -145
    ],
    "ast": [
     5.5,
-    -111,
-    -103
+    -112,
+    101
    ],
    "fg3m": [
     2.5,
-    138,
-    -164
+    135,
+    -165
    ],
    "pr": [
     35.5,
@@ -1098,25 +1097,25 @@
   },
   "Ajay Mitchell": {
    "pts": [
-    18.5,
-    -105,
-    -105,
-    19.5
+    17.5,
+    -120,
+    -116,
+    18.5
    ],
    "reb": [
     3.5,
-    -114,
-    110
+    -110,
+    -106
    ],
    "ast": [
     3.5,
-    110,
-    -119
+    116,
+    -125
    ],
    "fg3m": [
     1.5,
-    175,
-    -183
+    180,
+    -197
    ],
    "pr": [
     22.5,
@@ -1142,18 +1141,20 @@
   "Darius Garland": {
    "pts": [
     18.5,
-    -106,
-    -102
+    -120,
+    -120,
+    19.5
    ],
    "ast": [
     6.5,
-    -133,
-    115
+    -130,
+    -145,
+    7.5
    ],
    "fg3m": [
     2.5,
-    120,
-    -136
+    105,
+    -125
    ],
    "pr": [
     21.5,
@@ -1178,15 +1179,15 @@
   },
   "Jared McCain": {
    "pts": [
-    13.5,
-    -130,
+    14.5,
+    -108,
     -120,
     15.5
    ],
    "fg3m": [
     2.5,
-    115,
-    -121
+    110,
+    -130
    ],
    "pr": [
     18.5,
@@ -1212,19 +1213,19 @@
   "Rui Hachimura": {
    "pts": [
     14.5,
-    -120,
-    -112,
+    -116,
+    -125,
     15.5
    ],
    "reb": [
     4.5,
-    -130,
-    118
+    -140,
+    125
    ],
    "fg3m": [
     2.5,
-    130,
-    -140
+    135,
+    -138
    ],
    "pr": [
     20.5,
@@ -1249,14 +1250,15 @@
   },
   "Brook Lopez": {
    "pts": [
-    11.5,
-    100,
-    -110
+    10.5,
+    -129,
+    -110,
+    11.5
    ],
    "reb": [
     5.5,
     120,
-    -129
+    -138
    ],
    "fg3m": [
     1.5,
@@ -1268,7 +1270,7 @@
    "pts": [
     10.5,
     100,
-    -113
+    -110
    ],
    "reb": [
     7.5,
@@ -1279,20 +1281,20 @@
   },
   "Keaton Wagler": {
    "pts": [
-    10.5,
-    -104,
-    -125,
-    11.5
+    9.5,
+    -135,
+    -124,
+    10.5
    ],
    "ast": [
     2.5,
-    -173,
-    -190,
+    -158,
+    -175,
     3.5
    ],
    "fg3m": [
     1.5,
-    135,
+    137,
     -130
    ]
   },
@@ -1316,15 +1318,14 @@
   },
   "Isaiah Hartenstein": {
    "reb": [
-    9.5,
-    -150,
-    -123,
-    10.5
+    10.5,
+    102,
+    -121
    ],
    "ast": [
     3.5,
     -155,
-    -161,
+    -150,
     4.5
    ]
   },
@@ -1338,37 +1339,37 @@
   "Kenrich Williams": {
    "reb": [
     4.5,
-    -106,
+    -104,
     -112
    ],
    "fg3m": [
     1.5,
-    155,
-    -186
+    160,
+    -190
    ]
   },
   "Kris Dunn": {
    "reb": [
     3.5,
-    -115,
-    107
+    -120,
+    111
    ],
    "ast": [
     3.5,
-    -115,
-    110
+    -120,
+    105
    ]
   },
   "Max Strus": {
    "reb": [
     3.5,
-    -120,
-    105
+    -125,
+    110
    ],
    "fg3m": [
     2.5,
-    144,
-    -159
+    145,
+    -156
    ]
   },
   "Bennett Stirtz": {
@@ -1382,14 +1383,14 @@
    "fg3m": [
     1.5,
     125,
-    -140
+    -145
    ]
   },
   "Alex Caruso": {
    "fg3m": [
     1.5,
-    165,
-    -165
+    160,
+    -190
    ]
   }
  },

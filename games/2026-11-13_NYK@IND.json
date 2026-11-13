@@ -11,7 +11,8 @@
    "Nesmith (rodilla) salió del partido del 11-nov; CBS GTD pero las casas le dan líneas: 0.75. McConnell (isquiotibial) GTD: 0.5",
    "NYK sin bajas en ESPN/CBS",
    "Covers sin líneas para este partido: ML de 9 casas del comparador + consenso de scoresandodds",
-   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC"
+   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
+   "Cuotas 18:20 ET (scoresandodds): NYK@IND spread local +7.5, total 219.5, ML -269/220"
   ],
   "out": [
    "Tyrese Haliburton",
@@ -1228,27 +1229,26 @@
  ],
  "market": {
   "source": "NBA.com/games 13-nov (9 partidos, todos de la NBA Cup); Covers matchup/<id>/odds (8-9 casas en 7 partidos, ~12:10 ET) + ML del comparador de Covers (NYK@IND) + consenso scoresandodds.com/nba?date=2026-11-13&s=1 en los 9; props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-13&s=1 (~12:20 ET, mejor cuota por lado)",
-  "ml_home": 261,
-  "ml_away": -324,
-  "spread_home": 8.5,
+  "ml_home": 220,
+  "ml_away": -269,
+  "spread_home": 7.5,
   "total": 219.5
  },
  "prop_lines": {
   "Jalen Brunson": {
    "pts": [
-    24.5,
-    -120,
-    -125,
-    25.5
+    25.5,
+    -100,
+    -115
    ],
    "ast": [
     6.5,
     115,
-    -138
+    -135
    ],
    "fg3m": [
     2.5,
-    110,
+    105,
     -130
    ],
    "pr": [
@@ -1274,24 +1274,25 @@
   },
   "Pascal Siakam": {
    "pts": [
-    21.5,
-    -105,
-    -105
+    20.5,
+    -111,
+    -123,
+    21.5
    ],
    "reb": [
     5.5,
     -145,
-    -134,
+    -135,
     6.5
    ],
    "ast": [
     3.5,
-    -125,
-    103
+    -113,
+    105
    ],
    "fg3m": [
     1.5,
-    105,
+    -105,
     105
    ],
    "pr": [
@@ -1318,24 +1319,24 @@
   "Karl-Anthony Towns": {
    "pts": [
     20.5,
-    -105,
-    -121,
+    -112,
+    -123,
     21.5
    ],
    "reb": [
     12.5,
-    -110,
-    -102
+    -115,
+    -100
    ],
    "ast": [
     3.5,
-    102,
+    110,
     -125
    ],
    "fg3m": [
     1.5,
-    129,
-    -150
+    120,
+    -136
    ],
    "pr": [
     33.5,
@@ -1361,20 +1362,19 @@
   "OG Anunoby": {
    "pts": [
     17.5,
-    -109,
-    -112
+    -112,
+    -110
    ],
    "reb": [
     4.5,
     -185,
-    -140,
+    -141,
     5.5
    ],
    "fg3m": [
-    1.5,
-    -175,
-    -175,
-    2.5
+    2.5,
+    154,
+    -165
    ],
    "pr": [
     22.5,
@@ -1399,20 +1399,19 @@
   },
   "Andrew Nembhard": {
    "pts": [
-    14.5,
-    -125,
-    -113,
-    15.5
+    15.5,
+    102,
+    -115
    ],
    "ast": [
     7.5,
-    -112,
-    -102
+    100,
+    -112
    ],
    "fg3m": [
     1.5,
-    -165,
-    -190,
+    -172,
+    -180,
     2.5
    ],
    "pr": [
@@ -1440,26 +1439,25 @@
    "pts": [
     12.5,
     -112,
-    -140,
-    13.5
+    -102
    ],
    "reb": [
     9.5,
-    -135,
-    -134,
-    10.5
+    -114,
+    -104
    ]
   },
   "Aaron Nesmith": {
    "pts": [
-    12.5,
-    100,
-    -125
+    11.5,
+    -120,
+    -120,
+    12.5
    ],
    "fg3m": [
     2.5,
-    150,
-    -190
+    145,
+    -160
    ]
   },
   "Kelly Oubre Jr.": {
@@ -1485,43 +1483,42 @@
    "pts": [
     9.5,
     -110,
-    -130,
+    -120,
     10.5
    ],
    "reb": [
     3.5,
-    -150,
-    -180,
+    -145,
+    -155,
     4.5
    ],
    "fg3m": [
     1.5,
-    127,
-    -138
+    115,
+    -134
    ]
   },
   "Josh Hart": {
    "reb": [
-    6.5,
-    -120,
-    -130,
-    7.5
+    7.5,
+    106,
+    -120
    ],
    "ast": [
     3.5,
-    -105,
-    100
+    -130,
+    112
    ],
    "fg3m": [
     1.5,
-    158,
-    -140
+    145,
+    -181
    ]
   },
   "Andre Drummond": {
    "reb": [
     6.5,
-    -108,
+    105,
     -112
    ]
   },
@@ -1545,15 +1542,15 @@
   "Landry Shamet": {
    "fg3m": [
     1.5,
-    -134,
-    130
+    -145,
+    135
    ]
   },
   "Miles McBride": {
    "fg3m": [
     1.5,
     100,
-    -105
+    105
    ]
   }
  },

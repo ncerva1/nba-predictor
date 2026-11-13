@@ -9,20 +9,23 @@
   "notes": [
    "MEM: Edey (tobillo) OUT según CBS (vuelve ~14-nov) y sin líneas; Post (conmoción) y Pippen (espalda) OUT",
    "NOP: Watford OUT; Murphy III, Mathurin, McGowens y Missi doubtful (sin líneas en las casas)",
-   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC"
+   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
+   "18:20 ET (ESPN 13-nov): D. Murray (tobillo), T. Murphy III (rodilla), Missi (rodilla) y McGowens (codo) OUT; Mathurin questionable 0.5",
+   "Cuotas 18:20 ET (scoresandodds): MEM@NOP spread local +3.5, total 235.5, ML -166/140"
   ],
   "out": [
    "Zach Edey",
    "Quinten Post",
    "Scotty Pippen Jr.",
    "Richie Saunders",
-   "Trendon Watford"
+   "Trendon Watford",
+   "Dejounte Murray",
+   "Trey Murphy III",
+   "Yves Missi",
+   "Bryce McGowens"
   ],
   "gtd": {
-   "Trey Murphy III": 0.25,
-   "Bennedict Mathurin": 0.25,
-   "Bryce McGowens": 0.2,
-   "Yves Missi": 0.2
+   "Bennedict Mathurin": 0.5
   },
   "reserves": {
    "MEM": [
@@ -143,52 +146,10 @@
  "players": [
   {
    "team": "NOP",
-   "name": "Trey Murphy III",
-   "pos": "SF",
-   "starter": true,
-   "min": 26.6,
-   "g_cur": 9,
-   "p_play": 0.25,
-   "cur": {
-    "min": 32.8,
-    "pts": 15.6,
-    "reb": 4.8,
-    "ast": 3.6,
-    "fg3m": 2.2,
-    "fgm": 5.2,
-    "fga": 11.2,
-    "fg3a": 5.9,
-    "stl": 1.0,
-    "blk": 0.2,
-    "tov": 1.7,
-    "pf": 2.6,
-    "ftm": 2.9,
-    "fta": 3.3
-   },
-   "prior": {
-    "min": 35.5,
-    "pts": 21.52,
-    "reb": 5.71,
-    "ast": 3.79,
-    "fg3m": 3.24,
-    "fgm": 7.48,
-    "fga": 15.91,
-    "fg3a": 8.56,
-    "stl": 1.5,
-    "blk": 0.36,
-    "tov": 1.82,
-    "pf": 2.09,
-    "ftm": 3.3,
-    "fta": 3.73
-   },
-   "slot": "SF"
-  },
-  {
-   "team": "NOP",
    "name": "Zion Williamson",
    "pos": "PF",
    "starter": true,
-   "min": 26.5,
+   "min": 38.0,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -223,56 +184,14 @@
     "ftm": 5.37,
     "fta": 7.5
    },
-   "slot": "PF"
-  },
-  {
-   "team": "NOP",
-   "name": "Dejounte Murray",
-   "pos": "PG",
-   "starter": true,
-   "min": 25.4,
-   "g_cur": 9,
-   "p_play": 1.0,
-   "cur": {
-    "min": 31.3,
-    "pts": 13.4,
-    "reb": 4.6,
-    "ast": 4.4,
-    "fg3m": 0.9,
-    "fgm": 4.9,
-    "fga": 11.3,
-    "fg3a": 3.0,
-    "stl": 1.6,
-    "blk": 0.6,
-    "tov": 2.3,
-    "pf": 2.3,
-    "ftm": 2.8,
-    "fta": 3.0
-   },
-   "prior": {
-    "min": 27.9,
-    "pts": 16.71,
-    "reb": 5.36,
-    "ast": 6.36,
-    "fg3m": 1.36,
-    "fgm": 6.29,
-    "fga": 13.0,
-    "fg3a": 4.43,
-    "stl": 1.64,
-    "blk": 0.21,
-    "tov": 3.36,
-    "pf": 2.36,
-    "ftm": 2.79,
-    "fta": 3.21
-   },
-   "slot": "SG"
+   "slot": "SF"
   },
   {
    "team": "NOP",
    "name": "Jeremiah Fears",
    "pos": "PG",
    "starter": true,
-   "min": 23.4,
+   "min": 34.3,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -314,7 +233,7 @@
    "name": "Saddiq Bey",
    "pos": "SF",
    "starter": false,
-   "min": 21.8,
+   "min": 32.0,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -354,8 +273,8 @@
    "team": "NOP",
    "name": "Herbert Jones",
    "pos": "SF",
-   "starter": false,
-   "min": 18.5,
+   "starter": true,
+   "min": 27.1,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -389,14 +308,15 @@
     "pf": 3.16,
     "ftm": 0.89,
     "fta": 1.11
-   }
+   },
+   "slot": "SG"
   },
   {
    "team": "NOP",
    "name": "Derik Queen",
    "pos": "C",
    "starter": false,
-   "min": 17.5,
+   "min": 25.7,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -437,7 +357,7 @@
    "name": "Jordan Poole",
    "pos": "SG",
    "starter": false,
-   "min": 16.1,
+   "min": 23.6,
    "g_cur": 6,
    "p_play": 1.0,
    "cur": {
@@ -475,52 +395,10 @@
   },
   {
    "team": "NOP",
-   "name": "Yves Missi",
-   "pos": "C",
-   "starter": true,
-   "min": 15.8,
-   "g_cur": 2,
-   "p_play": 0.2,
-   "cur": {
-    "min": 19.5,
-    "pts": 9.5,
-    "reb": 7.5,
-    "ast": 2.5,
-    "fg3m": 0.0,
-    "fgm": 4.0,
-    "fga": 4.5,
-    "fg3a": 0.0,
-    "stl": 1.0,
-    "blk": 2.0,
-    "tov": 0.5,
-    "pf": 1.5,
-    "ftm": 1.5,
-    "fta": 2.0
-   },
-   "prior": {
-    "min": 19.6,
-    "pts": 5.71,
-    "reb": 5.83,
-    "ast": 1.27,
-    "fg3m": 0.0,
-    "fgm": 2.42,
-    "fga": 4.45,
-    "fg3a": 0.02,
-    "stl": 0.3,
-    "blk": 1.53,
-    "tov": 0.82,
-    "pf": 1.71,
-    "ftm": 0.86,
-    "fta": 1.55
-   },
-   "slot": "C"
-  },
-  {
-   "team": "NOP",
    "name": "Karlo Matković",
    "pos": "PF",
-   "starter": false,
-   "min": 15.1,
+   "starter": true,
+   "min": 22.1,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -554,16 +432,17 @@
     "pf": 1.69,
     "ftm": 0.48,
     "fta": 0.66
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "NOP",
    "name": "Bennedict Mathurin",
    "pos": "SF",
    "starter": false,
-   "min": 12.8,
+   "min": 18.8,
    "g_cur": 11,
-   "p_play": 0.25,
+   "p_play": 0.5,
    "cur": {
     "min": 15.8,
     "pts": 6.0,
@@ -601,8 +480,8 @@
    "team": "NOP",
    "name": "DeAndre Jordan",
    "pos": "C",
-   "starter": false,
-   "min": 11.9,
+   "starter": true,
+   "min": 17.5,
    "g_cur": 3,
    "p_play": 1.0,
    "cur": {
@@ -636,48 +515,8 @@
     "pf": 1.33,
     "ftm": 0.92,
     "fta": 1.42
-   }
-  },
-  {
-   "team": "NOP",
-   "name": "Bryce McGowens",
-   "pos": "SG",
-   "starter": false,
-   "min": 8.6,
-   "g_cur": 7,
-   "p_play": 0.2,
-   "cur": {
-    "min": 10.6,
-    "pts": 3.7,
-    "reb": 0.7,
-    "ast": 0.6,
-    "fg3m": 0.3,
-    "fgm": 0.9,
-    "fga": 2.4,
-    "fg3a": 1.0,
-    "stl": 1.1,
-    "blk": 0.3,
-    "tov": 0.4,
-    "pf": 0.9,
-    "ftm": 1.7,
-    "fta": 2.0
    },
-   "prior": {
-    "min": 21.0,
-    "pts": 8.1,
-    "reb": 2.1,
-    "ast": 1.48,
-    "fg3m": 0.9,
-    "fgm": 2.71,
-    "fga": 5.64,
-    "fg3a": 2.21,
-    "stl": 0.64,
-    "blk": 0.19,
-    "tov": 0.4,
-    "pf": 2.1,
-    "ftm": 1.76,
-    "fta": 2.26
-   }
+   "slot": "C"
   },
   {
    "team": "MEM",
@@ -1097,18 +936,17 @@
  ],
  "market": {
   "source": "NBA.com/games 13-nov (9 partidos, todos de la NBA Cup); Covers matchup/<id>/odds (8-9 casas en 7 partidos, ~12:10 ET) + ML del comparador de Covers (NYK@IND) + consenso scoresandodds.com/nba?date=2026-11-13&s=1 en los 9; props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-13&s=1 (~12:20 ET, mejor cuota por lado)",
-  "ml_home": 133,
-  "ml_away": -158,
+  "ml_home": 140,
+  "ml_away": -166,
   "spread_home": 3.5,
   "total": 235.5
  },
  "prop_lines": {
   "Ty Jerome": {
    "pts": [
-    22.5,
-    -112,
-    -105,
-    23.5
+    23.5,
+    -110,
+    -104
    ],
    "ast": [
     5.5,
@@ -1117,8 +955,8 @@
    ],
    "fg3m": [
     2.5,
-    -105,
-    -105
+    -110,
+    -104
    ],
    "pr": [
     27.5,
@@ -1144,13 +982,15 @@
   "Zion Williamson": {
    "pts": [
     21.5,
-    -105,
-    -110
+    -125,
+    -115,
+    22.5
    ],
    "reb": [
     5.5,
-    -106,
-    100
+    -120,
+    -145,
+    6.5
    ],
    "fg3m": [
     0.5,
@@ -1180,24 +1020,25 @@
   },
   "Jeremiah Fears": {
    "pts": [
-    17.5,
-    -108,
-    -110
+    19.5,
+    -105,
+    100
    ],
    "reb": [
     4.5,
-    -114,
-    100
+    -120,
+    106
    ],
    "ast": [
     5.5,
-    116,
-    -125
+    -145,
+    -135,
+    6.5
    ],
    "fg3m": [
     1.5,
-    100,
-    -110
+    -115,
+    105
    ],
    "pr": [
     22.5,
@@ -1223,23 +1064,23 @@
   "Cameron Boozer": {
    "pts": [
     17.5,
-    -112,
-    -108
+    -110,
+    -104
    ],
    "reb": [
     9.5,
     100,
-    -122
+    -115
    ],
    "ast": [
     4.5,
-    -135,
-    -158,
+    -125,
+    -150,
     5.5
    ],
    "fg3m": [
     1.5,
-    -125,
+    -140,
     125
    ],
    "pr": [
@@ -1266,33 +1107,32 @@
   "Cedric Coward": {
    "pts": [
     13.5,
-    -110,
-    -120,
+    -106,
+    -125,
     14.5
    ],
    "reb": [
     6.5,
-    -130,
-    -160,
+    -155,
+    -120,
     7.5
    ],
    "fg3m": [
     1.5,
     -125,
-    110
+    108
    ]
   },
   "Saddiq Bey": {
    "pts": [
-    14.5,
+    17.5,
     -105,
-    -112
+    -110
    ],
    "reb": [
-    3.5,
-    -152,
-    -150,
-    4.5
+    4.5,
+    -114,
+    102
    ],
    "ast": [
     1.5,
@@ -1301,8 +1141,9 @@
    ],
    "fg3m": [
     1.5,
-    -135,
-    117
+    -176,
+    -170,
+    2.5
    ],
    "pr": [
     18.5,
@@ -1325,73 +1166,56 @@
     -110
    ]
   },
-  "Dejounte Murray": {
-   "pts": [
-    13.5,
-    105,
-    100
-   ],
-   "reb": [
-    4.5,
-    -115,
-    -105
-   ],
-   "ast": [
-    4.5,
-    -120,
-    105
-   ]
-  },
   "Jerami Grant": {
    "pts": [
-    11.5,
-    -105,
-    -114
+    10.5,
+    -125,
+    -122,
+    11.5
    ],
    "fg3m": [
     1.5,
-    115,
-    -128
+    122,
+    -125
    ]
   },
   "Isaiah Stewart": {
    "pts": [
     10.5,
     -120,
-    -125,
+    -108,
     11.5
    ],
    "reb": [
     5.5,
-    122,
-    -138
+    110,
+    -122
    ]
   },
   "Jaylen Wells": {
    "pts": [
     10.5,
-    -130,
-    -125,
+    -118,
+    -124,
     11.5
    ],
    "fg3m": [
     1.5,
-    -137,
-    120
+    -130,
+    122
    ]
   },
   "Derik Queen": {
    "pts": [
-    9.5,
-    -130,
-    -115,
-    10.5
+    10.5,
+    -104,
+    -125,
+    11.5
    ],
    "reb": [
-    5.5,
-    -139,
-    -130,
-    6.5
+    6.5,
+    105,
+    -111
    ]
   },
   "Karlo Matković": {
@@ -1405,25 +1229,25 @@
   "Cam Spencer": {
    "ast": [
     4.5,
-    105,
-    -125
+    126,
+    -140
    ],
    "fg3m": [
     1.5,
     130,
-    -155
+    -153
    ]
   },
   "Herbert Jones": {
    "ast": [
-    1.5,
-    -140,
-    125
+    2.5,
+    130,
+    -165
    ],
    "fg3m": [
     1.5,
-    150,
-    -173
+    168,
+    -196
    ]
   }
  },

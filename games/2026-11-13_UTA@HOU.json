@@ -9,18 +9,19 @@
   "notes": [
    "UTA: Markkanen (mano) OUT ~1 mes, Jackson Jr. (rodilla) y Nurkic (pie) OUT; Alexander (rodilla) GTD",
    "HOU: Capela y Adams OUT (podrían volver el 15-nov)",
-   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC"
+   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
+   "18:20 ET: Trey Alexander OUT (ESPN, regreso est. 16-nov)",
+   "Cuotas 18:20 ET (scoresandodds): UTA@HOU spread local -17.5, total 219.5, ML 900/-1580"
   ],
   "out": [
    "Lauri Markkanen",
    "Jusuf Nurkic",
    "Jaren Jackson Jr.",
    "Clint Capela",
-   "Steven Adams"
+   "Steven Adams",
+   "Trey Alexander"
   ],
-  "gtd": {
-   "Trey Alexander": 0.4
-  },
+  "gtd": {},
   "reserves": {
    "UTA": [
     {
@@ -962,19 +963,18 @@
   "ml_home": -1580,
   "ml_away": 900,
   "spread_home": -17.5,
-  "total": 217.5
+  "total": 219.5
  },
  "prop_lines": {
   "Kevin Durant": {
    "pts": [
     21.5,
-    -125,
-    -118,
-    22.5
+    -102,
+    -105
    ],
    "reb": [
     5.5,
-    -111,
+    -105,
     -110
    ],
    "ast": [
@@ -984,8 +984,8 @@
    ],
    "fg3m": [
     1.5,
-    -130,
-    120
+    -125,
+    115
    ],
    "pr": [
     28.5,
@@ -1010,10 +1010,9 @@
   },
   "Alperen Sengun": {
    "pts": [
-    19.5,
-    -115,
-    -115,
-    20.5
+    20.5,
+    -105,
+    -108
    ],
    "reb": [
     9.5,
@@ -1022,8 +1021,8 @@
    ],
    "ast": [
     6.5,
-    -121,
-    100
+    -115,
+    -105
    ],
    "fg3m": [
     0.5,
@@ -1054,26 +1053,26 @@
   "Darryn Peterson": {
    "pts": [
     17.5,
-    -122,
-    -107,
+    -110,
+    -112,
     18.5
    ],
    "reb": [
     3.5,
     -150,
-    -150,
+    -146,
     4.5
    ],
    "ast": [
     3.5,
-    -165,
-    -162,
+    -150,
+    -158,
     4.5
    ],
    "fg3m": [
     2.5,
-    158,
-    -160
+    142,
+    -170
    ],
    "pr": [
     22.5,
@@ -1099,19 +1098,19 @@
   "Ace Bailey": {
    "pts": [
     13.5,
-    -125,
-    -124,
+    -120,
+    -120,
     14.5
    ],
    "reb": [
     5.5,
     105,
-    -115
+    -120
    ],
    "fg3m": [
     1.5,
-    -170,
-    -180,
+    -175,
+    -181,
     2.5
    ],
    "pr": [
@@ -1138,19 +1137,19 @@
   "Amen Thompson": {
    "pts": [
     15.5,
-    -125,
-    -102,
+    -122,
+    -111,
     16.5
    ],
    "reb": [
     7.5,
-    115,
+    110,
     -135
    ],
    "ast": [
     3.5,
     -105,
-    -109
+    -112
    ],
    "fg3m": [
     0.5,
@@ -1181,19 +1180,19 @@
   "Fred VanVleet": {
    "pts": [
     12.5,
-    -115,
-    -120,
+    -125,
+    -106,
     13.5
    ],
    "ast": [
     4.5,
-    -160,
+    -154,
     -140,
     5.5
    ],
    "fg3m": [
     2.5,
-    -115,
+    -110,
     -102
    ]
   },
@@ -1238,37 +1237,35 @@
   "Reed Sheppard": {
    "pts": [
     11.5,
-    -120,
-    -125,
-    12.5
+    -110,
+    -105
    ],
    "fg3m": [
     2.5,
-    120,
-    -112
+    121,
+    -145
    ]
   },
   "Keyonte George": {
    "pts": [
-    19.5,
-    -140,
-    -105,
-    21.5
+    20.5,
+    -104,
+    -110
    ],
    "reb": [
     3.5,
-    100,
-    -105
+    105,
+    102
    ],
    "ast": [
     5.5,
     -105,
-    -109
+    -105
    ],
    "fg3m": [
     1.5,
     -175,
-    -185,
+    -190,
     2.5
    ],
    "pr": [
@@ -1295,33 +1292,33 @@
   "Jaxson Hayes": {
    "reb": [
     5.5,
-    -105,
-    -110
+    -120,
+    102
    ]
   },
   "Mo Bamba": {
    "reb": [
     5.5,
-    -114,
+    -105,
     -114
    ]
   },
   "Tari Eason": {
    "reb": [
     5.5,
-    110,
-    -125
+    109,
+    -120
    ],
    "fg3m": [
     1.5,
-    158,
-    -180
+    155,
+    -175
    ]
   },
   "Isaiah Collier": {
    "ast": [
     3.5,
-    100,
+    102,
     -105
    ]
   }
