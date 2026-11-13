@@ -1304,7 +1304,7 @@ const betHead = (withGame, withRes, withHr) => `<thead><tr>${withGame ? bth("gam
 
 // Picks del modelo sin cuota (tiros de campo, doble-doble, triple-doble): las casas que leemos no publican esas líneas,
 // así que se muestra la probabilidad y la cuota mínima que debe pagar tu casa para que haya valor (EV >= umbral)
-const MP_CATS = { shots: 1, dd: 1 };
+const MP_CATS = { shots: 1, dd: 1, other: 1 };
 const dayModelPicks = todays => todays.flatMap(g => (g.model_picks || []).map(b => ({ ...b, _gid: g.id, _game: `${g.away} @ ${g.home}` })));
 // filtro por estadística dentro de la tabla (dobles, triples intentados, libres...): solo muestra u oculta filas;
 // en "Todas" se ven las MP_SHOW más probables
@@ -1328,7 +1328,7 @@ function mpBlock(list, withGame, noHead) {
   let n = 0;
   const vis = b => MP_ST === "all" ? n++ < MP_SHOW : b.stat === MP_ST;
   return `<div class="mp-wrap">${noHead ? "" : `<h3 class="mp-h">Picks del modelo sin cuota de casa</h3>`}
-  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Crea tu pick</b> en la página del partido o en Mi combinada.${hasHr(list) ? " <b>Últ. 10</b> y <b>H2H</b>: en cuántos de sus últimos partidos de esta temporada y de sus partidos contra este rival se habría cumplido la línea (los H2H de la temporada pasada no traen tiros, así que en tiros solo cuentan los de esta temporada)." : ""}</p>
+  <p class="muted">Las casas que podemos leer no publican estas líneas. Se muestra la probabilidad del modelo y la <b>cuota mínima</b> que debe pagar tu casa para que el pick tenga valor (EV ≥ +${(INDEX.value_ev * 100).toFixed(0)}%). En tiros (de campo, dobles, triples intentados y libres), pérdidas y faltas, la línea es la que pondría una casa a partir de su promedio por partido (la menos favorable de las dos alrededor de él); si tu casa tiene otra, usa <b>Crea tu pick</b> en la página del partido o en Mi combinada. En tiros la probabilidad ya viene ajustada hacia 50% porque en el histórico el modelo acertaba menos de lo que decía (pérdidas y faltas no lo necesitan).${hasHr(list) ? " <b>Últ. 10</b> y <b>H2H</b>: en cuántos de sus últimos partidos de esta temporada y de sus partidos contra este rival se habría cumplido la línea (los H2H de la temporada pasada no traen tiros, así que en tiros solo cuentan los de esta temporada)." : ""}</p>
   ${sts.length > 1 ? `<div class="filters mp-f" role="group" aria-label="Estadística">${["all", ...sts].map(k => `<button type="button" data-mpst="${k}" aria-pressed="${k === MP_ST}">${k === "all" ? "Todas" : STAT_BTN[k] || STAT_LABEL[k]} · ${k === "all" ? list.length : list.filter(b => b.stat === k).length}</button>`).join("")}</div>` : ""}
   <div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr>${withGame ? "<th>Partido</th>" : ""}<th class="pk">Pick</th><th class="r">Prob. modelo</th>${hasHr(list) ? HR_TH : ""}<th class="r">Cuota justa</th><th class="r">Cuota mínima</th><th class="r">Su promedio</th>${withRes ? '<th class="r">Resultado</th>' : ""}</tr></thead><tbody>
   ${list.map(b => `<tr data-st="${b.stat}"${vis(b) ? "" : " hidden"}${withGame ? ` class="link" data-go="${b._gid}"` : ""}>${withGame ? `<td class="head"><a href="#${b._gid}">${esc(b._game)}</a></td>` : ""}
@@ -3447,7 +3447,7 @@ document.addEventListener("click", e => {
 // ===== Ficha de jugador, Rachas y línea de cierre (ideas de bucketsbase, pedido de Nicolas 12-nov) =====
 // data/players/<fecha>.json (player_cards.py): últimos partidos de temporada regular (esta y la pasada) de cada
 // jugador de la jornada, sus líneas de la casa y el DvP de cada equipo (1 = el que menos concede).
-const PC_ST = ["pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "tov"];
+const PC_ST = ["pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra", "stl", "blk", "tov", "pf", "fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta"];
 const PC_SUM = { pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"] };
 const PC_DVP = { pts: "PTS", reb: "REB", ast: "AST", fg3m: "3PM", pra: "PRA", pr: "PRA", pa: "PRA", ra: "PRA", stl: "STL", blk: "BLK", tov: "TOV" };
 const PLF = {};
@@ -3499,6 +3499,8 @@ function ladP(ss, L) {
 const pcDefLine = () => {
   const m = PC.P && PC.P.m && PC.P.m[PC.st], ss = PC.sp && PC.sp[PC.st];
   if (m && m[0] != null) return m[0];
+  const mp = PC.P && PC.P.mp && PC.P.mp[PC.st];   // sin casa: la línea del pick del modelo (la de Rachas)
+  if (mp) return mp[0];
   if (ss && ss.line != null) return ss.line;
   const v = (PC.P ? PC.P.g : []).slice(0, 10).map(r => pcVal(PC.F, r, PC.st)).filter(x => x != null);
   return v.length ? Math.floor(v.reduce((a, b) => a + b, 0) / v.length) + .5 : .5;
@@ -3646,8 +3648,8 @@ $("#pcard").addEventListener("click", e => { if (e.target === e.currentTarget) e
 
 // Rachas (#rachas): jugadores que llevan varios partidos seguidos por encima o por debajo de su línea de HOY
 let RK = { side: "all", mk: "all", min: 4, agree: "all" };
-const RK_MK = { all: "Todos", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", combo: "Combinadas", def: "Robos, tapones, pérdidas" };
-const rkMk = st => PC_SUM[st] ? "combo" : ["stl", "blk", "tov"].includes(st) ? "def" : st;
+const RK_MK = { all: "Todos", pts: "Puntos", reb: "Rebotes", ast: "Asistencias", fg3m: "Triples", combo: "Combinadas", def: "Robos y tapones", shots: "Tiros", other: "Pérdidas y faltas" };
+const rkMk = st => PC_SUM[st] ? "combo" : ["stl", "blk"].includes(st) ? "def" : ["tov", "pf"].includes(st) ? "other" : CAT_OF[st] === "shots" ? "shots" : st;
 async function renderStreaks() {
   $("#app").innerHTML = `<p class="muted">Cargando rachas…</p>`;
   const F = await playersOf(DAY);
@@ -3664,6 +3666,14 @@ async function renderStreaks() {
       const l10 = P.g.map(r => pcVal(F, r, st)).filter(v => v != null).slice(0, 10), hit = l10.filter(v => s.side === "over" ? v > m[0] : v < m[0]).length;
       items.push({ name, P, st, line: m[0], side: s.side, n: s.n, dec: s.side === "over" ? m[1] : m[2], p: s.side === "over" ? m[3] : m[4], val: m[5], hit, n10: l10.length, g });
     }
+    // tiros, libres, pérdidas y faltas: sin línea de casa, se usa la del pick del modelo (la que pondría una casa)
+    for (const [st, [line, side, p]] of Object.entries(P.mp || {})) {
+      if (!PC_ST.includes(st) || (P.m || {})[st]) continue;
+      const s = streakOf(F, P.g, st, line);
+      if (s.n < 3) continue;
+      const l10 = P.g.map(r => pcVal(F, r, st)).filter(v => v != null).slice(0, 10), hit = l10.filter(v => s.side === "over" ? v > line : v < line).length;
+      items.push({ name, P, st, line, side: s.side, n: s.n, dec: null, p: s.side === side ? p : 1 - p, val: null, hit, n10: l10.length, g, ml: 1 });
+    }
   }
   const draw = () => {
     const list = items.filter(x => (RK.side === "all" || x.side === RK.side) && (RK.mk === "all" || rkMk(x.st) === RK.mk) && x.n >= RK.min
@@ -3675,7 +3685,7 @@ async function renderStreaks() {
     $("#rk-list").innerHTML = list.length ? `<p class="muted">${list.length} racha${list.length === 1 ? "" : "s"}</p><div class="panel tbl-wrap">${SWIPE_HINT}<table class="swipe"><thead><tr><th class="pk">Jugador</th><th>Partido</th><th>Racha</th><th class="r">Últ. 10</th><th class="r">Modelo</th><th class="r">Cuota</th></tr></thead><tbody>
       ${list.map(x => `<tr><td class="head pk">${pn(x.name, x.P.gid, x.st)}${x.P.flag ? ftag(x.P.flag) : ""}<div class="kind">${esc(x.P.t)} · ${esc(x.P.pos || "")}</div></td>
         <td data-label="Partido"><a href="#${esc(x.P.gid)}">${x.g ? `${esc(x.g.away)} @ ${esc(x.g.home)}` : esc(x.P.gid.slice(11))}</a>${x.g && x.g.tip_et ? `<div class="kind">${esc(x.g.tip_et)} ET</div>` : ""}</td>
-        <td data-label="Racha"><span class="rk-streak ${x.side === "over" ? "ov" : "un"}">${x.side === "over" ? "Over" : "Under"} ${x.line}</span> ${STAT_SHORT[x.st] || x.st}<div class="kind"><b>${x.n}</b> partidos seguidos</div></td>
+        <td data-label="Racha"><span class="rk-streak ${x.side === "over" ? "ov" : "un"}">${x.side === "over" ? "Over" : "Under"} ${x.line}</span> ${STAT_SHORT[x.st] || x.st}<div class="kind"><b>${x.n}</b> partidos seguidos${x.ml ? " · línea del modelo" : ""}</div></td>
         <td class="r num" data-label="Últ. 10">${hrPct([x.hit, x.n10])}</td>
         <td class="r" data-label="Modelo">${x.p != null ? `<span class="num">${pct(x.p, 0)}</span>` : `<span class="muted">—</span>`}${x.val === x.side ? `<div><span class="agree">pick con valor</span></div>` : x.val ? `<div><span class="disagree">pick al otro lado</span></div>` : x.p != null && x.p < .5 ? `<div><span class="disagree">va en contra</span></div>` : ""}</td>
         <td class="r num" data-label="Cuota">${x.dec ? x.dec.toFixed(2) : "—"}</td></tr>`).join("")}</tbody></table></div>`
@@ -3684,7 +3694,7 @@ async function renderStreaks() {
   $("#app").innerHTML = `<section class="section">
     <span class="eyebrow">Jornada ${esc(DAY)}</span>
     <h2>Rachas</h2>
-    <p class="lede">Jugadores que llevan varios partidos seguidos por <b>encima</b> (Over) o por <b>debajo</b> (Under) de su línea de hoy en la casa, contando sus últimos partidos de temporada regular (esta temporada y la pasada). Una racha sola no es un pick: la columna <b>Modelo</b> dice la probabilidad que le da el sistema a ese lado (mezclada con la casa) y si coincide con un pick con valor. Toca el nombre para ver su ficha con todos sus partidos.</p>
+    <p class="lede">Jugadores que llevan varios partidos seguidos por <b>encima</b> (Over) o por <b>debajo</b> (Under) de su línea de hoy en la casa, contando sus últimos partidos de temporada regular (esta temporada y la pasada). En tiros, libres, pérdidas y faltas, que las casas que leemos no publican, la línea es la del pick del modelo (la .5 junto a su promedio). Una racha sola no es un pick: la columna <b>Modelo</b> dice la probabilidad que le da el sistema a ese lado (mezclada con la casa) y si coincide con un pick con valor. Toca el nombre para ver su ficha con todos sus partidos.</p>
     <div id="rk-f" style="display:grid;gap:8px"></div>
     <div id="rk-list"></div>
   </section>`;

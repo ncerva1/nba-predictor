@@ -8,7 +8,9 @@ Escribe docs/data/players/<fecha>.json con, por cada jugador de los partidos de 
     t: equipo, pos: posición del modelo, dv: posición para el DvP (PG/SG/SF/PF/C), gid: partido, opp: rival, h: 1 si es local
     m: {stat: [línea, cuota over, cuota under, prob. over, prob. under, lado con valor]} de las líneas de la casa
     g: últimos partidos de temporada regular (esta y la pasada, más reciente primero):
-       [fecha, rival, local 1/0, min, pts, reb, ast, fg3m, stl, blk, tov] (null si la fuente no lo trae)
+       [fecha, rival, local 1/0, min, pts, reb, ast, fg3m, stl, blk, tov, pf, fgm, fga, fg2m, fg2a, fg3a, ftm, fta]
+       (null si la fuente no lo trae: los H2H de la temporada pasada no tienen tiros)
+    mp: {stat: [línea, lado, prob.]} de los picks del modelo sin cuota (mercados sin línea de casa)
     ro: rol según quién juega (context.role_splits): hoy = medias en partidos con la misma situación de compañeros
         clave que hoy, out = clave que faltan hoy, m = [compañero, falta hoy, con él, sin él]
         ([partidos, min, pts, reb, ast, fg3m]); solo esta temporada
@@ -26,7 +28,8 @@ from db_link import _positions
 from evaluate import norm
 
 N_GAMES = 40
-COLS = ("min", "pts", "reb", "ast", "fg3m", "stl", "blk", "tov")
+COLS = ("min", "pts", "reb", "ast", "fg3m", "stl", "blk", "tov",
+        "pf", "fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta")  # 13-nov: tiros, libres y faltas (mercados de bucketsbase)
 BOX = ("min", "pts", "reb", "ast", "fg3m", "fg3a", "fgm", "fga", "ftm", "fta", "stl", "blk", "tov", "pf")
 BOX_RECENT = 10  # partidos recientes de cada jugador con box score (las barras de las tarjetas son los últimos 10)
 
@@ -70,6 +73,17 @@ def market_lines(r):
     return m
 
 
+def model_lines(r):
+    """Picks del modelo sin cuota (tiros, libres, pérdidas, faltas): {jugador: {stat: [línea, lado, prob.]}}, para las
+    rachas de mercados en los que no tenemos línea de casa."""
+    m = {}
+    for b in r.get("model_picks", []):
+        if b.get("stat") in ("dd", "td") or b.get("line") is None:
+            continue
+        m.setdefault(b["player"], {})[b["stat"]] = [b["line"], b["side"], b["p"]]
+    return m
+
+
 def build(date):
     paths = sorted(p for p in glob.glob(os.path.join(OUT, f"{date}-*.json")))
     if not paths:
@@ -80,7 +94,7 @@ def build(date):
     for p in paths:
         r = json.load(open(p))
         g = r["game"]
-        lines = market_lines(r)
+        lines, mlines = market_lines(r), model_lines(r)
         for pl in r["summary"]["players"]:
             if "pts" not in pl:
                 continue
@@ -99,6 +113,7 @@ def build(date):
                            *[x["line"].get(k) for k in COLS], k])
             out[pl["name"]] = dict(t=team, pos=pl.get("pos"), dv=(_positions(pl.get("pos") or "") or [None])[0],
                                    gid=r["id"], opp=opp, h=int(team == g["home"]), m=lines.get(pl["name"], {}),
+                                   **({"mp": mlines[pl["name"]]} if pl["name"] in mlines else {}),
                                    **({"flag": pl["flag"]} if pl.get("flag") else {}), g=gl)
     try:
         from context import role_splits
