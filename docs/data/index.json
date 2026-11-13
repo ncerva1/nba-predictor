@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T17:02+00:00",
+ "generated": "2026-11-13T17:10+00:00",
  "value_ev": 0.03,
  "model": "1.6.1",
  "mkt_w": 0.25,
@@ -5147,7 +5147,52 @@
    },
    "cup_minus_regular": -1.2
   },
-  "model_total_adj": 0.0
+  "model_total_adj": 0.0,
+  "season": "2026-27",
+  "groups": {
+   "Este A": [
+    "DET",
+    "TOR",
+    "ORL",
+    "MIL",
+    "BKN"
+   ],
+   "Este B": [
+    "NYK",
+    "CLE",
+    "PHI",
+    "MIA",
+    "IND"
+   ],
+   "Este C": [
+    "BOS",
+    "ATL",
+    "CHA",
+    "CHI",
+    "WAS"
+   ],
+   "Oeste A": [
+    "DEN",
+    "HOU",
+    "PHX",
+    "DAL",
+    "UTA"
+   ],
+   "Oeste B": [
+    "OKC",
+    "MIN",
+    "LAC",
+    "NOP",
+    "MEM"
+   ],
+   "Oeste C": [
+    "SAS",
+    "LAL",
+    "POR",
+    "GSW",
+    "SAC"
+   ]
+  }
  },
  "games": [
   {
