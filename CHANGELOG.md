@@ -1,5 +1,24 @@
 # Cambios del modelo
 
+## Modelo 1.6.2 — 2026-11-13: tiros, libres, pérdidas y faltas (mercados de bucketsbase)
+- Pedido de Nicolas tras ver en bucketsbase props de tiros de campo, triples, dobles y libres (anotados e intentados),
+  pérdidas y faltas. El modelo ya los simulaba (1.3.4-1.3.6) y la web los proyectaba; ninguna fuente que leemos
+  publica sus líneas (scoresandodds, Covers, VegasInsider y RotoWire solo traen puntos, rebotes, asistencias, triples,
+  robos, tapones y combinadas), así que siguen como picks del modelo sin cuota.
+- Backtest `bt_shots.py` (26-oct a 12-nov, 2.010 jugador-partido): el modelo sobreproyectaba dobles anotados (real /
+  simulado 0.896), libres (0.894 / 0.881) y tiros de campo (0.929). Causa: puntos y triples se simulan por separado y
+  en las simulaciones con 3 × triples > puntos lo que queda para dobles y libres se cortaba en 0, inflando su media.
+  Arreglo: `SHOT_THIN` (lo que queda se adelgaza para que su media sea puntos − 3 × triples) y `SHOT_KFT` 0.95.
+  Queda: dobles 0.952, libres 0.999 / 0.983, tiros de campo 0.968; RPS mejora en tiros de campo, intentados y libres.
+  Pérdidas y robos un 5-7% altos: `EXTRA_K` 0.95 / 0.93 (0.989 / 0.989). Puntos, rebotes, asistencias y triples no cambian.
+- Picks sin cuota: también pérdidas y faltas (`MP_SHOTS`, mínimo 1.5 de promedio). En tiros el modelo decía ~60% y
+  acertaban ~53%, así que la probabilidad publicada se acerca a 50% (`MP_SHRINK` 0.3; `p_model` guarda la original);
+  pérdidas y faltas no se encogen (faltas Over 62.6% real con 57.8% del modelo, n = 163).
+- Web: la ficha del jugador y Rachas cubren faltas, tiros de campo, dobles, triples intentados y libres (player_cards.py
+  guarda esas columnas y `mp`, la línea de los picks sin cuota, que Rachas usa como "línea del modelo"); "Pérdidas y
+  faltas" muestra sus picks sin cuota en la portada.
+- Rige desde la jornada del 14-nov (la del 13-nov ya estaba publicada).
+
 ## Web — 2026-11-12: botón "Arma tu combinada" siempre visible
 - El botón flotante de Mi combinada se ve siempre (vacío dice "+ Arma tu combinada"); al abrirlo explica que ahí se
   calcula la probabilidad de cualquier combinada (prob. del modelo, cuota justa y EV). Antes solo aparecía al

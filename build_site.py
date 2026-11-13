@@ -74,6 +74,7 @@ MODEL_VERSIONS = [
     # 1.5.1 (cuotas al margen de Betano) y 1.6 (nivel de anotación, puntos más abiertos) empiezan la misma jornada
     # 1.6.1 (12-nov, antes del primer partido): minutos y puntos de las estrellas; la 1.6 no llegó a liquidar jornada
     ("1.6.1", "2026-11-12", "Betano, anotación de esta temporada, puntos más abiertos y más minutos y puntos para las estrellas"),
+    ("1.6.2", "2026-11-14", "tiros, libres, pérdidas y faltas calibrados; picks sin cuota de pérdidas y faltas"),
 ]
 MODEL = MODEL_VERSIONS[-1][0]
 
@@ -363,11 +364,18 @@ def prop_bets(cfg, s):
 # como en el modelo, en los minutos de hoy), que es de donde parten las casas; el pick es el lado que el modelo ve
 # con >= MP_P contra el .5 que menos le conviene (las cuentas de tiros son asimétricas: con la línea justo encima
 # del promedio el under gana más de la mitad de las veces sin que el modelo vea nada). Doble-doble y triple-doble: "Sí" desde MP_DD / MP_TD. Solo jugadores que seguro juegan.
-MP_SHOTS = ("fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta")  # los triples anotados ya tienen líneas de casa
+# 1.6.2 (13-nov, pedido de Nicolas tras ver bucketsbase): también pérdidas y faltas, que tampoco traen línea de casa.
+MP_SHOTS = ("fgm", "fga", "fg2m", "fg2a", "fg3a", "ftm", "fta", "tov", "pf")  # los triples anotados ya tienen líneas de casa
 SHOT_SRC = {"fg2m": ("fgm", "fg3m"), "fg2a": ("fga", "fg3a")}
 MP_P, MP_DD, MP_TD = 0.55, 0.35, 0.06
 MP_MIN, MP_P_PLAY = 20, 0.9   # minutos proyectados mínimos y prob. de jugar
-MP_MIN_AVG = {"fgm": 3.0, "fga": 7.0, "fg2m": 2.0, "fg2a": 4.0, "fg3a": 3.0, "ftm": 2.0, "fta": 2.5}  # con menos volumen las casas no publican línea
+MP_MIN_AVG = {"fgm": 3.0, "fga": 7.0, "fg2m": 2.0, "fg2a": 4.0, "fg3a": 3.0, "ftm": 2.0, "fta": 2.5,
+              "tov": 1.5, "pf": 1.5}  # con menos volumen las casas no publican línea
+# Backtest bt_shots.py (26-oct a 12-nov, ~2.400 picks): en tiros el modelo daba ~60% y acertaban ~53% (la línea está
+# en su promedio, donde la casa pondría ~50/50), así que la probabilidad que se publica se acerca a 0.5 como cuando hay
+# casa (MKT_W): p = 0.5 + MP_SHRINK x (p_modelo − 0.5). Pérdidas y faltas no se encogen: acertaron lo que decía el
+# modelo o más (faltas Over 62% con 58% del modelo, pérdidas 59% con 57%). La selección sigue siendo p_modelo >= MP_P.
+MP_SHRINK, MP_NO_SHRINK = 0.3, ("tov", "pf")
 
 
 def model_picks(cfg, s):
@@ -382,9 +390,12 @@ def model_picks(cfg, s):
         mk = lines.get(p["name"], {})
 
         def add(st, side, line, prob, ref=None):
+            raw = prob
+            if st in MP_SHOTS and st not in MP_NO_SHRINK:
+                prob = 0.5 + MP_SHRINK * (prob - 0.5)
             out.append(dict(kind="prop", model_only=True, player=p["name"], team=p["team"], stat=st, side=side,
                             line=line, p=round(float(prob), 3), fair=round(1 / max(prob, 1e-3), 2),
-                            min_dec=round((1 + VALUE_EV) / max(prob, 1e-3), 2), ref=ref,
+                            min_dec=round((1 + VALUE_EV) / max(prob, 1e-3), 2), ref=ref, p_model=round(float(raw), 3),
                             label=f"{p['name']} {STAT_LABEL[st]}: Sí" if st in BINARY else
                             f"{p['name']} {'Over' if side == 'over' else 'Under'} {line:g} {STAT_LABEL[st]}"))
         for st in MP_SHOTS:
@@ -409,7 +420,7 @@ def model_picks(cfg, s):
             x = d["draws"].get(st)
             if x is not None and st not in mk and x[on].mean() >= thr:
                 add(st, "over", 0.5, x[on].mean())
-    return sorted(out, key=lambda b: -b["p"])
+    return sorted(out, key=lambda b: -b["p_model"])
 
 
 # % de cumplimiento (pedido de Nicolas 2-nov, estilo ludocomparador/Linemate): para cada prop, en cuántos de sus

@@ -1,5 +1,5 @@
 """
-NBA-Predictor 1.6 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
+NBA-Predictor 1.6.2 — simulador Monte Carlo de partido + player props, conectado a la BD de rankings.
 
 Uso:
     python model.py games/2026-10-26_IND@MIL.json [n_sims]          # usa la BD si el JSON trae "db": {"use": true}
@@ -70,6 +70,13 @@ GARBAGE_CUT, PTS_GAMMA, MIN_BETA = 0.93, 1.1, 1.15
 # 1.7, contexto del jugador (context.py): forma reciente (últimos 5) y partidos con la misma situación de compañeros
 # clave que hoy. RECENT_W / RECENT_MW = peso de las tasas por minuto / minutos recientes; el contexto pesa n / (n + CTX_K)
 USE_CTX, RECENT_W, RECENT_MW, CTX_K, CTX_RK = False, 0.0, 0.0, 4.0, 12.0
+# 1.6.2 (13-nov, props de tiros, pérdidas y faltas): puntos y triples se simulan por separado, y en las simulaciones
+# con 3 x triples > puntos lo que queda para dobles y libres se cortaba en 0, así que en promedio dobles + libres
+# sumaban más puntos que los proyectados (+3,6% de los puntos desde el 8-nov): dobles anotados real/simulado 0.89,
+# libres 0.88. SHOT_THIN adelgaza (binomial) lo que queda para que su media sea puntos − 3 x triples. SHOT_KFT
+# multiplica la parte de esos puntos que llega en libres (el resto va a dobles), ver bt_shots.py.
+SHOT_THIN, SHOT_KFT = True, 0.95
+EXTRA_K = {"stl": 0.93, "tov": 0.95}  # corrección de nivel de robos y pérdidas (ver bt_shots.py)
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -390,8 +397,11 @@ def simulate(cfg, n=20000, seed=7):
         if xr:
             pf_ = pace / cfg["league"]["pace"]
             rest = np.maximum(draws["pts"] - 3 * draws["fg3m"], 0)
+            if SHOT_THIN:  # la media de lo que queda vuelve a ser puntos − 3 x triples (sin el corte en 0)
+                keep = float(np.clip((means["pts"] - 3 * means["fg3m"]).mean() / max(rest.mean(), 1e-6), 0.3, 1))
+                rest = rng.binomial(rest, keep)
             if "qft" in xr:  # libres primero; si lo que queda es impar, un libre más o uno menos (sin sesgo)
-                ftm = rng.binomial(rest, xr["qft"])
+                ftm = rng.binomial(rest, float(np.clip(xr["qft"] * SHOT_KFT, 0, 0.9)))
                 odd = (rest - ftm) % 2 == 1
                 ftm = np.clip(ftm + odd * rng.choice([-1, 1], size=ftm.shape), 0, rest)
                 ftm = np.where((rest - ftm) % 2 == 1, ftm + 1, ftm)  # rest impar y ftm = 0 o = rest
@@ -402,9 +412,9 @@ def simulate(cfg, n=20000, seed=7):
             draws["fg3a"] = draws["fg3m"] + nb_draw(rng, xr["miss3"] * mn, EXTRA_R["miss"])
             draws["fgm"] = draws["fg2m"] + draws["fg3m"]
             draws["fga"] = draws["fg2a"] + draws["fg3a"]
-            draws["stl"] = nb_draw(rng, xr["stl"] * mn * pf_, EXTRA_R["stl"])
+            draws["stl"] = nb_draw(rng, xr["stl"] * mn * pf_ * EXTRA_K["stl"], EXTRA_R["stl"])
             draws["blk"] = nb_draw(rng, xr["blk"] * mn, EXTRA_R["blk"])
-            draws["tov"] = nb_draw(rng, xr["tov"] * mn * pf_, EXTRA_R["tov"])
+            draws["tov"] = nb_draw(rng, xr["tov"] * mn * pf_ * EXTRA_K["tov"], EXTRA_R["tov"])
             draws["pf"] = np.minimum(nb_draw(rng, xr["pf"] * mn, EXTRA_R["pf"]), 6)
             if "missft" in xr:  # los puntos que no llegan en tiros de campo son tiros libres metidos
                 draws["ftm"] = rest - 2 * draws["fg2m"]
