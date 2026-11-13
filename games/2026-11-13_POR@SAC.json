@@ -10,7 +10,9 @@
    "POR: Morant (isquiotibial), Krejčí (tobillo), Youngblood (pie) y Sharpe OUT",
    "SAC: Raynaud (rodilla) y Simmons OUT; Achiuwa (tobillo) GTD con líneas: 0.6",
    "Nique Clifford ya es de OKC (traspaso de SAC)",
-   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC"
+   "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
+   "18:20 ET (ESPN 13-nov): Achiuwa (tobillo) OUT",
+   "Cuotas 18:20 ET (scoresandodds): POR@SAC spread local +10.5, total 229.5, ML -515/392"
   ],
   "out": [
    "Chris Youngblood",
@@ -18,11 +20,10 @@
    "Ja Morant",
    "Shaedon Sharpe",
    "Maxime Raynaud",
-   "Ben Simmons"
+   "Ben Simmons",
+   "Precious Achiuwa"
   ],
-  "gtd": {
-   "Precious Achiuwa": 0.6
-  },
+  "gtd": {},
   "reserves": {
    "POR": [
     {
@@ -108,7 +109,7 @@
    "name": "Darius Acuff Jr.",
    "pos": "PG",
    "starter": true,
-   "min": 30.5,
+   "min": 33.5,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -150,7 +151,7 @@
    "name": "Domantas Sabonis",
    "pos": "C",
    "starter": true,
-   "min": 28.0,
+   "min": 30.7,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -192,7 +193,7 @@
    "name": "Zach LaVine",
    "pos": "SG",
    "starter": true,
-   "min": 26.7,
+   "min": 29.3,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -234,7 +235,7 @@
    "name": "De'Andre Hunter",
    "pos": "SF",
    "starter": true,
-   "min": 25.7,
+   "min": 28.2,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -273,52 +274,10 @@
   },
   {
    "team": "SAC",
-   "name": "Precious Achiuwa",
-   "pos": "C",
-   "starter": true,
-   "min": 21.4,
-   "g_cur": 11,
-   "p_play": 0.6,
-   "cur": {
-    "min": 26.2,
-    "pts": 10.4,
-    "reb": 6.4,
-    "ast": 1.1,
-    "fg3m": 0.4,
-    "fgm": 4.5,
-    "fga": 8.4,
-    "fg3a": 1.0,
-    "stl": 1.3,
-    "blk": 1.1,
-    "tov": 1.2,
-    "pf": 1.9,
-    "ftm": 1.1,
-    "fta": 2.2
-   },
-   "prior": {
-    "min": 24.0,
-    "pts": 10.08,
-    "reb": 6.74,
-    "ast": 1.38,
-    "fg3m": 0.37,
-    "fgm": 4.33,
-    "fga": 8.19,
-    "fg3a": 1.33,
-    "stl": 0.89,
-    "blk": 0.68,
-    "tov": 0.89,
-    "pf": 1.68,
-    "ftm": 1.05,
-    "fta": 1.9
-   },
-   "slot": "PF"
-  },
-  {
-   "team": "SAC",
    "name": "Keegan Murray",
    "pos": "PF",
-   "starter": false,
-   "min": 20.6,
+   "starter": true,
+   "min": 22.6,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -352,14 +311,15 @@
     "pf": 1.83,
     "ftm": 1.65,
     "fta": 2.13
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "SAC",
    "name": "Leaky Black",
    "pos": "SF",
    "starter": false,
-   "min": 15.6,
+   "min": 17.1,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -400,7 +360,7 @@
    "name": "Dylan Cardwell",
    "pos": "C",
    "starter": false,
-   "min": 15.5,
+   "min": 17.0,
    "g_cur": 4,
    "p_play": 1.0,
    "cur": {
@@ -441,7 +401,7 @@
    "name": "Emanuel Sharp",
    "pos": "SG",
    "starter": false,
-   "min": 14.8,
+   "min": 16.3,
    "g_cur": 11,
    "p_play": 1.0,
    "cur": {
@@ -482,7 +442,7 @@
    "name": "Malik Monk",
    "pos": "SG",
    "starter": false,
-   "min": 12.6,
+   "min": 13.9,
    "g_cur": 10,
    "p_play": 1.0,
    "cur": {
@@ -523,7 +483,7 @@
    "name": "Jonathan Mogbo",
    "pos": "PF",
    "starter": false,
-   "min": 11.7,
+   "min": 12.9,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -564,7 +524,7 @@
    "name": "Daeqwon Plowden",
    "pos": "SG",
    "starter": false,
-   "min": 9.0,
+   "min": 9.8,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -605,7 +565,7 @@
    "name": "Alex Karaban",
    "pos": "SF",
    "starter": false,
-   "min": 8.0,
+   "min": 8.8,
    "g_cur": 5,
    "p_play": 1.0,
    "cur": {
@@ -1100,17 +1060,17 @@
  ],
  "market": {
   "source": "NBA.com/games 13-nov (9 partidos, todos de la NBA Cup); Covers matchup/<id>/odds (8-9 casas en 7 partidos, ~12:10 ET) + ML del comparador de Covers (NYK@IND) + consenso scoresandodds.com/nba?date=2026-11-13&s=1 en los 9; props de puntos, rebotes, asistencias y triples de scoresandodds.com/nba/props/<stat>?date=2026-11-13&s=1 (~12:20 ET, mejor cuota por lado)",
-  "ml_home": 426,
-  "ml_away": -569,
+  "ml_home": 392,
+  "ml_away": -515,
   "spread_home": 10.5,
   "total": 229.5
  },
  "prop_lines": {
   "Damian Lillard": {
    "pts": [
-    20.5,
-    -115,
-    -110,
+    21.5,
+    -112,
+    -112,
     22.5
    ],
    "reb": [
@@ -1120,12 +1080,12 @@
    ],
    "ast": [
     4.5,
-    105,
-    -114
+    -125,
+    109
    ],
    "fg3m": [
     3.5,
-    134,
+    132,
     -150
    ],
    "pr": [
@@ -1152,23 +1112,23 @@
   "Deni Avdija": {
    "pts": [
     23.5,
-    -111,
-    100
+    -115,
+    -105
    ],
    "reb": [
     6.5,
-    -104,
+    -114,
     105
    ],
    "ast": [
     6.5,
-    -118,
-    102
+    -105,
+    -105
    ],
    "fg3m": [
     1.5,
     -150,
-    140
+    145
    ],
    "pr": [
     30.5,
@@ -1194,14 +1154,14 @@
   "Zach LaVine": {
    "pts": [
     18.5,
-    -118,
-    -115,
+    -121,
+    -112,
     19.5
    ],
    "fg3m": [
     2.5,
     104,
-    -110
+    -105
    ],
    "pr": [
     21.5,
@@ -1269,56 +1229,56 @@
   },
   "Domantas Sabonis": {
    "pts": [
-    11.5,
-    -130,
-    100,
-    12.5
+    12.5,
+    -105,
+    -106
    ],
    "reb": [
     11.5,
-    -120,
-    -152,
+    -130,
+    -112,
     12.5
    ],
    "ast": [
     5.5,
-    -140,
-    -154,
-    6.5
+    -124,
+    115
    ]
   },
   "De'Andre Hunter": {
    "pts": [
     12.5,
-    -120,
-    101
+    -125,
+    -119,
+    13.5
    ],
    "reb": [
     4.5,
     115,
-    -140
+    -117
    ],
    "fg3m": [
     1.5,
     -130,
-    125
+    110
    ]
   },
   "Keegan Murray": {
    "pts": [
     10.5,
-    -115,
-    100
+    -120,
+    -107,
+    11.5
    ],
    "reb": [
     3.5,
-    -105,
-    103
+    -115,
+    116
    ],
    "fg3m": [
     1.5,
-    128,
-    -155
+    130,
+    -135
    ]
   },
   "Jrue Holiday": {
@@ -1329,62 +1289,63 @@
    ],
    "reb": [
     3.5,
-    -110,
-    -100
+    100,
+    102
    ],
    "ast": [
     3.5,
-    -174,
+    -168,
     -125,
     4.5
    ],
    "fg3m": [
     2.5,
-    132,
-    -130
+    136,
+    -155
    ]
   },
   "Toumani Camara": {
    "pts": [
     11.5,
-    -125,
-    -110,
+    -127,
+    -112,
     12.5
    ],
    "reb": [
-    3.5,
-    -160,
-    -150,
-    4.5
+    4.5,
+    124,
+    -140
    ],
    "fg3m": [
     2.5,
-    -104,
+    -110,
     100
    ]
   },
   "Donovan Clingan": {
    "pts": [
     11.5,
-    100,
-    100
+    -105,
+    -127,
+    12.5
    ],
    "reb": [
-    11.5,
-    110,
-    -127
+    10.5,
+    -140,
+    -130,
+    11.5
    ]
   },
   "Scoot Henderson": {
    "pts": [
     10.5,
-    -102,
-    -112
+    -108,
+    -105
    ],
    "fg3m": [
     1.5,
-    151,
-    -160
+    133,
+    -140
    ]
   },
   "Robert Williams III": {
@@ -1395,13 +1356,6 @@
     6.5
    ]
   },
-  "Precious Achiuwa": {
-   "reb": [
-    5.5,
-    -110,
-    -105
-   ]
-  },
   "Sidy Cissoko": {
    "reb": [
     3.5,
@@ -1410,8 +1364,8 @@
    ],
    "fg3m": [
     1.5,
-    120,
-    -130
+    118,
+    -140
    ]
   }
  },
