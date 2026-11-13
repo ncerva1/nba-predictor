@@ -428,7 +428,7 @@ tr.detail td { background: var(--bg) }
 .mine-warn { margin-top: 5px; font-size: 12.5px; color: var(--bad); background: var(--bad-soft); border-radius: 6px; padding: 4px 8px }
 .mine-alert { margin: 10px 0 0; color: var(--bad); background: var(--bad-soft); border-radius: 8px; padding: 8px 12px; font-size: 14px }
 .mine-dec { display: flex; align-items: center; gap: 5px; color: var(--muted) }
-.mine-dec input { width: 58px; font: 12px var(--mono); padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink); text-align: right }
+.mine-dec input { width: 62px; font: 12px var(--mono); padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink); text-align: right }
 .mine-legs { margin: 4px 0 0; padding-left: 18px; font-size: 13px; display: grid; gap: 3px }
 .mine-list .mine-legs li { display: list-item; border: 0; padding: 0 }
 .mine-legs .kind { color: var(--muted); text-decoration: none }
@@ -915,10 +915,9 @@ table.gb-t tr.me td:first-child { background: var(--accent-soft) }
 .pcd.big .pcd-ln { font-size: 34px } .pcd.big .pcd-odd b { font-size: 30px }
 .potd .pcd { max-width: 640px }
 .potd-rec { margin: 0; font-size: 13px }
+/* iPhone acerca la página al tocar una casilla con letra < 16px y la deja movida: en pantallas táctiles todas las casillas van a 16px (13-nov) */
+@media (pointer: coarse) { input, select, textarea, .search, .mine-dec input { font-size: 16px !important } .mine-dec input { width: 58px; padding: 3px 4px } }
 /* NBA Cup: grupos y llaves (13-nov) */
-.cup-nav { display: flex; gap: 6px; margin: 4px 0 18px; flex-wrap: wrap }
-.cup-nav a { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); font: 600 13px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--ink); text-decoration: none }
-.cup-nav a[aria-current="page"] { background: #1a1408; color: #f0c66b; border-color: #a77a1c }
 .cup-grps { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 14px; min-width: 0 }
 .cup-grp { padding: 14px 14px 10px; min-width: 0 } .cup-grp h3 { margin: 0 0 8px; font: 400 24px/1 "Bebas Neue", var(--display); letter-spacing: .05em }
 .cup-grp table { width: 100% } .cup-grp th, .cup-grp td { white-space: nowrap; padding: 7px 7px }
@@ -1031,6 +1030,7 @@ dialog.psearch .g-head { gap: 8px }
     <nav class="tabs" aria-label="Competición">
       <a class="tab" href="#" id="tab-reg">Liga regular <span class="n" id="n-reg"></span></a>
       <a class="tab cup-tab" href="#cup" id="tab-cup"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12v2h3v3a4 4 0 0 1-4 4h-.4A5 5 0 0 1 13 15v3h3v3H8v-3h3v-3a5 5 0 0 1-3.6-3H7a4 4 0 0 1-4-4V5h3V3zm0 4H5v1a2 2 0 0 0 1 1.7V7zm12 0v2.7A2 2 0 0 0 19 8V7h-1z"/></svg>NBA Cup <span class="n" id="n-cup"></span></a>
+      <a class="tab" href="#copa-grupos" id="tab-cg">Grupos Copa</a>
       <a class="tab" href="#rachas" id="tab-rk">Rachas</a>
       <a class="tab" href="#liga" id="tab-lg">Liga</a>
       <a class="tab" href="#mis-picks" id="tab-mine">Mis picks <span class="n" id="n-mine"></span></a>
@@ -1626,13 +1626,13 @@ function renderIndex(scope = "reg") {
   </section>`;
   const cup = scope === "cup";
   if (cup && !todays.length) {
-    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupNav("picks") + cupStudy() + olderSection(older, true);
+    $("#app").innerHTML = INTRO() + CUP_HERO(0) + cupStudy() + olderSection(older, true);
     addFolds();
     return;
   }
   $("#app").innerHTML = `
   ${INTRO()}
-  ${cup ? CUP_HERO(todays.length) + cupNav("picks") : ""}
+  ${cup ? CUP_HERO(todays.length) : ""}
   ${updatesStrip()}
   ${bajasStrip()}
   ${potdCard(scope)}
@@ -2168,8 +2168,7 @@ function cupGroupsPage() {
   };
   const wcRace = c => `<div class="panel tbl-wrap"><table class="swipe"><thead><tr><th class="pk">Comodín ${c.conf}</th><th>Grupo</th><th class="r">G–P</th><th class="r">Dif.</th></tr></thead><tbody>
     ${c.seconds.map((t, i) => { const x = S.r0(t); return `<tr${i === 0 && S.played ? ' class="wc"' : ""}><td class="head pk">${logo(t)} ${esc(tname(t))}</td><td>${esc(c.grpOf[t][0])}</td><td class="r num"><b>${x.w}–${x.l}</b></td><td class="r num">${x.w + x.l ? sg(S.dif(t)) : "—"}</td></tr>`; }).join("")}</tbody></table></div>`;
-  $("#app").innerHTML = `${cupNav("grupos")}
-  <section class="section">
+  $("#app").innerHTML = `<section class="section">
     <span class="eyebrow">NBA Cup ${esc(C.season || "")}</span>
     <h1>Grupos y llaves</h1>
     <p class="lede">Como en un Mundial: 6 grupos de 5 equipos (3 por conferencia) y 4 partidos de grupo por equipo. Pasan a cuartos los 6 líderes y el mejor segundo de cada conferencia (comodín). Desempate: victorias, diferencia de puntos y puntos a favor (la NBA mira antes el cara a cara). Toca una columna para ordenar la tabla.</p>
@@ -2222,8 +2221,6 @@ function cupBracket(S) {
     <div class="bk-col"><span class="bk-r">Cuartos · Oeste</span><div class="bk-ms">${W.qf.join("")}</div></div>
   </div></div>`;
 }
-// barra de la pestaña NBA Cup: picks del día / grupos y llaves
-const cupNav = on => `<nav class="cup-nav" aria-label="NBA Cup"><a href="#cup"${on === "picks" ? ' aria-current="page"' : ""}>Picks de la Copa</a><a href="#copa-grupos"${on === "grupos" ? ' aria-current="page"' : ""}>Grupos y llaves</a></nav>`;
 // la columna Liga de las tablas de Copa sale de data/league.json (se carga aparte)
 async function fillLgRecs() {
   const cells = document.querySelectorAll("[data-lgrec]"); if (!cells.length) return;
@@ -4007,9 +4004,11 @@ function route() {
   const game = id && INDEX.games.find(g => g.id === id);
   const scope = game ? (isCup(game) ? "cup" : "reg") : id === "cup" || id === "todos-cup" || id === "copa-grupos" ? "cup" : "reg";
   // la pestaña NBA Cup (y sus partidos) cambia la paleta y la tipografía
-  if (scope === "cup") document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
-  ["#tab-reg", "#tab-cup", "#tab-rk", "#tab-lg", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
-  $(id === "mis-picks" ? "#tab-mine" : id === "rachas" ? "#tab-rk" : id === "liga" ? "#tab-lg" : scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
+  // días de Copa (13-nov, pedido de Nicolas): toda la web con la paleta de la Copa, no solo su pestaña
+  const cupDay = INDEX.games.some(g => g.date === DAY && isCup(g));
+  if (scope === "cup" || cupDay) document.documentElement.dataset.mode = "cup"; else delete document.documentElement.dataset.mode;
+  ["#tab-reg", "#tab-cup", "#tab-cg", "#tab-rk", "#tab-lg", "#tab-mine"].forEach(t => $(t).toggleAttribute("aria-current", false));
+  $(id === "mis-picks" ? "#tab-mine" : id === "copa-grupos" ? "#tab-cg" : id === "rachas" ? "#tab-rk" : id === "liga" ? "#tab-lg" : scope === "cup" ? "#tab-cup" : "#tab-reg").setAttribute("aria-current", "page");
   { const tb = document.querySelector('.tabs [aria-current="page"]'), tw = tb && tb.parentElement; if (tw && tw.scrollWidth > tw.clientWidth) tw.scrollLeft = tb.offsetLeft - (tw.clientWidth - tb.offsetWidth) / 2; }
   markTicker(game ? id : null);
   $("#to-top-t").textContent = game ? "Inicio del partido" : "Arriba";
@@ -4269,7 +4268,16 @@ function renderMine(keepScroll) {
       MINE.push(...add); mineChanged(); $("#mine-msg").textContent = `${add.length} pick${add.length === 1 ? "" : "s"} importado${add.length === 1 ? "" : "s"}${list.length > add.length ? ` (${list.length - add.length} ya estaban)` : ""}.`;
     }).catch(() => { $("#mine-msg").textContent = "Ese archivo no es una copia de Mis picks."; });
   });
-  document.querySelectorAll("[data-taken]").forEach(i => i.addEventListener("change", e => { setTaken(e.target.dataset.taken, e.target.value); renderMine(true); }));
+  // Tu cuota (13-nov): se guarda al cambiar, pero la página solo se redibuja cuando sales de todas las casillas de cuota,
+  // así puedes escribir varias seguidas sin que el celular salte de sitio ni pierdas la casilla en la que estabas
+  document.querySelectorAll("[data-taken]").forEach(i => {
+    i.addEventListener("change", e => { setTaken(e.target.dataset.taken, e.target.value); renderMine.dirty = true; });
+    i.addEventListener("keydown", e => { if (e.key === "Enter") e.target.blur(); });
+    i.addEventListener("focusout", () => setTimeout(() => {
+      const a = document.activeElement;
+      if (renderMine.dirty && !(a && a.matches && a.matches("[data-taken]")) && location.hash === "#mis-picks") { renderMine.dirty = false; renderMine(true); }
+    }, 120));
+  });
   const clr = $("#mine-clr");
   if (clr) clr.addEventListener("click", () => { if (confirm("¿Borrar todos tus picks de este navegador? Exporta antes una copia si quieres conservarlos.")) { MINE = []; mineChanged(); } });
   if (keepScroll) scrollTo(0, y);
