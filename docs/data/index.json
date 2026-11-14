@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T00:32+00:00",
+ "generated": "2026-11-14T03:04+00:00",
  "value_ev": 0.03,
  "model": "1.6.2",
  "mkt_w": 0.25,
@@ -73,7 +73,7 @@
   },
   "2026-11-13": {
    "morning": "2026-11-13T17:02+00:00",
-   "pregame": "2026-11-14T00:32+00:00"
+   "pregame": "2026-11-14T03:04+00:00"
   }
  },
  "history": [
@@ -165598,52 +165598,6 @@
    "top_bets": [
     {
      "kind": "prop",
-     "label": "Ajay Mitchell Under 18.5 Puntos",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 18.5,
-     "odds": -127,
-     "dec": 1.784,
-     "odds_assumed": false,
-     "p": 0.706,
-     "implied": 0.56,
-     "fair": -240,
-     "edge": 0.145,
-     "ev": 0.26,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "odds_ref": -116,
-     "dec_ref": 1.862,
-     "p_model": 0.706,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 27.8,
-       "lg": 24.0,
-       "n": 30
-      }
-     },
-     "open": [
-      19.5,
-      1.871
-     ],
-     "mean": 15.2
-    },
-    {
-     "kind": "prop",
      "label": "Rui Hachimura Under 15.5 Puntos",
      "player": "Rui Hachimura",
      "team": "LAC",
@@ -165651,17 +165605,17 @@
      "odds": -138,
      "dec": 1.725,
      "odds_assumed": false,
-     "p": 0.715,
+     "p": 0.713,
      "implied": 0.58,
-     "fair": -251,
-     "edge": 0.135,
-     "ev": 0.233,
+     "fair": -248,
+     "edge": 0.133,
+     "ev": 0.23,
      "value": false,
      "stat": "pts",
      "side": "under",
      "odds_ref": -125,
      "dec_ref": 1.8,
-     "p_model": 0.715,
+     "p_model": 0.713,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -165690,24 +165644,74 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Under 4.5 Asistencias",
-     "player": "Isaiah Hartenstein",
+     "label": "Aday Mara Under 8.5 Rebotes",
+     "player": "Aday Mara",
      "team": "OKC",
-     "line": 4.5,
-     "odds": -167,
-     "dec": 1.598,
+     "line": 8.5,
+     "odds": -144,
+     "dec": 1.695,
      "odds_assumed": false,
-     "p": 0.737,
-     "implied": 0.626,
-     "fair": -280,
-     "edge": 0.111,
-     "ev": 0.178,
+     "p": 0.684,
+     "implied": 0.59,
+     "fair": -216,
+     "edge": 0.094,
+     "ev": 0.159,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "odds_ref": -130,
+     "dec_ref": 1.769,
+     "p_model": 0.684,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 3,
+       "value": 8.9,
+       "lg": 10.5,
+       "n": 30
+      }
+     },
+     "open": [
+      8.5,
+      1.695
+     ],
+     "mean": 7.1,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Garland Under 7.5 Asistencias",
+     "player": "Darius Garland",
+     "team": "LAC",
+     "line": 7.5,
+     "odds": -161,
+     "dec": 1.62,
+     "odds_assumed": false,
+     "p": 0.701,
+     "implied": 0.617,
+     "fair": -234,
+     "edge": 0.084,
+     "ev": 0.136,
      "value": false,
      "stat": "ast",
      "side": "under",
-     "odds_ref": -150,
-     "dec_ref": 1.667,
-     "p_model": 0.737,
+     "odds_ref": -145,
+     "dec_ref": 1.69,
+     "p_model": 0.701,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -165717,22 +165721,22 @@
        10
       ],
       "h2h": [
-       3,
-       3
+       0,
+       1
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 28,
-       "value": 5.5,
-       "lg": 4.2,
+       "pos": "PG",
+       "rank": 3,
+       "value": 6.2,
+       "lg": 7.9,
        "n": 30
       }
      },
      "open": [
-      4.5,
-      1.553
+      6.5,
+      2.062
      ],
-     "mean": 3.3
+     "mean": 6.1
     }
    ],
    "value_bets": [
@@ -165749,13 +165753,13 @@
      "implied": 0.496,
      "fair": -106,
      "edge": 0.019,
-     "ev": 0.038,
+     "ev": 0.039,
      "value": true,
      "stat": "reb",
      "side": "under",
      "odds_ref": 105,
      "dec_ref": 2.05,
-     "p_model": 0.682,
+     "p_model": 0.683,
      "p_mkt": 0.459,
      "cand": true,
      "hr": {
@@ -165787,6 +165791,20 @@
      "legs": [
       {
        "kind": "prop",
+       "label": "Shai Gilgeous-Alexander Over 9.5 REB+AST",
+       "player": "Shai Gilgeous-Alexander",
+       "team": "OKC",
+       "line": 9.5,
+       "stat": "ra",
+       "side": "over",
+       "p": 0.587,
+       "dec": 1.706,
+       "ev": 0.001,
+       "gid": "2026-11-13-OKC-at-LAC",
+       "game": "OKC @ LAC"
+      },
+      {
+       "kind": "prop",
        "label": "Rui Hachimura Under 20.5 PTS+REB",
        "player": "Rui Hachimura",
        "team": "LAC",
@@ -165798,29 +165816,15 @@
        "ev": 0.006,
        "gid": "2026-11-13-OKC-at-LAC",
        "game": "OKC @ LAC"
-      },
-      {
-       "kind": "prop",
-       "label": "Shai Gilgeous-Alexander Over 5.5 Asistencias",
-       "player": "Shai Gilgeous-Alexander",
-       "team": "OKC",
-       "line": 5.5,
-       "stat": "ast",
-       "side": "over",
-       "p": 0.563,
-       "dec": 1.798,
-       "ev": 0.013,
-       "gid": "2026-11-13-OKC-at-LAC",
-       "game": "OKC @ LAC"
       }
      ],
      "n": 2,
-     "p": 0.317,
-     "p_indep": 0.318,
+     "p": 0.332,
+     "p_indep": 0.331,
      "corr": 1.0,
-     "dec": 3.21,
-     "fair": 3.15,
-     "ev": 0.017,
+     "dec": 3.04,
+     "fair": 3.01,
+     "ev": 0.01,
      "type": "sgp"
     }
    ],
@@ -165833,11 +165837,11 @@
      "stat": "fta",
      "side": "under",
      "line": 4.5,
-     "p": 0.541,
-     "fair": 1.85,
+     "p": 0.543,
+     "fair": 1.84,
      "min_dec": 1.9,
      "ref": 5.3,
-     "p_model": 0.638,
+     "p_model": 0.642,
      "label": "Keaton Wagler Under 4.5 Tiros libres intentados",
      "hr": {
       "l10": [
@@ -165849,7 +165853,7 @@
        1
       ]
      },
-     "mean": 4.0
+     "mean": 3.9
     },
     {
      "kind": "prop",
@@ -165885,11 +165889,11 @@
      "stat": "ftm",
      "side": "under",
      "line": 3.5,
-     "p": 0.53,
-     "fair": 1.89,
+     "p": 0.531,
+     "fair": 1.88,
      "min_dec": 1.94,
      "ref": 4.5,
-     "p_model": 0.601,
+     "p_model": 0.602,
      "label": "Keaton Wagler Under 3.5 Tiros libres anotados",
      "hr": {
       "l10": [
@@ -165911,11 +165915,11 @@
      "stat": "pf",
      "side": "over",
      "line": 1.5,
-     "p": 0.593,
-     "fair": 1.69,
-     "min_dec": 1.74,
+     "p": 0.595,
+     "fair": 1.68,
+     "min_dec": 1.73,
      "ref": 1.9,
-     "p_model": 0.593,
+     "p_model": 0.595,
      "label": "Kobe Sanders Over 1.5 Faltas",
      "hr": {
       "l10": [
@@ -165932,54 +165936,28 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "stat": "pf",
-     "side": "over",
-     "line": 1.5,
-     "p": 0.574,
-     "fair": 1.74,
-     "min_dec": 1.79,
-     "ref": 1.9,
-     "p_model": 0.574,
-     "label": "Shai Gilgeous-Alexander Over 1.5 Faltas",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     },
-     "mean": 2.0
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Shai Gilgeous-Alexander",
+     "player": "Jared McCain",
      "team": "OKC",
      "stat": "fga",
      "side": "over",
-     "line": 21.5,
-     "p": 0.521,
-     "fair": 1.92,
-     "min_dec": 1.98,
-     "ref": 21.7,
-     "p_model": 0.571,
-     "label": "Shai Gilgeous-Alexander Over 21.5 Tiros de campo intentados",
+     "line": 12.5,
+     "p": 0.524,
+     "fair": 1.91,
+     "min_dec": 1.97,
+     "ref": 12.6,
+     "p_model": 0.579,
+     "label": "Jared McCain Over 12.5 Tiros de campo intentados",
      "hr": {
       "l10": [
-       5,
+       4,
        10
       ],
       "h2h": [
-       2,
+       0,
        4
       ]
      },
-     "mean": 23.5
+     "mean": 13.9
     },
     {
      "kind": "prop",
@@ -165989,11 +165967,11 @@
      "stat": "fga",
      "side": "over",
      "line": 7.5,
-     "p": 0.521,
+     "p": 0.52,
      "fair": 1.92,
      "min_dec": 1.98,
      "ref": 7.9,
-     "p_model": 0.569,
+     "p_model": 0.568,
      "label": "Keaton Wagler Over 7.5 Tiros de campo intentados",
      "hr": {
       "l10": [
@@ -166010,80 +165988,28 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Jared McCain",
-     "team": "OKC",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
      "stat": "fgm",
      "side": "over",
-     "line": 4.5,
-     "p": 0.52,
-     "fair": 1.92,
-     "min_dec": 1.98,
-     "ref": 4.6,
-     "p_model": 0.566,
-     "label": "Jared McCain Over 4.5 Tiros de campo anotados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ]
-     },
-     "mean": 5.4
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Darius Garland",
-     "team": "LAC",
-     "stat": "pf",
-     "side": "over",
-     "line": 1.5,
-     "p": 0.563,
-     "fair": 1.77,
-     "min_dec": 1.83,
-     "ref": 1.9,
+     "line": 3.5,
+     "p": 0.519,
+     "fair": 1.93,
+     "min_dec": 1.99,
+     "ref": 3.8,
      "p_model": 0.563,
-     "label": "Darius Garland Over 1.5 Faltas",
+     "label": "Derrick Jones Jr. Over 3.5 Tiros de campo anotados",
      "hr": {
       "l10": [
        6,
        10
       ],
       "h2h": [
-       1,
-       1
+       3,
+       3
       ]
      },
-     "mean": 1.9
-    },
-    {
-     "kind": "prop",
-     "model_only": true,
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "stat": "fg3a",
-     "side": "over",
-     "line": 5.5,
-     "p": 0.519,
-     "fair": 1.93,
-     "min_dec": 1.98,
-     "ref": 5.9,
-     "p_model": 0.563,
-     "label": "Shai Gilgeous-Alexander Over 5.5 Triples intentados",
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "mean": 6.3
+     "mean": 4.2
     },
     {
      "kind": "prop",
@@ -166114,102 +166040,134 @@
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Derrick Jones Jr.",
+     "player": "Darius Garland",
      "team": "LAC",
-     "stat": "fgm",
+     "stat": "pf",
      "side": "over",
-     "line": 3.5,
-     "p": 0.518,
-     "fair": 1.93,
-     "min_dec": 1.99,
-     "ref": 3.8,
-     "p_model": 0.56,
-     "label": "Derrick Jones Jr. Over 3.5 Tiros de campo anotados",
+     "line": 1.5,
+     "p": 0.561,
+     "fair": 1.78,
+     "min_dec": 1.84,
+     "ref": 1.9,
+     "p_model": 0.561,
+     "label": "Darius Garland Over 1.5 Faltas",
      "hr": {
       "l10": [
        6,
        10
       ],
       "h2h": [
-       3,
-       3
+       1,
+       1
       ]
      },
-     "mean": 4.2
+     "mean": 1.9
     },
     {
      "kind": "prop",
      "model_only": true,
-     "player": "Shai Gilgeous-Alexander",
+     "player": "Jared McCain",
      "team": "OKC",
-     "stat": "fg2a",
+     "stat": "fg2m",
      "side": "over",
-     "line": 15.5,
-     "p": 0.516,
-     "fair": 1.94,
-     "min_dec": 2.0,
-     "ref": 15.7,
-     "p_model": 0.553,
-     "label": "Shai Gilgeous-Alexander Over 15.5 Dobles intentados",
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "mean": 17.2
-    }
-   ],
-   "all_bets": [
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 18.5 Puntos",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 18.5,
-     "odds": -127,
-     "dec": 1.784,
-     "odds_assumed": false,
-     "p": 0.706,
-     "implied": 0.56,
-     "edge": 0.145,
-     "ev": 0.26,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "odds_ref": -116,
-     "dec_ref": 1.862,
-     "p_model": 0.706,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
+     "line": 2.5,
+     "p": 0.517,
+     "fair": 1.93,
+     "min_dec": 1.99,
+     "ref": 2.9,
+     "p_model": 0.557,
+     "label": "Jared McCain Over 2.5 Dobles anotados",
      "hr": {
       "l10": [
        5,
        10
       ],
       "h2h": [
-       4,
+       0,
        4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 27.8,
-       "lg": 24.0,
-       "n": 30
-      }
+      ]
      },
-     "open": [
-      19.5,
-      1.871
-     ],
-     "mean": 15.2
+     "mean": 3.6
     },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Jared McCain",
+     "team": "OKC",
+     "stat": "fg3a",
+     "side": "over",
+     "line": 6.5,
+     "p": 0.516,
+     "fair": 1.94,
+     "min_dec": 1.99,
+     "ref": 6.8,
+     "p_model": 0.555,
+     "label": "Jared McCain Over 6.5 Triples intentados",
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ]
+     },
+     "mean": 7.4
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Nique Clifford",
+     "team": "OKC",
+     "stat": "pf",
+     "side": "over",
+     "line": 1.5,
+     "p": 0.555,
+     "fair": 1.8,
+     "min_dec": 1.86,
+     "ref": 1.8,
+     "p_model": 0.555,
+     "label": "Nique Clifford Over 1.5 Faltas",
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       5,
+       5
+      ]
+     },
+     "mean": 2.0
+    },
+    {
+     "kind": "prop",
+     "model_only": true,
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "stat": "dd",
+     "side": "over",
+     "line": 0.5,
+     "p": 0.352,
+     "fair": 2.84,
+     "min_dec": 2.92,
+     "ref": null,
+     "p_model": 0.352,
+     "label": "Shai Gilgeous-Alexander Doble-doble: Sí",
+     "hr": {
+      "l10": [
+       0,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     }
+    }
+   ],
+   "all_bets": [
     {
      "kind": "prop",
      "label": "Rui Hachimura Under 15.5 Puntos",
@@ -166219,16 +166177,16 @@
      "odds": -138,
      "dec": 1.725,
      "odds_assumed": false,
-     "p": 0.715,
+     "p": 0.713,
      "implied": 0.58,
-     "edge": 0.135,
-     "ev": 0.233,
+     "edge": 0.133,
+     "ev": 0.23,
      "value": false,
      "stat": "pts",
      "side": "under",
      "odds_ref": -125,
      "dec_ref": 1.8,
-     "p_model": 0.715,
+     "p_model": 0.713,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -166257,51 +166215,6 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Under 4.5 Asistencias",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 4.5,
-     "odds": -167,
-     "dec": 1.598,
-     "odds_assumed": false,
-     "p": 0.737,
-     "implied": 0.626,
-     "edge": 0.111,
-     "ev": 0.178,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "odds_ref": -150,
-     "dec_ref": 1.667,
-     "p_model": 0.737,
-     "p_mkt": null,
-     "cand": false,
-     "no_value_why": "sin cuota de la casa para el otro lado",
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 28,
-       "value": 5.5,
-       "lg": 4.2,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.553
-     ],
-     "mean": 3.3
-    },
-    {
-     "kind": "prop",
      "label": "Aday Mara Under 8.5 Rebotes",
      "player": "Aday Mara",
      "team": "OKC",
@@ -166309,16 +166222,16 @@
      "odds": -144,
      "dec": 1.695,
      "odds_assumed": false,
-     "p": 0.676,
+     "p": 0.684,
      "implied": 0.59,
-     "edge": 0.086,
-     "ev": 0.146,
+     "edge": 0.094,
+     "ev": 0.159,
      "value": false,
      "stat": "reb",
      "side": "under",
      "odds_ref": -130,
      "dec_ref": 1.769,
-     "p_model": 0.676,
+     "p_model": 0.684,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -166332,10 +166245,10 @@
        1
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 21,
-       "value": 15.8,
-       "lg": 14.7,
+       "pos": "PF",
+       "rank": 3,
+       "value": 8.9,
+       "lg": 10.5,
        "n": 30
       }
      },
@@ -166437,52 +166350,52 @@
       11.5,
       1.81
      ],
-     "mean": 10.8
+     "mean": 10.7
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Under 15.5 Puntos",
-     "player": "Jared McCain",
+     "label": "Isaiah Hartenstein Under 4.5 Asistencias",
+     "player": "Isaiah Hartenstein",
      "team": "OKC",
-     "line": 15.5,
-     "odds": -132,
-     "dec": 1.757,
+     "line": 4.5,
+     "odds": -167,
+     "dec": 1.598,
      "odds_assumed": false,
-     "p": 0.598,
-     "implied": 0.569,
-     "edge": 0.029,
-     "ev": 0.051,
+     "p": 0.701,
+     "implied": 0.626,
+     "edge": 0.075,
+     "ev": 0.12,
      "value": false,
-     "stat": "pts",
+     "stat": "ast",
      "side": "under",
-     "odds_ref": -120,
-     "dec_ref": 1.833,
-     "p_model": 0.598,
+     "odds_ref": -150,
+     "dec_ref": 1.667,
+     "p_model": 0.701,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
-       4,
-       4
+       3,
+       3
       ],
       "dvp": {
-       "pos": "SF",
-       "rank": 24,
-       "value": 22.2,
-       "lg": 20.2,
+       "pos": "C",
+       "rank": 28,
+       "value": 5.5,
+       "lg": 4.2,
        "n": 30
       }
      },
      "open": [
-      15.5,
-      1.757
+      4.5,
+      1.553
      ],
-     "mean": 14.8
+     "mean": 3.6
     },
     {
      "kind": "prop",
@@ -166496,13 +166409,13 @@
      "p": 0.515,
      "implied": 0.496,
      "edge": 0.019,
-     "ev": 0.038,
+     "ev": 0.039,
      "value": true,
      "stat": "reb",
      "side": "under",
      "odds_ref": 105,
      "dec_ref": 2.05,
-     "p_model": 0.682,
+     "p_model": 0.683,
      "p_mkt": 0.459,
      "cand": true,
      "hr": {
@@ -166530,6 +166443,51 @@
     },
     {
      "kind": "prop",
+     "label": "Jared McCain Over 14.5 Puntos",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 14.5,
+     "odds": -118,
+     "dec": 1.846,
+     "odds_assumed": false,
+     "p": 0.561,
+     "implied": 0.542,
+     "edge": 0.019,
+     "ev": 0.036,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "odds_ref": -108,
+     "dec_ref": 1.926,
+     "p_model": 0.561,
+     "p_mkt": null,
+     "cand": false,
+     "no_value_why": "sin cuota de la casa para el otro lado",
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 27.8,
+       "lg": 24.0,
+       "n": 30
+      }
+     },
+     "open": [
+      13.5,
+      1.695
+     ],
+     "mean": 17.1
+    },
+    {
+     "kind": "prop",
      "label": "Derrick Jones Jr. Over 9.5 Puntos",
      "player": "Derrick Jones Jr.",
      "team": "LAC",
@@ -166537,16 +166495,16 @@
      "odds": -121,
      "dec": 1.829,
      "odds_assumed": false,
-     "p": 0.566,
+     "p": 0.564,
      "implied": 0.547,
-     "edge": 0.019,
-     "ev": 0.035,
+     "edge": 0.017,
+     "ev": 0.032,
      "value": false,
      "stat": "pts",
      "side": "over",
      "odds_ref": -110,
      "dec_ref": 1.909,
-     "p_model": 0.566,
+     "p_model": 0.564,
      "p_mkt": null,
      "cand": false,
      "no_value_why": "sin cuota de la casa para el otro lado",
@@ -166571,7 +166529,51 @@
       9.5,
       1.829
      ],
-     "mean": 11.6
+     "mean": 11.5
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 5.5 Asistencias",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 5.5,
+     "odds": -125,
+     "dec": 1.798,
+     "odds_assumed": false,
+     "p": 0.569,
+     "implied": 0.556,
+     "edge": 0.013,
+     "ev": 0.023,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.73,
+     "p_mkt": 0.515,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 12,
+       "value": 7.6,
+       "lg": 7.9,
+       "n": 30
+      }
+     },
+     "open": [
+      5.5,
+      1.819
+     ],
+     "mean": 8.1
     },
     {
      "kind": "prop",
@@ -166591,7 +166593,7 @@
      "side": "under",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.699,
+     "p_model": 0.7,
      "p_mkt": 0.499,
      "cand": false,
      "hr": {
@@ -166619,16 +166621,16 @@
      "odds": -132,
      "dec": 1.757,
      "odds_assumed": false,
-     "p": 0.579,
+     "p": 0.576,
      "implied": 0.569,
-     "edge": 0.01,
-     "ev": 0.017,
+     "edge": 0.007,
+     "ev": 0.012,
      "value": false,
      "stat": "pts",
      "side": "under",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.579,
+     "p_model": 0.576,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -166656,212 +166658,6 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 5.5 Asistencias",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 5.5,
-     "odds": -125,
-     "dec": 1.798,
-     "odds_assumed": false,
-     "p": 0.563,
-     "implied": 0.556,
-     "edge": 0.007,
-     "ev": 0.013,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.709,
-     "p_mkt": 0.515,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 12,
-       "value": 7.6,
-       "lg": 7.9,
-       "n": 30
-      }
-     },
-     "open": [
-      5.5,
-      1.819
-     ],
-     "mean": 8.0
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 22.5 PTS+AST",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 22.5,
-     "odds": -122,
-     "dec": 1.822,
-     "odds_assumed": false,
-     "p": 0.556,
-     "implied": 0.549,
-     "edge": 0.007,
-     "ev": 0.013,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "odds_ref": -109,
-     "dec_ref": 1.917,
-     "p_model": 0.7,
-     "p_mkt": 0.508,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ]
-     },
-     "open": [
-      22.5,
-      1.822
-     ],
-     "mean": 18.9
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 26.5 PTS+REB+AST",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 26.5,
-     "odds": -117,
-     "dec": 1.856,
-     "odds_assumed": false,
-     "p": 0.546,
-     "implied": 0.539,
-     "edge": 0.007,
-     "ev": 0.013,
-     "value": false,
-     "stat": "pra",
-     "side": "under",
-     "odds_ref": -109,
-     "dec_ref": 1.917,
-     "p_model": 0.686,
-     "p_mkt": 0.499,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 29,
-       "value": 42.4,
-       "lg": 36.3,
-       "n": 30
-      }
-     },
-     "open": [
-      26.5,
-      1.856
-     ],
-     "mean": 22.8
-    },
-    {
-     "kind": "prop",
-     "label": "Kenrich Williams Under 4.5 Rebotes",
-     "player": "Kenrich Williams",
-     "team": "OKC",
-     "line": 4.5,
-     "odds": -122,
-     "dec": 1.819,
-     "odds_assumed": false,
-     "p": 0.557,
-     "implied": 0.55,
-     "edge": 0.007,
-     "ev": 0.013,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.701,
-     "p_mkt": 0.509,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 3,
-       "value": 8.9,
-       "lg": 10.5,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.828
-     ],
-     "mean": 3.5
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 22.5 PTS+REB",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 22.5,
-     "odds": -122,
-     "dec": 1.817,
-     "odds_assumed": false,
-     "p": 0.555,
-     "implied": 0.55,
-     "edge": 0.005,
-     "ev": 0.009,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "odds_ref": -115,
-     "dec_ref": 1.87,
-     "p_model": 0.693,
-     "p_mkt": 0.51,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "open": [
-      22.5,
-      1.817
-     ],
-     "mean": 19.1
-    },
-    {
-     "kind": "prop",
      "label": "Rui Hachimura Under 21.5 PTS+REB+AST",
      "player": "Rui Hachimura",
      "team": "LAC",
@@ -166869,16 +166665,16 @@
      "odds": -120,
      "dec": 1.836,
      "odds_assumed": false,
-     "p": 0.549,
+     "p": 0.55,
      "implied": 0.545,
      "edge": 0.005,
-     "ev": 0.008,
+     "ev": 0.009,
      "value": false,
      "stat": "pra",
      "side": "under",
      "odds_ref": -112,
      "dec_ref": 1.893,
-     "p_model": 0.684,
+     "p_model": 0.686,
      "p_mkt": 0.504,
      "cand": false,
      "hr": {
@@ -166922,7 +166718,7 @@
      "side": "under",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.699,
+     "p_model": 0.698,
      "p_mkt": 0.519,
      "cand": false,
      "hr": {
@@ -166939,7 +166735,7 @@
       20.5,
       1.783
      ],
-     "mean": 17.2
+     "mean": 17.3
     },
     {
      "kind": "prop",
@@ -166959,7 +166755,7 @@
      "side": "over",
      "odds_ref": 134,
      "dec_ref": 2.34,
-     "p_model": 0.552,
+     "p_model": 0.553,
      "p_mkt": 0.416,
      "cand": false,
      "hr": {
@@ -166987,6 +166783,43 @@
     },
     {
      "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 9.5 REB+AST",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 9.5,
+     "odds": -142,
+     "dec": 1.706,
+     "odds_assumed": false,
+     "p": 0.587,
+     "implied": 0.586,
+     "edge": 0.001,
+     "ev": 0.001,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "odds_ref": -130,
+     "dec_ref": 1.769,
+     "p_model": 0.719,
+     "p_mkt": 0.543,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       4,
+       4
+      ]
+     },
+     "open": [
+      9.5,
+      1.706
+     ],
+     "mean": 12.5
+    },
+    {
+     "kind": "prop",
      "label": "Darius Garland Under 9.5 REB+AST",
      "player": "Darius Garland",
      "team": "LAC",
@@ -166996,14 +166829,14 @@
      "odds_assumed": false,
      "p": 0.54,
      "implied": 0.54,
-     "edge": 0.001,
-     "ev": 0.001,
+     "edge": 0.0,
+     "ev": 0.0,
      "value": false,
      "stat": "ra",
      "side": "under",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.662,
+     "p_model": 0.66,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -167020,88 +166853,7 @@
       9.5,
       1.852
      ],
-     "mean": 8.2
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 1.5 Triples",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": -236,
-     "dec": 1.425,
-     "odds_assumed": false,
-     "p": 0.698,
-     "implied": 0.702,
-     "edge": -0.004,
-     "ev": -0.005,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "odds_ref": -197,
-     "dec_ref": 1.508,
-     "p_model": 0.843,
-     "p_mkt": 0.65,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 4.5,
-       "lg": 3.4,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      1.446
-     ],
-     "mean": 0.7
-    },
-    {
-     "kind": "prop",
-     "label": "Brook Lopez Under 16.5 PTS+REB",
-     "player": "Brook Lopez",
-     "team": "LAC",
-     "line": 16.5,
-     "odds": -107,
-     "dec": 1.936,
-     "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.516,
-     "edge": -0.004,
-     "ev": -0.008,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "odds_ref": 100,
-     "dec_ref": 2.0,
-     "p_model": 0.615,
-     "p_mkt": 0.478,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     },
-     "open": [
-      16.5,
-      1.936
-     ],
-     "mean": 15.3
+     "mean": 8.3
     },
     {
      "kind": "prop",
@@ -167114,14 +166866,14 @@
      "odds_assumed": false,
      "p": 0.455,
      "implied": 0.459,
-     "edge": -0.004,
-     "ev": -0.009,
+     "edge": -0.003,
+     "ev": -0.008,
      "value": false,
      "stat": "fg3m",
      "side": "over",
      "odds_ref": 130,
      "dec_ref": 2.3,
-     "p_model": 0.544,
+     "p_model": 0.547,
      "p_mkt": 0.425,
      "cand": false,
      "hr": {
@@ -167149,40 +166901,121 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 9.5 REB+AST",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 9.5,
-     "odds": -142,
-     "dec": 1.706,
+     "label": "Brook Lopez Under 16.5 PTS+REB",
+     "player": "Brook Lopez",
+     "team": "LAC",
+     "line": 16.5,
+     "odds": -107,
+     "dec": 1.936,
      "odds_assumed": false,
-     "p": 0.579,
-     "implied": 0.586,
-     "edge": -0.007,
-     "ev": -0.012,
+     "p": 0.512,
+     "implied": 0.516,
+     "edge": -0.005,
+     "ev": -0.009,
      "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": -130,
-     "dec_ref": 1.769,
-     "p_model": 0.689,
-     "p_mkt": 0.543,
+     "stat": "pr",
+     "side": "under",
+     "odds_ref": 100,
+     "dec_ref": 2.0,
+     "p_model": 0.612,
+     "p_mkt": 0.478,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       4,
        10
       ],
       "h2h": [
-       4,
+       3,
        4
       ]
      },
      "open": [
-      9.5,
-      1.706
+      16.5,
+      1.936
      ],
-     "mean": 12.3
+     "mean": 15.3
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 41.5 PTS+REB+AST",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 41.5,
+     "odds": -116,
+     "dec": 1.86,
+     "odds_assumed": false,
+     "p": 0.53,
+     "implied": 0.538,
+     "edge": -0.007,
+     "ev": -0.013,
+     "value": false,
+     "stat": "pra",
+     "side": "over",
+     "odds_ref": -108,
+     "dec_ref": 1.926,
+     "p_model": 0.628,
+     "p_mkt": 0.498,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 33.4,
+       "lg": 40.8,
+       "n": 30
+      }
+     },
+     "open": [
+      41.5,
+      1.86
+     ],
+     "mean": 48.8
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 37.5 PTS+AST",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 37.5,
+     "odds": -115,
+     "dec": 1.868,
+     "odds_assumed": false,
+     "p": 0.526,
+     "implied": 0.535,
+     "edge": -0.009,
+     "ev": -0.017,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "odds_ref": -108,
+     "dec_ref": 1.926,
+     "p_model": 0.617,
+     "p_mkt": 0.496,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ]
+     },
+     "open": [
+      37.5,
+      1.868
+     ],
+     "mean": 44.4
     },
     {
      "kind": "prop",
@@ -167195,14 +167028,14 @@
      "odds_assumed": false,
      "p": 0.544,
      "implied": 0.553,
-     "edge": -0.009,
-     "ev": -0.016,
+     "edge": -0.01,
+     "ev": -0.017,
      "value": false,
      "stat": "pra",
      "side": "under",
      "odds_ref": -115,
      "dec_ref": 1.87,
-     "p_model": 0.64,
+     "p_model": 0.638,
      "p_mkt": 0.512,
      "cand": false,
      "hr": {
@@ -167237,16 +167070,16 @@
      "odds": -117,
      "dec": 1.856,
      "odds_assumed": false,
-     "p": 0.53,
+     "p": 0.529,
      "implied": 0.539,
      "edge": -0.009,
-     "ev": -0.016,
+     "ev": -0.017,
      "value": false,
      "stat": "pra",
      "side": "under",
      "odds_ref": -107,
      "dec_ref": 1.935,
-     "p_model": 0.623,
+     "p_model": 0.621,
      "p_mkt": 0.499,
      "cand": false,
      "hr": {
@@ -167259,10 +167092,10 @@
        1
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 22,
-       "value": 43.7,
-       "lg": 40.6,
+       "pos": "PF",
+       "rank": 7,
+       "value": 34.7,
+       "lg": 38.5,
        "n": 30
       }
      },
@@ -167278,6 +167111,47 @@
     },
     {
      "kind": "prop",
+     "label": "Aday Mara Under 9.5 REB+AST",
+     "player": "Aday Mara",
+     "team": "OKC",
+     "line": 9.5,
+     "odds": -117,
+     "dec": 1.852,
+     "odds_assumed": false,
+     "p": 0.53,
+     "implied": 0.54,
+     "edge": -0.01,
+     "ev": -0.018,
+     "value": false,
+     "stat": "ra",
+     "side": "under",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.62,
+     "p_mkt": 0.5,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     },
+     "open": [
+      9.5,
+      1.852
+     ],
+     "mean": 8.7,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Brook Lopez Under 6.5 REB+AST",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -167285,16 +167159,16 @@
      "odds": -120,
      "dec": 1.835,
      "odds_assumed": false,
-     "p": 0.535,
+     "p": 0.534,
      "implied": 0.545,
-     "edge": -0.01,
-     "ev": -0.019,
+     "edge": -0.011,
+     "ev": -0.021,
      "value": false,
      "stat": "ra",
      "side": "under",
      "odds_ref": -109,
      "dec_ref": 1.917,
-     "p_model": 0.625,
+     "p_model": 0.621,
      "p_mkt": 0.505,
      "cand": false,
      "hr": {
@@ -167315,91 +167189,6 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Under 10.5 Rebotes",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 10.5,
-     "odds": -131,
-     "dec": 1.763,
-     "odds_assumed": false,
-     "p": 0.555,
-     "implied": 0.567,
-     "edge": -0.012,
-     "ev": -0.021,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "odds_ref": -121,
-     "dec_ref": 1.826,
-     "p_model": 0.645,
-     "p_mkt": 0.525,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 21,
-       "value": 15.8,
-       "lg": 14.7,
-       "n": 30
-      }
-     },
-     "open": [
-      10.5,
-      1.737
-     ],
-     "mean": 9.3
-    },
-    {
-     "kind": "prop",
-     "label": "Aday Mara Under 12.5 PTS+AST",
-     "player": "Aday Mara",
-     "team": "OKC",
-     "line": 12.5,
-     "odds": -120,
-     "dec": 1.835,
-     "odds_assumed": false,
-     "p": 0.533,
-     "implied": 0.545,
-     "edge": -0.012,
-     "ev": -0.023,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "odds_ref": -109,
-     "dec_ref": 1.917,
-     "p_model": 0.617,
-     "p_mkt": 0.505,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ]
-     },
-     "open": [
-      12.5,
-      1.835
-     ],
-     "mean": 11.6,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Brook Lopez Under 5.5 Rebotes",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -167416,7 +167205,7 @@
      "side": "under",
      "odds_ref": -138,
      "dec_ref": 1.725,
-     "p_model": 0.68,
+     "p_model": 0.678,
      "p_mkt": 0.561,
      "cand": false,
      "hr": {
@@ -167444,122 +167233,128 @@
     },
     {
      "kind": "prop",
-     "label": "Aday Mara Under 9.5 REB+AST",
-     "player": "Aday Mara",
+     "label": "Kenrich Williams Under 4.5 Rebotes",
+     "player": "Kenrich Williams",
      "team": "OKC",
-     "line": 9.5,
-     "odds": -117,
-     "dec": 1.852,
+     "line": 4.5,
+     "odds": -122,
+     "dec": 1.819,
      "odds_assumed": false,
-     "p": 0.526,
-     "implied": 0.54,
+     "p": 0.536,
+     "implied": 0.55,
      "edge": -0.014,
      "ev": -0.025,
      "value": false,
-     "stat": "ra",
+     "stat": "reb",
      "side": "under",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.605,
-     "p_mkt": 0.5,
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.617,
+     "p_mkt": 0.509,
      "cand": false,
      "hr": {
       "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ]
-     },
-     "open": [
-      9.5,
-      1.852
-     ],
-     "mean": 8.8,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Aday Mara Under 18.5 PTS+REB",
-     "player": "Aday Mara",
-     "team": "OKC",
-     "line": 18.5,
-     "odds": -124,
-     "dec": 1.808,
-     "odds_assumed": false,
-     "p": 0.539,
-     "implied": 0.553,
-     "edge": -0.014,
-     "ev": -0.026,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.619,
-     "p_mkt": 0.512,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ]
-     },
-     "open": [
-      18.5,
-      1.808
-     ],
-     "mean": 17.1,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Brook Lopez Under 12.5 PTS+AST",
-     "player": "Brook Lopez",
-     "team": "LAC",
-     "line": 12.5,
-     "odds": -112,
-     "dec": 1.892,
-     "odds_assumed": false,
-     "p": 0.514,
-     "implied": 0.529,
-     "edge": -0.014,
-     "ev": -0.027,
-     "value": false,
-     "stat": "pa",
-     "side": "under",
-     "odds_ref": 100,
-     "dec_ref": 2.0,
-     "p_model": 0.589,
-     "p_mkt": 0.489,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
+       7,
        10
       ],
       "h2h": [
        2,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 24,
+       "value": 8.6,
+       "lg": 8.0,
+       "n": 30
+      }
+     },
+     "open": [
+      4.5,
+      1.828
+     ],
+     "mean": 4.1
+    },
+    {
+     "kind": "prop",
+     "label": "Jared McCain Over 5.5 REB+AST",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 5.5,
+     "odds": -115,
+     "dec": 1.873,
+     "odds_assumed": false,
+     "p": 0.52,
+     "implied": 0.534,
+     "edge": -0.014,
+     "ev": -0.026,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.597,
+     "p_mkt": 0.494,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
        4
       ]
      },
      "open": [
-      12.5,
-      1.892
+      5.5,
+      1.873
      ],
-     "mean": 12.1
+     "mean": 6.6
+    },
+    {
+     "kind": "prop",
+     "label": "Jared McCain Over 20.5 PTS+REB+AST",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 20.5,
+     "odds": -111,
+     "dec": 1.897,
+     "odds_assumed": false,
+     "p": 0.513,
+     "implied": 0.527,
+     "edge": -0.014,
+     "ev": -0.027,
+     "value": false,
+     "stat": "pra",
+     "side": "over",
+     "odds_ref": -104,
+     "dec_ref": 1.962,
+     "p_model": 0.587,
+     "p_mkt": 0.488,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 29,
+       "value": 42.4,
+       "lg": 36.3,
+       "n": 30
+      }
+     },
+     "open": [
+      20.5,
+      1.897
+     ],
+     "mean": 23.7
     },
     {
      "kind": "prop",
@@ -167570,16 +167365,16 @@
      "odds": 114,
      "dec": 2.141,
      "odds_assumed": false,
-     "p": 0.454,
+     "p": 0.455,
      "implied": 0.467,
-     "edge": -0.014,
-     "ev": -0.029,
+     "edge": -0.013,
+     "ev": -0.027,
      "value": false,
      "stat": "reb",
      "side": "under",
      "odds_ref": 125,
      "dec_ref": 2.25,
-     "p_model": 0.517,
+     "p_model": 0.521,
      "p_mkt": 0.432,
      "cand": false,
      "hr": {
@@ -167603,28 +167398,65 @@
       4.5,
       2.067
      ],
-     "mean": 4.7
+     "mean": 4.8
     },
     {
      "kind": "prop",
-     "label": "Aday Mara Under 10.5 Puntos",
+     "label": "Brook Lopez Under 12.5 PTS+AST",
+     "player": "Brook Lopez",
+     "team": "LAC",
+     "line": 12.5,
+     "odds": -112,
+     "dec": 1.892,
+     "odds_assumed": false,
+     "p": 0.515,
+     "implied": 0.529,
+     "edge": -0.014,
+     "ev": -0.027,
+     "value": false,
+     "stat": "pa",
+     "side": "under",
+     "odds_ref": 100,
+     "dec_ref": 2.0,
+     "p_model": 0.59,
+     "p_mkt": 0.489,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     },
+     "open": [
+      12.5,
+      1.892
+     ],
+     "mean": 12.1
+    },
+    {
+     "kind": "prop",
+     "label": "Aday Mara Under 12.5 PTS+AST",
      "player": "Aday Mara",
      "team": "OKC",
-     "line": 10.5,
-     "odds": -123,
-     "dec": 1.81,
+     "line": 12.5,
+     "odds": -120,
+     "dec": 1.835,
      "odds_assumed": false,
-     "p": 0.536,
-     "implied": 0.553,
-     "edge": -0.017,
-     "ev": -0.03,
+     "p": 0.529,
+     "implied": 0.545,
+     "edge": -0.016,
+     "ev": -0.028,
      "value": false,
-     "stat": "pts",
+     "stat": "pa",
      "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.608,
-     "p_mkt": 0.512,
+     "odds_ref": -109,
+     "dec_ref": 1.917,
+     "p_model": 0.604,
+     "p_mkt": 0.505,
      "cand": false,
      "hr": {
       "l10": [
@@ -167634,20 +167466,54 @@
       "h2h": [
        1,
        1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 17,
-       "value": 22.4,
-       "lg": 21.7,
-       "n": 30
-      }
+      ]
      },
      "open": [
-      10.5,
-      1.799
+      12.5,
+      1.835
      ],
-     "mean": 9.9,
+     "mean": 11.8,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Aday Mara Under 18.5 PTS+REB",
+     "player": "Aday Mara",
+     "team": "OKC",
+     "line": 18.5,
+     "odds": -124,
+     "dec": 1.808,
+     "odds_assumed": false,
+     "p": 0.536,
+     "implied": 0.553,
+     "edge": -0.017,
+     "ev": -0.032,
+     "value": false,
+     "stat": "pr",
+     "side": "under",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.606,
+     "p_mkt": 0.512,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     },
+     "open": [
+      18.5,
+      1.808
+     ],
+     "mean": 17.3,
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
@@ -167662,16 +167528,16 @@
      "odds": -117,
      "dec": 1.852,
      "odds_assumed": false,
-     "p": 0.522,
+     "p": 0.521,
      "implied": 0.54,
-     "edge": -0.018,
-     "ev": -0.034,
+     "edge": -0.019,
+     "ev": -0.035,
      "value": false,
      "stat": "pra",
      "side": "under",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.587,
+     "p_model": 0.585,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -167695,7 +167561,7 @@
       28.5,
       1.852
      ],
-     "mean": 27.3
+     "mean": 27.4
     },
     {
      "kind": "prop",
@@ -167709,13 +167575,13 @@
      "p": 0.485,
      "implied": 0.502,
      "edge": -0.017,
-     "ev": -0.034,
+     "ev": -0.035,
      "value": false,
      "stat": "reb",
      "side": "under",
      "odds_ref": 111,
      "dec_ref": 2.11,
-     "p_model": 0.545,
+     "p_model": 0.544,
      "p_mkt": 0.465,
      "cand": false,
      "hr": {
@@ -167752,14 +167618,14 @@
      "odds_assumed": false,
      "p": 0.447,
      "implied": 0.463,
-     "edge": -0.016,
-     "ev": -0.035,
+     "edge": -0.017,
+     "ev": -0.036,
      "value": false,
      "stat": "fg3m",
      "side": "over",
      "odds_ref": 125,
      "dec_ref": 2.25,
-     "p_model": 0.501,
+     "p_model": 0.5,
      "p_mkt": 0.429,
      "cand": false,
      "hr": {
@@ -167818,6 +167684,43 @@
     },
     {
      "kind": "prop",
+     "label": "Jared McCain Over 18.5 PTS+REB",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 18.5,
+     "odds": -116,
+     "dec": 1.865,
+     "odds_assumed": false,
+     "p": 0.516,
+     "implied": 0.536,
+     "edge": -0.02,
+     "ev": -0.037,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "odds_ref": -102,
+     "dec_ref": 1.98,
+     "p_model": 0.575,
+     "p_mkt": 0.496,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ]
+     },
+     "open": [
+      18.5,
+      1.865
+     ],
+     "mean": 21.3
+    },
+    {
+     "kind": "prop",
      "label": "Keaton Wagler Over 1.5 Triples",
      "player": "Keaton Wagler",
      "team": "LAC",
@@ -167825,16 +167728,16 @@
      "odds": 117,
      "dec": 2.166,
      "odds_assumed": false,
-     "p": 0.443,
+     "p": 0.444,
      "implied": 0.462,
      "edge": -0.018,
-     "ev": -0.04,
+     "ev": -0.039,
      "value": false,
      "stat": "fg3m",
      "side": "over",
      "odds_ref": 137,
      "dec_ref": 2.37,
-     "p_model": 0.491,
+     "p_model": 0.492,
      "p_mkt": 0.427,
      "cand": false,
      "hr": {
@@ -167866,24 +167769,24 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 41.5 PTS+REB+AST",
+     "label": "Shai Gilgeous-Alexander Over 31.5 Puntos",
      "player": "Shai Gilgeous-Alexander",
      "team": "OKC",
-     "line": 41.5,
-     "odds": -116,
-     "dec": 1.86,
+     "line": 31.5,
+     "odds": -115,
+     "dec": 1.873,
      "odds_assumed": false,
-     "p": 0.516,
-     "implied": 0.538,
+     "p": 0.512,
+     "implied": 0.534,
      "edge": -0.022,
      "ev": -0.041,
      "value": false,
-     "stat": "pra",
+     "stat": "pts",
      "side": "over",
-     "odds_ref": -108,
-     "dec_ref": 1.926,
-     "p_model": 0.569,
-     "p_mkt": 0.498,
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.564,
+     "p_mkt": 0.494,
      "cand": false,
      "hr": {
       "l10": [
@@ -167891,66 +167794,144 @@
        10
       ],
       "h2h": [
-       3,
+       2,
        4
       ],
       "dvp": {
        "pos": "PG",
        "rank": 1,
-       "value": 33.4,
-       "lg": 40.8,
+       "value": 21.6,
+       "lg": 27.3,
        "n": 30
       }
      },
      "open": [
-      41.5,
-      1.86
+      30.5,
+      1.757
      ],
-     "mean": 46.3
+     "mean": 36.3
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Under 2.5 Triples",
-     "player": "Jared McCain",
+     "label": "Aday Mara Under 10.5 Puntos",
+     "player": "Aday Mara",
      "team": "OKC",
-     "line": 2.5,
-     "odds": -142,
-     "dec": 1.706,
+     "line": 10.5,
+     "odds": -123,
+     "dec": 1.81,
      "odds_assumed": false,
-     "p": 0.561,
-     "implied": 0.586,
+     "p": 0.53,
+     "implied": 0.553,
+     "edge": -0.023,
+     "ev": -0.041,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.585,
+     "p_mkt": 0.512,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 13,
+       "value": 22.3,
+       "lg": 23.4,
+       "n": 30
+      }
+     },
+     "open": [
+      10.5,
+      1.799
+     ],
+     "mean": 10.2,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Over 35.5 PTS+REB",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 35.5,
+     "odds": -121,
+     "dec": 1.824,
+     "odds_assumed": false,
+     "p": 0.525,
+     "implied": 0.548,
+     "edge": -0.023,
+     "ev": -0.042,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.578,
+     "p_mkt": 0.508,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ]
+     },
+     "open": [
+      35.5,
+      1.824
+     ],
+     "mean": 40.7
+    },
+    {
+     "kind": "prop",
+     "label": "Rui Hachimura Under 6.5 REB+AST",
+     "player": "Rui Hachimura",
+     "team": "LAC",
+     "line": 6.5,
+     "odds": -142,
+     "dec": 1.705,
+     "odds_assumed": false,
+     "p": 0.562,
+     "implied": 0.587,
      "edge": -0.025,
      "ev": -0.042,
      "value": false,
-     "stat": "fg3m",
+     "stat": "ra",
      "side": "under",
-     "odds_ref": -130,
-     "dec_ref": 1.769,
+     "odds_ref": -132,
+     "dec_ref": 1.758,
      "p_model": 0.617,
      "p_mkt": 0.543,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       5,
        10
       ],
       "h2h": [
        4,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 23,
-       "value": 3.1,
-       "lg": 2.7,
-       "n": 30
-      }
+       5
+      ]
      },
      "open": [
-      2.5,
-      1.712
+      6.5,
+      1.705
      ],
-     "mean": 2.3
+     "mean": 5.9
     },
     {
      "kind": "total",
@@ -168001,7 +167982,7 @@
      "side": "under",
      "odds_ref": -138,
      "dec_ref": 1.725,
-     "p_model": 0.654,
+     "p_model": 0.653,
      "p_mkt": 0.577,
      "cand": false,
      "hr": {
@@ -168026,6 +168007,50 @@
       1.616
      ],
      "mean": 2.1
+    },
+    {
+     "kind": "prop",
+     "label": "Isaiah Hartenstein Under 10.5 Rebotes",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 10.5,
+     "odds": -131,
+     "dec": 1.763,
+     "odds_assumed": false,
+     "p": 0.543,
+     "implied": 0.567,
+     "edge": -0.024,
+     "ev": -0.043,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "odds_ref": -121,
+     "dec_ref": 1.826,
+     "p_model": 0.596,
+     "p_mkt": 0.525,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 21,
+       "value": 15.8,
+       "lg": 14.7,
+       "n": 30
+      }
+     },
+     "open": [
+      10.5,
+      1.737
+     ],
+     "mean": 9.9
     },
     {
      "kind": "spread",
@@ -168060,61 +168085,24 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 37.5 PTS+AST",
-     "player": "Shai Gilgeous-Alexander",
+     "label": "Jared McCain Over 16.5 PTS+AST",
+     "player": "Jared McCain",
      "team": "OKC",
-     "line": 37.5,
-     "odds": -115,
-     "dec": 1.868,
+     "line": 16.5,
+     "odds": -123,
+     "dec": 1.813,
      "odds_assumed": false,
-     "p": 0.512,
-     "implied": 0.535,
-     "edge": -0.023,
-     "ev": -0.044,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -108,
-     "dec_ref": 1.926,
-     "p_model": 0.561,
-     "p_mkt": 0.496,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     },
-     "open": [
-      37.5,
-      1.868
-     ],
-     "mean": 42.1
-    },
-    {
-     "kind": "prop",
-     "label": "Darius Garland Under 25.5 PTS+AST",
-     "player": "Darius Garland",
-     "team": "LAC",
-     "line": 25.5,
-     "odds": -116,
-     "dec": 1.86,
-     "odds_assumed": false,
-     "p": 0.514,
-     "implied": 0.538,
+     "p": 0.527,
+     "implied": 0.551,
      "edge": -0.024,
      "ev": -0.044,
      "value": false,
      "stat": "pa",
-     "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.562,
-     "p_mkt": 0.498,
+     "side": "over",
+     "odds_ref": -116,
+     "dec_ref": 1.862,
+     "p_model": 0.577,
+     "p_mkt": 0.511,
      "cand": false,
      "hr": {
       "l10": [
@@ -168123,14 +168111,58 @@
       ],
       "h2h": [
        0,
-       1
+       4
       ]
      },
      "open": [
-      25.5,
-      1.86
+      16.5,
+      1.813
      ],
-     "mean": 25.2
+     "mean": 19.4
+    },
+    {
+     "kind": "prop",
+     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 4.5,
+     "odds": -131,
+     "dec": 1.761,
+     "odds_assumed": false,
+     "p": 0.543,
+     "implied": 0.568,
+     "edge": -0.025,
+     "ev": -0.044,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.593,
+     "p_mkt": 0.526,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 11,
+       "value": 7.5,
+       "lg": 8.0,
+       "n": 30
+      }
+     },
+     "open": [
+      4.5,
+      1.761
+     ],
+     "mean": 4.2
     },
     {
      "kind": "ml",
@@ -168165,84 +168197,40 @@
     },
     {
      "kind": "prop",
-     "label": "Rui Hachimura Under 6.5 REB+AST",
-     "player": "Rui Hachimura",
+     "label": "Darius Garland Under 25.5 PTS+AST",
+     "player": "Darius Garland",
      "team": "LAC",
-     "line": 6.5,
-     "odds": -142,
-     "dec": 1.705,
+     "line": 25.5,
+     "odds": -116,
+     "dec": 1.86,
      "odds_assumed": false,
-     "p": 0.56,
-     "implied": 0.587,
-     "edge": -0.026,
+     "p": 0.514,
+     "implied": 0.538,
+     "edge": -0.024,
      "ev": -0.045,
      "value": false,
-     "stat": "ra",
+     "stat": "pa",
      "side": "under",
-     "odds_ref": -132,
-     "dec_ref": 1.758,
-     "p_model": 0.612,
-     "p_mkt": 0.543,
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.561,
+     "p_mkt": 0.498,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       4,
        10
       ],
       "h2h": [
-       4,
-       5
+       0,
+       1
       ]
      },
      "open": [
-      6.5,
-      1.705
+      25.5,
+      1.86
      ],
-     "mean": 5.9
-    },
-    {
-     "kind": "prop",
-     "label": "Derrick Jones Jr. Under 4.5 Rebotes",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 4.5,
-     "odds": -131,
-     "dec": 1.761,
-     "odds_assumed": false,
-     "p": 0.542,
-     "implied": 0.568,
-     "edge": -0.026,
-     "ev": -0.045,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.591,
-     "p_mkt": 0.526,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 11,
-       "value": 7.5,
-       "lg": 8.0,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.761
-     ],
-     "mean": 4.3
+     "mean": 25.2
     },
     {
      "kind": "prop",
@@ -168253,16 +168241,16 @@
      "odds": -120,
      "dec": 1.831,
      "odds_assumed": false,
-     "p": 0.521,
+     "p": 0.52,
      "implied": 0.546,
-     "edge": -0.025,
-     "ev": -0.046,
+     "edge": -0.026,
+     "ev": -0.047,
      "value": false,
      "stat": "pr",
      "side": "under",
      "odds_ref": -110,
      "dec_ref": 1.909,
-     "p_model": 0.567,
+     "p_model": 0.564,
      "p_mkt": 0.506,
      "cand": false,
      "hr": {
@@ -168345,77 +168333,84 @@
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Under 18.5 PTS+REB",
-     "player": "Jared McCain",
+     "label": "Kenrich Williams Over 1.5 Triples",
+     "player": "Kenrich Williams",
      "team": "OKC",
-     "line": 18.5,
-     "odds": -119,
-     "dec": 1.839,
+     "line": 1.5,
+     "odds": 150,
+     "dec": 2.504,
      "odds_assumed": false,
-     "p": 0.515,
-     "implied": 0.544,
-     "edge": -0.028,
-     "ev": -0.052,
+     "p": 0.379,
+     "implied": 0.399,
+     "edge": -0.02,
+     "ev": -0.05,
      "value": false,
-     "stat": "pr",
-     "side": "under",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.551,
-     "p_mkt": 0.504,
+     "stat": "fg3m",
+     "side": "over",
+     "odds_ref": 160,
+     "dec_ref": 2.6,
+     "p_model": 0.408,
+     "p_mkt": 0.37,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       3,
        10
       ],
       "h2h": [
-       4,
-       4
-      ]
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 23,
+       "value": 3.1,
+       "lg": 2.7,
+       "n": 30
+      }
      },
      "open": [
-      18.5,
-      1.839
+      1.5,
+      2.461
      ],
-     "mean": 18.6
+     "mean": 1.5
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Under 16.5 PTS+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 16.5,
-     "odds": -112,
-     "dec": 1.892,
+     "label": "Derrick Jones Jr. Under 5.5 REB+AST",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 5.5,
+     "odds": -116,
+     "dec": 1.86,
      "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.529,
-     "edge": -0.027,
-     "ev": -0.052,
+     "p": 0.507,
+     "implied": 0.538,
+     "edge": -0.03,
+     "ev": -0.056,
      "value": false,
-     "stat": "pa",
+     "stat": "ra",
      "side": "under",
-     "odds_ref": -106,
-     "dec_ref": 1.943,
-     "p_model": 0.537,
-     "p_mkt": 0.489,
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.536,
+     "p_mkt": 0.498,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       5,
        10
       ],
       "h2h": [
-       4,
-       4
+       0,
+       3
       ]
      },
      "open": [
-      16.5,
-      1.892
+      5.5,
+      1.86
      ],
-     "mean": 16.9
+     "mean": 5.6
     },
     {
      "kind": "prop",
@@ -168429,13 +168424,13 @@
      "p": 0.409,
      "implied": 0.433,
      "edge": -0.024,
-     "ev": -0.055,
+     "ev": -0.056,
      "value": false,
      "stat": "fg3m",
      "side": "over",
      "odds_ref": 145,
      "dec_ref": 2.45,
-     "p_model": 0.434,
+     "p_model": 0.433,
      "p_mkt": 0.401,
      "cand": false,
      "hr": {
@@ -168459,44 +168454,7 @@
       2.5,
       2.313
      ],
-     "mean": 2.6
-    },
-    {
-     "kind": "prop",
-     "label": "Derrick Jones Jr. Under 5.5 REB+AST",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 5.5,
-     "odds": -116,
-     "dec": 1.86,
-     "odds_assumed": false,
-     "p": 0.507,
-     "implied": 0.538,
-     "edge": -0.031,
-     "ev": -0.057,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.534,
-     "p_mkt": 0.498,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ]
-     },
-     "open": [
-      5.5,
-      1.86
-     ],
-     "mean": 5.6
+     "mean": 2.5
     },
     {
      "kind": "prop",
@@ -168509,14 +168467,14 @@
      "odds_assumed": false,
      "p": 0.512,
      "implied": 0.544,
-     "edge": -0.031,
-     "ev": -0.058,
+     "edge": -0.032,
+     "ev": -0.059,
      "value": false,
      "stat": "pra",
      "side": "over",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.539,
+     "p_model": 0.536,
      "p_mkt": 0.504,
      "cand": false,
      "hr": {
@@ -168540,99 +168498,7 @@
       15.5,
       1.839
      ],
-     "mean": 17.2
-    },
-    {
-     "kind": "prop",
-     "label": "Bennett Stirtz Under 1.5 Triples",
-     "player": "Bennett Stirtz",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": -136,
-     "dec": 1.737,
-     "odds_assumed": false,
-     "p": 0.542,
-     "implied": 0.576,
-     "edge": -0.034,
-     "ev": -0.059,
-     "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "odds_ref": -119,
-     "dec_ref": 1.84,
-     "p_model": 0.568,
-     "p_mkt": 0.533,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 1.8,
-       "lg": 3.7,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      1.737
-     ],
-     "mean": 1.6,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Under 20.5 PTS+REB+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 20.5,
-     "odds": -124,
-     "dec": 1.808,
-     "odds_assumed": false,
-     "p": 0.52,
-     "implied": 0.553,
-     "edge": -0.033,
-     "ev": -0.06,
-     "value": false,
-     "stat": "pra",
-     "side": "under",
-     "odds_ref": -115,
-     "dec_ref": 1.87,
-     "p_model": 0.543,
-     "p_mkt": 0.512,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       4,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 28,
-       "value": 35.8,
-       "lg": 32.5,
-       "n": 30
-      }
-     },
-     "open": [
-      20.5,
-      1.808
-     ],
-     "mean": 20.7
+     "mean": 17.1
     },
     {
      "kind": "prop",
@@ -168646,13 +168512,13 @@
      "p": 0.498,
      "implied": 0.53,
      "edge": -0.032,
-     "ev": -0.06,
+     "ev": -0.061,
      "value": false,
      "stat": "pa",
      "side": "over",
      "odds_ref": -106,
      "dec_ref": 1.943,
-     "p_model": 0.521,
+     "p_model": 0.519,
      "p_mkt": 0.49,
      "cand": false,
      "hr": {
@@ -168670,87 +168536,6 @@
       1.888
      ],
      "mean": 12.9
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Over 3.5 Asistencias",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": 104,
-     "dec": 2.037,
-     "odds_assumed": false,
-     "p": 0.461,
-     "implied": 0.491,
-     "edge": -0.03,
-     "ev": -0.062,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "odds_ref": 116,
-     "dec_ref": 2.16,
-     "p_model": 0.479,
-     "p_mkt": 0.455,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 24,
-       "value": 6.5,
-       "lg": 5.6,
-       "n": 30
-      }
-     },
-     "open": [
-      3.5,
-      1.983
-     ],
-     "mean": 3.7
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Over 7.5 REB+AST",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 7.5,
-     "odds": 103,
-     "dec": 2.033,
-     "odds_assumed": false,
-     "p": 0.462,
-     "implied": 0.492,
-     "edge": -0.03,
-     "ev": -0.062,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": 116,
-     "dec_ref": 2.16,
-     "p_model": 0.48,
-     "p_mkt": 0.455,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "open": [
-      7.5,
-      2.033
-     ],
-     "mean": 7.7
     },
     {
      "kind": "prop",
@@ -168798,24 +168583,24 @@
     },
     {
      "kind": "prop",
-     "label": "Alex Caruso Under 1.5 Triples",
-     "player": "Alex Caruso",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": -213,
-     "dec": 1.469,
+     "label": "Keaton Wagler Over 13.5 PTS+REB",
+     "player": "Keaton Wagler",
+     "team": "LAC",
+     "line": 13.5,
+     "odds": -109,
+     "dec": 1.921,
      "odds_assumed": false,
-     "p": 0.638,
-     "implied": 0.681,
-     "edge": -0.043,
-     "ev": -0.062,
+     "p": 0.488,
+     "implied": 0.521,
+     "edge": -0.033,
+     "ev": -0.063,
      "value": false,
-     "stat": "fg3m",
-     "side": "under",
-     "odds_ref": -190,
-     "dec_ref": 1.526,
-     "p_model": 0.662,
-     "p_mkt": 0.63,
+     "stat": "pr",
+     "side": "over",
+     "odds_ref": -104,
+     "dec_ref": 1.962,
+     "p_model": 0.504,
+     "p_mkt": 0.482,
      "cand": false,
      "hr": {
       "l10": [
@@ -168823,22 +168608,19 @@
        10
       ],
       "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 4.5,
-       "lg": 3.4,
-       "n": 30
-      }
+       1,
+       1
+      ]
      },
      "open": [
-      1.5,
-      1.487
+      13.5,
+      1.921
      ],
-     "mean": 1.2
+     "mean": 14.6,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -168849,16 +168631,16 @@
      "odds": -135,
      "dec": 1.739,
      "odds_assumed": false,
-     "p": 0.539,
+     "p": 0.538,
      "implied": 0.575,
-     "edge": -0.036,
-     "ev": -0.063,
+     "edge": -0.037,
+     "ev": -0.064,
      "value": false,
      "stat": "fg3m",
      "side": "under",
      "odds_ref": -125,
      "dec_ref": 1.8,
-     "p_model": 0.558,
+     "p_model": 0.556,
      "p_mkt": 0.532,
      "cand": false,
      "hr": {
@@ -168886,24 +168668,24 @@
     },
     {
      "kind": "prop",
-     "label": "Keaton Wagler Over 13.5 PTS+REB",
-     "player": "Keaton Wagler",
-     "team": "LAC",
-     "line": 13.5,
-     "odds": -109,
-     "dec": 1.921,
+     "label": "Shai Gilgeous-Alexander Over 2.5 Triples",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 2.5,
+     "odds": 128,
+     "dec": 2.281,
      "odds_assumed": false,
-     "p": 0.488,
-     "implied": 0.521,
-     "edge": -0.033,
-     "ev": -0.063,
+     "p": 0.41,
+     "implied": 0.438,
+     "edge": -0.029,
+     "ev": -0.065,
      "value": false,
-     "stat": "pr",
+     "stat": "fg3m",
      "side": "over",
-     "odds_ref": -104,
-     "dec_ref": 1.962,
-     "p_model": 0.505,
-     "p_mkt": 0.482,
+     "odds_ref": 135,
+     "dec_ref": 2.35,
+     "p_model": 0.421,
+     "p_mkt": 0.406,
      "cand": false,
      "hr": {
       "l10": [
@@ -168912,62 +168694,106 @@
       ],
       "h2h": [
        1,
-       1
-      ]
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 1.8,
+       "lg": 3.7,
+       "n": 30
+      }
      },
      "open": [
-      13.5,
-      1.921
+      2.5,
+      2.295
      ],
-     "mean": 14.7,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
+     "mean": 2.4
     },
     {
      "kind": "prop",
-     "label": "Kenrich Williams Under 1.5 Triples",
-     "player": "Kenrich Williams",
+     "label": "Bennett Stirtz Over 1.5 Triples",
+     "player": "Bennett Stirtz",
      "team": "OKC",
      "line": 1.5,
-     "odds": -213,
-     "dec": 1.469,
+     "odds": -102,
+     "dec": 1.983,
      "odds_assumed": false,
-     "p": 0.637,
-     "implied": 0.681,
-     "edge": -0.044,
+     "p": 0.472,
+     "implied": 0.504,
+     "edge": -0.033,
      "ev": -0.065,
      "value": false,
      "stat": "fg3m",
-     "side": "under",
-     "odds_ref": -190,
-     "dec_ref": 1.526,
-     "p_model": 0.656,
-     "p_mkt": 0.63,
+     "side": "over",
+     "odds_ref": 110,
+     "dec_ref": 2.1,
+     "p_model": 0.486,
+     "p_mkt": 0.467,
      "cand": false,
      "hr": {
       "l10": [
-       7,
+       6,
        10
       ],
       "h2h": [
-       2,
-       2
+       0,
+       1
       ],
       "dvp": {
-       "pos": "PF",
-       "rank": 9,
-       "value": 2.2,
-       "lg": 2.6,
+       "pos": "PG",
+       "rank": 1,
+       "value": 1.8,
+       "lg": 3.7,
        "n": 30
       }
      },
      "open": [
       1.5,
-      1.484
+      1.983
      ],
-     "mean": 1.3
+     "mean": 1.8,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Derrick Jones Jr. Over 14.5 PTS+REB",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 14.5,
+     "odds": -119,
+     "dec": 1.84,
+     "odds_assumed": false,
+     "p": 0.507,
+     "implied": 0.543,
+     "edge": -0.037,
+     "ev": -0.067,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.518,
+     "p_mkt": 0.503,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       3,
+       3
+      ]
+     },
+     "open": [
+      14.5,
+      1.84
+     ],
+     "mean": 15.8
     },
     {
      "kind": "prop",
@@ -168981,13 +168807,13 @@
      "p": 0.476,
      "implied": 0.51,
      "edge": -0.034,
-     "ev": -0.066,
+     "ev": -0.067,
      "value": false,
      "stat": "ast",
      "side": "under",
      "odds_ref": 105,
      "dec_ref": 2.05,
-     "p_model": 0.489,
+     "p_model": 0.487,
      "p_mkt": 0.472,
      "cand": false,
      "hr": {
@@ -169015,260 +168841,6 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 4.5 Rebotes",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 4.5,
-     "odds": -161,
-     "dec": 1.621,
-     "odds_assumed": false,
-     "p": 0.576,
-     "implied": 0.617,
-     "edge": -0.041,
-     "ev": -0.067,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "odds_ref": -145,
-     "dec_ref": 1.69,
-     "p_model": 0.589,
-     "p_mkt": 0.571,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 4,
-       "value": 4.2,
-       "lg": 5.7,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.643
-     ],
-     "mean": 4.3
-    },
-    {
-     "kind": "prop",
-     "label": "Derrick Jones Jr. Over 14.5 PTS+REB",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 14.5,
-     "odds": -119,
-     "dec": 1.84,
-     "odds_assumed": false,
-     "p": 0.507,
-     "implied": 0.543,
-     "edge": -0.036,
-     "ev": -0.067,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.519,
-     "p_mkt": 0.503,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ]
-     },
-     "open": [
-      14.5,
-      1.84
-     ],
-     "mean": 15.9
-    },
-    {
-     "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 31.5 Puntos",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 31.5,
-     "odds": -115,
-     "dec": 1.873,
-     "odds_assumed": false,
-     "p": 0.497,
-     "implied": 0.534,
-     "edge": -0.036,
-     "ev": -0.068,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.507,
-     "p_mkt": 0.494,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 21.6,
-       "lg": 27.3,
-       "n": 30
-      }
-     },
-     "open": [
-      30.5,
-      1.757
-     ],
-     "mean": 34.1
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Over 5.5 REB+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 5.5,
-     "odds": -115,
-     "dec": 1.873,
-     "odds_assumed": false,
-     "p": 0.498,
-     "implied": 0.534,
-     "edge": -0.036,
-     "ev": -0.068,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.508,
-     "p_mkt": 0.494,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ]
-     },
-     "open": [
-      5.5,
-      1.873
-     ],
-     "mean": 5.9
-    },
-    {
-     "kind": "prop",
-     "label": "Keaton Wagler Over 16.5 PTS+REB+AST",
-     "player": "Keaton Wagler",
-     "team": "LAC",
-     "line": 16.5,
-     "odds": -117,
-     "dec": 1.852,
-     "odds_assumed": false,
-     "p": 0.504,
-     "implied": 0.54,
-     "edge": -0.036,
-     "ev": -0.068,
-     "value": false,
-     "stat": "pra",
-     "side": "over",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.514,
-     "p_mkt": 0.5,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 5,
-       "value": 33.1,
-       "lg": 36.3,
-       "n": 30
-      }
-     },
-     "open": [
-      16.5,
-      1.852
-     ],
-     "mean": 17.8,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Over 3.5 Rebotes",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": -120,
-     "dec": 1.836,
-     "odds_assumed": false,
-     "p": 0.507,
-     "implied": 0.545,
-     "edge": -0.037,
-     "ev": -0.069,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.516,
-     "p_mkt": 0.504,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 27,
-       "value": 8.1,
-       "lg": 6.7,
-       "n": 30
-      }
-     },
-     "open": [
-      3.5,
-      1.754
-     ],
-     "mean": 3.9
-    },
-    {
-     "kind": "prop",
      "label": "Keaton Wagler Under 3.5 Asistencias",
      "player": "Keaton Wagler",
      "team": "LAC",
@@ -169276,16 +168848,16 @@
      "odds": -198,
      "dec": 1.506,
      "odds_assumed": false,
-     "p": 0.618,
+     "p": 0.619,
      "implied": 0.664,
-     "edge": -0.046,
-     "ev": -0.069,
+     "edge": -0.045,
+     "ev": -0.068,
      "value": false,
      "stat": "ast",
      "side": "under",
      "odds_ref": -175,
      "dec_ref": 1.571,
-     "p_model": 0.618,
+     "p_model": 0.619,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -169317,40 +168889,51 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 35.5 PTS+REB",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 35.5,
-     "odds": -121,
-     "dec": 1.824,
+     "label": "Keaton Wagler Over 16.5 PTS+REB+AST",
+     "player": "Keaton Wagler",
+     "team": "LAC",
+     "line": 16.5,
+     "odds": -117,
+     "dec": 1.852,
      "odds_assumed": false,
-     "p": 0.51,
-     "implied": 0.548,
-     "edge": -0.038,
-     "ev": -0.07,
+     "p": 0.503,
+     "implied": 0.54,
+     "edge": -0.037,
+     "ev": -0.068,
      "value": false,
-     "stat": "pr",
+     "stat": "pra",
      "side": "over",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.517,
-     "p_mkt": 0.508,
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.513,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       6,
        10
       ],
       "h2h": [
-       2,
-       4
-      ]
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 5,
+       "value": 33.1,
+       "lg": 36.3,
+       "n": 30
+      }
      },
      "open": [
-      35.5,
-      1.824
+      16.5,
+      1.852
      ],
-     "mean": 38.3
+     "mean": 17.8,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -169361,7 +168944,7 @@
      "odds": -156,
      "dec": 1.641,
      "odds_assumed": false,
-     "p": 0.566,
+     "p": 0.567,
      "implied": 0.609,
      "edge": -0.043,
      "ev": -0.07,
@@ -169370,7 +168953,7 @@
      "side": "over",
      "odds_ref": -140,
      "dec_ref": 1.714,
-     "p_model": 0.573,
+     "p_model": 0.574,
      "p_mkt": 0.564,
      "cand": false,
      "hr": {
@@ -169395,68 +168978,68 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 2.5 Triples",
+     "label": "Shai Gilgeous-Alexander Over 4.5 Rebotes",
      "player": "Shai Gilgeous-Alexander",
      "team": "OKC",
-     "line": 2.5,
-     "odds": 128,
-     "dec": 2.281,
+     "line": 4.5,
+     "odds": 116,
+     "dec": 2.159,
      "odds_assumed": false,
-     "p": 0.406,
-     "implied": 0.438,
-     "edge": -0.032,
-     "ev": -0.073,
+     "p": 0.43,
+     "implied": 0.463,
+     "edge": -0.033,
+     "ev": -0.071,
      "value": false,
-     "stat": "fg3m",
+     "stat": "reb",
      "side": "over",
-     "odds_ref": 135,
-     "dec_ref": 2.35,
-     "p_model": 0.408,
-     "p_mkt": 0.406,
+     "odds_ref": 125,
+     "dec_ref": 2.25,
+     "p_model": 0.435,
+     "p_mkt": 0.429,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       3,
        10
       ],
       "h2h": [
-       1,
+       2,
        4
       ],
       "dvp": {
        "pos": "PG",
-       "rank": 1,
-       "value": 1.8,
-       "lg": 3.7,
+       "rank": 4,
+       "value": 4.2,
+       "lg": 5.7,
        "n": 30
       }
      },
      "open": [
-      2.5,
-      2.295
+      3.5,
+      1.576
      ],
-     "mean": 2.4
+     "mean": 4.4
     },
     {
      "kind": "prop",
-     "label": "Keaton Wagler Over 13.5 PTS+AST",
-     "player": "Keaton Wagler",
-     "team": "LAC",
-     "line": 13.5,
-     "odds": -113,
-     "dec": 1.883,
+     "label": "Jared McCain Under 2.5 Triples",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 2.5,
+     "odds": -142,
+     "dec": 1.706,
      "odds_assumed": false,
-     "p": 0.492,
-     "implied": 0.531,
-     "edge": -0.039,
-     "ev": -0.074,
+     "p": 0.545,
+     "implied": 0.586,
+     "edge": -0.041,
+     "ev": -0.071,
      "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.492,
-     "p_mkt": 0.492,
+     "stat": "fg3m",
+     "side": "under",
+     "odds_ref": -130,
+     "dec_ref": 1.769,
+     "p_model": 0.551,
+     "p_mkt": 0.543,
      "cand": false,
      "hr": {
       "l10": [
@@ -169464,19 +169047,66 @@
        10
       ],
       "h2h": [
-       1,
-       1
-      ]
+       4,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 4.5,
+       "lg": 3.4,
+       "n": 30
+      }
      },
      "open": [
-      13.5,
-      1.883
+      2.5,
+      1.712
      ],
-     "mean": 14.5,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
+     "mean": 2.6
+    },
+    {
+     "kind": "prop",
+     "label": "Alex Caruso Under 1.5 Triples",
+     "player": "Alex Caruso",
+     "team": "OKC",
+     "line": 1.5,
+     "odds": -213,
+     "dec": 1.469,
+     "odds_assumed": false,
+     "p": 0.633,
+     "implied": 0.681,
+     "edge": -0.048,
+     "ev": -0.071,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "odds_ref": -190,
+     "dec_ref": 1.526,
+     "p_model": 0.64,
+     "p_mkt": 0.63,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 4.5,
+       "lg": 3.4,
+       "n": 30
+      }
+     },
+     "open": [
+      1.5,
+      1.487
+     ],
+     "mean": 1.3
     },
     {
      "kind": "prop",
@@ -169487,16 +169117,16 @@
      "odds": -122,
      "dec": 1.822,
      "odds_assumed": false,
-     "p": 0.508,
+     "p": 0.509,
      "implied": 0.549,
-     "edge": -0.041,
-     "ev": -0.074,
+     "edge": -0.04,
+     "ev": -0.073,
      "value": false,
      "stat": "pa",
      "side": "under",
      "odds_ref": -118,
      "dec_ref": 1.847,
-     "p_model": 0.508,
+     "p_model": 0.51,
      "p_mkt": 0.508,
      "cand": false,
      "hr": {
@@ -169513,7 +169143,177 @@
       13.5,
       1.822
      ],
-     "mean": 14.5,
+     "mean": 14.4,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Keaton Wagler Over 13.5 PTS+AST",
+     "player": "Keaton Wagler",
+     "team": "LAC",
+     "line": 13.5,
+     "odds": -113,
+     "dec": 1.883,
+     "odds_assumed": false,
+     "p": 0.491,
+     "implied": 0.531,
+     "edge": -0.04,
+     "ev": -0.075,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.49,
+     "p_mkt": 0.492,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     },
+     "open": [
+      13.5,
+      1.883
+     ],
+     "mean": 14.4,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Under 4.5 Rebotes",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 4.5,
+     "odds": -161,
+     "dec": 1.621,
+     "odds_assumed": false,
+     "p": 0.57,
+     "implied": 0.617,
+     "edge": -0.047,
+     "ev": -0.077,
+     "value": false,
+     "stat": "reb",
+     "side": "under",
+     "odds_ref": -145,
+     "dec_ref": 1.69,
+     "p_model": 0.565,
+     "p_mkt": 0.571,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 4,
+       "value": 4.2,
+       "lg": 5.7,
+       "n": 30
+      }
+     },
+     "open": [
+      4.5,
+      1.643
+     ],
+     "mean": 4.4
+    },
+    {
+     "kind": "prop",
+     "label": "Jared McCain Over 2.5 Triples",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 2.5,
+     "odds": 103,
+     "dec": 2.025,
+     "odds_assumed": false,
+     "p": 0.455,
+     "implied": 0.494,
+     "edge": -0.039,
+     "ev": -0.078,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "odds_ref": 110,
+     "dec_ref": 2.1,
+     "p_model": 0.449,
+     "p_mkt": 0.457,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 4.5,
+       "lg": 3.4,
+       "n": 30
+      }
+     },
+     "open": [
+      2.5,
+      2.016
+     ],
+     "mean": 2.6
+    },
+    {
+     "kind": "prop",
+     "label": "Keaton Wagler Under 5.5 REB+AST",
+     "player": "Keaton Wagler",
+     "team": "LAC",
+     "line": 5.5,
+     "odds": 113,
+     "dec": 2.125,
+     "odds_assumed": false,
+     "p": 0.433,
+     "implied": 0.471,
+     "edge": -0.037,
+     "ev": -0.079,
+     "value": false,
+     "stat": "ra",
+     "side": "under",
+     "odds_ref": 122,
+     "dec_ref": 2.22,
+     "p_model": 0.426,
+     "p_mkt": 0.436,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ]
+     },
+     "open": [
+      5.5,
+      2.125
+     ],
+     "mean": 6.5,
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
@@ -169528,16 +169328,16 @@
      "odds": -179,
      "dec": 1.559,
      "odds_assumed": false,
-     "p": 0.594,
+     "p": 0.59,
      "implied": 0.642,
-     "edge": -0.048,
-     "ev": -0.075,
+     "edge": -0.051,
+     "ev": -0.08,
      "value": false,
      "stat": "fg3m",
      "side": "under",
      "odds_ref": -165,
      "dec_ref": 1.606,
-     "p_model": 0.592,
+     "p_model": 0.579,
      "p_mkt": 0.594,
      "cand": false,
      "hr": {
@@ -169565,209 +169365,6 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 35.5 PTS+REB",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 35.5,
-     "odds": -114,
-     "dec": 1.881,
-     "odds_assumed": false,
-     "p": 0.49,
-     "implied": 0.532,
-     "edge": -0.042,
-     "ev": -0.078,
-     "value": false,
-     "stat": "pr",
-     "side": "under",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.483,
-     "p_mkt": 0.492,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "open": [
-      35.5,
-      1.881
-     ],
-     "mean": 38.3
-    },
-    {
-     "kind": "prop",
-     "label": "Keaton Wagler Under 5.5 REB+AST",
-     "player": "Keaton Wagler",
-     "team": "LAC",
-     "line": 5.5,
-     "odds": 113,
-     "dec": 2.125,
-     "odds_assumed": false,
-     "p": 0.434,
-     "implied": 0.471,
-     "edge": -0.037,
-     "ev": -0.079,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "odds_ref": 122,
-     "dec_ref": 2.22,
-     "p_model": 0.427,
-     "p_mkt": 0.436,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       1
-      ]
-     },
-     "open": [
-      5.5,
-      2.125
-     ],
-     "mean": 6.5,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 31.5 Puntos",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 31.5,
-     "odds": -120,
-     "dec": 1.831,
-     "odds_assumed": false,
-     "p": 0.503,
-     "implied": 0.546,
-     "edge": -0.044,
-     "ev": -0.08,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.493,
-     "p_mkt": 0.506,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 21.6,
-       "lg": 27.3,
-       "n": 30
-      }
-     },
-     "open": [
-      31.5,
-      1.814
-     ],
-     "mean": 34.1
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 3.5 Rebotes",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": -115,
-     "dec": 1.868,
-     "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.535,
-     "edge": -0.043,
-     "ev": -0.08,
-     "value": false,
-     "stat": "reb",
-     "side": "under",
-     "odds_ref": -106,
-     "dec_ref": 1.943,
-     "p_model": 0.484,
-     "p_mkt": 0.496,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 27,
-       "value": 8.1,
-       "lg": 6.7,
-       "n": 30
-      }
-     },
-     "open": [
-      3.5,
-      1.962
-     ],
-     "mean": 3.9
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Under 5.5 REB+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 5.5,
-     "odds": -120,
-     "dec": 1.831,
-     "odds_assumed": false,
-     "p": 0.502,
-     "implied": 0.546,
-     "edge": -0.044,
-     "ev": -0.08,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.492,
-     "p_mkt": 0.506,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       3,
-       4
-      ]
-     },
-     "open": [
-      5.5,
-      1.831
-     ],
-     "mean": 5.9
-    },
-    {
-     "kind": "prop",
      "label": "Keaton Wagler Under 16.5 PTS+REB+AST",
      "player": "Keaton Wagler",
      "team": "LAC",
@@ -169775,7 +169372,7 @@
      "odds": -117,
      "dec": 1.852,
      "odds_assumed": false,
-     "p": 0.496,
+     "p": 0.497,
      "implied": 0.54,
      "edge": -0.043,
      "ev": -0.08,
@@ -169784,7 +169381,7 @@
      "side": "under",
      "odds_ref": -110,
      "dec_ref": 1.909,
-     "p_model": 0.486,
+     "p_model": 0.487,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -169816,6 +169413,50 @@
     },
     {
      "kind": "prop",
+     "label": "Alex Caruso Over 1.5 Triples",
+     "player": "Alex Caruso",
+     "team": "OKC",
+     "line": 1.5,
+     "odds": 150,
+     "dec": 2.504,
+     "odds_assumed": false,
+     "p": 0.367,
+     "implied": 0.399,
+     "edge": -0.032,
+     "ev": -0.08,
+     "value": false,
+     "stat": "fg3m",
+     "side": "over",
+     "odds_ref": 160,
+     "dec_ref": 2.6,
+     "p_model": 0.36,
+     "p_mkt": 0.37,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 4.5,
+       "lg": 3.4,
+       "n": 30
+      }
+     },
+     "open": [
+      1.5,
+      2.454
+     ],
+     "mean": 1.3
+    },
+    {
+     "kind": "prop",
      "label": "Derrick Jones Jr. Under 14.5 PTS+REB",
      "player": "Derrick Jones Jr.",
      "team": "LAC",
@@ -169825,14 +169466,14 @@
      "odds_assumed": false,
      "p": 0.493,
      "implied": 0.537,
-     "edge": -0.044,
+     "edge": -0.043,
      "ev": -0.081,
      "value": false,
      "stat": "pr",
      "side": "under",
      "odds_ref": -109,
      "dec_ref": 1.917,
-     "p_model": 0.481,
+     "p_model": 0.482,
      "p_mkt": 0.497,
      "cand": false,
      "hr": {
@@ -169849,7 +169490,7 @@
       14.5,
       1.864
      ],
-     "mean": 15.9
+     "mean": 15.8
     },
     {
      "kind": "prop",
@@ -169863,13 +169504,13 @@
      "p": 0.524,
      "implied": 0.57,
      "edge": -0.046,
-     "ev": -0.082,
+     "ev": -0.081,
      "value": false,
      "stat": "ast",
      "side": "over",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.511,
+     "p_model": 0.513,
      "p_mkt": 0.528,
      "cand": false,
      "hr": {
@@ -169897,91 +169538,51 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Over 4.5 Rebotes",
-     "player": "Shai Gilgeous-Alexander",
+     "label": "Bennett Stirtz Under 1.5 Triples",
+     "player": "Bennett Stirtz",
      "team": "OKC",
-     "line": 4.5,
-     "odds": 116,
-     "dec": 2.159,
+     "line": 1.5,
+     "odds": -136,
+     "dec": 1.737,
      "odds_assumed": false,
-     "p": 0.424,
-     "implied": 0.463,
-     "edge": -0.039,
-     "ev": -0.084,
+     "p": 0.528,
+     "implied": 0.576,
+     "edge": -0.047,
+     "ev": -0.082,
      "value": false,
-     "stat": "reb",
-     "side": "over",
-     "odds_ref": 125,
-     "dec_ref": 2.25,
-     "p_model": 0.411,
-     "p_mkt": 0.429,
+     "stat": "fg3m",
+     "side": "under",
+     "odds_ref": -119,
+     "dec_ref": 1.84,
+     "p_model": 0.514,
+     "p_mkt": 0.533,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       4,
        10
       ],
       "h2h": [
-       2,
-       4
+       1,
+       1
       ],
       "dvp": {
        "pos": "PG",
-       "rank": 4,
-       "value": 4.2,
-       "lg": 5.7,
+       "rank": 1,
+       "value": 1.8,
+       "lg": 3.7,
        "n": 30
       }
      },
      "open": [
-      3.5,
-      1.576
-     ],
-     "mean": 4.3
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 3.5 Asistencias",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": -143,
-     "dec": 1.698,
-     "odds_assumed": false,
-     "p": 0.539,
-     "implied": 0.589,
-     "edge": -0.05,
-     "ev": -0.084,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "odds_ref": -125,
-     "dec_ref": 1.8,
-     "p_model": 0.521,
-     "p_mkt": 0.545,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 24,
-       "value": 6.5,
-       "lg": 5.6,
-       "n": 30
-      }
-     },
-     "open": [
-      3.5,
+      1.5,
       1.737
      ],
-     "mean": 3.7
+     "mean": 1.8,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -170001,7 +169602,7 @@
      "side": "under",
      "odds_ref": -121,
      "dec_ref": 1.826,
-     "p_model": 0.495,
+     "p_model": 0.496,
      "p_mkt": 0.518,
      "cand": false,
      "hr": {
@@ -170018,48 +169619,11 @@
       13.5,
       1.788
      ],
-     "mean": 14.7,
+     "mean": 14.6,
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
      }
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Under 7.5 REB+AST",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 7.5,
-     "odds": -143,
-     "dec": 1.7,
-     "odds_assumed": false,
-     "p": 0.538,
-     "implied": 0.588,
-     "edge": -0.05,
-     "ev": -0.085,
-     "value": false,
-     "stat": "ra",
-     "side": "under",
-     "odds_ref": -124,
-     "dec_ref": 1.806,
-     "p_model": 0.52,
-     "p_mkt": 0.545,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "open": [
-      7.5,
-      1.7
-     ],
-     "mean": 7.7
     },
     {
      "kind": "prop",
@@ -170070,16 +169634,16 @@
      "odds": -102,
      "dec": 1.98,
      "odds_assumed": false,
-     "p": 0.461,
+     "p": 0.462,
      "implied": 0.505,
-     "edge": -0.044,
-     "ev": -0.087,
+     "edge": -0.043,
+     "ev": -0.086,
      "value": false,
      "stat": "fg3m",
      "side": "over",
      "odds_ref": 105,
      "dec_ref": 2.05,
-     "p_model": 0.442,
+     "p_model": 0.444,
      "p_mkt": 0.468,
      "cand": false,
      "hr": {
@@ -170117,13 +169681,13 @@
      "p": 0.591,
      "implied": 0.647,
      "edge": -0.056,
-     "ev": -0.087,
+     "ev": -0.086,
      "value": false,
      "stat": "fg3m",
      "side": "under",
      "odds_ref": -156,
      "dec_ref": 1.641,
-     "p_model": 0.566,
+     "p_model": 0.567,
      "p_mkt": 0.599,
      "cand": false,
      "hr": {
@@ -170147,7 +169711,7 @@
       2.5,
       1.544
      ],
-     "mean": 2.6
+     "mean": 2.5
     },
     {
      "kind": "prop",
@@ -170161,13 +169725,13 @@
      "p": 0.502,
      "implied": 0.55,
      "edge": -0.048,
-     "ev": -0.088,
+     "ev": -0.087,
      "value": false,
      "stat": "pa",
      "side": "under",
      "odds_ref": -115,
      "dec_ref": 1.87,
-     "p_model": 0.479,
+     "p_model": 0.481,
      "p_mkt": 0.51,
      "cand": false,
      "hr": {
@@ -170185,6 +169749,50 @@
       1.817
      ],
      "mean": 12.9
+    },
+    {
+     "kind": "prop",
+     "label": "Kenrich Williams Under 1.5 Triples",
+     "player": "Kenrich Williams",
+     "team": "OKC",
+     "line": 1.5,
+     "odds": -213,
+     "dec": 1.469,
+     "odds_assumed": false,
+     "p": 0.621,
+     "implied": 0.681,
+     "edge": -0.06,
+     "ev": -0.088,
+     "value": false,
+     "stat": "fg3m",
+     "side": "under",
+     "odds_ref": -190,
+     "dec_ref": 1.526,
+     "p_model": 0.592,
+     "p_mkt": 0.63,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 23,
+       "value": 3.1,
+       "lg": 2.7,
+       "n": 30
+      }
+     },
+     "open": [
+      1.5,
+      1.484
+     ],
+     "mean": 1.5
     },
     {
      "kind": "prop",
@@ -170232,131 +169840,6 @@
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Over 20.5 PTS+REB+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 20.5,
-     "odds": -111,
-     "dec": 1.897,
-     "odds_assumed": false,
-     "p": 0.48,
-     "implied": 0.527,
-     "edge": -0.047,
-     "ev": -0.089,
-     "value": false,
-     "stat": "pra",
-     "side": "over",
-     "odds_ref": -104,
-     "dec_ref": 1.962,
-     "p_model": 0.457,
-     "p_mkt": 0.488,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 28,
-       "value": 35.8,
-       "lg": 32.5,
-       "n": 30
-      }
-     },
-     "open": [
-      20.5,
-      1.897
-     ],
-     "mean": 20.7
-    },
-    {
-     "kind": "prop",
-     "label": "Kenrich Williams Over 1.5 Triples",
-     "player": "Kenrich Williams",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": 150,
-     "dec": 2.504,
-     "odds_assumed": false,
-     "p": 0.363,
-     "implied": 0.399,
-     "edge": -0.036,
-     "ev": -0.09,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "odds_ref": 160,
-     "dec_ref": 2.6,
-     "p_model": 0.344,
-     "p_mkt": 0.37,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 9,
-       "value": 2.2,
-       "lg": 2.6,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      2.461
-     ],
-     "mean": 1.3
-    },
-    {
-     "kind": "prop",
-     "label": "Derrick Jones Jr. Over 5.5 REB+AST",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 5.5,
-     "odds": -118,
-     "dec": 1.844,
-     "odds_assumed": false,
-     "p": 0.493,
-     "implied": 0.542,
-     "edge": -0.049,
-     "ev": -0.091,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.466,
-     "p_mkt": 0.502,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       3,
-       3
-      ]
-     },
-     "open": [
-      5.5,
-      1.844
-     ],
-     "mean": 5.6
-    },
-    {
-     "kind": "prop",
      "label": "Derrick Jones Jr. Under 15.5 PTS+REB+AST",
      "player": "Derrick Jones Jr.",
      "team": "LAC",
@@ -170366,14 +169849,14 @@
      "odds_assumed": false,
      "p": 0.488,
      "implied": 0.536,
-     "edge": -0.049,
-     "ev": -0.091,
+     "edge": -0.048,
+     "ev": -0.089,
      "value": false,
      "stat": "pra",
      "side": "under",
      "odds_ref": -102,
      "dec_ref": 1.98,
-     "p_model": 0.461,
+     "p_model": 0.464,
      "p_mkt": 0.496,
      "cand": false,
      "hr": {
@@ -170397,173 +169880,44 @@
       15.5,
       1.865
      ],
-     "mean": 17.2
+     "mean": 17.1
     },
     {
      "kind": "prop",
-     "label": "Bennett Stirtz Over 1.5 Triples",
-     "player": "Bennett Stirtz",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": -102,
-     "dec": 1.983,
+     "label": "Derrick Jones Jr. Over 5.5 REB+AST",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 5.5,
+     "odds": -118,
+     "dec": 1.844,
      "odds_assumed": false,
-     "p": 0.458,
-     "implied": 0.504,
-     "edge": -0.046,
-     "ev": -0.091,
+     "p": 0.493,
+     "implied": 0.542,
+     "edge": -0.05,
+     "ev": -0.092,
      "value": false,
-     "stat": "fg3m",
+     "stat": "ra",
      "side": "over",
-     "odds_ref": 110,
-     "dec_ref": 2.1,
-     "p_model": 0.432,
-     "p_mkt": 0.467,
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.464,
+     "p_mkt": 0.502,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       5,
        10
       ],
       "h2h": [
-       0,
-       1
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 1.8,
-       "lg": 3.7,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      1.983
-     ],
-     "mean": 1.6,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Alex Caruso Over 1.5 Triples",
-     "player": "Alex Caruso",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": 150,
-     "dec": 2.504,
-     "odds_assumed": false,
-     "p": 0.362,
-     "implied": 0.399,
-     "edge": -0.038,
-     "ev": -0.094,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "odds_ref": 160,
-     "dec_ref": 2.6,
-     "p_model": 0.338,
-     "p_mkt": 0.37,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 4.5,
-       "lg": 3.4,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      2.454
-     ],
-     "mean": 1.2
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Over 18.5 PTS+REB",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 18.5,
-     "odds": -116,
-     "dec": 1.865,
-     "odds_assumed": false,
-     "p": 0.485,
-     "implied": 0.536,
-     "edge": -0.052,
-     "ev": -0.096,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "odds_ref": -102,
-     "dec_ref": 1.98,
-     "p_model": 0.449,
-     "p_mkt": 0.496,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       4
+       3,
+       3
       ]
      },
      "open": [
-      18.5,
-      1.865
+      5.5,
+      1.844
      ],
-     "mean": 18.6
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Over 16.5 PTS+AST",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 16.5,
-     "odds": -123,
-     "dec": 1.813,
-     "odds_assumed": false,
-     "p": 0.499,
-     "implied": 0.551,
-     "edge": -0.053,
-     "ev": -0.096,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -116,
-     "dec_ref": 1.862,
-     "p_model": 0.463,
-     "p_mkt": 0.511,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ]
-     },
-     "open": [
-      16.5,
-      1.813
-     ],
-     "mean": 16.9
+     "mean": 5.6
     },
     {
      "kind": "prop",
@@ -170574,16 +169928,16 @@
      "odds": -137,
      "dec": 1.731,
      "odds_assumed": false,
-     "p": 0.522,
+     "p": 0.523,
      "implied": 0.578,
-     "edge": -0.056,
-     "ev": -0.096,
+     "edge": -0.055,
+     "ev": -0.095,
      "value": false,
      "stat": "pts",
      "side": "under",
      "odds_ref": -124,
      "dec_ref": 1.806,
-     "p_model": 0.522,
+     "p_model": 0.523,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -170615,54 +169969,6 @@
     },
     {
      "kind": "prop",
-     "label": "Keaton Wagler Over 9.5 Puntos",
-     "player": "Keaton Wagler",
-     "team": "LAC",
-     "line": 9.5,
-     "odds": -150,
-     "dec": 1.668,
-     "odds_assumed": false,
-     "p": 0.541,
-     "implied": 0.599,
-     "edge": -0.059,
-     "ev": -0.098,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "odds_ref": -135,
-     "dec_ref": 1.741,
-     "p_model": 0.541,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       8,
-       10
-      ],
-      "h2h": [
-       1,
-       1
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 3,
-       "value": 21.4,
-       "lg": 24.0,
-       "n": 30
-      }
-     },
-     "open": [
-      10.5,
-      1.88
-     ],
-     "mean": 11.3,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
      "label": "Keaton Wagler Under 1.5 Triples",
      "player": "Keaton Wagler",
      "team": "LAC",
@@ -170670,7 +169976,7 @@
      "odds": -162,
      "dec": 1.617,
      "odds_assumed": false,
-     "p": 0.557,
+     "p": 0.556,
      "implied": 0.618,
      "edge": -0.062,
      "ev": -0.1,
@@ -170679,7 +169985,7 @@
      "side": "under",
      "odds_ref": -130,
      "dec_ref": 1.769,
-     "p_model": 0.509,
+     "p_model": 0.508,
      "p_mkt": 0.573,
      "cand": false,
      "hr": {
@@ -170718,16 +170024,16 @@
      "odds": -115,
      "dec": 1.873,
      "odds_assumed": false,
-     "p": 0.479,
+     "p": 0.48,
      "implied": 0.534,
-     "edge": -0.055,
-     "ev": -0.103,
+     "edge": -0.054,
+     "ev": -0.101,
      "value": false,
      "stat": "pr",
      "side": "over",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.433,
+     "p_model": 0.436,
      "p_mkt": 0.494,
      "cand": false,
      "hr": {
@@ -170748,6 +170054,91 @@
     },
     {
      "kind": "prop",
+     "label": "Keaton Wagler Over 9.5 Puntos",
+     "player": "Keaton Wagler",
+     "team": "LAC",
+     "line": 9.5,
+     "odds": -150,
+     "dec": 1.668,
+     "odds_assumed": false,
+     "p": 0.539,
+     "implied": 0.599,
+     "edge": -0.061,
+     "ev": -0.101,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "odds_ref": -135,
+     "dec_ref": 1.741,
+     "p_model": 0.539,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       8,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 3,
+       "value": 21.4,
+       "lg": 24.0,
+       "n": 30
+      }
+     },
+     "open": [
+      10.5,
+      1.88
+     ],
+     "mean": 11.3,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 10 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Darius Garland Over 25.5 PTS+AST",
+     "player": "Darius Garland",
+     "team": "LAC",
+     "line": 25.5,
+     "odds": -118,
+     "dec": 1.844,
+     "odds_assumed": false,
+     "p": 0.486,
+     "implied": 0.542,
+     "edge": -0.056,
+     "ev": -0.103,
+     "value": false,
+     "stat": "pa",
+     "side": "over",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.439,
+     "p_mkt": 0.502,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       1
+      ]
+     },
+     "open": [
+      25.5,
+      1.844
+     ],
+     "mean": 25.2
+    },
+    {
+     "kind": "prop",
      "label": "Kobe Sanders Under 1.5 Triples",
      "player": "Kobe Sanders",
      "team": "LAC",
@@ -170764,7 +170155,7 @@
      "side": "under",
      "odds_ref": -145,
      "dec_ref": 1.69,
-     "p_model": 0.499,
+     "p_model": 0.5,
      "p_mkt": 0.571,
      "cand": false,
      "hr": {
@@ -170792,24 +170183,68 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 37.5 PTS+AST",
+     "label": "Shai Gilgeous-Alexander Under 31.5 Puntos",
      "player": "Shai Gilgeous-Alexander",
      "team": "OKC",
-     "line": 37.5,
+     "line": 31.5,
      "odds": -120,
-     "dec": 1.836,
+     "dec": 1.831,
      "odds_assumed": false,
      "p": 0.488,
-     "implied": 0.545,
-     "edge": -0.057,
-     "ev": -0.104,
+     "implied": 0.546,
+     "edge": -0.058,
+     "ev": -0.106,
+     "value": false,
+     "stat": "pts",
+     "side": "under",
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.436,
+     "p_mkt": 0.506,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       2,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 21.6,
+       "lg": 27.3,
+       "n": 30
+      }
+     },
+     "open": [
+      31.5,
+      1.814
+     ],
+     "mean": 36.3
+    },
+    {
+     "kind": "prop",
+     "label": "Jared McCain Under 16.5 PTS+AST",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 16.5,
+     "odds": -112,
+     "dec": 1.892,
+     "odds_assumed": false,
+     "p": 0.473,
+     "implied": 0.529,
+     "edge": -0.056,
+     "ev": -0.106,
      "value": false,
      "stat": "pa",
      "side": "under",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.439,
-     "p_mkt": 0.504,
+     "odds_ref": -106,
+     "dec_ref": 1.943,
+     "p_model": 0.423,
+     "p_mkt": 0.489,
      "cand": false,
      "hr": {
       "l10": [
@@ -170817,52 +170252,52 @@
        10
       ],
       "h2h": [
-       1,
+       4,
        4
       ]
      },
      "open": [
-      37.5,
-      1.836
+      16.5,
+      1.892
      ],
-     "mean": 42.1
+     "mean": 19.4
     },
     {
      "kind": "prop",
-     "label": "Darius Garland Over 25.5 PTS+AST",
-     "player": "Darius Garland",
-     "team": "LAC",
-     "line": 25.5,
-     "odds": -118,
-     "dec": 1.844,
+     "label": "Shai Gilgeous-Alexander Under 35.5 PTS+REB",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 35.5,
+     "odds": -114,
+     "dec": 1.881,
      "odds_assumed": false,
-     "p": 0.486,
-     "implied": 0.542,
-     "edge": -0.056,
-     "ev": -0.104,
+     "p": 0.475,
+     "implied": 0.532,
+     "edge": -0.057,
+     "ev": -0.107,
      "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -112,
-     "dec_ref": 1.893,
-     "p_model": 0.438,
-     "p_mkt": 0.502,
+     "stat": "pr",
+     "side": "under",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.422,
+     "p_mkt": 0.492,
      "cand": false,
      "hr": {
       "l10": [
-       6,
+       7,
        10
       ],
       "h2h": [
-       1,
-       1
+       2,
+       4
       ]
      },
      "open": [
-      25.5,
-      1.844
+      35.5,
+      1.881
      ],
-     "mean": 25.2
+     "mean": 40.7
     },
     {
      "kind": "prop",
@@ -170873,16 +170308,16 @@
      "odds": -105,
      "dec": 1.953,
      "odds_assumed": false,
-     "p": 0.458,
+     "p": 0.457,
      "implied": 0.512,
-     "edge": -0.054,
-     "ev": -0.106,
+     "edge": -0.055,
+     "ev": -0.107,
      "value": false,
      "stat": "reb",
      "side": "over",
      "odds_ref": 110,
      "dec_ref": 2.1,
-     "p_model": 0.409,
+     "p_model": 0.407,
      "p_mkt": 0.474,
      "cand": false,
      "hr": {
@@ -170906,132 +170341,7 @@
       4.5,
       1.953
      ],
-     "mean": 4.3
-    },
-    {
-     "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 41.5 PTS+REB+AST",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 41.5,
-     "odds": -119,
-     "dec": 1.844,
-     "odds_assumed": false,
-     "p": 0.484,
-     "implied": 0.542,
-     "edge": -0.058,
-     "ev": -0.107,
-     "value": false,
-     "stat": "pra",
-     "side": "under",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.431,
-     "p_mkt": 0.502,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 1,
-       "value": 33.4,
-       "lg": 40.8,
-       "n": 30
-      }
-     },
-     "open": [
-      41.5,
-      1.844
-     ],
-     "mean": 46.3
-    },
-    {
-     "kind": "prop",
-     "label": "Rui Hachimura Over 4.5 Rebotes",
-     "player": "Rui Hachimura",
-     "team": "LAC",
-     "line": 4.5,
-     "odds": -158,
-     "dec": 1.631,
-     "odds_assumed": false,
-     "p": 0.546,
-     "implied": 0.613,
-     "edge": -0.067,
-     "ev": -0.109,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "odds_ref": -140,
-     "dec_ref": 1.714,
-     "p_model": 0.482,
-     "p_mkt": 0.568,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       3,
-       5
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 28,
-       "value": 12.1,
-       "lg": 10.5,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.677
-     ],
-     "mean": 4.7
-    },
-    {
-     "kind": "prop",
-     "label": "Rui Hachimura Over 6.5 REB+AST",
-     "player": "Rui Hachimura",
-     "team": "LAC",
-     "line": 6.5,
-     "odds": 103,
-     "dec": 2.027,
-     "odds_assumed": false,
-     "p": 0.44,
-     "implied": 0.493,
-     "edge": -0.054,
-     "ev": -0.109,
-     "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": 109,
-     "dec_ref": 2.09,
-     "p_model": 0.388,
-     "p_mkt": 0.457,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       1,
-       5
-      ]
-     },
-     "open": [
-      6.5,
-      2.027
-     ],
-     "mean": 5.9
+     "mean": 4.2
     },
     {
      "kind": "prop",
@@ -171045,13 +170355,13 @@
      "p": 0.515,
      "implied": 0.578,
      "edge": -0.063,
-     "ev": -0.109,
+     "ev": -0.108,
      "value": false,
      "stat": "reb",
      "side": "over",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.455,
+     "p_model": 0.456,
      "p_mkt": 0.535,
      "cand": false,
      "hr": {
@@ -171079,47 +170389,213 @@
     },
     {
      "kind": "prop",
-     "label": "Jared McCain Over 2.5 Triples",
+     "label": "Aday Mara Over 10.5 Puntos",
+     "player": "Aday Mara",
+     "team": "OKC",
+     "line": 10.5,
+     "odds": -112,
+     "dec": 1.896,
+     "odds_assumed": false,
+     "p": 0.47,
+     "implied": 0.527,
+     "edge": -0.057,
+     "ev": -0.109,
+     "value": false,
+     "stat": "pts",
+     "side": "over",
+     "odds_ref": 100,
+     "dec_ref": 2.0,
+     "p_model": 0.415,
+     "p_mkt": 0.488,
+     "cand": false,
+     "hr": {
+      "l10": [
+       2,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 13,
+       "value": 22.3,
+       "lg": 23.4,
+       "n": 30
+      }
+     },
+     "open": [
+      10.5,
+      1.908
+     ],
+     "mean": 10.2,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
+     "label": "Isaiah Hartenstein Over 10.5 Rebotes",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 10.5,
+     "odds": -105,
+     "dec": 1.95,
+     "odds_assumed": false,
+     "p": 0.457,
+     "implied": 0.513,
+     "edge": -0.056,
+     "ev": -0.109,
+     "value": false,
+     "stat": "reb",
+     "side": "over",
+     "odds_ref": 102,
+     "dec_ref": 2.02,
+     "p_model": 0.404,
+     "p_mkt": 0.475,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 21,
+       "value": 15.8,
+       "lg": 14.7,
+       "n": 30
+      }
+     },
+     "open": [
+      9.5,
+      1.598
+     ],
+     "mean": 9.9
+    },
+    {
+     "kind": "prop",
+     "label": "Jared McCain Under 18.5 PTS+REB",
      "player": "Jared McCain",
      "team": "OKC",
-     "line": 2.5,
-     "odds": 103,
-     "dec": 2.025,
+     "line": 18.5,
+     "odds": -119,
+     "dec": 1.839,
      "odds_assumed": false,
-     "p": 0.439,
-     "implied": 0.494,
-     "edge": -0.055,
-     "ev": -0.112,
+     "p": 0.484,
+     "implied": 0.544,
+     "edge": -0.06,
+     "ev": -0.11,
      "value": false,
-     "stat": "fg3m",
+     "stat": "pr",
+     "side": "under",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.425,
+     "p_mkt": 0.504,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       4,
+       4
+      ]
+     },
+     "open": [
+      18.5,
+      1.839
+     ],
+     "mean": 21.3
+    },
+    {
+     "kind": "prop",
+     "label": "Rui Hachimura Over 4.5 Rebotes",
+     "player": "Rui Hachimura",
+     "team": "LAC",
+     "line": 4.5,
+     "odds": -158,
+     "dec": 1.631,
+     "odds_assumed": false,
+     "p": 0.545,
+     "implied": 0.613,
+     "edge": -0.068,
+     "ev": -0.11,
+     "value": false,
+     "stat": "reb",
      "side": "over",
-     "odds_ref": 110,
-     "dec_ref": 2.1,
+     "odds_ref": -140,
+     "dec_ref": 1.714,
+     "p_model": 0.479,
+     "p_mkt": 0.568,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       3,
+       5
+      ],
+      "dvp": {
+       "pos": "PF",
+       "rank": 28,
+       "value": 12.1,
+       "lg": 10.5,
+       "n": 30
+      }
+     },
+     "open": [
+      4.5,
+      1.677
+     ],
+     "mean": 4.8
+    },
+    {
+     "kind": "prop",
+     "label": "Rui Hachimura Over 6.5 REB+AST",
+     "player": "Rui Hachimura",
+     "team": "LAC",
+     "line": 6.5,
+     "odds": 103,
+     "dec": 2.027,
+     "odds_assumed": false,
+     "p": 0.438,
+     "implied": 0.493,
+     "edge": -0.055,
+     "ev": -0.111,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "odds_ref": 109,
+     "dec_ref": 2.09,
      "p_model": 0.383,
      "p_mkt": 0.457,
      "cand": false,
      "hr": {
       "l10": [
-       3,
+       5,
        10
       ],
       "h2h": [
-       0,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 23,
-       "value": 3.1,
-       "lg": 2.7,
-       "n": 30
-      }
+       1,
+       5
+      ]
      },
      "open": [
-      2.5,
-      2.016
+      6.5,
+      2.027
      ],
-     "mean": 2.3
+     "mean": 5.9
     },
     {
      "kind": "prop",
@@ -171130,16 +170606,16 @@
      "odds": -117,
      "dec": 1.852,
      "odds_assumed": false,
-     "p": 0.478,
+     "p": 0.479,
      "implied": 0.54,
-     "edge": -0.062,
-     "ev": -0.114,
+     "edge": -0.061,
+     "ev": -0.113,
      "value": false,
      "stat": "pra",
      "side": "over",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.413,
+     "p_model": 0.415,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -171163,7 +170639,7 @@
       28.5,
       1.852
      ],
-     "mean": 27.3
+     "mean": 27.4
     },
     {
      "kind": "prop",
@@ -171211,6 +170687,91 @@
     },
     {
      "kind": "prop",
+     "label": "Jared McCain Under 20.5 PTS+REB+AST",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 20.5,
+     "odds": -124,
+     "dec": 1.808,
+     "odds_assumed": false,
+     "p": 0.487,
+     "implied": 0.553,
+     "edge": -0.066,
+     "ev": -0.119,
+     "value": false,
+     "stat": "pra",
+     "side": "under",
+     "odds_ref": -115,
+     "dec_ref": 1.87,
+     "p_model": 0.413,
+     "p_mkt": 0.512,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       4,
+       4
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 29,
+       "value": 42.4,
+       "lg": 36.3,
+       "n": 30
+      }
+     },
+     "open": [
+      20.5,
+      1.808
+     ],
+     "mean": 23.7
+    },
+    {
+     "kind": "prop",
+     "label": "Aday Mara Over 18.5 PTS+REB",
+     "player": "Aday Mara",
+     "team": "OKC",
+     "line": 18.5,
+     "odds": -111,
+     "dec": 1.898,
+     "odds_assumed": false,
+     "p": 0.464,
+     "implied": 0.527,
+     "edge": -0.062,
+     "ev": -0.119,
+     "value": false,
+     "stat": "pr",
+     "side": "over",
+     "odds_ref": 105,
+     "dec_ref": 2.05,
+     "p_model": 0.394,
+     "p_mkt": 0.488,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       0,
+       1
+      ]
+     },
+     "open": [
+      18.5,
+      1.898
+     ],
+     "mean": 17.3,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
+    },
+    {
+     "kind": "prop",
      "label": "Brook Lopez Over 12.5 PTS+AST",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -171218,16 +170779,16 @@
      "odds": -123,
      "dec": 1.813,
      "odds_assumed": false,
-     "p": 0.486,
+     "p": 0.485,
      "implied": 0.551,
      "edge": -0.066,
-     "ev": -0.119,
+     "ev": -0.12,
      "value": false,
      "stat": "pa",
      "side": "over",
      "odds_ref": -109,
      "dec_ref": 1.917,
-     "p_model": 0.411,
+     "p_model": 0.41,
      "p_mkt": 0.511,
      "cand": false,
      "hr": {
@@ -171248,24 +170809,61 @@
     },
     {
      "kind": "prop",
-     "label": "Aday Mara Over 10.5 Puntos",
+     "label": "Jared McCain Under 5.5 REB+AST",
+     "player": "Jared McCain",
+     "team": "OKC",
+     "line": 5.5,
+     "odds": -120,
+     "dec": 1.831,
+     "odds_assumed": false,
+     "p": 0.48,
+     "implied": 0.546,
+     "edge": -0.066,
+     "ev": -0.121,
+     "value": false,
+     "stat": "ra",
+     "side": "under",
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.403,
+     "p_mkt": 0.506,
+     "cand": false,
+     "hr": {
+      "l10": [
+       4,
+       10
+      ],
+      "h2h": [
+       3,
+       4
+      ]
+     },
+     "open": [
+      5.5,
+      1.831
+     ],
+     "mean": 6.6
+    },
+    {
+     "kind": "prop",
+     "label": "Aday Mara Over 12.5 PTS+AST",
      "player": "Aday Mara",
      "team": "OKC",
-     "line": 10.5,
-     "odds": -112,
-     "dec": 1.896,
+     "line": 12.5,
+     "odds": -115,
+     "dec": 1.869,
      "odds_assumed": false,
-     "p": 0.464,
-     "implied": 0.527,
-     "edge": -0.063,
-     "ev": -0.12,
+     "p": 0.471,
+     "implied": 0.535,
+     "edge": -0.064,
+     "ev": -0.121,
      "value": false,
-     "stat": "pts",
+     "stat": "pa",
      "side": "over",
-     "odds_ref": 100,
-     "dec_ref": 2.0,
-     "p_model": 0.392,
-     "p_mkt": 0.488,
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.396,
+     "p_mkt": 0.495,
      "cand": false,
      "hr": {
       "l10": [
@@ -171275,20 +170873,13 @@
       "h2h": [
        0,
        1
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 17,
-       "value": 22.4,
-       "lg": 21.7,
-       "n": 30
-      }
+      ]
      },
      "open": [
-      10.5,
-      1.908
+      12.5,
+      1.869
      ],
-     "mean": 9.9,
+     "mean": 11.8,
      "flag": {
       "t": "rookie",
       "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
@@ -171305,14 +170896,14 @@
      "odds_assumed": false,
      "p": 0.545,
      "implied": 0.621,
-     "edge": -0.076,
-     "ev": -0.122,
+     "edge": -0.077,
+     "ev": -0.123,
      "value": false,
      "stat": "fg3m",
      "side": "under",
      "odds_ref": -143,
      "dec_ref": 1.699,
-     "p_model": 0.456,
+     "p_model": 0.453,
      "p_mkt": 0.575,
      "cand": false,
      "hr": {
@@ -171340,44 +170931,47 @@
     },
     {
      "kind": "prop",
-     "label": "Aday Mara Over 9.5 REB+AST",
-     "player": "Aday Mara",
-     "team": "OKC",
-     "line": 9.5,
-     "odds": -117,
-     "dec": 1.852,
+     "label": "Derrick Jones Jr. Under 10.5 Puntos",
+     "player": "Derrick Jones Jr.",
+     "team": "LAC",
+     "line": 10.5,
+     "odds": -134,
+     "dec": 1.744,
      "odds_assumed": false,
-     "p": 0.474,
-     "implied": 0.54,
-     "edge": -0.066,
+     "p": 0.503,
+     "implied": 0.573,
+     "edge": -0.07,
      "ev": -0.123,
      "value": false,
-     "stat": "ra",
-     "side": "over",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.395,
-     "p_mkt": 0.5,
+     "stat": "pts",
+     "side": "under",
+     "odds_ref": -122,
+     "dec_ref": 1.82,
+     "p_model": 0.503,
+     "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       5,
        10
       ],
       "h2h": [
        0,
-       1
-      ]
+       3
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 28,
+       "value": 22.7,
+       "lg": 20.2,
+       "n": 30
+      }
      },
      "open": [
-      9.5,
-      1.852
+      10.5,
+      1.744
      ],
-     "mean": 8.8,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
+     "mean": 11.5
     },
     {
      "kind": "prop",
@@ -171429,24 +171023,68 @@
     },
     {
      "kind": "prop",
-     "label": "Aday Mara Over 18.5 PTS+REB",
-     "player": "Aday Mara",
+     "label": "Kenrich Williams Over 4.5 Rebotes",
+     "player": "Kenrich Williams",
      "team": "OKC",
-     "line": 18.5,
-     "odds": -111,
-     "dec": 1.898,
+     "line": 4.5,
+     "odds": -113,
+     "dec": 1.886,
      "odds_assumed": false,
-     "p": 0.461,
-     "implied": 0.527,
+     "p": 0.464,
+     "implied": 0.53,
      "edge": -0.066,
      "ev": -0.125,
      "value": false,
-     "stat": "pr",
+     "stat": "reb",
      "side": "over",
-     "odds_ref": 105,
-     "dec_ref": 2.05,
-     "p_model": 0.381,
-     "p_mkt": 0.488,
+     "odds_ref": -104,
+     "dec_ref": 1.962,
+     "p_model": 0.383,
+     "p_mkt": 0.491,
+     "cand": false,
+     "hr": {
+      "l10": [
+       3,
+       10
+      ],
+      "h2h": [
+       0,
+       2
+      ],
+      "dvp": {
+       "pos": "SF",
+       "rank": 24,
+       "value": 8.6,
+       "lg": 8.0,
+       "n": 30
+      }
+     },
+     "open": [
+      4.5,
+      1.876
+     ],
+     "mean": 4.1
+    },
+    {
+     "kind": "prop",
+     "label": "Brook Lopez Over 6.5 REB+AST",
+     "player": "Brook Lopez",
+     "team": "LAC",
+     "line": 6.5,
+     "odds": -115,
+     "dec": 1.869,
+     "odds_assumed": false,
+     "p": 0.466,
+     "implied": 0.535,
+     "edge": -0.069,
+     "ev": -0.128,
+     "value": false,
+     "stat": "ra",
+     "side": "over",
+     "odds_ref": -105,
+     "dec_ref": 1.952,
+     "p_model": 0.379,
+     "p_mkt": 0.495,
      "cand": false,
      "hr": {
       "l10": [
@@ -171454,104 +171092,15 @@
        10
       ],
       "h2h": [
-       0,
-       1
-      ]
-     },
-     "open": [
-      18.5,
-      1.898
-     ],
-     "mean": 17.1,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
-    },
-    {
-     "kind": "prop",
-     "label": "Derrick Jones Jr. Under 10.5 Puntos",
-     "player": "Derrick Jones Jr.",
-     "team": "LAC",
-     "line": 10.5,
-     "odds": -134,
-     "dec": 1.744,
-     "odds_assumed": false,
-     "p": 0.501,
-     "implied": 0.573,
-     "edge": -0.072,
-     "ev": -0.126,
-     "value": false,
-     "stat": "pts",
-     "side": "under",
-     "odds_ref": -122,
-     "dec_ref": 1.82,
-     "p_model": 0.501,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 28,
-       "value": 22.7,
-       "lg": 20.2,
-       "n": 30
-      }
-     },
-     "open": [
-      10.5,
-      1.744
-     ],
-     "mean": 11.6
-    },
-    {
-     "kind": "prop",
-     "label": "Aday Mara Over 12.5 PTS+AST",
-     "player": "Aday Mara",
-     "team": "OKC",
-     "line": 12.5,
-     "odds": -115,
-     "dec": 1.869,
-     "odds_assumed": false,
-     "p": 0.467,
-     "implied": 0.535,
-     "edge": -0.068,
-     "ev": -0.127,
-     "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -105,
-     "dec_ref": 1.952,
-     "p_model": 0.383,
-     "p_mkt": 0.495,
-     "cand": false,
-     "hr": {
-      "l10": [
        2,
-       10
-      ],
-      "h2h": [
-       0,
-       1
+       4
       ]
      },
      "open": [
-      12.5,
+      6.5,
       1.869
      ],
-     "mean": 11.6,
-     "flag": {
-      "t": "rookie",
-      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
-     }
+     "mean": 5.9
     },
     {
      "kind": "prop",
@@ -171571,7 +171120,7 @@
      "side": "under",
      "odds_ref": -150,
      "dec_ref": 1.667,
-     "p_model": 0.448,
+     "p_model": 0.447,
      "p_mkt": 0.584,
      "cand": false,
      "hr": {
@@ -171599,15 +171148,52 @@
     },
     {
      "kind": "prop",
-     "label": "Brook Lopez Over 6.5 REB+AST",
-     "player": "Brook Lopez",
-     "team": "LAC",
-     "line": 6.5,
-     "odds": -115,
-     "dec": 1.869,
+     "label": "Shai Gilgeous-Alexander Under 37.5 PTS+AST",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 37.5,
+     "odds": -120,
+     "dec": 1.836,
      "odds_assumed": false,
-     "p": 0.465,
-     "implied": 0.535,
+     "p": 0.474,
+     "implied": 0.545,
+     "edge": -0.071,
+     "ev": -0.13,
+     "value": false,
+     "stat": "pa",
+     "side": "under",
+     "odds_ref": -112,
+     "dec_ref": 1.893,
+     "p_model": 0.383,
+     "p_mkt": 0.504,
+     "cand": false,
+     "hr": {
+      "l10": [
+       6,
+       10
+      ],
+      "h2h": [
+       1,
+       4
+      ]
+     },
+     "open": [
+      37.5,
+      1.836
+     ],
+     "mean": 44.4
+    },
+    {
+     "kind": "prop",
+     "label": "Aday Mara Over 9.5 REB+AST",
+     "player": "Aday Mara",
+     "team": "OKC",
+     "line": 9.5,
+     "odds": -117,
+     "dec": 1.852,
+     "odds_assumed": false,
+     "p": 0.47,
+     "implied": 0.54,
      "edge": -0.07,
      "ev": -0.13,
      "value": false,
@@ -171615,8 +171201,8 @@
      "side": "over",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.375,
-     "p_mkt": 0.495,
+     "p_model": 0.38,
+     "p_mkt": 0.5,
      "cand": false,
      "hr": {
       "l10": [
@@ -171624,15 +171210,19 @@
        10
       ],
       "h2h": [
-       2,
-       4
+       0,
+       1
       ]
      },
      "open": [
-      6.5,
-      1.869
+      9.5,
+      1.852
      ],
-     "mean": 5.9
+     "mean": 8.7,
+     "flag": {
+      "t": "rookie",
+      "note": "Rookie 2026-27: sin temporada NBA previa, 12 partidos esta temporada"
+     }
     },
     {
      "kind": "prop",
@@ -171643,16 +171233,16 @@
      "odds": -118,
      "dec": 1.848,
      "odds_assumed": false,
-     "p": 0.47,
+     "p": 0.471,
      "implied": 0.541,
      "edge": -0.071,
-     "ev": -0.131,
+     "ev": -0.13,
      "value": false,
      "stat": "pra",
      "side": "over",
      "odds_ref": -108,
      "dec_ref": 1.926,
-     "p_model": 0.377,
+     "p_model": 0.379,
      "p_mkt": 0.501,
      "cand": false,
      "hr": {
@@ -171665,10 +171255,10 @@
        1
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 22,
-       "value": 43.7,
-       "lg": 40.6,
+       "pos": "PF",
+       "rank": 7,
+       "value": 34.7,
+       "lg": 38.5,
        "n": 30
       }
      },
@@ -171684,50 +171274,6 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Over 10.5 Rebotes",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 10.5,
-     "odds": -105,
-     "dec": 1.95,
-     "odds_assumed": false,
-     "p": 0.445,
-     "implied": 0.513,
-     "edge": -0.068,
-     "ev": -0.133,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "odds_ref": 102,
-     "dec_ref": 2.02,
-     "p_model": 0.355,
-     "p_mkt": 0.475,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 21,
-       "value": 15.8,
-       "lg": 14.7,
-       "n": 30
-      }
-     },
-     "open": [
-      9.5,
-      1.598
-     ],
-     "mean": 9.3
-    },
-    {
-     "kind": "prop",
      "label": "Brook Lopez Over 16.5 PTS+REB",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -171737,14 +171283,14 @@
      "odds_assumed": false,
      "p": 0.488,
      "implied": 0.564,
-     "edge": -0.076,
-     "ev": -0.135,
+     "edge": -0.075,
+     "ev": -0.133,
      "value": false,
      "stat": "pr",
      "side": "over",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.385,
+     "p_model": 0.388,
      "p_mkt": 0.522,
      "cand": false,
      "hr": {
@@ -171765,6 +171311,50 @@
     },
     {
      "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Under 41.5 PTS+REB+AST",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 41.5,
+     "odds": -119,
+     "dec": 1.844,
+     "odds_assumed": false,
+     "p": 0.47,
+     "implied": 0.542,
+     "edge": -0.073,
+     "ev": -0.134,
+     "value": false,
+     "stat": "pra",
+     "side": "under",
+     "odds_ref": -110,
+     "dec_ref": 1.909,
+     "p_model": 0.372,
+     "p_mkt": 0.502,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 1,
+       "value": 33.4,
+       "lg": 40.8,
+       "n": 30
+      }
+     },
+     "open": [
+      41.5,
+      1.844
+     ],
+     "mean": 48.8
+    },
+    {
+     "kind": "prop",
      "label": "Brook Lopez Over 18.5 PTS+REB+AST",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -171775,13 +171365,13 @@
      "p": 0.456,
      "implied": 0.527,
      "edge": -0.071,
-     "ev": -0.135,
+     "ev": -0.134,
      "value": false,
      "stat": "pra",
      "side": "over",
      "odds_ref": -104,
      "dec_ref": 1.962,
-     "p_model": 0.36,
+     "p_model": 0.362,
      "p_mkt": 0.488,
      "cand": false,
      "hr": {
@@ -171818,14 +171408,14 @@
      "odds_assumed": false,
      "p": 0.41,
      "implied": 0.475,
-     "edge": -0.065,
-     "ev": -0.137,
+     "edge": -0.064,
+     "ev": -0.136,
      "value": false,
      "stat": "reb",
      "side": "over",
      "odds_ref": 120,
      "dec_ref": 2.2,
-     "p_model": 0.32,
+     "p_model": 0.322,
      "p_mkt": 0.439,
      "cand": false,
      "hr": {
@@ -171853,40 +171443,47 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 9.5 REB+AST",
-     "player": "Shai Gilgeous-Alexander",
+     "label": "Jared McCain Under 15.5 Puntos",
+     "player": "Jared McCain",
      "team": "OKC",
-     "line": 9.5,
-     "odds": 103,
-     "dec": 2.025,
+     "line": 15.5,
+     "odds": -132,
+     "dec": 1.757,
      "odds_assumed": false,
-     "p": 0.421,
-     "implied": 0.494,
-     "edge": -0.073,
-     "ev": -0.148,
+     "p": 0.487,
+     "implied": 0.569,
+     "edge": -0.082,
+     "ev": -0.144,
      "value": false,
-     "stat": "ra",
+     "stat": "pts",
      "side": "under",
-     "odds_ref": 110,
-     "dec_ref": 2.1,
-     "p_model": 0.311,
-     "p_mkt": 0.457,
+     "odds_ref": -120,
+     "dec_ref": 1.833,
+     "p_model": 0.487,
+     "p_mkt": null,
      "cand": false,
      "hr": {
       "l10": [
-       5,
+       6,
        10
       ],
       "h2h": [
-       0,
+       4,
        4
-      ]
+      ],
+      "dvp": {
+       "pos": "SG",
+       "rank": 30,
+       "value": 27.8,
+       "lg": 24.0,
+       "n": 30
+      }
      },
      "open": [
-      9.5,
-      2.025
+      15.5,
+      1.757
      ],
-     "mean": 12.3
+     "mean": 17.1
     },
     {
      "kind": "prop",
@@ -171900,13 +171497,13 @@
      "p": 0.46,
      "implied": 0.54,
      "edge": -0.08,
-     "ev": -0.149,
+     "ev": -0.148,
      "value": false,
      "stat": "ra",
      "side": "over",
      "odds_ref": -105,
      "dec_ref": 1.952,
-     "p_model": 0.338,
+     "p_model": 0.34,
      "p_mkt": 0.5,
      "cand": false,
      "hr": {
@@ -171923,7 +171520,7 @@
       9.5,
       1.852
      ],
-     "mean": 8.2
+     "mean": 8.3
     },
     {
      "kind": "prop",
@@ -171934,16 +171531,16 @@
      "odds": -115,
      "dec": 1.868,
      "odds_assumed": false,
-     "p": 0.451,
+     "p": 0.45,
      "implied": 0.535,
      "edge": -0.085,
-     "ev": -0.158,
+     "ev": -0.159,
      "value": false,
      "stat": "pra",
      "side": "over",
      "odds_ref": -108,
      "dec_ref": 1.926,
-     "p_model": 0.316,
+     "p_model": 0.314,
      "p_mkt": 0.496,
      "cand": false,
      "hr": {
@@ -171971,87 +171568,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ajay Mitchell Over 26.5 PTS+REB+AST",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 26.5,
-     "odds": -118,
-     "dec": 1.848,
-     "odds_assumed": false,
-     "p": 0.454,
-     "implied": 0.541,
-     "edge": -0.087,
-     "ev": -0.16,
-     "value": false,
-     "stat": "pra",
-     "side": "over",
-     "odds_ref": -110,
-     "dec_ref": 1.909,
-     "p_model": 0.314,
-     "p_mkt": 0.501,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 29,
-       "value": 42.4,
-       "lg": 36.3,
-       "n": 30
-      }
-     },
-     "open": [
-      26.5,
-      1.848
-     ],
-     "mean": 22.8
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Over 22.5 PTS+REB",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 22.5,
-     "odds": -113,
-     "dec": 1.888,
-     "odds_assumed": false,
-     "p": 0.445,
-     "implied": 0.53,
-     "edge": -0.085,
-     "ev": -0.161,
-     "value": false,
-     "stat": "pr",
-     "side": "over",
-     "odds_ref": -106,
-     "dec_ref": 1.943,
-     "p_model": 0.307,
-     "p_mkt": 0.49,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       2,
-       4
-      ]
-     },
-     "open": [
-      22.5,
-      1.888
-     ],
-     "mean": 19.1
-    },
-    {
-     "kind": "prop",
      "label": "Rui Hachimura Over 20.5 PTS+REB",
      "player": "Rui Hachimura",
      "team": "LAC",
@@ -172062,13 +171578,13 @@
      "p": 0.436,
      "implied": 0.519,
      "edge": -0.083,
-     "ev": -0.161,
+     "ev": -0.16,
      "value": false,
      "stat": "pr",
      "side": "over",
      "odds_ref": -102,
      "dec_ref": 1.98,
-     "p_model": 0.301,
+     "p_model": 0.302,
      "p_mkt": 0.481,
      "cand": false,
      "hr": {
@@ -172085,32 +171601,32 @@
       20.5,
       1.926
      ],
-     "mean": 17.2
+     "mean": 17.3
     },
     {
      "kind": "prop",
-     "label": "Ajay Mitchell Over 22.5 PTS+AST",
-     "player": "Ajay Mitchell",
+     "label": "Shai Gilgeous-Alexander Under 9.5 REB+AST",
+     "player": "Shai Gilgeous-Alexander",
      "team": "OKC",
-     "line": 22.5,
-     "odds": -113,
-     "dec": 1.882,
+     "line": 9.5,
+     "odds": 103,
+     "dec": 2.025,
      "odds_assumed": false,
-     "p": 0.444,
-     "implied": 0.531,
-     "edge": -0.087,
-     "ev": -0.165,
+     "p": 0.413,
+     "implied": 0.494,
+     "edge": -0.081,
+     "ev": -0.163,
      "value": false,
-     "stat": "pa",
-     "side": "over",
-     "odds_ref": -102,
-     "dec_ref": 1.98,
-     "p_model": 0.3,
-     "p_mkt": 0.492,
+     "stat": "ra",
+     "side": "under",
+     "odds_ref": 110,
+     "dec_ref": 2.1,
+     "p_model": 0.281,
+     "p_mkt": 0.457,
      "cand": false,
      "hr": {
       "l10": [
-       4,
+       5,
        10
       ],
       "h2h": [
@@ -172119,98 +171635,10 @@
       ]
      },
      "open": [
-      22.5,
-      1.882
+      9.5,
+      2.025
      ],
-     "mean": 18.9
-    },
-    {
-     "kind": "prop",
-     "label": "Kenrich Williams Over 4.5 Rebotes",
-     "player": "Kenrich Williams",
-     "team": "OKC",
-     "line": 4.5,
-     "odds": -113,
-     "dec": 1.886,
-     "odds_assumed": false,
-     "p": 0.443,
-     "implied": 0.53,
-     "edge": -0.087,
-     "ev": -0.165,
-     "value": false,
-     "stat": "reb",
-     "side": "over",
-     "odds_ref": -104,
-     "dec_ref": 1.962,
-     "p_model": 0.299,
-     "p_mkt": 0.491,
-     "cand": false,
-     "hr": {
-      "l10": [
-       3,
-       10
-      ],
-      "h2h": [
-       0,
-       2
-      ],
-      "dvp": {
-       "pos": "PF",
-       "rank": 3,
-       "value": 8.9,
-       "lg": 10.5,
-       "n": 30
-      }
-     },
-     "open": [
-      4.5,
-      1.876
-     ],
-     "mean": 3.5
-    },
-    {
-     "kind": "prop",
-     "label": "Jared McCain Over 14.5 Puntos",
-     "player": "Jared McCain",
-     "team": "OKC",
-     "line": 14.5,
-     "odds": -118,
-     "dec": 1.846,
-     "odds_assumed": false,
-     "p": 0.452,
-     "implied": 0.542,
-     "edge": -0.09,
-     "ev": -0.166,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "odds_ref": -108,
-     "dec_ref": 1.926,
-     "p_model": 0.452,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       4,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ],
-      "dvp": {
-       "pos": "SF",
-       "rank": 24,
-       "value": 22.2,
-       "lg": 20.2,
-       "n": 30
-      }
-     },
-     "open": [
-      13.5,
-      1.695
-     ],
-     "mean": 14.8
+     "mean": 12.5
     },
     {
      "kind": "prop",
@@ -172224,13 +171652,13 @@
      "p": 0.451,
      "implied": 0.541,
      "edge": -0.09,
-     "ev": -0.166,
+     "ev": -0.167,
      "value": false,
      "stat": "pa",
      "side": "over",
      "odds_ref": -106,
      "dec_ref": 1.943,
-     "p_model": 0.301,
+     "p_model": 0.3,
      "p_mkt": 0.501,
      "cand": false,
      "hr": {
@@ -172251,50 +171679,6 @@
     },
     {
      "kind": "prop",
-     "label": "Shai Gilgeous-Alexander Under 5.5 Asistencias",
-     "player": "Shai Gilgeous-Alexander",
-     "team": "OKC",
-     "line": 5.5,
-     "odds": -110,
-     "dec": 1.909,
-     "odds_assumed": false,
-     "p": 0.437,
-     "implied": 0.524,
-     "edge": -0.087,
-     "ev": -0.167,
-     "value": false,
-     "stat": "ast",
-     "side": "under",
-     "odds_ref": 101,
-     "dec_ref": 2.01,
-     "p_model": 0.291,
-     "p_mkt": 0.485,
-     "cand": false,
-     "hr": {
-      "l10": [
-       7,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ],
-      "dvp": {
-       "pos": "PG",
-       "rank": 12,
-       "value": 7.6,
-       "lg": 7.9,
-       "n": 30
-      }
-     },
-     "open": [
-      5.5,
-      1.886
-     ],
-     "mean": 8.0
-    },
-    {
-     "kind": "prop",
      "label": "Isaiah Jackson Over 6.5 Rebotes",
      "player": "Isaiah Jackson",
      "team": "LAC",
@@ -172311,7 +171695,7 @@
      "side": "over",
      "odds_ref": -135,
      "dec_ref": 1.741,
-     "p_model": 0.318,
+     "p_model": 0.317,
      "p_mkt": 0.541,
      "cand": false,
      "hr": {
@@ -172339,6 +171723,50 @@
     },
     {
      "kind": "prop",
+     "label": "Shai Gilgeous-Alexander Under 5.5 Asistencias",
+     "player": "Shai Gilgeous-Alexander",
+     "team": "OKC",
+     "line": 5.5,
+     "odds": -110,
+     "dec": 1.909,
+     "odds_assumed": false,
+     "p": 0.431,
+     "implied": 0.524,
+     "edge": -0.093,
+     "ev": -0.177,
+     "value": false,
+     "stat": "ast",
+     "side": "under",
+     "odds_ref": 101,
+     "dec_ref": 2.01,
+     "p_model": 0.27,
+     "p_mkt": 0.485,
+     "cand": false,
+     "hr": {
+      "l10": [
+       7,
+       10
+      ],
+      "h2h": [
+       1,
+       4
+      ],
+      "dvp": {
+       "pos": "PG",
+       "rank": 12,
+       "value": 7.6,
+       "lg": 7.9,
+       "n": 30
+      }
+     },
+     "open": [
+      5.5,
+      1.886
+     ],
+     "mean": 8.1
+    },
+    {
+     "kind": "prop",
      "label": "Darius Garland Over 18.5 Puntos",
      "player": "Darius Garland",
      "team": "LAC",
@@ -172346,16 +171774,16 @@
      "odds": -132,
      "dec": 1.757,
      "odds_assumed": false,
-     "p": 0.462,
+     "p": 0.465,
      "implied": 0.569,
-     "edge": -0.107,
-     "ev": -0.188,
+     "edge": -0.104,
+     "ev": -0.183,
      "value": false,
      "stat": "pts",
      "side": "over",
      "odds_ref": -120,
      "dec_ref": 1.833,
-     "p_model": 0.462,
+     "p_model": 0.465,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -172383,50 +171811,6 @@
     },
     {
      "kind": "prop",
-     "label": "Ajay Mitchell Over 1.5 Triples",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 1.5,
-     "odds": 165,
-     "dec": 2.645,
-     "odds_assumed": false,
-     "p": 0.302,
-     "implied": 0.378,
-     "edge": -0.076,
-     "ev": -0.202,
-     "value": false,
-     "stat": "fg3m",
-     "side": "over",
-     "odds_ref": 180,
-     "dec_ref": 2.8,
-     "p_model": 0.157,
-     "p_mkt": 0.35,
-     "cand": false,
-     "hr": {
-      "l10": [
-       2,
-       10
-      ],
-      "h2h": [
-       0,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 4.5,
-       "lg": 3.4,
-       "n": 30
-      }
-     },
-     "open": [
-      1.5,
-      2.573
-     ],
-     "mean": 0.7
-    },
-    {
-     "kind": "prop",
      "label": "Brook Lopez Over 10.5 Puntos",
      "player": "Brook Lopez",
      "team": "LAC",
@@ -172434,16 +171818,16 @@
      "odds": -143,
      "dec": 1.701,
      "odds_assumed": false,
-     "p": 0.445,
+     "p": 0.443,
      "implied": 0.588,
-     "edge": -0.143,
-     "ev": -0.243,
+     "edge": -0.145,
+     "ev": -0.246,
      "value": false,
      "stat": "pts",
      "side": "over",
      "odds_ref": -129,
      "dec_ref": 1.775,
-     "p_model": 0.445,
+     "p_model": 0.443,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -172467,7 +171851,7 @@
       11.5,
       1.896
      ],
-     "mean": 10.8
+     "mean": 10.7
     },
     {
      "kind": "prop",
@@ -172478,16 +171862,16 @@
      "odds": -125,
      "dec": 1.799,
      "odds_assumed": false,
-     "p": 0.409,
+     "p": 0.407,
      "implied": 0.556,
-     "edge": -0.147,
-     "ev": -0.264,
+     "edge": -0.149,
+     "ev": -0.268,
      "value": false,
      "stat": "reb",
      "side": "over",
      "odds_ref": -114,
      "dec_ref": 1.877,
-     "p_model": 0.409,
+     "p_model": 0.407,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -172500,10 +171884,10 @@
        1
       ],
       "dvp": {
-       "pos": "C",
-       "rank": 21,
-       "value": 15.8,
-       "lg": 14.7,
+       "pos": "PF",
+       "rank": 3,
+       "value": 8.9,
+       "lg": 10.5,
        "n": 30
       }
      },
@@ -172519,6 +171903,50 @@
     },
     {
      "kind": "prop",
+     "label": "Isaiah Hartenstein Over 3.5 Asistencias",
+     "player": "Isaiah Hartenstein",
+     "team": "OKC",
+     "line": 3.5,
+     "odds": -173,
+     "dec": 1.576,
+     "odds_assumed": false,
+     "p": 0.453,
+     "implied": 0.634,
+     "edge": -0.182,
+     "ev": -0.286,
+     "value": false,
+     "stat": "ast",
+     "side": "over",
+     "odds_ref": -155,
+     "dec_ref": 1.645,
+     "p_model": 0.453,
+     "p_mkt": null,
+     "cand": false,
+     "hr": {
+      "l10": [
+       5,
+       10
+      ],
+      "h2h": [
+       0,
+       3
+      ],
+      "dvp": {
+       "pos": "C",
+       "rank": 28,
+       "value": 5.5,
+       "lg": 4.2,
+       "n": 30
+      }
+     },
+     "open": [
+      3.5,
+      1.576
+     ],
+     "mean": 3.6
+    },
+    {
+     "kind": "prop",
      "label": "Darius Garland Over 6.5 Asistencias",
      "player": "Darius Garland",
      "team": "LAC",
@@ -172526,16 +171954,16 @@
      "odds": -144,
      "dec": 1.695,
      "odds_assumed": false,
-     "p": 0.403,
+     "p": 0.402,
      "implied": 0.59,
-     "edge": -0.187,
-     "ev": -0.317,
+     "edge": -0.188,
+     "ev": -0.319,
      "value": false,
      "stat": "ast",
      "side": "over",
      "odds_ref": -130,
      "dec_ref": 1.769,
-     "p_model": 0.403,
+     "p_model": 0.402,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -172563,50 +171991,6 @@
     },
     {
      "kind": "prop",
-     "label": "Isaiah Hartenstein Over 3.5 Asistencias",
-     "player": "Isaiah Hartenstein",
-     "team": "OKC",
-     "line": 3.5,
-     "odds": -173,
-     "dec": 1.576,
-     "odds_assumed": false,
-     "p": 0.409,
-     "implied": 0.634,
-     "edge": -0.226,
-     "ev": -0.355,
-     "value": false,
-     "stat": "ast",
-     "side": "over",
-     "odds_ref": -155,
-     "dec_ref": 1.645,
-     "p_model": 0.409,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       5,
-       10
-      ],
-      "h2h": [
-       0,
-       3
-      ],
-      "dvp": {
-       "pos": "C",
-       "rank": 28,
-       "value": 5.5,
-       "lg": 4.2,
-       "n": 30
-      }
-     },
-     "open": [
-      3.5,
-      1.576
-     ],
-     "mean": 3.3
-    },
-    {
-     "kind": "prop",
      "label": "Rui Hachimura Over 14.5 Puntos",
      "player": "Rui Hachimura",
      "team": "LAC",
@@ -172614,16 +171998,16 @@
      "odds": -127,
      "dec": 1.784,
      "odds_assumed": false,
-     "p": 0.33,
+     "p": 0.331,
      "implied": 0.56,
-     "edge": -0.231,
-     "ev": -0.411,
+     "edge": -0.23,
+     "ev": -0.409,
      "value": false,
      "stat": "pts",
      "side": "over",
      "odds_ref": -116,
      "dec_ref": 1.862,
-     "p_model": 0.33,
+     "p_model": 0.331,
      "p_mkt": null,
      "cand": false,
      "hr": {
@@ -172648,50 +172032,6 @@
       1.757
      ],
      "mean": 12.5
-    },
-    {
-     "kind": "prop",
-     "label": "Ajay Mitchell Over 17.5 Puntos",
-     "player": "Ajay Mitchell",
-     "team": "OKC",
-     "line": 17.5,
-     "odds": -132,
-     "dec": 1.757,
-     "odds_assumed": false,
-     "p": 0.333,
-     "implied": 0.569,
-     "edge": -0.236,
-     "ev": -0.415,
-     "value": false,
-     "stat": "pts",
-     "side": "over",
-     "odds_ref": -120,
-     "dec_ref": 1.833,
-     "p_model": 0.333,
-     "p_mkt": null,
-     "cand": false,
-     "hr": {
-      "l10": [
-       6,
-       10
-      ],
-      "h2h": [
-       1,
-       4
-      ],
-      "dvp": {
-       "pos": "SG",
-       "rank": 30,
-       "value": 27.8,
-       "lg": 24.0,
-       "n": 30
-      }
-     },
-     "open": [
-      18.5,
-      1.871
-     ],
-     "mean": 15.2
     }
    ],
    "wo": {
@@ -172700,120 +172040,120 @@
       "Shai Gilgeous-Alexander": [
        [
         "Jared McCain",
-        5.2,
-        4.6
-       ],
-       [
-        "Ajay Mitchell",
-        5.0,
-        4.4
+        6.2,
+        5.0
        ],
        [
         "Isaiah Hartenstein",
-        3.6,
-        4.3
+        4.0,
+        4.7
+       ],
+       [
+        "Aday Mara",
+        4.0,
+        4.5
        ]
       ],
       "Jared McCain": [
        [
         "Shai Gilgeous-Alexander",
-        3.9,
-        3.6
-       ],
-       [
-        "Ajay Mitchell",
-        2.1,
-        3.5
+        4.7,
+        3.8
        ],
        [
         "Isaiah Hartenstein",
-        1.5,
-        3.4
-       ]
-      ],
-      "Ajay Mitchell": [
-       [
-        "Shai Gilgeous-Alexander",
-        2.9,
-        2.5
+        1.8,
+        4.0
        ],
        [
-        "Jared McCain",
-        1.4,
-        2.4
-       ],
-       [
-        "Isaiah Hartenstein",
-        1.0,
-        2.2
+        "Aday Mara",
+        1.8,
+        3.8
        ]
       ],
       "Isaiah Hartenstein": [
        [
         "Shai Gilgeous-Alexander",
-        2.6,
-        3.1
-       ],
-       [
-        "Ajay Mitchell",
-        1.4,
-        3.0
+        2.9,
+        3.3
        ],
        [
         "Jared McCain",
-        1.4,
-        3.2
+        1.7,
+        3.6
+       ],
+       [
+        "Aday Mara",
+        1.2,
+        3.1
        ]
       ],
       "Aday Mara": [
        [
         "Shai Gilgeous-Alexander",
-        2.6,
-        2.8
+        2.8,
+        3.1
        ],
        [
         "Jared McCain",
-        1.4,
-        2.8
+        1.5,
+        3.4
        ],
        [
-        "Ajay Mitchell",
-        1.3,
-        2.6
+        "Isaiah Hartenstein",
+        1.1,
+        3.1
        ]
       ],
       "Bennett Stirtz": [
        [
         "Shai Gilgeous-Alexander",
-        2.2,
-        2.4
+        2.7,
+        2.7
        ],
        [
         "Jared McCain",
-        1.2,
-        2.4
+        1.4,
+        2.9
        ],
        [
-        "Ajay Mitchell",
-        1.1,
-        2.2
+        "Aday Mara",
+        1.0,
+        2.5
        ]
       ],
-      "Alex Caruso": [
+      "Nique Clifford": [
        [
         "Shai Gilgeous-Alexander",
-        1.7,
-        2.4
+        2.0,
+        2.5
        ],
        [
         "Jared McCain",
-        1.0,
-        2.3
+        1.1,
+        2.7
        ],
        [
-        "Ajay Mitchell",
+        "Isaiah Hartenstein",
+        0.8,
+        2.5
+       ]
+      ],
+      "Kenrich Williams": [
+       [
+        "Shai Gilgeous-Alexander",
+        2.3,
+        2.7
+       ],
+       [
+        "Jared McCain",
+        1.3,
+        2.9
+       ],
+       [
+        "Isaiah Hartenstein",
         0.9,
-        2.2
+        2.7
        ]
       ]
      },
@@ -172839,12 +172179,7 @@
        ]
       ]
      },
-     "doubt": [
-      [
-       "Ajay Mitchell",
-       0.7
-      ]
-     ]
+     "doubt": []
     },
     "LAC": {
      "model": {
@@ -172855,20 +172190,20 @@
         3.9
        ],
        [
+        "Brook Lopez",
+        2.3,
+        3.4
+       ],
+       [
         "Keaton Wagler",
         2.3,
         3.5
-       ],
-       [
-        "Derrick Jones Jr.",
-        2.2,
-        3.9
        ]
       ],
       "Kris Dunn": [
        [
         "Darius Garland",
-        1.2,
+        1.3,
         3.7
        ],
        [
@@ -172878,25 +172213,25 @@
        ],
        [
         "Derrick Jones Jr.",
-        0.8,
+        0.9,
         3.6
        ]
       ],
       "Derrick Jones Jr.": [
        [
         "Darius Garland",
-        2.2,
+        2.3,
         3.7
        ],
        [
         "Rui Hachimura",
-        1.6,
+        1.5,
         3.5
        ],
        [
-        "Keaton Wagler",
+        "Brook Lopez",
         1.4,
-        3.0
+        2.9
        ]
       ],
       "Rui Hachimura": [
@@ -172907,13 +172242,13 @@
        ],
        [
         "Derrick Jones Jr.",
-        1.5,
+        1.6,
         3.5
        ],
        [
-        "Keaton Wagler",
+        "Brook Lopez",
         1.5,
-        3.0
+        2.9
        ]
       ],
       "Kobe Sanders": [
@@ -172928,9 +172263,9 @@
         2.8
        ],
        [
-        "Keaton Wagler",
-        1.1,
-        2.4
+        "Derrick Jones Jr.",
+        1.2,
+        2.8
        ]
       ],
       "Keaton Wagler": [
@@ -172946,7 +172281,7 @@
        ],
        [
         "Derrick Jones Jr.",
-        1.3,
+        1.4,
         2.6
        ]
       ],
@@ -172962,9 +172297,9 @@
         2.5
        ],
        [
-        "Keaton Wagler",
+        "Derrick Jones Jr.",
         1.3,
-        2.2
+        2.5
        ]
       ]
      },
