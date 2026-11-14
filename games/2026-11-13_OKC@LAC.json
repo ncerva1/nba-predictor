@@ -10,7 +10,8 @@
    "OKC: Holmgren, J. Williams, Wallace, Jaylin Williams y Sorber OUT; A. Mitchell (tobillo) GTD con líneas: 0.7",
    "LAC: Ingram (Aquiles) OUT el viernes; Beal, Niederhauser y Miller OUT; Christie (tobillo) GTD",
    "Bajas revisadas en ESPN y CBS 13-nov ~17:00 UTC",
-   "Cuotas 18:20 ET (scoresandodds): OKC@LAC spread local +6.5, total 222.5, ML -283/231"
+   "Cuotas 18:20 ET (scoresandodds): OKC@LAC spread local +6.5, total 222.5, ML -283/231",
+   "22:00 ET: Ajay Mitchell (tobillo) OUT (NBC Sports/Rotoworld 21:32 ET); cuotas sin cambios vs 18:20 ET"
   ],
   "out": [
    "Thomas Sorber",
@@ -21,10 +22,10 @@
    "Brandon Ingram",
    "Yanic Konan Niederhauser",
    "Bradley Beal",
-   "Jordan Miller"
+   "Jordan Miller",
+   "Ajay Mitchell"
   ],
   "gtd": {
-   "Ajay Mitchell": 0.7,
    "Cam Christie": 0.4
   },
   "reserves": {
@@ -593,7 +594,7 @@
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
    "starter": true,
-   "min": 32.9,
+   "min": 37.1,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -632,52 +633,10 @@
   },
   {
    "team": "OKC",
-   "name": "Ajay Mitchell",
-   "pos": "SG",
-   "starter": true,
-   "min": 27.4,
-   "g_cur": 11,
-   "p_play": 0.7,
-   "cur": {
-    "min": 27.3,
-    "pts": 18.5,
-    "reb": 3.6,
-    "ast": 3.3,
-    "fg3m": 0.8,
-    "fgm": 7.4,
-    "fga": 14.1,
-    "fg3a": 3.1,
-    "stl": 1.2,
-    "blk": 0.4,
-    "tov": 1.5,
-    "pf": 2.4,
-    "ftm": 2.9,
-    "fta": 3.5
-   },
-   "prior": {
-    "min": 25.8,
-    "pts": 13.58,
-    "reb": 3.33,
-    "ast": 3.61,
-    "fg3m": 1.07,
-    "fgm": 5.02,
-    "fga": 10.35,
-    "fg3a": 3.09,
-    "stl": 1.25,
-    "blk": 0.32,
-    "tov": 1.42,
-    "pf": 2.09,
-    "ftm": 2.47,
-    "fta": 2.84
-   },
-   "slot": "SG"
-  },
-  {
-   "team": "OKC",
    "name": "Jared McCain",
    "pos": "SG",
    "starter": true,
-   "min": 26.3,
+   "min": 29.6,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -712,14 +671,14 @@
     "ftm": 0.76,
     "fta": 0.88
    },
-   "slot": "SF"
+   "slot": "SG"
   },
   {
    "team": "OKC",
    "name": "Isaiah Hartenstein",
    "pos": "C",
    "starter": true,
-   "min": 25.0,
+   "min": 28.2,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -760,8 +719,8 @@
    "team": "OKC",
    "name": "Aday Mara",
    "pos": "C",
-   "starter": false,
-   "min": 21.4,
+   "starter": true,
+   "min": 24.1,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -795,14 +754,15 @@
     "pf": 2.36,
     "ftm": 1.1,
     "fta": 1.8
-   }
+   },
+   "slot": "PF"
   },
   {
    "team": "OKC",
    "name": "Alex Caruso",
    "pos": "SG",
    "starter": false,
-   "min": 19.6,
+   "min": 22.2,
    "g_cur": 9,
    "p_play": 1.0,
    "cur": {
@@ -843,7 +803,7 @@
    "name": "Kenrich Williams",
    "pos": "PF",
    "starter": true,
-   "min": 19.0,
+   "min": 21.5,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -878,14 +838,14 @@
     "ftm": 0.59,
     "fta": 0.93
    },
-   "slot": "PF"
+   "slot": "SF"
   },
   {
    "team": "OKC",
    "name": "Bennett Stirtz",
    "pos": "PG",
    "starter": false,
-   "min": 18.7,
+   "min": 21.2,
    "g_cur": 12,
    "p_play": 1.0,
    "cur": {
@@ -926,7 +886,7 @@
    "name": "Nique Clifford",
    "pos": "SG",
    "starter": false,
-   "min": 18.0,
+   "min": 20.4,
    "g_cur": 2,
    "p_play": 1.0,
    "cur": {
@@ -967,7 +927,7 @@
    "name": "Micah Peavy",
    "pos": "SG",
    "starter": false,
-   "min": 16.9,
+   "min": 19.1,
    "g_cur": 8,
    "p_play": 1.0,
    "cur": {
@@ -1008,7 +968,7 @@
    "name": "Josh Dix",
    "pos": "SG",
    "starter": false,
-   "min": 14.7,
+   "min": 16.6,
    "g_cur": 7,
    "p_play": 1.0,
    "cur": {
@@ -1093,49 +1053,6 @@
     9.5,
     -130,
     110
-   ]
-  },
-  "Ajay Mitchell": {
-   "pts": [
-    17.5,
-    -120,
-    -116,
-    18.5
-   ],
-   "reb": [
-    3.5,
-    -110,
-    -106
-   ],
-   "ast": [
-    3.5,
-    116,
-    -125
-   ],
-   "fg3m": [
-    1.5,
-    180,
-    -197
-   ],
-   "pr": [
-    22.5,
-    -106,
-    -115
-   ],
-   "pa": [
-    22.5,
-    -102,
-    -109
-   ],
-   "ra": [
-    7.5,
-    116,
-    -124
-   ],
-   "pra": [
-    26.5,
-    -110,
-    -109
    ]
   },
   "Darius Garland": {
